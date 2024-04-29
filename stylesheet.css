@@ -21,6 +21,10 @@ nav ul li{
     text-decoration: none;
     list-style: none;
 }
+nav ul li button{
+    width: 80px;
+    height: 40px;
+}
 #scrollPOL div{
     display: flex;
 }
@@ -55,4 +59,8 @@ nav ul li{
 }
 #myWork ul{
     flex-direction: column;
+}
+footer{
+    height: 150px;
+    text-align: center;
 }
