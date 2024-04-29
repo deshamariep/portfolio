@@ -4,10 +4,10 @@ header{
 #tOP{
     display: flex;
 }
-#tOP section #hOneTwo{
+#tOP #two{
     flex: 2;
 }
-#tOP section #nav{
+#tOP #one{
     flex: 1;
 }
 nav{
