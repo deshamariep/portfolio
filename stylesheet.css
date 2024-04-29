@@ -20,6 +20,8 @@ nav ul li{
     flex: content;
     text-decoration: none;
     list-style: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 nav ul li button{
     width: 100px;
@@ -61,10 +63,15 @@ nav ul li button{
 #myWork ul{
     flex-direction: column;
 }
+#myWork ul li{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
 #myWork ul li button{
     width: 150px;
     height: 50px;
     border-radius: 20px;
+
 }
 footer{
     height: 150px;
