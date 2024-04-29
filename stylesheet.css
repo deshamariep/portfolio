@@ -31,8 +31,12 @@ nav ul li{
     border-radius: 30px;
     height: 250px;
     width: 250px;
-    margin: 15px;
+    margin: 8px;
+}
+#scrollPOL div article .boldText{
+    padding: 20px;
+    padding-bottom: 0px;
 }
 #scrollPOL div article p{
-    padding: 15px;
+    padding: 20px;
 }
