@@ -1,5 +1,5 @@
 body{
-    margin: auto;
+    margin: 100px;
 }
 header{
     height: 150px;
@@ -31,6 +31,7 @@ nav ul li{
     border-radius: 30px;
     height: 250px;
     width: 250px;
+    margin: 15px;
 }
 #scrollPOL div article p{
     padding: 15px;
