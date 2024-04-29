@@ -22,9 +22,9 @@ nav ul li{
     list-style: none;
 }
 nav ul li button{
-    width: 80px;
-    height: 40px;
-    border-radius: 15px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
 }
 #scrollPOL div{
     display: flex;
