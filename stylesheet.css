@@ -10,6 +10,21 @@ header{
 #tOP #one{
     flex: 1;
 }
-nav{
+nav ul{
+    display: flex;
+}
+nav ul li{
+    flex: content;
     text-decoration: none;
+    list-style: none;
+}
+#scrollPOL div{
+    display: flex;
+}
+#scrollPOL div article{
+    flex: 1;
+    display: block;
+    border: 1px solid grey;
+    height: 300px;
+    width: 300px;
 }
