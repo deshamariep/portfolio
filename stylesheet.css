@@ -53,3 +53,6 @@ nav ul li{
 #bottom #one{
     flex: 1;
 }
+#myWork{
+    flex-direction: column;
+}
