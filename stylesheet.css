@@ -44,6 +44,9 @@ nav ul li{
 #bottom{
     display: flex;
 }
+#bottom section{
+    padding: 30px;
+}
 #bottom #two{
     flex: 2;
 }
