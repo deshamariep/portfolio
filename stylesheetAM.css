@@ -30,10 +30,10 @@ nav ul li button{
     height: 50px;
     border-radius: 20px;
 }
-#scrollPOL div{
+#scroll div{
     display: flex;
 }
-#scrollPOL div article{
+#scroll div article{
     flex: 1;
     display: block;
     border: 1px solid grey;
@@ -42,11 +42,11 @@ nav ul li button{
     width: 250px;
     margin: 8px;
 }
-#scrollPOL div article .boldText{
+#scroll div article .boldText{
     padding: 20px;
     padding-bottom: 0px;
 }
-#scrollPOL div article p{
+#scroll div article p{
     padding: 20px;
     padding-top: 0px;
 }

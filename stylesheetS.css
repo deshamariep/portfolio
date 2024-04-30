@@ -30,3 +30,15 @@ nav ul li button{
     height: 50px;
     border-radius: 20px;
 }
+#scroll div{
+    display: flex;
+}
+#scroll div article{
+    flex: 1;
+    display: block;
+    border: 1px solid grey;
+    border-radius: 30px;
+    height: 250px;
+    width: 250px;
+    margin: 8px;
+}
