@@ -57,7 +57,7 @@ nav ul li button{
     display: flex;
 }
 #scroll div article{
-    flex: 1;
+    flex: content;
     display: block;
     border: 1px solid grey;
     border-radius: 30px;
