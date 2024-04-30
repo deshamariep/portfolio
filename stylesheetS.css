@@ -29,10 +29,10 @@ nav ul li button{
     height: 50px;
     border-radius: 20px;
 }
-#scroll{
+#scroll div{
     display: flex;
 }
-#scroll article{
+#scroll div article{
     flex: 1;
     display: block;
     border: 1px solid grey;
@@ -41,7 +41,7 @@ nav ul li button{
     width: 250px;
     margin: 8px;
 }
-#scroll article img{
+#scroll div article img{
     justify-items: center;
 }
 footer{
