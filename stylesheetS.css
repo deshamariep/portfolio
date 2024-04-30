@@ -30,6 +30,7 @@ nav ul li button{
     border-radius: 20px;
 }
 #scroll{
+    margin: auto;
     padding: 10px;
     height: 250px; /* Set the height of the container to accommodate two images */
     width: 1000px;
