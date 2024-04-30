@@ -30,6 +30,7 @@ nav ul li button{
     border-radius: 20px;
 }
 #scroll{
+    padding: 10px;
     height: 250px; /* Set the height of the container to accommodate two images */
     width: 1000px;
     overflow: hidden; 
@@ -40,7 +41,7 @@ nav ul li button{
     width: 1284px; /* Set the width of your scrolling section to match image width */
     position: absolute; 
     top: 0;
-    animation: scroll 15s linear infinite;
+    animation: scroll 30s linear infinite;
 }
 @keyframes scroll {
     0% {
