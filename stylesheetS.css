@@ -29,6 +29,19 @@ nav ul li button{
     height: 50px;
     border-radius: 20px;
 }
+#scroll{
+    height: 250px; /* Set the height of the container to accommodate two images */
+    width: 1000px;
+    overflow: hidden; 
+    position: relative; 
+}
+#scroll #contain{
+    height: 250px; /* Set the height of your scrolling section to accommodate all images */
+    width: 1284px; /* Set the width of your scrolling section to match image width */
+    position: absolute; 
+    top: 0;
+    animation: scroll 15s linear infinite;
+}
 #scroll div{
     display: flex;
 }
