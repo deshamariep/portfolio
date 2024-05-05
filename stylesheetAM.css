@@ -60,6 +60,9 @@ nav ul li button{
     flex: 2;
     padding-left: 0px;
 }
+#bottom #two p{
+    padding-left: 15px;
+}
 #bottom #one{
     flex: 1;
 }
