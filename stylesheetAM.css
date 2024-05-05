@@ -58,6 +58,7 @@ nav ul li button{
 }
 #bottom #two{
     flex: 2;
+    padding-left: 0px;
 }
 #bottom #one{
     flex: 1;

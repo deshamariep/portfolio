@@ -59,10 +59,10 @@ nav ul li button{
 #scroll div article{
     flex: content;
     display: block;
-    border: 1px solid grey;
-    border-radius: 30px;
     height: 250px;
     width: 250px;
+    border: 1px solid grey;
+    border-radius: 30px;
     margin: 8px;
 }
 #scroll div article img{
