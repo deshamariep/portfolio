@@ -45,6 +45,8 @@ nav ul li button{
 #scroll div article .boldText{
     padding: 20px;
     padding-bottom: 0px;
+    font-weight: bold;
+    /* chnage to weght */
 }
 #scroll div article p{
     padding: 20px;
