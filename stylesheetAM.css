@@ -1,13 +1,11 @@
 main{
-    margin-left: 100px;
-    margin-right: 100px;
-}
-header{
-    height: 150px;
-    padding-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 header{
     display: flex;
+    height: 150px;
+    padding-top: 30px;
 }
 header #two{
     flex: 2;
