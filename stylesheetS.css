@@ -4,7 +4,7 @@ main{
 }
 header{
     display: flex;
-    height: 500px;
+    height: 150px;
     padding-top: 30px;
 }
 header #two{
