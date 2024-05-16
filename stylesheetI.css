@@ -34,13 +34,13 @@ nav ul li button{
     border: 1px solid lightgrey;
 }
 .caseStudy section{
-    padding: 15px;
+    padding: 30px;
 }
 .caseStudy .left{
     flex: 3;
 }
 .caseStudy .left p{
-    margin-right: 30px;
+    margin-right: 80px;
 }
 .caseStudy .right{
     flex: 1;
