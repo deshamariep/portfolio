@@ -28,6 +28,17 @@ nav ul li button{
     height: 50px;
     border-radius: 20px;
 }
+.caseStudy{
+    display: block;
+    display: flex;
+    border: 1px solid lightgrey;
+}
+.caseStudy .left{
+    flex: 3;
+}
+.caseStudy .right{
+    flex: 1;
+}
 footer{
     height: 150px;
     text-align: center;
