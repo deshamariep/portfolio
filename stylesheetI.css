@@ -32,6 +32,7 @@ nav ul li button{
     display: block;
     display: flex;
     border: 1px solid lightgrey;
+    border-radius: 30px;
 }
 .caseStudy section{
     padding: 30px;
