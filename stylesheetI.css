@@ -38,6 +38,7 @@ nav ul li button{
 }
 .caseStudy .left{
     flex: 3;
+    margin-left: 20px;
 }
 .caseStudy .left p{
     margin-right: 200px;
