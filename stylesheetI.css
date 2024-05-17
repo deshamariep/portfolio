@@ -28,15 +28,17 @@ nav ul li button{
     height: 50px;
     border-radius: 20px;
 }
+a{
+    padding: 20px;
+}
 .caseStudy{
     display: block;
     display: flex;
     border: 1px solid lightgrey;
     border-radius: 30px;
-    padding: 20px;
 }
 .caseStudy section{
-    padding: 30px;
+    padding: 45px;
 }
 .caseStudy .left{
     flex: 3;
