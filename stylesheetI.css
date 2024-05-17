@@ -54,7 +54,6 @@ a{
 }
 .caseStudy .right .info{
     display: block;
-    padding: 8px;
     border: 1px solid lightgray;
     border-radius: 30px;
     text-align: center;
