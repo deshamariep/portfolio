@@ -13,6 +13,10 @@ header #two{
 header #one{
     flex: 1;
 }
+header #one a{
+    text-decoration: none;
+    color: black;
+}
 nav ul{
     display: flex;
 }
