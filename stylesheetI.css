@@ -51,8 +51,11 @@ a{
 }
 .caseStudy .right{
     flex: 1;
+}
+.caseStudy .right .info{
     display: block;
-    border: 1px solid lightgrey;
+    border: 1px solid lightgray;
+    border-radius: 30px;
 }
 footer{
     height: 150px;
