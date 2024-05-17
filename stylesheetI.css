@@ -31,6 +31,7 @@ nav ul li button{
 a{
     padding: 50px;
     text-decoration: none;
+    color: black;
 }
 .caseStudy{
     display: block;
@@ -50,6 +51,8 @@ a{
 }
 .caseStudy .right{
     flex: 1;
+    display: block;
+    border: 1px solid lightgrey;
 }
 footer{
     height: 150px;
