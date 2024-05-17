@@ -57,7 +57,7 @@ a{
     border: 1px solid lightgray;
     border-radius: 30px;
     text-align: center;
-    padding: 8px;
+    border-width: 250px;
 }
 footer{
     height: 150px;
