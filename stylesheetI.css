@@ -30,6 +30,7 @@ nav ul li button{
 }
 a{
     padding: 50px;
+    text-decoration: none;
 }
 .caseStudy{
     display: block;
