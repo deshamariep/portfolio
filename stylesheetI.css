@@ -11,7 +11,7 @@ header #two{
     flex: 2;
 }
 header #one{
-    flex: content;
+    flex: 1;
 }
 header #one a{
     text-decoration: none;
@@ -28,7 +28,7 @@ nav ul li{
     padding-right: 4px;
 }
 nav ul li button{
-    width: 100px;
+    width: 110px;
     height: 50px;
     border-radius: 20px;
 }
