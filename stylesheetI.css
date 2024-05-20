@@ -42,6 +42,7 @@ nav ul li button{
     display: flex;
     border: 1px solid lightgrey;
     border-radius: 30px;
+    margin: 15px;
 }
 .caseStudy section{
     padding: 45px;
@@ -61,7 +62,7 @@ nav ul li button{
     border: 1px solid lightgray;
     border-radius: 30px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 8px;
 }
 footer{
     height: 150px;
