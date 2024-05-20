@@ -18,6 +18,9 @@ header #one a{
     color: black;
     text-align: center;
 }
+.nav{
+    margin: 0px;
+}
 nav ul{
     display: flex;
 }
