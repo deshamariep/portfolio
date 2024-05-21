@@ -40,6 +40,8 @@ a .notNav{
 }
 article{
     margin-top: 35px;
+    text-decoration: none;
+    color: black;
 }
 .caseStudy{
     display: block;
