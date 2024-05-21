@@ -33,7 +33,7 @@ nav ul li button{
     height: 50px;
     border-radius: 20px;
 }
-section a .notNav{
+section a{
     text-decoration: none;
     color: black;
     padding: 50px;
