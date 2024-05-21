@@ -18,7 +18,7 @@ header #one a{
     color: black;
     text-align: center;
 }
-.nav{
+nav ul li button a .nav{
     margin: 0px;
 }
 nav ul{
