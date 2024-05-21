@@ -34,9 +34,9 @@ nav ul li button{
     border-radius: 20px;
 }
 a .notNav{
-    padding: 50px;
     text-decoration: none;
     color: black;
+    padding: 50px;
 }
 article{
     margin-top: 35px;
