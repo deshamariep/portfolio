@@ -38,9 +38,12 @@ a .notNav{
     color: black;
     padding: 50px;
 }
+a .caseStudy{
+    text-decoration: none;
+    color: black;
+}
 article{
     margin-top: 35px;
-    text-decoration: none;
     color: black;
 }
 .caseStudy{
