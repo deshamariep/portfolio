@@ -18,9 +18,6 @@ header #one a{
     color: black;
     text-align: center;
 }
-nav ul li button a .nav{
-    margin: 0px;
-}
 nav ul{
     display: flex;
 }
@@ -36,7 +33,7 @@ nav ul li button{
     height: 50px;
     border-radius: 20px;
 }
-a{
+a .notNav{
     padding: 50px;
     text-decoration: none;
     color: black;
