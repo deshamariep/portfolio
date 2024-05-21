@@ -33,7 +33,7 @@ nav ul li button{
     height: 50px;
     border-radius: 20px;
 }
-a .notNav .caseStudy{
+section a .notNav{
     text-decoration: none;
     color: black;
     padding: 50px;
