@@ -71,11 +71,12 @@ article{
 footer {
     height: 200px;
     text-align: center;
-    display: flex;
     align-items: center;
+}
+footer .footLink{
+    display: flex;
 }
 footer div {
     flex: 1;
-    flex-direction: row; 
     align-items: center; 
 }
