@@ -71,4 +71,8 @@ article{
 footer{
     height: 150px;
     text-align: center;
+    display: flex;
+}
+footer .footLink{
+    flex: 1;
 }
