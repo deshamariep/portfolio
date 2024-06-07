@@ -75,9 +75,9 @@ footer {
 }
 footer .footLink{
     display: flex;
-    flex-direction: row;
 }
 footer .footLink div {
     flex: 1;
+    flex-direction: row;
     align-items: center; 
 }
