@@ -72,15 +72,10 @@ footer {
     height: 200px;
     text-align: center;
     display: flex;
-    flex-direction: column; /* Ensure children are stacked vertically */
-    align-items: center; /* Center the children horizontally */
+    align-items: center;
 }
 footer div {
-    display: flex; /* Make the inner div a flex container */
-    flex-direction: row; /* Stack its children vertically */
-    align-items: center; /* Center its children horizontally */
-    margin: 10px 0; /* Add some vertical space between divs */
-}
-footer div p, footer div a {
-    margin: 5px 0; /* Add space between paragraphs and links */
+    flex: 1;
+    flex-direction: row; 
+    align-items: center; 
 }
