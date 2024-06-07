@@ -73,6 +73,6 @@ footer{
     text-align: center;
     display: flex;
 }
-footer .footLink{
+footer div{
     flex: 1;
 }
