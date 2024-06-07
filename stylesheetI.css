@@ -69,9 +69,10 @@ article{
     margin-top: 8px;
 }
 footer {
-    height: 200px;
+    height: 250px;
     text-align: center;
     align-items: center;
+    padding: 20px;
 }
 footer #footLink{
     display: flex;
