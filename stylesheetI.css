@@ -4,8 +4,7 @@ body{
     padding: 0;
 }
 main{
-    margin-left: 170px;
-    margin-right: 150px;
+    margin: 0 170px;
 }
 header{
     display: flex;
