@@ -73,6 +73,7 @@ article{
 }
 .caseStudy .right{
     flex: 1;
+    justify-content: center; 
 }
 .caseStudy .right .info{
     display: block;
@@ -83,6 +84,7 @@ article{
     text-align: center;
     margin-top: 8px;
     justify-content: center;
+    align-items: center;
 }
 /* .caseStudy .right .info .boldText{
     padding-top: ;
