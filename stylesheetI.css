@@ -26,6 +26,7 @@ a{
 }
 header #one a{
     text-align: center;
+    text-decoration: none;
 }
 nav ul{
     display: flex;
@@ -97,6 +98,9 @@ footer {
 footer #footLink{
     display: flex;
     justify-content: space-around;
+}
+footer #footLink a{
+    text-decoration: none;
 }
 footer #footLink div {
     flex: 1;
