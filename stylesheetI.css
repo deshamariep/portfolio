@@ -52,6 +52,7 @@ section a .notNav{
     padding: 50px;
 }
 article{
+    text-decoration: none;
     margin-top: 35px;
     color: black;
 }
