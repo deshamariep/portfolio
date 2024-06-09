@@ -73,7 +73,6 @@ article{
 }
 .caseStudy .right{
     flex: 1;
-    justify-content: center; 
 }
 .caseStudy .right .info{
     display: block;
@@ -83,12 +82,10 @@ article{
     border-radius: 30px;
     text-align: center;
     margin-top: 8px;
-    justify-content: center;
-    align-items: center;
 }
-/* .caseStudy .right .info .boldText{
-    padding-top: ;
-} */
+.caseStudy .right .info .boldText{
+    padding-top: 20px;
+}
 footer {
     width: 100%;
     margin: 0;
