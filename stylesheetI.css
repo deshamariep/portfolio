@@ -82,7 +82,11 @@ article{
     border-radius: 30px;
     text-align: center;
     margin-top: 8px;
+    justify-content: space-around
 }
+/* .caseStudy .right .info .boldText{
+    padding-top: ;
+} */
 footer {
     width: 100%;
     margin: 0;
