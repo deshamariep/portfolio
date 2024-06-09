@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(98, 98, 98);
+}
 main{
     margin-left: 50px;
     margin-right: 50px;
@@ -73,6 +76,9 @@ footer {
     text-align: center;
     align-items: center;
     padding: 20px;
+    display: block;
+    background-color: rgb(255, 253, 253, 0.4) ;
+    
 }
 footer #footLink{
     display: flex;
