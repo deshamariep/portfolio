@@ -1,7 +1,11 @@
+* {
+    box-sizing: border-box;
+}
 body{
-    background-color: rgb(98, 98, 98);
     margin: 0;
     padding: 0;
+    width: 100%;
+    background-color: rgb(98, 98, 98);
 }
 main{
     padding: 0 170px;
