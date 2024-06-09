@@ -5,11 +5,11 @@ body{
     height: 100%;
     min-height: 100vh;
     background-color: rgb(98, 98, 98);
-    color: rgb(94, 95, 94);
 }
 main{
     margin: 0 170px;
     box-sizing: border-box;
+    color: rgb(94, 95, 94);
 }
 header{
     display: flex;
