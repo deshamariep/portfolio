@@ -24,6 +24,7 @@ header #one{
 }
 a{
     text-decoration: none;
+    color: rgb(94, 95, 94);
 }
 header #one a{
     text-align: center;
