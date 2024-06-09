@@ -72,13 +72,13 @@ article{
     margin-top: 8px;
 }
 footer {
+    margin: 0;
     height: 250px;
     text-align: center;
     align-items: center;
     padding: 20px;
     display: block;
     background-color: rgb(255, 253, 253, 0.4);
-    margin: 0;
 }
 footer #footLink{
     display: flex;
