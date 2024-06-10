@@ -113,6 +113,7 @@ article{
 #empower {
     border: 1px solid;
     border-image: linear-gradient(to right, green, orange) 1;
+    border-radius: 30px;
 }
 #ume{
     border: 1px solid pink;
