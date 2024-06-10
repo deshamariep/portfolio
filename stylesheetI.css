@@ -29,7 +29,7 @@ header #two h1{
 }
 header #two h2{
     font-family: "Staatliches", sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
 header #one{
@@ -65,8 +65,9 @@ nav ul li button{
 #intro{
     width: 525px;
 }
-#work{
+section #work{
     margin-top: 800px;
+    color: rgb(94, 95, 94);
 }
 section a .notNav{
     padding: 50px;
