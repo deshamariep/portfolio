@@ -122,7 +122,7 @@ article{
     width: 100%; /* Make the pseudo-element fill the entire width */
     height: 100%; /* Make the pseudo-element fill the entire height */
     border-radius: 30px; /* Apply border radius to the pseudo-element */
-    background: linear-gradient(to right, green, orange); /* Apply gradient background */
+    border-image: linear-gradient(to right, green, orange); /* Apply gradient background */
     z-index: -1; /* Move the pseudo-element behind the content */
 }
 #ume{
