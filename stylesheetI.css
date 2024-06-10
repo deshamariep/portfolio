@@ -111,7 +111,8 @@ article{
     border: 1px solid green;
 }
 #empower {
-    border: 1px solid;
+    border-width: 1px; 
+    border-style: solid;
     border-image: linear-gradient(to right, green, orange) 1;
     border-radius: 30px;
 }
