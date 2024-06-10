@@ -121,7 +121,7 @@ nav ul li button{
     background: rgba(255, 255, 255, 0.5); 
     border: none; 
     outline: none;
-    text-align: center; 
+    text-align: left; 
     display: inline-block;
     position: relative;
     padding-left: 55px; 
