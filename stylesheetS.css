@@ -68,7 +68,8 @@ nav ul li button{
     text-align: center; 
     display: inline-block;
 }
-.boldText{
+/* General styles for bold text */
+.boldText {
     padding-top: 25px;
     font-family: "Staatliches", sans-serif;
     font-weight: 400;
@@ -87,6 +88,8 @@ nav ul li button{
     border-radius: 30px;
     padding: 10px;
     box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 /* Style for images within gallery items */
 #gallery article img {
