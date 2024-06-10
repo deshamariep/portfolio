@@ -38,6 +38,8 @@ header #one{
     font-family: "Staatliches", sans-serif;
     font-weight: 400;
     font-style: normal;
+    padding: 20px 20px 0px 20px;
+    justify-content: right;
 }
 a{
     text-decoration: none;
