@@ -95,17 +95,16 @@ article{
 .csTop{
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 .logo{
     flex: 1;
     padding-top: 10px;
-    width: 85px;
-    height: 85px;
-    align-content: center;
-    justify-content: center;
 }
 .csTitle{
     flex: 3;
+    position: absolute;
+    right: 15px
 }
 .caseStudy .right{
     flex: 1;
