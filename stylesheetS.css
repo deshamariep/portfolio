@@ -89,6 +89,7 @@ nav ul li button{
     border-radius: 30px;
     padding: 10px;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Style for images within gallery items */
