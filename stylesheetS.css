@@ -74,11 +74,9 @@ nav ul li button{
     font-weight: 400;
     font-style: normal;
 }
-#gallery article{
+#gallery article img{
     display: block;
     background-color: rgba(255, 255, 255, 0.5);
-    align-content: center;
-    justify-content: center;
 }
 footer {
     width: 100%;
