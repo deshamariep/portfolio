@@ -24,16 +24,19 @@ header #two{
 }
 header #two h1{
     font-family: "Cinzel Decorative", serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
 header #two h2{
     font-family: "Staatliches", sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal;
 }
 header #one{
     flex: 1;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 a{
     text-decoration: none;
@@ -65,8 +68,8 @@ nav ul li button{
 #intro{
     width: 525px;
 }
-section #work{
-    padding-top: 800px;
+#work{
+    margin-top: 800px;
 }
 section a .notNav{
     padding: 50px;
