@@ -78,11 +78,12 @@ nav ul li button{
     width: 250px;
     margin: 8px;
 }
-#values div article .boldText{
+.boldText{
     padding: 25px;
     padding-bottom: 0px;
-    font-weight: bold;
-    /* chnage to weght */
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 #values div article p{
     padding: 25px;
