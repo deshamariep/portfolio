@@ -76,7 +76,11 @@ nav ul li button{
 }
 #gallery article img{
     display: block;
+    border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.5);
+}
+#gallery article p{
+    margin: 0px;
 }
 footer {
     width: 100%;
