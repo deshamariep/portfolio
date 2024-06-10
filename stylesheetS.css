@@ -77,6 +77,8 @@ nav ul li button{
 #gallery article{
     display: block;
     background-color: rgba(255, 255, 255, 0.5);
+    align-content: center;
+    justify-content: center;
 }
 footer {
     width: 100%;
