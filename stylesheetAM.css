@@ -108,8 +108,6 @@ nav ul li button{
 }
 #bottom #one{
     flex: 1;
-    padding: 20px 20px 0px 20px;
-    justify-content: right;
 }
 #myWork ul{
     flex-direction: column;
@@ -126,10 +124,13 @@ nav ul li button{
     background: rgba(255, 255, 255, 0.5); 
     border: none; 
     outline: none;
-    text-align: left; 
+    text-align: left;
+    justify-content: center;
+    padding: 20px 20px 0px 20px;
+    box-sizing: border-box;
     display: inline-block;
     position: relative;
-    padding-left: 85px; 
+    margin-left: auto; 
 }
 #myWork ul li button img{
     position: absolute;
