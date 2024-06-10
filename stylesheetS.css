@@ -1,9 +1,18 @@
 body{
     margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: rgb(136, 149, 109);
+    font-family: "Assistant", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 main{
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 170px;
+    box-sizing: border-box;
+    color: rgb(94, 95, 94);
 }
 header{
     display: flex;
@@ -13,19 +22,38 @@ header{
 header #two{
     flex: 2;
 }
+header #two h1{
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-size: 48px;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+header #two h2{
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0px;
+}
 header #one{
     flex: 1;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+    color: rgb(94, 95, 94);
 }
 header #one a{
+    text-align: center;
     text-decoration: none;
-    color: black;
 }
 nav ul{
     display: flex;
 }
 nav ul li{
     flex: content;
-    text-decoration: none;
     list-style: none;
     padding-left: 4px;
     padding-right: 4px;
@@ -34,32 +62,39 @@ nav ul li button{
     width: 100px;
     height: 50px;
     border-radius: 20px;
+    background: none; 
+    border: none; 
+    outline: none;
+    text-align: center; 
+    display: inline-block;
 }
-#scroll{
-    margin: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 250px; /* Set the height of the container to accommodate two images */
-    width: 1000px;
-    overflow: hidden; 
-    position: relative; 
-}
-#scroll div{
-    display: flex;
-}
-#scroll div article{
-    flex: content;
-    display: block;
+footer {
+    width: 100%;
+    margin: 0;
+    margin-top: 40px;
     height: 250px;
-    width: 250px;
-    border: 1px solid grey;
-    border-radius: 30px;
-    margin: 8px;
-}
-#scroll div article img{
-    justify-items: center;
-}
-footer{
-    height: 150px;
     text-align: center;
+    align-items: center;
+    padding: 20px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(94, 95, 94);
+}
+#footTitle{
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0px;
+}
+footer #footLink{
+    display: flex;
+    justify-content: space-around;
+}
+footer #footLink a{
+    text-decoration: none;
+}
+footer #footLink div {
+    flex: 1;
+    flex-direction: row;
+    align-items: center; 
 }
