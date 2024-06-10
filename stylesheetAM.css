@@ -86,7 +86,8 @@ nav ul li button{
     font-style: normal;
 }
 #values .boldText{
-    padding: 10px;
+    padding: 10px 25px;
+
 }
 #values div article p{
     padding: 25px;
