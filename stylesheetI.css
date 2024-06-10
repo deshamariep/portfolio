@@ -101,12 +101,15 @@ article{
     padding-top: 10px;
     width: 85px;
     height: 85px;
+    align-content: center;
+    justify-content: center;
 }
 .csTitle{
     flex: 3;
 }
 .caseStudy .right{
     flex: 1;
+    justify-content: center;
 }
 .caseStudy .right .info{
     display: block;
