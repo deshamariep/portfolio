@@ -72,8 +72,9 @@ nav ul li button{
 #values div article{
     flex: 1;
     display: block;
-    border: 1px solid grey;
-    border-radius: 30px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
     height: 300px;
     width: 250px;
     margin: 8px;
