@@ -107,8 +107,17 @@ article{
 #spots{
     border: 1px solid orange;
 }
+#gstreet{
+    border: 1px solid green;
+}
+#empower{
+    border: 1px solid gradient(green, orange);
+}
+#ume{
+    border: 1px solid pink;
+}
 .boldText{
-    padding-top: 35px;
+    padding-top: 25px;
     font-family: "Staatliches", sans-serif;
     font-weight: 400;
     font-style: normal;
