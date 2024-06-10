@@ -66,15 +66,14 @@ nav ul li button{
     width: 525px;
 }
 section #work{
-    margin-top: 800px;
-    color: rgb(94, 95, 94);
+    padding-top: 800px;
 }
 section a .notNav{
     padding: 50px;
 }
 article{
     margin-top: 35px;
-    color: black;
+    color: rgb(94, 95, 94);
 }
 .caseStudy{
     display: block;
