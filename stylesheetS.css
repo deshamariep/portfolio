@@ -84,9 +84,13 @@ nav ul li button{
     gap: 20px;
     padding: 20px;
     grid-auto-flow: dense; /* Allow items to fill gaps */
-    grid-auto-rows: minmax(200px, auto); 
+    grid-auto-rows: minmax(50px, auto); /* Adjusted minimum row height */
 }
 
+#galleryTwo,
+#galleryThree {
+    grid-row-end: span 1; /* Reduce row span for galleryTwo and galleryThree */
+}
 /* Style for gallery items */
 #gallery article {
     border-radius: 30px;
