@@ -92,6 +92,16 @@ article{
 .caseStudy .left p{
     margin-right: 200px;
 }
+.csTop{
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    flex: 1;
+}
+.csTitle{
+    flex: 3;
+}
 .caseStudy .right{
     flex: 1;
 }
