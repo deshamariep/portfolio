@@ -127,7 +127,8 @@ nav ul li button{
 }
 #myWork ul li button img{
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
+    left: 20px;
 }
 footer {
     width: 100%;
