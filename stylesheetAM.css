@@ -124,12 +124,12 @@ nav ul li button{
     text-align: center; 
     display: inline-block;
     position: relative;
-    padding-left: 20px; 
+    padding-left: 30px; 
 }
 #myWork ul li button img{
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 25px;
 }
 footer {
     width: 100%;
