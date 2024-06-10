@@ -104,7 +104,7 @@ article{
 .csTitle{
     flex: 3;
     position: absolute;
-    right: 15px
+    left: 15px
 }
 .caseStudy .right{
     flex: 1;
