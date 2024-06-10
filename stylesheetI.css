@@ -111,9 +111,19 @@ article{
     border: 1px solid green;
 }
 #empower {
-    border: 1px solid;
-    border-radius: 30px;
-    border-image: linear-gradient(to right, green, orange) 1; /* Apply linear gradient as border image */
+    position: relative; /* Position the element relative to its normal position */
+    padding: 20px; /* Add padding to create space for the content */
+}
+#empower::before {
+    content: ''; /* Add content to the pseudo-element */
+    position: absolute; /* Position the pseudo-element relative to its containing block */
+    top: 0; /* Position the pseudo-element at the top */
+    left: 0; /* Position the pseudo-element at the left */
+    width: 100%; /* Make the pseudo-element fill the entire width */
+    height: 100%; /* Make the pseudo-element fill the entire height */
+    border-radius: 30px; /* Apply border radius to the pseudo-element */
+    background: linear-gradient(to right, green, orange); /* Apply gradient background */
+    z-index: -1; /* Move the pseudo-element behind the content */
 }
 #ume{
     border: 1px solid pink;
