@@ -78,8 +78,8 @@ nav ul li button{
     width: 250px;
     margin: 8px;
 }
-#scroll div article .boldText{
-    padding: 20px;
+#values div article .boldText{
+    padding: 25px;
     padding-bottom: 0px;
     font-weight: bold;
     /* chnage to weght */
