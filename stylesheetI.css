@@ -25,6 +25,7 @@ header #two{
 header #two h1{
     font-family: "Cinzel Decorative", serif;
     font-weight: 700;
+    font-size: 48px;
     font-style: normal;
 }
 header #two h2{
@@ -108,6 +109,12 @@ article{
 }
 .caseStudy .right .info .boldText{
     padding-top: 35px;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.caseStudy .right .info #spots{
+    border-color: orange;
 }
 footer {
     width: 100%;
