@@ -49,6 +49,9 @@ nav ul li button{
     text-align: center; /* Center text */
     display: inline-block;
 }
+#intro{
+    width: 600px;
+}
 #work{
     margin-top: 800px;
 }
