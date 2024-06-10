@@ -68,6 +68,12 @@ nav ul li button{
     text-align: center; 
     display: inline-block;
 }
+.boldText{
+    padding-top: 25px;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 footer {
     width: 100%;
     margin: 0;
