@@ -68,7 +68,7 @@ nav ul li button{
     text-align: center; 
     display: inline-block;
 }
-/* General styles for bold text */
+
 .boldText {
     padding-top: 25px;
     font-family: "Staatliches", sans-serif;
@@ -87,20 +87,27 @@ nav ul li button{
     border-radius: 30px;
     padding: 10px;
     box-sizing: border-box;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
+
 /* Style for images within gallery items */
 #gallery article img {
     display: block;
     width: 100%;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
 }
+
 /* Style for text within gallery items */
 #gallery article p {
     margin: 10px 0 0 0;
     text-align: center;
+}
+
+/* Ensure the text is properly aligned below the images */
+#gallery article .boldText {
+    margin-top: auto; /* Pushes the text to the bottom */
 }
 footer {
     width: 100%;
