@@ -111,7 +111,7 @@ article{
     font-style: normal;
 }
 .caseStudy .right .info #spots{
-    border-color: orange;
+    border: 1px solid orange;
 }
 footer {
     width: 100%;
