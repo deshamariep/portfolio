@@ -123,7 +123,7 @@ article{
     border: 1px solid orange;
 }
 #gstreet{
-    border: 1px solid green;
+    border: 1px solid rgb(105, 168, 95);
 }
 #empower {
     border-top: 1px solid green; /* Top border with green color */
