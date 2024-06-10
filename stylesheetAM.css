@@ -123,9 +123,11 @@ nav ul li button{
     outline: none;
     text-align: center; 
     display: inline-block;
+    position: relative;
 }
 #myWork ul li button img{
-    line-height: 0px;
+    position: absolute;
+    bottom: 10px;
 }
 footer {
     width: 100%;
