@@ -69,19 +69,22 @@ nav ul li button{
     display: inline-block;
 }
 
+/* General styles for bold text */
 .boldText {
     padding-top: 25px;
     font-family: "Staatliches", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
 /* Style for gallery container */
 #gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
     gap: 20px;
     padding: 20px;
 }
+
 /* Style for gallery items */
 #gallery article {
     border-radius: 30px;
@@ -89,7 +92,6 @@ nav ul li button{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
 /* Style for images within gallery items */
@@ -105,9 +107,17 @@ nav ul li button{
     text-align: center;
 }
 
-/* Ensure the text is properly aligned below the images */
-#gallery article .boldText {
-    margin-top: auto; /* Pushes the text to the bottom */
+/* Media query for responsiveness */
+@media (max-width: 900px) {
+    #gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    #gallery {
+        grid-template-columns: 1fr; /* One column on small screens */
+    }
 }
 footer {
     width: 100%;
