@@ -110,8 +110,9 @@ article{
 #gstreet{
     border: 1px solid green;
 }
-#empower{
-    border: 1px solid gradient(green, orange);
+#empower {
+    border: 1px solid;
+    border-image: linear-gradient(to right, green, orange) 1;
 }
 #ume{
     border: 1px solid pink;
