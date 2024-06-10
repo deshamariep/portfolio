@@ -74,6 +74,9 @@ nav ul li button{
     font-weight: 400;
     font-style: normal;
 }
+#gallery article{
+    padding-bottom: 50px;
+}
 #gallery article img{
     display: block;
     border-radius: 30px;
