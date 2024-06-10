@@ -79,9 +79,7 @@ nav ul li button{
 /* Style for gallery container */
 #gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: auto;
-    grid-auto-flow: dense;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 20px;
     padding: 20px;
 }
@@ -91,7 +89,6 @@ nav ul li button{
     border-radius: 30px;
     padding: 10px;
     box-sizing: border-box;
-    break-inside: avoid;
 }
 
 /* Style for images within gallery items */
@@ -108,6 +105,10 @@ nav ul li button{
     text-align: center;
 }
 
+/* Add this for Masonry */
+.grid-sizer {
+    width: 33.333%;
+}
 /* Media query for responsiveness */
 @media (max-width: 900px) {
     #gallery {
