@@ -129,6 +129,7 @@ nav ul li button{
     position: absolute;
     bottom: 20px;
     left: 20px;
+    padding-right: 10px;
 }
 footer {
     width: 100%;
