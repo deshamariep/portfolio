@@ -68,6 +68,9 @@ nav ul li button{
     text-align: center; 
     display: inline-block;
 }
+#intro{
+    margin: auto;
+}
 .boldText {
     padding-top: 25px;
     font-family: "Staatliches", sans-serif;
