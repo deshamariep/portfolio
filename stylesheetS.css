@@ -69,7 +69,7 @@ nav ul li button{
     display: inline-block;
 }
 #intro{
-    margin: auto;
+    padding-left: 10px;
 }
 .boldText {
     padding-top: 25px;
