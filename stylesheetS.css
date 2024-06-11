@@ -75,7 +75,7 @@ nav ul li button{
     font-style: normal;
 }
 #gallery {
-    margin-top: 300px;
+    margin-top: 150px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
