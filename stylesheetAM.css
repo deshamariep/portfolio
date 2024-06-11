@@ -68,6 +68,9 @@ nav ul li button{
     text-align: center; 
     display: inline-block;
 }
+#values{
+    margin-top: 300px;
+}
 #values div{
     display: flex;
 }
