@@ -83,10 +83,12 @@ nav ul li button{
     text-align: center;
 }
 #role .in{
-    flex: 3;
+    flex: 4;
     text-align: left;
     align-self: center;
     padding: 0% 5%;
+    display: block;
+
 }
 
 
