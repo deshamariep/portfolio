@@ -91,6 +91,7 @@ nav ul li button{
     border: 1px solid rgb(255, 145, 28);
     border-radius: 30px;
     display: flex;
+    flex-direction: column;
 }
 #role .in p{
     margin-left: auto;
