@@ -122,7 +122,7 @@ nav ul li button{
     justify-content: center; 
 }
 #tools .out{
-    flex: 3;
+    flex: content;
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
