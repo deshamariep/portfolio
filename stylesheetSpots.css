@@ -76,9 +76,11 @@ nav ul li button{
     align-items: right;
 }
 #out{
-    transform: rotate(90deg);
     flex: 1;
     padding-bottom: 10px;
+}
+#out h3{
+    transform: rotate(90deg);
 }
 #in{
     flex: 2;
