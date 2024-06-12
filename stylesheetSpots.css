@@ -109,6 +109,9 @@ nav ul li button{
     border-radius: 20px;
     align-content: center;
 }
+#box .in p{
+    align-content: center;
+}
 
 footer {
     width: 100%;
