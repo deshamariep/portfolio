@@ -127,7 +127,7 @@ nav ul li button{
     padding-top: 8%;
 }
 #tools .in{
-    flex: content;
+    flex: 1;
     text-align: center;
     display: block;
     height: 80px;
