@@ -64,6 +64,9 @@ nav ul li button{
     display: flex;
     justify-content: center; 
 }
+#intro div{
+    margin-bottom: 20px;
+}
 #intro #logo{
     flex: 1;
 }
@@ -108,7 +111,7 @@ nav ul li button{
     border: 1px solid rgb(255, 145, 28);
     border-radius: 20px;
     align-content: center;
-    margin: 0px 0px 0px 20px;
+    margin-left: 20px;
 }
 #box .in p{
     align-content: center;
