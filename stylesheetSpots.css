@@ -70,19 +70,20 @@ nav ul li button{
     flex: 2;
     text-align: right;
 }
-#role{
+#role {
     display: flex;
-    justify-content: right;
-    align-items: right;
+    justify-content: flex-end; /* Align items to the end of the flex container */
+    align-items: center; /* Center items vertically */
 }
-#role .out{
-    flex: 1;
+
+.out {
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
-    flex: end;
+    margin-left: auto; /* Pushes the element to the end */
 }
-#in{
+
+.in {
     flex: 2;
 }
 
