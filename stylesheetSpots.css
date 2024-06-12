@@ -127,7 +127,7 @@ nav ul li button{
     padding-top: 8%;
 }
 #tools .in{
-    flex: 1;
+    flex: content;
     text-align: center;
     display: block;
     height: 80px;
@@ -138,6 +138,9 @@ nav ul li button{
 }
 #tools .in p{
     align-content: center;
+}
+#infoBottom{
+    display: flex;
 }
 #team{
     display: flex;
@@ -156,6 +159,7 @@ nav ul li button{
     text-align: center;
     display: block;
     height: 80px;
+    width: 100px;
     border: 1px solid rgb(255, 145, 28);
     border-radius: 20px;
     align-content: center;
