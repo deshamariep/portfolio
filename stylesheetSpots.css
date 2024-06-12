@@ -80,6 +80,7 @@ nav ul li button{
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
+    flex: end;
 }
 #in{
     flex: 2;
