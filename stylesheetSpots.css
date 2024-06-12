@@ -104,6 +104,7 @@ nav ul li button{
     text-align: center;
     padding: 0% 5%;
     display: block;
+    height: 100px;
     border: 1px solid rgb(255, 145, 28);
     border-radius: 20px;
 }
