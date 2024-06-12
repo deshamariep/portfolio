@@ -21,13 +21,13 @@ header{
 header #two{
     flex: 2;
 }
-header #two h1{
+/* header #two h1{
     font-family: "Cinzel Decorative", serif;
     font-weight: 700;
     font-size: 48px;
     font-style: normal;
     margin-bottom: 10px;
-}
+} */
 header #two h2{
     font-family: "Staatliches", sans-serif;
     font-weight: 400;
