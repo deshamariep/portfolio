@@ -72,7 +72,6 @@ nav ul li button{
 }
 #role {
     display: flex;
-    /* justify-content: right;  */
     align-items: center;
 }
 #role .out{
@@ -82,7 +81,7 @@ nav ul li button{
 }
 #role .in{
     flex: 2;
-    align-items: center;
+     justify-content: center; 
     text-align: left;
 }
 
