@@ -139,9 +139,9 @@ nav ul li button{
 #tools .in p{
     align-content: center;
 }
-#infoBottom{
-    display: flex;
-}
+/* #infoTeam{
+    
+} */
 #team{
     display: flex;
     align-items: center; 
