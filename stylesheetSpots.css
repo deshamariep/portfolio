@@ -9,6 +9,7 @@ body{
     font-style: normal;
 }
 main{
+    max-width: 1200px;
     margin: 0 170px;
     box-sizing: border-box;
     color: rgb(94, 95, 94);
