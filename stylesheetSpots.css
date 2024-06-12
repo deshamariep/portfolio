@@ -72,7 +72,7 @@ nav ul li button{
 }
 #role {
     display: flex;
-    justify-content: flex-end; /* Align items to the end of the flex container */
+    justify-content: flex-start; /* Align items to the end of the flex container */
     align-items: center; /* Center items vertically */
 }
 
