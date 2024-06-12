@@ -73,32 +73,26 @@ nav ul li button{
 }
 #role {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    justify-content: center; 
 }
-
-#role .out {
+#role .out{
     flex: 1;
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
     padding-top: 10%;
 }
-
-#role .in {
+#role .in{
     flex: 4;
     text-align: left;
-    padding: 0% 5%;
-    display: flex; /* Use flexbox to center child elements */
-    flex-direction: column; /* Stack child elements vertically */
-    justify-content: center; /* Center child elements vertically */
+    align-self: center;
+    padding: 0% 5% 0% 10%;
+    display: block;
     border: 1px solid rgb(255, 145, 28);
     border-radius: 30px;
 }
 
-#role .in p {
-    margin: 0; /* Remove default margins */
-}
 
 footer {
     width: 100%;
