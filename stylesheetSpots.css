@@ -70,9 +70,15 @@ nav ul li button{
     flex: 2;
     text-align: right;
 }
-/* #role{
+#role{
     display: flex;
-} */
+}
+#out{
+    flex: 1;
+}
+#in{
+    flex: 1;
+}
 
 
 footer {
