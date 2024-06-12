@@ -97,11 +97,11 @@ nav ul li button{
     justify-content: center; 
 }
 #box .out{
-    flex: 1;
+    flex: 2;
 }
 #box .in{
     flex: content;
-    text-align: left;
+    text-align: center;
     padding: 0% 5%;
     display: block;
     border: 1px solid rgb(255, 145, 28);
