@@ -65,7 +65,7 @@ nav ul li button{
     justify-content: center; 
 }
 #intro #logo{
-    flex: content;
+    flex: 1;
 }
 #intro #info{
     flex: 2;
@@ -81,7 +81,7 @@ nav ul li button{
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
-    padding-top: 10%;
+    /* padding-top: 10%; */
 }
 #role .in{
     flex: content;
