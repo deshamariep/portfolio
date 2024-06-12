@@ -72,6 +72,8 @@ nav ul li button{
 }
 #role{
     display: flex;
+    justify-content: right;
+    align-items: right;
 }
 #out{
     flex: 1;
