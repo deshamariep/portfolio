@@ -139,13 +139,15 @@ nav ul li button{
 #tools .in p{
     align-content: center;
 }
-/* #infoTeam{
-    
-} */
+#infoTeam{
+    position: relative;
+}
 #team{
     display: flex;
     align-items: center; 
     justify-content: center; 
+    position: absolute;
+    top: 100px;
 }
 #team .out{
     flex: content;
