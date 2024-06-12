@@ -76,14 +76,14 @@ nav ul li button{
     align-items: center;
 }
 
-.out {
+#role .out{
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
     margin-right: auto; 
 }
 
-.in {
+.in{
     flex: 2;
 }
 
