@@ -4,7 +4,6 @@ body{
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background-color: rgb(136, 149, 109);
     font-family: "Assistant", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -67,6 +66,15 @@ nav ul li button{
     outline: none;
     text-align: center; 
     display: inline-block;
+}
+#intro{
+    display: flex;
+}
+#intro #logo{
+    flex: 1;
+}
+#intro #info{
+    flex: 2;
 }
 
 
