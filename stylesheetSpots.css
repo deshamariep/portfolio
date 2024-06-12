@@ -79,6 +79,7 @@ nav ul li button{
     flex: 1;
     transform: rotate(-90deg);
     transform-origin: center center;
+    text-align: center;
 }
 #in{
     flex: 2;
