@@ -64,11 +64,8 @@ nav ul li button{
     display: flex;
     justify-content: center; 
 }
-/* #intro div{
-    margin-bottom: 5px;
-} */
 #intro #logo{
-    flex: 1;
+    flex: content;
 }
 #intro #info{
     flex: 2;
