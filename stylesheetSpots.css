@@ -62,7 +62,6 @@ nav ul li button{
 }
 #intro{
     display: flex;
-    text-align: center;
 }
 #intro #logo{
     flex: 1;
@@ -79,9 +78,11 @@ nav ul li button{
 #role .out{
     transform: rotate(-90deg);
     transform-origin: center center;
+    text-align: center;
 }
-.in{
+#role .in{
     flex: 2;
+    text-align: center;
 }
 
 
