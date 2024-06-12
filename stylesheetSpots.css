@@ -91,6 +91,7 @@ nav ul li button{
     display: block;
     border: 1px solid rgb(255, 145, 28);
     border-radius: 30px;
+    margin-left: 20px;
 }
 #box{
     display: flex;
