@@ -77,12 +77,12 @@ nav ul li button{
     justify-content: center; 
 }
 #role .out{
-    flex: content;
+    flex: 5;
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
     padding-top: 7%;
-    /* margin-right: 25px; */
+    margin-right: 20px;
 }
 #role .in{
     flex: content;
@@ -123,12 +123,12 @@ nav ul li button{
     justify-content: center; 
 }
 #tools .out{
-    flex: content;
+    flex: 1;
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
     padding-top: 7%;
-    /* margin-top: 20px; */
+    margin-left: 20px;
 }
 #tools .in{
     flex: content;
