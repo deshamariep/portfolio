@@ -158,6 +158,7 @@ nav ul li button{
     text-align: right;
     padding-top: 10%;
     margin-top: 20px;
+    margin-right: 10px;
 }
 #team .in{
     flex: content;
