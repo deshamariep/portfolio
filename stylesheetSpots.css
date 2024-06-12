@@ -97,7 +97,9 @@ nav ul li button{
     margin-left: auto;
     margin-right: auto;
 }
-
+#role .in p .boldText{
+    text-align: left;
+}
 
 footer {
     width: 100%;
