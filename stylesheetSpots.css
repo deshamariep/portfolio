@@ -68,7 +68,12 @@ nav ul li button{
 }
 #intro #info{
     flex: 2;
+    align-items: flex-end;
+    justify-content: right;
 }
+/* #role{
+    display: flex;
+} */
 
 
 footer {
