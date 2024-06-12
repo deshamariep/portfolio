@@ -68,7 +68,7 @@ nav ul li button{
 }
 #intro #info{
     flex: 2;
-    align-content: right;
+    text-align: right;
 }
 /* #role{
     display: flex;
