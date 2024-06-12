@@ -97,7 +97,7 @@ nav ul li button{
     justify-content: center; 
 }
 #box .out{
-    flex: 2;
+    flex: 1;
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
