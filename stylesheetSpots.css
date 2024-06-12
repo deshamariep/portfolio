@@ -81,7 +81,7 @@ nav ul li button{
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
-    padding-left: 10%;
+    padding-top: 10%;
 }
 #role .in{
     flex: 4;
