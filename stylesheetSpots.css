@@ -81,7 +81,7 @@ nav ul li button{
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 8%;
 }
 #role .in{
     flex: content;
@@ -97,9 +97,9 @@ nav ul li button{
     justify-content: center; 
 }
 #box .out{
-    flex: 1;
+    flex: 2;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 8%;
 }
 #box .in{
     flex: content;
@@ -124,7 +124,7 @@ nav ul li button{
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 8%;
 }
 #tools .in{
     flex: content;
@@ -139,6 +139,8 @@ nav ul li button{
 #tools .in p{
     align-content: center;
 }
+
+
 
 footer {
     width: 100%;
