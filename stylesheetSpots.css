@@ -87,7 +87,7 @@ nav ul li button{
     padding-top: 10%;
 }
 #role .in{
-    flex: 4;
+    flex: content;
     text-align: left;
     padding: 0% 5%;
     display: block;
