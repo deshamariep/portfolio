@@ -86,11 +86,32 @@ nav ul li button{
 #role .in{
     flex: 4;
     text-align: left;
-    padding: 0% 5% 0% 10%;
+    padding: 0% 5%;
     display: block;
     border: 1px solid rgb(255, 145, 28);
     border-radius: 30px;
 }
+#box{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+#box .out{
+    flex: 1;
+    transform: rotate(-90deg);
+    transform-origin: center center;
+    text-align: center;
+    padding-top: 10%;
+}
+#box .in{
+    flex: 4;
+    text-align: left;
+    padding: 0% 5%;
+    display: block;
+    border: 1px solid rgb(255, 145, 28);
+    border-radius: 30px;
+}
+
 footer {
     width: 100%;
     margin: 0;
