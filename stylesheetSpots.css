@@ -72,15 +72,15 @@ nav ul li button{
 }
 #role {
     display: flex;
-    justify-content: flex-start; /* Align items to the end of the flex container */
-    align-items: center; /* Center items vertically */
+    justify-content: right; 
+    align-items: center;
 }
 
 .out {
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
-    margin-left: auto; /* Pushes the element to the end */
+    margin-left: auto; 
 }
 
 .in {
