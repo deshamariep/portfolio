@@ -75,9 +75,9 @@ nav ul li button{
     justify-content: right;
     align-items: right;
 }
-.out{
+#role .out{
     flex: 1;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     transform-origin: center center;
 }
 #in{
