@@ -86,8 +86,8 @@ nav ul li button{
 #role .in{
     flex: 4;
     text-align: left;
-    align-self: center;
-    padding: 0% 5% 0% 10%;
+    margin: auto;
+    padding: 0% 5%;
     display: block;
     border: 1px solid rgb(255, 145, 28);
     border-radius: 30px;
