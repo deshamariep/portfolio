@@ -77,7 +77,7 @@ nav ul li button{
     justify-content: center; 
 }
 #role .out{
-    flex: content;
+    flex: 1;
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
@@ -122,7 +122,7 @@ nav ul li button{
     justify-content: center; 
 }
 #tools .out{
-    flex: 2;
+    flex: 3;
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: center;
