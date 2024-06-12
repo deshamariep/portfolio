@@ -127,12 +127,6 @@ article{
 #gstreet{
     border: 1px solid rgb(105, 168, 95);
 }
-#empower {
-    border-top: 1px solid green; /* Top border with green color */
-    border-right: 1px solid green; /* Right border with orange color */
-    border-bottom: 1px solid orange; /* Bottom border with blue color */
-    border-left: 1px solid orange; /* Left border with purple color */
-}
 #ume{
     border: 1px solid rgb(243, 159, 173);
 }
