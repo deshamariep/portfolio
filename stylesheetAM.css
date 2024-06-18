@@ -142,6 +142,12 @@ nav ul li button{
     bottom: 20px;
     left: 30px;
 }
+#myWork #spots{
+    background-image: url(images/spotsTransBG.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
 footer {
     width: 100%;
     margin: 0;
