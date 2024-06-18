@@ -142,7 +142,7 @@ nav ul li button{
     bottom: 20px;
     left: 30px;
 }
-#myWork #spots{
+#spots:hover{
     background-image: url(images/spotsTransBG.png);
     background-size: cover;
     background-position: center; 
