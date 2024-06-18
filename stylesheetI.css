@@ -127,7 +127,7 @@ article{
 #spots{
     border: 1px solid orange;
 }
-.caseStudy #spots:hover{
+.caseStudy #sp:hover{
     background-image: url(images/spotsTransBG.png);
     background-size: cover;
     background-position: center; 
