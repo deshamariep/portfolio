@@ -148,6 +148,18 @@ nav ul li button{
     background-position: center; 
     background-repeat: no-repeat;
 }
+#gStreet:hover{
+    background-image: url(images/gstTransBG.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+#ume:hover{
+    background-image: url(images/umeTransBG.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
 footer {
     width: 100%;
     margin: 0;
