@@ -172,6 +172,9 @@ nav ul li button{
 #team .in p{
     align-content: center;
 }
+article p{
+    width: 500px;
+}
 .boldText{
     padding-top: 25px;
     font-family: "Staatliches", sans-serif;
