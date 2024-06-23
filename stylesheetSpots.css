@@ -144,9 +144,6 @@ nav ul li button{
 #tools .in p{
     align-content: center;
 }
-/* #infoTeam{
- 
-} */
 #team{
     display: flex;
     align-content: center; 
@@ -175,7 +172,18 @@ nav ul li button{
 #team .in p{
     align-content: center;
 }
-
+.boldText{
+    padding-top: 25px;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.data{
+    display: flex;
+}
+.data div{
+    flex: 1;
+}
 
 footer {
     width: 100%;
