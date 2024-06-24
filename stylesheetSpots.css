@@ -173,7 +173,7 @@ nav ul li button{
     align-content: center;
 }
 article{
-    width: calc(100% - 340px); /* Adjusted width considering left and right margins */
+    width: calc(100% - 170px); /* Adjusted width considering left and right margins */
     margin: auto; /* Centering the article */
 }
 .boldText{
