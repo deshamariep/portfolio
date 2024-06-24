@@ -179,6 +179,9 @@ article{
 article p{
     width: 500px;
 }
+article li{
+    width: 100px;
+}
 .boldText{
     padding-top: 0px;
     font-family: "Staatliches", sans-serif;
