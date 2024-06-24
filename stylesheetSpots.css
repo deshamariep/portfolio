@@ -187,7 +187,10 @@ article p{
 .data div{
     flex: content;
 }
-
+#center{
+    text-align: center;
+    justify-content: center;
+}
 footer {
     width: 100%;
     margin: 0;
