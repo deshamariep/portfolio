@@ -172,20 +172,10 @@ nav ul li button{
 #team .in p{
     align-content: center;
 }
-article {
+article{
     width: calc(100% - 340px); /* Adjusted width considering left and right margins */
-    margin: 0px; /* Centering the article */
-}
-
-article p {
-    width: 500px; /* Adjust paragraph width to ensure text wraps correctly */
-    max-width: 100%; /* Ensure paragraphs do not exceed the article width */
-}
-article img {
-    max-width: 100%; /* Ensure images do not exceed the width of their container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space under images */
-    margin: 20px 0; /* Add margin above and below images for spacing */
+    margin: auto; /* Centering the article */
+    text-align: left;
 }
 .boldText{
     padding-top: 0px;
