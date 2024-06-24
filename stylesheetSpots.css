@@ -190,9 +190,10 @@ article{
 .data div{
     flex: 1;
 }
-#center {
+#center{
     text-align: center;
     justify-content: center;
+    align-items: center;
     margin: auto; 
     max-width: 600px; 
     padding: 20px; 
