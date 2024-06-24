@@ -184,6 +184,8 @@ article{
 }
 .data{
     display: flex;
+    justify-content: space-between; 
+    gap: 10px;
 }
 .data div{
     flex: 1;
