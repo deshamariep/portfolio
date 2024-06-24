@@ -154,9 +154,9 @@ nav ul li button{
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: right;
-    padding-top: 10%;
+    /* padding-top: 10%;
     margin-top: 20px;
-    margin-right: 10px;
+    margin-right: 10px; */
 }
 #team .in{
     flex: content;
