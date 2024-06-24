@@ -173,7 +173,7 @@ nav ul li button{
     align-content: center;
 }
 article {
-    width: calc(100% - 340px); /* Adjusted width considering left and right margins */
+    width: calc(100% - 170px); /* Adjusted width considering left and right margins */
     margin: 0px; /* Centering the article */
 }
 
@@ -181,7 +181,6 @@ article p {
     width: 100%; /* Adjust paragraph width to ensure text wraps correctly */
     max-width: 100%; /* Ensure paragraphs do not exceed the article width */
 }
-
 article img {
     max-width: 100%; /* Ensure images do not exceed the width of their container */
     height: auto; /* Maintain aspect ratio */
