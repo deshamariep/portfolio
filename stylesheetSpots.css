@@ -71,7 +71,7 @@ nav ul li button{
     flex: 2;
     text-align: right;
 }
-#role {
+#role{
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -154,9 +154,9 @@ nav ul li button{
     transform: rotate(-90deg);
     transform-origin: center center;
     text-align: right;
-    /* padding-top: 10%;
+    padding-top: 10%;
     margin-top: 20px;
-    margin-right: 10px; */
+    margin-right: 30px;
 }
 #team .in{
     flex: content;
