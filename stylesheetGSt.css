@@ -153,7 +153,7 @@ nav ul li button{
     flex: 1;
     transform: rotate(-90deg);
     transform-origin: center center;
-    text-align: right;
+    text-align: center;
     padding-top: 10%;
     margin-top: 20px;
     margin-right: 10px;
