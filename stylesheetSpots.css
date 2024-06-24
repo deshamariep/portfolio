@@ -185,7 +185,7 @@ article{
 .data{
     display: flex;
     justify-content: space-between; 
-    gap: 10px;
+    gap: 40px;
 }
 .data div{
     flex: 1;
