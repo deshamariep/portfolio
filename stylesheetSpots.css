@@ -180,7 +180,7 @@ article p{
     width: 500px;
 }
 article li{
-    width: 100px;
+    width: 200px;
 }
 .boldText{
     padding-top: 0px;
@@ -191,7 +191,7 @@ article li{
 .data{
     display: flex;
     justify-content: space-between; 
-    gap: 40px;
+    gap: 20px;
 }
 .data div{
     flex: 1;
