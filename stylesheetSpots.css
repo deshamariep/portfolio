@@ -9,7 +9,7 @@ body{
     font-style: normal;
 }
 main{
-    margin: 0 170px;
+    padding: 0 170px;
     box-sizing: border-box;
     color: rgb(94, 95, 94);
 }
@@ -185,7 +185,7 @@ article p{
     display: flex;
 }
 .data div{
-    flex: content;
+    flex: 1;
 }
 #center{
     text-align: center;
