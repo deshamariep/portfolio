@@ -185,7 +185,7 @@ article p{
     display: flex;
 }
 .data div{
-    flex: 1;
+    flex: content;
 }
 
 footer {
