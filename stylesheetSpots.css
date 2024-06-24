@@ -174,7 +174,7 @@ nav ul li button{
 }
 article {
     width: calc(100% - 340px); /* Adjusted width considering left and right margins */
-    margin: 0 auto; /* Centering the article */
+    margin: 0 170; /* Centering the article */
     padding: 20px; /* Add padding inside the articles for better spacing */
 }
 
