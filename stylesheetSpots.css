@@ -155,7 +155,7 @@ nav ul li button{
     transform-origin: center center;
     text-align: end;
     padding-top: 10%;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-right: 10px;
 }
 #team .in{
@@ -173,7 +173,7 @@ nav ul li button{
     align-content: center;
 }
 article{
-    width: calc(100% - 170px); /* Adjusted width considering left and right margins */
+    width: calc(100% - 0px); /* Adjusted width considering left and right margins */
     margin: none; /* Centering the article */
 }
 /* article p{
