@@ -176,12 +176,9 @@ article{
     width: calc(100% - 0px); /* Adjusted width considering left and right margins */
     margin: none; /* Centering the article */
 }
-/* article p{
+#impact p{
     width: 500px;
 }
-article li{
-    width: 200px;
-} */
 .boldText{
     padding-top: 0px;
     font-family: "Staatliches", sans-serif;
@@ -204,7 +201,7 @@ article li{
     max-width: 600px; 
     padding: 20px; 
 }
-footer {
+footer{
     width: 100%;
     margin: 0;
     margin-top: 40px;

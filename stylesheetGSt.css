@@ -176,6 +176,9 @@ article{
     width: calc(100% - 0px); /* Adjusted width considering left and right margins */
     margin: none; /* Centering the article */
 }
+#impact p{
+    width: 500px;
+}
 .boldText{
     padding-top: 0px;
     font-family: "Staatliches", sans-serif;
