@@ -172,7 +172,12 @@ nav ul li button{
 #team .in p{
     align-content: center;
 }
-
+.indent{
+    padding-left: 10px;
+}
+.textSize{
+    width: 500px;
+}
 
 
 footer {
