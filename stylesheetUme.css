@@ -172,14 +172,30 @@ nav ul li button{
 #team .in p{
     align-content: center;
 }
+article{
+    width: calc(100% - 0px); /* Adjusted width considering left and right margins */
+    margin: none; /* Centering the article */
+}
 .indent{
     padding-left: 10px;
 }
 .textSize{
     width: 500px;
 }
-
-
+.boldText{
+    padding-top: 0px;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.data{
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px;
+}
+.data div{
+    flex: 1;
+}
 footer {
     width: 100%;
     margin: 0;
