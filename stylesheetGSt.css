@@ -188,7 +188,7 @@ article{
 .data{
     display: flex;
     justify-content: space-between; 
-    gap: 20px;
+    gap: 30px;
 }
 .data div{
     flex: 1;
@@ -198,17 +198,19 @@ article{
 }
 #quesIconLeft{
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 0px;
+    left: 0px;
 }
 #quesIconRight{
     position: absolute;
-    top: 20px;
-    left: 700px;
+    top: 0px;
+    left: 550px;
 }
 .border{
     display: block;
     border: 1px solid rgb(105, 168, 95);
+    border-radius: 30px;
+    padding: 15px;
 }
 #center{
     text-align: center;
