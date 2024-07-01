@@ -176,7 +176,7 @@ article{
     width: calc(100% - 0px); /* Adjusted width considering left and right margins */
     margin: none; /* Centering the article */
 }
-.textSize{
+.textSize, #textSize{
     width: 500px;
 }
 .boldText{
