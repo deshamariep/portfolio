@@ -179,7 +179,7 @@ article{
 .indent{
     padding-left: 10px;
 }
-.textSize{
+.textSize, #textSize{
     width: 500px;
 }
 .boldText{
