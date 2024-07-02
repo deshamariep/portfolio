@@ -202,15 +202,15 @@ img, video {
     flex: 1;
 }
 .painPT{
-    width: 100px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     position: relative;
 }
 .outer{
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
                 -6px -6px 10px -1px rgba(255,255,255,0.7);
 }
@@ -228,7 +228,7 @@ img, video {
                 0px 12px 10px -10px rgba(0,0,0,0.05);
 }
 #number{
-    font-weight: 600px;
+    /* font-weight: 600px; */
     color: rgb(255, 145, 28);
 }
 circle{
