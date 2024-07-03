@@ -209,13 +209,19 @@ img, video {
     justify-content: center;
     position: relative;
 }
-#number{
+.number{
     color: rgb(255, 145, 28);
 }
-circle{
+#price{
     fill: none;
-    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: price 2s linear forwards;
+}
+#prox{
+    fill: none;
     stroke: url(#GradientColor);
     stroke-width: 20px;
     stroke-dasharray: 472;
@@ -230,6 +236,11 @@ svg{
 @keyframes price{
     100%{
         stroke-dashoffset: 94;
+    }
+}
+@keyframes prox{
+    100%{
+        stroke-dashoffset: 127;
     }
 }
 #center{
