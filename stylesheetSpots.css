@@ -204,6 +204,7 @@ img, video {
 .painPT{
     width: 160px;
     height: 160px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -285,6 +286,7 @@ svg{
     justify-content: center;
     align-items: center;
     margin: auto; 
+    margin-top: 10px;
 }
 footer{
     width: 100%;
