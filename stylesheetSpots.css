@@ -210,6 +210,9 @@ img, video {
     position: relative;
 }
 .number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: rgb(255, 145, 28);
 }
 #price{
@@ -276,6 +279,12 @@ svg{
     margin: auto; 
     max-width: 600px; 
     padding: 20px; 
+}
+.center{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
 }
 footer{
     width: 100%;
