@@ -265,7 +265,7 @@ svg{
 }
 @keyframes appl{
     100%{
-        stroke-dashoffset: 55;
+        stroke-dashoffset: 60;
     }
 }
 @keyframes wom{
