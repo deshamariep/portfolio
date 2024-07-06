@@ -214,7 +214,7 @@ img, video {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 24px;
     color: rgb(255, 145, 28);
 }
 #price{
@@ -266,7 +266,7 @@ svg{
 }
 @keyframes appl{
     100%{
-        stroke-dashoffset: 60;
+        stroke-dashoffset: 65;
     }
 }
 @keyframes wom{
