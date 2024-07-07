@@ -228,7 +228,7 @@ article{
     font-size: 20px;
     color: rgb(105, 168, 95);
 }
-#price{
+#age{
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 20px;
@@ -236,7 +236,7 @@ article{
     stroke-dashoffset: 472;
     animation: age 2s linear forwards;
 }
-#prox{
+#res{
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 20px;
@@ -244,7 +244,7 @@ article{
     stroke-dashoffset: 472;
     animation: res 2s linear forwards;
 }
-#appl{
+#inter{
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 20px;
