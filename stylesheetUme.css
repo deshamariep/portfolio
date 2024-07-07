@@ -212,20 +212,59 @@ article{
     font-size: 24px;
     color: rgb(243, 159, 173);
 }
-#price{
+#sOne{
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 20px;
     stroke-dasharray: 472;
     stroke-dashoffset: 472;
-    animation: price 2s linear forwards;
+    animation: sOne 2s linear forwards;
+}
+#sTwo{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: sTwo 2s linear forwards;
+}
+#sThree{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: sThree 2s linear forwards;
+}
+#sFour{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: sFour 2s linear forwards;
 }
 svg{
     position: absolute;
     top: 0;
     left: 0;
 }
-@keyframes price{
+@keyframes sOne{
+    100%{
+        stroke-dashoffset: 94;
+    }
+}
+@keyframes sTwo{
+    100%{
+        stroke-dashoffset: 94;
+    }
+}
+@keyframes sThree{
+    100%{
+        stroke-dashoffset: 94;
+    }
+}
+@keyframes sFour{
     100%{
         stroke-dashoffset: 94;
     }
