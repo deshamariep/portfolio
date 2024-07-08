@@ -251,22 +251,22 @@ svg{
 }
 @keyframes sOne{
     100%{
-        stroke-dashoffset: 94;
+        stroke-dashoffset: 420;
     }
 }
 @keyframes sTwo{
     100%{
-        stroke-dashoffset: 94;
+        stroke-dashoffset: 434;
     }
 }
 @keyframes sThree{
     100%{
-        stroke-dashoffset: 94;
+        stroke-dashoffset: 293;
     }
 }
 @keyframes sFour{
     100%{
-        stroke-dashoffset: 94;
+        stroke-dashoffset: 274;
     }
 }
 
