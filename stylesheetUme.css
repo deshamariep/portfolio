@@ -269,7 +269,13 @@ svg{
         stroke-dashoffset: 274;
     }
 }
-
+.center{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+    margin-top: 10px;
+}
 
 footer {
     width: 100%;
