@@ -288,7 +288,10 @@ svg{
     align-items: center;
     margin: auto; 
     max-width: 600px; 
-    padding: 20px; 
+    padding: 20px;
+}
+#center p{
+    margin-bottom: 0px;
 }
 .center{
     text-align: center;
