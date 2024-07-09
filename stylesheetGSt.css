@@ -178,6 +178,14 @@ article{
     width: calc(100% - 0px); /* Adjusted width considering left and right margins */
     margin: none; /* Centering the article */
 }
+img{
+    justify-content: center;
+    align-items: center;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
 .textSize, #textSize{
     width: 500px;
 }
