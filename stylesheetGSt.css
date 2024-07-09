@@ -178,7 +178,7 @@ article{
     width: calc(100% - 0px); /* Adjusted width considering left and right margins */
     margin: none; /* Centering the article */
 }
-#img{
+.img{
     justify-content: center;
     align-items: center;
     display: block;
