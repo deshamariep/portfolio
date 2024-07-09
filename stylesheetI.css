@@ -144,6 +144,7 @@ article{
     text-align: center;
     justify-content: center;
     margin-top: 8px;
+    padding-bottom: 10px;
 }
 #spots{
     border: 1px solid orange;
