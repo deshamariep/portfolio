@@ -15,8 +15,24 @@ main{
     letter-spacing: 0.03em;
     line-height: 1.6
 }
+.mobile-incomplete {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text color */
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px; /* Adds some space between the message and the content */
+    border: 1px solid #f5c6cb; /* Border for emphasis */
+}
+
+.mobile-incomplete p {
+    margin: 0; /* Remove default margin for paragraphs */
+}
 /* @media screen and (min-width: 768px) and (max-width: 1023px){
     tablet
+    .mobile-incomplete {
+        display: none;
+    }
 } */
 @media screen and (min-width: 1024px){
     body{
@@ -35,6 +51,9 @@ main{
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 1.6
+    }
+    .mobile-incomplete {
+        display: none; /* Hide the message on larger screens */
     }
     header{
         display: flex;
