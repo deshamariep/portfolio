@@ -1,408 +1,441 @@
-body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    font-family: "Assistant", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+@media screen and (max-width: 767px){
+    .mobileIncomplete {
+        display: block;
+        background-color: #f8d7da; /* Light red background */
+        color: #721c24; /* Dark red text color */
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 20px; /* Adds some space between the message and the content */
+        border: 1px solid #f5c6cb; /* Border for emphasis */
+    }
+    
+    .mobileIncomplete p {
+        margin: 0; /* Remove default margin for paragraphs */
+    }
+    main{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
 }
-main{
-    margin: 0 170px;
-    box-sizing: border-box;
-    color: rgb(94, 95, 94);
-    letter-spacing: 0.03em;
-    line-height: 1.6
-}
-header{
-    display: flex;
-    height: 150px;
-    padding-top: 30px;
-}
-header #two{
-    flex: 2;
-}
-header #two h2{
-    font-family: "Staatliches", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 30px;
-}
-header #one{
-    flex: 1;
-    font-family: "Staatliches", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-a{
-    text-decoration: none;
-    color: rgb(94, 95, 94);
-}
-header #one a{
-    text-align: center;
-    text-decoration: none;
-}
-nav ul{
-    display: flex;
-}
-nav ul li{
-    flex: content;
-    list-style: none;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-nav ul li button{
-    width: 100px;
-    height: 50px;
-    border-radius: 20px;
-    background: none; 
-    border: none; 
-    outline: none;
-    text-align: center; 
-    display: inline-block;
-}
-#intro{
-    display: flex;
-    justify-content: center; 
-}
-#intro #logo{
-    flex: 1;
-}
-#intro #info{
-    flex: 2;
-    text-align: right;
-}
-#role{
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}
-#role .out{
-    flex: .4;
-    transform: rotate(-90deg);
-    transform-origin: center center;
-    text-align: center;
-    align-items: end;
-    padding-top: 9%;
-}
-#role .in{
-    flex: content;
-    text-align: left;
-    padding: 0% 7%;
-    display: block;
-    border: 1px solid rgb(105, 168, 95);
-    border-radius: 30px;
-    margin-left: 30px;
-}
-#box{
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}
-#box .out{
-    flex: 3;
-    transform: rotate(-90deg);
-    transform-origin: center center;
-    text-align: center;
-    padding-top: 7%;
-}
-#box .in{
-    flex: content;
-    text-align: center;
-    display: block;
-    height: 80px;
-    border: 1px solid rgb(105, 168, 95);
-    border-radius: 20px;
-    align-content: center;
-    margin-left: 20px;
-}
-#box .in p{
-    align-content: center;
-}
-#tools{
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-}
-#tools .out{
-    flex: 1;
-    transform: rotate(-90deg);
-    transform-origin: center center;
-    text-align: center;
-    padding-top: 7%;
-    margin-left: 20px;
-}
-#tools .in{
-    flex: content;
-    text-align: center;
-    display: block;
-    height: 80px;
-    border: 1px solid rgb(105, 168, 95);
-    border-radius: 20px;
-    align-content: center;
-    margin-left: 20px;
-}
-#tools .in p{
-    align-content: center;
-}
-#team{
-    display: flex;
-    align-content: center; 
-    justify-content: center; 
-}
-#team .out{
-    flex: 1;
-    transform: rotate(-90deg);
-    transform-origin: center center;
-    text-align: end;
-    padding-top: 10%;
-    margin-top: 33px;
-    margin-right: 5px;
-}
-#team .in{
-    flex: content;
-    text-align: center;
-    display: block;
-    height: 80px;
-    width: 100px;
-    border: 1px solid rgb(105, 168, 95);
-    border-radius: 20px;
-    align-content: center;
-    margin-left: 20px;
-}
-#team .in p{
-    align-content: center;
-}
-article{
-    width: calc(100% - 0px); /* Adjusted width considering left and right margins */
-    margin: none; /* Centering the article */
-}
-.img{
-    justify-content: center;
-    align-items: center;
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-.textSize, #textSize{
-    width: 500px;
-}
-.boldText{
-    padding-top: 0px;
-    font-family: "Staatliches", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.data{
-    display: flex;
-    justify-content: space-between; 
-    gap: 30px;
-}
-.data div{
-    flex: 1;
-}
-#question{
-    position: relative;
-}
-#quesIconLeft{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-#quesIconRight{
-    position: absolute;
-    top: 0px;
-    left: 565px;
-}
-.border{
-    display: block;
-    border: 1px solid rgb(105, 168, 95);
-    border-radius: 30px;
-    padding: 15px;
-}
-.painPT {
-    width: 185px;
-    height: 185px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.number {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px; 
-    color: rgb(105, 168, 95);
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 1.2; 
-}
-#biggerNum{
-    font-size: 22px; 
-}
-#age{
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: age 2s linear forwards;
-}
-#res1, #res2{
-    fill: none;
-    stroke-width: 15px;
-    stroke-linecap: round;
-    stroke-dasharray: 530;
-    stroke-dashoffset: 530;
-}
-#res1{
-    stroke: #8bd58b;
-    animation: res1 2s linear forwards;
-}
-#res2{
-    stroke: #4CAF50;
-    animation: res2 2s linear forwards;
-}
-#inter1, #inter2, #inter3 {
-    fill: none;
-    stroke-width: 15px;
-    stroke-linecap: round;
-    stroke-dasharray: 530;
-    stroke-dashoffset: 530;
-}
-#inter1 {
-    stroke: #F0A01E; /* Use linear gradient for stroke color */
-    animation: inter1 2s linear forwards;
-}
-
-#inter2 {
-    stroke: #8bd58b; /* Use linear gradient for stroke color */
-    animation: inter2 2s linear forwards;
-}
-
-#inter3 {
-    stroke: #4CAF50; /* Use linear gradient for stroke color */
-    animation: inter3 2s linear forwards;
-}
-#yellow{
-    color: #F0A01E;
-}
-.lgreen{
-    color: #8bd58b;
-}
-.dgreen{
-    color: #4CAF50;
-}
-.segment {
-    margin-bottom: 10px;
-}
-.segment::before{
-    display: inline-block;
-    content: "";
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
-    vertical-align: middle;
-}
-.segment:nth-child(1)::before{
-    background-color: #F0A01E;
-}
-
-.segment:nth-child(2)::before{
-    background-color: #8bd58b;
-}
-
-.segment:nth-child(3)::before{
-    background-color: #4CAF50;
-}
-svg{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-@keyframes age{
-    100%{
+/* @media screen and (min-width: 768px) and (max-width: 1023px){
+    tablet
+    .mobile-incomplete {
+        display: none;
+    }
+} */
+@media screen and (min-width: 1024px){
+    .mobileIncomplete {
+        display: none; /* Hide the message on larger screens */
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        font-family: "Assistant", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    main{
+        margin: 0 170px;
+        box-sizing: border-box;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 1.6
+    }
+    header{
+        display: flex;
+        height: 150px;
+        padding-top: 30px;
+    }
+    header #two{
+        flex: 2;
+    }
+    header #two h2{
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: 30px;
+    }
+    header #one{
+        flex: 1;
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(94, 95, 94);
+    }
+    header #one a{
+        text-align: center;
+        text-decoration: none;
+    }
+    nav ul{
+        display: flex;
+    }
+    nav ul li{
+        flex: content;
+        list-style: none;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    nav ul li button{
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        background: none; 
+        border: none; 
+        outline: none;
+        text-align: center; 
+        display: inline-block;
+    }
+    #intro{
+        display: flex;
+        justify-content: center; 
+    }
+    #intro #logo{
+        flex: 1;
+    }
+    #intro #info{
+        flex: 2;
+        text-align: right;
+    }
+    #role{
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+    }
+    #role .out{
+        flex: .4;
+        transform: rotate(-90deg);
+        transform-origin: center center;
+        text-align: center;
+        align-items: end;
+        padding-top: 9%;
+    }
+    #role .in{
+        flex: content;
+        text-align: left;
+        padding: 0% 7%;
+        display: block;
+        border: 1px solid rgb(105, 168, 95);
+        border-radius: 30px;
+        margin-left: 30px;
+    }
+    #box{
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+    }
+    #box .out{
+        flex: 3;
+        transform: rotate(-90deg);
+        transform-origin: center center;
+        text-align: center;
+        padding-top: 7%;
+    }
+    #box .in{
+        flex: content;
+        text-align: center;
+        display: block;
+        height: 80px;
+        border: 1px solid rgb(105, 168, 95);
+        border-radius: 20px;
+        align-content: center;
+        margin-left: 20px;
+    }
+    #box .in p{
+        align-content: center;
+    }
+    #tools{
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+    }
+    #tools .out{
+        flex: 1;
+        transform: rotate(-90deg);
+        transform-origin: center center;
+        text-align: center;
+        padding-top: 7%;
+        margin-left: 20px;
+    }
+    #tools .in{
+        flex: content;
+        text-align: center;
+        display: block;
+        height: 80px;
+        border: 1px solid rgb(105, 168, 95);
+        border-radius: 20px;
+        align-content: center;
+        margin-left: 20px;
+    }
+    #tools .in p{
+        align-content: center;
+    }
+    #team{
+        display: flex;
+        align-content: center; 
+        justify-content: center; 
+    }
+    #team .out{
+        flex: 1;
+        transform: rotate(-90deg);
+        transform-origin: center center;
+        text-align: end;
+        padding-top: 10%;
+        margin-top: 33px;
+        margin-right: 5px;
+    }
+    #team .in{
+        flex: content;
+        text-align: center;
+        display: block;
+        height: 80px;
+        width: 100px;
+        border: 1px solid rgb(105, 168, 95);
+        border-radius: 20px;
+        align-content: center;
+        margin-left: 20px;
+    }
+    #team .in p{
+        align-content: center;
+    }
+    article{
+        width: calc(100% - 0px); /* Adjusted width considering left and right margins */
+        margin: none; /* Centering the article */
+    }
+    .img{
+        justify-content: center;
+        align-items: center;
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .textSize, #textSize{
+        width: 500px;
+    }
+    .boldText{
+        padding-top: 0px;
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .data{
+        display: flex;
+        justify-content: space-between; 
+        gap: 30px;
+    }
+    .data div{
+        flex: 1;
+    }
+    #question{
+        position: relative;
+    }
+    #quesIconLeft{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    #quesIconRight{
+        position: absolute;
+        top: 0px;
+        left: 565px;
+    }
+    .border{
+        display: block;
+        border: 1px solid rgb(105, 168, 95);
+        border-radius: 30px;
+        padding: 15px;
+    }
+    .painPT {
+        width: 185px;
+        height: 185px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .number {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px; 
+        color: rgb(105, 168, 95);
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 1.2; 
+    }
+    #biggerNum{
+        font-size: 22px; 
+    }
+    #age{
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 20px;
+        stroke-dasharray: 472;
         stroke-dashoffset: 472;
+        animation: age 2s linear forwards;
     }
-}
-@keyframes res1{
-    100%{
-        stroke-dashoffset: 0;
+    #res1, #res2{
+        fill: none;
+        stroke-width: 15px;
+        stroke-linecap: round;
+        stroke-dasharray: 530;
+        stroke-dashoffset: 530;
     }
-}
-@keyframes res2{
-    100%{
-        stroke-dashoffset: 121;
+    #res1{
+        stroke: #8bd58b;
+        animation: res1 2s linear forwards;
     }
-}
-@keyframes inter1 {
-    100% {
-        stroke-dashoffset: 0; 
+    #res2{
+        stroke: #4CAF50;
+        animation: res2 2s linear forwards;
     }
-}
-@keyframes inter2 {
-    100% {
-        stroke-dashoffset: 90;
+    #inter1, #inter2, #inter3 {
+        fill: none;
+        stroke-width: 15px;
+        stroke-linecap: round;
+        stroke-dasharray: 530;
+        stroke-dashoffset: 530;
     }
-}
-@keyframes inter3 {
-    100% {
-        stroke-dashoffset: 180; 
+    #inter1 {
+        stroke: #F0A01E; /* Use linear gradient for stroke color */
+        animation: inter1 2s linear forwards;
     }
-}
-#center{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: auto; 
-    max-width: 600px; 
-    padding: 20px;
-}
-#center p{
-    margin-bottom: 0px;
-}
-.center{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: auto; 
-    margin-top: 10px;
-}
-footer {
-    width: 100%;
-    margin: 0;
-    margin-top: 40px;
-    height: 250px;
-    text-align: center;
-    align-items: center;
-    padding: 20px;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: rgb(94, 95, 94);
-}
-#footTitle{
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 700;
-    font-style: normal;
-    margin-bottom: 0px;
-}
-footer #footLink{
-    display: flex;
-    justify-content: space-around;
-}
-footer #footLink a{
-    text-decoration: none;
-}
-footer #footLink div {
-    flex: 1;
-    flex-direction: row;
-    align-items: center; 
+    
+    #inter2 {
+        stroke: #8bd58b; /* Use linear gradient for stroke color */
+        animation: inter2 2s linear forwards;
+    }
+    
+    #inter3 {
+        stroke: #4CAF50; /* Use linear gradient for stroke color */
+        animation: inter3 2s linear forwards;
+    }
+    #yellow{
+        color: #F0A01E;
+    }
+    .lgreen{
+        color: #8bd58b;
+    }
+    .dgreen{
+        color: #4CAF50;
+    }
+    .segment {
+        margin-bottom: 10px;
+    }
+    .segment::before{
+        display: inline-block;
+        content: "";
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    .segment:nth-child(1)::before{
+        background-color: #F0A01E;
+    }
+    
+    .segment:nth-child(2)::before{
+        background-color: #8bd58b;
+    }
+    
+    .segment:nth-child(3)::before{
+        background-color: #4CAF50;
+    }
+    svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    @keyframes age{
+        100%{
+            stroke-dashoffset: 472;
+        }
+    }
+    @keyframes res1{
+        100%{
+            stroke-dashoffset: 0;
+        }
+    }
+    @keyframes res2{
+        100%{
+            stroke-dashoffset: 121;
+        }
+    }
+    @keyframes inter1 {
+        100% {
+            stroke-dashoffset: 0; 
+        }
+    }
+    @keyframes inter2 {
+        100% {
+            stroke-dashoffset: 90;
+        }
+    }
+    @keyframes inter3 {
+        100% {
+            stroke-dashoffset: 180; 
+        }
+    }
+    #center{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: auto; 
+        max-width: 600px; 
+        padding: 20px;
+    }
+    #center p{
+        margin-bottom: 0px;
+    }
+    .center{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: auto; 
+        margin-top: 10px;
+    }
+    footer {
+        width: 100%;
+        margin: 0;
+        margin-top: 40px;
+        height: 250px;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: rgb(94, 95, 94);
+    }
+    #footTitle{
+        font-family: "Cinzel Decorative", serif;
+        font-weight: 700;
+        font-style: normal;
+        margin-bottom: 0px;
+    }
+    footer #footLink{
+        display: flex;
+        justify-content: space-around;
+    }
+    footer #footLink a{
+        text-decoration: none;
+    }
+    footer #footLink div {
+        flex: 1;
+        flex-direction: row;
+        align-items: center; 
+    }
 }
