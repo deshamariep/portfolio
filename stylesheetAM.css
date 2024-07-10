@@ -1,194 +1,227 @@
-body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    background-image: url(images/bg3.gif);
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-    font-family: "Assistant", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+@media screen and (max-width: 767px){
+    .mobileIncomplete {
+        display: block;
+        background-color: #f8d7da; /* Light red background */
+        color: #721c24; /* Dark red text color */
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 20px; /* Adds some space between the message and the content */
+        border: 1px solid #f5c6cb; /* Border for emphasis */
+    }
+    
+    .mobileIncomplete p {
+        margin: 0; /* Remove default margin for paragraphs */
+    }
+    main{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
 }
-main{
-    margin: 0 170px;
-    box-sizing: border-box;
-    color: rgb(94, 95, 94);
-    letter-spacing: 0.03em;
-    line-height: 1.6
-}
-header{
-    display: flex;
-    height: 150px;
-    padding-top: 30px;
-}
-header #two{
-    flex: 2;
-}
-header #two h1{
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 700;
-    font-size: 48px;
-    font-style: normal;
-    margin-bottom: 10px;
-}
-header #two h2{
-    font-family: "Staatliches", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 0px;
-}
-header #one{
-    flex: 1;
-    font-family: "Staatliches", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-a{
-    text-decoration: none;
-    color: rgb(94, 95, 94);
-}
-header #one a{
-    text-align: center;
-    text-decoration: none;
-}
-nav ul{
-    display: flex;
-}
-nav ul li{
-    flex: content;
-    list-style: none;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-nav ul li button{
-    width: 100px;
-    height: 50px;
-    border-radius: 20px;
-    background: none; 
-    border: none; 
-    outline: none;
-    text-align: center; 
-    display: inline-block;
-}
-#values{
-    margin-top: 200px;
-}
-#values div{
-    display: flex;
-}
-#values div article{
-    flex: 1;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 40px;
-    height: 350px;
-    width: 250px;
-    margin: 8px;
-}
-.boldText{
-    padding: 25px;
-    padding-bottom: 0px;
-    font-family: "Staatliches", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-#values .boldText{
-    padding: 15px 25px 0px;
-}
-#values div article p{
-    padding: 25px;
-    padding-top: 0px;
-}
-#bottom{
-    display: flex;
-}
-#bottom section{
-    padding: 30px;
-}
-#bottom #two{
-    flex: 2;
-    padding-left: 0px;
-}
-#bottom #two p{
-    padding-left: 10px;
-    margin-right: 40px;
-}
-#bottom #one{
-    flex: 1;
-}
-#myWork ul{
-    flex-direction: column;
-}
-#myWork ul li{
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
-#myWork ul li button{
-    width: 180px;
-    height: 80px;
-    line-height: 80px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.5); 
-    border: none; 
-    outline: none;
-    text-align: left; 
-    display: inline-block;
-    position: relative;
-    padding-left: 85px; 
-}
-#myWork ul li button img{
-    position: absolute;
-    bottom: 20px;
-    left: 30px;
-}
-#spots:hover{
-    background-image: url(images/spotsTransBG.png);
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-}
-#gStreet:hover{
-    background-image: url(images/gstTransBG.png);
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-}
-#ume:hover{
-    background-image: url(images/umeTransBG.png);
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-}
-footer {
-    width: 100%;
-    margin: 0;
-    margin-top: 40px;
-    height: 250px;
-    text-align: center;
-    align-items: center;
-    padding: 20px;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: rgb(94, 95, 94);
-}
-#footTitle{
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 700;
-    font-style: normal;
-    margin-bottom: 0px;
-}
-footer #footLink{
-    display: flex;
-    justify-content: space-around;
-}
-footer #footLink a{
-    text-decoration: none;
-}
-footer #footLink div {
-    flex: 1;
-    flex-direction: row;
-    align-items: center; 
+/* @media screen and (min-width: 768px) and (max-width: 1023px){
+    tablet
+    .mobile-incomplete {
+        display: none;
+    }
+} */
+@media screen and (min-width: 1024px){
+    .mobileIncomplete {
+        display: none; /* Hide the message on larger screens */
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        background-image: url(images/bg3.gif);
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+        font-family: "Assistant", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    main{
+        margin: 0 170px;
+        box-sizing: border-box;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 1.6
+    }
+    header{
+        display: flex;
+        height: 150px;
+        padding-top: 30px;
+    }
+    header #two{
+        flex: 2;
+    }
+    header #two h1{
+        font-family: "Cinzel Decorative", serif;
+        font-weight: 700;
+        font-size: 48px;
+        font-style: normal;
+        margin-bottom: 10px;
+    }
+    header #two h2{
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: 0px;
+    }
+    header #one{
+        flex: 1;
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(94, 95, 94);
+    }
+    header #one a{
+        text-align: center;
+        text-decoration: none;
+    }
+    nav ul{
+        display: flex;
+    }
+    nav ul li{
+        flex: content;
+        list-style: none;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    nav ul li button{
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        background: none; 
+        border: none; 
+        outline: none;
+        text-align: center; 
+        display: inline-block;
+    }
+    #values{
+        margin-top: 200px;
+    }
+    #values div{
+        display: flex;
+    }
+    #values div article{
+        flex: 1;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 40px;
+        height: 350px;
+        width: 250px;
+        margin: 8px;
+    }
+    .boldText{
+        padding: 25px;
+        padding-bottom: 0px;
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    #values .boldText{
+        padding: 15px 25px 0px;
+    }
+    #values div article p{
+        padding: 25px;
+        padding-top: 0px;
+    }
+    #bottom{
+        display: flex;
+    }
+    #bottom section{
+        padding: 30px;
+    }
+    #bottom #two{
+        flex: 2;
+        padding-left: 0px;
+    }
+    #bottom #two p{
+        padding-left: 10px;
+        margin-right: 40px;
+    }
+    #bottom #one{
+        flex: 1;
+    }
+    #myWork ul{
+        flex-direction: column;
+    }
+    #myWork ul li{
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    #myWork ul li button{
+        width: 180px;
+        height: 80px;
+        line-height: 80px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.5); 
+        border: none; 
+        outline: none;
+        text-align: left; 
+        display: inline-block;
+        position: relative;
+        padding-left: 85px; 
+    }
+    #myWork ul li button img{
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+    }
+    #spots:hover{
+        background-image: url(images/spotsTransBG.png);
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+    }
+    #gStreet:hover{
+        background-image: url(images/gstTransBG.png);
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+    }
+    #ume:hover{
+        background-image: url(images/umeTransBG.png);
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+    }
+    footer {
+        width: 100%;
+        margin: 0;
+        margin-top: 40px;
+        height: 250px;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: rgb(94, 95, 94);
+    }
+    #footTitle{
+        font-family: "Cinzel Decorative", serif;
+        font-weight: 700;
+        font-style: normal;
+        margin-bottom: 0px;
+    }
+    footer #footLink{
+        display: flex;
+        justify-content: space-around;
+    }
+    footer #footLink a{
+        text-decoration: none;
+    }
+    footer #footLink div {
+        flex: 1;
+        flex-direction: row;
+        align-items: center; 
+    }
 }
