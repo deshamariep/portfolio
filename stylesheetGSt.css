@@ -275,18 +275,20 @@ article{
 #dgreen{
     color: #4CAF50;
 }
-#inter1{
-    stroke: #F0A01E;
+#inter1 {
+    stroke: url(#GradientColor1); /* Use linear gradient for stroke color */
     animation: inter1 2s linear forwards;
- }
- #inter2{
-    stroke: #8bd58b;
+}
+
+#inter2 {
+    stroke: url(#GradientColor2); /* Use linear gradient for stroke color */
     animation: inter2 2s linear forwards;
- }
- #inter3{
-    stroke: #4CAF50;
+}
+
+#inter3 {
+    stroke: url(#GradientColor3); /* Use linear gradient for stroke color */
     animation: inter3 2s linear forwards;
- }
+}
 .segment {
     margin-bottom: 10px;
 }
@@ -326,20 +328,18 @@ svg{
 }
 @keyframes inter1 {
     100% {
-       stroke-dasharray: 530;
-   }
+        stroke-dasharray: 530; /* Adjust based on the circumference of the circle */
+    }
 }
-
 @keyframes inter2 {
-   100% {
-       stroke-dasharray: 157;
-   }
+    100% {
+        stroke-dasharray: 157; /* Adjust based on the circumference of the circle */
+    }
 }
-
 @keyframes inter3 {
-   100% {
-       stroke-dasharray: 380;
-   }
+    100% {
+        stroke-dasharray: 380; /* Adjust based on the circumference of the circle */
+    }
 }
 #center{
     text-align: center;
