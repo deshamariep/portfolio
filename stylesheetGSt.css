@@ -266,6 +266,20 @@ article{
     stroke-width: 15px;
     stroke-linecap: round;
 }
+#inter1{
+    stroke: #F0A01E;
+    animation: inter1 2s linear forwards;
+ }
+ 
+ #inter2{
+    stroke: #8bd58b;
+    animation: inter2 2s linear forwards;
+ }
+ 
+ #inter3{
+    stroke: #4CAF50;
+    animation: inter3 2s linear forwards;
+ }
 .segment {
     margin-bottom: 10px;
 }
@@ -319,20 +333,6 @@ svg{
    100% {
        stroke-dasharray: 380;
    }
-}
-#inter1{
-   stroke: #F0A01E;
-   animation: inter1 2s linear forwards;
-}
-
-#inter2{
-   stroke: #8bd58b;
-   animation: inter2 2s linear forwards;
-}
-
-#inter3{
-   stroke: #4CAF50;
-   animation: inter3 2s linear forwards;
 }
 #center{
     text-align: center;
