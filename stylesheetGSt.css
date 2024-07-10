@@ -305,19 +305,19 @@ svg{
 }
 @keyframes inter1 {
     100% {
-       stroke-dasharray: 502;
+       stroke-dasharray: 530;
    }
 }
 
 @keyframes inter2 {
    100% {
-       stroke-dasharray: 128;
+       stroke-dasharray: 157;
    }
 }
 
 @keyframes inter3 {
    100% {
-       stroke-dasharray: 305;
+       stroke-dasharray: 380;
    }
 }
 #inter1{
