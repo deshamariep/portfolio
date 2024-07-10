@@ -262,14 +262,10 @@ article{
 }
 #res1{
     stroke: #8bd58b;
-    stroke-dasharray: 530;
-    stroke-dashoffset: 530;
     animation: res1 2s linear forwards;
 }
 #res2{
-    stroke: #4CAF50; /* Use linear gradient for stroke color */
-    stroke-dasharray: 530;
-    stroke-dashoffset: 530;
+    stroke: #4CAF50;
     animation: res1 2s linear forwards;
 }
 #inter1, #inter2, #inter3 {
