@@ -1,5 +1,6 @@
 @media screen and (max-width: 767px){
     .mobileIncomplete {
+        display: block;
         background-color: #f8d7da; /* Light red background */
         color: #721c24; /* Dark red text color */
         padding: 10px;
@@ -13,6 +14,9 @@
         margin: 0; /* Remove default margin for paragraphs */
     }
     main{
+        display: none;
+    }
+    footer{
         display: none;
     }
 }
