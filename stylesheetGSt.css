@@ -253,18 +253,29 @@ article{
     stroke-dashoffset: 472;
     animation: age 2s linear forwards;
 }
-#res{
+#res1{
     fill: none;
     stroke: url(#GradientColor);
-    stroke-width: 20px;
+    stroke-width: 15px;
+    stroke-linecap: round;
+    stroke-dasharray: 530;
+    stroke-dashoffset: 530;
+    animation: res1 2s linear forwards;
+}
+#res2{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 15px;
     stroke-dasharray: 472;
     stroke-dashoffset: 472;
-    animation: res 2s linear forwards;
+    animation: res2 2s linear forwards;
 }
 #inter1, #inter2, #inter3 {
     fill: none;
     stroke-width: 15px;
     stroke-linecap: round;
+    stroke-dasharray: 530;
+    stroke-dashoffset: 530;
 }
 #yellow{
     color: #F0A01E;
@@ -321,7 +332,12 @@ svg{
         stroke-dashoffset: 472;
     }
 }
-@keyframes res{
+@keyframes res1{
+    100%{
+        stroke-dashoffset: 472;
+    }
+}
+@keyframes res2{
     100%{
         stroke-dashoffset: 472;
     }
