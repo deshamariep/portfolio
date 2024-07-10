@@ -223,8 +223,8 @@ article{
     padding: 15px;
 }
 .painPT {
-    width: 240px; /* Adjust width to match SVG width */
-    height: 240px; /* Adjust height to match SVG height */
+    width: 185px; /* Adjust width to match SVG width */
+    height: 185px; /* Adjust height to match SVG height */
     margin: auto;
     display: flex;
     align-items: center;
