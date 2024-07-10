@@ -263,7 +263,7 @@ article{
 }
 #inter1, #inter2, #inter3 {
     fill: none;
-    stroke-width: 16px;
+    stroke-width: 15px;
     stroke-linecap: round;
 }
 .segment {
