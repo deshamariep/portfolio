@@ -261,12 +261,16 @@ article{
     stroke-dashoffset: 530;
 }
 #res1{
-    stroke: #8bd58b; /* Use linear gradient for stroke color */
-    animation: inter2 2s linear forwards;
+    stroke: #8bd58b;
+    stroke-dasharray: 530;
+    stroke-dashoffset: 530;
+    animation: res1 2s linear forwards;
 }
 #res2{
     stroke: #4CAF50; /* Use linear gradient for stroke color */
-    animation: inter3 2s linear forwards;
+    stroke-dasharray: 530;
+    stroke-dashoffset: 530;
+    animation: res1 2s linear forwards;
 }
 #inter1, #inter2, #inter3 {
     fill: none;
