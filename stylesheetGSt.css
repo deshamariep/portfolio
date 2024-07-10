@@ -253,22 +253,20 @@ article{
     stroke-dashoffset: 472;
     animation: age 2s linear forwards;
 }
-#res1{
+#res1, #res2{
     fill: none;
-    stroke: url(#GradientColor);
     stroke-width: 15px;
     stroke-linecap: round;
     stroke-dasharray: 530;
     stroke-dashoffset: 530;
-    animation: res1 2s linear forwards;
+}
+#res1{
+    stroke: #8bd58b; /* Use linear gradient for stroke color */
+    animation: inter2 2s linear forwards;
 }
 #res2{
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 15px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: res2 2s linear forwards;
+    stroke: #4CAF50; /* Use linear gradient for stroke color */
+    animation: inter3 2s linear forwards;
 }
 #inter1, #inter2, #inter3 {
     fill: none;
@@ -276,15 +274,6 @@ article{
     stroke-linecap: round;
     stroke-dasharray: 530;
     stroke-dashoffset: 530;
-}
-#yellow{
-    color: #F0A01E;
-}
-#lgreen{
-    color: #8bd58b;
-}
-#dgreen{
-    color: #4CAF50;
 }
 #inter1 {
     stroke: #F0A01E; /* Use linear gradient for stroke color */
@@ -299,6 +288,15 @@ article{
 #inter3 {
     stroke: #4CAF50; /* Use linear gradient for stroke color */
     animation: inter3 2s linear forwards;
+}
+#yellow{
+    color: #F0A01E;
+}
+#lgreen{
+    color: #8bd58b;
+}
+#dgreen{
+    color: #4CAF50;
 }
 .segment {
     margin-bottom: 10px;
@@ -339,7 +337,7 @@ svg{
 }
 @keyframes res2{
     100%{
-        stroke-dashoffset: 472;
+        stroke-dashoffset: 0;
     }
 }
 @keyframes inter1 {
