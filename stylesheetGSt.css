@@ -266,16 +266,23 @@ article{
     stroke-width: 15px;
     stroke-linecap: round;
 }
+#yellow{
+    color: #F0A01E;
+}
+#lgreen{
+    color: #8bd58b;
+}
+#dgreen{
+    color: #4CAF50;
+}
 #inter1{
     stroke: #F0A01E;
     animation: inter1 2s linear forwards;
  }
- 
  #inter2{
     stroke: #8bd58b;
     animation: inter2 2s linear forwards;
  }
- 
  #inter3{
     stroke: #4CAF50;
     animation: inter3 2s linear forwards;
