@@ -333,7 +333,7 @@ svg{
 }
 @keyframes inter2 {
     100% {
-        stroke-dashoffset: 157; /* Adjust based on the circumference of the circle */
+        stroke-dashoffset: 151; /* Adjust based on the circumference of the circle */
     }
 }
 @keyframes inter3 {
