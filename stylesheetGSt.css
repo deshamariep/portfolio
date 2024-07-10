@@ -254,13 +254,32 @@ article{
     stroke-dashoffset: 472;
     animation: res 2s linear forwards;
 }
-#inter{
+#inter1, #inter2, #inter3{
     fill: none;
-    stroke: url(#GradientColor);
     stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: inter 2s linear forwards;
+    stroke-linecap: round;
+}
+.segment {
+    margin-bottom: 10px;
+}
+.segment::before{
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.segment:nth-child(1)::before{
+    background-color: #F0A01E;
+}
+
+.segment:nth-child(2)::before{
+    background-color: #8bd58b;
+}
+
+.segment:nth-child(3)::before{
+    background-color: #4CAF50;
 }
 svg{
     position: absolute;
@@ -277,10 +296,36 @@ svg{
         stroke-dashoffset: 472;
     }
 }
-@keyframes inter{
-    100%{
-        stroke-dashoffset: 472;
-    }
+@keyframes inter1 {
+    100% {
+       stroke-dasharray: 472;
+   }
+}
+
+@keyframes inter2 {
+   100% {
+       stroke-dasharray: 128;
+   }
+}
+
+@keyframes inter3 {
+   100% {
+       stroke-dasharray: 305;
+   }
+}
+#inter1{
+   stroke: #F0A01E;
+   animation: inter1 2s linear forwards;
+}
+
+#inter2{
+   stroke: #8bd58b;
+   animation: inter2 2s linear forwards;
+}
+
+#inter3{
+   stroke: #4CAF50;
+   animation: inter3 2s linear forwards;
 }
 #center{
     text-align: center;
