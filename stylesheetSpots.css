@@ -84,7 +84,7 @@ nav ul li button{
     transform-origin: center center;
     text-align: center;
     align-items: end;
-    padding-top: 8%;
+    padding-top: 9%;
     margin-right: 20px;
 }
 #role .in{
@@ -94,7 +94,7 @@ nav ul li button{
     display: block;
     border: 1px solid rgb(255, 145, 28);
     border-radius: 30px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 #box{
     display: flex;
