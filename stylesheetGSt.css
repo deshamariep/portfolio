@@ -245,6 +245,9 @@ article{
     transform: translate(-50%, -50%);
     line-height: 1.2; 
 }
+#biggerNum{
+    font-size: 22px; 
+}
 #age{
     fill: none;
     stroke: url(#GradientColor);
