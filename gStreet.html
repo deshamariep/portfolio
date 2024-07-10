@@ -229,13 +229,13 @@
                     <p class="center">Residency</p>
                 </div>
                 <div>
-                    <div class="painPT">
+                    <!-- <div class="painPT">
                         <div class="number">
-                            11.1% - yellow-orange
+                            4: 11.1% - yellow-orange
                             <br>
-                            22.2% - light green
+                            9: 22.2% - light green
                             <br>
-                            66.7% - dark green
+                            10: 66.7% - dark green
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="185px" height="185px">
                             <defs>
@@ -255,6 +255,46 @@
                             <circle id="inter1" cx="92.5" cy="92.5" r="85" stroke-linecap="round" />
                             <circle id="inter2" cx="92.5" cy="92.5" r="85" stroke-linecap="round" />
                             <circle id="inter3" cx="92.5" cy="92.5" r="85" stroke-linecap="round" />
+                        </svg>
+                    </div> -->
+                    <div class="painPT">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="185px" height="185px">
+                            <defs>
+                                <!-- Define linear gradients for each segment color -->
+                                <linearGradient id="GradientColor1">
+                                    <stop offset="0%" stop-color="#F0A01E" />
+                                    <stop offset="100%" stop-color="#FF911C" />
+                                </linearGradient>
+                                <linearGradient id="GradientColor2">
+                                    <stop offset="0%" stop-color="#5cb85c" />
+                                    <stop offset="100%" stop-color="#4CAF50" />
+                                </linearGradient>
+                                <linearGradient id="GradientColor3">
+                                    <stop offset="0%" stop-color="#4CAF50" />
+                                    <stop offset="100%" stop-color="#2E7D32" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Circle 1 -->
+                            <circle id="inter1" cx="92.5" cy="92.5" r="80" stroke="url(#GradientColor1)" stroke-width="16" stroke-linecap="round" />
+                            <g transform="translate(30, 125)">
+                                <rect width="10" height="10" fill="#F0A01E" />
+                                <text x="15" y="10" font-size="10">11.1% - 4</text>
+                            </g>
+                            
+                            <!-- Circle 2 -->
+                            <circle id="inter2" cx="92.5" cy="92.5" r="80" stroke="url(#GradientColor2)" stroke-width="16" stroke-linecap="round" />
+                            <g transform="translate(30, 140)">
+                                <rect width="10" height="10" fill="#5cb85c" />
+                                <text x="15" y="10" font-size="10">22.2% - 9</text>
+                            </g>
+                            
+                            <!-- Circle 3 -->
+                            <circle id="inter3" cx="92.5" cy="92.5" r="80" stroke="url(#GradientColor3)" stroke-width="16" stroke-linecap="round" />
+                            <g transform="translate(30, 155)">
+                                <rect width="10" height="10" fill="#4CAF50" />
+                                <text x="15" y="10" font-size="10">66.7% - 10</text>
+                            </g>
                         </svg>
                     </div>
                     <p class="center">Interest</p>
