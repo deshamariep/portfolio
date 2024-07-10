@@ -287,17 +287,17 @@ article{
     color: #4CAF50;
 }
 #inter1 {
-    stroke: url(#GradientColor1); /* Use linear gradient for stroke color */
+    stroke: #F0A01E; /* Use linear gradient for stroke color */
     animation: inter1 2s linear forwards;
 }
 
 #inter2 {
-    stroke: url(#GradientColor2); /* Use linear gradient for stroke color */
+    stroke: #8bd58b; /* Use linear gradient for stroke color */
     animation: inter2 2s linear forwards;
 }
 
 #inter3 {
-    stroke: url(#GradientColor3); /* Use linear gradient for stroke color */
+    stroke: #4CAF50; /* Use linear gradient for stroke color */
     animation: inter3 2s linear forwards;
 }
 .segment {
