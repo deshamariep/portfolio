@@ -232,18 +232,23 @@ article{
     position: relative;
 }
 .number {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 14px; /* Adjust font size for smaller text */
-    color: rgb(105, 168, 95);
+    /* color: rgb(105, 168, 95);
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    line-height: 1.2; /* Adjust line height for better spacing */
+    line-height: 1.2; Adjust line height for better spacing */ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px; 
+    color: rgb(105, 168, 95); 
 }
 #age{
     fill: none;
