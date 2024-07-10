@@ -337,7 +337,7 @@ svg{
 }
 @keyframes res2{
     100%{
-        stroke-dashoffset: 200;
+        stroke-dashoffset: 121;
     }
 }
 @keyframes inter1 {
