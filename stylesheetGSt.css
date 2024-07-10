@@ -236,7 +236,7 @@ article{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 12px; /* Adjust font size for smaller text */
+    font-size: 14px; /* Adjust font size for smaller text */
     color: rgb(105, 168, 95);
     text-align: center;
     position: absolute;
