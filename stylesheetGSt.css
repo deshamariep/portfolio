@@ -266,7 +266,7 @@ article{
 }
 #res2{
     stroke: #4CAF50;
-    animation: res1 2s linear forwards;
+    animation: res2 2s linear forwards;
 }
 #inter1, #inter2, #inter3 {
     fill: none;
@@ -332,12 +332,12 @@ svg{
 }
 @keyframes res1{
     100%{
-        stroke-dashoffset: 472;
+        stroke-dashoffset: 0;
     }
 }
 @keyframes res2{
     100%{
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 200;
     }
 }
 @keyframes inter1 {
