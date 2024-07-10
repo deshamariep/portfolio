@@ -11,6 +11,9 @@
 .mobileIncomplete p {
     margin: 0; /* Remove default margin for paragraphs */
 }
+main{
+    display: none;
+}
 /* @media screen and (min-width: 768px) and (max-width: 1023px){
     tablet
     .mobile-incomplete {
