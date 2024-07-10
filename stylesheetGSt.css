@@ -342,17 +342,17 @@ svg{
 }
 @keyframes inter1 {
     100% {
-        stroke-dashoffset: 0; /* Adjust based on the circumference of the circle */
+        stroke-dashoffset: 0; 
     }
 }
 @keyframes inter2 {
     100% {
-        stroke-dashoffset: 90; /* Adjust based on the circumference of the circle */
+        stroke-dashoffset: 90;
     }
 }
 @keyframes inter3 {
     100% {
-        stroke-dashoffset: 180; /* Adjust based on the circumference of the circle */
+        stroke-dashoffset: 180; 
     }
 }
 #center{
