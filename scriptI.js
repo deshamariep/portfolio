@@ -3,26 +3,30 @@
     console.log("reading js");
 
     document.addEventListener("DOMContentLoaded", function() {
-        const caseStudies = document.querySelectorAll(".caseStudy");
-    
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
+        const caseStudySpots = document.getElementById("caseStudySpots");
+        const caseStudyGst = document.getElementById("caseStudyGst");
+        const caseStudyUme = document.getElementById("caseStudyUme");
     
         function handleScroll() {
-            caseStudies.forEach(caseStudy => {
-                if (isInViewport(caseStudy)) {
-                    caseStudy.classList.add("active-case-study");
-                } else {
-                    caseStudy.classList.remove("active-case-study");
-                }
-            });
+            let scrollPosition = window.scrollY;
+    
+            if (scrollPosition >= 450) {
+                caseStudySpots.classList.add("active-case-study");
+            } else {
+                caseStudySpots.classList.remove("active-case-study");
+            }
+    
+            if (scrollPosition >= 1250) {
+                caseStudyGst.classList.add("active-case-study");
+            } else {
+                caseStudyGst.classList.remove("active-case-study");
+            }
+    
+            if (scrollPosition >= 2050) {
+                caseStudyUme.classList.add("active-case-study");
+            } else {
+                caseStudyUme.classList.remove("active-case-study");
+            }
         }
     
         // Initial check on page load
