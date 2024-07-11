@@ -16,13 +16,13 @@
                 caseStudySpots.classList.remove("active-case-study");
             }
     
-            if (scrollPosition >= 1250) {
+            if (scrollPosition >= 1245) {
                 caseStudyGst.classList.add("active-case-study");
             } else {
                 caseStudyGst.classList.remove("active-case-study");
             }
     
-            if (scrollPosition >= 2050) {
+            if (scrollPosition >= 1850) {
                 caseStudyUme.classList.add("active-case-study");
             } else {
                 caseStudyUme.classList.remove("active-case-study");
