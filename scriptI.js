@@ -10,8 +10,8 @@
         function handleScroll() {
             let scrollPosition = window.scrollY;
             const spotsOffset = 450;
-            const gstOffset = 1250;
-            const umeOffset = 2050;
+            const gstOffset = 1130;
+            const umeOffset = 1730;
 
             // Reset all case studies to their normal state
             caseStudySpots.classList.remove("active-case-study");
