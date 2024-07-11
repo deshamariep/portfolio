@@ -87,6 +87,9 @@
         text-align: center;
         text-decoration: none;
     }
+    #titleChange {
+        transition: transform 0.5s ease;
+    }
     nav ul{
         display: flex;
     }

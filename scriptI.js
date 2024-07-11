@@ -35,15 +35,27 @@
         window.addEventListener("scroll", handleScroll);
     });
     (function(){
+        'use strict';
     
         document.addEventListener("DOMContentLoaded", function() {
-            const titles = ["UI Design", "Visual Communication", "Product Design"];
+            const titles = ["UX Research", "UI Design", "Visual Communication", "Product Design"];
             const titleElement = document.getElementById("titleChange");
             let currentIndex = 0;
     
             function changeTitle() {
-                titleElement.textContent = titles[currentIndex];
-                currentIndex = (currentIndex + 1) % titles.length; // Loop through titles
+                // Animate the current title moving up
+                titleElement.style.transform = "translateY(-100%)";
+    
+                setTimeout(() => {
+                    // Change the title content
+                    titleElement.textContent = titles[currentIndex];
+    
+                    // Reset transform to animate back to original position
+                    titleElement.style.transform = "translateY(0)";
+                }, 500); // Ensure this matches the transition duration in CSS
+    
+                // Update currentIndex for the next title
+                currentIndex = (currentIndex + 1) % titles.length;
             }
     
             // Call changeTitle initially
