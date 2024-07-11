@@ -49,11 +49,11 @@
         changeTitle();
 
         // Set interval to change title every 3 seconds
-        const intervalId = setInterval(changeTitle, 3000);
+        const intervalId = setInterval(changeTitle, 2500);
 
         // Stop interval when title reaches "Product Design"
         function stopInterval() {
-            if (titleElement.textContent === "Product Design") {
+            if (titleElement.textContent === "Product Designer") {
                 clearInterval(intervalId);
             }
         }
