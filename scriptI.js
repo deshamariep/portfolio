@@ -34,24 +34,31 @@
         // Listen for scroll events
         window.addEventListener("scroll", handleScroll);
     });
-    (function(){
-        'use strict';
     
-        document.addEventListener("DOMContentLoaded", function() {
-            const titles = ["UX Research", "UI Design", "Visual Communication", "Product Design"];
-            const titleElement = document.getElementById("titleChange");
-            let currentIndex = 0;
-    
-            function changeTitle() {
-                titleElement.textContent = titles[currentIndex];
-                currentIndex = (currentIndex + 1) % titles.length;
+    document.addEventListener("DOMContentLoaded", function() {
+        const titles = ["UX Research", "UI Design", "Visual Communication", "Product Design"];
+        const titleElement = document.getElementById("titleChange");
+        let currentIndex = 0;
+
+        function changeTitle() {
+            titleElement.textContent = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length; // Cycle through titles
+        }
+
+        // Initial call to change title
+        changeTitle();
+
+        // Set interval to change title every 3 seconds
+        const intervalId = setInterval(changeTitle, 3000);
+
+        // Stop interval when title reaches "Product Design"
+        function stopInterval() {
+            if (titleElement.textContent === "Product Design") {
+                clearInterval(intervalId);
             }
-    
-            // Call changeTitle initially
-            changeTitle();
-    
-            // Set interval to change title every 3 seconds (adjust as needed)
-            setInterval(changeTitle, 3000); // Change every 3 seconds
-        });
-    }());
+        }
+
+        // Check if title reaches "Product Design" on scroll
+        window.addEventListener("scroll", stopInterval);
+    });
 }());
