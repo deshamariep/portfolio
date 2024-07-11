@@ -88,7 +88,7 @@
         text-decoration: none;
     }
     #titleChange {
-        transition: transform 0.5s ease;
+        transition: opacity 0.3s ease; 
     }
     nav ul{
         display: flex;

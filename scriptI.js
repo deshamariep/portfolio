@@ -43,18 +43,7 @@
             let currentIndex = 0;
     
             function changeTitle() {
-                // Animate the current title moving up
-                titleElement.style.transform = "translateY(-100%)";
-    
-                setTimeout(() => {
-                    // Change the title content
-                    titleElement.textContent = titles[currentIndex];
-    
-                    // Reset transform to animate back to original position
-                    titleElement.style.transform = "translateY(0)";
-                }, 500); // Ensure this matches the transition duration in CSS
-    
-                // Update currentIndex for the next title
+                titleElement.textContent = titles[currentIndex];
                 currentIndex = (currentIndex + 1) % titles.length;
             }
     
