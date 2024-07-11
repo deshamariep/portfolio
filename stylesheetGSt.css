@@ -190,6 +190,7 @@
         display: flex;
         align-content: center; 
         justify-content: center; 
+        max-height: 163px;
     }
     #team .out{
         flex: 1;
@@ -213,9 +214,6 @@
     }
     #team .in p{
         align-content: center;
-    }
-    #gstArrow{
-        margin-bottom: 10px;
     }
     article{
         width: calc(100% - 0px); /* Adjusted width considering left and right margins */
