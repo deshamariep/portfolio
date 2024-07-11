@@ -214,6 +214,9 @@
     #team .in p{
         align-content: center;
     }
+    #gstArrow{
+        margin-bottom: 10px;
+    }
     article{
         width: calc(100% - 0px); /* Adjusted width considering left and right margins */
         margin: none; /* Centering the article */
