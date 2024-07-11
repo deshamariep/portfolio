@@ -36,7 +36,7 @@
     });
     
     document.addEventListener("DOMContentLoaded", function() {
-        const titles = ["UX Research", "UI Design", "Visual Communication", "Product Design"];
+        const titles = ["UX Researcher", "UI Designer", "Visual Communicator", "Product Designer"];
         const titleElement = document.getElementById("titleChange");
         let currentIndex = 0;
 
