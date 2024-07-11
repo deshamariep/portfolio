@@ -34,4 +34,23 @@
         // Listen for scroll events
         window.addEventListener("scroll", handleScroll);
     });
+    (function(){
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            const titles = ["UI Design", "Visual Communication", "Product Design"];
+            const titleElement = document.getElementById("titleChange");
+            let currentIndex = 0;
+    
+            function changeTitle() {
+                titleElement.textContent = titles[currentIndex];
+                currentIndex = (currentIndex + 1) % titles.length; // Loop through titles
+            }
+    
+            // Call changeTitle initially
+            changeTitle();
+    
+            // Set interval to change title every 3 seconds (adjust as needed)
+            setInterval(changeTitle, 3000); // Change every 3 seconds
+        });
+    }());
 }());
