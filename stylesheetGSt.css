@@ -215,6 +215,17 @@
     #team .in p{
         align-content: center;
     }
+    #arrow {
+        animation: moveUpDown 1s ease infinite;
+    }
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateX(-50%) translateY(0);
+        }
+        50% {
+            transform: translateX(-50%) translateY(-10px); 
+        }
+    }
     article{
         width: calc(100% - 0px); /* Adjusted width considering left and right margins */
         margin: none; /* Centering the article */
