@@ -221,8 +221,7 @@
         bottom: 20px; /* Adjust position as needed */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center horizontally */
-        cursor: pointer; /* Optional: Adds pointer cursor */
-        animation: moveUpDown 2s ease infinite; /* Apply infinite animation */
+        animation: moveUpDown 1s ease infinite; /* Apply infinite animation */
     }
     
     @keyframes moveUpDown {
@@ -230,7 +229,7 @@
             transform: translateX(-50%) translateY(0);
         }
         50% {
-            transform: translateX(-50%) translateY(-5px); /* Move up slightly */
+            transform: translateX(-50%) translateY(-10px); 
         }
     }
     article{
