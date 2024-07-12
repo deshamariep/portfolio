@@ -217,11 +217,9 @@
         align-content: center;
     }
     #arrow {
-        position: fixed; /* Ensures the arrow stays in place while scrolling */
-        bottom: 20px; /* Adjust position as needed */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Center horizontally */
-        animation: moveUpDown 1s ease infinite; /* Apply infinite animation */
+        /* left: 50%; Center horizontally */
+        /* transform: translateX(-50%); Center horizontally */
+        animation: moveUpDown 1s ease infinite;
     }
     
     @keyframes moveUpDown {
