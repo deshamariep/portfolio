@@ -2,71 +2,34 @@
     'use strict';
     console.log("reading js");
 
+
     document.addEventListener("DOMContentLoaded", function() {
-        const arrow = document.getElementById("arrow");
-        let moveDirection = 1; // 1 for down, -1 for up
-        let currentPosition = 0; // Current position relative to initial position
+        const svgOne = document.getElementById('sOne');
+        const svgTwo = document.getElementById('sTwo');
+        const svgThree = document.getElementById('sThree');
+        const svgFour = document.getElementById('sFour');
 
-        function moveArrow() {
-            // Adjust position by 5px up or down
-            currentPosition += 5 * moveDirection;
-            arrow.style.transform = `translateY(${currentPosition}px)`;
-
-            // Reverse direction when reaching bounds
-            if (currentPosition <= -5 || currentPosition >= 5) {
-                moveDirection *= -1;
+        function handleScroll() {
+            let scrollPosition = window.scrollY;
+            
+            if (scrollPosition >= 3600) {
+                animateCircle(svgOne, 'sOne', '#GradientColor1', 420); // Adjust parameters as needed
+                animateCircle(svgTwo, 'sTwo', '#GradientColor2', 434); // Adjust parameters as needed
+                animateCircle(svgThree, 'sThree', '#GradientColor3', 293); // Adjust parameters as needed
+                animateCircle(svgFour, 'sFour', '#GradientColor4', 274); // Adjust parameters as needed
             }
         }
 
-        // Move arrow every 300 milliseconds
-        setInterval(moveArrow, 300);
-    });
+        function animateCircle(svgElement, id, gradientId, strokeDashOffset) {
+            svgElement.style.animation = `${id} 2s linear forwards`;
+            svgElement.style.stroke = `url(${gradientId})`;
+            svgElement.style.strokeDashoffset = strokeDashOffset;
+        }
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const circles = document.querySelectorAll('.segmentation-circle');
+        // Initial check on page load
+        handleScroll();
 
-        // Options for the IntersectionObserver
-        const options = {
-            threshold: 0.5 // Trigger animation when 50% of the circle is visible
-        };
-
-        // IntersectionObserver callback function
-        const callback = function(entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const circleId = entry.target.getAttribute('data-id');
-                    const circle = document.getElementById(circleId);
-
-                    // Trigger animation based on circle id
-                    switch (circleId) {
-                        case 'sOne':
-                            circle.style.animation = 'sOne 2s linear forwards';
-                            break;
-                        case 'sTwo':
-                            circle.style.animation = 'sTwo 2s linear forwards';
-                            break;
-                        case 'sThree':
-                            circle.style.animation = 'sThree 2s linear forwards';
-                            break;
-                        case 'sFour':
-                            circle.style.animation = 'sFour 2s linear forwards';
-                            break;
-                        default:
-                            break;
-                    }
-
-                    // Unobserve the target after animation starts to save resources
-                    observer.unobserve(entry.target);
-                }
-            });
-        };
-
-        // Create a new IntersectionObserver
-        const observer = new IntersectionObserver(callback, options);
-
-        // Observe each circle
-        circles.forEach(circle => {
-            observer.observe(circle);
-        });
+        // Listen for scroll events
+        window.addEventListener("scroll", handleScroll);
     });
 }());

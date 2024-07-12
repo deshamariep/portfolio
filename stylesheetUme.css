@@ -216,6 +216,23 @@
     #team .in p{
         align-content: center;
     }
+    #arrow {
+        position: fixed; /* Ensures the arrow stays in place while scrolling */
+        bottom: 20px; /* Adjust position as needed */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+        cursor: pointer; /* Optional: Adds pointer cursor */
+        animation: moveUpDown 2s ease infinite; /* Apply infinite animation */
+    }
+    
+    @keyframes moveUpDown {
+        0%, 100% {
+            transform: translateX(-50%) translateY(0);
+        }
+        50% {
+            transform: translateX(-50%) translateY(-5px); /* Move up slightly */
+        }
+    }
     article{
         width: calc(100% - 0px); /* Adjusted width considering left and right margins */
         margin: none; /* Centering the article */
@@ -223,10 +240,10 @@
     img{
         justify-content: center;
         align-items: center;
-      display: block;
-      margin: auto;
-      max-width: 100%;
-      max-height: 100%;
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
     }
     .textSize, #textSize{
         width: 500px;
