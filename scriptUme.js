@@ -6,11 +6,12 @@
     document.addEventListener("DOMContentLoaded", function() {
         const segments = document.querySelectorAll(".data > div");
         const windowHeight = window.innerHeight;
+        const offset = 200; // Adjust this value to change the trigger point
     
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
-                rect.top >= 0 &&
+                rect.top >= -offset &&  // Adjusted to include an offset
                 rect.bottom <= windowHeight
             );
         }
