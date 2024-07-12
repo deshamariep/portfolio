@@ -275,7 +275,7 @@
         font-size: 24px;
         color: rgb(243, 159, 173);
     }
-    #sOne{
+    .animate #sOne{
         fill: none;
         stroke: url(#GradientColor);
         stroke-width: 20px;
@@ -283,7 +283,7 @@
         stroke-dashoffset: 472;
         animation: sOne 2s linear forwards;
     }
-    #sTwo{
+    .animate #sTwo{
         fill: none;
         stroke: url(#GradientColor);
         stroke-width: 20px;
@@ -291,7 +291,7 @@
         stroke-dashoffset: 472;
         animation: sTwo 2s linear forwards;
     }
-    #sThree{
+    .animate #sThree{
         fill: none;
         stroke: url(#GradientColor);
         stroke-width: 20px;
@@ -299,7 +299,7 @@
         stroke-dashoffset: 472;
         animation: sThree 2s linear forwards;
     }
-    #sFour{
+    .animate #sFour{
         fill: none;
         stroke: url(#GradientColor);
         stroke-width: 20px;
