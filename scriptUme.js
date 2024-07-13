@@ -6,12 +6,12 @@
     document.addEventListener("DOMContentLoaded", function() {
         const segments = document.querySelectorAll(".data > div");
         const windowHeight = window.innerHeight;
-        const offset = -700; // Adjust this value to change the trigger point
+        const offset = -600; // Adjust offset as needed
     
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
-                rect.top >= -offset &&  // Adjusted to include an offset
+                rect.top >= offset &&
                 rect.bottom <= windowHeight
             );
         }
@@ -19,9 +19,11 @@
         function handleScroll() {
             segments.forEach((segment, index) => {
                 const svg = segment.querySelector("svg");
-                if (isElementInViewport(segment)) {
-                    svg.classList.add("animate");
-                    window.removeEventListener("scroll", handleScroll); // Remove scroll listener once animation is triggered
+                if (svg) { // Check if svg element exists before manipulating classList
+                    if (isElementInViewport(segment)) {
+                        svg.classList.add("animate");
+                        window.removeEventListener("scroll", handleScroll);
+                    }
                 }
             });
         }
