@@ -56,4 +56,17 @@
     
         window.addEventListener("scroll", handleScroll);
     });
+
+    const topBG = document.getElementById('topBG');
+    
+    window.addEventListener('scroll', function() {
+        // Calculate the scroll percentage
+        const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+        // Calculate the new background position
+        const newBackgroundPosition = `center ${scrollPercentage}%`;
+
+        // Set the background position dynamically
+        topBG.style.backgroundPositionY = newBackgroundPosition;
+    });
 }());
