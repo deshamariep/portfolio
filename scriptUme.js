@@ -3,27 +3,53 @@
     console.log("reading js");
 
 
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     const segments = document.querySelectorAll(".data > div");
+    //     const windowHeight = window.innerHeight;
+    //     const offset = -900; // Adjust offset as needed
+    
+    //     function isElementInViewport(el) {
+    //         const rect = el.getBoundingClientRect();
+    //         return (
+    //             rect.top >= offset &&
+    //             rect.bottom <= windowHeight
+    //         );
+    //     }
+    
+    //     function handleScroll() {
+    //         segments.forEach((segment, index) => {
+    //             const svg = segment.querySelector("svg");
+    //             if (svg) { // Check if svg element exists before manipulating classList
+    //                 if (isElementInViewport(segment)) {
+    //                     svg.classList.add("animate");
+    //                     window.removeEventListener("scroll", handleScroll);
+    //                 }
+    //             }
+    //         });
+    //     }
+    
+    //     window.addEventListener("scroll", handleScroll);
+    // });
+
     document.addEventListener("DOMContentLoaded", function() {
         const segments = document.querySelectorAll(".data > div");
         const windowHeight = window.innerHeight;
-        const offset = -900; // Adjust offset as needed
     
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
-                rect.top >= offset &&
+                rect.top >= 0 &&
                 rect.bottom <= windowHeight
             );
         }
     
         function handleScroll() {
             segments.forEach((segment, index) => {
+                const pTag = segment.querySelector("p.center"); // Select the first <p> tag
                 const svg = segment.querySelector("svg");
-                if (svg) { // Check if svg element exists before manipulating classList
-                    if (isElementInViewport(segment)) {
-                        svg.classList.add("animate");
-                        window.removeEventListener("scroll", handleScroll);
-                    }
+                if (isElementInViewport(pTag)) {
+                    svg.classList.add("animate");
+                    window.removeEventListener("scroll", handleScroll); // Remove scroll listener once animation is triggered
                 }
             });
         }
