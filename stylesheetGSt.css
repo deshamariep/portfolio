@@ -216,7 +216,7 @@
         align-content: center;
     }
     #arrow {
-        translate: 50px;
+        translate: 45px;
         animation: moveUpDown 1s ease infinite;
     }
     @keyframes moveUpDown {
