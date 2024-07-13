@@ -6,7 +6,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         const segments = document.querySelectorAll(".data > div");
         const windowHeight = window.innerHeight;
-        const offset = -600; // Adjust offset as needed
+        const offset = -700; // Adjust offset as needed
     
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
