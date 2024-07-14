@@ -35,20 +35,26 @@
         const scrollThreshold = 50; // Pixels scrolled down to trigger the jump
         const jumpPosition = 800; // Pixels to jump to
     
+        let allowNormalScroll = false;
+    
         window.addEventListener("scroll", function() {
-            if (window.scrollY >= scrollThreshold) {
+            if (!allowNormalScroll && window.scrollY >= scrollThreshold) {
                 window.scrollTo({
                     top: jumpPosition,
-                    behavior: "auto"
+                    behavior: "auto" 
                 });
     
-                // Optional: Remove the event listener after triggering the jump
-                window.removeEventListener("scroll", arguments.callee);
-            } else if (window.scrollY < scrollThreshold && window.scrollY > 0) {
+                // Allow normal scroll after the jump
+                allowNormalScroll = true;
+            } else if (allowNormalScroll && window.scrollY < jumpPosition) {
+                // Restrict scrolling back above the jump position
                 window.scrollTo({
                     top: 0,
                     behavior: "auto" 
                 });
+    
+                // Prevent further normal scrolling above jump position
+                allowNormalScroll = false;
             }
         });
     });
