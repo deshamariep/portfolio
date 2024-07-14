@@ -31,70 +31,31 @@
         window.addEventListener("scroll", handleScroll);
     });
 
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     const scrollThreshold = 50; // Pixels scrolled down to trigger the jump
-    //     const jumpPosition = 800; // Pixels to jump to
-    
-    //     let allowNormalScroll = false;
-    
-    //     window.addEventListener("scroll", function() {
-    //         if (!allowNormalScroll && window.scrollY >= scrollThreshold) {
-    //             window.scrollTo({
-    //                 top: jumpPosition,
-    //                 behavior: "smooth" 
-    //             });
-    
-    //             // Allow normal scroll after the jump
-    //             allowNormalScroll = true;
-    //         } else if (allowNormalScroll && window.scrollY < jumpPosition) {
-    //             // Restrict scrolling back above the jump position
-    //             window.scrollTo({
-    //                 top: 0,
-    //                 behavior: "smooth" 
-    //             });
-    
-    //             // Prevent further normal scrolling above jump position
-    //             allowNormalScroll = false;
-    //         }
-    //     });
-    // });
-
     document.addEventListener("DOMContentLoaded", function() {
         const scrollThreshold = 50; // Pixels scrolled down to trigger the jump
         const jumpPosition = 800; // Pixels to jump to
     
         let allowNormalScroll = false;
-        let lastScrollY = window.scrollY;
     
         window.addEventListener("scroll", function() {
-            const currentScrollY = window.scrollY;
-    
-            if (!allowNormalScroll && currentScrollY >= scrollThreshold) {
-                // Jump to the desired position
+            if (!allowNormalScroll && window.scrollY >= scrollThreshold) {
                 window.scrollTo({
                     top: jumpPosition,
-                    behavior: "smooth"
+                    behavior: "smooth" 
                 });
     
                 // Allow normal scroll after the jump
                 allowNormalScroll = true;
-            } else if (allowNormalScroll && currentScrollY < jumpPosition) {
-                // Prevent scrolling back above the jump position
-                if (currentScrollY !== lastScrollY) {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "auto" // Immediate jump to top
-                    });
-                }
+            } else if (allowNormalScroll && window.scrollY < jumpPosition) {
+                // Restrict scrolling back above the jump position
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth" 
+                });
     
-                // Reset allowNormalScroll only when close to the jump position
-                if (currentScrollY < jumpPosition - scrollThreshold) {
-                    allowNormalScroll = false;
-                }
+                // Prevent further normal scrolling above jump position
+                allowNormalScroll = false;
             }
-    
-            // Update last scroll position
-            lastScrollY = currentScrollY;
         });
     });
 }());
