@@ -66,7 +66,7 @@
             if (!allowNormalScroll && window.scrollY >= scrollThreshold) {
                 window.scrollTo({
                     top: jumpPosition,
-                    behavior: "auto" 
+                    behavior: "smooth", // Change behavior to smooth for smooth scrolling
                 });
     
                 // Allow normal scroll after the jump
@@ -75,7 +75,7 @@
                 // Restrict scrolling back above the jump position
                 window.scrollTo({
                     top: 0,
-                    behavior: "auto" 
+                    behavior: "smooth", // Change behavior to smooth for smooth scrolling
                 });
     
                 // Prevent further normal scrolling above jump position
