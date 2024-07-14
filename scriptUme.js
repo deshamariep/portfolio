@@ -39,11 +39,16 @@
             if (window.scrollY >= scrollThreshold) {
                 window.scrollTo({
                     top: jumpPosition,
-                    behavior: "smooth" // Smooth scrolling to the jump position
+                    behavior: "auto"
                 });
     
                 // Optional: Remove the event listener after triggering the jump
                 window.removeEventListener("scroll", arguments.callee);
+            } else if (window.scrollY < scrollThreshold && window.scrollY > 0) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "auto" 
+                });
             }
         });
     });
