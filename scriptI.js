@@ -45,12 +45,14 @@
 
         const intervalId = setInterval(changeTitle, 2000);
 
+        // Stop interval when title reaches "Product Design"
         function stopInterval() {
             if (titleElement.textContent === "Product Designer") {
                 clearInterval(intervalId);
             }
         }
 
+        // Check if title reaches "Product Design" on scroll
         window.addEventListener("scroll", stopInterval);
     });
 }());
