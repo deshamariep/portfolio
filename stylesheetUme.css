@@ -291,36 +291,27 @@
         font-size: 24px;
         color: rgb(243, 159, 173);
     }
-    .animate #sOne{
+    #sOne, #sTwo, #sThree, #sFour {
         fill: none;
-        stroke: url(#GradientColor);
+        stroke: white; /* Start as white */
         stroke-width: 20px;
+        stroke-linecap: round;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: sOne 2s linear forwards;
+        transition: stroke 0.3s ease; /* Smooth transition for color change */
     }
-    .animate #sTwo{
-        fill: none;
-        stroke: url(#GradientColor);
-        stroke-width: 20px;
-        stroke-dasharray: 472;
-        stroke-dashoffset: 472;
+    .animate #sTwo {
+        stroke: url(#GradientColor1); /* Apply gradient color on animation */
         animation: sTwo 2s linear forwards;
     }
-    .animate #sThree{
-        fill: none;
-        stroke: url(#GradientColor);
-        stroke-width: 20px;
-        stroke-dasharray: 472;
-        stroke-dashoffset: 472;
+    
+    .animate #sThree {
+        stroke: url(#GradientColor1); /* Apply gradient color on animation */
         animation: sThree 2s linear forwards;
     }
-    .animate #sFour{
-        fill: none;
-        stroke: url(#GradientColor);
-        stroke-width: 20px;
-        stroke-dasharray: 472;
-        stroke-dashoffset: 472;
+    
+    .animate #sFour {
+        stroke: url(#GradientColor1); /* Apply gradient color on animation */
         animation: sFour 2s linear forwards;
     }
     svg{
