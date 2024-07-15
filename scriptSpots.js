@@ -1,5 +1,5 @@
 (function(){
-    'use strict'
+    'use strict';
     console.log('running js');
 
     document.addEventListener("DOMContentLoaded", function() {

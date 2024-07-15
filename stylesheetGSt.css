@@ -249,6 +249,12 @@
         font-weight: 400;
         font-style: normal;
     }
+    #addBlock{
+        display: block;
+        border: 1px solid rgb(105, 168, 95);
+        border-radius: 60px;
+        padding: 20px;
+    }
     .data{
         display: flex;
         justify-content: space-between; 
