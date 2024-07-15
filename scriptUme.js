@@ -2,33 +2,33 @@
     'use strict';
     console.log("reading js");
 
-    const topBG = document.getElementById('topBG');
-    document.addEventListener("DOMContentLoaded", function() {
-        const scrollThreshold = 50; // Pixels scrolled down to trigger the jump
-        const jumpPosition = 800; // Pixels to jump to
+    // const topBG = document.getElementById('topBG');
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     const scrollThreshold = 50; // Pixels scrolled down to trigger the jump
+    //     const jumpPosition = 800; // Pixels to jump to
 
-        window.addEventListener('scroll', function() {
-            // Calculate the scroll percentage
-            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    //     window.addEventListener('scroll', function() {
+    //         // Calculate the scroll percentage
+    //         const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
 
-            // Calculate the new background position
-            const newBackgroundPosition = `center ${scrollPercentage}%`;
+    //         // Calculate the new background position
+    //         const newBackgroundPosition = `center ${scrollPercentage}%`;
 
-            // Set the background position dynamically
-            topBG.style.backgroundPositionY = newBackgroundPosition;
-            window.addEventListener("scroll", function() {
-                if (window.scrollY >= scrollThreshold) {
-                    window.scrollTo({
-                        top: jumpPosition,
-                        behavior: "smooth" // Smooth scrolling to the jump position
-                    });
+    //         // Set the background position dynamically
+    //         topBG.style.backgroundPositionY = newBackgroundPosition;
+    //         window.addEventListener("scroll", function() {
+    //             if (window.scrollY >= scrollThreshold) {
+    //                 window.scrollTo({
+    //                     top: jumpPosition,
+    //                     behavior: "smooth" // Smooth scrolling to the jump position
+    //                 });
 
-                    // Optional: Remove the event listener after triggering the jump
-                    window.removeEventListener("scroll", arguments.callee);
-                }
-            });
-        });
-    });
+    //                 // Optional: Remove the event listener after triggering the jump
+    //                 window.removeEventListener("scroll", arguments.callee);
+    //             }
+    //         });
+    //     });
+    // });
 
     document.addEventListener("DOMContentLoaded", function() {
         const segments = document.querySelectorAll(".data > div");
