@@ -351,6 +351,9 @@
         margin: auto; 
         margin-top: 10px;
     }
+    #pinkLink{
+        color: rgb(243, 159, 173);
+    }
     footer {
         width: 100%;
         margin: 0;
