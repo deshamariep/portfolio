@@ -32,24 +32,27 @@
     // });
 
     document.addEventListener("DOMContentLoaded", function() {
-        const waitContainer = document.getElementById('wait');
-        const svgElements = waitContainer.querySelectorAll("svg");
+        const waitElement = document.getElementById('wait');
+        const segments = waitElement.querySelectorAll("div");
+    
+        const windowHeight = window.innerHeight;
+        const offset = -100; // Adjust offset as needed
     
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
-                rect.top >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+                rect.top >= offset &&
+                rect.top <= windowHeight
             );
         }
     
         function handleScroll() {
-            if (isElementInViewport(waitContainer)) {
-                svgElements.forEach(svg => {
+            segments.forEach((segment, index) => {
+                const svg = segment.querySelector("svg");
+                if (isElementInViewport(segment)) {
                     svg.classList.add("animate");
-                });
-                window.removeEventListener("scroll", handleScroll);
-            }
+                }
+            });
         }
     
         window.addEventListener("scroll", handleScroll);
