@@ -260,7 +260,8 @@
         display: block;
         border: 1px solid rgb(243, 159, 173, 0.5);
         border-radius: 60px;
-        padding: 20px;
+        padding: 20px 30px;
+        margin-bottom:20px;
     }
     .data{
         display: flex;
