@@ -36,7 +36,7 @@
         const segments = waitElement.querySelectorAll("div");
     
         const windowHeight = window.innerHeight;
-        const offset = -100; // Adjust offset as needed
+        const offset = -75; // Adjust offset as needed
     
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();

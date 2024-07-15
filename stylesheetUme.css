@@ -253,8 +253,8 @@
     #addBlock{
         display: block;
         border: 1px solid rgb(243, 159, 173);
-        border-radius: 30px;
-        padding: 10px;
+        border-radius: 60px;
+        padding: 20px;
     }
     .data{
         display: flex;
