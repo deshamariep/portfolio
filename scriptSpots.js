@@ -43,7 +43,7 @@
         timer = setInterval(function() {
             slideIndex++;
             showSlide(slideIndex);
-        }, 2000); // Change slide every 2 seconds (adjust as needed)
+        }, 2000); // Change slide every 3 seconds (adjust as needed)
     }
     
     // Function to reset the timer
@@ -55,5 +55,17 @@
     // Initialize the slideshow when the page loads
     document.addEventListener('DOMContentLoaded', function() {
         initSlideshow();
+        
+        // Add event listeners to navigation buttons
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        
+        prevButton.addEventListener('click', function() {
+            changeSlide(-1);
+        });
+        
+        nextButton.addEventListener('click', function() {
+            changeSlide(1);
+        });
     });
 }());
