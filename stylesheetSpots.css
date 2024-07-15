@@ -249,6 +249,12 @@
         font-weight: 400;
         font-style: normal;
     }
+    #addBlock{
+        display: block;
+        border: 1px solid rgb(255, 145, 28);
+        border-radius: 60px;
+        padding: 20px;
+    }
     .slideshow-container {
         position: relative;
         max-width: 472px; /* Adjust as needed */

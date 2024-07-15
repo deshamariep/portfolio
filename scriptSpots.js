@@ -2,8 +2,37 @@
     'use strict'
     console.log('running js');
 
+    document.addEventListener("DOMContentLoaded", function() {
+        const waitElement = document.getElementById('wait');
+        const segments = waitElement.querySelectorAll("div");
+    
+        const windowHeight = window.innerHeight;
+        const offset = -75; // Adjust offset as needed
+    
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= offset &&
+                rect.top <= windowHeight
+            );
+        }
+    
+        function handleScroll() {
+            segments.forEach((segment, index) => {
+                const svg = segment.querySelector("svg");
+                if (isElementInViewport(segment)) {
+                    svg.classList.add("animate");
+                }
+            });
+        }
+    
+        window.addEventListener("scroll", handleScroll);
+    });
+
+    
     let slideIndex = 0; // Index of the current slide
     let timer; // Variable to hold the interval timer
+    let isPlaying = true; // Flag to track whether slideshow is playing
     
     // Function to initialize the slideshow
     function initSlideshow() {
@@ -38,12 +67,27 @@
         resetTimer(); // Reset the timer on manual slide change
     }
     
+    // Function to start or pause the slideshow
+    function togglePlayPause() {
+        const playPauseButton = document.querySelector('.playPause');
+        
+        if (isPlaying) {
+            clearInterval(timer); // Pause the slideshow
+            playPauseButton.textContent = 'Play';
+        } else {
+            startSlideShow(); // Start the slideshow
+            playPauseButton.textContent = 'Pause';
+        }
+        
+        isPlaying = !isPlaying; // Toggle the flag
+    }
+    
     // Function to start the slideshow timer
     function startSlideShow() {
         timer = setInterval(function() {
             slideIndex++;
             showSlide(slideIndex);
-        }, 2500); // Change slide every 3 seconds (adjust as needed)
+        }, 2500); // Change slide every 2.5 seconds (adjust as needed)
     }
     
     // Function to reset the timer
@@ -59,6 +103,7 @@
         // Add event listeners to navigation buttons
         const prevButton = document.querySelector('.prev');
         const nextButton = document.querySelector('.next');
+        const playPauseButton = document.querySelector('.playPause');
         
         prevButton.addEventListener('click', function() {
             changeSlide(-1);
@@ -67,5 +112,10 @@
         nextButton.addEventListener('click', function() {
             changeSlide(1);
         });
+        
+        playPauseButton.addEventListener('click', function() {
+            togglePlayPause();
+        });
     });
+    
 }());
