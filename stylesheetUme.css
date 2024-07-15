@@ -250,7 +250,7 @@
         font-weight: 400;
         font-style: normal;
     }
-    #addBlock{
+    .addBlock{
         display: block;
         border: 1px solid rgb(243, 159, 173);
         border-radius: 60px;
