@@ -325,11 +325,11 @@
     }
     #res1{
         stroke: #8bd58b;
-        animation: res1 2s linear forwards;
+        animation: res1 3s linear forwards;
     }
     #res2{
         stroke: #4CAF50;
-        animation: res2 2s linear forwards;
+        animation: res2 3s linear forwards;
     }
     #inter1, #inter2, #inter3 {
         fill: none;
@@ -340,17 +340,17 @@
     }
     #inter1 {
         stroke: #F0A01E; /* Use linear gradient for stroke color */
-        animation: inter1 2s linear forwards;
+        animation: inter1 3s linear forwards;
     }
     
     #inter2 {
         stroke: #8bd58b; /* Use linear gradient for stroke color */
-        animation: inter2 2s linear forwards;
+        animation: inter2 3s linear forwards;
     }
     
     #inter3 {
         stroke: #4CAF50; /* Use linear gradient for stroke color */
-        animation: inter3 2s linear forwards;
+        animation: inter3 3s linear forwards;
     }
     #yellow{
         color: #F0A01E;

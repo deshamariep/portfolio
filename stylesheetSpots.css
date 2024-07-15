@@ -305,7 +305,7 @@
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: price 2s linear forwards;
+        animation: price 3s linear forwards;
     }
     #prox{
         fill: none;
@@ -313,7 +313,7 @@
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: prox 2s linear forwards;
+        animation: prox 3s linear forwards;
     }
     #appl{
         fill: none;
@@ -321,7 +321,7 @@
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: appl 2s linear forwards;
+        animation: appl 3s linear forwards;
     }
     #wom{
         fill: none;
@@ -329,7 +329,7 @@
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: wom 2s linear forwards;
+        animation: wom 3s linear forwards;
     }
     svg{
         position: absolute;
