@@ -43,7 +43,7 @@
         timer = setInterval(function() {
             slideIndex++;
             showSlide(slideIndex);
-        }, 3000); // Change slide every 3 seconds (adjust as needed)
+        }, 2000); // Change slide every 2 seconds (adjust as needed)
     }
     
     // Function to reset the timer
