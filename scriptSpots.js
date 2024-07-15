@@ -12,8 +12,8 @@
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
-                rect.top >= 0 &&
-                rect.bottom <= windowHeight + offset
+                rect.top >= offset &&
+                rect.top <= windowHeight
             );
         }
     
@@ -25,9 +25,6 @@
                 }
             });
         }
-    
-        // Initial check in case elements are already in view on page load
-        handleScroll();
     
         window.addEventListener("scroll", handleScroll);
     });
