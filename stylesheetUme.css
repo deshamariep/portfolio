@@ -250,6 +250,10 @@
         font-weight: 400;
         font-style: normal;
     }
+    #addBlock{
+        display: block;
+        border: 1px solid rgb(243, 159, 173);
+    }
     .data{
         display: flex;
         justify-content: space-between; 
@@ -337,10 +341,6 @@
         align-items: center;
         margin: auto; 
         margin-top: 10px;
-    }
-    #addBlock{
-        display: block;
-        border: 1px solid rgb(243, 159, 173);
     }
     footer {
         width: 100%;
