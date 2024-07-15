@@ -7,13 +7,13 @@
         const segments = waitElement.querySelectorAll("div");
     
         const windowHeight = window.innerHeight;
-        const offset = -75; // Adjust offset as needed
+        const offset = -100; // Adjust offset as needed
     
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
             return (
-                rect.top >= offset &&
-                rect.top <= windowHeight
+                rect.top >= 0 &&
+                rect.bottom <= windowHeight + offset
             );
         }
     
@@ -73,10 +73,10 @@
         
         if (isPlaying) {
             clearInterval(timer); // Pause the slideshow
-            playPauseButton.textContent = 'Play';
+            playPauseButton.textContent = '⏵';
         } else {
             startSlideShow(); // Start the slideshow
-            playPauseButton.textContent = 'Pause';
+            playPauseButton.textContent = '⏸';
         }
         
         isPlaying = !isPlaying; // Toggle the flag
