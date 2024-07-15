@@ -314,9 +314,8 @@
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: age 2s linear forwards;
     }
-    #res1, #res2{
+    #res1, #res2, #inter1, #inter2, #inter3{
         fill: none;
         stroke-width: 15px;
         stroke-linecap: round;
@@ -330,13 +329,6 @@
     #res2{
         stroke: #4CAF50;
         animation: res2 3s linear forwards;
-    }
-    #inter1, #inter2, #inter3 {
-        fill: none;
-        stroke-width: 15px;
-        stroke-linecap: round;
-        stroke-dasharray: 530;
-        stroke-dashoffset: 530;
     }
     #inter1 {
         stroke: #F0A01E; /* Use linear gradient for stroke color */
