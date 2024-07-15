@@ -26,6 +26,9 @@
             });
         }
     
+        // Initial check in case elements are already in view on page load
+        handleScroll();
+    
         window.addEventListener("scroll", handleScroll);
     });
 
