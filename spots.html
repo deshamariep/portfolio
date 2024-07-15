@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Cinzel+Decorative:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
     <link href="stylesheetSpots.css" rel="stylesheet">
+    <script src="scriptSpots.js" defer></script>
 </head>
 <body>
     <div class="mobileIncomplete">
@@ -379,8 +380,23 @@
                         </ol>
                     </div>
                     <div>
-                        <p class="boldText">Mid-Fi</p>
-                        <img src="images/midfi1.png" alt="MidFi images" width="472px" height="309px">
+                        <div class="slideshow-container">
+                            <div class="slide">
+                                <img src="images/midfi1.png" alt="Slide 1" width="472px" height="309px">
+                                <p class="boldText">Slide 1</p>
+                            </div>
+                            <div class="slide">
+                                <img src="images/midfi2.png" alt="Slide 2" width="472px" height="309px">
+                                <p class="boldText">Slide 2</p>
+                            </div>
+                            <div class="slide">
+                                <img src="images/midfi3.png" alt="Slide 3" width="472px" height="309px">
+                                <p class="boldText">Slide 3</p>
+                            </div>
+                            
+                            <button class="prev" onclick="changeSlide(-1)">Previous</button>
+                            <button class="next" onclick="changeSlide(1)">Next</button>
+                        </div>
                     </div>
                 </div>
                 <br>

@@ -254,6 +254,19 @@
         display: block;
         border: 1px solid rgb(243, 159, 173);
     }
+    .slideshow-container {
+        position: relative;
+        max-width: 472px; /* Adjust as needed */
+        margin: auto;
+    }
+    
+    .slide {
+        display: none; /* Hide all slides by default */
+    }
+    
+    .slide.active {
+        display: block; /* Show only the active slide */
+    }
     .data{
         display: flex;
         justify-content: space-between; 
