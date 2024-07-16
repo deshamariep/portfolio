@@ -428,22 +428,17 @@
         margin: auto; 
         margin-top: 10px;
     }
-    .overlay {
+    .popup {
+        display: none; /* Hide popup by default */
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: none;
-        justify-content: center;
-        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
         z-index: 9999;
-      }
-      .overlay img {
-        max-width: 90%;
-        max-height: 90%;
-      }
+    }
     footer {
         width: 100%;
         margin: 0;

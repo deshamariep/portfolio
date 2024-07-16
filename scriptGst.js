@@ -48,31 +48,30 @@
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Select all images with class 'popup-img'
-        var images = document.querySelectorAll('.popup-img');
-    
-        // Loop through each image and add click event listener
-        images.forEach(function(img) {
-          img.addEventListener('click', function() {
-            openImagePopup(img);
+        // Get all images with class "popup-image"
+        var images = document.querySelectorAll('.popup-image');
+      
+        // Get popup container and image
+        var popupContainer = document.getElementById('popup-container');
+        var popupImage = document.getElementById('popup-image');
+      
+        // Add click event listener to each image
+        images.forEach(function(image) {
+          image.addEventListener('click', function() {
+            // Set popup image source
+            popupImage.src = this.src;
+      
+            // Display the popup
+            popupContainer.style.display = 'block';
           });
         });
-    
-        // JavaScript function to open the image pop-up
-        function openImagePopup(imgElement) {
-          // Get the image source and set it to the pop-up image
-          var imgSrc = imgElement.src;
-          document.getElementById('popupImage').src = imgSrc;
-    
-          // Display the overlay
-          document.querySelector('.overlay').style.display = 'flex';
-        }
-    
-        // JavaScript function to close the image pop-up
-        function closeImagePopup() {
-          // Hide the overlay
-          document.querySelector('.overlay').style.display = 'none';
-        }
+      
+        // Close popup when clicking outside the image
+        popupContainer.addEventListener('click', function(event) {
+          if (event.target === this) {
+            this.style.display = 'none';
+          }
+        });
       });
     
 }());
