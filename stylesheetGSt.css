@@ -322,25 +322,25 @@
         stroke-dasharray: 530;
         stroke-dashoffset: 530;
     }
-    #res1{
+    .animate #res1{
         stroke: #8bd58b;
         animation: res1 3s linear forwards;
     }
-    #res2{
+    .animate #res2{
         stroke: #4CAF50;
         animation: res2 3s linear forwards;
     }
-    #inter1 {
+    .animate #inter1 {
         stroke: #F0A01E; /* Use linear gradient for stroke color */
         animation: inter1 3s linear forwards;
     }
     
-    #inter2 {
+    .animate #inter2 {
         stroke: #8bd58b; /* Use linear gradient for stroke color */
         animation: inter2 3s linear forwards;
     }
     
-    #inter3 {
+    .animate #inter3 {
         stroke: #4CAF50; /* Use linear gradient for stroke color */
         animation: inter3 3s linear forwards;
     }
