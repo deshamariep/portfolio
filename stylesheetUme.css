@@ -354,6 +354,9 @@
     #pinkLink{
         color: rgb(243, 159, 173);
     }
+    .figFix{
+        margin: 0px;
+    }
     footer {
         width: 100%;
         margin: 0;
