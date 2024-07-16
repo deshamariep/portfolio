@@ -39,5 +39,40 @@
     
         window.addEventListener("scroll", handleScroll);
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var pElement = document.querySelector('#center p');
+        var text = pElement.textContent;
+        var newText = text.replace(/(How might we)/, '<strong>$1</strong>');
+        pElement.innerHTML = newText;
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Select all images with class 'popup-img'
+        var images = document.querySelectorAll('.popup-img');
+    
+        // Loop through each image and add click event listener
+        images.forEach(function(img) {
+          img.addEventListener('click', function() {
+            openImagePopup(img);
+          });
+        });
+    
+        // JavaScript function to open the image pop-up
+        function openImagePopup(imgElement) {
+          // Get the image source and set it to the pop-up image
+          var imgSrc = imgElement.src;
+          document.getElementById('popupImage').src = imgSrc;
+    
+          // Display the overlay
+          document.querySelector('.overlay').style.display = 'flex';
+        }
+    
+        // JavaScript function to close the image pop-up
+        function closeImagePopup() {
+          // Hide the overlay
+          document.querySelector('.overlay').style.display = 'none';
+        }
+      });
     
 }());
