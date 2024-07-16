@@ -357,6 +357,11 @@
     .figFix{
         margin: 0px;
     }
+    .figCenter{
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
     footer {
         width: 100%;
         margin: 0;
