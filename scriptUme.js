@@ -28,4 +28,11 @@
     
         window.addEventListener("scroll", handleScroll);
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var pElement = document.querySelector('#center p');
+        var text = pElement.textContent;
+        var newText = text.replace(/(How might we)/, '<strong>$1</strong>');
+        pElement.innerHTML = newText;
+    });
 }());

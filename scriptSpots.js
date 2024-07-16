@@ -30,6 +30,14 @@
     });
 
     
+    document.addEventListener('DOMContentLoaded', function() {
+        var pElement = document.querySelector('#center p');
+        var text = pElement.textContent;
+        var newText = text.replace(/(How might we)/, '<strong>$1</strong>');
+        pElement.innerHTML = newText;
+    });
+
+    
     let slideIndex = 0; // Index of the current slide
     let timer; // Variable to hold the interval timer
     let isPlaying = true; // Flag to track whether slideshow is playing
