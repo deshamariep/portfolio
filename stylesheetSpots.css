@@ -363,6 +363,9 @@
             stroke-dashoffset: 283;
         }
     }
+    .orgLink{
+        color: rgb(255, 145, 28);
+    }
     #center{
         text-align: center;
         justify-content: center;
