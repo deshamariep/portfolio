@@ -126,8 +126,8 @@
         margin-top: 200px;
     }
     #values {
-        margin-top: 200px;
-        margin-left: 100px;
+        /* margin-left: 100px; */
+        margin: auto;
         display: flex;
         justify-content: center; /* Center align cards horizontally */
     }
