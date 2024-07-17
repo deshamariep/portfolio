@@ -106,10 +106,17 @@
         text-align: center; 
         display: inline-block;
     }
+    .boldText{
+        padding: 25px;
+        padding-bottom: 0px;
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
     #values{
         margin-top: 200px;
     }
-    #values div{
+    #values{
         display: flex;
     }
     .card{
@@ -123,13 +130,6 @@
         position: relative;
         perspective: 1000px;
     }
-    .boldText{
-        padding: 25px;
-        padding-bottom: 0px;
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
     #values .boldText{
         padding: 15px 25px 0px;
     }
@@ -137,7 +137,6 @@
         padding: 25px;
         padding-top: 0px;
     }
-
     .front, .back {
         position: absolute;
         top: 0;
@@ -155,16 +154,12 @@
         background-color: #e0e0e0;
         transform: rotateY(180deg); /* Initial state - facing back, flipped */
     }
-    @keyframes flip {
-        from {
-            transform: rotateY(0deg);
-        }
-        to {
-            transform: rotateY(180deg);
-        }
+    .card.flip-to-front .front {
+        transform: rotateY(0deg);
     }
-    .flip {
-        animation: flip 1s ease-in-out;
+    /* Rule for rotating back to 180 degrees */
+    .card.flip-to-back .back {
+        transform: rotateY(180deg);
     }
     #bottom{
         display: flex;

@@ -3,13 +3,11 @@
     console/log('reading js');
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Select all cards
-        const cards = document.querySelectorAll('.card');
+        // Select the card
+        const card = document.querySelector('.card');
         
-        // Add the flip class to each card to trigger the flip animation
-        cards.forEach(card => {
-            card.classList.add('flip');
-        });
+        // Add the class to flip to back
+        card.classList.add('flip-to-back');
     });
 
     const spotsButton = document.getElementById('spots');
