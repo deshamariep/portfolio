@@ -124,15 +124,17 @@
     }
     #values {
         margin-top: 200px;
+        margin-left: 100px;
         display: flex;
         justify-content: center; /* Center align cards horizontally */
     }
     .card {
+        flex: 1;
         height: 350px;
         width: 250px;
         position: relative;
         perspective: 1000px;
-        margin: 8px;
+        margin: 60px;
         transform-style: preserve-3d;
         animation: flip 2s ease-in-out forwards; /* Apply the 'flip' animation */
     }
@@ -141,6 +143,8 @@
         top: 0;
         left: 0;
         display: block;
+        height: 400px;
+        width: 350px;
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 40px;
         backface-visibility: hidden; /* Hide the back side initially */
