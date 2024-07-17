@@ -110,6 +110,15 @@
         text-align: center; 
         display: inline-block;
     }
+    #home:hover{
+        text-decoration: underline;
+    }
+    #aboutMe:hover{
+        text-decoration: underline;
+    }
+    #studio:hover{
+        text-decoration: underline;
+    }
     #intro{
         width: 525px;
     }
