@@ -49,29 +49,17 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         // Get all images with class "popup-image"
-        var images = document.querySelectorAll('.popup-image');
-      
-        // Get popup container and image
-        var popupContainer = document.getElementById('popup-container');
-        var popupImage = document.getElementById('popup-image');
+        const images = document.getElementsByClassName('popup-image');
       
         // Add click event listener to each image
         images.forEach(function(image) {
           image.addEventListener('click', function() {
-            // Set popup image source
-            popupImage.src = this.src;
+            
+            image.classList.add('selected');
       
-            // Display the popup
-            popupContainer.style.display = 'block';
           });
         });
       
-        // Close popup when clicking outside the image
-        popupContainer.addEventListener('click', function(event) {
-          if (event.target === this) {
-            this.style.display = 'none';
-          }
-        });
       });
     
 }());
