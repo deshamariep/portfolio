@@ -119,7 +119,7 @@
     #values div{
         display: flex;
     }
-    .card{
+    div .card{
         flex: 1;
         display: block;
         background-color: rgba(255, 255, 255, 0.5);
