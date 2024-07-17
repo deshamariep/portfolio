@@ -10,19 +10,29 @@
         card.classList.add('flip-to-back');
     });
 
-    const spotsButton = document.getElementById('spots');
-    spotsButton.addEventListener('click', function() {
-        window.location.href = 'spots.html';
+    document.addEventListener('DOMContentLoaded', function() {
+        const spotsButton = document.getElementById('spots');
+        spotsButton.addEventListener('click', function() {
+            window.location.href = 'spots.html';
+        });
     });
 
-    const gstButton = document.getElementById('gStreet');
-    gstButton.addEventListener('click', function() {
-        window.location.href = 'gStreet.html';
+    document.addEventListener('DOMContentLoaded', function() {
+        const umeButton = document.getElementById('gStreet');
+        umeButton.addEventListener('click', function() {
+            window.location.href = 'ume.html';
+        });
     });
 
-    const umeButton = document.getElementById('gStreet');
-    umeButton.addEventListener('click', function() {
-        window.location.href = 'ume.html';
+    document.addEventListener('DOMContentLoaded', function() {
+        const gstButton = document.getElementById('gStreet');
+        gstButton.addEventListener('click', function() {
+            window.location.href = 'gStreet.html';
+        });
     });
+
+    
+
+    
 
 }());
