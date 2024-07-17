@@ -89,6 +89,15 @@
         text-align: center;
         text-decoration: none;
     }
+    #home:hover{
+        text-decoration: underline;
+    }
+    #aboutMe:hover{
+        text-decoration: underline;
+    }
+    #studio:hover{
+        text-decoration: underline;
+    }
     nav ul{
         display: flex;
     }
