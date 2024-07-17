@@ -128,7 +128,6 @@
     }
     #gallery{
         margin-top: 200px;
-        padding: 20px;
         display: flex;
     }
     #gallery div{
@@ -138,20 +137,19 @@
         padding: 10px;
         box-sizing: border-box;
         background-color: rgba(255, 255, 255, 0.5);
+        border: 1px solid grey;
         border-radius: 30px;
+        margin: 5px;
     }
     #gallery article img {
         display: block;
         margin: auto;
+        padding: 20px
     }
     #gallery article p {
-        margin: 10px 0 0 20px;
+        margin: 10px 20px;
         text-align: left;
     }
-    /* .galleryOne{
-
-    } */
-    
     footer {
         width: 100%;
         margin: 0;
