@@ -122,12 +122,11 @@
         font-weight: 400;
         font-style: normal;
     }
-    #moveDown{
+    /* #moveDown{
         margin-top: 200px;
-    }
+    } */
     #values {
-        /* margin-left: 100px; */
-        margin: auto;
+        margin-left: 100px;
         display: flex;
         justify-content: center; /* Center align cards horizontally */
     }
