@@ -119,8 +119,10 @@
     #values div{
         display: flex;
     }
-    div .card{
+    div{
         flex: 1;
+    }
+    .card{
         display: block;
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 40px;
@@ -147,11 +149,11 @@
         transition: transform 0.6s;
     }
     .front {
-        background-color: #f0f0f0;
+        background-color:rgba(255, 255, 255, 0.5);
         transform: rotateY(0deg); /* Initial state - facing front */
     }
     .back {
-        background-color: #e0e0e0;
+        background-color: rgba(255, 255, 255);
         transform: rotateY(180deg); /* Initial state - facing back, flipped */
     }
     .card.flip-to-front .front {
