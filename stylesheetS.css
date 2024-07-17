@@ -117,15 +117,20 @@
         font-weight: 400;
         font-style: normal;
     }
-    #gallery {
+    #gallery{
         margin-top: 200px;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
     }
-    #gallery article {
-        border-radius: 30px;
+    #gallery div{
+        flex: content;
+    }
+    #gallery article{
         padding: 10px;
         box-sizing: border-box;
         background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
     }
     #gallery article img {
         display: block;
@@ -135,6 +140,10 @@
         margin: 10px 0 0 20px;
         text-align: left;
     }
+    /* .galleryOne{
+
+    } */
+    
     footer {
         width: 100%;
         margin: 0;
