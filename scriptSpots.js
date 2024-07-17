@@ -38,77 +38,66 @@
     });
 
     
-    let slideIndex = 0; // Index of the current slide
-    let timer; // Variable to hold the interval timer
-    let isPlaying = true; // Flag to track whether slideshow is playing
+    let slideIndex = 0; 
+    let timer;
+    let isPlaying = true; 
     
-    // Function to initialize the slideshow
     function initSlideshow() {
-        showSlide(slideIndex); // Show the initial slide
-        startSlideShow(); // Start the slideshow timer
+        showSlide(slideIndex); 
+        startSlideShow();
     }
     
-    // Function to display a specific slide
     function showSlide(index) {
         const slides = document.querySelectorAll('.slide');
         
-        // Ensure index wraps around within the range of slides
         if (index >= slides.length) {
             slideIndex = 0;
         } else if (index < 0) {
             slideIndex = slides.length - 1;
         }
         
-        // Hide all slides
         slides.forEach(slide => {
             slide.classList.remove('active');
         });
         
-        // Show the slide at the specified index
         slides[slideIndex].classList.add('active');
     }
     
-    // Function to change slide based on direction (1 for next, -1 for previous)
     function changeSlide(direction) {
         slideIndex += direction;
         showSlide(slideIndex);
-        resetTimer(); // Reset the timer on manual slide change
+        resetTimer(); 
     }
     
-    // Function to start or pause the slideshow
     function togglePlayPause() {
         const playPauseButton = document.querySelector('.playPause');
         
         if (isPlaying) {
-            clearInterval(timer); // Pause the slideshow
+            clearInterval(timer); 
             playPauseButton.textContent = '⏵';
         } else {
-            startSlideShow(); // Start the slideshow
+            startSlideShow(); 
             playPauseButton.textContent = '⏸';
         }
         
-        isPlaying = !isPlaying; // Toggle the flag
+        isPlaying = !isPlaying;
     }
     
-    // Function to start the slideshow timer
     function startSlideShow() {
         timer = setInterval(function() {
             slideIndex++;
             showSlide(slideIndex);
-        }, 2500); // Change slide every 2.5 seconds (adjust as needed)
+        }, 2500); 
     }
     
-    // Function to reset the timer
     function resetTimer() {
-        clearInterval(timer); // Clear the existing timer
-        startSlideShow(); // Restart the timer
+        clearInterval(timer);
+        startSlideShow();
     }
     
-    // Initialize the slideshow when the page loads
     document.addEventListener('DOMContentLoaded', function() {
         initSlideshow();
         
-        // Add event listeners to navigation buttons
         const prevButton = document.querySelector('.prev');
         const nextButton = document.querySelector('.next');
         const playPauseButton = document.querySelector('.playPause');
@@ -126,4 +115,22 @@
         });
     });
     
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.popup-img');
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        document.body.appendChild(overlay);
+    
+        images.forEach(function(img) {
+            img.addEventListener('click', function() {
+                overlay.style.display = 'flex';
+                img.classList.add('selected');
+            });
+    
+            overlay.addEventListener('click', function() {
+                overlay.style.display = 'none';
+                img.classList.remove('selected');
+            });
+        });
+    });
 }());

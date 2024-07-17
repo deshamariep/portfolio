@@ -29,4 +29,22 @@
         window.addEventListener("scroll", handleScroll);
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.popup-img');
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        document.body.appendChild(overlay);
+    
+        images.forEach(function(img) {
+            img.addEventListener('click', function() {
+                overlay.style.display = 'flex';
+                img.classList.add('selected');
+            });
+    
+            overlay.addEventListener('click', function() {
+                overlay.style.display = 'none';
+                img.classList.remove('selected');
+            });
+        });
+    });
 }());
