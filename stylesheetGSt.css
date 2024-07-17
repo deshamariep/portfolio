@@ -448,13 +448,15 @@
         border: 1px solid #ccc;
         
     } */
-    .selected{
+    .selected {
         position: fixed;
-        transform: scale(3);
-        justify-content: center;
-        align-items: center;
-        margin: auto; 
-        background-color: rgb( 0, 0, 0, 0.4);
+        top: 50%; /* Centers vertically */
+        left: 50%; /* Centers horizontally */
+        transform: translate(-50%, -50%) scale(3); /* Centers the element */
+        justify-content: center; /* This is for flexbox containers, not needed here */
+        align-items: center; /* This is for flexbox containers, not needed here */
+        margin: auto; /* This is not needed for fixed positioned elements */
+        background-color: rgba(0, 0, 0, 0.4); /* Correct rgba syntax for transparency */
         z-index: 9999;
     }
     footer {

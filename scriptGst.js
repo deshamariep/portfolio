@@ -48,18 +48,15 @@
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Get all images with class "popup-im"
-        const images = document.getElementsByClassName('popup-img');
-      
+        // Get all images with class "popup-img"
+        const images = document.querySelectorAll('.popup-img');
+    
         // Add click event listener to each image
-        images.forEach(function(image) {
-          image.addEventListener('click', function() {
-            
-            image.classList.add('selected');
-      
-          });
+        images.forEach(function(img) {
+            img.addEventListener('click', function() {
+                img.classList.add('selected');
+            });
         });
-      
-      });
+    });
     
 }());
