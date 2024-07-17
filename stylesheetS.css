@@ -132,6 +132,8 @@
     }
     #gallery article img {
         display: block;
+        justify-content: center;
+        align-items: center;
     }
     #gallery article p {
         margin: 10px 0 0 0;
