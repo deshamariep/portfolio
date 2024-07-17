@@ -116,7 +116,7 @@
     #values{
         margin-top: 200px;
     }
-    #values{
+    #values div{
         display: flex;
     }
     .card{
