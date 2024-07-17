@@ -2,13 +2,12 @@
     'use strict';
     console/log('reading js');
 
-    // Get all .card elements
-    const cards = document.querySelectorAll('.card');
-
-    // Loop through each card and add click event listener
-    cards.forEach(function(card) {
-        card.addEventListener('click', function() {
-            card.classList.toggle('flipped');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Optional: You can add a class to trigger animation via JavaScript if needed
+        // For example, add 'animate' class to each .card
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(function(card) {
+            card.classList.add('animate');
         });
     });
 

@@ -124,16 +124,17 @@
     }
     #values {
         margin-top: 200px;
-        display: flex; /* Added display flex to #values */
+        display: flex;
+        justify-content: center; /* Center align cards horizontally */
     }
     .card {
         height: 350px;
         width: 250px;
         position: relative;
         perspective: 1000px;
-        margin: 8px; /* Moved margin here */
-        transform-style: preserve-3d; /* Ensures proper 3D rendering */
-        animation: flip 2s ease-in-out; /* Apply the 'flip' animation */
+        margin: 8px;
+        transform-style: preserve-3d;
+        animation: flip 2s ease-in-out forwards; /* Apply the 'flip' animation */
     }
     .front, .back {
         position: absolute;
