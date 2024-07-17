@@ -48,8 +48,8 @@
     });
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Get all images with class "popup-image"
-        const images = document.getElementsByClassName('popup-image');
+        // Get all images with class "popup-im"
+        const images = document.getElementsByClassName('popup-img');
       
         // Add click event listener to each image
         images.forEach(function(image) {
