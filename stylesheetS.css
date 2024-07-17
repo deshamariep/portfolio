@@ -130,7 +130,6 @@
         margin-top: 200px;
         padding: 20px;
         display: flex;
-        flex-direction: column;
     }
     #gallery div{
         flex: content;
