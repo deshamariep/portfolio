@@ -121,7 +121,7 @@
         overlay.className = 'overlay';
         document.body.appendChild(overlay);
     
-        images.forEach(function(img) {
+        images.forEach(function(img, index) {
             img.addEventListener('click', function() {
                 overlay.style.display = 'flex';
                 img.classList.add('selected');
@@ -131,6 +131,12 @@
                 overlay.style.display = 'none';
                 img.classList.remove('selected');
             });
+    
+            // Check if it's the 6th image and add a class for special scaling
+            if (index === 5) { // index is zero-based, so 5 refers to the 6th image
+                img.classList.add('special-scale');
+            }
         });
     });
+    
 }());
