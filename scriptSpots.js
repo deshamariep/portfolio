@@ -125,17 +125,22 @@
             img.addEventListener('click', function() {
                 overlay.style.display = 'flex';
                 img.classList.add('selected');
+    
+                // Adjust scaling based on the index
+                if (index === 5) { // index is zero-based, so 5 refers to the 6th image
+                    img.style.transform = 'scale(1.5)';
+                } else {
+                    img.style.transform = 'scale(2)';
+                }
             });
     
             overlay.addEventListener('click', function() {
                 overlay.style.display = 'none';
                 img.classList.remove('selected');
-            });
     
-            // Check if it's the 6th image and add a class for special scaling
-            if (index === 5) { // index is zero-based, so 5 refers to the 6th image
-                img.classList.add('special-scale');
-            }
+                // Reset transform on click outside
+                img.style.transform = '';
+            });
         });
     });
     
