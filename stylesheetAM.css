@@ -128,7 +128,7 @@
     #values {
         margin-left: 100px;
         display: flex;
-        justify-content: center; /* Center align cards horizontally */
+        justify-content: center; 
     }
     .card {
         flex: 1;
@@ -139,34 +139,33 @@
         margin: 60px;
         margin-top: 0px;
         transform-style: preserve-3d;
-        animation: flip 2s ease-in-out forwards; /* Apply the 'flip' animation */
+        animation: flip 2s ease-in-out forwards; 
     }
     .front, .back {
         position: absolute;
         top: 0;
         left: 0;
         display: block;
-        height: 400px;
+        height: 360px;
         width: 350px;
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 40px;
-        backface-visibility: hidden; /* Hide the back side initially */
+        backface-visibility: hidden; 
     }
     .front {
-        transform: rotateY(0deg); /* Initial state - facing front */
+        transform: rotateY(0deg); 
     }
     .back {
-        transform: rotateY(180deg); /* Initial state - facing back, flipped */
+        transform: rotateY(180deg); 
     }
     @keyframes flip {
         from {
-            transform: rotateY(0deg); /* Starting state - facing front */
+            transform: rotateY(0deg); 
         }
         to {
-            transform: rotateY(180deg); /* Ending state - facing back */
+            transform: rotateY(180deg); 
         }
     }
-    /* Optional: Add styles for .boldText and .card p as needed */
     #values .boldText {
         padding: 15px 25px 0px;
     }
