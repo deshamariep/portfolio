@@ -278,7 +278,10 @@
         border-radius: 60px;
         padding: 20px 30px;
         margin-bottom:20px;
-        max-width: 550px;
+        max-width: 450px;
+    }
+    .addBlockLite2 p, .addBlockLite2 li{
+        max-width: 380px;
     }
     .data{
         display: flex;
