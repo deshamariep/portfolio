@@ -122,6 +122,14 @@
         font-weight: 400;
         font-style: normal;
     }
+    .boldText2{
+        padding: 25px;
+        padding-bottom: 0px;
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-left: 0px;
+    }
     #moveDown{
         margin-top: 200px;
     }
@@ -192,10 +200,11 @@
     }
     #myWork ul{
         flex-direction: column;
+        padding-left: 0px;
     }
     #myWork ul li{
-        padding-top: 4px;
-        padding-bottom: 4px;
+        padding-top: 8px;
+        padding-bottom: 8px;
     }
     #myWork ul li button{
         width: 180px;
@@ -209,6 +218,7 @@
         display: inline-block;
         position: relative;
         padding-left: 85px; 
+        translate: 40px
     }
     #myWork ul li button img{
         position: absolute;
@@ -232,6 +242,10 @@
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat;
+    }
+    #textCase{
+        padding-left: 0px;
+        text-align: right;
     }
     footer {
         width: 100%;
