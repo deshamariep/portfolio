@@ -136,10 +136,16 @@
         font-style: normal;
         padding-left: 0px;
     }
-    #values {
+    /* #values {
         margin-left: 200px;
-        /* display: flex; */
+        display: flex;
         justify-content: center; 
+    } */
+    #move{
+        margin-top: 200px;
+    }
+    #moveDown{
+        text-align: left;
     }
     .card {
         flex: 1;
