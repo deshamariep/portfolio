@@ -134,8 +134,8 @@
         margin-top: 200px;
     }
     #values {
-        margin-left: 100px;
-        display: flex;
+        /* margin-left: 100px;
+        display: flex; */
         justify-content: center; 
     }
     .card {
@@ -181,9 +181,9 @@
         padding: 25px;
         padding-top: 0px;
     }
-    #bottom{
+    /* #bottom{
         display: flex;
-    }
+    } */
     #bottom section{
         padding: 30px;
     }
@@ -243,9 +243,9 @@
         background-position: center; 
         background-repeat: no-repeat;
     }
-    #textCase{
+    #textCase p{
         padding-left: 0px;
-        text-align: right;
+        text-align: left;
     }
     footer {
         width: 100%;
