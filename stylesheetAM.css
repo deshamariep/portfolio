@@ -136,21 +136,17 @@
         font-style: normal;
         padding-left: 0px;
     }
-    #moveDown{
-        margin-top: 200px;
-    }
     #values {
-        /* margin-left: 100px;
-        display: flex; */
+        margin-left: 200px;
+        /* display: flex; */
         justify-content: center; 
     }
     .card {
         flex: 1;
         height: 350px;
-        width: 250px;
+        width: 300px;
         position: relative;
         perspective: 1000px;
-        margin: 60px;
         margin-top: 0px;
         transform-style: preserve-3d;
         animation: flip 2s ease-in-out forwards; 
@@ -160,8 +156,8 @@
         top: 0;
         left: 0;
         display: block;
-        height: 360px;
-        width: 350px;
+        height: 300px;
+        width: 450px;
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 40px;
         backface-visibility: hidden; 
