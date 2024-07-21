@@ -144,29 +144,48 @@
         text-align: left;
         padding-left: 50px;
     }
-    #moveRight{
-        translate: 100px;
+    #moveRight {
+        display: flex;
+        justify-content: space-around; /* Adjust spacing between cards */
+        align-items: center; /* Center cards vertically */
+        margin-top: 50px; /* Example margin */
     }
-    .card {
-        flex: 1;
-        height: 320px;
-        width: 450px; /* Adjust width to fit both front and back */
-        position: relative;
+    
+    .card-container {
+        width: 450px; /* Adjust width of each card container */
+        height: 320px; /* Adjust height of each card container */
         perspective: 1000px;
-        margin-top: 0px;
+    }
+    
+    .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
         transform-style: preserve-3d;
-        animation: flip 2s ease-in-out forwards; /* Apply flip animation */
+        animation: flip 2s ease-in-out forwards; 
     }
     
     .front, .back {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%; /* Ensure both front and back take full width of card */
-        height: 100%; /* Ensure both front and back take full height of card */
+        width: 100%;
+        height: 100%;
         backface-visibility: hidden;
         transform-style: preserve-3d;
         transform-origin: right center; /* Adjust transform origin for flip */
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent; /* Ensure border color is transparent */
+        border-image: linear-gradient(
+                          to left,
+                          rgba(255, 0, 0, 0.3),
+                          rgba(255, 255, 0, 0.3),
+                          rgba(0, 255, 0, 0.3),
+                          rgba(0, 255, 255, 0.3),
+                          rgba(0, 0, 255, 0.3)
+                      ) 1;
+        border-radius: 40px;
     }
     
     .front {
@@ -187,6 +206,7 @@
             transform: rotateY(180deg);
         }
     }
+    
     #values .boldText {
         padding: 15px 25px 0px;
     }
@@ -200,7 +220,7 @@
     #bottom section{
         padding: 30px;
     }
-    /* #bottom #two{
+    #bottom #two{
         flex: 2;
         padding-left: 0px;
     }
@@ -210,7 +230,7 @@
     }
     #bottom #one{
         flex: 1;
-    } */
+    }
     #myWork ul{
         flex-direction: column;
         padding-left: 0px;
