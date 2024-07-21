@@ -209,6 +209,9 @@
     .exp{
         margin-left: 0px;
     }
+    .exp h3{
+        padding: -25px;
+    }
     #textCase p{
         text-align: left;
         padding-left: 0px;
