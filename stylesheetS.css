@@ -134,6 +134,15 @@
         background: linear-gradient(white, white) padding-box,
         linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red, violet) border-box;
         box-sizing: border-box;
+        animation: animateBackground 5s infinite linear;
+    }
+    @keyframes animateBackground {
+        0% {
+            background-position: 0 0; /* Start position of the background */
+        }
+        100% {
+            background-position: 100% 0; /* End position of the background */
+        }
     }
     #gallery article img {
         display: block;
