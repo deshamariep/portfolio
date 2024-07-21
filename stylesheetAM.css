@@ -187,7 +187,7 @@
     .back {
         transform: rotateY(180deg);
         z-index: 1; /* Back is behind front */
-        translate: -200px;
+        translate: 200px;
     }
     @keyframes flip {
         from {
