@@ -126,12 +126,8 @@
                 overlay.style.display = 'flex';
                 img.classList.add('selected');
     
-                // Adjust scaling based on the index
-                if (index === 5) { // index is zero-based, so 5 refers to the 6th image
-                    img.style.transform = 'scale(1.5)';
-                } else {
-                    img.style.transform = 'scale(2)';
-                }
+                // Apply centering and scaling transform
+                img.style.transform = 'translate(-50%, -50%) scale(' + (index === 5 ? 1.5 : 2) + ')';
             });
     
             overlay.addEventListener('click', function() {
@@ -143,5 +139,6 @@
             });
         });
     });
+    
     
 }());
