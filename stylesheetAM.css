@@ -150,50 +150,41 @@
     .card {
         flex: 1;
         height: 320px;
-        width: 100px;
+        width: 450px; /* Adjust width to fit both front and back */
         position: relative;
         perspective: 1000px;
         margin-top: 0px;
         transform-style: preserve-3d;
-        animation: flip 2s ease-in-out forwards; 
+        animation: flip 2s ease-in-out forwards; /* Apply flip animation */
     }
+    
     .front, .back {
         position: absolute;
-        top: 0px;
-        right: 30%; /* Adjust left position to center horizontally */
-        transform: translateX(-50%); /* Center the elements horizontally */
-        display: block;
-        height: 300px;
-        width: 450px;
-        border-width: 1px;
-        border-style: solid;
-        border-color: transparent; /* Ensure border color is transparent */
-        border-image: linear-gradient(
-                          to left,
-                          rgba(255, 0, 0, 0.3),
-                          rgba(255, 255, 0, 0.3),
-                          rgba(0, 255, 0, 0.3),
-                          rgba(0, 255, 255, 0.3),
-                          rgba(0, 0, 255, 0.3)
-                      ) 1;
-        border-radius: 40px;
-        backface-visibility: hidden; 
+        top: 0;
+        left: 0;
+        width: 100%; /* Ensure both front and back take full width of card */
+        height: 100%; /* Ensure both front and back take full height of card */
+        backface-visibility: hidden;
         transform-style: preserve-3d;
+        transform-origin: right center; /* Adjust transform origin for flip */
     }
+    
     .front {
         transform: rotateY(0deg);
-        z-index: 2; /* Ensure front is on top */
+        z-index: 2;
     }
+    
     .back {
-        transform: rotateY(180deg);
-        z-index: 1; /* Back is behind front */
+        transform: rotateY(-180deg); /* Negative 180deg for flipping right */
+        z-index: 1;
     }
+    
     @keyframes flip {
         from {
-            transform: rotateY(0deg); 
+            transform: rotateY(0deg);
         }
         to {
-            transform: rotateY(180deg); 
+            transform: rotateY(180deg);
         }
     }
     #values .boldText {
@@ -209,7 +200,7 @@
     #bottom section{
         padding: 30px;
     }
-    #bottom #two{
+    /* #bottom #two{
         flex: 2;
         padding-left: 0px;
     }
@@ -219,7 +210,7 @@
     }
     #bottom #one{
         flex: 1;
-    }
+    } */
     #myWork ul{
         flex-direction: column;
         padding-left: 0px;
