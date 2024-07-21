@@ -207,6 +207,11 @@
         justify-content: center;
         margin-left: 50px;
     }
+    .animals{
+        flex: 1;
+        justify-content: center;
+        margin-left: 20px;
+    }
     .fillTime{
         padding-right: 50px;
     }
@@ -217,7 +222,7 @@
     }
     #textCase p{
         text-align: left;
-        padding-left: 25px;
+        padding-left: 15px;
     }
     footer {
         width: 100%;
