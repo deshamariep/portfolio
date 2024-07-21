@@ -151,7 +151,15 @@
         height: 100%;
         backface-visibility: hidden;
         transform-style: preserve-3d;
-        transform-origin: center; /* Ensure animation origin is at the center */
+        transform-origin: center;
+        border-width: 1px;
+        border-style: solid;
+        border-image: linear-gradient(
+                      to left,
+                      violet, indigo, blue, green, yellow, orange, red, violet
+        ) 1; 
+        border-radius: 40px;
+        box-sizing: border-box;
     }
     .front {
         transform: rotateY(0deg);
