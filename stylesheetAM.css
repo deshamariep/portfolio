@@ -157,13 +157,22 @@
     .front, .back {
         position: absolute;
         top: 0px;
-        right: 50px;
+        left: 50%; /* Adjust left position to center horizontally */
+        transform: translateX(-50%); /* Center the elements horizontally */
         display: block;
         height: 300px;
         width: 450px;
-        background-color: rgba(255, 255, 255, 0.5);
+        border-width: 1px;
+        border-style: solid;
+        background-image: linear-gradient(45deg, 
+                          rgba(255, 0, 0, 0.3) 0%,
+                          rgba(255, 255, 0, 0.3) 25%,
+                          rgba(0, 255, 0, 0.3) 50%,
+                          rgba(0, 255, 255, 0.3) 75%,
+                          rgba(0, 0, 255, 0.3) 100%);
         border-radius: 40px;
         backface-visibility: hidden; 
+        transform-style: preserve-3d;
     }
     .front {
         transform: rotateY(0deg); 
