@@ -187,7 +187,13 @@
     .one{
         flex: 1;
         justify-content: center;
-        margin-left: 200px;
+        margin-left: 50px;
+    }
+    .fillTime{
+        padding-right: 50px;
+    }
+    .exp{
+        margin-left: 0px;
     }
     #textCase p{
         text-align: left;
