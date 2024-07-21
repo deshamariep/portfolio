@@ -135,7 +135,7 @@
         linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red, violet) border-box;
         box-sizing: border-box;
         background-size: 200% auto;
-        animation: animateBackground 3s infinite linear;
+        animation: animateBackground 5s infinite linear;
     }
     @keyframes animateBackground {
         0% {
