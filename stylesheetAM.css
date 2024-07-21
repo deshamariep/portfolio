@@ -138,7 +138,6 @@
         justify-content: center;
         margin-left: 200px; /* Adjust as needed */
     }
-    
     .card {
         flex: 1;
         height: 320px;
@@ -149,7 +148,6 @@
         transform-style: preserve-3d;
         animation: flip 2s ease-in-out forwards; 
     }
-    
     .front, .back {
         position: absolute;
         top: 0;
@@ -160,17 +158,14 @@
         transform-style: preserve-3d;
         transform-origin: center; /* Ensure animation origin is at the center */
     }
-    
     .front {
         transform: rotateY(0deg);
         z-index: 2;
     }
-    
     .back {
         transform: rotateY(180deg);
         z-index: 1;
     }
-    
     @keyframes flip {
         from {
             transform: rotateY(0deg);
@@ -196,6 +191,10 @@
     }
     #one{
         flex: 1;
+    }
+    #textCase p{
+        text-align: left;
+        padding-left: 0px;
     }
     footer {
         width: 100%;
