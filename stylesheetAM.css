@@ -181,10 +181,12 @@
         transform-style: preserve-3d;
     }
     .front {
-        transform: rotateY(0deg); 
+        transform: rotateY(0deg);
+        z-index: 2; /* Ensure front is on top */
     }
     .back {
-        transform: rotateY(180deg); 
+        transform: rotateY(180deg);
+        z-index: 1; /* Back is behind front */
     }
     @keyframes flip {
         from {
