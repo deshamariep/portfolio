@@ -132,8 +132,6 @@
     #values {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        margin-left: 200px; /* Adjust as needed */
     }
     .card {
         flex: 1;
@@ -188,6 +186,8 @@
     }
     .one{
         flex: 1;
+        justify-content: center;
+        margin-left: 200px;
     }
     #textCase p{
         text-align: left;
