@@ -139,13 +139,17 @@
         display: flex;
         flex-direction: column;
     }
+    #values div{
+        border-radius: 40px;
+    }
     .card {
         flex: 1;
         height: 320px;
-        width: 450px; /* Adjust width as needed */
+        width: 450px; 
+        border-radius: 40px;
         position: relative;
         perspective: 1000px;
-        margin: 10px; /* Adjust margin as needed */
+        margin: 10px;
         transform-style: preserve-3d;
         animation: flip 2s ease-in-out forwards; 
     }
