@@ -228,9 +228,12 @@
         justify-content: center;
     }
     img{
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        display: block;
         margin: auto;
+        max-width: 100%;
+        max-height: 100%;
     }
     .fillTime{
         padding-right: 50px;
