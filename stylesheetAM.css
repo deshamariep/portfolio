@@ -114,9 +114,6 @@
     .data{
         display: flex;
     }
-    .data div{
-        flex: 1;
-    }
     .boldText{
         padding: 25px;
         padding-bottom: 0px;
@@ -189,7 +186,7 @@
         padding-left: 10px;
         margin-right: 40px;
     }
-    #one{
+    .one{
         flex: 1;
     }
     #textCase p{
