@@ -157,7 +157,7 @@
     .front, .back {
         position: absolute;
         top: 0px;
-        left: 50%; /* Adjust left position to center horizontally */
+        right: 30%; /* Adjust left position to center horizontally */
         transform: translateX(-50%); /* Center the elements horizontally */
         display: block;
         height: 300px;
