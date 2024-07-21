@@ -113,9 +113,6 @@
         text-align: center; 
         display: inline-block;
     }
-    /* #intro{
-        padding-left: 10px;
-    } */
     .boldText {
         padding-top: 25px;
         font-family: "Staatliches", sans-serif;
@@ -131,15 +128,12 @@
     }
     #gallery article{
         padding: 10px;
-        border-width: 1px;
-        border-style: solid;
-        border-image: linear-gradient(
-                      to left,
-                      violet, indigo, blue, green, yellow, orange, red, violet
-        ) 1; 
-        border-radius: 40px;
-        box-sizing: border-box;
         margin: 7px 3px;
+        border-radius: 40px;
+        border: 1px double transparent;
+        background: linear-gradient(white, white) padding-box,
+        linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red, violet) border-box;
+        box-sizing: border-box;
     }
     #gallery article img {
         display: block;

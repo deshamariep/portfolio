@@ -162,11 +162,11 @@
         backface-visibility: hidden;
         transform-style: preserve-3d;
         transform-origin: center;
-        padding: 2px;
-        background:
-            linear-gradient(#ffffff, #ffffff) padding-box,
-            linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red, violet) border-box;
         border-radius: 40px;
+        border: 1px double transparent;
+        background: linear-gradient(white, white) padding-box,
+        linear-gradient(90deg, violet, indigo, blue, green, yellow, orange, red, violet) border-box;
+        box-sizing: border-box;
     }
     .front {
         transform: rotateY(0deg);
