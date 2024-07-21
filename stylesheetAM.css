@@ -129,6 +129,12 @@
         font-style: normal;
         padding-left: 0px;
     }
+    #intro{
+        width: 500px;
+    }
+    #introImg{
+        border-radius: 40px;
+    }
     #values {
         display: flex;
         flex-direction: column;
