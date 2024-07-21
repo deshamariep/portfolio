@@ -207,7 +207,6 @@
     .animal{
         flex: 1;
         justify-content: center;
-        margin-left: 20px;
     }
     .fillTime{
         padding-right: 50px;
