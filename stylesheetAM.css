@@ -145,12 +145,12 @@
         padding-left: 50px;
     }
     #moveRight{
-        translate: 100px;
+        translate: 50px;
     }
     .card {
         flex: 1;
         height: 320px;
-        width: 100px;
+        width: 0px;
         position: relative;
         perspective: 1000px;
         margin-top: 0px;
@@ -160,7 +160,7 @@
     .front, .back {
         position: absolute;
         top: 0px;
-        right: 50%; /* Adjust left position to center horizontally */
+        right: 0px; /* Adjust left position to center horizontally */
         transform: translateX(-50%); /* Center the elements horizontally */
         display: block;
         height: 300px;
@@ -187,6 +187,7 @@
     .back {
         transform: rotateY(180deg);
         z-index: 1; /* Back is behind front */
+        translate: -200px;
     }
     @keyframes flip {
         from {
