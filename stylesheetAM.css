@@ -208,6 +208,11 @@
         flex: 1;
         justify-content: center;
     }
+    img{
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
     .fillTime{
         padding-right: 50px;
     }
