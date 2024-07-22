@@ -131,7 +131,7 @@
         padding: 10px;
         margin: 7px 3px;
         border-radius: 40px;
-        border: 1px double transparent;
+        border: 1.5px double transparent;
         background: linear-gradient(white, white) padding-box,linear-gradient(
             90deg,
             rgba(238, 130, 238, 0.4),
