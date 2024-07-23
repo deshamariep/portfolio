@@ -160,6 +160,11 @@
         margin: auto;
         padding: 20px;
     }
+    #gallery article video{
+        display: block;
+        margin: auto;
+        padding: 20px;
+    }
     #gallery article p {
         margin: 10px 20px;
         text-align: left;
