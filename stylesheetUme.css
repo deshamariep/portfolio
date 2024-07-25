@@ -313,7 +313,7 @@
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: sOne 3s linear forwards;
+        animation: sOne 2s linear forwards;
     }
     .animate #sTwo{
         fill: none;
@@ -321,7 +321,7 @@
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: sTwo 3s linear forwards;
+        animation: sTwo 2s linear forwards;
     }
     .animate #sThree{
         fill: none;
@@ -329,7 +329,7 @@
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: sThree 3s linear forwards;
+        animation: sThree 2s linear forwards;
     }
     .animate #sFour{
         fill: none;
@@ -337,7 +337,7 @@
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: sFour 3s linear forwards;
+        animation: sFour 2s linear forwards;
     }
     svg{
         position: absolute;
