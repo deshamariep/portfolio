@@ -141,7 +141,7 @@
     }
     .active-case-study {
         transform: scale(1.05); /* Scale up slightly */
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Example drop shadow effect */
+        box-shadow: 0px 0px 30px rgba(168, 163, 255, 0.3); /* Example drop shadow effect */
     }
     #caseStudySpots:hover{
         background-image: url(images/spotsTransBG.png);
