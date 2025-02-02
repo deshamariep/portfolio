@@ -120,7 +120,8 @@
         text-decoration: underline;
     }
     #intro{
-        width: 525px;
+        /* width: 525px; */
+        display: flex;
     }
     #work{
         margin-top: 435px;
