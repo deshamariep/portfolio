@@ -123,6 +123,12 @@
         /* width: 525px; */
         display: flex;
     }
+    #intro p{
+        flex: 1;
+    }
+    #intro img{
+        flex: 1;
+    }
     #work{
         margin-top: 435px;
     }
