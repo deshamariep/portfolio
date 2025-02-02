@@ -124,13 +124,15 @@
         display: flex;
     }
     #intro p{
+        margin-top: 30px;
         flex: 1;
     }
     #intro img{
+        margin-top: -30px;
         flex: 1;
     }
     #work{
-        margin-top: 435px;
+        margin-top: 30px;
     }
     article{
         margin-bottom: 85px;
