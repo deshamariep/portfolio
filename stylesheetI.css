@@ -132,7 +132,7 @@
     #intro img{
         margin-top: -30px;
         flex: 1;
-        transition: transform 0.6s ease-in-out;
+        transition: transform 1000ms ease-in-out;
     }
     
     /* Flip animation on page load */
@@ -141,16 +141,11 @@
             transform: rotateY(0deg);
         }
         to {
-            transform: rotateY(360deg);
+            transform: rotateY(720deg);
         }
     }
     #intro img.flip-on-load {
-        animation: flipY 0.6s ease-in-out;
-    }
-    /* Flip on hover */
-    #intro img:hover {
-        transform: rotateY(360deg);
-        transition: transform 0.6s ease-in-out;
+        animation: flipY 2000ms ease-in-out;
     }
     
     #work{
