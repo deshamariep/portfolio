@@ -180,14 +180,14 @@
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat;
-        box-shadow: 0px 0px 30px rgba(105, 168, 95, 0.65);
+        box-shadow: 0px 0px 30px rgba(34, 255, 0, 0.55);
     }
     #caseStudyUme:hover{
         background-image: url(images/umeTransBG.png);
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat;
-        box-shadow: 0px 0px 30px rgba(243, 159, 173, 0.6);
+        box-shadow: 0px 0px 30px rgba(255, 0, 119, 0.55);
     }
     .caseStudy section{
         padding: 45px;
