@@ -7,11 +7,6 @@
     
         // Add flip class on page load
         introImage.classList.add("flip-on-load");
-    
-        // Remove flip class after animation completes to allow smooth hover effect
-        setTimeout(() => {
-            introImage.classList.remove("flip-on-load");
-        }, 600);
     });
 
     document.addEventListener("DOMContentLoaded", function() {

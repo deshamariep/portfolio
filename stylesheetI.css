@@ -127,16 +127,17 @@
     #intro p{
         margin-top: 30px;
         flex: 1;
-        align-items: start;
+        align-items: center;
     }
-    #intro img{
+    
+    #intro img {
         margin-top: -30px;
         flex: 1;
-        transition: transform 1000ms ease-in-out;
+        transition: transform 0.6s ease-in-out;
     }
     
     /* Flip animation on page load */
-    @keyframes flipY {
+    @keyframes flipY720 {
         from {
             transform: rotateY(0deg);
         }
@@ -144,9 +145,11 @@
             transform: rotateY(720deg);
         }
     }
+    
     #intro img.flip-on-load {
-        animation: flipY 2000ms ease-in-out;
+        animation: flipY720 2s ease-in-out;
     }
+    
     
     #work{
         margin-top: 80px;
