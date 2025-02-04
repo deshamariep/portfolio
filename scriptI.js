@@ -5,13 +5,8 @@
     document.addEventListener("DOMContentLoaded", function() {
         const introImage = document.querySelector("#intro img");
     
-        // Add spin class on page load
-        introImage.classList.add("spin-on-load");
-    
-        // Remove spin class after animation completes to allow smooth hover effect
-        setTimeout(() => {
-            introImage.classList.remove("spin-on-load");
-        }, 1000);
+        // Add flip class on page load
+        introImage.classList.add("flip-on-load");
     });
 
     document.addEventListener("DOMContentLoaded", function() {
