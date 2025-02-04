@@ -137,20 +137,21 @@
         transition: transform 0.6s ease-in-out;
     }
     
-    @keyframes smoothFlipY720 {
+    /* Smooth 360-degree Flip with Scale Effect */
+    @keyframes smoothFlipY360 {
         0% {
             transform: rotateY(0deg) scale(1);
         }
         50% {
-            transform: rotateY(360deg) scale(1.1); /* Slight scale for a smooth feel */
+            transform: rotateY(180deg) scale(1.1); /* Slight zoom at midpoint */
         }
         100% {
-            transform: rotateY(720deg) scale(1);
+            transform: rotateY(360deg) scale(1);
         }
     }
-    
+
     #intro img.flip-on-load {
-        animation: smoothFlipY720 2s cubic-bezier(0.25, 1, 0.5, 1);
+        animation: smoothFlipY360 1.5s cubic-bezier(0.25, 1, 0.5, 1);
     }
     
     
