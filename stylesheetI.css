@@ -133,25 +133,22 @@
         flex: 1;
         transition: transform 0.6s ease-in-out;
     }
-
-    /* Flip animation on page load */
-    @keyframes flip {
+    
+    /* Spin animation on page load */
+    @keyframes spin {
         from {
-            transform: rotateY(0deg);
+            transform: rotate(0deg);
         }
         to {
-            transform: rotateY(180deg);
+            transform: rotate(360deg);
         }
     }
-
-    #intro img.flip-on-load {
-        animation: flip 0.6s ease-in-out;
-        transform: rotateY(180deg); /* Keep it flipped after animation */
+    #intro img.spin-on-load {
+        animation: spin 0.6s ease-in-out;
     }
-
-    /* Flip on hover */
+    /* Spin on hover */
     #intro img:hover {
-        transform: rotateY(0deg); /* Flips back when hovered */
+        transform: rotate(360deg);
         transition: transform 0.6s ease-in-out;
     }
     
