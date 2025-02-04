@@ -134,7 +134,7 @@
         align-items: center;
         flex: 1;
         transform-origin: center;
-        transition: transform 0.6s ease-in-out;
+        transition: transform 1s ease-out;
     }
     
     /* Smooth 360-degree Flip with Scale Effect */
@@ -151,7 +151,7 @@
     }
 
     #intro img.flip-on-load {
-        animation: smoothFlipY360 1s cubic-bezier(0.25, 1, 0.5, 1);
+        animation: smoothFlipY360 2s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
     
     
