@@ -127,6 +127,7 @@
     #intro p{
         margin-top: 30px;
         flex: 1;
+        align-items: start;
     }
     #intro img{
         margin-top: -30px;
