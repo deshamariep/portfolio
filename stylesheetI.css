@@ -182,14 +182,14 @@
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat;
-        box-shadow: 0px 0px 30px rgba(255, 157, 0, 0.55);
+        box-shadow: 0px 0px 30px rgba(255, 145, 2, 0.55);
     }
     #caseStudyGst:hover{
         background-image: url(images/gstTransBG.png);
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat;
-        box-shadow: 0px 0px 30px rgba(20, 153, 0, 0.5);
+        box-shadow: 0px 0px 30px rgba(0, 206, 45, 0.5);
     }
     #caseStudyUme:hover{
         background-image: url(images/umeTransBG.png);
