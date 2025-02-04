@@ -122,6 +122,7 @@
     #intro{
         /* width: 525px; */
         display: flex;
+        align-items: center;
     }
     #intro p{
         margin-top: 30px;
@@ -130,7 +131,27 @@
     #intro img{
         margin-top: -30px;
         flex: 1;
+        transition: transform 0.6s ease-in-out;
     }
+
+    /* Spin animation on page load */
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    #intro img.spin-on-load {
+        animation: spin 1s ease-in-out;
+    }
+    /* Flip effect on hover */
+    #intro img:hover {
+        transform: rotateY(180deg);
+        transition: transform 0.6s ease-in-out;
+    }
+    
     #work{
         margin-top: 80px;
     }

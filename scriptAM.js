@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    console/log('reading js');
+    console.log('reading js');
 
     document.addEventListener('DOMContentLoaded', function() {
         // Optional: You can add a class to trigger animation via JavaScript if needed
