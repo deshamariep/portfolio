@@ -134,21 +134,21 @@
         transition: transform 0.6s ease-in-out;
     }
     
-    /* Spin animation on page load */
-    @keyframes spin {
+    /* Flip animation on page load */
+    @keyframes flipY {
         from {
-            transform: rotate(0deg);
+            transform: rotateY(0deg);
         }
         to {
-            transform: rotate(360deg);
+            transform: rotateY(360deg);
         }
     }
-    #intro img.spin-on-load {
-        animation: spin 0.6s ease-in-out;
+    #intro img.flip-on-load {
+        animation: flipY 0.6s ease-in-out;
     }
-    /* Spin on hover */
+    /* Flip on hover */
     #intro img:hover {
-        transform: rotate(360deg);
+        transform: rotateY(360deg);
         transition: transform 0.6s ease-in-out;
     }
     
@@ -177,14 +177,14 @@
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat;
-        box-shadow: 0px 0px 30px rgba(255, 157, 0, 0.5);
+        box-shadow: 0px 0px 30px rgba(255, 157, 0, 0.55);
     }
     #caseStudyGst:hover{
         background-image: url(images/gstTransBG.png);
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat;
-        box-shadow: 0px 0px 30px rgba(105, 168, 95, 0.55);
+        box-shadow: 0px 0px 30px rgba(105, 168, 95, 0.6);
     }
     #caseStudyUme:hover{
         background-image: url(images/umeTransBG.png);
