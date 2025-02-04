@@ -122,7 +122,6 @@
     #intro{
         /* width: 525px; */
         display: flex;
-        align-items: center;
     }
     #intro p{
         margin-top: 30px;
@@ -132,22 +131,26 @@
     
     #intro img {
         margin-top: -30px;
+        align-items: center;
         flex: 1;
+        transform-origin: center;
         transition: transform 0.6s ease-in-out;
     }
     
-    /* Flip animation on page load */
-    @keyframes flipY720 {
-        from {
-            transform: rotateY(0deg);
+    @keyframes smoothFlipY720 {
+        0% {
+            transform: rotateY(0deg) scale(1);
         }
-        to {
-            transform: rotateY(720deg);
+        50% {
+            transform: rotateY(360deg) scale(1.1); /* Slight scale for a smooth feel */
+        }
+        100% {
+            transform: rotateY(720deg) scale(1);
         }
     }
     
     #intro img.flip-on-load {
-        animation: flipY720 2s ease-in-out;
+        animation: smoothFlipY720 2s cubic-bezier(0.25, 1, 0.5, 1);
     }
     
     
