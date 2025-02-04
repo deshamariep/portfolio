@@ -151,7 +151,7 @@
     }
 
     #intro img.flip-on-load {
-        animation: smoothFlipY360 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+        animation: smoothFlipY360 1s cubic-bezier(0.25, 1, 0.5, 1);
     }
     
     

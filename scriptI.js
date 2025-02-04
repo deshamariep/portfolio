@@ -4,8 +4,7 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         const introImage = document.querySelector("#intro img");
-    
-        // Add flip class on page load
+        
         introImage.classList.add("flip-on-load");
     });
 
