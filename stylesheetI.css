@@ -152,9 +152,9 @@
         animation: smoothFlipY360 1s ease-out; /* 1 second flip duration with ease-out */
     }
 
-    #intro img.flip-on-load {
+    /* #intro img.flip-on-load {
         animation: smoothFlipY360 2s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
+    } */
     
     
     #work{
