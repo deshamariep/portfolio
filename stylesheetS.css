@@ -55,7 +55,11 @@
         height: 150px;
         padding-top: 30px;
     }
+    header #hLogo{
+        flex: 1;
+    }
     header #two{
+        align-content: center;
         flex: 2;
     }
     header #two h1{
