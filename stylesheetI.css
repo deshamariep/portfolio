@@ -119,43 +119,10 @@
     #studio:hover{
         text-decoration: underline;
     }
-    #intro{
-        /* width: 525px; */
+    /* #intro{
+        width: 525px;
         display: flex;
-    }
-    #intro p{
-        margin-top: 30px;
-        flex: 1;
-    }
-    
-    #intro img {
-        margin-top: -30px;
-        align-items: center;
-        flex: 1;
-        transform-origin: center;
-    }
-    
-    /* Smooth 360-degree Flip with Smoother Cubic Bezier */
-    @keyframes smoothFlipY360 {
-        0% {
-            transform: rotateY(0deg);
-        }
-        50% {
-            transform: rotateY(180deg) scale(1.05); /* Slight zoom at 50% */
-        }
-        100% {
-            transform: rotateY(360deg) scale(1);
-        }
-    }
-    
-    #intro img.flip-on-load {
-        animation: smoothFlipY360 1s ease-out; /* 1 second flip duration with ease-out */
-    }
-
-    /* #intro img.flip-on-load {
-        animation: smoothFlipY360 2s cubic-bezier(0.25, 0.8, 0.25, 1);
     } */
-    
     
     #work{
         margin-top: 80px;
