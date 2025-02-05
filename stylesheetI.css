@@ -54,11 +54,12 @@
     }
     header{
         display: flex;
-        height: 150px;
+        height: 100px;
         padding-top: 30px;
     }
     header .two{
         flex: 2;
+        align-items: center;
     }
     header #one{
         flex: 1;
@@ -110,7 +111,7 @@
         /* width: 525px;
         display: flex; */
         text-align: center;
-        padding: 100,0,100,0;
+        margin: 200px,0px,100px,0px;
     }
     #intro h1{
         font-family: "Cinzel Decorative", serif;
