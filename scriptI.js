@@ -3,12 +3,6 @@
     console.log("reading js");
 
     document.addEventListener("DOMContentLoaded", function() {
-        const introImage = document.querySelector("#intro img");
-        
-        introImage.classList.add("flip-on-load");
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
         const caseStudySpots = document.getElementById("caseStudySpots");
         const caseStudyGst = document.getElementById("caseStudyGst");
         const caseStudyUme = document.getElementById("caseStudyUme");
@@ -38,7 +32,7 @@
     });
     
     document.addEventListener("DOMContentLoaded", function() {
-        const titles = ["UX Researcher", "UI Designer", "Visual Communicator", "Graphic Designer", "User-Centered Designer"];
+        const titles = ["UX/UI Design", "Front-End Development", "Digital Media & Marketing", "Interactive Design", "Human-Centered UI/UX Designer"];
         const titleElement = document.getElementById("titleChange");
         let currentIndex = 0;
 
@@ -53,7 +47,7 @@
 
         // Stop interval when title reaches "Product Design"
         function stopInterval() {
-            if (titleElement.textContent === "Product Designer") {
+            if (titleElement.textContent === "Human-Centered UI/UX Designer") {
                 clearInterval(intervalId);
             }
         }

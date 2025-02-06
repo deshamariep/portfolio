@@ -100,7 +100,6 @@
         outline: none;
         text-align: center; 
         display: inline-block;
-        transition: box-shadow 0.3s ease-in-out;
     }
     #home:hover{
         text-decoration: underline;

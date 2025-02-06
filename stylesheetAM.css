@@ -110,6 +110,12 @@
         text-align: center; 
         display: inline-block;
     }
+    .ctaCM{
+        display: flex;
+    }
+    .ctaCM div{
+        flex: 1;
+    }
     #intro{
         margin-top: 125px;
         margin-bottom: 200px;
