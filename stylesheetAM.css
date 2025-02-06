@@ -43,7 +43,7 @@
         font-family: "Assistant", sans-serif;
         font-weight: 400;
         font-style: normal;
-        background-color: #fff1c7;
+        background-color: #EBEBEB;
     }
     main{
         margin: 0 170px;
@@ -64,19 +64,6 @@
         align-content: center;
         flex: 2;
     }
-    /* header #two h1{
-        font-family: "Cinzel Decorative", serif;
-        font-weight: 700;
-        font-size: 48px;
-        font-style: normal;
-        margin-bottom: 10px;
-    }
-    header #two h2{
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        margin-top: 0px;
-    } */
     header #one{
         flex: 1;
         font-family: "Staatliches", sans-serif;
@@ -94,15 +81,15 @@
     }
     #home:hover{
         text-decoration: underline;
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     #aboutMe:hover{
         text-decoration: underline;
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     #studio:hover{
         text-decoration: underline;
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     nav ul{
         display: flex;
@@ -122,6 +109,23 @@
         outline: none;
         text-align: center; 
         display: inline-block;
+    }
+    #intro{
+        margin-top: 125px;
+        margin-bottom: 200px;
+    }
+    #intro h1{
+        font-family: "Cinzel Decorative", serif;
+        font-weight: 700;
+        font-size: 48px;
+        font-style: normal;
+        margin-bottom: 10px;
+    }
+    #intro h2{
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: 0px;
     }
     .data{
         display: flex;

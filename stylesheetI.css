@@ -104,15 +104,15 @@
     }
     #home:hover{
         text-decoration: underline;
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     #aboutMe:hover{
         text-decoration: underline;
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     #studio:hover{
         text-decoration: underline;
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     #intro{
         /* width: 525px;
