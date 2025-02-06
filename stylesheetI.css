@@ -133,7 +133,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        animation: gradientSwipe 3s ease-in forwards;
+        animation: gradientSwipe 3s ease-in forwards 1s;
     }
     @keyframes gradientSwipe {
         0% {
