@@ -132,7 +132,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        animation: gradientSwipe 4s ease-in-out forwards;
+        animation: gradientSwipe 4s ease-out forwards;
     }
     @keyframes gradientSwipe {
         0% {
@@ -152,6 +152,9 @@
         font-weight: 400;
         font-style: normal;
         margin-top: 0px;
+    }
+    #intro p{
+        width: 600px;
     }
     #work{
         margin-top: 80px;
