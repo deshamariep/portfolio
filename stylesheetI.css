@@ -120,6 +120,7 @@
         text-align: center;
         margin-top: 125px;
         margin-bottom: 250px;
+        justify-items: center;
     }
     #intro h1{
         font-family: "Cinzel Decorative", serif;
@@ -132,7 +133,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        animation: gradientSwipe 4s ease-out forwards;
+        animation: gradientSwipe 4s ease-in forwards;
     }
     @keyframes gradientSwipe {
         0% {
