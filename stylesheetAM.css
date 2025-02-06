@@ -60,7 +60,7 @@
     header #hLogo{
         flex: 1;
     }
-    header #two{
+    header #line{
         align-content: center;
         flex: 2;
     }
