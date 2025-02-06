@@ -47,7 +47,7 @@
 
         // Stop interval when title reaches "Product Design"
         function stopInterval() {
-            if (titleElement.textContent === "Human-Centered UI/UX Designer") {
+            if (titleElement.textContent === "Human-Centered UI/UX Designer"); {
                 clearInterval(intervalId);
             }
         }
