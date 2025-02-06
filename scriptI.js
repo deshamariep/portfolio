@@ -30,32 +30,9 @@
         
         window.addEventListener("scroll", handleScroll);
     });
-    
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     const titles = ["UX/UI Design", "Front-End Development", "Digital Media & Marketing", "Human-Centered Design", "Interactive & Visual Designer"];
-    //     const titleElement = document.getElementById("titleChange");
-    //     let currentIndex = 0;
-
-    //     function changeTitle() {
-    //         titleElement.textContent = titles[currentIndex];
-    //         currentIndex = (currentIndex + 1) % titles.length;
-    //     }
-
-    //     changeTitle();
-
-    //     const intervalId = setInterval(changeTitle, 2000);
-
-    //     function stopInterval() {
-    //         if (titleElement.textContent === "Interactive & Visual Designer") {
-    //             clearInterval(intervalId);
-    //         }
-    //     }
-
-    //     window.addEventListener("scroll", stopInterval);
-    // });
 
     document.addEventListener("DOMContentLoaded", function() {
-        const titles = ["UX/UI Design", "Front-End Development", "Digital Media & Marketing", "Human-Centered Design", "Interactive & Visual Designer"];
+        const titles = ["UX/UI Design", "Digital Media & Marketing", "Human-Centered Design","Front-End Development", "Interactive & Visual Designer"];
 
         const titleElement = document.getElementById("titleChange");
         let currentIndex = 0;
