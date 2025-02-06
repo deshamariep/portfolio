@@ -32,7 +32,7 @@
     });
     
     document.addEventListener("DOMContentLoaded", function() {
-        const titles = ["UX/UI Design", "Front-End Development", "Digital Media & Marketing", "Interactive Design", "Human-Centered UI/UX Designer"];
+        const titles = ["UX/UI Design", "Front-End Development", "Digital Media & Marketing", "Interactive Design", "Human-Centered Design", "Interactive & Visual Designer"];
         const titleElement = document.getElementById("titleChange");
         let currentIndex = 0;
 
@@ -45,14 +45,12 @@
 
         const intervalId = setInterval(changeTitle, 2000);
 
-        // Stop interval when title reaches "Product Design"
         function stopInterval() {
-            if (titleElement.textContent === "Human-Centered UI/UX Designer"); {
+            if (titleElement.textContent === "Interactive & Visual Designer") {
                 clearInterval(intervalId);
             }
         }
 
-        // Check if title reaches "Product Design" on scroll
         window.addEventListener("scroll", stopInterval);
     });
 }());
