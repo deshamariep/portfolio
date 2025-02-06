@@ -55,7 +55,7 @@
     header{
         display: flex;
         height: 100px;
-        padding-top: 30px;
+        padding-top: 10px;
     }
     header #hLogo{
         flex: 1;
@@ -118,8 +118,8 @@
         flex: 1;
     }
     #intro{
-        margin-top: 200px;
-        margin-bottom: 300px;
+        margin-top: 150px;
+        margin-bottom: 250px;
     }
     #intro h1{
         font-family: "Cinzel Decorative", serif;

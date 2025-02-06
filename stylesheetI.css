@@ -55,7 +55,7 @@
     header{
         display: flex;
         height: 100px;
-        padding-top: 30px;
+        padding-top: 10px;
     }
     header #hLogo{
         flex: 1;
