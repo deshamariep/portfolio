@@ -142,8 +142,13 @@
         padding-right: 30px;
     }
     #intro #ctaBtn{
-        border: solid 1px rgb(94, 95, 94);
-        border-radius: 20px;
+       background-color: transparent;
+       border: solid 1px rgb(94, 95, 94);
+       border-radius: 20px;
+       padding-top: 20px;
+    }
+   #intro #ctaBtn p{
+        padding: 0px, 20px;
     }
     #intro #helloMe{
         padding-left: 250px;
