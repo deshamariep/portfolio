@@ -119,7 +119,7 @@
     }
     #intro{
         margin-top: 150px;
-        margin-bottom: 260px;
+        margin-bottom: 300px;
     }
     #intro h1{
         font-family: "Cinzel Decorative", serif;
@@ -142,6 +142,7 @@
     }
     #intro #helloMe{
         padding-left: 250px;
+        padding-top: 5px;
     }
     .data{
         display: flex;
