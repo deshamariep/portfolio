@@ -139,6 +139,11 @@
     #intro p{
         margin-bottom: 0px;
         margin-top: 0px;
+        padding-right: 30px;
+    }
+    #intro #ctaBtn{
+        border: solid 1px rgb(94, 95, 94);
+        border-radius: 20px;
     }
     #intro #helloMe{
         padding-left: 250px;
