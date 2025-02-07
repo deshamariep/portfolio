@@ -140,15 +140,17 @@
         margin-bottom: 0px;
         margin-top: 0px;
         padding-right: 30px;
+        padding-bottom: 20px;
     }
     #intro #ctaBtn{
        background-color: transparent;
        border: solid 1px rgb(94, 95, 94);
        border-radius: 20px;
-       padding-top: 20px;
+       padding: 5px 20px;
     }
    #intro #ctaBtn p{
-        padding: 0px, 20px;
+        text-align: center;
+        align-items: center;
     }
     #intro #helloMe{
         padding-left: 250px;
