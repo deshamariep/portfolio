@@ -144,10 +144,10 @@
         padding-bottom: 20px;
     }
     #intro #ctaBtn{
-        color: white;
        background-color: rgb(94, 95, 94);
        border: solid 1px rgb(94, 95, 94);
        border-radius: 20px;
+       color: white;
     }
     #intro #ctaBtn:hover{
        background-color: rgb(255, 255, 255, 0.75);
