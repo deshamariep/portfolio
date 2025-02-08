@@ -128,6 +128,7 @@
         font-style: normal;
         margin-bottom: 0px;
         margin-top: 0px;
+        line-height: 1.5;
     }
     #intro h2{
         font-family: "Staatliches", sans-serif;
@@ -161,7 +162,7 @@
     }
     #intro #helloMe{
         padding-left: 250px;
-        padding-top: 5px;
+        padding-top: 10px;
     }
     .data{
         display: flex;
