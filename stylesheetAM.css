@@ -147,8 +147,10 @@
        background-color: rgb(94, 95, 94);
        border: solid 1px rgb(94, 95, 94);
        border-radius: 20px;
-       color: white;
     }
+    #intro #ctaBtn p{
+        color: white;
+     }
     #intro #ctaBtn:hover{
        background-color: rgb(255, 255, 255, 0.75);
        border: solid 1px white;
