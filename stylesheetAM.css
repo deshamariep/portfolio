@@ -150,7 +150,8 @@
     }
     #intro #ctaBtn:hover{
        background-color: white;
-       color:  rgb(94, 95, 94);
+       color: transparent;
+       border: none;
        border-radius: 20px;
     }
    #intro #ctaBtn p{
