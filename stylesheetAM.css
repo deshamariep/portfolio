@@ -165,7 +165,7 @@
     }
     #intro #helloMe{
         padding-left: 250px;
-        padding-top: 10px;
+        /* padding-top: 10px; */
     }
     .data{
         display: flex;
