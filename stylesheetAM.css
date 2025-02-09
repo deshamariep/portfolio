@@ -60,10 +60,6 @@
     header #hLogo{
         flex: 1;
     }
-    header #line{
-        align-content: center;
-        flex: 2;
-    }
     header #one{
         flex: 1;
         font-family: "Staatliches", sans-serif;
