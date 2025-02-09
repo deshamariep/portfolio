@@ -148,7 +148,7 @@
        border: solid 1px rgb(94, 95, 94);
        border-radius: 20px;
     }
-    #intro #ctaBtn p{
+    #intro #ctaBtn p a{
         color: white;
      }
     #intro #ctaBtn:hover{
