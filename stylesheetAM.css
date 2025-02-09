@@ -78,15 +78,15 @@
     }
     #home:hover{
         text-decoration: underline;
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
     #aboutMe:hover{
         text-decoration: underline;
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
     #studio:hover{
         text-decoration: underline;
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
     nav ul{
         display: flex;
@@ -146,6 +146,9 @@
     }
     #intro #ctaBtn p a{
         color: white;
+     }
+     #intro #ctaBtn p a:hover{
+        color: rgb(94, 95, 94);
      }
     #intro #ctaBtn:hover{
        background-color: rgb(255, 255, 255, 0.75);
