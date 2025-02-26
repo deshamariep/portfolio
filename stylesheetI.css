@@ -102,16 +102,16 @@
         text-align: center; 
         display: inline-block;
     }
+    #home{
+        border-bottom: 3px solid black;
+    }
     #home:hover{
-        text-decoration: underline;
         transform: scale(1.15);
     }
     #aboutMe:hover{
-        text-decoration: underline;
         transform: scale(1.15);
     }
     #studio:hover{
-        text-decoration: underline;
         transform: scale(1.15);
     }
     #intro{
