@@ -72,6 +72,9 @@
         font-style: normal;
         padding-top: 12px;
     }
+    header nav {
+        margin-left: auto; /* Pushes the nav to the right */
+    }
     a{
         text-decoration: none;
         color: rgb(94, 95, 94);
