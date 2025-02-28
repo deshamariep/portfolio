@@ -62,19 +62,6 @@
         align-content: center;
         flex: 2;
     }
-    /* header #two h1{
-        font-family: "Cinzel Decorative", serif;
-        font-weight: 700;
-        font-size: 48px;
-        font-style: normal;
-        margin-bottom: 10px;
-    }
-    header #two h2{
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        margin-top: 0px;
-    } */
     header #one{
         flex: 1;
         font-family: "Staatliches", sans-serif;
@@ -90,16 +77,29 @@
         text-align: center;
         text-decoration: none;
     }
-    #home:hover{
-        text-decoration: underline;
-    }
-    #aboutMe:hover{
-        text-decoration: underline;
-    }
-    #studio:hover{
-        text-decoration: underline;
-    }
+
     nav ul{
+        display: flex;
+        list-style-type: none;
+        padding: 0px;
+    }
+    nav ul li button {
+        width: 100px;
+        height: 50px;
+        background: none; 
+        border: none; 
+        outline: none;
+        
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        padding: 0; 
+    }
+    nav ul li button a {
+        text-decoration: none;
+    }
+    /* nav ul{
         display: flex;
     }
     nav ul li{
@@ -117,6 +117,18 @@
         outline: none;
         text-align: center; 
         display: inline-block;
+    } */
+    #studio{
+        border-bottom: 1px solid white;
+    }
+    #studio:hover a {
+        transform: scale(1.15); 
+    }
+    #home:hover{
+        transform: scale(1.15);
+    }
+    #aboutMe:hover{
+        transform: scale(1.15);
     }
     .boldText {
         padding-top: 25px;
