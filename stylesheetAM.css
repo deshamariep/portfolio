@@ -60,8 +60,13 @@
     header #hLogo{
         flex: 1;
     }
+    header #two{
+        align-content: center;
+        flex: 2;
+    }
     header #one{
-        flex: 1;
+        display: flex;
+        justify-content: flex-end;
         font-family: "Staatliches", sans-serif;
         font-weight: 400;
         font-style: normal;
