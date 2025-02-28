@@ -81,15 +81,18 @@
         text-align: center;
         text-decoration: none;
     }
-
     nav ul{
         display: flex;
         list-style-type: none;
         padding: 0px;
     }
+    nav ul li{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     nav ul li button {
         width: 100px;
-        height: 50px;
+        height: 40px;
         background: none; 
         border: none; 
         outline: none;
