@@ -103,17 +103,17 @@
     nav ul li button a {
         text-decoration: none;
     }
-    #studio{
-        border-bottom: 1px solid white;
-    }
-    #studio:hover a {
-        transform: scale(1.15); 
-    }
     #home:hover{
         transform: scale(1.15);
     }
     #aboutMe:hover{
         transform: scale(1.15);
+    }
+    #studio{
+        border-bottom: 1px solid white;
+    }
+    #studio:hover a {
+        transform: scale(1.15); 
     }
     .boldText {
         padding-top: 25px;
