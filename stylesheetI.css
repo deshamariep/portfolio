@@ -109,8 +109,17 @@
     nav ul li button a {
         text-decoration: none;
     }
-    #home{
-        border-bottom: 1px solid linear-gradient(to right, rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207, 240, 255, 1) 66%, rgba(229, 156, 252, 0.7) 88%);;
+    #home {
+        position: relative;
+    }
+    #home::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px; /* Thickness of the border */
+        background: linear-gradient(to right, rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207, 240, 255, 1) 66%, rgba(229, 156, 252, 0.7) 88%);
     }
     #home:hover a {
         transform: scale(1.15); 
