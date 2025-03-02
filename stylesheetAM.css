@@ -184,6 +184,7 @@
     }
     .data{
         display: flex;
+        gap: 50px;
     }
     .boldText{
         padding: 25px;
