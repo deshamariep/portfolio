@@ -191,7 +191,6 @@
     }
     #intro #helloMe{
         padding-left: 250px;
-        /* padding-top: 10px; */
     }
     .data{
         display: flex;
@@ -225,7 +224,7 @@
         margin-left: 50px;
     }
     #amIntro div{
-        width: 400px;
+        width: 900px;
     }
     .fillTime{
         padding-right: 50px;
