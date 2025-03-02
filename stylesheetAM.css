@@ -192,20 +192,14 @@
         font-weight: 400;
         font-style: normal;
     }
-    /* h3{
-        padding: 25px;
-        padding-bottom: 0px;
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        padding-left: 0px;
-    } */
     .two{
         flex: 2;
         padding-left: 0px;
     }
+    .two h2{
+        padding-bottom: 20px;
+    }
     .two p{
-        padding-left: 10px;
         margin-right: 40px;
     }
     #one{
@@ -223,7 +217,7 @@
     #amIntro h2{
         text-align: center;
     }
-    #amIntro div .boldText{
+    .dwp{
         font-family: "Staatliches", sans-serif;
         font-weight: 400;
         font-style: normal;
@@ -235,6 +229,9 @@
         flex: 1;
         justify-content: center;
         margin-left: 0px;
+    }
+    .exp h3{
+        margin-top: 30px;
     }
     #textCase p{
         text-align: left;
