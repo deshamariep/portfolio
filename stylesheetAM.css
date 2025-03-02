@@ -156,7 +156,7 @@
         margin-top: 0px;
         line-height: 1.4;
     }
-    #intro h2{
+    #intro h2, h2{
         font-family: "Staatliches", sans-serif;
         font-weight: 400;
         font-style: normal;
@@ -223,6 +223,9 @@
         flex: 1;
         justify-content: center;
         margin-left: 50px;
+    }
+    #amIntro div{
+        width: 400px;
     }
     .fillTime{
         padding-right: 50px;
