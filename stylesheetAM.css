@@ -116,7 +116,7 @@
         bottom: 0;
         width: 100%;
         height: 1px; /* Thickness of the border */
-        background: linear-gradient(to right, rgba(166, 219, 237, 0.9) 20%, rgb(228, 247, 255) 41%, rgba(214, 169, 227, 0.9) 66%);
+        background: linear-gradient(to right, rgb(169, 229, 250) 20%, rgb(228, 247, 255, 1) 41%, rgb(233, 181, 247) 66%);
     }
     #aboutMe:hover a{
         transform: scale(1.15); 
