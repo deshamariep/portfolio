@@ -142,25 +142,24 @@
         font-size: 48px;
         font-style: normal;
         margin-bottom: 10px;
-        background-image: radial-gradient(circle, rgba(82, 209, 252, 0.6) 20%, rgba(207, 240, 255, 1) 41%, rgba(229, 156, 252, 0.7) 66%, rgba(94, 95, 94, 0.7) 88%); /* Initial color order */
+        background-image: radial-gradient(circle,rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
         background-size: 300% 300%;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
         animation: gradientSwipe 10s ease-in-out forwards 500ms;
     }
-    
     @keyframes gradientSwipe {
         0% {
-            background-position: 100% 50%; /* Start from the opposite side */
+            background-position: 0% 50%;
         }
         50% {
-            background-position: 0% 50%; /* Move to the other side */
+            background-position: 100% 50%;
         }
         100% {
             background-position: 50% 50%;
             background-image: none;
-            color: rgba(94, 95, 94, 1); /* Final solid color */
+            color: rgba(94, 95, 94,1); /* Final solid color */
         }
     }
     #intro h2{
