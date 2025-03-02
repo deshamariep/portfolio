@@ -193,14 +193,14 @@
         font-weight: 400;
         font-style: normal;
     }
-    h3{
+    /* h3{
         padding: 25px;
         padding-bottom: 0px;
         font-family: "Staatliches", sans-serif;
         font-weight: 400;
         font-style: normal;
         padding-left: 0px;
-    }
+    } */
     .two{
         flex: 2;
         padding-left: 0px;
@@ -214,9 +214,17 @@
         justify-content: center;
         margin-left: 50px;
     }
+    #amIntro{
+        padding-bottom: 100px;
+    }
     #amIntro div {
         width: 800px;
-        margin-left: 100px;
+        margin-left: 200px;
+    }
+    #amIntro .boldText{
+        font-family: "Staatliches", sans-serif;
+        font-weight: 400;
+        font-style: normal;
     }
     .fillTime{
         padding-right: 50px;
