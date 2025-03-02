@@ -106,25 +106,6 @@
     nav ul li button a {
         text-decoration: none;
     }
-    /* nav ul{
-        display: flex;
-    }
-    nav ul li{
-        flex: content;
-        list-style: none;
-        padding-left: 4px;
-        padding-right: 4px;
-    }
-    nav ul li button{
-        width: 100px;
-        height: 50px;
-        border-radius: 20px;
-        background: none; 
-        border: none; 
-        outline: none;
-        text-align: center; 
-        display: inline-block;
-    } */
     #aboutMe{
         position: relative;
     }
@@ -234,10 +215,7 @@
     }
     #amIntro div {
         width: 800px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centers the `<p>` elements */
-        margin: 0 auto; /* Centers the whole div */
+        margin-left: 300px;
     }
     .fillTime{
         padding-right: 50px;
