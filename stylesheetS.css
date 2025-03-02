@@ -142,17 +142,7 @@
         margin: 7px 3px;
         border-radius: 40px;
         border: 1.5px double transparent;
-        background: linear-gradient(white, white) padding-box,linear-gradient(
-            90deg,
-            rgba(238, 130, 238, 0.4),
-            rgba(75, 0, 130, 0.4), 
-            rgba(0, 0, 255, 0.4),  
-            rgba(0, 255, 0, 0.4),  
-            rgba(255, 255, 0, 0.4), 
-            rgba(255, 165, 0, 0.4), 
-            rgba(255, 0, 0, 0.4),  
-            rgba(238, 130, 238, 0.4) 
-        ) border-box;
+        background: linear-gradient(white, white) padding-box,linear-gradient(to right, rgba(82, 209, 252, 0.9) 20%, rgba(207, 240, 255, 1) 41%, rgba(229, 156, 252, 0.9) 66%) border-box;
         box-sizing: border-box;
         background-size: 200% auto;
         animation: animateBackground 5s infinite linear;
