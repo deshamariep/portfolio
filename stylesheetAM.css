@@ -224,6 +224,9 @@
         width: 800px;
         margin-left: 200px;
     }
+    #amIntro h2{
+        text-align: center;
+    }
     #amIntro div .boldText{
         font-family: "Staatliches", sans-serif;
         font-weight: 400;
