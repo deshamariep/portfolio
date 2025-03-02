@@ -151,15 +151,15 @@
     }
     @keyframes gradientSwipe {
         0% {
-            background-position: 0% 50%;
+            background-position: 100% 50%; /* Start from the opposite side */
         }
         50% {
-            background-position: 100% 50%;
+            background-position: 0% 50%; /* Move to the other side */
         }
         100% {
             background-position: 50% 50%;
             background-image: none;
-            color: rgba(94, 95, 94,1); /* Final solid color */
+            color: rgba(94, 95, 94, 1); /* Final solid color */
         }
     }
     #intro h2{
