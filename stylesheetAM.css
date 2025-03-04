@@ -182,22 +182,6 @@
     #intro #helloMe{
         padding-left: 250px;
     }
-    .data{
-        display: flex;
-        gap: 50px;
-    }
-    .introdwp{
-        display: flex;
-        align-items: center;
-    }
-    .introdwp img{
-        flex-shrink: 0;
-    }
-    .introdwp div{
-        flex: 1;
-        text-align: left;
-        max-width: 850px;
-    }
     .boldText{
         padding: 25px;
         padding-bottom: 0px;
@@ -222,6 +206,7 @@
     }
     #amIntro{
         padding-bottom: 100px;
+        padding-left: 100px;
     }
     #amIntro h2{
         text-align: center;
@@ -232,6 +217,23 @@
         font-family: "Staatliches", sans-serif;
         font-weight: 400;
         font-style: normal;
+    }
+    .data{
+        display: flex;
+        gap: 50px;
+    }
+    .introdwp{
+        display: flex;
+        align-items: center;
+        gap: 70px;
+    }
+    .introdwp img{
+        flex-shrink: 0;
+    }
+    .introdwp div{
+        flex: 1;
+        text-align: left;
+        max-width: 850px;
     }
     .fillTime{
         padding-right: 70px;
