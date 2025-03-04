@@ -186,15 +186,16 @@
         display: flex;
         gap: 50px;
     }
-    .introdwp {
+    .introdwp{
         display: flex;
         align-items: center;
     }
-    .introdwp img {
+    .introdwp img{
         flex-shrink: 0;
     }
-    .introdwp div {
+    .introdwp div{
         flex: 1;
+        text-align: left;
         max-width: 850px;
     }
     .boldText{
