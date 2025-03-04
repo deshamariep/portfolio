@@ -186,14 +186,16 @@
         display: flex;
         gap: 50px;
     }
-    .introdwp{
+    .introdwp {
         display: flex;
+        align-items: center;
     }
-    .introdwp img{
-        flex: content;
+    .introdwp img {
+        flex-shrink: 0;
     }
-    .introdwp div{
-        flex: content;
+    .introdwp div {
+        flex: 1;
+        max-width: 850px;
     }
     .boldText{
         padding: 25px;
