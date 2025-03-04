@@ -186,6 +186,15 @@
         display: flex;
         gap: 50px;
     }
+    .introdwp{
+        display: flex;
+    }
+    .introdwp img{
+        flex: content;
+    }
+    .introdwp div{
+        flex: content;
+    }
     .boldText{
         padding: 25px;
         padding-bottom: 0px;
