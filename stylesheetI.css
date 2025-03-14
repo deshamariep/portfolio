@@ -27,7 +27,7 @@
     }
 } */
 
-@media screen and (min-width: 1024px) and (max-width: 1024px){
+@media screen and (min-width: 1024px) {
     .mobileIncomplete {
         display: none; /* Hide the message on larger screens */
     }
@@ -301,5 +301,15 @@
         flex: 1;
         flex-direction: row;
         align-items: center; 
+    }
+}
+@media screen and (min-width: 1024px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        max-width: 1024px;
+        width: 100%;
     }
 }
