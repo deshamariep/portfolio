@@ -47,30 +47,18 @@
         font-style: normal;
         background-color: white;
     }
-    /* main{
+    main{
         margin: 0 170px;
         box-sizing: border-box;
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 1.6
-    } */
-    main {
-        margin: 0 auto;
-        box-sizing: border-box;
-        color: rgb(94, 95, 94);
-        letter-spacing: 0.03em;
-        line-height: 1.6;
-        max-width: 1440px; /* Prevents content from stretching too much on larger screens */
-        padding: 0 20px; /* Ensures spacing on smaller screens */
     }
-
     .query {
-    max-width: 1100px;
-    width: 100%; /* Ensures it doesn’t shrink */
-    margin: 0 auto; /* Centers it */
+        max-width: 1100px;
+        width: 1100px; /* Ensures it doesn’t shrink */
+        margin: 0 auto; /* Centers it */
     }
-
-    
     header{
         display: flex;
         height: 100px;
