@@ -143,8 +143,8 @@
         margin-bottom: 300px;
     } */
     #intro {
-        margin-top: calc(155px + (100vw - 1440px) * 0.1);
-        margin-bottom: calc(300px + (100vw - 1440px) * 0.2);
+        margin-top: clamp(155px, 10vw, 300px); 
+        margin-bottom: clamp(300px, 20vw, 600px);
     }
     #intro h1{
         font-family: "Cinzel Decorative", serif;
@@ -292,9 +292,4 @@
         align-items: center; 
     }
 }
-@media screen and (min-width: 1550px){
-    #intro{
-        margin-top: 155px;
-        margin-bottom: 300px;
-    }
-}
+
