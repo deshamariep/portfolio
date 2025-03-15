@@ -54,10 +54,10 @@
         letter-spacing: 0.03em;
         line-height: 1.6
     }
-    .query {
+    #query {
         max-width: 1100px;
-        width: 1100px; /* Ensures it doesn’t shrink */
-        margin: 0 auto; /* Centers it */
+        width: 1100px;
+        margin: 0 auto; 
     }
     header{
         display: flex;
