@@ -131,8 +131,11 @@
         font-style: normal;
     }
     #gallery{
+        margin: 0 auto;
         margin-top: 75px;
         display: flex;
+        max-width: 1100px;
+        width: 100%;
     }
     #gallery div{
         flex: content;
