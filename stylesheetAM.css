@@ -138,13 +138,9 @@
     .ctaCM div{
         flex: 1;
     }
-    /* #intro{
+    #intro{
         margin-top: 155px;
         margin-bottom: 300px;
-    } */
-    #intro {
-        margin-top: clamp(155px, 10vw, 300px); 
-        margin-bottom: clamp(300px, 20vw, 600px);
     }
     #intro h1{
         font-family: "Cinzel Decorative", serif;
@@ -292,4 +288,9 @@
         align-items: center; 
     }
 }
-
+@media screen and (min-width: 1600px) {
+    #intro {
+        margin-top: 200px;
+        margin-bottom: 350px;
+    }
+}
