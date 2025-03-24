@@ -294,3 +294,15 @@
         margin-bottom: 350px;
     }
 }
+@media screen and (min-width: 1700px) {
+    #intro {
+        margin-top: 250px;
+        margin-bottom: 350px;
+    }
+}
+@media screen and (min-width: 1900px) {
+    #intro {
+        margin-top: 300px;
+        margin-bottom: 450px;
+    }
+}
