@@ -139,8 +139,8 @@
         flex: 1;
     }
     #intro{
-        margin-top: 155px;
-        margin-bottom: 300px;
+        margin-top: 50px;
+        margin-bottom: 100px;
     }
     #intro h1{
         font-family: "Cinzel Decorative", serif;
@@ -286,6 +286,18 @@
         flex: 1;
         flex-direction: row;
         align-items: center; 
+    }
+}
+@media screen and (min-width: 1240px) {
+    #intro {
+        margin-top: 125px;
+        margin-bottom: 200px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    #intro {
+        margin-top: 155px;
+        margin-bottom: 300px;
     }
 }
 @media screen and (min-width: 1600px) {
