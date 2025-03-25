@@ -452,3 +452,11 @@
         align-items: center; 
     }
 }
+@media screen and (min-width: 1850px){
+    body{
+        background-image: url(images/gstInfoBG.png);
+        background-size: 100% 875px;
+        background-position: center top; 
+        background-repeat: no-repeat;
+    }
+}
