@@ -37,7 +37,7 @@
         height: 100%;
         min-height: 100vh;
         background-image: url(images/gstInfoBG.png);
-        background-size: contain;
+        background-size: 100% 800px;
         background-position: center top; 
         background-repeat: no-repeat;
         font-family: "Assistant", sans-serif;
@@ -498,5 +498,13 @@
         flex: 1;
         flex-direction: row;
         align-items: center; 
+    }
+}
+@media screen and (min-width: 1850px){
+    body{
+        background-image: url(images/gstInfoBG.png);
+        background-size: 100% 875px;
+        background-position: center top; 
+        background-repeat: no-repeat;
     }
 }
