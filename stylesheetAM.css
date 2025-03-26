@@ -291,8 +291,8 @@
 }
 @media screen and (min-width: 1240px) {
     #intro {
-        margin-top: 125px;
-        margin-bottom: 200px;
+        margin-top: 110px;
+        margin-bottom: 250px;
     }
 }
 @media screen and (min-width: 1440px) {
@@ -303,20 +303,20 @@
 }
 @media screen and (min-width: 1600px) {
     #intro {
-        margin-top: 200px;
-        margin-bottom: 350px;
+        margin-top: 185px;
+        margin-bottom: 400px;
     }
 }
 @media screen and (min-width: 1700px) {
     #intro {
-        margin-top: 220px;
-        margin-bottom: 430px;
+        margin-top: 205px;
+        margin-bottom: 450px;
     }
 }
     
 @media screen and (min-width: 1900px) {
     #intro {
-        margin-top: 250px;
-        margin-bottom: 500px;
+        margin-top: 240px;
+        margin-bottom: 520px;
     }
 }
