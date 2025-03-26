@@ -308,13 +308,14 @@
 }
 @media screen and (min-width: 1700px) {
     #intro {
-        margin-top: 250px;
-        margin-bottom: 350px;
+        margin-top: 220px;
+        margin-bottom: 430px;
     }
 }
+    
 @media screen and (min-width: 1900px) {
     #intro {
-        margin-top: 300px;
-        margin-bottom: 450px;
+        margin-top: 250px;
+        margin-bottom: 500px;
     }
 }
