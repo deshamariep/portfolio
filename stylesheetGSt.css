@@ -115,7 +115,7 @@
     }
     #topBG{
         margin-top: -10px;
-        margin-bottom: 125px;
+        margin-bottom: 100px;
     }
     #intro{
         display: flex;
@@ -514,5 +514,9 @@
         background-size: 100% 950px;
         background-position: center top; 
         background-repeat: no-repeat;
+    }
+    #topBG{
+        margin-top: 50px;
+        margin-bottom: 125px;
     }
 }

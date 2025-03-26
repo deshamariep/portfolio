@@ -116,7 +116,7 @@
     }
     #topBG{
         margin-top: -10px;
-        margin-bottom: 125px;
+        margin-bottom: 100px;
     }
     #intro{
         display: flex;
@@ -452,11 +452,23 @@
         align-items: center; 
     }
 }
+@media screen and (min-width: 1650px){
+    body{
+        background-image: url(images/umeInfoBG.png);
+        background-size: 100% 850px;
+        background-position: center top; 
+        background-repeat: no-repeat;
+    }
+}
 @media screen and (min-width: 1850px){
     body{
         background-image: url(images/umeInfoBG.png);
-        background-size: 100% 875px;
+        background-size: 100% 950px;
         background-position: center top; 
         background-repeat: no-repeat;
+    }
+    #topBG{
+        margin-top: 50px;
+        margin-bottom: 150px;
     }
 }
