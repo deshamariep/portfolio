@@ -115,7 +115,7 @@
     }
     #topBG{
         margin-top: -10px;
-        margin-bottom: 100px;
+        margin-bottom: 125px;
     }
     #intro{
         display: flex;
@@ -503,7 +503,7 @@
 @media screen and (min-width: 1650px){
     body{
         background-image: url(images/gstInfoBG.png);
-        background-size: 100% 810px;
+        background-size: 100% 850px;
         background-position: center top; 
         background-repeat: no-repeat;
     }
@@ -511,7 +511,7 @@
 @media screen and (min-width: 1850px){
     body{
         background-image: url(images/gstInfoBG.png);
-        background-size: 100% 910px;
+        background-size: 100% 950px;
         background-position: center top; 
         background-repeat: no-repeat;
     }
