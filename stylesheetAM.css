@@ -165,7 +165,7 @@
         padding-bottom: 20px;
     }
     #intro #ctaBtn{
-       background-color: rgb(94, 95, 94);
+       background-color: rgb(94, 95, 94, 0.6);
        border: solid 1px rgb(94, 95, 94);
        border-radius: 20px;
     }
