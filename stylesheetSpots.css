@@ -137,6 +137,7 @@
     }
     .info-row p {
         margin: 0;
+        padding-top: 3px;
     }
     #logo{
         flex: 1;
