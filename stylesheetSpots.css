@@ -37,7 +37,7 @@
         height: 100%;
         min-height: 100vh;
         background-image: url(images/spotsInfoBox.png), url(images/spotsTransBG.png);
-        background-size: 100% 800px;
+        background-size: 616px 795px, 100% 800px;
         background-position: center top; 
         background-repeat: no-repeat;
         font-family: "Assistant", sans-serif;
