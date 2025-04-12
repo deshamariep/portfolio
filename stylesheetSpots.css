@@ -129,11 +129,11 @@
     .info-row {
         display: flex;
         gap: 0.5rem;
-        align-items: flex-start; /* or center depending on your vibe */
+        align-items: flex-start;
     }
     .info-row h3 {
         margin: 0;
-        min-width: 100px; /* optional: keeps labels aligned */
+        min-width: 100px; 
     }
     .info-row p {
         margin: 0;
