@@ -120,8 +120,23 @@
     #introFlex{
         display: flex;
     }
-    #infoBox{
+    #infoBox {
         flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .info-row {
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start; /* or center depending on your vibe */
+    }
+    .info-row h3 {
+        margin: 0;
+        min-width: 100px; /* optional: keeps labels aligned */
+    }
+    .info-row p {
+        margin: 0;
     }
     #logo{
         flex: 1;
