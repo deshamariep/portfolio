@@ -145,8 +145,8 @@
         justify-content: center;
     }
     #GstLogo {
-        box-shadow: 0 0 30px rgba(253, 171, 83, 0.7);
-        border-radius: 150px;
+        box-shadow: 0 0 30px rgb(105, 168, 95, 0.7);
+        border-radius: 100px;
     }
     #arrow {
         translate: 45px;
