@@ -38,7 +38,7 @@
         min-height: 100vh;
         background-image: url(images/GstInfoBox.png), url(images/gstTransBG.png);
         background-size: 616px 795px, 100% 800px;
-        background-position: center top; 
+        background-position: 110px top, center top; 
         background-repeat: no-repeat;
         font-family: "Assistant", sans-serif;
         font-weight: 400;
