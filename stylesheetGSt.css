@@ -36,8 +36,8 @@
         width: 100%;
         height: 100%;
         min-height: 100vh;
-        background-image: url(images/gstInfoBG.png);
-        background-size: 100% 800px;
+        background-image: url(images/GstInfoBox.png), url(images/gstTransBG.png);
+        background-size: 616px 795px, 100% 800px;
         background-position: center top; 
         background-repeat: no-repeat;
         font-family: "Assistant", sans-serif;
@@ -117,118 +117,36 @@
         margin-top: -10px;
         margin-bottom: 100px;
     }
-    #intro{
+    #introFlex{
         display: flex;
-        justify-content: center; 
     }
-    #intro #logo{
-        flex: 1;
-    }
-    #intro #info{
+    #infoBox {
         flex: 2;
-        text-align: right;
-    }
-    #role{
+        padding-bottom: 110px;
         display: flex;
-        align-items: center; 
-        justify-content: center; 
+        flex-direction: column;
+        gap: 0.5rem;
     }
-    #role .out{
-        flex: .4;
-        transform: rotate(-90deg);
-        transform-origin: center center;
-        text-align: center;
-        align-items: end;
-        padding-top: 9%;
-    }
-    #role .in{
-        flex: content;
-        text-align: left;
-        padding: 0% 7%;
-        display: block;
-        border: 1px solid rgb(105, 168, 95);
-        border-radius: 30px;
-        margin-left: 30px;
-    }
-    #box{
+    .info-row {
         display: flex;
-        align-items: center; 
-        justify-content: center; 
+        gap: 0.5rem;
+        align-items: flex-start;
     }
-    #box .out{
-        flex: 3;
-        transform: rotate(-90deg);
-        transform-origin: center center;
-        text-align: center;
-        padding-top: 7%;
+    .info-row h3 {
+        margin: 0;
+        min-width: 100px; 
     }
-    #box .in{
-        flex: content;
-        text-align: center;
-        display: block;
-        height: 80px;
-        border: 1px solid rgb(105, 168, 95);
-        border-radius: 20px;
-        align-content: center;
-        margin-left: 20px;
+    .info-row p {
+        margin: 0;
+        padding-top: 3px;
     }
-    #box .in p{
-        align-content: center;
-    }
-    #tools{
-        display: flex;
-        align-items: center; 
-        justify-content: center; 
-    }
-    #tools .out{
+    #logo{
         flex: 1;
-        transform: rotate(-90deg);
-        transform-origin: center center;
-        text-align: center;
-        padding-top: 7%;
-        margin-left: 20px;
+        justify-content: center;
     }
-    #tools .in{
-        flex: content;
-        text-align: center;
-        display: block;
-        height: 80px;
-        border: 1px solid rgb(105, 168, 95);
-        border-radius: 20px;
-        align-content: center;
-        margin-left: 20px;
-    }
-    #tools .in p{
-        align-content: center;
-    }
-    #team{
-        display: flex;
-        align-content: center; 
-        justify-content: center; 
-        max-height: 163px;
-    }
-    #team .out{
-        flex: 1;
-        transform: rotate(-90deg);
-        transform-origin: center center;
-        text-align: end;
-        padding-top: 10%;
-        margin-top: 47px;
-        margin-right: 5px;
-    }
-    #team .in{
-        flex: content;
-        text-align: center;
-        display: block;
-        height: 80px;
-        width: 100px;
-        border: 1px solid rgb(105, 168, 95);
-        border-radius: 20px;
-        align-content: center;
-        margin-left: 20px;
-    }
-    #team .in p{
-        align-content: center;
+    #GstLogo {
+        box-shadow: 0 0 30px rgba(253, 171, 83, 0.7);
+        border-radius: 150px;
     }
     #arrow {
         translate: 45px;
