@@ -189,7 +189,7 @@
     #infoBox {
         flex: 2;
         width: 500px;
-        padding-bottom: 100px;
+        padding-bottom: 64px;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
