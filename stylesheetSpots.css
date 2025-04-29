@@ -171,6 +171,14 @@
         list-style: none;
         padding-left: 4px;
         padding-right: 4px;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
     }
     nav ul li button{
         width: 150px;

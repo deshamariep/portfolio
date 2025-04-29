@@ -177,6 +177,14 @@
         list-style: none;
         padding-left: 4px;
         padding-right: 4px;
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
     }
     nav ul li button{
         width: 150px;
@@ -194,6 +202,8 @@
     }
     #introFlex{
         display: flex;
+        align-items: center; /* vertically center logo and text */
+        justify-content: space-between;
     }
     #infoBox{
         flex: 2;
@@ -207,11 +217,15 @@
     }
     #logo{
         flex: 1;
+        display: flex;
         justify-content: center;
+        align-items: center;
     }
     #GstLogo {
         box-shadow: 0 0 30px rgb(105, 168, 95, 0.7);
         border-radius: 100px;
+        max-width: 100%;
+        height: auto;
     }
     #arrow {
         translate: 45px;
