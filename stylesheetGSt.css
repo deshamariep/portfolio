@@ -39,6 +39,7 @@
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 140%;
+        padding-bottom: 32px;
     }
     H2{
         font-family: "Quicksand", sans-serif;
@@ -191,26 +192,15 @@
     #introFlex{
         display: flex;
     }
-    #infoBox {
+    #infoBox{
         flex: 2;
-        width: 500px;
         padding-bottom: 150px;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
     }
-    .info-row {
-        display: flex;
-        gap: 0.5rem;
-        align-items: flex-start;
-    }
-    .info-row h3 {
-        margin: 0;
-        min-width: 100px; 
-    }
-    .info-row p {
-        margin: 0;
-        padding-top: 3px;
+    #infoBox p{
+        width: 500px;
     }
     #logo{
         flex: 1;
