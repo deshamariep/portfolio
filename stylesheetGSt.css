@@ -30,6 +30,77 @@
     .mobileIncomplete {
         display: none; /* Hide the message on larger screens */
     }
+    H1{
+        font-family: "Quicksand", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    }
+    H2{
+        font-family: "Quicksand", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 32px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    }
+    H3{
+        font-family: "Quicksand", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    }
+    p{
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    }
+    footer p{
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    }
+    /* btn{
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    } */
+    a{
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px;
+        text-decoration: underline;
+        color: rgb(0, 0, 238);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    }
     body{
         margin: 0;
         padding: 0;
