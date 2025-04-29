@@ -130,7 +130,8 @@
         margin: 0 auto; 
     }
     .spaceBtwn{
-        height: 64px;
+        margin-top: 64px;
+        margin-bottom: 64px;
     }
     header{
         display: flex;
