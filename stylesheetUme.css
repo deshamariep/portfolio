@@ -40,6 +40,7 @@
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 140%;
+        padding-bottom: 32px;
     }
     H2{
         font-family: "Quicksand", sans-serif;
@@ -135,6 +136,7 @@
     }
     header #two{
         flex: 2;
+        width: 500px;
     }
     header #two h2{
         font-family: "Quicksand", sans-serif;
