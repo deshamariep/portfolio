@@ -109,7 +109,7 @@
         height: 100%;
         min-height: 100vh;
         background-image: url(images/spotsInfoBox.png), url(images/spotsTransBG.png);
-        background-size: 616px 800px, 100% 800px;
+        background-size: 570px 800px, 100% 800px;
         background-position: 110px top, center top;
         background-repeat: no-repeat;
     }
