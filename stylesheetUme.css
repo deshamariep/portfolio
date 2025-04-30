@@ -52,6 +52,16 @@
         letter-spacing: 0.03em;
         line-height: 140%;
     }
+    footer H2{
+        font-family: "Quicksand", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 32px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    }
     H3{
         font-family: "Quicksand", sans-serif;
         font-optical-sizing: auto;
@@ -201,7 +211,7 @@
     #infoBox {
         flex: 2;
         width: 500px;
-        padding-bottom: 150px;
+        padding-bottom: 100px;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
