@@ -195,12 +195,11 @@
     }
     #introFlex{
         display: flex;
-        align-items: center; /* vertically center logo and text */
-        justify-content: space-between;
     }
-    #infoBox{
+    #infoBox {
         flex: 2;
-        padding-bottom: 150px;
+        width: 500px;
+        padding-bottom: 64px;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -210,15 +209,11 @@
     }
     #logo{
         flex: 1;
-        display: flex;
         justify-content: center;
-        align-items: center;
     }
     #GstLogo {
         box-shadow: 0 0 30px rgb(105, 168, 95, 0.7);
         border-radius: 100px;
-        max-width: 100%;
-        height: auto;
     }
     #arrow {
         translate: 45px;
