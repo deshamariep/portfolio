@@ -220,10 +220,10 @@
     }
     #GstLogo {
         box-shadow: 0 0 30px rgba(105, 168, 95);
-        border-radius: 150px;
+        border-radius: 100px;
     }
     #arrow {
-        translate: 45px;
+        justify-content: center;
         animation: moveUpDown 1s ease infinite;
     }
     @keyframes moveUpDown {

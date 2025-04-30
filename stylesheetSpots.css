@@ -210,7 +210,7 @@
         border-radius: 150px;
     }
     #arrow {
-        translate: 45px;
+        justify-content: center;
         animation: moveUpDown 1s ease infinite;
     }
     @keyframes moveUpDown {
