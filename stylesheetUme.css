@@ -217,8 +217,12 @@
         box-shadow: 0 0 30px rgb(243, 159, 173, 0.7);
         border-radius: 150px;
     }
-    #arrow {
+    #arrowContainer {
+        display: flex;
         justify-content: center;
+        align-items: center;
+    }
+    #arrow {
         animation: moveUpDown 1s ease infinite;
     }
     @keyframes moveUpDown {
