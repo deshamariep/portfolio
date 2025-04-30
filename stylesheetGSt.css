@@ -71,7 +71,7 @@
         letter-spacing: 0.03em;
         line-height: 140%;
     }
-    footer p{
+    footer p, ul li p, .number{
         font-family: "Nunito", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
@@ -196,6 +196,13 @@
     #introFlex{
         display: flex;
     }
+    #topBG{
+        margin-top: -10px;
+        margin-bottom: 100px;
+    }
+    #introFlex{
+        display: flex;
+    }
     #infoBox {
         flex: 2;
         width: 500px;
@@ -212,8 +219,8 @@
         justify-content: center;
     }
     #GstLogo {
-        box-shadow: 0 0 30px rgb(105, 168, 95, 0.7);
-        border-radius: 100px;
+        box-shadow: 0 0 30px rgba(105, 168, 95);
+        border-radius: 150px;
     }
     #arrow {
         translate: 45px;

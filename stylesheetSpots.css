@@ -71,7 +71,7 @@
         letter-spacing: 0.03em;
         line-height: 140%;
     }
-    footer p{
+    footer p, ul li p{
         font-family: "Nunito", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
@@ -282,6 +282,14 @@
     }
     .data div{
         flex: 1;
+    }
+    .data h2 {
+        margin: 0;
+        white-space: nowrap;
+    }
+    .data .line {
+        flex: 1;
+        height: 1px;
     }
     .painPT{
         width: 160px;
