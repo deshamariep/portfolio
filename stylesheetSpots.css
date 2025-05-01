@@ -83,7 +83,7 @@
         letter-spacing: 0.03em;
         line-height: 140%;
     }
-    ul li p, .painPT .number{
+    ul li p, .painPT .number, #circle1, #circle2, #circle3{
         font-family: "Nunito", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
