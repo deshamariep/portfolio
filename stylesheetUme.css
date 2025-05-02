@@ -248,6 +248,7 @@
     }
     #arrow {
         animation: moveUpDown 1s ease infinite;
+        margin: auto;
     }
     @keyframes moveUpDown {
         0%, 100% {

@@ -253,6 +253,7 @@
     }
     #arrow {
         animation: moveUpDown 1s ease infinite;
+        margin: auto;
     }
     @keyframes moveUpDown {
         0%, 100% {
@@ -294,8 +295,14 @@
         justify-content: space-between; 
         gap: 30px;
     }
-    .data div{
+    .data div, .imgData div{
         flex: 1;
+    }
+    .imgData{
+        display: flex;
+        justify-content: center; 
+        animation: center;
+        gap: 30px;
     }
     #question{
         position: relative;
