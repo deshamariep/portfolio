@@ -295,7 +295,7 @@
         justify-content: space-between; 
         gap: 30px;
     }
-    .data div, .imgData div{
+    .data div{
         flex: 1;
     }
     .imgData{
