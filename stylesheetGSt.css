@@ -228,14 +228,13 @@
     }
     #infoBox {
         flex: 2;
-        width: 500px;
         padding-bottom: 64px;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
     }
     #infoBox p{
-        width: 500px;
+        width: 475px;
     }
     #logo{
         flex: 1;
@@ -303,6 +302,9 @@
         justify-content: center; 
         animation: center;
         gap: 30px;
+    }
+    #noPadding{
+        padding-top: 0px;
     }
     #question{
         position: relative;
