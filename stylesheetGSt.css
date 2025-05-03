@@ -303,8 +303,8 @@
         animation: center;
         gap: 30px;
     }
-    #noPadding{
-        padding-top: 0px;
+    #noMargin{
+        margin-top: 0px;
     }
     #question{
         position: relative;
