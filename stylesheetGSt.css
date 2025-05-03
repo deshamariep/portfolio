@@ -311,13 +311,8 @@
     }
     #quesIconLeft{
         position: absolute;
-        top: 0px;
+        top: -10px;
         left: 0px;
-    }
-    #quesIconRight{
-        position: absolute;
-        top: 0px;
-        left: 565px;
     }
     .border{
         display: block;
