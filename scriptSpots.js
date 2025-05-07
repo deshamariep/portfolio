@@ -2,6 +2,14 @@
     'use strict';
     console.log('running js');
 
+    const sections = document.querySelectorAll('.spaceBtwn');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('active', entry.isIntersecting);
+        });
+    }, { threshold: 0.5 });
+    sections.forEach(section => observer.observe(section));
+    
     document.addEventListener("DOMContentLoaded", function() {
         const waitElement = document.getElementById('wait');
         const segments = waitElement.querySelectorAll("div");
