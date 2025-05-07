@@ -139,10 +139,6 @@
     main{
         margin: 0 170px;
         box-sizing: border-box;
-
-        scroll-snap-type: y proximity;
-        overflow-y: scroll;
-        height: 100vh;
     }
     #query{
         max-width: 1100px;
