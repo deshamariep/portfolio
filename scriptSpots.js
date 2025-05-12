@@ -2,23 +2,16 @@
     'use strict';
     console.log('running js');
 
-    // const sections = document.querySelectorAll('.spaceBtwn');
-    // const observer = new IntersectionObserver(entries => {
-    //     entries.forEach(entry => {
-    //       entry.target.classList.toggle('active', entry.isIntersecting);
-    //     });
-    // }, { threshold: 0.5 });
-    // sections.forEach(section => observer.observe(section));
-
     const sections = document.querySelectorAll('.spaceBtwn');
+    // This creates a "trigger zone" between 25% and 75% of the viewport height
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           entry.target.classList.toggle('active', entry.isIntersecting);
         });
       }, {
-        // Shrinks the top and bottom boundaries by 300px
-        rootMargin: '-300px 0px -300px 0px',
-        threshold: 0 // Trigger as soon as any part is inside the adjusted view
+        root: null,
+        rootMargin: '-25% 0px -25% 0px', // Top -25%, Bottom -25% leaves center 50%
+        threshold: 0 // Trigger as soon as any pixel enters this zone
     });
     sections.forEach(section => observer.observe(section));
     
