@@ -147,12 +147,12 @@
         letter-spacing: 0.03em;
         line-height: 1.6
     }
-    #query {
+    #query{
         max-width: 1100px;
         width: 100%;
         margin: 0 auto; 
     }
-    .spaceBtwn {
+    .spaceBtwn{
         margin-top: 64px;
         margin-bottom: 64px;
         transform: scale(0.9);
@@ -160,9 +160,19 @@
         transition: opacity 0.8s ease, transform 0.5s ease;
         padding: 0.5rem;
     }
-    .spaceBtwn.active {
+    .spaceBtwn.active{
         opacity: 1;
         transform: scale(1);
+    }
+    .spaceBtwnSmol{
+        margin-top: 32px;
+        margin-bottom: 32px;
+        opacity: 0.6;
+        transition: opacity 0.8s ease;
+        padding: 0.5rem;
+    }
+    .spaceBtwnSmol.active{
+        opacity: 1;
     }
     header{
         display: flex;
@@ -276,39 +286,6 @@
         margin: auto;
         max-width: 100%;
         max-height: 100%;
-    }
-    .textSize, #textSize{
-        width: 500px;
-    }
-    .boldText{
-        padding-top: 0px;
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-    .addBlock{
-        display: block;
-        border: 1px solid rgb(243, 159, 173);
-        border-radius: 60px;
-        padding: 20px;
-    }
-    .addBlockLite{
-        display: block;
-        border: 1px solid rgb(243, 159, 173, 0.5);
-        border-radius: 60px;
-        padding: 20px 30px;
-        margin-bottom:20px;
-    }
-    .addBlockLite2{
-        display: block;
-        border: 1px solid rgb(243, 159, 173, 0.5);
-        border-radius: 60px;
-        padding: 20px 30px;
-        margin-bottom:20px;
-        max-width: 450px;
-    }
-    .addBlockLite2 p, .addBlockLite2 li{
-        max-width: 380px;
     }
     .data{
         display: flex;

@@ -15,6 +15,18 @@
     });
     sections.forEach(section => observer.observe(section));
 
+    const smallSections = document.querySelectorAll('.spaceBtwnSmol');
+    const smallObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('active', entry.isIntersecting);
+        });
+      }, {
+        root: null,
+        rootMargin: '-40% 0px -40% 0px', 
+        threshold: 0 
+    });
+    sections.forEach(section => observer.observe(section));
+
     document.addEventListener("DOMContentLoaded", function() {
         const waitElement = document.getElementById('wait');
         const segments = waitElement.querySelectorAll("div");
@@ -40,24 +52,5 @@
         }
     
         window.addEventListener("scroll", handleScroll);
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const images = document.querySelectorAll('.popup-img');
-        const overlay = document.createElement('div');
-        overlay.className = 'overlay';
-        document.body.appendChild(overlay);
-    
-        images.forEach(function(img) {
-            img.addEventListener('click', function() {
-                overlay.style.display = 'flex';
-                img.classList.add('selected');
-            });
-    
-            overlay.addEventListener('click', function() {
-                overlay.style.display = 'none';
-                img.classList.remove('selected');
-            });
-        });
     });
 }());

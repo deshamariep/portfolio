@@ -19,7 +19,7 @@
         const segments = waitElement.querySelectorAll("div");
     
         const windowHeight = window.innerHeight;
-        const offset = -25; // Adjust offset as needed
+        const offset = 0; // Adjust offset as needed
     
         function isElementInViewport(el) {
             const rect = el.getBoundingClientRect();
@@ -51,7 +51,7 @@
     document.addEventListener("DOMContentLoaded", function () {
 
         const videos = document.querySelectorAll("video");
-        
+
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             const video = entry.target;
@@ -61,12 +61,11 @@
               video.pause();
             }
           });
-        }, { threshold: 0.5 }); // 50% visible
+        }, { threshold: 0.5 });
       
         videos.forEach((video) => {
-          // Disable autoplay until it’s visible
           video.autoplay = false;
-          video.pause(); // Make sure it's not already playing
+          video.pause();
           observer.observe(video);
         });
     });
