@@ -2,12 +2,24 @@
     'use strict';
     console.log("reading js");
 
+    // const sections = document.querySelectorAll('.spaceBtwn');
+    // const observer = new IntersectionObserver(entries => {
+    //     entries.forEach(entry => {
+    //       entry.target.classList.toggle('active', entry.isIntersecting);
+    //     });
+    // }, { threshold: 0.5 });
+    // sections.forEach(section => observer.observe(section));
+
     const sections = document.querySelectorAll('.spaceBtwn');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           entry.target.classList.toggle('active', entry.isIntersecting);
         });
-    }, { threshold: 0.5 });
+      }, {
+        // Shrinks the top and bottom boundaries by 300px
+        rootMargin: '-300px 0px -300px 0px',
+        threshold: 0 // Trigger as soon as any part is inside the adjusted view
+    });
     sections.forEach(section => observer.observe(section));
 
     document.addEventListener("DOMContentLoaded", function() {
