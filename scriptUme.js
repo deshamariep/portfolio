@@ -10,7 +10,7 @@
         });
       }, {
         root: null,
-        rootMargin: '-30% 0px -30% 0px', // Top -25%, Bottom -25% leaves center 50%
+        rootMargin: '-40% 0px -40% 0px', // Top -25%, Bottom -25% leaves center 50%
         threshold: 0 // Trigger as soon as any pixel enters this zone
     });
     sections.forEach(section => observer.observe(section));
