@@ -331,6 +331,9 @@
         top: 5px;
         left: 115px
     }
+    .csTitle h3, .csTitle p{
+        margin-bottom: 1px;
+    }
     .caseStudy .right{
         flex: 1;
         justify-content: center;
