@@ -189,15 +189,6 @@
         text-align: center;
         text-decoration: none;
     }
-    #home:hover{
-        text-decoration: underline;
-    }
-    #aboutMe:hover{
-        text-decoration: underline;
-    }
-    #studio:hover{
-        text-decoration: underline;
-    }
     #titleChange {
         transition: opacity 0.3s ease; 
     }
@@ -232,7 +223,16 @@
         height: 1px; /* Thickness of the border */
         background: linear-gradient(to right, rgba(82, 209, 252, 0.9) 20%, rgba(207, 240, 255, 1) 41%, rgba(229, 156, 252, 0.9) 66%);
     }
-    #home:hover a {
+    #home:hover{
+        text-decoration: underline;
+    }
+    #aboutMe:hover{
+        text-decoration: underline;
+    }
+    #studio:hover{
+        text-decoration: underline;
+    }
+    /* #home:hover a {
         transform: scale(1.15); 
     }
     #aboutMe:hover{
@@ -240,14 +240,14 @@
     }
     #studio:hover{
         transform: scale(1.15);
-    }
+    } */
     #intro{
         text-align: center;
         margin-top: 130px;
         margin-bottom: 250px;
         justify-items: center;
     }
-    #intro h2{
+    #intro h1{
         background-image: radial-gradient(circle,rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
         background-size: 300% 300%;
         background-clip: text;
@@ -267,12 +267,6 @@
             background-image: none;
             color: rgba(94, 95, 94,1); /* Final solid color */
         }
-    }
-    #intro h2{
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        margin-top: 0px;
     }
     #intro p{
         width: 700px;
@@ -354,6 +348,7 @@
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 30px;
         text-align: center;
+        align-content: center;
         justify-content: center;
         margin-top: 8px;
         padding-bottom: 10px;
@@ -366,15 +361,6 @@
     }
     #ume{
         border: 1px solid rgb(243, 159, 173);
-    }
-    .boldText{
-        padding-top: 25px;
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-    .csTitle .boldText{
-        padding-top: 0px;
     }
     footer {
         width: 100%;

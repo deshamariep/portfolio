@@ -108,20 +108,21 @@
     a{
         font-family: "Nunito", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 500;
+        font-weight: 400;
+        text-decoration: none;
         font-style: normal;
         font-size: 16px;
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 140%;
     }
-   footer a{
+    footer a{
         font-family: "Nunito", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
+        text-decoration: underline;
         font-style: normal;
         font-size: 16px;
-        text-decoration: underline;
         color: rgb(0, 0, 238);
         letter-spacing: 0.03em;
         line-height: 140%;
