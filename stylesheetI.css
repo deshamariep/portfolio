@@ -32,7 +32,7 @@
         display: none; /* Hide the message on larger screens */
     }
     H1{
-        font-family: "Quicksand", sans-serif;
+        /* font-family: "Quicksand", sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
@@ -40,7 +40,12 @@
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 140%;
-        padding-bottom: 32px;
+        padding-bottom: 32px; */
+        font-family: "Cinzel Decorative", serif;
+        font-weight: 700;
+        font-size: 48px;
+        font-style: normal;
+        margin-bottom: 10px;
     }
     H2{
         font-family: "Quicksand", sans-serif;
@@ -84,7 +89,7 @@
         letter-spacing: 0.03em;
         line-height: 140%;
     }
-    ul li p, ol li p, .painPT .number{
+    ul li p, ol li p, .painPT .number, #smolP{
         font-family: "Nunito", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
@@ -242,11 +247,6 @@
         justify-items: center;
     }
     #intro h2{
-        font-family: "Cinzel Decorative", serif;
-        font-weight: 700;
-        font-size: 48px;
-        font-style: normal;
-        margin-bottom: 10px;
         background-image: radial-gradient(circle,rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
         background-size: 300% 300%;
         background-clip: text;
