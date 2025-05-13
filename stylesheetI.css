@@ -192,6 +192,15 @@
     #titleChange {
         transition: opacity 0.3s ease; 
     }
+    #home:hover{
+        text-decoration: underline;
+    }
+    #aboutMe:hover{
+        text-decoration: underline;
+    }
+    #studio:hover{
+        text-decoration: underline;
+    }
     nav ul{
         display: flex;
     }
@@ -211,40 +220,22 @@
         text-align: center; 
         display: inline-block;
     }
-    #home {
+    /* #home {
         position: relative;
-    }
-    #home::after {
+    } */
+    /* #home::after {
         content: "";
         position: absolute;
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 1px; /* Thickness of the border */
+        height: 1px;
         background: linear-gradient(to right, rgba(82, 209, 252, 0.9) 20%, rgba(207, 240, 255, 1) 41%, rgba(229, 156, 252, 0.9) 66%);
-    }
-    #home:hover{
-        text-decoration: underline;
-    }
-    #aboutMe:hover{
-        text-decoration: underline;
-    }
-    #studio:hover{
-        text-decoration: underline;
-    }
-    /* #home:hover a {
-        transform: scale(1.15); 
-    }
-    #aboutMe:hover{
-        transform: scale(1.15);
-    }
-    #studio:hover{
-        transform: scale(1.15);
     } */
     #intro{
         text-align: center;
-        margin-top: 130px;
-        margin-bottom: 250px;
+        margin-top: 64px;
+        margin-bottom: 208px;
         justify-items: center;
     }
     #intro h1{
@@ -267,6 +258,9 @@
             background-image: none;
             color: rgba(94, 95, 94,1); /* Final solid color */
         }
+    }
+    #intro h3{
+        margin-top: 10px;
     }
     #intro p{
         width: 700px;
