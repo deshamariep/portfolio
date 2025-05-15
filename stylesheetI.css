@@ -290,14 +290,17 @@
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat; */
-        box-shadow: 0px 0px 40px rgba(255, 149, 0, 0.55);
+        box-shadow: 0px 0px 40px rgba(255, 149, 0, 0.6);
+    }
+    #caseStudySpots:hover .spots {
+        border-color: orange;
     }
     #caseStudyGst:hover{
         /* background-image: url(images/gstTransBG.png);
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat; */
-        box-shadow: 0px 0px 40px rgba(0, 206, 45, 0.5);
+        box-shadow: 0px 0px 40px rgba(0, 206, 45, 0.55);
     }
     #caseStudyUme:hover{
         /* background-image: url(images/umeTransBG.png);
@@ -350,8 +353,9 @@
         margin-top: 8px;
         padding-bottom: 10px;
     }
-    #spots{
-        border: 1px solid orange;
+    .spots{
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        transition: color 0.3s ease, border-color 0.3s ease;
     }
     #gstreet{
         border: 1px solid rgb(105, 168, 95);
