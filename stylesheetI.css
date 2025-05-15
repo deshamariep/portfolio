@@ -293,7 +293,7 @@
         box-shadow: 0px 0px 40px rgba(255, 149, 0, 0.6);
     }
     #caseStudySpots:hover .spots {
-        border-color: orange;
+        border-color: rgba(255, 149, 0);
     }
     #caseStudyGst:hover{
         /* background-image: url(images/gstTransBG.png);
@@ -302,12 +302,18 @@
         background-repeat: no-repeat; */
         box-shadow: 0px 0px 40px rgba(0, 206, 45, 0.55);
     }
+    #caseStudySpots:hover .gstreet {
+        border-color: rgba(0, 206, 45);
+    }
     #caseStudyUme:hover{
         /* background-image: url(images/umeTransBG.png);
         background-size: cover;
         background-position: center; 
         background-repeat: no-repeat; */
         box-shadow: 0px 0px 40px rgba(255, 0, 119, 0.5);
+    }
+    #caseStudySpots:hover .ume {
+        border-color: rgba(255, 0, 119);
     }
     .caseStudy section{
         padding: 45px;
@@ -357,11 +363,13 @@
         border: 1px solid rgba(0, 0, 0, 0.3);
         transition: color 0.3s ease, border-color 0.3s ease;
     }
-    #gstreet{
-        border: 1px solid rgb(105, 168, 95);
+    .gstreet{
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        transition: color 0.3s ease, border-color 0.3s ease;
     }
-    #ume{
-        border: 1px solid rgb(243, 159, 173);
+    .ume{
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        transition: color 0.3s ease, border-color 0.3s ease;
     }
     footer {
         width: 100%;
