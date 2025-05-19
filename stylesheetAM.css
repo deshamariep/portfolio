@@ -160,24 +160,28 @@
     }
     header{
         display: flex;
-        height: 100px;
-        padding-top: 5px;
+        height: 150px;
+        padding-top: 30px;
     }
     header #hLogo{
         flex: 1;
     }
     header #two{
-        align-content: center;
-        flex: 2;
+        flex: 1;
+        width: 500px;
     }
-    header #one{
-        display: flex;
-        justify-content: flex-end;
-        font-family: "Staatliches", sans-serif;
+    header #two h2{
+        font-family: "Quicksand", sans-serif;
         font-weight: 400;
         font-style: normal;
-        padding-top: 12px;
-        margin-left: 0px;
+        margin-top: 30px;
+    }
+    header #one{
+        flex: 1;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-top: 4px;
     }
     header #one a{
         text-align: center;
