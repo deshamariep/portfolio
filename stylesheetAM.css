@@ -179,59 +179,37 @@
         padding-top: 12px;
         margin-left: 0px;
     }
-    a{
-        text-decoration: none;
-        color: rgb(94, 95, 94);
-    }
     header #one a{
         text-align: center;
         text-decoration: none;
     }
+    #home a:hover{
+        text-decoration: underline;
+    }
+    #aboutMe a:hover{
+        text-decoration: underline;
+    }
+    #studio a:hover{
+        text-decoration: underline;
+    }
     nav ul{
         display: flex;
-        list-style-type: none;
-        padding: 0px;
     }
     nav ul li{
-        padding-left: 20px;
-        padding-right: 20px;
+        flex: content;
+        list-style: none;
+        padding-left: 4px;
+        padding-right: 4px;
     }
     nav ul li button {
-        width: 100px;
-        height: 40px;
+        width: 150px;
+        height: 50px;
+        border-radius: 20px;
         background: none; 
         border: none; 
         outline: none;
-        
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
         text-align: center; 
-        padding: 0; 
-    }
-    nav ul li button a {
-        text-decoration: none;
-    }
-    #aboutMe{
-        position: relative;
-    }
-    #aboutMe::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px; /* Thickness of the border */
-        background: linear-gradient(to right, rgb(169, 229, 250) 20%, rgb(228, 247, 255, 1) 41%, rgb(233, 181, 247) 66%);
-    }
-    #aboutMe:hover a{
-        transform: scale(1.15); 
-    }
-    #home:hover{
-        transform: scale(1.15);
-    }
-    #studio:hover{
-        transform: scale(1.15);
+        display: inline-block;
     }
     .ctaCM{
         display: flex;
@@ -242,28 +220,6 @@
     #intro{
         margin-top: 50px;
         margin-bottom: 100px;
-    }
-    #intro h1{
-        font-family: "Cinzel Decorative", serif;
-        font-weight: 700;
-        font-size: 48px;
-        font-style: normal;
-        margin-bottom: 0px;
-        margin-top: 0px;
-        line-height: 1.4;
-    }
-    #intro h2, h2{
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    #intro p{
-        margin-bottom: 0px;
-        margin-top: 0px;
-        padding-right: 30px;
-        padding-bottom: 20px;
     }
     #intro #ctaBtn{
        background-color: rgb(94, 95, 94, 0.5);
@@ -288,13 +244,6 @@
     }
     #intro #helloMe{
         padding-left: 250px;
-    }
-    .boldText{
-        padding: 25px;
-        padding-bottom: 0px;
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
     }
     .two{
         flex: 2;
@@ -343,13 +292,6 @@
         flex: 1;
         justify-content: center;
         margin-left: 0px;
-    }
-    h3{
-        margin-top: 70px;
-    }
-    #textCase p{
-        text-align: left;
-        padding-left: 15px;
     }
     footer {
         width: 100%;

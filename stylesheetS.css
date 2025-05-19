@@ -175,57 +175,33 @@
         text-align: center;
         text-decoration: none;
     }
+    #home a:hover{
+        text-decoration: underline;
+    }
+    #aboutMe a:hover{
+        text-decoration: underline;
+    }
+    #studio a:hover{
+        text-decoration: underline;
+    }
     nav ul{
         display: flex;
-        list-style-type: none;
-        padding: 0px;
     }
     nav ul li{
-        padding-left: 20px;
-        padding-right: 20px;
+        flex: content;
+        list-style: none;
+        padding-left: 4px;
+        padding-right: 4px;
     }
     nav ul li button {
-        width: 100px;
-        height: 40px;
+        width: 150px;
+        height: 50px;
+        border-radius: 20px;
         background: none; 
         border: none; 
         outline: none;
-        
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
         text-align: center; 
-        padding: 0; 
-    }
-    nav ul li button a {
-        text-decoration: none;
-    }
-    #home:hover{
-        transform: scale(1.15);
-    }
-    #aboutMe:hover{
-        transform: scale(1.15);
-    }
-    #studio{
-        position: relative;
-    }
-    #studio::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px; /* Thickness of the border */
-        background: linear-gradient(to right, rgba(82, 209, 252, 0.9) 20%, rgba(207, 240, 255, 1) 41%, rgba(229, 156, 252, 0.9) 66%);
-    }
-    #studio:hover a {
-        transform: scale(1.15); 
-    }
-    .boldText {
-        padding-top: 25px;
-        font-family: "Staatliches", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+        display: inline-block;
     }
     #gallery{
         margin: 0 auto;
