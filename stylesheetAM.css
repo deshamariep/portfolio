@@ -290,11 +290,11 @@
         max-width: 700px;
     }
     #fillTime{
-        flex: 2;
+        flex: 3;
         padding-right: 48px;
     }
     #exp{
-        flex: 1;
+        flex: 2;
         justify-content: center;
         margin-left: 0px;
     }
