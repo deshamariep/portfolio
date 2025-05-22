@@ -291,12 +291,15 @@
     }
     #fillTime{
         flex: 2;
-        padding-right: 16px;
+        padding-right: 48px;
     }
     #exp{
         flex: 1;
         justify-content: center;
         margin-left: 0px;
+    }
+    #exp #smolP{
+        padding-bottom: 8px;
     }
     footer {
         width: 100%;
