@@ -431,6 +431,9 @@
         flex-direction: row;
         align-items: center; 
     }
+    footer #btmfoot{
+        padding-bottom: 8px;
+    }
 }
 @media screen and (min-width: 1650px){
     body{
