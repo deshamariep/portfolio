@@ -432,6 +432,14 @@
         align-items: center; 
     }
     footer #btmfoot{
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
         padding-bottom: 8px;
     }
 }
