@@ -289,12 +289,12 @@
         text-align: left;
         max-width: 700px;
     }
-    .fillTime{
+    #fillTime{
         flex: 2;
         padding-right: 16px;
     }
-    .exp{
-        flex: 2;
+    #exp{
+        flex: 1;
         justify-content: center;
         margin-left: 0px;
     }
