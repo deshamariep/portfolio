@@ -274,7 +274,7 @@
     }
     .data{
         display: flex;
-        gap: 64px;
+        gap: 8px;
     }
     .introdwp{
         display: flex;
@@ -296,7 +296,9 @@
     #exp{
         flex: 2;
         justify-content: center;
-        margin-left: 0px;
+    }
+    #exp p{
+        margin-bottom: 8px;
     }
     #exp .smolP{
         padding-bottom: 16px;

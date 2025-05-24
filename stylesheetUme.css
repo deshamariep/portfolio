@@ -416,8 +416,28 @@
         font-family: "Cinzel Decorative", serif;
         font-weight: 700;
         font-style: normal;
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 16px;
+
+        background-image: radial-gradient(circle,rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
+        background-size: 300% 300%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: footerGradientSwipe 10s ease-in-out forwards 500ms;
+    }
+    @keyframes footerGradientSwipe {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 50% 50%;
+            background-image: none;
+            color: rgba(94, 95, 94); /* Final solid color */
+        }
     }
     footer #footLink{
         display: flex;
