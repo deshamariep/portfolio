@@ -274,7 +274,7 @@
     }
     .data{
         display: flex;
-        gap: 56px;
+        gap: 64px;
     }
     .introdwp{
         display: flex;
@@ -291,11 +291,13 @@
     }
     #fillTime{
         flex: 3;
-        max-width: 600px;
     }
     #exp{
         flex: 2;
         justify-content: center;
+    }
+    #exp h3{
+        margin-top: 34px;
     }
     #exp p{
         margin-bottom: 8px;
