@@ -274,12 +274,12 @@
     }
     .data{
         display: flex;
-        gap: 16px;
+        gap: 56px;
     }
     .introdwp{
         display: flex;
         align-items: center;
-        gap: 70px;
+        gap: 32px;
     }
     .introdwp img{
         flex-shrink: 0;
@@ -291,7 +291,7 @@
     }
     #fillTime{
         flex: 3;
-        padding-right: 48px;
+        max-width: 600px;
     }
     #exp{
         flex: 2;
