@@ -419,12 +419,14 @@
         font-size: 20px;
         margin-bottom: 16px;
 
-        background-image: radial-gradient(circle,rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
+        background-image: radial-gradient(circle, rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
         background-size: 300% 300%;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        animation: footerGradientSwipe 10s ease-in-out forwards 500ms;
+
+        animation: footerGradientSwipe 10s ease-in-out forwards;
+        animation-play-state: paused; /* Paused until we tell it to play */
     }
     @keyframes footerGradientSwipe {
         0% {

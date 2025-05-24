@@ -62,15 +62,12 @@
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 footTitle.style.animationPlayState = "running";
-                observer.unobserve(footer); // Optional: remove after triggering once
               }
             });
           },
-          {
-            threshold: 0.1, // Adjust as needed
-          }
+          { threshold: 0.2 } // you can adjust this
         );
     
         observer.observe(footer);
-      });
+    });
 }());
