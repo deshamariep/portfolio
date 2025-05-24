@@ -52,4 +52,25 @@
     
         window.addEventListener("scroll", handleScroll);
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const footer = document.querySelector("footer");
+        const footTitle = document.getElementById("footTitle");
+    
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                footTitle.style.animationPlayState = "running";
+                observer.unobserve(footer); // Optional: remove after triggering once
+              }
+            });
+          },
+          {
+            threshold: 0.1, // Adjust as needed
+          }
+        );
+    
+        observer.observe(footer);
+      });
 }());
