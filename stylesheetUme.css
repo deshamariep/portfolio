@@ -84,6 +84,16 @@
         letter-spacing: 0.03em;
         line-height: 140%;
     }
+    footer p{
+        font-family: "Nunito", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        color: rgb(94, 95, 94);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    }
     ul li p, ol li p, .painPT .number{
         font-family: "Nunito", sans-serif;
         font-optical-sizing: auto;
