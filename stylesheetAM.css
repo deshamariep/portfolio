@@ -160,7 +160,7 @@
     }
     header{
         display: flex;
-        height: 150px;
+        height: 32px;
         padding-top: 30px;
     }
     header #hLogo{
