@@ -268,16 +268,18 @@
     #amIntro{
         padding-bottom: 100px;
         padding-left: 100px;
+        width: 850px;
     }
     #amIntro h2{
         text-align: center;
         margin-bottom: 20px;
     }
+    #amIntro p{
+        margin-top: 0px;
+    }
     #amIntro article {
         display: flex;
         flex-direction: column;
-        align-items: center; /* this centers all .introdwp divs */
-        gap: 32px;
     }
     .data{
         display: flex;
@@ -288,13 +290,8 @@
         align-items: center;
         gap: 8px;
     }
-    /* .introdwp img{
-        flex-shrink: 0;
-    } */
-    .introdwp div{
-        flex: 1;
-        text-align: left;
-        max-width: 700px;
+    .introdwp img{
+        padding-top: 8px;
     }
     #fillTime{
         flex: 3;
