@@ -222,8 +222,8 @@
         flex: 1;
     }
     #intro{
-        margin-top: 50px;
-        margin-bottom: 100px;
+        margin-top: 24px;
+        margin-bottom: 64px;
     }
     #intro #ctaBtn{
        background-color: rgb(94, 95, 94, 0.5);
