@@ -285,11 +285,11 @@
     .introdwp{
         display: flex;
         align-items: center;
-        gap: 32px;
+        /* gap: 32px; */
     }
-    .introdwp img{
+    /* .introdwp img{
         flex-shrink: 0;
-    }
+    } */
     .introdwp div{
         flex: 1;
         text-align: left;
