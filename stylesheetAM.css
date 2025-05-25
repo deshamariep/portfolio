@@ -198,6 +198,7 @@
     }
     nav ul{
         display: flex;
+        width: 550px;
     }
     nav ul li{
         flex: content;
