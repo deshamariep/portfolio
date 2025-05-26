@@ -428,6 +428,9 @@
     #footerData div{
         flex: content;
     }
+    #footerData img{
+        justify-content: flex-end;
+    }
     #opacity{
         opacity: 0.6;
     }
@@ -481,7 +484,7 @@
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 140%;
-        padding-bottom: 8px;
+        /* padding-bottom: 8px; */
     }
 }
 @media screen and (min-width: 1650px){
