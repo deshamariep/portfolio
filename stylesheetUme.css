@@ -422,8 +422,14 @@
         background-color: rgba(255, 255, 255, 0.5);
         color: rgb(94, 95, 94);
     }
-    footer img{
-        opacity: 0.4;
+    #footerData{
+        display: flex;
+    }
+    #footerData div{
+        flex: content;
+    }
+    #opacity{
+        opacity: 0.6;
     }
     #footTitle{
         font-family: "Cinzel Decorative", serif;
