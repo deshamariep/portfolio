@@ -428,7 +428,7 @@
     #footerData div{
         flex: content;
     }
-    #footerData p{
+    #footerDataP{
         text-align: right;
     }
     #footerLogo{
