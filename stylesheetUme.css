@@ -429,12 +429,12 @@
         flex: content;
     }
     #footerDataP{
-        text-align: right;
+        margin-left: 72px;
+        font-weight: 300;
     }
     #footerLogo{
         margin-right: 16px;
     }
-
     #opacity{
         opacity: 0.6;
     }
