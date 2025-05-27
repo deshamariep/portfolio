@@ -426,10 +426,14 @@
         display: flex;
     }
     #footerData div{
-        flex: content;
+        display: flex;
+        align-items: center; /* vertically aligns image and text */
+        gap: 12px; /* optional space between logo and text */
     }
     #footerData img{
-        justify-content: flex-end;
+        width: 50px;
+        height: 50px;
+        display: block;
     }
     #opacity{
         opacity: 0.6;
