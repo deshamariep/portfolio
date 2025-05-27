@@ -428,13 +428,9 @@
     #footerData div{
         flex: content;
     }
-    #footerData div:first-child {
-        display: flex;
-        justify-content: flex-end;
-        flex: 1; /* optional, helps push it to the right within its div */
-    }
-    #footerData img {
-        display: block;
+    #footerLogo{
+        align-items: flex-end;
+        justify-content: right;
     }
     
     #opacity{
