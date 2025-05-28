@@ -423,6 +423,8 @@
     }
     #footerData{
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
     /* #footerData div{
         flex: content;
@@ -437,13 +439,13 @@
     .fTwo{
         flex: 1;
     }
-    #footerDataP{
+    /* #footerDataP{
         margin-left: 72px;
         font-weight: 300;
     }
     #footerLogo{
         margin-right: 16px;
-    }
+    } */
     #opacity{
         opacity: 0.6;
     }
