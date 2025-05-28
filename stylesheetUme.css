@@ -410,13 +410,12 @@
     }
     footer{
         width: 100%;
-        margin-top: 64px;
+        margin: 64px auto 0 auto;
         height: 250px;
         text-align: center;
         justify-content: center;
         align-items: center;
         padding: 20px;
-        padding-left: 0px;
         display: block;
         background-color: rgba(255, 255, 255, 0.5);
         color: rgb(94, 95, 94);
