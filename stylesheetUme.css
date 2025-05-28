@@ -411,14 +411,15 @@
     footer{
         width: 100%;
         margin: 64px auto 0 auto;
-        height: 250px;
+        height: 256px;
         text-align: center;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 16px;
         display: block;
         background-color: rgba(255, 255, 255, 0.5);
         color: rgb(94, 95, 94);
+        box-sizing: border-box;
     }
     #footerData{
         display: flex;
