@@ -425,8 +425,14 @@
     #footerData{
         display: flex;
     }
-    #footerData div{
+    /* #footerData div{
         flex: content;
+    } */
+    #fOne{
+        flex: 2;
+    }
+    .fTwo{
+        flex: 1;
     }
     #footerDataP{
         margin-left: 72px;
