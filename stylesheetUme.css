@@ -453,7 +453,7 @@
         width: 100%;
         height: 1px;
         opacity: 0.4;
-        margin: 40px 0px 16px;
+        margin: 40px 0px 8px;
     }
     #footTitle{
         font-family: "Cinzel Decorative", serif;
@@ -496,7 +496,7 @@
         align-items: center; 
     }
     .footA{
-        line-height: 160%;
+        line-height: 140%;
         margin: 0px auto;
     }
     footer #btmfoot {
@@ -509,16 +509,18 @@
         line-height: 100%;
       
         background-image: radial-gradient(
-          circle,
-          rgba(94, 95, 94) 20%,
-          rgba(82, 209, 252) 41%,
-          rgba(207, 240, 255) 66%,
-          rgba(229, 156, 252) 88%
+        circle,
+        rgba(94, 95, 94, 0.7) 10%,
+        rgba(82, 209, 252, 0.7) 16%,
+        rgba(207, 240, 255, 1) 20%,
+        rgba(229, 156, 252, 0.9) 40%,
+        rgba(229, 156, 252, 1) 100%
         );
+        background-size: 200% 200%;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-      }
+    }
 }
 @media screen and (min-width: 1650px){
     body{
