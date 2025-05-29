@@ -416,7 +416,7 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        padding: 8px 112px 16px;
+        padding: 8px 112px 0px 112px;
         display: block;
         background-color: rgba(255, 255, 255, 0.5);
         color: rgb(94, 95, 94);
@@ -507,15 +507,17 @@
         font-size: 12px;
         letter-spacing: 0.03em;
         line-height: 100%;
+        margin: 24px auto 0px auto;
       
+        display: inline-block; /* Crucial */
         background-image: radial-gradient(
-        circle,
-        rgba(94, 95, 94, 0.7) 50%,
-        rgba(82, 209, 252, 0.7) 55%,
-        rgba(207, 240, 255, 1) 60%,
-        rgba(229, 156, 252, 0.9) 65%
+            circle,
+            rgba(94, 95, 94, 0.7) 10%,
+            rgba(82, 209, 252, 0.7) 30%,
+            rgba(207, 240, 255, 1) 60%,
+            rgba(229, 156, 252, 1) 100%
         );
-        background-size: 200% 200%;
+        background-size: 300% 300%;
         background-position: center;
         background-clip: text;
         -webkit-background-clip: text;
