@@ -440,6 +440,9 @@
     .fTwo{
         flex: 1;
     }
+    .fTwo p{
+        margin-bottom: 8px;
+    }
     #footerDataP{
         font-weight: 300;
     }
@@ -450,7 +453,7 @@
         width: 100%;
         height: 1px;
         opacity: 0.6;
-        margin-top: 16px;
+        margin-top: 40px;
     }
     #footTitle{
         font-family: "Cinzel Decorative", serif;
@@ -493,8 +496,8 @@
         align-items: center; 
     }
     .footA{
-        line-height: 100%;
-        /* margin: 0px auto; */
+        line-height: 160%;
+        margin: 0px auto;
     }
     footer #btmfoot{
         font-family: "Nunito", sans-serif;
