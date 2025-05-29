@@ -137,17 +137,6 @@
         letter-spacing: 0.03em;
         line-height: 140%;
     }
-    footer a:visited{
-        font-family: "Nunito", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        text-decoration: underline;
-        font-style: normal;
-        font-size: 16px;
-        color: rgb(91, 60, 125);
-        letter-spacing: 0.03em;
-        line-height: 140%;
-    }
     body{
         margin: 0;
         padding: 0;
