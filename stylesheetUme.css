@@ -457,9 +457,9 @@
     #footerDataP{
         font-weight: 300;
     }
-    #footerLogo{
+    /* #footerLogo{
         margin-right: 16px;
-    }
+    } */
     #opacity{
         width: 100%;
         height: 1px;
