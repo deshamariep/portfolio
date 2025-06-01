@@ -123,11 +123,11 @@
     footer a{
         font-family: "Nunito", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 400;
+        font-weight: 200;
         text-decoration: underline;
         font-style: normal;
         font-size: 16px;
-        color: rgb(0, 0, 238);
+        color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 140%;
     }
