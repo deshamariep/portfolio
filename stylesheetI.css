@@ -151,10 +151,10 @@
         height: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        /* background-image: url(images/backgwhite.gif);
+        background-image: url(images/bgDynamic.mp4);
         background-size: cover;
         background-position: center; 
-        background-repeat: no-repeat; */
+        background-repeat: no-repeat;
         font-family: "Assistant", sans-serif;
         font-weight: 400;
         font-style: normal;
