@@ -548,6 +548,7 @@
     .footA{
         line-height: 150%;
         margin: 0px;
+        padding: 0px
     }
     footer #btmfoot {
         font-family: "Nunito", sans-serif;
