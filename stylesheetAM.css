@@ -234,8 +234,7 @@
         flex: 1;
     }
     #intro{
-        margin-top: 8px;
-        margin-bottom: 64px;
+        margin-bottom: 144px;
     }
     #intro #ctaBtn{
        background-color: rgb(94, 95, 94, 0.5);
@@ -424,32 +423,30 @@
 }
 @media screen and (min-width: 1240px) {
     #intro {
-        margin-top: 110px;
-        margin-bottom: 250px;
+        margin-bottom: 144px;
     }
 }
 @media screen and (min-width: 1440px) {
     #intro {
-        margin-top: 155px;
-        margin-bottom: 300px;
+        margin-top: 40px;
+        margin-bottom: 296px;
     }
 }
 @media screen and (min-width: 1600px) {
     #intro {
-        margin-top: 185px;
-        margin-bottom: 400px;
+        margin-top: 72px;
+        margin-bottom: 358px;
     }
 }
 @media screen and (min-width: 1700px) {
     #intro {
-        margin-top: 205px;
-        margin-bottom: 450px;
+        margin-top: 88px;
+        margin-bottom: 406px;
     }
-}
-    
+}    
 @media screen and (min-width: 1900px) {
     #intro {
-        margin-top: 240px;
-        margin-bottom: 520px;
+        margin-top: 128px;
+        margin-bottom: 478px;
     }
 }
