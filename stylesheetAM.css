@@ -218,7 +218,9 @@
         text-align: center; 
         display: inline-block;
     }
-    nav ul li a:hover {
+    #home:hover,
+    #aboutMe:hover,
+    #studio:hover {
         text-decoration: underline;
     }
     .ctaCM{
