@@ -204,11 +204,6 @@
     #titleChange {
         transition: opacity 0.3s ease; 
     }
-    #home:hover,
-    #aboutMe:hover,
-    #studio:hover {
-        text-decoration: underline;
-    }
     nav ul{
         display: flex;
     }
@@ -227,6 +222,11 @@
         outline: none;
         text-align: center; 
         display: inline-block;
+    }
+    #home:hover,
+    #aboutMe:hover,
+    #studio:hover {
+        text-decoration: underline;
     }
     /* #home {
         position: relative;

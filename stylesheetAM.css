@@ -199,11 +199,6 @@
         text-align: center;
         text-decoration: none;
     }
-    #home:hover,
-    #aboutMe:hover,
-    #studio:hover {
-        text-decoration: underline;
-    }
     nav ul{
         display: flex;
     }
@@ -222,6 +217,9 @@
         outline: none;
         text-align: center; 
         display: inline-block;
+    }
+    nav ul li a:hover {
+        text-decoration: underline;
     }
     .ctaCM{
         display: flex;

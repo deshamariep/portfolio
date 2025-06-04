@@ -192,11 +192,6 @@
         text-align: center;
         text-decoration: none;
     }
-    #home:hover,
-    #aboutMe:hover,
-    #studio:hover {
-        text-decoration: underline;
-    }
     nav ul{
         display: flex;
     }
@@ -215,6 +210,11 @@
         outline: none;
         text-align: center; 
         display: inline-block;
+    }
+    #home:hover,
+    #aboutMe:hover,
+    #studio:hover {
+        text-decoration: underline;
     }
     #gallery{
         margin: 0 auto;
