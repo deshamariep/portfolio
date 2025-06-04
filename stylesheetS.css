@@ -192,13 +192,9 @@
         text-align: center;
         text-decoration: none;
     }
-    #home a:hover{
-        text-decoration: underline;
-    }
-    #aboutMe a:hover{
-        text-decoration: underline;
-    }
-    #studio a:hover{
+    #home:hover,
+    #aboutMe:hover,
+    #studio:hover {
         text-decoration: underline;
     }
     nav ul{

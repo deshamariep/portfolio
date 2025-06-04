@@ -204,13 +204,9 @@
     #titleChange {
         transition: opacity 0.3s ease; 
     }
-    #home a:hover{
-        text-decoration: underline;
-    }
-    #aboutMe a:hover{
-        text-decoration: underline;
-    }
-    #studio a:hover{
+    #home:hover,
+    #aboutMe:hover,
+    #studio:hover {
         text-decoration: underline;
     }
     nav ul{
