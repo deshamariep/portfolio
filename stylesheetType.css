@@ -20,18 +20,6 @@ H2{
     letter-spacing: 0.03em;
     line-height: 140%;
 }
-/* footer H2{
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 32px;
-    color: rgb(94, 95, 94);
-    letter-spacing: 0.03em;
-    line-height: 140%;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-} */
 H3{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
@@ -95,24 +83,9 @@ footer a:hover{
     letter-spacing: 0.03em;
     line-height: 140%;
 }
-/* header #two{
-        flex: 1;
-        width: 500px;
-}
-header #two h2{
-    font-family: "Quicksand", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 30px;
-} */
-/* header #one, #one{
-    font-family: "Quicksand", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
 header #one a, #one a{
     text-decoration: none;
-} */
+}
 #home:hover,
 #aboutMe:hover,
 #studio:hover {
