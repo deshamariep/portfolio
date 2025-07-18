@@ -1,0 +1,144 @@
+H1{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 64px;
+    color: rgb(94, 95, 94);
+    letter-spacing: 0.03em;
+    line-height: 140%;
+    /* padding-bottom: 32px;
+    margin-bottom: 10px; */
+}
+H2{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: rgb(94, 95, 94);
+    letter-spacing: 0.03em;
+    line-height: 140%;
+}
+/* footer H2{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: rgb(94, 95, 94);
+    letter-spacing: 0.03em;
+    line-height: 140%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+} */
+H3{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    color: rgb(94, 95, 94);
+    letter-spacing: 0.03em;
+    line-height: 140%;
+}
+p{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(94, 95, 94);
+    letter-spacing: 0.03em;
+    line-height: 140%;
+}
+ul li p, ol li p, .painPT .number, #smolP, footer p{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: rgb(94, 95, 94);
+    letter-spacing: 0.03em;
+    line-height: 140%;
+}
+a{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 16px;
+    color: rgb(94, 95, 94);
+    letter-spacing: 0.03em;
+    line-height: 140%;
+}
+footer a{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    text-decoration: underline;
+    font-style: normal;
+    font-size: 16px;
+    color: rgb(94, 95, 94);
+    letter-spacing: 0.03em;
+    line-height: 140%;
+}
+footer a:hover{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    text-decoration: underline;
+    font-style: normal;
+    font-size: 16px;
+    color: rgb(0, 0, 238);
+    letter-spacing: 0.03em;
+    line-height: 140%;
+}
+/* header #two{
+        flex: 1;
+        width: 500px;
+}
+header #two h2{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 30px;
+} */
+/* header #one, #one{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+header #one a, #one a{
+    text-decoration: none;
+} */
+#home:hover,
+#aboutMe:hover,
+#studio:hover {
+    text-decoration: underline;
+}
+#footerDataP{
+    font-weight: 300;
+}
+/* #footTitle{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+} */
+footer #footLink a{
+    text-decoration: none;
+}
+.footA{
+    line-height: 150%;
+}
+footer #btmfoot{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.03em;
+    line-height: 100%;
+}
