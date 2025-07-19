@@ -96,7 +96,7 @@
     }
     #intro{
         text-align: left;
-        margin-bottom: 200px;
+        margin-bottom: 256px;
         justify-items: left;
     }
     #intro h1{
@@ -127,7 +127,7 @@
         width: 700px;
     }
     #work{
-        margin: 80px auto 80px auto;
+        margin: 96px auto 96px auto;
     }
     article{
         margin-bottom: 85px;
