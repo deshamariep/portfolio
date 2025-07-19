@@ -138,31 +138,21 @@
         margin-bottom: 85px;
         color: rgb(94, 95, 94);
     }
-    #caseStudySpots:hover{
-        /* background-image: url(images/spotsTransBG.png);
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat; */
-        box-shadow: 0px 0px 40px rgba(255, 149, 0, 0.6);
+    #caseStudy{
+        border: solid 1px #D9D9D9 ;
+        border-radius: 16px;
     }
-    #caseStudyGst:hover{
-        /* background-image: url(images/gstTransBG.png);
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat; */
-        box-shadow: 0px 0px 40px rgba(0, 206, 45, 0.55);
-    }
-    #caseStudyUme:hover{
-        /* background-image: url(images/umeTransBG.png);
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat; */
-        box-shadow: 0px 0px 40px rgba(255, 0, 119, 0.5);
+    #caseStudy:hover{
+        border: solid 1px #5E5F5E ;
+        border-radius: 16px;
+        background-color: #5E5F5E;
+        color: white;
     }
     .csTop{
         display: flex;
         flex-direction: row;
         position: relative;
+        padding: 24px;
     }
     .logo{
         flex: 1;
@@ -176,18 +166,6 @@
     }
     .csTitle h3, .csTitle p{
         margin-bottom: 1px;
-    }
-    .spots{
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        transition: color 0.3s ease, border-color 0.3s ease;
-    }
-    .gstreet{
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        transition: color 0.3s ease, border-color 0.3s ease;
-    }
-    .ume{
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        transition: color 0.3s ease, border-color 0.3s ease;
     }
     footer{
         width: 100%;
