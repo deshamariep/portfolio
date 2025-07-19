@@ -129,6 +129,11 @@
     #work{
         margin: 96px auto 96px auto;
     }
+    .exp-heading {
+        display: flex;
+        align-items: baseline;
+        gap: 8px; /* space between h2 and h3 */
+    }
     article{
         margin-bottom: 85px;
         color: rgb(94, 95, 94);
