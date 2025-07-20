@@ -100,6 +100,7 @@
         justify-items: left;
     }
     #intro h1{
+        margin: 32px 0px;
         background-image: radial-gradient(circle,rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
         background-size: 300% 300%;
         background-clip: text;
@@ -139,11 +140,11 @@
         margin-bottom: 16px;
         color: rgb(94, 95, 94);
     }
-    #caseStudy{
+    .caseStudy{
         border: solid 1px #D9D9D9 ;
         border-radius: 16px;
     }
-    #caseStudy:hover{
+    .caseStudy:hover{
         border: solid 1px #5E5F5E ;
         border-radius: 16px;
         background-color: #5E5F5E;
@@ -160,10 +161,13 @@
     .csTitle{
         flex: 9;
     }
+    #cs{
+        margin: 64px 0px;
+    }
     footer{
         width: 100%;
         margin: 0px 24px;
-        height: 250px;
+        height: 208px;
         text-align: center;
         justify-content: center;
         align-items: center;
