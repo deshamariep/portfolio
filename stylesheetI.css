@@ -135,7 +135,8 @@
         gap: 8px; /* space between h2 and h3 */
     }
     article{
-        margin-bottom: 85px;
+        padding: 20px;
+        margin-bottom: 16px;
         color: rgb(94, 95, 94);
     }
     #caseStudy{
@@ -151,21 +152,13 @@
     .csTop{
         display: flex;
         flex-direction: row;
-        position: relative;
-        padding: 24px;
     }
     .logo{
         flex: 1;
-        padding-top: 10px;
+        padding-top: 16px;
     }
     .csTitle{
-        flex: 3;
-        position: absolute;
-        top: 5px;
-        left: 115px
-    }
-    .csTitle h3, .csTitle p{
-        margin-bottom: 1px;
+        flex: 9;
     }
     footer{
         width: 100%;
