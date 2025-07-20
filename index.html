@@ -1,152 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desha Poindexter</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link href="stylesheetType.css" rel="stylesheet">
-    <link href="stylesheetI.css" rel="stylesheet">
-    <script src="scriptI.js" defer></script>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>Desha Poindexter</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+  <link href="stylesheetType.css" rel="stylesheet">
+  <link href="stylesheetI.css" rel="stylesheet">
+  <script src="scriptI.js" defer></script>
 </head>
 <body>
-    <div class="mobileIncomplete">
-        <p>This mobile site is under construction. Please view on a desktop for the full experience.</p>
-    </div>
-    <main>
-        <header>
-            <section id="hLogo">
-                <img src="images/initiallogodark.svg" alt="My initial logo" width="100px" height="100px">
+  <div class="mobileIncomplete">
+    <p>This mobile site is under construction. Please view on a desktop for the full experience.</p>
+  </div>
+
+  <main>
+    <header>
+      <section id="hLogo">
+        <img src="images/initiallogodark.svg" alt="My initial logo" width="100" height="100">
+      </section>
+      <section id="one">
+        <nav>
+          <ul>
+            <li><a id="home" href="index.html">Work</a></li>
+            <li><a id="aboutMe" href="aboutMe.html">About Me</a></li>
+            <li><a id="studio" href="studio.html">Studio</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <!-- Responsive hero image -->
+      <img src="images/backgroundImgWork.svg" alt="" class="hero-img">
+
+      <!-- Overlay content -->
+      <div class="hero-content">
+        <h3>Product Designer | Visual & Interaction Specialist</h3>
+        <h1 class="hero-heading-anim">Heyo, I’m Desha Poindexter</h1>
+        <p>Currently a UX Design Apprentice at BRIDGEGOOD, thriving at the intersection of creativity, empathy, and impact.</p>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT (formerly #query intro removed) -->
+    <section id="query">
+      <section id="work">
+        <div class="exp-heading">
+          <h2>Experience</h2>
+          <h3>| 1 Year</h3>
+        </div>
+
+        <a href="#">
+          <article class="caseStudy">
+            <section>
+              <div class="csTop">
+                <div class="logo">
+                  <img src="images/bridgegood_Logo.svg" alt="Bridgegood logo" height="104" width="104">
+                </div>
+                <div class="csTitle">
+                  <h3>BRIDGEGOOD</h3>
+                  <p>Design For Social Good</p>
+                </div>
+              </div>
             </section>
-            <section id="one">
-                <nav>
-                    <ul>
-                        <li><a id="home" href="index.html">Work</a></li>
-                        <li><a id="aboutMe" href="aboutMe.html">About Me</a></li>
-                        <li><a id="studio" href="studio.html">Studio</a></li>
-                    </ul>
-                </nav>
-            </section> 
-        </header>
-        <section id="query">
-            <div id="intro">
-                <h3>Product Designer | Visual & Interaction Specialist</h3>
-                <h1>Heyo, I’m Desha Poindexter </h1>
-                <p>Currently a UX Design Apprentice at BRIDGEGOOD, thriving at the intersection of creativity, empathy, and impact.</p>
-            </div>
-            <section id="work">
-                <div class="exp-heading">
-                    <h2>Experience</h2>
-                    <h3>| 1 Year</h3>
+          </article>
+        </a>
+
+        <a href="#">
+          <article class="caseStudy">
+            <section>
+              <div class="csTop">
+                <div class="logo">
+                  <img src="images/tapSeries_Logo.svg" alt="Tap Series logo" height="104" width="104">
                 </div>
-                <a href="#"><article class="caseStudy">
-                    <section>
-                        <div class="csTop">
-                            <div class="logo">
-                                <img src="images/bridgegood_Logo.svg" alt="Bridgegood logo" height="104px" width="104px">
-                            </div>
-                            <div class="csTitle">
-                                <h3>BRIDGEGOOD</h3>
-                                <p>Design For Social Good</p>
-                            </div>
-                        </div>
-                    </section>
-                </article></a>
-                <a href="#"><article class="caseStudy">
-                    <section>
-                        <div class="csTop">
-                            <div class="logo">
-                                <img src="images/tapSeries_Logo.svg" alt="Tap Series logo" height="104px" width="104px">
-                            </div>
-                            <div class="csTitle">
-                                <h3>TAP Series</h3>
-                                <p>Optimizing Usability & Production Systems</p>
-                            </div>
-                        </div>
-                    </section>
-                </article></a>
-                <div id="cs">
-                    <h2>Case Studies</h2>
-                    <a href="spots.html"><article class="caseStudy">
-                        <section>
-                            <div class="csTop">
-                                <div class="logo">
-                                    <img src="images/spotsLarge.svg" alt="spots logo" height="102px" width="104px">
-                                </div>
-                                <div class="csTitle">
-                                    <h3>Spots - Case Study</h3>
-                                    <p>Streamlining the Student Housing Hunt: A UX Approach</p>
-                                </div>
-                            </div>
-                        </section>
-                    </article></a>
-                    <a href="gStreet.html"><article class="caseStudy">
-                        <section>
-                            <div class="csTop">
-                                <div class="logo">
-                                    <img src="images/gstLarge.svg" alt="gstreet logo" height="104px" width="104px">
-                                </div>
-                                <div class="csTitle">
-                                    <h3>G Street</h3>
-                                    <p>Human-Centered Guidance</p>
-                                </div>
-                            </div>
-                        </section>
-                    </article></a>
-                    <a href="ume.html"><article class="caseStudy">
-                        <section>
-                            <div class="csTop">
-                                <div class="logo">
-                                    <img src="images/umeLarge.svg" alt="ume logo" height="104px" width="104px">
-                                </div>
-                                <div class="csTitle">
-                                    <h3>UME Tea</h3>
-                                    <p>Understanding Market Spaces and Developing Tactics</p>
-                                </div>
-                            </div>
-                        </section>
-                    </article></a>
+                <div class="csTitle">
+                  <h3>TAP Series</h3>
+                  <p>Optimizing Usability & Production Systems</p>
                 </div>
+              </div>
             </section>
-        </section>
-    </main>
-    <footer>
-        <section id="footLink">
-            <div id="fOne">
-                <div id="footerData">
-                    <div>
-                        <img id="footerLogo" src="images/initiallogodark.svg" alt="my logo" width="50px" height="50px">
-                    </div>
-                    <div>
-                        <h3 id="footTitle">DeshaMarieP</h3>
-                    </div>
+          </article>
+        </a>
+
+        <div id="cs">
+          <h2>Case Studies</h2>
+
+          <a href="spots.html">
+            <article class="caseStudy">
+              <section>
+                <div class="csTop">
+                  <div class="logo">
+                    <img src="images/spotsLarge.svg" alt="Spots logo" height="102" width="104">
+                  </div>
+                  <div class="csTitle">
+                    <h3>Spots - Case Study</h3>
+                    <p>Streamlining the Student Housing Hunt: A UX Approach</p>
+                  </div>
                 </div>
-                <p id="footerDataP">Thanks for stopping by!</p>
-            </div>
-            <div class="fTwo">
-                <p class="fTwoP">Let's stay in touch!</p>
-                <p class="footA"><a href="mailto:&#100;&#101;&#115;&#104;&#097;&#112;&#111;&#105;&#110;&#100;&#101;&#120;&#116;&#101;&#114;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Email</a></p>
-                <p class="footA"><a href="https://www.linkedin.com/in/desha-poindexter-b15b6a239">LinkedIn</a></p>
-                <p class="footA"><a href="images/resume.pdf" target="_blank">Resume</a></p>
-            </div>
-            <div class="fTwo">
-                <p class="fTwoP">Navigation</p>
-                <p class="footA"><a href="index.html">Work</a></p>
-                <p class="footA"><a href="aboutMe.html">About Me</a></p>
-                <p class="footA"><a href="studio.html">Studio</a></p>
-            </div>
-            <div class="fTwo">
-                <p class="fTwoP">More Front-End Projects...</p>
-                <p class="footA"><a href="https://deshamariep.github.io/DES157A-wi24/journal/index.html">Learning Journal</a></p>
-                <p class="footA"><a href="https://deshamariep.github.io/DES157A-wi24/studio%201/index.html">Mad Libs 2.0</a></p>
-                <p class="footA"><a href="https://deshamariep.github.io/DES157A-wi24/studio2/index.html">My Garden</a></p>
-            </div>
-        </section>
-        <img id="opacity" src="images/footerLine.svg" alt="divider" width="1100px" height="1px">
-        <p id="btmfoot">2025 • Desha Poindexter • Made with HTML, CSS, and JavaScript</p>
-    </footer>
+              </section>
+            </article>
+          </a>
+
+          <a href="gStreet.html">
+            <article class="caseStudy">
+              <section>
+                <div class="csTop">
+                  <div class="logo">
+                    <img src="images/gstLarge.svg" alt="G Street logo" height="104" width="104">
+                  </div>
+                  <div class="csTitle">
+                    <h3>G Street</h3>
+                    <p>Human-Centered Guidance</p>
+                  </div>
+                </div>
+              </section>
+            </article>
+          </a>
+
+          <a href="ume.html">
+            <article class="caseStudy">
+              <section>
+                <div class="csTop">
+                  <div class="logo">
+                    <img src="images/umeLarge.svg" alt="UME Tea logo" height="104" width="104">
+                  </div>
+                  <div class="csTitle">
+                    <h3>UME Tea</h3>
+                    <p>Understanding Market Spaces and Developing Tactics</p>
+                  </div>
+                </div>
+              </section>
+            </article>
+          </a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <section id="footLink">
+      <div id="fOne">
+        <div id="footerData">
+          <div>
+            <img id="footerLogo" src="images/initiallogodark.svg" alt="my logo" width="50" height="50">
+          </div>
+          <div>
+            <h3 id="footTitle">DeshaMarieP</h3>
+          </div>
+        </div>
+        <p id="footerDataP">Thanks for stopping by!</p>
+      </div>
+
+      <div class="fTwo">
+        <p class="fTwoP">Let's stay in touch!</p>
+        <p class="footA"><a href="mailto:&#100;&#101;&#115;&#104;&#097;&#112;&#111;&#105;&#110;&#100;&#101;&#120;&#116;&#101;&#114;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Email</a></p>
+        <p class="footA"><a href="https://www.linkedin.com/in/desha-poindexter-b15b6a239">LinkedIn</a></p>
+        <p class="footA"><a href="images/resume.pdf" target="_blank">Resume</a></p>
+      </div>
+
+      <div class="fTwo">
+        <p class="fTwoP">Navigation</p>
+        <p class="footA"><a href="index.html">Work</a></p>
+        <p class="footA"><a href="aboutMe.html">About Me</a></p>
+        <p class="footA"><a href="studio.html">Studio</a></p>
+      </div>
+
+      <div class="fTwo">
+        <p class="fTwoP">More Front-End Projects...</p>
+        <p class="footA"><a href="https://deshamariep.github.io/DES157A-wi24/journal/index.html">Learning Journal</a></p>
+        <p class="footA"><a href="https://deshamariep.github.io/DES157A-wi24/studio%201/index.html">Mad Libs 2.0</a></p>
+        <p class="footA"><a href="https://deshamariep.github.io/DES157A-wi24/studio2/index.html">My Garden</a></p>
+      </div>
+    </section>
+
+    <img id="opacity" src="images/footerLine.svg" alt="divider" width="1100" height="1">
+    <p id="btmfoot">2025 • Desha Poindexter • Made with HTML, CSS, and JavaScript</p>
+  </footer>
 </body>
 </html>

@@ -21,14 +21,9 @@
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
-    tablet
     /* .mobile-incomplete {
         display: none;
     } */
-    body {
-        background-size: contain;
-        background-position: top;
-    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -40,11 +35,63 @@
         padding: 0;
         min-height: 100vh;
         width: 100%;
-        background-image: url(images/backgroundImgWork.svg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         background-color: white; 
+    }
+    .hero {
+        position: relative;
+        width: 100%;
+        max-width: 1440px;        /* keeps original image width at largest */
+        margin: 0 auto;
+        margin-bottom: 160px;
+        overflow: hidden;
+        text-align: center;
+    }
+      
+    .hero-img {
+        width: 100%;
+        height: auto;             /* preserves 1440x800 proportion */
+        display: block;
+    }
+      
+      /* Overlay text */
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: min(90%, 700px);
+        color: white;
+        z-index: 2;
+        padding: 0 16px;
+        text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+      
+    .hero-content h3 {
+        margin: 0;
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+      
+    .hero-content h1 {
+        margin: 16px 0;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1.2;
+    }
+      
+    .hero-content p {
+        margin: 0;
+        font-size: 1.125rem;
+        line-height: 1.4;
+    }
+      
+      /* Animated gradient reuse (optional) */
+    .hero-heading-anim {
+        background-image: radial-gradient(circle,rgba(94,95,94,0.7) 20%, rgba(82,209,252,0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
+        background-size: 300% 300%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: gradientSwipe 10s ease-in-out forwards 500ms;
     }
     main{
         margin: 0 24px;
@@ -94,39 +141,6 @@
         outline: none;
         text-align: center; 
         display: inline-block;
-    }
-    #intro{
-        text-align: left;
-        margin-bottom: 328px;
-        justify-items: left;
-    }
-    #intro h1{
-        margin: 32px 0px;
-        background-image: radial-gradient(circle,rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
-        background-size: 300% 300%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        animation: gradientSwipe 10s ease-in-out forwards 500ms;
-    }
-    @keyframes gradientSwipe {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 50% 50%;
-            background-image: none;
-            color: rgba(94, 95, 94,1); /* Final solid color */
-        }
-    }
-    #intro h3{
-        margin-top: 10px;
-    }
-    #intro p{
-        width: 700px;
     }
     #work{
         margin: 96px auto 96px auto;
@@ -220,19 +234,6 @@
         animation: footerGradientSwipe 10s ease-in-out forwards;
         animation-play-state: paused; /* Paused until we tell it to play */
     }
-    @keyframes footerGradientSwipe {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 50% 50%;
-            background-image: none;
-            color: rgba(94, 95, 94); /* Final solid color */
-        }
-    }
     footer #footLink{
         display: flex;
         justify-content: space-around;
@@ -267,18 +268,34 @@
     }
 }
 @media screen and (min-width: 1650px){
-    #intro{
-        text-align: center;
-        margin-top: 200px;
-        margin-bottom: 360px;
-        justify-items: center;
-    }
+
 }
 @media screen and (min-width: 1850px){
-    #intro{
-        text-align: center;
-        margin-top: 230px;
-        margin-bottom: 330px;
-        justify-items: center;
+    
+}
+@keyframes gradientSwipe {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 50% 50%;
+        background-image: none;
+        color: rgba(94, 95, 94,1); /* Final solid color */
+    }
+}
+@keyframes footerGradientSwipe {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 50% 50%;
+        background-image: none;
+        color: rgba(94, 95, 94); /* Final solid color */
     }
 }
