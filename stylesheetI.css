@@ -121,7 +121,13 @@
 
     /* animated gradient look (yours) */
     .hero-heading-anim {
-        background-image: radial-gradient(circle,rgba(255, 255, 255, 0.7) 20%, rgba(82,209,252,0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
+        background-image: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 1) 20%, 
+        rgba(82, 209, 252, 0.6) 41%, 
+        rgba(207, 240, 255, 1) 66%, 
+        rgba(229, 156, 252, 0.7) 88%
+        );
         background-size: 300% 300%;
         background-clip: text;
         -webkit-background-clip: text;
@@ -169,11 +175,12 @@
         transition: all 0.3s ease;
     }
     .caseStudy h3{
-        margin-top:00px;
+        margin-top: 0px;
         margin-bottom: 0px;
     }
     .caseStudy p{
         margin-top: 0px;
+        margin-bottom: 0px;
     }
     .caseStudy:hover{
         border-color: #5E5F5E;
@@ -196,7 +203,7 @@
         align-items: center; 
     }
     .logo img{
-        max-height: 104px;  /* Adjust this value as needed */
+        max-height: 104px;  
         display: block;
     }
     .csTitle{
@@ -303,12 +310,21 @@
 @keyframes gradientSwipe {
     0% {
         background-position: 0% 50%;
+        color: transparent;
     }
     50% {
         background-position: 100% 50%;
     }
-    100% {
+    80% {
         background-position: 50% 50%;
+        background-image: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 1) 100%, 
+            rgba(255, 255, 255, 1) 100%
+        );
+        color: transparent;
+    }
+    100% {
         background-image: none;
         color: rgb(255, 255, 255); /* Final solid color */
     }
