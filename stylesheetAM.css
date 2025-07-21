@@ -37,10 +37,6 @@
         height: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        background-image: url(images/meImg.png);
-        background-size: contain;
-        background-position: center top; 
-        background-repeat: no-repeat;
         background-color: white;
     }
     main{
@@ -88,67 +84,6 @@
         outline: none;
         text-align: center; 
         display: inline-block;
-    }
-    .ctaCM{
-        display: flex;
-    }
-    .ctaCM div{
-        flex: 1;
-    }
-    #intro{
-        margin-bottom: 144px;
-    }
-    #intro #ctaBtn{
-       background-color: rgb(94, 95, 94, 0.5);
-       border: solid 1px rgb(94, 95, 94);
-       border-radius: 20px;
-       padding: 15px 45px;
-    }
-    #intro #ctaBtn a{
-        color: white;
-     }
-    #intro #ctaBtn:hover{
-        background-color: rgb(255, 255, 255, 0.4);
-        border: solid 1px white;
-        border-radius: 20px;
-        box-shadow: 0px 0px 25px rgba(82, 209, 252, 0.6), 0px 0px 30px rgba(207, 240, 255, 0.5), 0px 0px 45px rgba(229, 156, 252, 0.4);
-        color: rgb(94, 95, 94);
-    }
-    #intro #ctaBtn p{
-        text-align: center;
-        align-items: center;
-        padding: 15px 45px;
-    }
-    #intro #helloMe{
-        padding-left: 250px;
-    }
-    #amIntro{
-        padding-bottom: 100px;
-        padding-left: 100px;
-        width: 850px;
-    }
-    #amIntro h2{
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    #amIntro p{
-        margin-top: 0px;
-    }
-    #amIntro article {
-        display: flex;
-        flex-direction: column;
-    }
-    .data{
-        display: flex;
-        gap: 64px;
-    }
-    .introdwp{
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .introdwp img{
-        padding-top: 8px;
     }
     #fillTime{
         flex: 3;
@@ -265,31 +200,31 @@
     }
 }
 @media screen and (min-width: 1240px) {
-    #intro {
+    /* #intro {
         margin-bottom: 144px;
-    }
+    } */
 }
 @media screen and (min-width: 1440px) {
-    #intro {
+    /* #intro {
         margin-top: 40px;
         margin-bottom: 296px;
-    }
+    } */
 }
 @media screen and (min-width: 1600px) {
-    #intro {
+    /* #intro {
         margin-top: 72px;
         margin-bottom: 358px;
-    }
+    } */
 }
 @media screen and (min-width: 1700px) {
-    #intro {
+    /* #intro {
         margin-top: 88px;
         margin-bottom: 406px;
-    }
+    } */
 }    
 @media screen and (min-width: 1900px) {
-    #intro {
+    /* #intro {
         margin-top: 128px;
         margin-bottom: 478px;
-    }
+    } */
 }
