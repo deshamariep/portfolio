@@ -87,10 +87,10 @@
     }
 
     .hero-top nav ul li a {
-        width: 200px;
+        width: 232px;
         height: 50px;
-        line-height: 50px;
-        border-radius: 20px;
+        align-items: flex-start; /* Align text to top */
+        justify-content: center;
         background: none;
         border: none;
         outline: none;
