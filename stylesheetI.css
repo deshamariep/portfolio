@@ -193,7 +193,7 @@
     }
     .logo{
         flex: 1;
-        padding-top: 16px;
+        align-items: center; 
     }
     .logo img{
         max-height: 104px;  /* Adjust this value as needed */
@@ -201,6 +201,7 @@
     }
     .csTitle{
         flex: 9;
+        align-items: center; 
     }
     #cs{
         margin: 128px 0px;
