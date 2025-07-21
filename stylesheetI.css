@@ -169,7 +169,7 @@
         transition: all 0.3s ease;
     }
     .caseStudy h3{
-        margin-top: 40px;
+        margin-top:00px;
         margin-bottom: 0px;
     }
     .caseStudy p{
@@ -188,10 +188,16 @@
     .csTop{
         display: flex;
         flex-direction: row;
+        align-items: center; 
+        gap: 16px; 
     }
     .logo{
         flex: 1;
         padding-top: 16px;
+    }
+    .logo img{
+        max-height: 104px;  /* Adjust this value as needed */
+        display: block;
     }
     .csTitle{
         flex: 9;
