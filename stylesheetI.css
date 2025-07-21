@@ -111,7 +111,9 @@
         color: white;
         margin: 0;
     }
-    /* .hero-content h1, */
+    .hero-content h1{
+        margin: 24px 0px;
+    }
     .hero-content h3,
     .hero-content p {
         color: white !important;
