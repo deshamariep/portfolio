@@ -111,10 +111,15 @@
         color: white;
         margin: 0;
     }
+    .hero-content h1,
+    .hero-content h3,
+    .hero-content p {
+        color: white !important;
+    }
 
     /* animated gradient look (yours) */
     .hero-heading-anim {
-        background-image: radial-gradient(circle,rgba(94,95,94,0.7) 20%, rgba(82,209,252,0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
+        background-image: radial-gradient(circle,rgba(255, 255, 255, 0.7) 20%, rgba(82,209,252,0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
         background-size: 300% 300%;
         background-clip: text;
         -webkit-background-clip: text;
@@ -161,9 +166,21 @@
         border-radius: 16px;
         transition: all 0.3s ease;
     }
+    .caseStudy h3{
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    .caseStudy p{
+        margin-top: 0px;
+    }
     .caseStudy:hover{
         border-color: #5E5F5E;
         background-color: #5E5F5E;
+        color: white;
+    }
+    .caseStudy:hover h3,
+    .caseStudy:hover p,
+    .caseStudy:hover a {
         color: white;
     }
     .csTop{
@@ -178,7 +195,7 @@
         flex: 9;
     }
     #cs{
-        margin: 64px 0px;
+        margin: 128px 0px;
     }
     footer{
         width: 100%;
@@ -226,7 +243,7 @@
     #footTitle{
         margin-bottom: 16px;
 
-        background-image: radial-gradient(circle, rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
+        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
         background-size: 300% 300%;
         background-clip: text;
         -webkit-background-clip: text;
@@ -256,7 +273,7 @@
         display: inline-block; /* Crucial */
         background-image: radial-gradient(
             circle,
-            rgba(94, 95, 94, 0.7) 10%,
+            rgba(255, 255, 255, 0.7) 10%,
             rgba(82, 209, 252, 0.7) 30%,
             rgba(207, 240, 255, 1) 31%,
             rgba(229, 156, 252, 1) 32%
@@ -284,7 +301,7 @@
     100% {
         background-position: 50% 50%;
         background-image: none;
-        color: rgba(94, 95, 94,1); /* Final solid color */
+        color: rgb(255, 255, 255); /* Final solid color */
     }
 }
 @keyframes footerGradientSwipe {
@@ -297,6 +314,6 @@
     100% {
         background-position: 50% 50%;
         background-image: none;
-        color: rgba(94, 95, 94); /* Final solid color */
+        color: rgb(255, 255, 255); /* Final solid color */
     }
 }
