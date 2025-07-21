@@ -62,10 +62,12 @@
         max-width: min(90%, 700px);
         color: white;
         z-index: 2;
-        margin: 0px 24px;
+        margin-left: -24px;
+        margin-right: -24px;
+        width: calc(100% + 48px);
     }
       
-    .hero-content h3 {
+    /* .hero-content h3 {
         margin: 0;
         font-size: 1.125rem;
         font-weight: 600;
@@ -81,7 +83,7 @@
         margin: 0;
         font-size: 1.125rem;
         line-height: 1.4;
-    }
+    } */
       
       /* Animated gradient reuse (optional) */
     .hero-heading-anim {
