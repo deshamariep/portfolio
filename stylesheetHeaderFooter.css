@@ -82,17 +82,18 @@
 /* animated gradient look (yours) */
 .hero-heading-anim {
     background-image: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 20%, 
-    rgba(82, 209, 252, 0.6) 41%, 
-    rgba(207, 240, 255, 1) 66%, 
-    rgba(229, 156, 252, 0.7) 88%
+        circle,
+        rgba(255, 255, 255, 1) 20%, 
+        rgba(82, 209, 252, 0.6) 41%, 
+        rgba(207, 240, 255, 1) 66%, 
+        rgba(229, 156, 252, 0.7) 88%
     );
     background-size: 300% 300%;
+    background-position: 0% 50%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: gradientSwipe 10s ease-in-out forwards 500ms;
+    animation: gradientSwipe 5s ease-in-out forwards 500ms;
 }
 
 footer{
@@ -181,4 +182,40 @@ footer #btmfoot {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+@keyframes gradientSwipe {
+    0% {
+        background-position: 0% 50%;   /* Start from left */
+        color: transparent;
+    }
+    60% {
+        background-position: 100% 50%; /* Sweep all colors across */
+        color: transparent;
+    }
+    85% {
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 1) 0%, 
+            rgba(255, 255, 255, 1) 100%
+        );                             /* White gradient fills */
+        background-position: 0% 50%;
+        color: transparent;
+    }
+    100% {
+        background-image: none;
+        color: rgb(255, 255, 255);     /* Final solid white */
+    }
+}
+@keyframes footerGradientSwipe {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 50% 50%;
+        background-image: none;
+        color: rgba(94, 95, 94); /* Final solid color */
+    }
 }

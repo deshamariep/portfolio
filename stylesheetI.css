@@ -166,39 +166,5 @@
 @media screen and (min-width: 1850px){
     
 }
-@keyframes gradientSwipe {
-    0% {
-        background-position: 0% 50%;   /* Start left */
-        color: transparent;
-    }
-    50% {
-        background-position: 100% 50%; /* Gradient sweeps fully */
-        color: transparent;
-    }
-    75% {
-        background-image: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 1) 0%, 
-            rgba(255, 255, 255, 1) 100%
-        );                              /* White sweep */
-        background-position: 0% 50%;
-        color: transparent;
-    }
-    100% {
-        background-image: none;
-        color: rgb(255, 255, 255);      /* Final solid white */
-    }
-}
-@keyframes footerGradientSwipe {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 50% 50%;
-        background-image: none;
-        color: rgba(94, 95, 94); /* Final solid color */
-    }
-}
+
+

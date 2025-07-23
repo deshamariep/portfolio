@@ -54,12 +54,13 @@
         display: flex;
     }
     #fillTime{
-        flex: 3;
+        flex: 1.5;
     }
     #headShot{
         flex: 1;
-        justify-content: center;
-        align-items: center;
+        display: flex;              
+        justify-content: center; 
+        align-items: center; 
     }
     #exp{
         justify-content: center;
@@ -104,17 +105,4 @@
         margin-top: 128px;
         margin-bottom: 478px;
     } */
-}
-@keyframes footerGradientSwipe {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 50% 50%;
-        background-image: none;
-        color: rgba(94, 95, 94); /* Final solid color */
-    }
 }
