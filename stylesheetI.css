@@ -37,103 +37,6 @@
         width: 100%;
         background-color: white; 
     }
-    .hero {
-        position: relative;
-        width: 100vw;
-        min-height: 800px;
-        margin: 0;
-        overflow: hidden;
-        text-align: left;
-    }
-      
-    .hero-img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        z-index: 1;
-    }
-
-    /* top bar: logo + nav */
-    .hero-top {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 24px 24px;
-        z-index: 3;
-        box-sizing: border-box;
-    }
-
-    /* keep your existing logo + nav styling, but remove old layout rules that assume header is a short bar */
-    #hLogo img {
-        display: block;
-        height: auto;
-        max-width: 100%;
-    }
-
-    .hero-top nav ul {
-        display: flex;
-        gap: 24px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .hero-top nav ul li a {
-        width: 232px;
-        height: 50px;
-        align-items: flex-start; /* Align text to top */
-        justify-content: center;
-        background: none;
-        border: none;
-        outline: none;
-        text-align: center;
-        display: inline-block;
-        color: white;                 /* on photo bg */
-        text-decoration: none;
-    }
-
-  /* hero text (like old #intro, left aligned) */
-    .hero-content {
-        position: absolute;
-        top: 40%;                    /* vertical center */
-        left: 24px;                  /* align to page gutter */
-        transform: translateY(-50%); /* only shift vertically */
-        max-width: 875px;
-        z-index: 4;
-        color: white;
-        margin: 0;
-    }
-    .hero-content h1{
-        margin: 24px 0px;
-    }
-    .hero-content h3,
-    .hero-content p {
-        color: white !important;
-    }
-
-    /* animated gradient look (yours) */
-    .hero-heading-anim {
-        background-image: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 1) 20%, 
-        rgba(82, 209, 252, 0.6) 41%, 
-        rgba(207, 240, 255, 1) 66%, 
-        rgba(229, 156, 252, 0.7) 88%
-        );
-        background-size: 300% 300%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        animation: gradientSwipe 10s ease-in-out forwards 500ms;
-    }
     main{
         margin: 0 24px;
         box-sizing: border-box;
@@ -253,93 +156,6 @@
     #cs{
         margin: 128px 0px;
     }
-    footer{
-        width: 100%;
-        margin: 0px 24px;
-        height: 208px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        display: block;
-        background-color: rgba(255, 255, 255, 0.5);
-        color: rgb(94, 95, 94);
-        box-sizing: border-box;
-    }
-    #footerData{
-        display: flex;
-        align-items: left;
-        justify-content: left;
-        gap: 8px;
-    }
-    /* #footerData div{
-        flex: content;
-    } */
-    #fOne{
-        flex: 1;
-        margin-right: 150px;
-        flex-direction: column;
-        align-items: left;
-        text-align: left;
-    }
-    .fTwo{
-        flex: 1;
-    }
-    .fTwoP{
-        margin-bottom: 8px;
-    }
-    /* #footerLogo{
-        margin-right: 16px;
-    } */
-    #opacity{
-        width: 100%;
-        height: 1px;
-        opacity: 0.4;
-        margin: 32px 0px 0px;
-    }
-    #footTitle{
-        margin-bottom: 16px;
-
-        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
-        background-size: 300% 300%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-
-        animation: footerGradientSwipe 10s ease-in-out forwards;
-        animation-play-state: paused; /* Paused until we tell it to play */
-    }
-    footer #footLink{
-        display: flex;
-        justify-content: space-around;
-    }
-    footer #footLink a{
-        text-decoration: none;
-    }
-    footer #footLink div {
-        flex-direction: row;
-        align-items: center; 
-    }
-    .footA{
-        margin: 0px;
-        padding: 0px
-    }
-    footer #btmfoot {
-        margin: 16px auto 0px auto;
-      
-        display: inline-block; /* Crucial */
-        background-image: radial-gradient(
-            circle,
-            rgba(94, 95, 94, 0.7) 10%,
-            rgba(82, 209, 252, 0.7) 30%,
-            rgba(207, 240, 255, 1) 31%,
-            rgba(229, 156, 252, 1) 32%
-        );
-        background-size: 300% 300%;
-        background-position: center;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-    }
 }
 @media screen and (min-width: 1650px){
 
@@ -349,24 +165,25 @@
 }
 @keyframes gradientSwipe {
     0% {
-        background-position: 100% 50%; /* Start from right */
+        background-position: 0% 50%;   /* Start left */
         color: transparent;
     }
     50% {
-        background-position: 0% 50%;   /* Move to left */
+        background-position: 100% 50%; /* Gradient sweeps fully */
+        color: transparent;
     }
-    80% {
-        background-position: 50% 50%;
-        background-image: radial-gradient(
-            circle,
-            rgba(255, 255, 255, 1) 100%, 
+    75% {
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 1) 0%, 
             rgba(255, 255, 255, 1) 100%
-        );
+        );                              /* White sweep */
+        background-position: 0% 50%;
         color: transparent;
     }
     100% {
         background-image: none;
-        color: rgb(255, 255, 255); /* Final solid color */
+        color: rgb(255, 255, 255);      /* Final solid white */
     }
 }
 @keyframes footerGradientSwipe {

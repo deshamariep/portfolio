@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link href="stylesheetType.css" rel="stylesheet">
+    <link href="stylesheetHeaderFooter.css" rel="stylesheet">
     <link href="stylesheetAM.css" rel="stylesheet">
     <script src="scriptAM.js" defer></script>
 </head>
@@ -16,10 +17,10 @@
     <div class="mobileIncomplete">
         <p>This mobile site is under construction. Please view on a desktop for the full experience.</p>
     </div>
-    <main>
-        <header>
+    <header>
+        <div class="hero-top">
             <section id="hLogo">
-                <img src="images/myLogoBig.svg" alt="My initial logo" width="100px" height="100px">
+              <img src="images/initiallogodark.svg" alt="My initial logo" width="100" height="100">
             </section>
             <section id="one">
                 <nav>
@@ -27,10 +28,12 @@
                         <li><a id="home" href="index.html">Work</a></li>
                         <li><a id="aboutMe" href="aboutMe.html">About Me</a></li>
                         <li><a id="studio" href="studio.html">Studio</a></li>
-                    </ul>
+                      </ul>
                 </nav>
             </section>
-        </header>
+        </div>
+    </header>
+    <main>
         <section>
             <div id="helloMe">
                 <h2 id="greeting">👋 Hey there, good morning!</h2>
@@ -72,27 +75,30 @@
         <section id="footLink">
             <div id="fOne">
                 <div id="footerData">
-                    <div>
-                        <img id="footerLogo" src="images/initiallogodark.svg" alt="my logo" width="50px" height="50px">
-                    </div>
-                    <div>
-                        <h2 id="footTitle">DeshaMarieP</h2>
-                    </div>
+                <div>
+                    <img id="footerLogo" src="images/initiallogodark.svg" alt="my logo" width="50" height="50">
+                </div>
+                <div>
+                    <h3 id="footTitle">DeshaMarieP</h3>
+                </div>
                 </div>
                 <p id="footerDataP">Thanks for stopping by!</p>
             </div>
+    
             <div class="fTwo">
                 <p class="fTwoP">Let's stay in touch!</p>
                 <p class="footA"><a href="mailto:&#100;&#101;&#115;&#104;&#097;&#112;&#111;&#105;&#110;&#100;&#101;&#120;&#116;&#101;&#114;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Email</a></p>
                 <p class="footA"><a href="https://www.linkedin.com/in/desha-poindexter-b15b6a239">LinkedIn</a></p>
                 <p class="footA"><a href="images/resume.pdf" target="_blank">Resume</a></p>
             </div>
+    
             <div class="fTwo">
                 <p class="fTwoP">Navigation</p>
                 <p class="footA"><a href="index.html">Work</a></p>
                 <p class="footA"><a href="aboutMe.html">About Me</a></p>
                 <p class="footA"><a href="studio.html">Studio</a></p>
             </div>
+    
             <div class="fTwo">
                 <p class="fTwoP">More Front-End Projects...</p>
                 <p class="footA"><a href="https://deshamariep.github.io/DES157A-wi24/journal/index.html">Learning Journal</a></p>
@@ -100,7 +106,8 @@
                 <p class="footA"><a href="https://deshamariep.github.io/DES157A-wi24/studio2/index.html">My Garden</a></p>
             </div>
         </section>
-        <img id="opacity" src="images/footerLine.svg" alt="divider" width="1100px" height="1px">
+    
+        <img id="opacity" src="images/footerLine.svg" alt="divider" width="1100" height="1">
         <p id="btmfoot">2025 • Desha Poindexter • Made with HTML, CSS, and JavaScript</p>
     </footer>
 </body>
