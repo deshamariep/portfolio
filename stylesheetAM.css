@@ -54,13 +54,14 @@
         display: flex;
     }
     #fillTime{
-        flex: 1.5;
+        flex: 1;
     }
     #headShot{
         flex: 1;
         display: flex;              
         justify-content: center; 
         align-items: center; 
+        padding-top: 56px;
     }
     #exp{
         justify-content: center;
