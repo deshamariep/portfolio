@@ -67,14 +67,6 @@
         background-size: 200% auto;
         animation: animateBackground 5s infinite linear;
     }
-    @keyframes animateBackground {
-        0% {
-            background-position: 0 0; /* Start position of the background */
-        }
-        100% {
-            background-position: 200% 0; /* End position of the background */
-        }
-    }
     #gallery article img {
         display: block;
         margin: auto;
@@ -88,6 +80,14 @@
     #gallery article p {
         margin: 10px 20px;
         text-align: left;
+    }
+}
+@keyframes animateBackground {
+    0% {
+        background-position: 0 0; /* Start position of the background */
+    }
+    100% {
+        background-position: 200% 0; /* End position of the background */
     }
 }
 @keyframes footerGradientSwipe {
