@@ -349,11 +349,11 @@
 }
 @keyframes gradientSwipe {
     0% {
-        background-position: 0% 50%;
+        background-position: 100% 50%; /* Start from right */
         color: transparent;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 0% 50%;   /* Move to left */
     }
     80% {
         background-position: 50% 50%;
