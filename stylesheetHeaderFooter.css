@@ -81,12 +81,13 @@
 
 /* animated gradient look (yours) */
 .hero-heading-anim {
-    background-image: radial-gradient(
-        circle,
-        rgba(255, 255, 255, 1) 20%, 
-        rgba(82, 209, 252, 0.6) 41%, 
-        rgba(207, 240, 255, 1) 66%, 
-        rgba(229, 156, 252, 0.7) 88%
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1),    /* White start */
+        rgba(82, 209, 252, 0.6),
+        rgba(207, 240, 255, 1),
+        rgba(229, 156, 252, 0.7),
+        rgba(255, 255, 255, 1)     /* White end */
     );
     background-size: 300% 300%;
     background-clip: text;
@@ -193,10 +194,10 @@ footer #btmfoot {
     }
     80% {
         background-position: 0% 50%;
-        background-image: radial-gradient(
-            circle,
-            rgba(255, 255, 255, 1) 100%, 
-            rgba(255, 255, 255, 1) 100%
+        background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 1),
+            rgba(255, 255, 255, 1)
         ); /* Fully white gradient */
         color: transparent;
     }
