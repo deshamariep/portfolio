@@ -85,11 +85,16 @@
         text-align: center; 
         display: inline-block;
     }
+    .data{
+        display: flex;
+    }
     #fillTime{
         flex: 3;
     }
+    .data img{
+        flex: 1;
+    }
     #exp{
-        flex: 2;
         justify-content: center;
     }
     #exp h3{
