@@ -91,8 +91,10 @@
     #fillTime{
         flex: 3;
     }
-    .data img{
+    #headShot{
         flex: 1;
+        justify-content: center;
+        align-items: center;
     }
     #exp{
         justify-content: center;
