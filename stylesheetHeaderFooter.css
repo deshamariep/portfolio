@@ -57,7 +57,7 @@
     outline: none;
     text-align: center;
     display: inline-block;
-    color: white;                 /* on photo bg */
+    color: rgb(94, 95, 94); /* for all pages */
     text-decoration: none;
 }
 /* hero text (like old #intro, left aligned) */
@@ -133,7 +133,7 @@ footer{
     margin-right: 16px;
 } */
 #opacity{
-    width: 100%;
+    width: 1392px;
     height: 1px;
     opacity: 0.4;
     margin: 32px 0px 0px;

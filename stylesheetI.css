@@ -37,6 +37,9 @@
         width: 100%;
         background-color: white; 
     }
+    .hero-top nav ul li a {
+        color: white;                 /* on photo bg */
+    }
     main{
         margin: 0 24px;
         box-sizing: border-box;
