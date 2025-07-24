@@ -82,19 +82,19 @@
 /* animated gradient look (yours) */
 .hero-heading-anim {
     background-image: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 1),    /* White start */
-        rgba(82, 209, 252, 0.6),
-        rgba(207, 240, 255, 1),
-        rgba(229, 156, 252, 0.7),
-        rgba(255, 255, 255, 1)     /* White end */
+      to right,
+      white 0%,
+      rgba(82, 209, 252, 0.6) 25%,
+      rgba(207, 240, 255, 1) 50%,
+      rgba(229, 156, 252, 0.7) 75%,
+      white 100%
     );
-    background-size: 300% 300%;
+    background-size: 300% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: gradientSwipe 10s ease-in-out forwards 500ms;
-}
+    opacity: 0; /* Hidden until JS triggers it */
+  }
 
 footer{
     width: 100%;
@@ -185,27 +185,18 @@ footer #btmfoot {
 }
 @keyframes gradientSwipe {
     0% {
-        background-position: 100% 50%; /* Start from the right */
-        color: transparent;
-    }
-    60% {
-        background-position: 0% 50%;   /* Sweep fully to the left */
-        color: transparent;
+      background-position: 0% 50%;
+      color: transparent;
     }
     80% {
-        background-position: 0% 50%;
-        background-image: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 1),
-            rgba(255, 255, 255, 1)
-        ); /* Fully white gradient */
-        color: transparent;
+      background-position: 100% 50%;
+      color: transparent;
     }
     100% {
-        background-image: none;
-        color: rgb(255, 255, 255); /* Final solid white */
+      background-image: none;
+      color: white;
     }
-}
+  }
 @keyframes footerGradientSwipe {
     0% {
         background-position: 0% 50%;
