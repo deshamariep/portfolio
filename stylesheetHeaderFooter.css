@@ -81,7 +81,13 @@
 
 /* animated gradient look (yours) */
 .hero-heading-anim {
-    background-image: radial-gradient(circle,rgba(255, 255, 255) 20%, rgba(82,209,252,0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
+    background-image: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 1) 20%, 
+        rgba(82, 209, 252, 0.6) 41%, 
+        rgba(207, 240, 255, 1) 66%, 
+        rgba(229, 156, 252, 0.7) 88%
+    );
     background-size: 300% 300%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -178,10 +184,10 @@ footer #btmfoot {
 }
 @keyframes gradientSwipe {
     0% {
-        background-position: 0% 50%;
+        background-position: 100% 50%; /* Start on the right */
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 0% 50%; /* Swipe to the left */
     }
     100% {
         background-position: 50% 50%;
@@ -189,6 +195,7 @@ footer #btmfoot {
         color: rgb(255, 255, 255); /* Final solid color */
     }
 }
+
 @keyframes footerGradientSwipe {
     0% {
         background-position: 0% 50%;

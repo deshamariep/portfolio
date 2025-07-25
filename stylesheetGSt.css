@@ -37,7 +37,7 @@
         height: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        background-image: url(images/GstInfoBox.png), url(images/gstTransBG.png);
+        background-image: url(images/GstInfoBox.png);
         background-size: 570px 800px, 100% 800px;
         background-position: 110px top, center top; 
         background-repeat: no-repeat;
