@@ -38,22 +38,18 @@
         min-height: 100vh;
         overflow-x: hidden;
         background-image: url(images/GstInfoBox.png);
-        background-size: 570px 800px, 100% 800px;
+        background-size: 570px 800px;
         background-position: 110px top, center top; 
         background-repeat: no-repeat;
-        font-family: "Nunito", sans-serif;
-        font-weight: 400;
-        font-style: normal;
     }
     main{
-        margin: 0 170px;
+        margin: 0 24px;
         box-sizing: border-box;
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 1.6
     }
     #query {
-        max-width: 1100px;
         width: 100%;
         margin: 0 auto; 
     }
@@ -69,86 +65,27 @@
         opacity: 1;
         transform: scale(1);
     }
-    header{
-        display: flex;
-        height: 150px;
-        padding-top: 30px;
-    }
-    header #two{
-        flex: 1;
-        width: 500px;
-    }
-    header #two h2{
-        margin-top: 30px;
-    }
-    #one{
+    /* #one{
         flex: 1;
         padding-top: 4px;
     }
     #one a{
         text-align: center;
         text-decoration: none;
-    }
-    #home:hover{
-        text-decoration: underline;
-    }
-    #aboutMe:hover{
-        text-decoration: underline;
-    }
-    #studio:hover{
-        text-decoration: underline;
-    }
-    nav ul{
-        display: flex;
-    }
-    nav ul li{
-        flex: content;
-        list-style: none;
-        padding-left: 4px;
-        padding-right: 4px;
-    }
-    nav ul li a{
-        width: 150px;
-        height: 50px;
-        border-radius: 20px;
-        background: none; 
-        border: none; 
-        outline: none;
-        text-align: center; 
-        display: inline-block;
-    }
+    } */
     #topBG{
         margin-top: -10px;
         margin-bottom: 100px;
     }
-    #introFlex{
-        display: flex;
-    }
     #topBG{
         margin-top: -10px;
         margin-bottom: 100px;
-    }
-    #introFlex{
-        display: flex;
     }
     #infoBox {
-        flex: 2;
-        padding-bottom: 64px;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        color: rgb(94, 95, 94);
     }
     #infoBox p{
         width: 475px;
-    }
-    #logo{
-        flex: 1;
-        justify-content: center;
-        padding-top: 64px;
-    }
-    #GstLogo {
-        box-shadow: 0 0 30px rgba(105, 168, 95);
-        border-radius: 100px;
     }
     #arrowContainer {
         display: flex;
@@ -181,12 +118,6 @@
     }
     .textSize, #textSize{
         width: 500px;
-    }
-    .boldText{
-        padding-top: 0px;
-        font-family: "Quicksand", sans-serif;
-        font-weight: 400;
-        font-style: normal;
     }
     .addBlock{
         display: block;
@@ -370,122 +301,6 @@
         align-items: center;
         margin: auto; 
         margin-top: 10px;
-    }
-    footer{
-        width: 100%;
-        margin: 64px auto 0 auto;
-        height: 256px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding: 8px 112px 0px 112px;
-        display: block;
-        background-color: rgba(255, 255, 255, 0.5);
-        color: rgb(94, 95, 94);
-        box-sizing: border-box;
-    }
-    #footerData{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-    }
-    /* #footerData div{
-        flex: content;
-    } */
-    #fOne{
-        flex: 1;
-        margin-right: 200px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .fTwo{
-        flex: 1;
-    }
-    .fTwoP{
-        margin-bottom: 8px;
-    }
-    #footerDataP{
-        font-weight: 300;
-    }
-    /* #footerLogo{
-        margin-right: 16px;
-    } */
-    #opacity{
-        width: 100%;
-        height: 1px;
-        opacity: 0.4;
-        margin: 60px 0px 0px;
-    }
-    #footTitle{
-        font-family: "Cinzel Decorative", serif;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 20px;
-        margin-bottom: 16px;
-
-        background-image: radial-gradient(circle, rgba(94, 95, 94, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
-        background-size: 300% 300%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-
-        animation: footerGradientSwipe 10s ease-in-out forwards;
-        animation-play-state: paused; /* Paused until we tell it to play */
-    }
-    @keyframes footerGradientSwipe {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 50% 50%;
-            background-image: none;
-            color: rgba(94, 95, 94); /* Final solid color */
-        }
-    }
-    footer #footLink{
-        display: flex;
-        justify-content: space-around;
-    }
-    footer #footLink a{
-        text-decoration: none;
-    }
-    footer #footLink div {
-        flex-direction: row;
-        align-items: center; 
-    }
-    .footA{
-        line-height: 150%;
-        margin: 0px;
-        padding: 0px
-    }
-    footer #btmfoot {
-        font-family: "Nunito", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 10px;
-        letter-spacing: 0.03em;
-        line-height: 100%;
-        margin: 24px auto 0px auto;
-      
-        display: inline-block; /* Crucial */
-        background-image: radial-gradient(
-            circle,
-            rgba(94, 95, 94, 0.7) 10%,
-            rgba(82, 209, 252, 0.7) 30%,
-            rgba(207, 240, 255, 1) 31%,
-            rgba(229, 156, 252, 1) 32%
-        );
-        background-size: 300% 300%;
-        background-position: center;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
     }
 }
 @media screen and (min-width: 1650px){
