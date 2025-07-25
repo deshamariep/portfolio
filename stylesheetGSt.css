@@ -35,9 +35,6 @@
         padding: 8px; /* optional: adds spacing inside the white box */
         border-radius: 4px; /* optional: rounded corners */
     }
-    .hero-content h1 {
-        color: white !important;
-    }
     body{
         margin: 0;
         padding: 0;
@@ -88,7 +85,7 @@
         color: rgb(94, 95, 94);
     } */
     #infoBox p{
-        /* color: rgb(94, 95, 94) !important; */
+        color: rgb(94, 95, 94) !important;
         width: 475px;
     }
     #arrowContainer {
