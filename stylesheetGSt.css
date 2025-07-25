@@ -30,6 +30,14 @@
     .mobileIncomplete {
         display: none; /* Hide the message on larger screens */
     }
+    #hLogo img {
+        background-color: white;
+        padding: 8px; /* optional: adds spacing inside the white box */
+        border-radius: 4px; /* optional: rounded corners */
+    }
+    .hero-content h1 {
+        color: white !important;
+    }
     body{
         margin: 0;
         padding: 0;
