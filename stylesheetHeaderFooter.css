@@ -94,7 +94,7 @@
     -webkit-background-clip: text;
     color: transparent;
     animation: gradientSwipe 3s ease-in-out forwards;
-}
+  }
 
 footer{
     width: 100%;
@@ -188,15 +188,23 @@ footer #btmfoot {
       background-position: 0% 0%;
       color: transparent;
     }
+  
     80% {
       background-position: 100% 0%;
-      color: transparent;
+      color: transparent; /* Keep gradient fully visible */
     }
+  
+    99% {
+      background-position: 100% 0%;
+      color: white; /* Color starts to take over */
+    }
+  
     100% {
-      background-image: none;
+      background-position: 100% 0%;
+      background-image: none; /* Only now we remove the gradient */
       color: white;
     }
-}
+  }
 @keyframes footerGradientSwipe {
     0% {
         background-position: 0% 50%;
