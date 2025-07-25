@@ -38,8 +38,8 @@
         min-height: 100vh;
         overflow-x: hidden;
         background-image: url(images/GstInfoBox.png);
-        background-size: 570px 800px;
-        background-position: 110px top, center top; 
+        background-size: 500px 800px;
+        background-position: 0px top;  
         background-repeat: no-repeat;
     }
     main{
@@ -74,17 +74,13 @@
         text-decoration: none;
     } */
     #topBG{
-        margin-top: -10px;
-        margin-bottom: 100px;
+        margin-top: 56px;
     }
-    #topBG{
-        margin-top: -10px;
-        margin-bottom: 100px;
-    }
-    #infoBox {
+    /* #infoBox {
         color: rgb(94, 95, 94);
-    }
+    } */
     #infoBox p{
+        /* color: rgb(94, 95, 94) !important; */
         width: 475px;
     }
     #arrowContainer {
