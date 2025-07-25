@@ -65,10 +65,10 @@
     }
     #exp{
         justify-content: center;
+        margin-bottom: 96px;
     }
     #exp h3{
         margin-top: 32px;
-        margin-bottom: 96px;
     }
     #exp p{
         margin-bottom: 0px;

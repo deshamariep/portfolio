@@ -89,12 +89,12 @@
       rgba(229, 156, 252, 0.7) 75%,
       white 100%
     );
-    background-size: 300% 100%;
+    background-size: 200% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    opacity: 0; /* Hidden until JS triggers it */
-  }
+    animation: gradientSwipe 3s ease-in-out forwards;
+}
 
 footer{
     width: 100%;
@@ -185,18 +185,18 @@ footer #btmfoot {
 }
 @keyframes gradientSwipe {
     0% {
-      background-position: 0% 50%;
+      background-position: 0% 0%;
       color: transparent;
     }
     80% {
-      background-position: 100% 50%;
+      background-position: 100% 0%;
       color: transparent;
     }
     100% {
       background-image: none;
       color: white;
     }
-  }
+}
 @keyframes footerGradientSwipe {
     0% {
         background-position: 0% 50%;
