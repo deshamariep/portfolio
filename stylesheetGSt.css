@@ -75,7 +75,7 @@
         text-decoration: none;
     } */
     #topBG{
-        margin-top: 40px;
+        margin-top: 32px;
     }
     /* #infoBox {
         color: rgb(94, 95, 94);
@@ -90,7 +90,7 @@
         align-items: center;
 
         position: absolute;
-        bottom: 20px;
+        bottom: 32px;
         left: 50%;
         z-index: 5;
     }
