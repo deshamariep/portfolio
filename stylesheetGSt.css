@@ -76,10 +76,27 @@
     } */
     #topBG{
         margin-top: 32px;
+        position: relative;
     }
-    /* #infoBox {
-        color: rgb(94, 95, 94);
-    } */
+    #blurInfoBox {
+        position: absolute;
+        top: 110px; /* Adjust this to align with your content */
+        left: 0;
+        width: 500px;
+        height: 800px;
+        background-image: url(images/blurInfoBox.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        z-index: 1;
+        border-radius: 10px;
+    }
+    #infoBox {
+        position: relative;
+        z-index: 2;
+        padding: 16px;
+        border-radius: 10px;
+    }
     #infoBox p{
         color: rgb(94, 95, 94) !important;
         width: 475px;
