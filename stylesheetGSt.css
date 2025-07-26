@@ -42,18 +42,16 @@
     }
     
     body::before {
-        content: '';
-        position: fixed;
+        content: "";
+        position: absolute;
         top: 0;
         left: 0;
         width: 500px;
         height: 800px;
-        background-image: url(images/GstInfoBox.png);
-        background-size: cover;
-        background-position: top;
-        background-repeat: no-repeat;
-        filter: blur(8px); /* control blur here */
-        z-index: -1;
+        background-color: rgba(255, 255, 255, 0.1); /* optional */
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        z-index: 1;
         pointer-events: none;
     }
     main{
@@ -105,7 +103,6 @@
         position: absolute;
         bottom: 20px;
         left: 50%;
-        transform: translateX(-50%);
         z-index: 5;
     }
     #arrow {
