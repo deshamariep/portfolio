@@ -92,7 +92,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    animation: gradientSwipe 10s ease-in-out forwards 500ms;
+    animation: gradientSwipe 5s ease-in-out forwards 500ms;
 }
 
 footer{
