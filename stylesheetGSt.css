@@ -30,11 +30,6 @@
     .mobileIncomplete {
         display: none; /* Hide the message on larger screens */
     }
-    #hLogo img {
-        background-color: white;
-        padding: 8px; /* optional: adds spacing inside the white box */
-        border-radius: 4px; /* optional: rounded corners */
-    }
     body{
         margin: 0;
         padding: 0;
@@ -42,7 +37,7 @@
         height: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        background-image: url(images/GstInfoBox.png);
+        background-image: url(images/GstInfoBox.svg);
         background-size: 500px 800px;
         background-position: 0px top;  
         background-repeat: no-repeat;
@@ -79,7 +74,7 @@
         text-decoration: none;
     } */
     #topBG{
-        margin-top: 56px;
+        margin-top: 40px;
     }
     /* #infoBox {
         color: rgb(94, 95, 94);
