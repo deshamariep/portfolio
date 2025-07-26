@@ -40,7 +40,7 @@ p{
     letter-spacing: 0.03em;
     line-height: 140%;
 }
-ul li p, ol li p, .painPT .number, #smolP, footer p{
+ul li, ul li p, ol li p, .painPT .number, #smolP, footer p{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
