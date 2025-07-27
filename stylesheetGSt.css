@@ -55,8 +55,8 @@
         margin: 0 auto; 
     }
     .spaceBtwn {
-        margin-top: 64px;
-        margin-bottom: 64px;
+        margin-top: 96px;
+        margin-bottom: 96px;
         transform: scale(0.9);
         opacity: 0.4;
         transition: opacity 0.8s ease, transform 0.5s ease;
@@ -76,27 +76,10 @@
     } */
     #topBG{
         margin-top: 32px;
-        position: relative;
     }
-    #blurInfoBox {
-        position: absolute;
-        top: 110px; /* Adjust this to align with your content */
-        left: 0;
-        width: 500px;
-        height: 800px;
-        background-image: url(images/blurInfoBox.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        z-index: 1;
-        border-radius: 10px;
-    }
-    #infoBox {
-        position: relative;
-        z-index: 2;
-        padding: 16px;
-        border-radius: 10px;
-    }
+    /* #infoBox {
+        color: rgb(94, 95, 94);
+    } */
     #infoBox p{
         color: rgb(94, 95, 94) !important;
         width: 475px;
