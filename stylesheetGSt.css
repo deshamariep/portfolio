@@ -38,7 +38,7 @@
         min-height: 100vh;
         overflow-x: hidden;
         position: relative; /* Needed for overlay positioning */
-        background-image: url(images/gstInfoBoxBlur.png);
+        background-image: url(images/GstInfoBox.png);
         background-size: 500px 800px;
         background-position: 0px top;  
         background-repeat: no-repeat;
