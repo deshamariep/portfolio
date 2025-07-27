@@ -192,7 +192,7 @@ footer #btmfoot {
     100% {
         background-position: 50% 50%;
         background-image: none;
-        color: rgb(255, 255, 255, 0.7); /* Final solid color */
+        color: rgb(255, 255, 255); /* Final solid color */
     }
 }
 
