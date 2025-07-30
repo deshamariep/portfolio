@@ -66,16 +66,6 @@
         opacity: 1;
         transform: scale(1);
     }
-    .spaceBtwnSmol{
-        margin-top: 32px;
-        margin-bottom: 32px;
-        opacity: 0.6;
-        transition: opacity 0.8s ease;
-        padding: 0.5rem;
-    }
-    .spaceBtwnSmol.active{
-        opacity: 1;
-    }
     #topBG{
         margin-top: 32px;
     }

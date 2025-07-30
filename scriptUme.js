@@ -14,18 +14,6 @@
     });
     sections.forEach(section => observer.observe(section));
 
-    const smallSections = document.querySelectorAll('.spaceBtwnSmol');
-    const smallObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          entry.target.classList.toggle('active', entry.isIntersecting);
-        });
-      }, {
-        root: null,
-        rootMargin: '-40% 0px -40% 0px', 
-        threshold: 0 
-    });
-    sections.forEach(section => smallObserver.observe(section));
-
     document.addEventListener("DOMContentLoaded", function() {
         const waitElement = document.getElementById('wait');
         const segments = waitElement.querySelectorAll("div");
