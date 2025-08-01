@@ -104,19 +104,12 @@
         max-width: 100%;
         max-height: 100%;
     }
-    .addBlock{
+    /* .addBlock{
         display: block;
         border: 1px solid rgb(255, 145, 28);
         border-radius: 60px;
         padding: 20px;
-    }
-    .addBlockLite{
-        display: block;
-        border: 1px solid rgb(255, 145, 28, 0.5);
-        border-radius: 60px;
-        padding: 20px 30px;
-        margin-bottom:20px;
-    }
+    } */
     .slideshow-container {
         position: relative;
         max-width: 472px; /* Adjust as needed */
