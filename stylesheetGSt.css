@@ -38,13 +38,10 @@
         min-height: 100vh;
         overflow-x: hidden;
         position: relative; /* Needed for overlay positioning */
-        /* background-image: url(images/whiteInfoBox.png);
+        background-image: url(images/whiteInfoBox.png);
         background-size: 500px 800px;
         background-position: 0px top;  
-        background-repeat: no-repeat; */
-        background-color: white;
-        width: 500px;
-        height: 800px;
+        background-repeat: no-repeat;
     }
     main{
         margin: 0 24px;
