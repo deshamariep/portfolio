@@ -111,7 +111,12 @@
     .data{
         display: flex;
         justify-content: space-between; 
-        gap: 20px;
+        gap: 24px;
+    }
+    .dataimg{
+        display: flex;
+        justify-content: space-evenly; 
+        gap: 16px;
     }
     .data div{
         flex: 1;
