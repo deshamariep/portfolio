@@ -4,7 +4,7 @@ H1{
     font-weight: 700;
     font-style: normal;
     font-size: 64px;
-    color: rgb(94, 95, 94);
+    color: rgb(74, 74, 104);
     letter-spacing: 0.03em;
     line-height: 140%;
     /* padding-bottom: 32px;
@@ -16,7 +16,7 @@ H2{
     font-weight: 400;
     font-style: normal;
     font-size: 32px;
-    color: rgb(94, 95, 94);
+    color: rgb(74, 74, 104);
     letter-spacing: 0.03em;
     line-height: 140%;
 }
@@ -26,7 +26,7 @@ H3{
     font-weight: 500;
     font-style: normal;
     font-size: 24px;
-    color: rgb(94, 95, 94);
+    color: rgb(74, 74, 104);
     letter-spacing: 0.03em;
     line-height: 140%;
 }
@@ -36,7 +36,7 @@ p{
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    color: rgb(94, 95, 94);
+    color: rgb(74, 74, 104);
     letter-spacing: 0.03em;
     line-height: 140%;
 }
@@ -46,7 +46,7 @@ ul li, ul li p, ol li p, .painPT .number, #smolP, footer p{
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    color: rgb(94, 95, 94);
+    color: rgb(74, 74, 104);
     letter-spacing: 0.03em;
     line-height: 140%;
 }
@@ -57,7 +57,7 @@ a{
     text-decoration: none;
     font-style: normal;
     font-size: 16px;
-    color: rgb(94, 95, 94);
+    color: rgb(74, 74, 104);
     letter-spacing: 0.03em;
     line-height: 140%;
 }
@@ -68,7 +68,7 @@ footer a{
     text-decoration: none;
     font-style: normal;
     font-size: 16px;
-    color: rgb(94, 95, 94);
+    color: rgb(74, 74, 104);
     letter-spacing: 0.03em;
     line-height: 140%;
 }
