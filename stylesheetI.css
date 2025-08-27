@@ -111,6 +111,13 @@
         align-items: baseline;
         gap: 8px; /* space between h2 and h3 */
     }
+    #logoSpace{
+        display: flex;
+        gap: 16px;
+    }
+    #logoSpace .logo{
+        flex: content;
+    }
 }
 @media screen and (min-width: 1650px){
 

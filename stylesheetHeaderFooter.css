@@ -97,7 +97,7 @@
 
 footer{
     width: 100%;
-    margin: 0px 24px;
+    margin: 0px;
     height: 208px;
     text-align: center;
     justify-content: center;
@@ -153,6 +153,7 @@ footer{
 footer #footLink{
     display: flex;
     justify-content: space-around;
+    margin-left: 24px;
 }
 footer #footLink a{
     text-decoration: none;
