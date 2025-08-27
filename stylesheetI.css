@@ -68,7 +68,6 @@
     #work{
         margin: 96px auto;
     }
-
     /* Target the first project card (BRIDGEGOOD) */
     #work > a:first-of-type {
         position: relative;
@@ -107,60 +106,10 @@
         letter-spacing: 0.05em;
         z-index: 3;
     }
-
-    .exp-heading {
+    .exp-heading{
         display: flex;
         align-items: baseline;
         gap: 8px; /* space between h2 and h3 */
-    }
-    article{
-        padding: 20px;
-        margin-bottom: 16px;
-        color: rgb(74, 74, 104);
-    }
-    .caseStudy{
-        border: solid 1px #D9D9D9 ;
-        border-radius: 16px;
-        transition: all 0.3s ease;
-    }
-    .caseStudy h3{
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    .caseStudy p{
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    /* .caseStudy:hover{
-        border-color: #5E5F5E;
-        background-color: #5E5F5E;
-        color: white;
-    }
-    .caseStudy:hover h3,
-    .caseStudy:hover p,
-    .caseStudy:hover a {
-        color: white;
-    } */
-    .csTop{
-        display: flex;
-        flex-direction: row;
-        align-items: center; 
-        gap: 16px; 
-    }
-    .logo{
-        flex: 1;
-        align-items: center; 
-    }
-    .logo img{
-        max-height: 104px;  
-        display: block;
-    }
-    .csTitle{
-        flex: 9;
-        align-items: center; 
-    }
-    #cs{
-        margin: 128px 0px;
     }
 }
 @media screen and (min-width: 1650px){
