@@ -41,7 +41,7 @@
         background-repeat: no-repeat;
     }
     .hero-top nav ul li a {
-        color: white;                 /* on photo bg */
+        color: rgb(74, 74, 104);                /* on photo bg */
     }
     main{
         margin: 0 24px;
@@ -131,7 +131,7 @@
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    .caseStudy:hover{
+    /* .caseStudy:hover{
         border-color: #5E5F5E;
         background-color: #5E5F5E;
         color: white;
@@ -140,7 +140,7 @@
     .caseStudy:hover p,
     .caseStudy:hover a {
         color: white;
-    }
+    } */
     .csTop{
         display: flex;
         flex-direction: row;
