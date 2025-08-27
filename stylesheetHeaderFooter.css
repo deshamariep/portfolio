@@ -74,16 +74,16 @@
 .hero-content h1{
     margin: 24px 0px;
 }
-/* .hero-content h3,
+.hero-content h3,
 .hero-content p {
-    color: white !important;
-} */
+    color: rgb(74, 74, 104);
+}
 
 /* animated gradient look (yours) */
 .hero-heading-anim {
     background-image: radial-gradient(
         circle,
-        rgba(255, 255, 255, 0.7) 20%, 
+        rgba(74, 74, 104, 0.7) 20%, 
         rgba(82, 209, 252, 0.6) 41%, 
         rgba(207, 240, 255, 1) 66%, 
         rgba(229, 156, 252, 0.7) 88%
@@ -141,7 +141,7 @@ footer{
 #footTitle{
     margin-bottom: 16px;
 
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
+    background-image: radial-gradient(circle, rgba(74, 74, 104, 0.7) 20%, rgba(82, 209, 252, 0.6) 41%, rgba(207,240,255,1) 66%, rgba(229,156,252,0.7) 88%);
     background-size: 300% 300%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -171,7 +171,7 @@ footer #btmfoot {
     display: inline-block; /* Crucial */
     background-image: radial-gradient(
         circle,
-        rgba(94, 95, 94, 0.7) 10%,
+        rgba(74, 74, 104, 0.7) 10%,
         rgba(82, 209, 252, 0.7) 30%,
         rgba(207, 240, 255, 1) 31%,
         rgba(229, 156, 252, 1) 32%
