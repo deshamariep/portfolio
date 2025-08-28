@@ -1,14 +1,24 @@
 (function(){
     'use strict';
     console.log("reading js");
+    
+    let snapped = false;
     document.addEventListener("scroll", function () {
-      if (window.scrollY >= 8) {
+      // if user is at the very top, reset snapped
+      if (window.scrollY === 0) {
+        snapped = false;
+      }
+
+      // only snap if user starts at top and scrolls past 8px
+      if (!snapped && window.scrollY > 8) {
+        snapped = true;
         window.scrollTo({
-          top: 800,       // where you want it to snap
-          behavior: "smooth"  // smooth slide
+        top: 800,
+        behavior: "smooth"
         });
       }
     });
+
 
     const csInfo = document.getElementById('caseStudy');
     // const garden = document.getElementById('garden');
