@@ -1,6 +1,14 @@
 (function(){
     'use strict';
     console.log("reading js");
+    document.addEventListener("scroll", function () {
+      if (window.scrollY >= 8) {
+        window.scrollTo({
+          top: 800,       // where you want it to snap
+          behavior: "smooth"  // smooth slide
+        });
+      }
+    });
 
     const csInfo = document.getElementById('caseStudy');
     // const garden = document.getElementById('garden');
@@ -52,7 +60,7 @@
               }
             });
           },
-          { threshold: 0.2 } // you can adjust this
+          { threshold: 0.1 } // you can adjust this
         );
     
         observer.observe(footer);
