@@ -121,6 +121,15 @@
     .data div{
         flex: 1;
     }
+    .data540{
+        display: flex;
+    }
+    .data540 div{
+        flex: content;
+    }
+    .text540{
+        width: 540px;
+    }
 }   
 /* @media screen and (min-width: 1650px){
     body{
