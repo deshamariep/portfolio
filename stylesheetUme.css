@@ -196,6 +196,9 @@
         margin: auto; 
         margin-top: 10px;
     }
+    .h2Center{
+        text-align: center;
+    }
     #pinkLink{
         color: rgb(243, 159, 173);
     }

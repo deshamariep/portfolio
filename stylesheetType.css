@@ -40,7 +40,7 @@ p{
     letter-spacing: 0.03em;
     line-height: 140%;
 }
-ul li, ul li p, ol li p, .painPT .number, #smolP, footer p{
+ul li, ul li p, ol li p, .painPT .number, #smolP, footer p, #circle1, #circle2, #circle3, #circle4{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -56,8 +56,8 @@ a{
     font-weight: 400;
     text-decoration: none;
     font-style: normal;
-    font-size: 16px;
-    color: rgb(74, 74, 104);
+    font-size: 20px;
+    color: rgb(0, 0, 255);
     letter-spacing: 0.03em;
     line-height: 140%;
 }
@@ -79,7 +79,7 @@ footer a:hover{
     text-decoration: underline;
     font-style: normal;
     font-size: 16px;
-    color: rgb(0, 0, 238);
+    color: rgb(0, 0, 255);
     letter-spacing: 0.03em;
     line-height: 140%;
 }
