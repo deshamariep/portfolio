@@ -113,34 +113,50 @@
     }
     #logoSpace {
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
         gap: 16px;
     }  
     #logoSpace .logo {
         flex: 0 0 auto; /* prevent shrinking */
     } 
+    .logo {
+        position: relative;
+        width: 150px; /* Reserve consistent width */
+        height: 150px; /* Reserve consistent height for logos */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+        overflow: visible;
+    }
+    .logo-wrapper img {
+        transition: transform 0.3s ease;
+    }
     .logo img {
         width: 108px;
         height: auto;
         transition: width 0.3s ease;
+        z-index: 2; /* logo stays on top of the h3 */
     }
     .logo img:hover {
         width: 150px;
     }
-    .logo {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
     .logo h3 {
+        position: absolute;
+        bottom: -24px; /* sits just below logo */
+        left: 50%;
+        transform: translateX(-50%) translateY(20px); /* start hidden downward */
+        white-space: nowrap;
         opacity: 0;
-        transform: translateX(-20px); /* default slide-in from left */
-        transition: all 0.3s ease;
-        display: inline-block;
-        margin-left: 8px; /* keeps spacing between logo + text */
+        font-size: 1rem;
+        transition: all 0.4s ease;
+        z-index: 1;
     }
-    .logo.slide-right h3 {
-        transform: translateX(20px); /* for slide-in from right */
+    .logo:hover h3 {
+        opacity: 1;
+        transform: translateY(0);
     }
     #caseStudy{
         height: 500px;

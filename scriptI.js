@@ -56,26 +56,24 @@
     // h3s slide and logo scales
     const logos = document.querySelectorAll('.logo');
 
-    logos.forEach((logo, index) => {
+    logos.forEach(logo => {
       const img = logo.querySelector('img');
       const h3 = logo.querySelector('h3');
     
       logo.addEventListener('mouseenter', () => {
-        // Reset all logos
+        // Reset all
         logos.forEach(l => {
           const lImg = l.querySelector('img');
           const lH3 = l.querySelector('h3');
           lImg.style.width = "108px";
           lH3.style.opacity = "0";
-          lH3.style.transform = l.classList.contains("slide-right")
-            ? "translateX(20px)"
-            : "translateX(-20px)";
+          lH3.style.transform = "translateX(-50%) translateY(20px)";
         });
     
-        // Enlarge current logo
+        // Current logo enlarges and shows h3
         img.style.width = "150px";
         h3.style.opacity = "1";
-        h3.style.transform = "translateX(0)";
+        h3.style.transform = "translateX(-50%) translateY(0)";
       });
     });
 
