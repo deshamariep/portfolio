@@ -113,6 +113,7 @@
     }
     #logoSpace {
         display: flex;
+        align-items: center;
         gap: 16px;
     }  
     #logoSpace .logo {
@@ -127,19 +128,19 @@
         width: 150px;
     }
     .logo {
+        position: relative;
         display: flex;
         align-items: center;
-        gap: 10px;
     }
     .logo h3 {
         opacity: 0;
-        transform: translateX(-10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        white-space: nowrap;
+        transform: translateX(-20px); /* default slide-in from left */
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-left: 8px; /* keeps spacing between logo + text */
     }
-    .logo.show h3 {
-        opacity: 1;
-        transform: translateX(0);
+    .logo.slide-right h3 {
+        transform: translateX(20px); /* for slide-in from right */
     }
     #caseStudy{
         height: 500px;
