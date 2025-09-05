@@ -142,6 +142,15 @@
         animation: center;
         gap: 30px;
     }
+    .data540{
+        display: flex;
+    }
+    .data540 div{
+        flex: content;
+    }
+    .text540{
+        width: 540px;
+    }
     #noMargin{
         margin-top: 0px;
     }

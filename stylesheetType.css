@@ -40,6 +40,9 @@ p{
     letter-spacing: 0.03em;
     line-height: 140%;
 }
+.centerText{
+    text-align: center;
+}
 ul li, ul li p, ol li p, .painPT .number, #smolP, footer p, #circle1, #circle2, #circle3, #circle4{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
