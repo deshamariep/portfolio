@@ -114,7 +114,7 @@
     #logoSpace {
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-start;
+        align-items: flex-start; /* ensures all logos are aligned at the top */
         gap: 16px;
     }  
     #logoSpace .logo {
@@ -131,23 +131,35 @@
         color: inherit;
         overflow: visible;
     }
+    .logo-wrapper {
+        position: relative;
+        width: 108px;
+        height: 108px; /* fixed height container for baseline alignment */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* lock the top edge */
+        overflow: visible;
+    }
     .logo-wrapper img {
+        width: 108px;
+        height: auto;
         transition: transform 0.3s ease;
+        transform-origin: top center; /* scale downwards only */
+        z-index: 2;
     }
     .logo img {
         width: 108px;
         height: auto;
-        transition: width 0.3s ease;
         z-index: 2; /* logo stays on top of the h3 */
     }
-    .logo img:hover {
-        width: 150px;
+    .logo:hover .logo-wrapper img {
+        transform: scale(1.4); /* enlarges downward only */
     }
     .logo h3 {
         position: absolute;
-        bottom: -24px; /* sits just below logo */
-        left: 50%;
-        transform: translateX(-50%) translateY(20px); /* start hidden downward */
+        top: 50%; /* align vertically with logo */
+        left: 100%; /* start at right edge of logo */
+        transform: translateY(-50%) translateX(20px); /* hidden, shifted right */
         white-space: nowrap;
         opacity: 0;
         font-size: 1rem;
@@ -156,7 +168,7 @@
     }
     .logo:hover h3 {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(-50%) translateY(0);
     }
     #caseStudy{
         height: 500px;

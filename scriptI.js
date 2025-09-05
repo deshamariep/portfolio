@@ -57,21 +57,17 @@
     const logos = document.querySelectorAll('.logo');
 
     logos.forEach(logo => {
-      const img = logo.querySelector('img');
       const h3 = logo.querySelector('h3');
     
       logo.addEventListener('mouseenter', () => {
         // Reset all
         logos.forEach(l => {
-          const lImg = l.querySelector('img');
           const lH3 = l.querySelector('h3');
-          lImg.style.width = "108px";
           lH3.style.opacity = "0";
           lH3.style.transform = "translateX(-50%) translateY(20px)";
         });
     
-        // Current logo enlarges and shows h3
-        img.style.width = "150px";
+        // Show current h3
         h3.style.opacity = "1";
         h3.style.transform = "translateX(-50%) translateY(0)";
       });
