@@ -127,7 +127,7 @@
     .data540 div{
         flex: content;
     }
-    .text540{
+    .text540, .text540 ul{
         width: 540px;
     }
 }   
