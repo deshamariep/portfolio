@@ -126,6 +126,21 @@
     .logo img:hover {
         width: 150px;
     }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .logo h3 {
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        white-space: nowrap;
+    }
+    .logo.show h3 {
+        opacity: 1;
+        transform: translateX(0);
+    }
     #caseStudy{
         height: 500px;
         display: flex;
