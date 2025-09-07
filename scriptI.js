@@ -53,23 +53,6 @@
       csInfo.innerHTML = '<div><h1>UME Tea</h1><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p></div><div><img src="images/umeTeaImages.png" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div>';
     });
 
-    // h3s slide and logo scales
-    const logos = document.querySelectorAll('.logo');
-
-    logos.forEach(logo => {
-      const h3 = logo.querySelector('h3');
-    
-      logo.addEventListener('mouseleave', () => {
-        if (logo.classList.contains("slide-left")) {
-          h3.style.opacity = "0";
-          h3.style.transform = "translateX(-20px)";
-        } else {
-          h3.style.opacity = "0";
-          h3.style.transform = "translateX(20px)";
-        }
-      });
-    });
-
     // garden.addEventListener('mouseout', function() {
     //     plantInfo.innerHTML = '<h3> <- hover for info</h3>';
     // });

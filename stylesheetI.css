@@ -111,24 +111,26 @@
         align-items: baseline;
         gap: 8px; /* space between h2 and h3 */
     }
+    /* Logo container */
     #logoSpace {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 16px;
     }
-      
+    /* Each logo block */
     .logo {
         position: relative;
-        width: 108px;
+        width: 108px; /* base size */
         height: 108px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
         color: inherit;
+        overflow: visible;
     }
-      
+    /* Wrapper for the logo image */
     .logo-wrapper {
         position: relative;
         width: 108px;
@@ -138,40 +140,37 @@
         align-items: flex-start;
         overflow: visible;
     }
-      
+    /* Logo images */
     .logo-wrapper img {
         width: 108px;
         height: auto;
         transition: transform 0.3s ease;
-        transform-origin: top center;
+        transform-origin: top center; /* grows downward */
         z-index: 2;
     }
-      
+    /* Enlarge logo on hover */
     .logo:hover .logo-wrapper img {
-        transform: scale(1.4); /* enlarge smoothly */
+        transform: scale(1.4);
     }
-      
-    /* Captions */
+    /* Captions (default hidden state, slide right) */
     .logo h3 {
         position: absolute;
         top: 50%;
-        left: 100%; /* default sits right of logo */
-        transform: translateX(20px); /* hidden off to the right */
+        left: 100%; /* sit to the right */
+        transform: translateX(20px);
         white-space: nowrap;
         opacity: 0;
         font-size: 1rem;
         transition: all 0.4s ease;
         z-index: 1;
     }
-      
-    /* Right-side logos get slide-left */
+    /* Special case for right-side logos (slide left) */
     .logo.slide-left h3 {
         left: auto;
-        right: 100%;
-        transform: translateX(-20px); /* hidden off to the left */
+        right: 100%; /* sit to the left */
+        transform: translateX(-20px);
     }
-      
-    /* On hover, caption slides in */
+    /* Hover state: captions slide into place */
     .logo:hover h3 {
         opacity: 1;
         transform: translateX(0);
