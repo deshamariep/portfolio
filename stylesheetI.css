@@ -156,8 +156,8 @@
     .logo h3 {
         position: absolute;
         top: 50%;
-        left: 100%; /* sit to the right */
-        transform: translateX(20px);
+        left: calc(100% + 8px);
+        transform: translateX(-50px) translateY(50px);
         white-space: nowrap;
         opacity: 0;
         font-size: 1rem;
@@ -167,13 +167,13 @@
     /* Special case for right-side logos (slide left) */
     .logo.slide-left h3 {
         left: auto;
-        right: 100%; /* sit to the left */
-        transform: translateX(-20px);
+        right: calc(100% + 8px);
+        transform: translateX(50px) translateY(50px);
     }
     /* Hover state: captions slide into place */
     .logo:hover h3 {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0) translateY(50px);
     }
     #caseStudy{
         height: 500px;
