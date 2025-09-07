@@ -129,12 +129,16 @@
         text-decoration: none;
         color: inherit;
         overflow: visible;
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+    .logo:hover {
+        width: 150px;
+        height: 150px;
     }
     /* Wrapper for the logo image */
     .logo-wrapper {
-        position: relative;
-        width: 108px;
-        height: 108px;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -142,21 +146,21 @@
     }
     /* Logo images */
     .logo-wrapper img {
-        width: 108px;
+        width: 100%;
         height: auto;
         transition: transform 0.3s ease;
-        transform-origin: top center; /* grows downward */
+        transform-origin: top center;
         z-index: 2;
     }
     /* Enlarge logo on hover */
     .logo:hover .logo-wrapper img {
-        transform: scale(1.4);
+        transform: scale(1.1);
     }
     /* Captions (default hidden state, slide right) */
     .logo h3 {
         position: absolute;
         top: 50%;
-        left: calc(100% + 8px);
+        left: calc(100% + 32px);
         transform: translateX(-50px) translateY(50px);
         white-space: nowrap;
         opacity: 0;
@@ -167,7 +171,7 @@
     /* Special case for right-side logos (slide left) */
     .logo.slide-left h3 {
         left: auto;
-        right: calc(100% + 8px);
+        right: calc(100% + 32px);
         transform: translateX(50px) translateY(50px);
     }
     /* Hover state: captions slide into place */
