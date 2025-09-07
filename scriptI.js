@@ -59,17 +59,14 @@
     logos.forEach(logo => {
       const h3 = logo.querySelector('h3');
     
-      logo.addEventListener('mouseenter', () => {
-        // Reset all
-        logos.forEach(l => {
-          const lH3 = l.querySelector('h3');
-          lH3.style.opacity = "0";
-          lH3.style.transform = "translateX(-50%) translateY(20px)";
-        });
-    
-        // Show current h3
-        h3.style.opacity = "1";
-        h3.style.transform = "translateX(-50%) translateY(0)";
+      logo.addEventListener('mouseleave', () => {
+        if (logo.classList.contains("slide-left")) {
+          h3.style.opacity = "0";
+          h3.style.transform = "translateX(-20px)";
+        } else {
+          h3.style.opacity = "0";
+          h3.style.transform = "translateX(20px)";
+        }
       });
     });
 
