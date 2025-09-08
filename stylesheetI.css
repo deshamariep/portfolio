@@ -68,46 +68,63 @@
     #work{
         margin: 8px auto 96px;
     }
-    /* Target the Bridgegood logo only */
-    #bridgegood {
-        position: relative;
-        pointer-events: none; /* prevent clicking */
+    /* Popup overlay (hidden by default) */
+    .popup {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        inset: 0; /* shorthand for top:0; left:0; right:0; bottom:0 */
+        background: rgba(255, 255, 255, 0.6); /* lighter overlay to match your style */
+        backdrop-filter: blur(6px); /* soft frosted glass effect */
+        justify-content: center;
+        align-items: center;
     }
-    /* Overlay with gradient */
-    #bridgegood::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.8) 0%,
-            rgba(230, 230, 230, 0.7) 100%
-        );
-        backdrop-filter: blur(2px);
-        border: 1px solid rgba(217, 217, 217, 0.6);
+    /* Popup content box */
+    .popup-content {
+        background: #ffffff;
+        padding: 24px 32px;
         border-radius: 16px;
-        z-index: 3; /* sit above logo + caption */
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #4a4a68; /* subtle muted heading color */
+        position: relative;
+        max-width: 320px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        animation: fadeIn 0.3s ease;
+        border: 1px solid rgba(94, 95, 94, 0.2);
     }
-    /* "Coming Soon" label */
-    #bridgegood::after {
-        content: "Coming Soon";
+    /* Close button */
+    .popup-content .close {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 6px 14px;
-        font-size: 0.9rem;
+        top: 10px;
+        right: 14px;
+        font-size: 20px;
         font-weight: 600;
-        color: rgb(74, 74, 104);
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid rgba(94, 95, 94, 0.3);
-        border-radius: 14px;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        z-index: 4;
+        cursor: pointer;
+        color: #666;
+        transition: color 0.2s ease;
+    }
+    .popup-content .close:hover {
+        color: #000;
+    }
+    /* Button-like styling for the text */
+    .popup-content p {
+        margin: 0;
+        padding: 8px 20px;
+        display: inline-block;
+        background: rgba(245, 245, 245, 0.9);
+        border-radius: 20px;
+        border: 1px solid rgba(94, 95, 94, 0.25);
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: #4a4a68;
+    }
+    /* Smooth fade animation */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
     }
     .exp-heading{
         display: flex;

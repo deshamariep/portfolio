@@ -25,7 +25,7 @@
 
     // Amplfy
     document.getElementById('bridgegood').addEventListener('mouseover', function() {
-        csInfo.innerHTML = '<div><h1>Amplfy</h1><p>A living network that turns opportunities into results</p></div><div><img src="images/amplfyImages.svg" alt="Frame from Amplfy application" height="475px" width="954px"></div>';
+        csInfo.innerHTML = '<section id="caseStudy"><a href="#"><div id="csText"><h1>Amplify</h1><p>A living network that turns opportunities into results</p></div><div id="csImage"><img src="images/amplfyImages.svg" alt="Frames from Amplify mobile application" height="475px" width="954px"></div></a></section>';
         // garden.style.animationPlayState = 'paused';
     });
     // document.getElementById('bridgegood').addEventListener('mouseout', function() {
@@ -35,22 +35,22 @@
 
     // TAP Series
     document.getElementById('tapSeries').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<a href="tapSeries.html"><div><h1>TAP Series</h1><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p></div><div><img src="images/tapSeriesImages.svg" alt="Frames from TAP Series website projects" height="475px" width="867px"></div></a>';
+      csInfo.innerHTML = '<section id="caseStudy"><a href="tapSeries.html"><div id="csText"><h1>TAP Series</h1><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p></div><div id="csImage"><img src="images/tapSeriesImages.svg" alt="Frames from TAP Series website projects" height="475px" width="867px"></div></a></section>';
     });
 
     // GSt
     document.getElementById('gSt').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<a href="gStreet.html"><div><h1>G Street UX</h1><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p></div><div><img src="images/gStreetImages.svg" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div></a>';
+      csInfo.innerHTML = '<section id="caseStudy"><a href="gStreet.html"><div id="csText"><h1>G Street UX</h1><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p></div><div id="csImage"><img src="images/gStreetImages.svg" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div></a></section>';
     });
 
      // Spots
      document.getElementById('spotsCS').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<a href="spots.html"><div><h1>Spots</h1><p>A centralized hub connecting students with housing, roommates, and community.</p></div><div><img src="images/spotsImages.svg" alt="Frames from Spots website application" height="475px" width="811px"></div></a>';
+      csInfo.innerHTML = '<section id="caseStudy"><a href="spots.html"><div id="csText"><h1>Spots</h1><p>A centralized hub connecting students with housing, roommates, and community.</p></div><div id="csImage"><img src="images/spotsImages.svg" alt="Frames from Spots website application" height="475px" width="811px"></div></a></section>';
     });
 
     // Ume
     document.getElementById('umeCS').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<a href="ume.html"><div><h1>UME Tea</h1><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p></div><div><img src="images/umeTeaImages.svg" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div></a>';
+      csInfo.innerHTML = '<section id="caseStudy"><a href="ume.html"><div id="csText"><h1>UME Tea</h1><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p></div><div id="csImage"><img src="images/umeTeaImages.svg" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div></a></section>';
     });
 
     // logo and h3 stay without hover
@@ -65,9 +65,27 @@
       });
     });
 
-    // garden.addEventListener('mouseout', function() {
-    //     plantInfo.innerHTML = '<h3> <- hover for info</h3>';
-    // });
+    const bridgegood = document.getElementById("bridgegood");
+    const popup = document.getElementById("comingSoonPopup");
+    const closeBtn = popup.querySelector(".close");
+    
+    // Open popup on click
+    bridgegood.addEventListener("click", (e) => {
+      e.preventDefault(); // prevent navigation
+      popup.style.display = "flex";
+    });
+    
+    // Close when X is clicked
+    closeBtn.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+    
+    // Close when clicking outside the box
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
 
 
     document.addEventListener("DOMContentLoaded", () => {
