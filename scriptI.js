@@ -19,38 +19,85 @@
       }
     });
 
-
     const csInfo = document.getElementById('caseStudy');
-    // const garden = document.getElementById('garden');
-
-    // Amplfy
+    const csTextH1 = document.querySelector('#csText h1');
+    const csTextP = document.querySelector('#csText p');
+    const csImage = document.querySelector('#csImage img');
+    const csLink = document.querySelector('#caseStudy a');
+    
+    // helper function to update case study content
+    function updateCaseStudy(title, text, imgSrc, imgAlt, imgWidth, imgHeight, linkHref = "#") {
+      csTextH1.textContent = title;
+      csTextP.textContent = text;
+      csImage.src = imgSrc;
+      csImage.alt = imgAlt;
+      csImage.width = imgWidth;
+      csImage.height = imgHeight;
+      csLink.href = linkHref;
+    }
+    
+    // Amplify
     document.getElementById('bridgegood').addEventListener('mouseover', function() {
-        csInfo.innerHTML = '<section id="caseStudy"><a href="#"><div id="csText"><h1>Amplify</h1><p>A living network that turns opportunities into results</p></div><div id="csImage"><img src="images/amplfyImages.svg" alt="Frames from Amplify mobile application" height="475px" width="954px"></div></a></section>';
-        // garden.style.animationPlayState = 'paused';
+      updateCaseStudy(
+        "Amplify",
+        "A living network that turns opportunities into results",
+        "images/amplfyImages.svg",
+        "Frames from Amplify mobile application",
+        954,
+        475
+      );
     });
-    // document.getElementById('bridgegood').addEventListener('mouseout', function() {
-    //   csInfo.innerHTML = '<div><h1></h1><p></p></div><div><img src="" alt="" height="" width=""></div>';
-    //     // garden.style.animationPlayState = 'running';
-    // });
-
+    
     // TAP Series
     document.getElementById('tapSeries').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<section id="caseStudy"><a href="tapSeries.html"><div id="csText"><h1>TAP Series</h1><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p></div><div id="csImage"><img src="images/tapSeriesImages.svg" alt="Frames from TAP Series website projects" height="475px" width="867px"></div></a></section>';
+      updateCaseStudy(
+        "TAP Series",
+        "Designing better interfaces and streamlining 50K+ weekly marketing lead workflow",
+        "images/tapSeriesImages.svg",
+        "Frames from TAP Series website projects",
+        867,
+        475,
+        "tapSeries.html"
+      );
     });
-
-    // GSt
+    
+    // G Street
     document.getElementById('gSt').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<section id="caseStudy"><a href="gStreet.html"><div id="csText"><h1>G Street UX</h1><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p></div><div id="csImage"><img src="images/gStreetImages.svg" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div></a></section>';
+      updateCaseStudy(
+        "G Street UX",
+        "Creating inclusive community spaces from downtown revitalization to vibrant public experiences",
+        "images/gStreetImages.svg",
+        "Images from Davis California G Street, historical arch, team image, current G Street",
+        927,
+        475,
+        "gStreet.html"
+      );
     });
-
-     // Spots
-     document.getElementById('spotsCS').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<section id="caseStudy"><a href="spots.html"><div id="csText"><h1>Spots</h1><p>A centralized hub connecting students with housing, roommates, and community.</p></div><div id="csImage"><img src="images/spotsImages.svg" alt="Frames from Spots website application" height="475px" width="811px"></div></a></section>';
+    
+    // Spots
+    document.getElementById('spotsCS').addEventListener('mouseover', function() {
+      updateCaseStudy(
+        "Spots",
+        "A centralized hub connecting students with housing, roommates, and community.",
+        "images/spotsImages.svg",
+        "Frames from Spots website application",
+        811,
+        475,
+        "spots.html"
+      );
     });
-
-    // Ume
+    
+    // UME Tea
     document.getElementById('umeCS').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<section id="caseStudy"><a href="ume.html"><div id="csText"><h1>UME Tea</h1><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p></div><div id="csImage"><img src="images/umeTeaImages.svg" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div></a></section>';
+      updateCaseStudy(
+        "UME Tea",
+        "Transforming marketing strategy through comprehensive analysis and targeted campaign development",
+        "images/umeTeaImages.svg",
+        "Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona",
+        712,
+        475,
+        "ume.html"
+      );
     });
 
     // logo and h3 stay without hover

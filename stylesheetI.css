@@ -121,8 +121,8 @@
     /* Each logo block */
     .logo {
         position: relative;
-        width: 108px; /* base size */
-        height: 108px;
+        width: auto; /* base size */
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -146,7 +146,7 @@
     }
     /* Logo images */
     .logo-wrapper img {
-        width: 100%;
+        width: 108px;
         height: auto;
         transition: transform 0.3s ease;
         transform-origin: top center;
