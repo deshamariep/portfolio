@@ -46,7 +46,6 @@
     main{
         margin: 0 24px;
         box-sizing: border-box;
-        color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 1.6
     }
@@ -70,7 +69,6 @@
         margin-top: 32px;
     }
     #infoBox p{
-        color: rgb(94, 95, 94) !important;
         width: 475px;
     }
     #arrowContainer {

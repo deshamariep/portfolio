@@ -56,8 +56,9 @@
     border: none;
     outline: none;
     text-align: center;
+    font-size: 18px;
     display: inline-block;
-    color: rgb(94, 95, 94); /* for all pages */
+    color: rgb(74, 74, 104);
     text-decoration: none;
 }
 /* hero text (like old #intro, left aligned) */
@@ -103,8 +104,8 @@ footer{
     justify-content: center;
     align-items: center;
     display: block;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: rgb(94, 95, 94);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(74, 74, 104);
     box-sizing: border-box;
 }
 #footerData{
