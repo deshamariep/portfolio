@@ -121,8 +121,8 @@
     /* Each logo block */
     .logo {
         position: relative;
-        width: auto; /* base size */
-        height: auto;
+        width: 108px; /* base size */
+        height: 108px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -131,7 +131,7 @@
         overflow: visible;
         transition: width 0.3s ease, height 0.3s ease;
     }
-    .logo.active {
+    .logo:hover {
         width: 150px;
         height: 150px;
     }
@@ -146,22 +146,22 @@
     }
     /* Logo images */
     .logo-wrapper img {
-        width: 108px;
+        width: 100%;
         height: auto;
         transition: transform 0.3s ease;
         transform-origin: top center;
         z-index: 2;
     }
     /* Enlarge logo on hover */
-    .logo.active .logo-wrapper img {
+    .logo:hover .logo-wrapper img {
         transform: scale(1.1);
     }
     /* Captions (default hidden state, slide right) */
     .logo h3 {
         position: absolute;
         top: 50%;
-        left: calc(100% + 16px);
-        transform: translateX(-50px) translateY(35px);
+        left: calc(100% + 32px);
+        transform: translateX(-50px) translateY(50px);
         white-space: nowrap;
         opacity: 0;
         font-size: 1rem;
@@ -171,13 +171,13 @@
     /* Special case for right-side logos (slide left) */
     .logo.slide-left h3 {
         left: auto;
-        right: calc(100% + 16px);
-        transform: translateX(50px) translateY(35px);
+        right: calc(100% + 32px);
+        transform: translateX(50px) translateY(50px);
     }
     /* Hover state: captions slide into place */
-    .logo.active h3 {
+    .logo:hover h3 {
         opacity: 1;
-        transform: translateX(0) translateY(35px);
+        transform: translateX(0) translateY(50px);
     }
     #caseStudy{
         height: 500px;
@@ -199,5 +199,3 @@
 @media screen and (min-width: 1850px){
     
 }
-
-
