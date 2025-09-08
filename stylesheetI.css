@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 767px){
     .mobileIncomplete {
         display: block;
@@ -131,7 +132,7 @@
         overflow: visible;
         transition: width 0.3s ease, height 0.3s ease;
     }
-    .logo:hover {
+    .logo.active {
         width: 150px;
         height: 150px;
     }
@@ -153,28 +154,29 @@
         z-index: 2;
     }
     /* Enlarge logo on hover */
-    .logo:hover .logo-wrapper img {
+    .logo.active .logo-wrapper img {
         transform: scale(1.1);
     }
     /* Captions (default hidden state, slide right) */
-    .logo p {
+    .logo h3 {
         position: absolute;
         top: 50%;
         left: calc(100% + 16px);
         transform: translateX(-50px) translateY(35px);
         white-space: nowrap;
         opacity: 0;
+        font-size: 1rem;
         transition: all 0.4s ease;
         z-index: 1;
     }
     /* Special case for right-side logos (slide left) */
-    .logo.slide-left p {
+    .logo.slide-left h3 {
         left: auto;
         right: calc(100% + 16px);
         transform: translateX(50px) translateY(35px);
     }
     /* Hover state: captions slide into place */
-    .logo:hover p {
+    .logo.active h3 {
         opacity: 1;
         transform: translateX(0) translateY(35px);
     }

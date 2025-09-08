@@ -1,5 +1,4 @@
 
-
 (function(){
   'use strict';
   console.log("reading js");
@@ -27,7 +26,7 @@
 
   // Amplfy
   document.getElementById('bridgegood').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<div><h1>Amplfy</h1><p>A living network that turns opportunities into results</p></div><div><img src="images/amplfyImages.png" alt="Frame from Amplfy application" height="475px" width="954px"></div>';
+      csInfo.innerHTML = '<div><h1>Amplfy</h1><p>A living network that turns opportunities into results</p></div><div><img src="images/amplfyImages.svg" alt="Frame from Amplfy application" height="475px" width="954px"></div>';
       // garden.style.animationPlayState = 'paused';
   });
   // document.getElementById('bridgegood').addEventListener('mouseout', function() {
@@ -37,25 +36,25 @@
 
   // TAP Series
   document.getElementById('tapSeries').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div><h1>TAP Series</h1><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p></div><div><img src="images/tapSeriesImages.png" alt="Frames from TAP Series website projects" height="475px" width="867px"></div>';
+    csInfo.innerHTML = '<div><h1>TAP Series</h1><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p></div><div><img src="images/tapSeriesImages.svg" alt="Frames from TAP Series website projects" height="475px" width="867px"></div>';
   });
 
   // GSt
   document.getElementById('gSt').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div><h1>G Street UX</h1><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p></div><div><img src="images/gStreetImages.png" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div>';
+    csInfo.innerHTML = '<div><h1>G Street UX</h1><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p></div><div><img src="images/gStreetImages.svg" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div>';
   });
 
    // Spots
    document.getElementById('spotsCS').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div><h1>Spots</h1><p>A centralized hub connecting students with housing, roommates, and community.</p></div><div><img src="images/spotsImages.png" alt="Frames from Spots website application" height="475px" width="811px"></div>';
+    csInfo.innerHTML = '<div><h1>Spots</h1><p>A centralized hub connecting students with housing, roommates, and community.</p></div><div><img src="images/spotsImages.svg" alt="Frames from Spots website application" height="475px" width="811px"></div>';
   });
 
   // Ume
   document.getElementById('umeCS').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div><h1>UME Tea</h1><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p></div><div><img src="images/umeTeaImages.png" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div>';
+    csInfo.innerHTML = '<div><h1>UME Tea</h1><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p></div><div><img src="images/umeTeaImages.svg" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div>';
   });
 
-  // logo and p stay without hover
+  // logo and h3 stay without hover
   const logos = document.querySelectorAll('.logo');
 
   logos.forEach(logo => {
