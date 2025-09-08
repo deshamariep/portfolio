@@ -157,7 +157,7 @@
         transform: scale(1.1);
     }
     /* Captions (default hidden state, slide right) */
-    .logo h3 {
+    .logo p {
         position: absolute;
         top: 50%;
         left: calc(100% + 16px);
@@ -168,13 +168,13 @@
         z-index: 1;
     }
     /* Special case for right-side logos (slide left) */
-    .logo.slide-left h3 {
+    .logo.slide-left p {
         left: auto;
         right: calc(100% + 16px);
         transform: translateX(50px) translateY(35px);
     }
     /* Hover state: captions slide into place */
-    .logo:hover h3 {
+    .logo:hover p {
         opacity: 1;
         transform: translateX(0) translateY(35px);
     }

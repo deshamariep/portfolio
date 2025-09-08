@@ -55,7 +55,7 @@
     csInfo.innerHTML = '<div><h1>UME Tea</h1><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p></div><div><img src="images/umeTeaImages.png" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div>';
   });
 
-  // logo and h3 stay without hover
+  // logo and p stay without hover
   const logos = document.querySelectorAll('.logo');
 
   logos.forEach(logo => {
