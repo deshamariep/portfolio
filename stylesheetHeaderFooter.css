@@ -56,7 +56,8 @@
     border: none;
     outline: none;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 300;
     display: inline-block;
     color: rgb(74, 74, 104);
     text-decoration: none;
