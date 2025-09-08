@@ -52,10 +52,10 @@
     }
     #query{
         width: 100%;
-        margin: 0 auto; 
+        margin: 300 auto; 
     }
     .spaceBtwn{
-        margin-top: 192px;
+        margin-top: 200px;
         margin-bottom: 96px;
         transform: scale(0.9);
         opacity: 0.4;
