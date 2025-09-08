@@ -43,12 +43,12 @@
         background-repeat: no-repeat;
     }
     main{
-        margin: 0 24px;
+        margin: 0px 24px;
         box-sizing: border-box;
     }
     #query{
         width: 100%;
-        margin: 300 auto; 
+        margin: 300px auto; 
     }
     .spaceBtwn {
         margin-top: 200px;
