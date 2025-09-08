@@ -160,24 +160,23 @@
     .logo h3 {
         position: absolute;
         top: 50%;
-        left: calc(100% + 32px);
-        transform: translateX(-50px) translateY(50px);
+        left: calc(100% + 16px);
+        transform: translateX(-50px) translateY(35px);
         white-space: nowrap;
         opacity: 0;
-        font-size: 1rem;
         transition: all 0.4s ease;
         z-index: 1;
     }
     /* Special case for right-side logos (slide left) */
     .logo.slide-left h3 {
         left: auto;
-        right: calc(100% + 32px);
-        transform: translateX(50px) translateY(50px);
+        right: calc(100% + 16px);
+        transform: translateX(50px) translateY(35px);
     }
     /* Hover state: captions slide into place */
     .logo:hover h3 {
         opacity: 1;
-        transform: translateX(0) translateY(50px);
+        transform: translateX(0) translateY(35px);
     }
     #caseStudy{
         height: 500px;
