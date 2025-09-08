@@ -65,28 +65,6 @@
       });
     });
 
-    const bridgegood = document.getElementById("bridgegood");
-    const popup = document.getElementById("comingSoonPopup");
-    const closeBtn = popup.querySelector(".close");
-    
-    // Open popup on click
-    bridgegood.addEventListener("click", (e) => {
-      e.preventDefault(); // prevent navigation
-      popup.style.display = "flex";
-    });
-    
-    // Close when X is clicked
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none";
-    });
-    
-    // Close when clicking outside the box
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        popup.style.display = "none";
-      }
-    });
-
 
     document.addEventListener("DOMContentLoaded", () => {
         const footer = document.querySelector("footer");
