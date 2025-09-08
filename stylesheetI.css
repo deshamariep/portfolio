@@ -68,43 +68,46 @@
     #work{
         margin: 8px auto 96px;
     }
-    /* Target the first project card (BRIDGEGOOD) */
-    #work > a:first-of-type {
+    /* Target the Bridgegood logo only */
+    #bridgegood {
         position: relative;
-        display: block;
-        pointer-events: none; /* Make the entire card non-clickable */
+        pointer-events: none; /* prevent clicking */
     }
-    /* Overlay with gradient and button-like look */
-    #work > a:first-of-type::before {
+    /* Overlay with gradient */
+    #bridgegood::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(230, 230, 230, 0.7) 100%);
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(230, 230, 230, 0.7) 100%
+        );
         backdrop-filter: blur(2px);
         border: 1px solid rgba(217, 217, 217, 0.6);
-        border-radius: 16px; /* Match .caseStudy card */
-        z-index: 2;
+        border-radius: 16px;
+        z-index: 3; /* sit above logo + caption */
     }
-    /* Text styled like a subtle button label */
-    #work > a:first-of-type::after {
+    /* "Coming Soon" label */
+    #bridgegood::after {
         content: "Coming Soon";
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 8px 20px;
-        font-size: 1.1rem;
+        padding: 6px 14px;
+        font-size: 0.9rem;
         font-weight: 600;
         color: rgb(74, 74, 104);
-        background: rgba(255, 255, 255, 0.85);
+        background: rgba(255, 255, 255, 0.9);
         border: 1px solid rgba(94, 95, 94, 0.3);
-        border-radius: 20px;
+        border-radius: 14px;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        z-index: 3;
+        z-index: 4;
     }
     .exp-heading{
         display: flex;
@@ -164,7 +167,6 @@
         transform: translateX(-50px) translateY(35px);
         white-space: nowrap;
         opacity: 0;
-        font-size: 1rem;
         transition: all 0.4s ease;
         z-index: 1;
     }
