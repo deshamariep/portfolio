@@ -67,7 +67,7 @@ a{
 footer a{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 300;
     text-decoration: none;
     font-style: normal;
     font-size: 16px;
@@ -78,7 +78,7 @@ footer a{
 footer a:hover{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 300;
     text-decoration: underline;
     font-style: normal;
     font-size: 16px;
