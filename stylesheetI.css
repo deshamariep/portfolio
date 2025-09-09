@@ -185,8 +185,8 @@
         display: flex;
     }
     #csText {
-        flex: 0 0 37.5%;  /* fixed 540px width */
-        padding-top: 32px;
+        flex: 0 0 540;  /* fixed 540px width */
+        padding-top: 48px;
     }
     #csText h1{
         margin-bottom: 0px;
