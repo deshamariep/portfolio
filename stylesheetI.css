@@ -185,10 +185,14 @@
         display: flex;
     }
     #csText {
-        flex: 0 0 540px;  /* fixed 540px width */
+        flex: 0 0 37.5%;  /* fixed 540px width */
+        padding-top: 32px;
+    }
+    #csText h1{
+        margin-bottom: 0px;
     }
     #csImage {
-        flex: 1;        
+        flex: 0 0 1;   /* don’t grow, don’t shrink, size to image */
         display: flex;
         justify-content: center;
         align-items: center;
