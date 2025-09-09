@@ -99,7 +99,7 @@
         popup.classList.remove("show", "hide");
         popup.style.display = "none";
       }, 500); // wait for fade-out transition
-    }, 2000);
+    }, 1500);
   
     // Reset display for fade-in
     popup.style.display = "flex";
