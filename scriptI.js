@@ -83,6 +83,28 @@
   //     plantInfo.innerHTML = '<h3> <- hover for info</h3>';
   // });
 
+  // pop-up
+  const bridgegoodLogo = document.getElementById("bridgegood");
+  const popup = document.getElementById("popup");
+  
+  bridgegoodLogo.addEventListener("click", (e) => {
+    e.preventDefault(); // prevent navigation
+  
+    popup.classList.add("show");
+  
+    // Hide after 2 seconds
+    setTimeout(() => {
+      popup.classList.add("hide");
+      setTimeout(() => {
+        popup.classList.remove("show", "hide");
+        popup.style.display = "none";
+      }, 500); // wait for fade-out transition
+    }, 2000);
+  
+    // Reset display for fade-in
+    popup.style.display = "flex";
+  });
+
 
   document.addEventListener("DOMContentLoaded", () => {
       const footer = document.querySelector("footer");
