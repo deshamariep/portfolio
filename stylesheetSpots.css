@@ -37,7 +37,7 @@
         height: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        background-image: url(images/whiteInfoBox.png);
+        background-image: url(images/newInfoBox.png);
         background-size: 500px 800px;
         background-position: 0px top;
         background-repeat: no-repeat;
