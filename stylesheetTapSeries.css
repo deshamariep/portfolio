@@ -43,14 +43,6 @@
         background-position: 0px top; 
         background-repeat: no-repeat; */
     }
-    #whiteBox {
-        position: absolute;
-        background-image: url(images/spotsInfoBox.png);
-        background-size: 500px 800px;
-        background-position: 0px top;
-        background-repeat: no-repeat;
-        z-index: 10; /* pushes it above the page content */
-    }
     main{
         margin: 0px 24px;
         box-sizing: border-box;
