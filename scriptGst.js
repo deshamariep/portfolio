@@ -2,6 +2,23 @@
     'use strict';
     console.log("running js");
 
+    let snapped = false;
+    document.addEventListener("scroll", function () {
+      // if user is at the very top, reset snapped
+      if (window.scrollY === 0) {
+        snapped = false;
+      }
+  
+      // only snap if user starts at top and scrolls past 8px
+      if (!snapped && window.scrollY > 8) {
+        snapped = true;
+        window.scrollTo({
+        top: 800,
+        behavior: "smooth"
+        });
+      }
+    });
+
     const sections = document.querySelectorAll('.spaceBtwn');
     // This creates a "trigger zone" between 25% and 75% of the viewport height
     const observer = new IntersectionObserver(entries => {
