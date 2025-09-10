@@ -59,7 +59,7 @@
     font-size: 16px;
     font-weight: 300;
     display: inline-block;
-    color: rgb(74, 74, 104);
+    color: rgb(48, 48, 66);
     text-decoration: none;
 }
 /* hero text (like old #intro, left aligned) */
@@ -70,7 +70,7 @@
     transform: translateY(-50%); /* only shift vertically */
     max-width: 875px;
     z-index: 4;
-    color: rgb(74, 74, 104);
+    color: rgb(48, 48, 66);
     margin: 0;
 }
 .hero-content h1{
@@ -78,14 +78,14 @@
 }
 .hero-content h3,
 .hero-content p {
-    color: rgb(74, 74, 104);
+    color: rgb(48, 48, 66);
 }
 
 /* animated gradient look (yours) */
 .hero-heading-anim {
     background-image: radial-gradient(
         circle,
-        rgba(74, 74, 104, 0.7) 20%, 
+        rgba(48, 48, 66, 0.7) 20%, 
         rgba(45, 140, 190, 0.6) 41%, 
         rgba(87, 132, 199, 1) 66%, 
         rgba(169, 108, 208, 0.7) 88%
@@ -106,7 +106,7 @@ footer{
     align-items: center;
     display: block;
     background-color: rgba(255, 255, 255, 0.3);
-    color: rgb(74, 74, 104);
+    color: rgb(48, 48, 66);
     box-sizing: border-box;
 }
 #footerData{
@@ -145,7 +145,7 @@ footer{
 
     background-image: radial-gradient(
         circle,
-        rgba(74, 74, 104, 0.7) 20%, 
+        rgba(48, 48, 66, 0.7) 20%, 
         rgba(45, 140, 190, 0.6) 41%, 
         rgba(87, 132, 199, 1) 66%, 
         rgba(169, 108, 208, 0.7) 88%
@@ -201,7 +201,7 @@ footer #btmfoot {
     100% {
         background-position: 50% 50%;
         background-image: none;
-        color: rgb(74, 74, 104); /* Final solid color */
+        color: rgb(48, 48, 66); /* Final solid color */
     }
 }
 
@@ -215,6 +215,6 @@ footer #btmfoot {
     100% {
         background-position: 50% 50%;
         background-image: none;
-        color: rgb(74, 74, 104); /* Final solid color */
+        color: rgb(48, 48, 66); /* Final solid color */
     }
 }
