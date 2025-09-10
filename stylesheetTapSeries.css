@@ -45,7 +45,7 @@
     }
     #whiteBox {
         position: absolute;
-        background-image: url(images/whiteInfoBox.png);
+        background-image: url(images/spotsInfoBox.png);
         background-size: 500px 800px;
         background-position: 0px top;
         background-repeat: no-repeat;
