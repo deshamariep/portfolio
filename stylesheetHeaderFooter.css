@@ -105,7 +105,7 @@ footer{
     justify-content: center;
     align-items: center;
     display: block;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
     color: rgb(48, 48, 66);
     box-sizing: border-box;
 }
@@ -207,10 +207,10 @@ footer #btmfoot {
 
 @keyframes footerGradientSwipe {
     0% {
-        background-position: 0% 50%;
+        background-position: 100% 50%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 0% 50%;
     }
     100% {
         background-position: 50% 50%;
