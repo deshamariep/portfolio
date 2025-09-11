@@ -42,6 +42,9 @@
 }
 .hero-top nav{
     justify-items: right;
+    display: flex;              /* use flexbox */
+    align-items: center;        /* vertical centering */
+    justify-content: center;    /* horizontal centering */
 }
 .hero-top nav ul {
     display: flex;
@@ -52,7 +55,6 @@
     list-style: none;
 }
 .hero-top nav ul li a {
-    display: flex; /* use flex inside links */
     align-items: center; /* vertically center text inside link */
     justify-content: center;
     width: 150px;

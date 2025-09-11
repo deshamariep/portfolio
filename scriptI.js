@@ -25,7 +25,7 @@
 
   // Amplfy
   document.getElementById('bridgegood').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<div id="csText"><h1>Amplfy</h1><p>A living network that turns opportunities into results</p><p>Product Design | Product Lead | 2025</p><a href="#">Coming Soon</a></div><div id="csImage"><img src="images/amplfyImages.svg" alt="Frame from Amplfy application" height="398px" width="828px"></div>';
+      csInfo.innerHTML = '<div id="csText"><h1>Amplfy</h1><p>Product Design | Product Lead | 2025</p><p>A living network that turns opportunities into results</p><a href="#">Coming Soon</a></div><div id="csImage"><img src="images/amplfyImages.svg" alt="Frame from Amplfy application" height="398px" width="828px"></div>';
       // garden.style.animationPlayState = 'paused';
   });
   // document.getElementById('bridgegood').addEventListener('mouseout', function() {
@@ -35,22 +35,22 @@
 
   // TAP Series
   document.getElementById('tapSeries').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>TAP Series</h1><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p><p>User Interface | UI/UX Designer | 2025</p><a href="tapSeries.html">Read</a></div><div id="csImage"><img src="images/tapSeriesImages.svg" alt="Frames from TAP Series website projects" height="475px" width="867px"></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>TAP Series</h1><p>User Interface | UI/UX Designer | 2025</p><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p><a href="tapSeries.html">Read</a></div><div id="csImage"><img src="images/tapSeriesImages.svg" alt="Frames from TAP Series website projects" height="475px" width="867px"></div>';
   });
 
   // GSt
   document.getElementById('gSt').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>G Street UX</h1><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p><p>User Research | UX Designer | 2024</p><a href="gStreet.html">Read</a></div><div id="csImage"><img src="images/gStreetImages.svg" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>G Street UX</h1><p>User Research | UX Designer | 2024</p><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p><a href="gStreet.html">Read</a></div><div id="csImage"><img src="images/gStreetImages.svg" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div>';
   });
 
    // Spots
    document.getElementById('spotsCS').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>Spots</h1><p>A centralized hub connecting students with housing, roommates, and community.</p><p>UI/UX Design | Associate Designer | 2024</p><a href="spots.html">Read</a></div><div id="csImage"><img src="images/spotsImages.svg" alt="Frames from Spots website application" height="475px" width="811px"></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>Spots</h1>p>UI/UX Design | Associate Designer | 2024</p><p>A centralized hub connecting students with housing, roommates, and community.</p><<a href="spots.html">Read</a></div><div id="csImage"><img src="images/spotsImages.svg" alt="Frames from Spots website application" height="475px" width="811px"></div>';
   });
 
   // Ume
   document.getElementById('umeCS').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>UME Tea</h1><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p><p>Marketing Strategy | Market Analyst | 2023</p><a href="ume.html">Read</a></div><div id="csImage"><img src="images/umeTeaImages.svg" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>UME Tea</h1><p>Marketing Strategy | Market Analyst | 2023</p><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p><a href="ume.html">Read</a></div><div id="csImage"><img src="images/umeTeaImages.svg" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div>';
   });
 
   // pre-load images

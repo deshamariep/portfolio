@@ -140,21 +140,30 @@
         flex: 0 0 540;  /* fixed 540px width */
         padding-top: 48px;
     }
-    #csText a{
-        background-color: rgb(255, 255, 255, 0.7);
+    #csText a {
+        display: none;
+        width: 200px;               /* fixed width */
+        padding: 8px 0;             /* only vertical padding */
+        box-sizing: content-box;    /* width does NOT include padding */
+        
+        display: flex;              /* use flexbox */
+        align-items: center;        /* vertical centering */
+        justify-content: center;    /* horizontal centering */
+      
+        background-color: rgba(255, 255, 255, 0.7);
         border-radius: 30px;
-        width: 200px;
-        padding: 8px 16px;
         font-family: "Nunito Sans", sans-serif;
-        font-optical-sizing: auto;
         font-weight: 400;
-        font-style: normal;
         font-size: 16px;
         color: rgb(48, 48, 66);
         letter-spacing: 0.03em;
         line-height: 140%;
+        text-decoration: none;
     }
-    #csText a:hover{
+    .logo:hover #csText a {
+        display: inline-block;
+    }
+    #csText a:hover {
         background-color: rgb(255, 255, 255, 1);
     }
     #csImage {

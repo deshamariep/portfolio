@@ -64,8 +64,25 @@
         padding: 8px;
         margin: 16px 8px;
         border-radius: 40px;
+    
+        /* glassmorphism core */
+        background: rgba(255, 255, 255, 0.2); /* transparent white */
+        backdrop-filter: blur(12px);          /* frosted glass blur */
+        -webkit-backdrop-filter: blur(12px);  /* Safari support */
+    
+        /* gradient border */
         border: 1.5px double transparent;
-        background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) padding-box,linear-gradient(to right, rgba(82, 209, 252, 0.9) 20%, rgba(207, 240, 255, 1) 41%, rgba(229, 156, 252, 0.9) 66%) border-box;
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+            linear-gradient(
+                to right,
+                rgba(82, 209, 252, 0.9) 20%, 
+                rgba(207, 240, 255, 1) 41%, 
+                rgba(229, 156, 252, 0.9) 66%
+            );
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+    
         box-sizing: border-box;
         background-size: 200% auto;
         animation: animateBackground 5s infinite linear;
