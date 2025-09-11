@@ -39,12 +39,14 @@
         height: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        background-color: white;
+        background-image: url(images/santamonicabeach.jpeg);
+        background-size: cover;
+        background-position: 0px top; 
+        background-repeat: no-repeat;
     }
     main{
         margin: 200px 24px 0px 24px;
         box-sizing: border-box;
-        color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 1.6
     }
@@ -63,7 +65,7 @@
         margin: 16px 8px;
         border-radius: 40px;
         border: 1.5px double transparent;
-        background: linear-gradient(white, white) padding-box,linear-gradient(to right, rgba(82, 209, 252, 0.9) 20%, rgba(207, 240, 255, 1) 41%, rgba(229, 156, 252, 0.9) 66%) border-box;
+        background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) padding-box,linear-gradient(to right, rgba(82, 209, 252, 0.9) 20%, rgba(207, 240, 255, 1) 41%, rgba(229, 156, 252, 0.9) 66%) border-box;
         box-sizing: border-box;
         background-size: 200% auto;
         animation: animateBackground 5s infinite linear;
