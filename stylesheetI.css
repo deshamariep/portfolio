@@ -59,17 +59,16 @@
     .exp-heading{
         display: flex;
         align-items: baseline;
-        gap: 8px; /* space between h2 and h3 */
+        gap: 8px;
     }
-    /* Logo container */
-    #logoSpace {
+    #logoSpace{
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 16px;
+        margin-bottom: 24px;
     }
-    /* Each logo block */
-    .logo {
+    .logo{
         position: relative;
         width: 108px; /* base size */
         height: 108px;
@@ -81,12 +80,11 @@
         overflow: visible;
         transition: width 0.3s ease, height 0.3s ease;
     }
-    .logo.active {
+    .logo.active{
         width: 150px;
         height: 150px;
     }
-    /* Wrapper for the logo image */
-    .logo-wrapper {
+    .logo-wrapper{
         width: 100%;
         height: 100%;
         display: flex;
@@ -94,21 +92,18 @@
         align-items: flex-start;
         overflow: visible;
     }
-    /* Logo images */
-    .logo-wrapper img {
+    .logo-wrapper img{
         width: 100%;
         height: auto;
         transition: transform 0.3s ease;
         transform-origin: top center;
         z-index: 2;
     }
-    /* Enlarge logo on hover */
-    .logo.active .logo-wrapper img {
+    .logo.active .logo-wrapper img{
         transform: scale(1.1);
         filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 0.9));
     }
-    /* Captions (default hidden state, slide right) */
-    .logo p {
+    .logo p{
         position: absolute;
         top: 50%;
         left: calc(100% + 16px);
@@ -118,29 +113,30 @@
         transition: all 0.4s ease;
         z-index: 1;
     }
-    /* Special case for right-side logos (slide left) */
-    .logo.slide-left p {
+    .logo.slide-left p{
         left: auto;
         right: calc(100% + 16px);
         transform: translateX(50px) translateY(30px);
     }
-    /* Hover state: captions slide into place */
     .logo.active p {
         opacity: 1;
         transform: translateX(0) translateY(30px);
     }
     #caseStudy{
-        height: 500px;
+        height: 475px;
         display: flex;
     }
     #csText h1{
         margin-bottom: 0px;
     }
+    #csText p{
+        margin: 0.5em;
+    }
     #csText{
         flex: 0 0 540;  /* fixed 540px width */
         padding-top: 48px;
     }
-    #csText a {
+    #csText a{
         display: none;
         width: 200px;               /* fixed width */
         padding: 8px 0;             /* only vertical padding */
@@ -160,13 +156,13 @@
         line-height: 140%;
         text-decoration: none;
     }
-    .logo:hover #csText a {
+    .logo:hover #csText a{
         display: inline-block;
     }
     #csText a:hover {
         background-color: rgb(255, 255, 255, 1);
     }
-    #csImage {
+    #csImage{
         flex: 0 0 1;   /* don’t grow, don’t shrink, size to image */
         display: flex;
         justify-content: center;

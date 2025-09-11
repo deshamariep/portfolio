@@ -66,12 +66,12 @@
         border-radius: 40px;
     
         /* glassmorphism core */
-        background: rgba(255, 255, 255, 0.2); /* transparent white */
-        backdrop-filter: blur(12px);          /* frosted glass blur */
-        -webkit-backdrop-filter: blur(12px);  /* Safari support */
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);          
+        -webkit-backdrop-filter: blur(12px);  
     
         /* gradient border */
-        border: 1.5px double transparent;
+        /* border: 1.5px double transparent;
         background-image: 
             linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
             linear-gradient(
@@ -85,7 +85,7 @@
     
         box-sizing: border-box;
         background-size: 200% auto;
-        animation: animateBackground 5s infinite linear;
+        animation: animateBackground 5s infinite linear; */
     }
     #gallery article img {
         display: block;
