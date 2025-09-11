@@ -65,6 +65,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+        height: 150px;
         gap: 16px;
         margin-bottom: 24px;
     }
@@ -162,7 +163,7 @@
     #csText a:hover {
         background-color: rgb(255, 255, 255, 1);
     }
-    #csText a #noHover:hover{
+    #noHover:hover{
         background-color: rgba(255, 255, 255, 0.7);
     }
     #csImage{
