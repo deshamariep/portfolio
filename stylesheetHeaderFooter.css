@@ -24,12 +24,14 @@
     left: 0;
     width: 100%;
     max-width: 100%;
+    height: 116px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 24px 24px;
     z-index: 3;
     box-sizing: border-box;
+    background-color: rgb(255, 255, 255, 0.3);
 }
 
 /* keep your existing logo + nav styling, but remove old layout rules that assume header is a short bar */
@@ -48,9 +50,9 @@
 }
 
 .hero-top nav ul li a {
-    width: 232px;
+    width: 150px;
     height: 50px;
-    align-items: flex-start; /* Align text to top */
+    align-items: center;
     justify-content: center;
     background: none;
     border: none;
