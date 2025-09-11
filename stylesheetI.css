@@ -41,9 +41,6 @@
         background-position: auto; 
         background-repeat: no-repeat;
     }
-    .hero-top nav ul li a {
-        color: rgb(74, 74, 104);                /* on photo bg */
-    }
     main{
         margin: 0 24px;
         box-sizing: border-box;
@@ -55,16 +52,6 @@
         /* max-width: 1100px; */
         width: 100%;
         margin: 0 auto; 
-    }
-    #one{
-        flex: 1;
-        padding-top: 4px;
-    }
-    #one a{
-        text-align: center;
-    }
-    #hLogo{
-        flex: 1;
     }
     #work{
         margin: 8px auto 96px;
@@ -118,7 +105,7 @@
     /* Enlarge logo on hover */
     .logo.active .logo-wrapper img {
         transform: scale(1.1);
-        filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 0.85));
+        filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 0.9));
     }
     /* Captions (default hidden state, slide right) */
     .logo p {
@@ -155,6 +142,8 @@
     }
     #csText a{
         background-color: rgb(255, 255, 255, 0.7);
+        border-radius: 30px;
+        width: 200px;
         padding: 8px 16px;
         font-family: "Nunito Sans", sans-serif;
         font-optical-sizing: auto;
