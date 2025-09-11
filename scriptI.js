@@ -25,7 +25,7 @@
 
   // Amplfy
   document.getElementById('bridgegood').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<div id="csText"><h1>Amplfy</h1><p>Product Design | Product Lead | 2025</p><p>A living network that turns opportunities into results</p><a href="#">Coming Soon</a></div><div id="csImage"><img src="images/amplfyImages.svg" alt="Frame from Amplfy application" height="398px" width="828px"></div>';
+      csInfo.innerHTML = '<div id="csText"><h1>Amplfy</h1><p>Product Design | Product Lead | 2025</p><p>A living network that turns opportunities into results</p><a href="#" id="noHover">Coming Soon</a></div><div id="csImage"><img src="images/amplfyImages.svg" alt="Frame from Amplfy application" height="398px" width="828px"></div>';
       // garden.style.animationPlayState = 'paused';
   });
   // document.getElementById('bridgegood').addEventListener('mouseout', function() {

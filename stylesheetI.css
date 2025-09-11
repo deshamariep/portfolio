@@ -162,6 +162,9 @@
     #csText a:hover {
         background-color: rgb(255, 255, 255, 1);
     }
+    #csText a #noHover:hover{
+        background-color: rgba(255, 255, 255, 0.7);
+    }
     #csImage{
         flex: 0 0 1;   /* don’t grow, don’t shrink, size to image */
         display: flex;

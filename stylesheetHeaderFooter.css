@@ -40,11 +40,8 @@
     height: auto;
     max-width: 100%;
 }
-.hero-top nav{
-    justify-items: right;
-    display: flex;              /* use flexbox */
-    align-items: center;        /* vertical centering */
-    justify-content: center;    /* horizontal centering */
+#one{
+    margin: auto 0px; 
 }
 .hero-top nav ul {
     display: flex;
