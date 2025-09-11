@@ -21,6 +21,26 @@
     // Call the function on page load
     updateGreeting();
 
+    // exp fade in
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".fade-in");
+    
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // get index of the element among all fade-in elements
+            const index = [...faders].indexOf(entry.target);
+            // apply a delay based on index
+            entry.target.style.transitionDelay = `${index * 0.15}s`;
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // optional, prevents re-trigger
+          }
+        });
+      }, { threshold: 0.1 });
+    
+      faders.forEach((el) => observer.observe(el));
+    });
+
     document.addEventListener("DOMContentLoaded", () => {
         const footer = document.querySelector("footer");
         const footTitle = document.getElementById("footTitle");
