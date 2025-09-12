@@ -51,6 +51,10 @@
         color: #fff;
         text-decoration: none;
     }
+    #home footer a:hover{
+        text-decoration: underline;
+        color: rgb(0, 0, 255);
+    }
     main{
         margin: 0 24px;
         height: 800px;
