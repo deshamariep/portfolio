@@ -43,6 +43,14 @@
             #0E173C 100%
         );
     }
+    /* Force homepage text to be white */
+    #home, #home h1, #home h2, #home h3, #home p, #home a, #home li {
+        color: #fff;
+    }
+    /* #home a {
+        color: #fff;
+        text-decoration: none;
+    } */
     main{
         margin: 0 24px;
         height: 800px;
@@ -145,6 +153,7 @@
     #csText{
         flex: 0 0 540;  /* fixed 540px width */
         padding-top: 24px;
+        width: 540px;
     }
     #csText a{
         display: none;
