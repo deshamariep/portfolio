@@ -47,10 +47,10 @@
     #home, #home h1, #home h2, #home h3, #home p, #home a, #home li {
         color: #fff;
     }
-    /* #home a {
+    #home a {
         color: #fff;
         text-decoration: none;
-    } */
+    }
     main{
         margin: 0 24px;
         height: 800px;
