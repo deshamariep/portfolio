@@ -35,7 +35,7 @@
 }
 
 /* keep your existing logo + nav styling, but remove old layout rules that assume header is a short bar */
-#hLogo img {
+#hLogo img{
     display: block;
     height: auto;
     max-width: 100%;
@@ -43,7 +43,7 @@
 #one{
     margin: auto 0px; 
 }
-.hero-top nav ul {
+.hero-top nav ul{
     display: flex;
     align-items: center;
     gap: 24px;
@@ -51,10 +51,10 @@
     padding: 0;
     list-style: none;
 }
-.hero-top nav ul li a {
+.hero-top nav ul li a{
     align-items: center; /* vertically center text inside link */
     justify-content: center;
-    width: 150px;
+    width: 100px;
     height: 50px;
     background: none;
     border: none;
@@ -74,7 +74,7 @@
     transform: translateY(-50%); /* only shift vertically */
     max-width: 875px;
     z-index: 4;
-    color: rgb(48, 48, 66);
+    color: rgb(255, 255, 255);
     margin: 0;
 }
 .hero-content h1{
@@ -82,14 +82,14 @@
 }
 .hero-content h3,
 .hero-content p {
-    color: rgb(48, 48, 66);
+    color: rgb(255, 255, 255);
 }
 
 /* animated gradient look (yours) */
 .hero-heading-anim {
     background-image: radial-gradient(
         circle,
-        rgba(48, 48, 66, 0.7) 20%, 
+        rgba(255, 255, 255, 0.7) 20%, 
         rgba(45, 140, 190, 0.6) 41%, 
         rgba(87, 132, 199, 1) 66%, 
         rgba(169, 108, 208, 0.7) 88%
@@ -149,7 +149,7 @@ footer{
 
     background-image: radial-gradient(
         circle,
-        rgba(48, 48, 66, 0.7) 20%, 
+        rgba(255, 255, 255, 0.7) 20%, 
         rgba(45, 140, 190, 0.6) 41%, 
         rgba(87, 132, 199, 1) 66%, 
         rgba(169, 108, 208, 0.7) 88%
@@ -205,7 +205,7 @@ footer #btmfoot {
     100% {
         background-position: 50% 50%;
         background-image: none;
-        color: rgb(48, 48, 66); /* Final solid color */
+        color: rgb(255, 255, 255); /* Final solid color */
     }
 }
 
@@ -219,6 +219,6 @@ footer #btmfoot {
     100% {
         background-position: 50% 50%;
         background-image: none;
-        color: rgb(48, 48, 66); /* Final solid color */
+        color: rgb(255, 255, 255); /* Final solid color */
     }
 }

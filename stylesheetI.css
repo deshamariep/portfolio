@@ -36,17 +36,26 @@
         padding: 0;
         min-height: 100vh;
         width: 100%;
-        background-image: url(images/indexBackground.png);
-        background-size: cover;
-        background-position: auto; 
-        background-repeat: no-repeat;
+        background: radial-gradient(
+            circle at bottom right,
+            #BEC2CA 0%,
+            #4A5068 62%,
+            #0E173C 100%
+        );
     }
     main{
         margin: 0 24px;
+        height: 800px;
         box-sizing: border-box;
-        color: rgb(74, 74, 104);
+        color: rgb(255, 255, 255);
         letter-spacing: 0.03em;
-        line-height: 1.6
+        line-height: 1.6;
+      
+        /* default state */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background 0.6s ease-in-out;
     }
     #query{
         /* max-width: 1100px; */

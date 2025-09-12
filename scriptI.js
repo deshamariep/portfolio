@@ -21,38 +21,27 @@
 
 
   const csInfo = document.getElementById('caseStudy');
-  // const garden = document.getElementById('garden');
-
   // Amplfy
   document.getElementById('bridgegood').addEventListener('mouseover', function() {
       csInfo.innerHTML = '<div id="csText"><h1>Amplfy</h1><p>Product Design | Product Lead | 2025</p><p>A living network that turns opportunities into results</p><a href="#" id="noHover">Coming Soon</a></div><div id="csImage"><img src="images/amplfyImages.svg" alt="Frame from Amplfy application" height="398px" width="828px"></div>';
       // garden.style.animationPlayState = 'paused';
   });
-  // document.getElementById('bridgegood').addEventListener('mouseout', function() {
-  //   csInfo.innerHTML = '<div><h1></h1><p></p></div><div><img src="" alt="" height="" width=""></div>';
-  //     // garden.style.animationPlayState = 'running';
-  // });
-
   // TAP Series
   document.getElementById('tapSeries').addEventListener('mouseover', function() {
     csInfo.innerHTML = '<div id="csText"><h1>TAP Series</h1><p>User Interface | UI/UX Designer | 2025</p><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p><a href="tapSeries.html">Read</a></div><div id="csImage"><img src="images/tapSeriesImages.svg" alt="Frames from TAP Series website projects" height="475px" width="867px"></div>';
   });
-
   // GSt
   document.getElementById('gSt').addEventListener('mouseover', function() {
     csInfo.innerHTML = '<div id="csText"><h1>G Street UX</h1><p>User Research | UX Designer | 2024</p><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p><a href="gStreet.html">Read</a></div><div id="csImage"><img src="images/gStreetImages.svg" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div>';
   });
-
    // Spots
    document.getElementById('spotsCS').addEventListener('mouseover', function() {
     csInfo.innerHTML = '<div id="csText"><h1>Spots</h1><p>UI/UX Design | Associate Designer | 2024</p><p>A centralized hub connecting students with housing, roommates, and community.</p><a href="spots.html">Read</a></div><div id="csImage"><img src="images/spotsImages.svg" alt="Frames from Spots website application" height="475px" width="811px"></div>';
   });
-
   // Ume
   document.getElementById('umeCS').addEventListener('mouseover', function() {
     csInfo.innerHTML = '<div id="csText"><h1>UME Tea</h1><p>Marketing Strategy | Market Analyst | 2023</p><p>Transforming marketing strategy through comprehensive analysis and targeted campaign development</p><a href="ume.html">Read</a></div><div id="csImage"><img src="images/umeTeaImages.svg" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div>';
   });
-
   // pre-load images
   const preloadImages = [
     "images/amplfyImages.svg",
@@ -61,7 +50,6 @@
     "images/spotsImages.svg",
     "images/umeTeaImages.svg"
   ];
-  
   preloadImages.forEach(src => {
     const img = new Image();
     img.src = src;
@@ -79,14 +67,35 @@
     });
   });
 
-  // garden.addEventListener('mouseout', function() {
-  //     plantInfo.innerHTML = '<h3> <- hover for info</h3>';
-  // });
+  const mainSection = document.querySelector("main");
+
+
+  // Swap background of MAIN only
+  function setMainBackground(image) {
+    mainSection.style.background = image
+      ? `url("${image}") center/cover no-repeat`
+      : "none"; // clears image so gradient from body shows through
+  }
+  document.getElementById("bridgegood").addEventListener("mouseenter", () => {
+    setMainBackground("images/amplfybg.svg");
+  });
+  document.getElementById("tapSeries").addEventListener("mouseenter", () => {
+    setMainBackground("images/tapbg.svg");
+  });
+  document.getElementById("gSt").addEventListener("mouseenter", () => {
+    setMainBackground("images/gstbg.svg");
+  });
+  document.getElementById("spotsCS").addEventListener("mouseenter", () => {
+    setMainBackground("images/spotsbg.svg");
+  });
+  document.getElementById("umeCS").addEventListener("mouseenter", () => {
+    setMainBackground("images/umebg.svg");
+  });
+
 
   // pop-up
   const bridgegoodLogo = document.getElementById("bridgegood");
   const popup = document.getElementById("popup");
-  
   bridgegoodLogo.addEventListener("click", (e) => {
     e.preventDefault(); // prevent navigation
   
