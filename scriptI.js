@@ -85,19 +85,19 @@
       : "none"; // clears image so gradient from body shows through
   }
   document.getElementById("bridgegood").addEventListener("mouseenter", () => {
-    setMainBackground("images/amplfybg.svg");
+    setMainBackground("images/amplfybg.png");
   });
   document.getElementById("tapSeries").addEventListener("mouseenter", () => {
-    setMainBackground("images/tapbg.svg");
+    setMainBackground("images/tapbg.png");
   });
   document.getElementById("gSt").addEventListener("mouseenter", () => {
-    setMainBackground("images/gstbg.svg");
+    setMainBackground("images/gstbg.png");
   });
   document.getElementById("spotsCS").addEventListener("mouseenter", () => {
-    setMainBackground("images/spotsbg.svg");
+    setMainBackground("images/spotsbg.png");
   });
   document.getElementById("umeCS").addEventListener("mouseenter", () => {
-    setMainBackground("images/umebg.svg");
+    setMainBackground("images/umebg.png");
   });
 
 
