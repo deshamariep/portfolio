@@ -44,7 +44,6 @@
             #0E173C 100%
         );
     }
-    /* Force homepage text to be white */
     h1, h2, h3, p, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
         color: #fff;
         text-decoration: none;
@@ -62,10 +61,10 @@
         letter-spacing: 0.03em;
         line-height: 1.6;
       
-        /* default state */
         background-size: auto 800px;
-        background-position: center;
+        background-position: right center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         transition: background 0.6s ease-in-out;
     }
     #query{
@@ -73,9 +72,9 @@
         width: 100%;
         margin: 0 24px;
     }
-    #work{
+    /* #work{
         margin: 8px auto 96px;
-    }
+    } */
     .exp-heading{
         display: flex;
         align-items: baseline;
@@ -91,7 +90,7 @@
     }
     .logo{
         position: relative;
-        width: 108px; /* base size */
+        width: 108px;
         height: 108px;
         display: flex;
         align-items: center;
@@ -154,19 +153,19 @@
         margin: 0.5em;
     }
     #csText{
-        flex: 0 0 540;  /* fixed 540px width */
+        flex: 0 0 525px; 
         padding-top: 24px;
-        width: 540px;
+        width: 525px;
     }
     #csText a{
         display: none;
-        width: 200px;               /* fixed width */
-        padding: 8px 0;             /* only vertical padding */
-        box-sizing: content-box;    /* width does NOT include padding */
+        width: 200px;             
+        padding: 8px 0;           
+        box-sizing: content-box;    
         
-        display: flex;              /* use flexbox */
-        align-items: center;        /* vertical centering */
-        justify-content: center;    /* horizontal centering */
+        display: flex;          
+        align-items: center;       
+        justify-content: center;    
       
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 30px;
@@ -181,11 +180,8 @@
     .logo:hover #csText a{
         display: inline-block;
     }
-    #csText a:hover {
+    #csText a:hover:not(#noHover){
         background-color: rgb(255, 255, 255, 1);
-    }
-    #noHover:hover{
-        background-color: rgba(255, 255, 255, 0.7);
     }
     #csImage{
         flex: 0 0 1;   /* don’t grow, don’t shrink, size to image */
