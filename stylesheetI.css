@@ -44,7 +44,7 @@
         );
     }
     /* Force homepage text to be white */
-    h1, h2, h3, p, a, li {
+    h1, h2, h3, p, a, nav ul li a, footer h3, footer p, footer a{
         color: #fff;
         text-decoration: none;
     }
@@ -61,7 +61,7 @@
         line-height: 1.6;
       
         /* default state */
-        background-size: cover;
+        background-size: auto 800px;
         background-position: center;
         background-repeat: no-repeat;
         transition: background 0.6s ease-in-out;
