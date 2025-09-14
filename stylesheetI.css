@@ -44,19 +44,16 @@
         );
     }
     /* Force homepage text to be white */
-    #home, #home h1, #home h2, #home h3, #home p, #home a, #home li {
-        color: #fff;
-    }
-    #home a {
+    h1, h2, h3, p, a, li {
         color: #fff;
         text-decoration: none;
     }
-    #home footer a:hover{
+    footer a:hover{
         text-decoration: underline;
         color: rgb(0, 0, 255);
     }
     main{
-        margin: 0 24px;
+        margin: 0;
         height: 800px;
         box-sizing: border-box;
         color: rgb(255, 255, 255);
@@ -72,7 +69,7 @@
     #query{
         /* max-width: 1100px; */
         width: 100%;
-        margin: 0 auto; 
+        margin: 0 24px;
     }
     #work{
         margin: 8px auto 96px;
