@@ -56,7 +56,7 @@
             #0E173C 100%
         );
     }
-    h1, h2, h3, p, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
+    h1, h2, h3, p,  #smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
         color: #fff;
         text-decoration: none;
     }
