@@ -19,6 +19,16 @@
     }
   });
 
+  const mainSec = document.querySelector("main");
+
+  // Reset background when user scrolls up past 805px
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < 805) {
+      // Clear the main background → shows the body's gradient again
+      mainSection.style.background = "none";
+    }
+  });
+
 
   const csInfo = document.getElementById('caseStudy');
   // Amplfy
