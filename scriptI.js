@@ -24,8 +24,20 @@
   // Reset background when user scrolls up past 805px
   window.addEventListener("scroll", () => {
     if (window.scrollY < 805) {
-      // Clear the main background → shows the body's gradient again
-      mainSection.style.background = "none";
+      mainSec.style.background = "none";
+  
+      csInfo.innerHTML = `
+        <div id="csText">
+          <h1></h1>
+          <p></p>
+          <p></p>
+        </div>
+        <div id="csImage">
+          <img src="" alt="" height="" width="">
+        </div>
+      `;
+  
+      logos.forEach(l => l.classList.remove('active'));
     }
   });
 
