@@ -31,6 +31,18 @@
     .mobileIncomplete {
         display: none; /* Hide the message on larger screens */
     }
+    .hero-content {
+        position: absolute;
+        top: 40%;                    /* vertical center */
+        text-align: center;                  /* align to page gutter */
+        transform: translateY(-50%); /* only shift vertically */
+        max-width: 875px;
+        z-index: 4;
+        margin: 0;
+    }
+    .hero-content h1{
+        margin: 24px 0px;
+    }
     body{
         margin: 0;
         padding: 0;
