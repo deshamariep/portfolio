@@ -41,7 +41,7 @@
 
    // Spots
    document.getElementById('spotsCS').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>Spots</h1><p>UI/UX Design | Associate Designer | 2024</p><p>A centralized hub connecting students with housing, roommates, and community.</p><a href="spots.html">Read</a></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>Spots</h1><p>Product Design | Associate Designer | 2024</p><p>A centralized hub connecting students with housing, roommates, and community.</p><a href="spots.html">Read</a></div>';
   });
   // <div id="csImage"><img src="images/spotsImages.svg" alt="Frames from Spots website application" height="475px" width="811px"></div>
 

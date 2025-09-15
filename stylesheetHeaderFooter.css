@@ -208,7 +208,6 @@ footer #btmfoot {
         color: rgb(255, 255, 255); /* Final solid color */
     }
 }
-
 @keyframes footerGradientSwipe {
     0% {
         background-position: 100% 50%;
@@ -219,6 +218,6 @@ footer #btmfoot {
     100% {
         background-position: 50% 50%;
         background-image: none;
-        color: rgb(255, 255, 255); /* Final solid color */
+        color: rgb(48, 48, 66); /* Final solid color */
     }
 }
