@@ -179,12 +179,12 @@
         align-items: center;       
         justify-content: center;    
       
-        background-color: rgba(255, 255, 255, 0.7);
+        border-color: rgba(255, 255, 255, 0.7);
         border-radius: 30px;
         font-family: "Nunito Sans", sans-serif;
         font-weight: 400;
         font-size: 16px;
-        color: rgb(48, 48, 66);
+        color: rgb(255, 255, 255);
         letter-spacing: 0.03em;
         line-height: 140%;
         text-decoration: none;
@@ -194,6 +194,7 @@
     }
     #csText a:hover:not(#noHover){
         background-color: rgb(255, 255, 255, 1);
+        color: rgb(48, 48, 66);
     }
     #csImage{
         flex: 0 0 1;   /* don’t grow, don’t shrink, size to image */
