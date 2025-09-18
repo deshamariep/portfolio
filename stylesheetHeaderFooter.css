@@ -84,7 +84,7 @@
 .hero-heading-anim {
     background-image: radial-gradient(
         circle,
-        rgba(48, 48, 66, 0.7) 20%, 
+        rgba(14,23,60, 0.7) 20%, 
         rgba(45, 140, 190, 0.6) 41%, 
         rgba(87, 132, 199, 1) 66%, 
         rgba(169, 108, 208, 0.7) 88%
@@ -92,8 +92,8 @@
     background-size: 300% 300%;
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
-    animation: gradientSwipe 7s ease-in-out forwards 500ms;
+    color: white;
+    animation: gradientSwipe 10s ease-in-out forwards 500ms;
 }
 
 footer{
