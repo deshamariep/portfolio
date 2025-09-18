@@ -128,20 +128,18 @@
   const bridgegoodLogo = document.getElementById("bridgegood");
   const popup = document.getElementById("popup");
   bridgegoodLogo.addEventListener("click", (e) => {
-    e.preventDefault(); // prevent navigation
+    e.preventDefault(); 
   
     popup.classList.add("show");
   
-    // Hide after 2 seconds
     setTimeout(() => {
       popup.classList.add("hide");
       setTimeout(() => {
         popup.classList.remove("show", "hide");
         popup.style.display = "none";
-      }, 500); // wait for fade-out transition
+      }, 500); 
     }, 1000);
   
-    // Reset display for fade-in
     popup.style.display = "flex";
   });
 
@@ -158,7 +156,7 @@
             }
           });
         },
-        { threshold: 0.1 } // you can adjust this
+        { threshold: 0.1 }
       );
   
       observer.observe(footer);
