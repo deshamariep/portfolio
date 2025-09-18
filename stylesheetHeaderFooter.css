@@ -92,7 +92,7 @@
     background-size: 300% 300%;
     background-clip: text;
     -webkit-background-clip: text;
-    color: white;
+    color: transparent;
     animation: gradientSwipe 10s ease-in-out forwards 500ms;
 }
 
