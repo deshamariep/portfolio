@@ -24,7 +24,8 @@
   // Reset background when user scrolls up past 805px
   window.addEventListener("scroll", () => {
     if (window.scrollY < 805) {
-      mainSec.style.background = "none";
+      mainSec.style.background = `radial-gradient(circle at bottom right,
+        #BEC2CA 0%, #4A5068 62%, #0E173C 100%)`;
   
       csInfo.innerHTML = `
         <div id="csText">
@@ -102,9 +103,12 @@
 
   // Swap background of MAIN only
   function setMainBackground(image) {
+    const gradient = `radial-gradient(circle at bottom right,
+      #BEC2CA 0%, #4A5068 62%, #0E173C 100%)`;
+  
     mainSection.style.background = image
-      ? `url("${image}") center/cover no-repeat`
-      : "none"; // clears image so gradient from body shows through
+      ? `url("${image}") center/cover no-repeat, ${gradient}`
+      : gradient; // gradient stays even with no image
   }
   document.getElementById("bridgegood").addEventListener("mouseenter", () => {
     setMainBackground("images/amplfybg.svg");
