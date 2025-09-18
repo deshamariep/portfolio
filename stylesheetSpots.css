@@ -70,8 +70,10 @@
     }
     #infoBox p{
         width: 475px;
+        letter-spacing: 0.03em;
+        line-height: 160%;
     }
-    #arrowContainer {
+    /* #arrowContainer {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -93,7 +95,7 @@
         50% {
             transform: translateX(-50%) translateY(-10px); 
         }
-    }
+    } */
     article{
         width: calc(100% - 0px); /* Adjusted width considering left and right margins */
         margin: none; /* Centering the article */
