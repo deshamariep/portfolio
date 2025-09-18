@@ -103,9 +103,12 @@
 
   // Swap background of MAIN only
   function setMainBackground(image) {
+    const gradient = `radial-gradient(circle at bottom right,
+      #BEC2CA 0%, #4A5068 62%, #0E173C 100%)`;
+  
     mainSection.style.background = image
       ? `url("${image}") center/cover no-repeat`
-      : "none";
+      : gradient;
   }
   document.getElementById("bridgegood").addEventListener("mouseenter", () => {
     setMainBackground("images/amplfybg.svg");
