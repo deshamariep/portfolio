@@ -33,7 +33,7 @@
     }
     .hero-content {
         position: absolute;
-        top: 40%;         
+        top: 45%;         
         text-align: center;        
         transform: translateY(-50%) translateX(75%);
         max-width: 875px;
