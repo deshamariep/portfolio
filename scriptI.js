@@ -74,11 +74,11 @@
   // <div id="csImage"><img src="images/umeTeaImages.svg" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div>
   // pre-load images
   const preloadImages = [
-    "images/amplfyImages.svg",
-    "images/tapSeriesImages.svg",
-    "images/gStreetImages.svg",
-    "images/spotsImages.svg",
-    "images/umeTeaImages.svg"
+    "images/amplfybg.svg",
+    "images/tapSeriesbg.svg",
+    "images/gStreetbg.svg",
+    "images/spotsbg.svg",
+    "images/umeTeabg.svg"
   ];
   preloadImages.forEach(src => {
     const img = new Image();
@@ -107,19 +107,19 @@
       : "none"; // clears image so gradient from body shows through
   }
   document.getElementById("bridgegood").addEventListener("mouseenter", () => {
-    setMainBackground("images/amplfybg.png");
+    setMainBackground("images/amplfybg.svg");
   });
   document.getElementById("tapSeries").addEventListener("mouseenter", () => {
-    setMainBackground("images/tapbg.png");
+    setMainBackground("images/tapbg.svg");
   });
   document.getElementById("gSt").addEventListener("mouseenter", () => {
-    setMainBackground("images/gstbg.png");
+    setMainBackground("images/gstbg.svg");
   });
   document.getElementById("spotsCS").addEventListener("mouseenter", () => {
-    setMainBackground("images/spotsbg.png");
+    setMainBackground("images/spotsbg.svg");
   });
   document.getElementById("umeCS").addEventListener("mouseenter", () => {
-    setMainBackground("images/umebg.png");
+    setMainBackground("images/umebg.svg");
   });
 
 
