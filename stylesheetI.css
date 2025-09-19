@@ -49,12 +49,9 @@
         width: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        background: radial-gradient(
-            circle at bottom right,
-            #BEC2CA 0%,
-            #4A5068 62%,
-            #0E173C 100%
-        );
+        
+        background: url("images/gradientBg.png") no-repeat center center fixed;
+        background-size: cover;
     }
     h1, h2, h3, p,  #smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
         color: #fff;
