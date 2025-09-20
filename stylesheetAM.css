@@ -72,6 +72,23 @@
         align-items: center; 
         padding-top: 16px;
     }
+    .fauxp{
+        font-family: "Nunito Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 20px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.03em;
+        line-height: 140%;
+    }
+    .obsessions{
+        display: flex;
+    }
+    .obsessions img{
+        flex: 1;
+        gap: 16px;
+    }
     #exp{
         justify-content: center;
         margin-bottom: 96px;
