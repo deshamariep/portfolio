@@ -76,16 +76,6 @@
         letter-spacing: 0.03em;
         line-height: 160%;
     }
-    .projects{
-        background-color: (48, 48, 66, 0.2);
-        border: 1px solid rgba(48, 48, 66, 0.5);
-        border-radius: 16px;
-    }
-    .projects p{
-        padding: 4px 16px;
-        justify-content: center;
-        align-items: center;
-    }
     /* #arrowContainer {
         display: flex;
         justify-content: center;
