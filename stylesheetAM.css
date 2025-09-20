@@ -50,6 +50,15 @@
         width: 100%;
         margin: 0 auto; 
     }
+    .blue{
+        color: #06B6FD;
+    }
+    .bluegreen{
+        color: #A7CFCF;
+    }
+    .pinkish{
+        color: #E59CFC;
+    }
     .data{
         display: flex;
     }
