@@ -52,6 +52,9 @@
         letter-spacing: 0.03em;
         line-height: 1.6
     }
+    .txwidth{
+        width: 800px;
+    }
     #query{
         width: 100%;
         margin: 300px auto; 
