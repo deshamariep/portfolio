@@ -77,11 +77,14 @@
         line-height: 160%;
     }
     .projects{
-        border: 1px solid rgba(255, 255, 255, 0.7);
+        background-color: (48, 48, 66, 0.2);
+        border: 1px solid rgba(48, 48, 66, 0.5);
         border-radius: 16px;
     }
     .projects p{
-        padding: 8px 0;
+        padding: 4px 16px;
+        justify-content: center;
+        align-items: center;
     }
     /* #arrowContainer {
         display: flex;
