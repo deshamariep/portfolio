@@ -76,6 +76,13 @@
         letter-spacing: 0.03em;
         line-height: 160%;
     }
+    .projects{
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 16px;
+    }
+    .projects p{
+        padding: 8px 0;
+    }
     /* #arrowContainer {
         display: flex;
         justify-content: center;
