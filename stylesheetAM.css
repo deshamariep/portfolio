@@ -61,6 +61,7 @@
     }
     .data{
         display: flex;
+        margin-bottom: 32px;
     }
     .data2{
         display: flex;
