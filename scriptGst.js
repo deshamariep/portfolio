@@ -19,18 +19,20 @@
       }
     });
 
-    const sections = document.querySelectorAll('.spaceBtwn');
-    // This creates a "trigger zone" between 25% and 75% of the viewport height
-    const observer = new IntersectionObserver(entries => {
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".spaceBtwn");
+    
+      const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
-          entry.target.classList.toggle('active', entry.isIntersecting);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            obs.unobserve(entry.target); // fade-in happens once
+          }
         });
-      }, {
-        root: null,
-        rootMargin: '-40% 0px -40% 0px', // Top -25%, Bottom -25% leaves center 50%
-        threshold: 0 // Trigger as soon as any pixel enters this zone
+      }, { threshold: 0.2 }); // trigger when 20% visible
+    
+      faders.forEach(el => observer.observe(el));
     });
-    sections.forEach(section => observer.observe(section));
 
     document.addEventListener("DOMContentLoaded", function() {
         const waitElement = document.getElementById('wait');

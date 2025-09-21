@@ -90,21 +90,19 @@
         letter-spacing: 0.03em;
         line-height: 1.6
     }
-    #query {
+    #query{
         width: 100%;
         margin: 300px auto; 
     }
-    .spaceBtwn {
+    .spaceBtwn{
         margin-top: 200px;
-        margin-bottom: 96px;
-        transform: scale(0.9);
-        opacity: 0.4;
-        transition: opacity 0.8s ease, transform 0.5s ease;
+        margin-bottom: 152px;
+        opacity: 0;
+        transition: opacity 1s ease;
         padding: 0.5rem;
     }
-    .spaceBtwn.active {
+    .spaceBtwn.active{
         opacity: 1;
-        transform: scale(1);
     }
     /* #arrowContainer {
         display: flex;

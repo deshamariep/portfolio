@@ -19,17 +19,20 @@
       }
     });
 
-    const sections = document.querySelectorAll('.spaceBtwn');
-    const observer = new IntersectionObserver(entries => {
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".spaceBtwn");
+    
+      const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
-          entry.target.classList.toggle('active', entry.isIntersecting);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            obs.unobserve(entry.target); // fade-in happens once
+          }
         });
-      }, {
-        root: null,
-        rootMargin: '-40% 0px -40% 0px',
-        threshold: 0 
+      }, { threshold: 0.2 }); // trigger when 20% visible
+    
+      faders.forEach(el => observer.observe(el));
     });
-    sections.forEach(section => observer.observe(section));
 
     document.addEventListener("DOMContentLoaded", () => {
         const footer = document.querySelector("footer");
