@@ -62,7 +62,7 @@
     }
     .logoIntro{
         display: flex;
-        margin: 24px 0px 160px;
+        margin: 24px 0px 128px;
     }
     #logoimg{
         justify-items: center;
@@ -75,7 +75,7 @@
     #infoBox{
         display: flex;
         flex-direction: row;
-        gap: 72px;
+        gap: 48px;
     }
     #infoBox div{
         flex: content;
