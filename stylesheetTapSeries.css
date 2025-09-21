@@ -51,8 +51,8 @@
     }
     .hero{
         background-color: (255, 255, 255, 0.5);
-        backdrop-filter: blur(20px); /* blur what's behind */
-        -webkit-backdrop-filter: blur(20px); /* Safari support */
+        backdrop-filter: blur(40px); /* blur what's behind */
+        -webkit-backdrop-filter: blur(40px); /* Safari support */
     }
     .hero-top {
         background-color: (255, 255, 255, 0.1);
@@ -174,7 +174,7 @@
         width: 540px;
     }
     .textwidth{
-        width: 800px;
+        width: 928px;
     }
 }   
 /* @media screen and (min-width: 1650px){
