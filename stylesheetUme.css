@@ -95,8 +95,8 @@
         margin: 300px auto; 
     }
     .spaceBtwn{
-        margin-top: 200px;
-        margin-bottom: 152px;
+        margin-top: 250px;
+        margin-bottom: 250px;
         opacity: 0;
         transition: opacity 1s ease;
         padding: 0.5rem;
