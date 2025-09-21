@@ -48,6 +48,15 @@
         backdrop-filter: blur(10px); /* blur what's behind */
         -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
+    .hero-content {
+        position: absolute;
+        top: 40%;                    /* vertical center */
+        left: 24px;                  /* align to page gutter */
+        transform: translateY(-50%); /* only shift vertically */
+        max-width: 875px;
+        z-index: 4;
+        margin: 0;
+    }
     main{
         margin: 0px 24px;
         box-sizing: border-box;
