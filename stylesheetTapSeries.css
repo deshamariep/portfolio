@@ -43,25 +43,51 @@
         background-position: 0px top; 
         background-repeat: no-repeat; */
     }
+    .hero h1, h2, p, #smolP{
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
     .hero-top {
         background-color: (255, 255, 255, 0.5);
         backdrop-filter: blur(10px); /* blur what's behind */
         -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
     .hero-content {
-        position: absolute;
-        top: 40%;                    /* vertical center */
-        left: 24px;                  /* align to page gutter */
-        transform: translateY(-50%); /* only shift vertically */
-        max-width: 875px;
+        top: 50%;
+        left: 0px;/* align to page gutter */
+        transform: translateY(-20%); /* only shift vertically */
+        max-width: 1440px;
         z-index: 4;
-        margin: 0;
+        margin: 24px;
+    }
+    .logoIntro{
+        display: flex;
+    }
+    #logoimg{
+        flex: content;
+    }
+    #logotx{
+        flex: 1;
+    }
+    #infoBox{
+        display: flex;
+        flex-direction: row;
+        gap: 72px;
+    }
+    #infoBox div{
+        flex: content;
     }
     main{
         margin: 0px 24px;
         box-sizing: border-box;
+    }
+    main h2, h3, p, #smolP{
+        color: rgb(48, 48, 66);
+        text-decoration: none;
         letter-spacing: 0.03em;
-        line-height: 1.6
+        line-height: 140%;
     }
     #query{
         width: 100%;
@@ -83,20 +109,6 @@
         background-color: (255, 255, 255, 0.5);
         backdrop-filter: blur(10px); /* blur what's behind */
         -webkit-backdrop-filter: blur(10px); /* Safari support */
-    }
-    #infoBox{
-        display: flex;
-        flex-direction: row;
-        gap: 72px;
-    }
-    #infoBox div{
-        flex: content;
-    }
-    #infoBox h2, p,  #smolP{
-        color: #fff;
-        text-decoration: none;
-        letter-spacing: 0.03em;
-        line-height: 160%;
     }
     /* #arrowContainer {
         display: flex;
