@@ -49,13 +49,18 @@
         letter-spacing: 0.03em;
         line-height: 160%;
     }
+    .hero{
+        background-color: (255, 255, 255, 0.5);
+        backdrop-filter: blur(10px); /* blur what's behind */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
+    }
     .hero-top {
         background-color: (255, 255, 255, 0.2);
         backdrop-filter: blur(10px); /* blur what's behind */
         -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
     .hero-content {
-        top: 50%;
+        top: 40%;
         left: 0px;/* align to page gutter */
         transform: translateY(-20%); /* only shift vertically */
         max-width: 1440px;
@@ -64,7 +69,7 @@
     }
     .logoIntro{
         display: flex;
-        margin: 24px 0px 64px;
+        margin: 24px 0px 160px;
     }
     #logoimg{
         justify-items: center;
@@ -110,11 +115,6 @@
     .spaceBtwn.active{
         opacity: 1;
         transform: scale(1);
-    }
-    #topBG{
-        background-color: (255, 255, 255, 0.5);
-        backdrop-filter: blur(10px); /* blur what's behind */
-        -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
     /* #arrowContainer {
         display: flex;
