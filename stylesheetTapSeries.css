@@ -44,7 +44,9 @@
         background-repeat: no-repeat; */
     }
     .hero-top {
-        background-color: rgb(255, 255, 255, 0.9);
+        background-color: (255, 255, 255, 0.5);
+        backdrop-filter: blur(10px); /* blur what's behind */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
     main{
         margin: 0px 24px;
@@ -81,7 +83,9 @@
     #infoBox div{
         flex: content;
     }
-    #infoBox p{
+    #infoBox h2, p,  #smolP{
+        color: #fff;
+        text-decoration: none;
         letter-spacing: 0.03em;
         line-height: 160%;
     }
