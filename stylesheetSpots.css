@@ -53,16 +53,18 @@
         -webkit-backdrop-filter: blur(10px); 
     }
     .hero-content {
-        top: 40%;
-        left: 0px;
-        transform: translateY(-20%); 
+        top: 65%;
+        left: 0px;/* align to page gutter */
         max-width: 1440px;
         z-index: 4;
         margin: 24px;
     }
     .logoIntro{
         display: flex;
-        margin: 24px 0px 128px;
+        margin: 24px 0px 80px;
+    }
+    #introLine{
+        margin-bottom: 70px;
     }
     #logoimg{
         justify-items: center;
