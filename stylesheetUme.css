@@ -76,7 +76,7 @@
     #infoBox{
         display: flex;
         flex-direction: row;
-        gap: 72px;
+        gap: 48px;
     }
     #infoBox div{
         flex: content;
@@ -105,14 +105,6 @@
     .spaceBtwn.active{
         opacity: 1;
         transform: scale(1);
-    }
-    #topBG{
-        margin-top: 32px;
-    }
-    #infoBox p{
-        width: 475px;
-        letter-spacing: 0.03em;
-        line-height: 160%;
     }
     /* #arrowContainer {
         display: flex;
