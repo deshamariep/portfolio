@@ -52,9 +52,6 @@
         letter-spacing: 0.03em;
         line-height: 1.6
     }
-    .txwidth{
-        width: 800px;
-    }
     #query{
         width: 100%;
         margin: 300px auto; 
@@ -72,10 +69,18 @@
         transform: scale(1);
     }
     #topBG{
-        margin-top: 32px;
+        background-color: (255, 255, 255, 0.5);
+        backdrop-filter: blur(10px); /* blur what's behind */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
+    }
+    #infoBox{
+        display: flex;
+        gap: 72px;
+    }
+    #infoBox div{
+        flex: content;
     }
     #infoBox p{
-        width: 475px;
         letter-spacing: 0.03em;
         line-height: 160%;
     }
