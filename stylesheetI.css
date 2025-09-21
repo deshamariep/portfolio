@@ -189,7 +189,7 @@
     .logo:hover #csText a{
         display: inline-block;
     }
-    #csText a:hover:not(#noHover){
+    #csText a:hover:not(.noHover){
         background-color: rgb(255, 255, 255, 1);
         color: rgb(48, 48, 66);
     }

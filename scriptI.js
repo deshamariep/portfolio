@@ -17,6 +17,21 @@
       behavior: "smooth"
       });
     }
+
+    // 🔥 Activate Tap Series automatically after snapping
+    const csInfo = document.getElementById('caseStudy');
+    csInfo.innerHTML = `
+      <div id="csText">
+        <h1>TAP Series</h1>
+        <p>User Interface | UI/UX Designer | 2025</p>
+        <p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p>
+        <br>
+        <a href="tapSeries.html">Read</a>
+      </div>
+    `;
+    setMainBackground("images/tapbg.svg"); // update background
+    document.querySelectorAll('.logo').forEach(l => l.classList.remove('active'));
+    document.getElementById('tapSeries').classList.add('active'); // highlight logo
   });
 
   const mainSec = document.querySelector("main");
@@ -44,7 +59,7 @@
   const csInfo = document.getElementById('caseStudy');
   // Amplfy
   document.getElementById('bridgegood').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<div id="csText"><h1>Amplfy</h1><p>Product Design | Product Lead | 2025</p><p>A living network that turns opportunities into results</p><br><a href="#" id="noHover">Coming Soon</a></div>';
+      csInfo.innerHTML = '<div id="csText"><h1>Amplfy</h1><p>Product Design | Product Lead | 2025</p><p>A living network that turns opportunities into results</p><br><a href="#" id="amplfyLink" class="noHover">Coming Soon</a></div>';
   });
   // <div id="csImage"><img src="images/amplfyImages.svg" alt="Frame from Amplfy application" height="398px" width="828px"></div>
 
@@ -125,8 +140,9 @@
   // pop-up
   const bridgegoodLogo = document.getElementById("bridgegood");
   const popup = document.getElementById("popup");
-  bridgegoodLogo.addEventListener("click", (e) => {
-    e.preventDefault(); 
+
+  function showPopup(e) {
+    e.preventDefault();
   
     popup.classList.add("show");
   
@@ -135,10 +151,32 @@
       setTimeout(() => {
         popup.classList.remove("show", "hide");
         popup.style.display = "none";
-      }, 500); 
+      }, 500);
     }, 1000);
   
     popup.style.display = "flex";
+  }
+
+  // Attach popup to logo
+  bridgegoodLogo.addEventListener("click", showPopup);
+
+  // Amplfy hover (with link)
+  document.getElementById("bridgegood").addEventListener("mouseover", function () {
+    csInfo.innerHTML = `
+      <div id="csText">
+        <h1>Amplfy</h1>
+        <p>Product Design | Product Lead | 2025</p>
+        <p>A living network that turns opportunities into results</p>
+        <br>
+        <a href="#" id="amplfyLink" class="noHover">Coming Soon</a>
+      </div>
+    `;
+  
+    // add click handler for the <a>
+    const amplfyLink = document.getElementById("amplfyLink");
+    if (amplfyLink) {
+      amplfyLink.addEventListener("click", showPopup);
+    }
   });
 
 
