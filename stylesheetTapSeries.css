@@ -51,11 +51,11 @@
     }
     .hero{
         background-color: (255, 255, 255, 0.5);
-        backdrop-filter: blur(10px); /* blur what's behind */
-        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        backdrop-filter: blur(20px); /* blur what's behind */
+        -webkit-backdrop-filter: blur(20px); /* Safari support */
     }
     .hero-top {
-        background-color: (255, 255, 255, 0.2);
+        background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(10px); /* blur what's behind */
         -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
