@@ -43,8 +43,46 @@
         background-position: 0px top; 
         background-repeat: no-repeat; */
     }
+    .hero{
+        background-color: (255, 255, 255, 0.5);
+        backdrop-filter: blur(20px); /* blur what's behind */
+        -webkit-backdrop-filter: blur(20px); /* Safari support */
+    }
     .hero-top {
-        background-color: rgb(255, 255, 255, 0.9);
+        background-color: (255, 255, 255, 0.1);
+        backdrop-filter: blur(10px); /* blur what's behind */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
+    }
+    .hero-content {
+        top: 40%;
+        left: 0px;/* align to page gutter */
+        transform: translateY(-20%); /* only shift vertically */
+        max-width: 1440px;
+        z-index: 4;
+        margin: 24px;
+    }
+    .logoIntro{
+        display: flex;
+        margin: 24px 0px 160px;
+    }
+    #logoimg{
+        justify-items: center;
+        align-content: center;
+        margin-right: 16px;
+    }
+    #logotx h1, p{
+        margin: 0px;
+    }
+    #infoBox{
+        display: flex;
+        flex-direction: row;
+        gap: 72px;
+    }
+    #infoBox div{
+        flex: content;
+    }
+    #infoBox h2{
+        margin: 8px 0px;
     }
     main{
         margin: 0px 24px;
