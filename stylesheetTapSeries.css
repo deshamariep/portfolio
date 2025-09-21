@@ -43,7 +43,7 @@
         background-position: 0px top; 
         background-repeat: no-repeat; */
     }
-    .hero h1, h2, p, #smolP{
+    .hero h1, h2, #logotx p, #smolP, #infoBox p{
         color: #fff;
         text-decoration: none;
         letter-spacing: 0.03em;
@@ -64,12 +64,15 @@
     }
     .logoIntro{
         display: flex;
+        margin: 24px 0px 64px;
     }
     #logoimg{
-        flex: content;
+        justify-items: center;
+        align-content: center;
+        margin-right: 16px;
     }
-    #logotx{
-        flex: 1;
+    #logotx h1, p{
+        margin: 0px;
     }
     #infoBox{
         display: flex;
