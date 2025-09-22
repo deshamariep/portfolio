@@ -273,7 +273,8 @@
         margin: 0 auto;
     }
     .newMargin{
-        margin: 0 170px;
+        margin-left: 170px; 
+        margin-right: 170px;
     }
 }   
 @media screen and (min-width: 1650px){
