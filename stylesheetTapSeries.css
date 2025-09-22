@@ -60,7 +60,7 @@
         -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
     .hero-content {
-        top: 65%;
+        top: 60%;
         left: 0px;/* align to page gutter */
         max-width: 1440px;
         z-index: 4;
@@ -68,10 +68,10 @@
     }
     .logoIntro{
         display: flex;
-        margin: 24px 0px 80px;
+        margin: 24px 0px 72px;
     }
     #introLine{
-        margin-bottom: 70px;
+        margin-bottom: 64px;
     }
     #logoimg{
         justify-items: center;
@@ -104,7 +104,7 @@
     }
     #query{
         width: 100%;
-        margin: 300px auto; 
+        margin: 0 auto; 
     }
     .spaceBtwn{
         margin-top: 250px;
@@ -173,8 +173,8 @@
     .text540, .text540 ul{
         width: 540px;
     }
-    .textwidth{
-        width: 928px;
+    .newMargin{
+        margin: 0 170px;
     }
 }   
 /* @media screen and (min-width: 1650px){
