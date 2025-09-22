@@ -29,7 +29,7 @@
             obs.unobserve(entry.target); // fade-in happens once
           }
         });
-      }, { threshold: 0.4 }); // trigger when 20% visible
+      }, { threshold: 0.4 }); 
     
       faders.forEach(el => observer.observe(el));
     });
