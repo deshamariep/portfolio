@@ -43,7 +43,7 @@
         background-position: 0px top; 
         background-repeat: no-repeat; */
     }
-    .hero h1, h2, #logotx p, #infoBox #smolP, #infoBox p, .hero-top #one a{
+    .hero h1, h2, #logotx p, #infoBox .smolP, #infoBox p, .hero-top #one a{
         color: #fff;
         text-decoration: none;
         letter-spacing: 0.03em;
@@ -96,7 +96,7 @@
         margin: 0px 24px;
         box-sizing: border-box;
     }
-    main h2, h3, p, #smolP{
+    main h2, h3, p, .smolP{
         color: rgb(48, 48, 66);
         text-decoration: none;
         letter-spacing: 0.03em;
