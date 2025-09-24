@@ -61,7 +61,7 @@
                 </div>
                 <div>
                     <p>Duration</p>
-                    <h2>9<span id="smolP"><b>MOs</b></span></h2>
+                    <h2>9<span class="smolP"><b>MOs</b></span></h2>
                 </div>
                 <div>
                     <p>Tools</p>
@@ -69,7 +69,7 @@
                 </div>
                 <div>
                     <p>Read Time</p>
-                    <h2>5-7<span id="smolP"><b>MINs</b></span></h2>
+                    <h2>5-7<span class="smolP"><b>MINs</b></span></h2>
                 </div>
             </div>
         </div>
@@ -80,40 +80,77 @@
     <main>
         <section id="query">
             <div class="spaceBtwn newMargin">
-                <h2>Optimizing Usability & Production Systems</h2>
-                <h3>By addressing user pain points and system inefficiencies, we created targeted solutions to <b>enhance</b> the overall <b>user experience</b>, <b>streamline workflows</b>, and ensure better system integrity.</h3>
-                <p>Projects addressed:</p>
+                <div class="data">
+                    <div>
+                        <h2>Optimizing Usability & Production Systems</h2>
+                    </div>
+                    <div>
+                        <p>By addressing user pain points and system inefficiencies, we created targeted solutions to enhance the overall user experience, streamline workflows, and ensure better system integrity.</p>
+                        <p>By addressing user pain points and system inefficiencies, we created targeted solutions to enhance the overall user experience, streamline workflows, and ensure better system integrity.</p>
+                    </div>
+                </div>
+                <!-- <p>Projects addressed:</p>
                 <p>1. Improving Post-Practice Exam Clarity & User Trust</p>
                 <p>2. Designing Secure Admin Workflows</p>
-                <p>3. AI-Assisted Email Campaigns & Learning Content</p>
+                <p>3. AI-Assisted Email Campaigns & Learning Content</p> -->
             </div>
+            <img src="images/footerLine.svg" alt="graphic line for section separation" height="1px" width="1392px">
             <!-- <div class="spaceBtwn">
                 <p>TAP Series is an industry-leading provider of 100% online, ANSI-accredited compliance training, specializing in courses like Food Safety Manager Certification that serve employers nationwide. Drawing on detailed user feedback, I identified key areas where the platform’s usability and system processes could be improved. I developed targeted UI solutions, then collaborated with the development team to implement them across core workflows.</p>
             </div> -->
             <div class="spaceBtwn newMargin">
-                <h3>1. Improving Post-Practice Exam Clarity & User Trust</h3>
-                <br>
-                <p><b>Problem:</b> Users completing the Food Safety Manager training <b>faced unclear next steps</b> after practice exams and <b>frequent login issues</b> when accessing the ANSI proctoring site. This <b>confusion led to certification delays and increased support calls</b>.</p>
-            </div>
-            <div class="spaceBtwn newMargin">
-                <p>The goal was to <b>improve post-exam clarity</b>, <b>guide users based on pass/fail outcomes</b>, and proactively <b>reduce common technical issues</b> during the exam handoff process. Additionally, to create a client-specific version for Albertson’s and Safeway that aligned with their training standards.</p>
-            </div>
-            <div class="spaceBtwn">
-                <p class="newMargin">First I <b>updated separate messaging flows</b> for fail/pass outcomes with <b>tailored next steps</b>.</p>
-                <br>
-                <br>
                 <div class="data">
                     <div>
-                        <img src="images/failBefore.svg" alt="failing score messsage before update" height="56px" width="678px">
+                        <h3>1. Improving Post-Practice Exam Clarity & User Trust</h3>
+                        <p class="smolP">Heuristic Design Evaluation</p>
+                        <p class="smolP">UX Writing</p>
                     </div>
                     <div>
-                        <img src="images/failAfter.svg" alt="failing score messsage after update" height="88px" width="678px">
+                        <p><b>Context</b></p>
+                        <p>Users completing the Food Safety Manager training faced unclear next steps after practice exams and frequent login issues when accessing the ANSI proctoring site. This confusion led to certification delays and increased support calls.</p>
+                        <p>The goal was to improve post-exam clarity, guide users based on pass/fail outcomes, and proactively reduce common technical issues during the exam handoff process. Additionally, to create a client-specific version for Albertson’s that aligned with their training standards.</p>
                     </div>
                 </div>
-                <br>
+            </div>
+            <div class="spaceBtwn newMargin">
                 <div class="data">
                     <div>
-                        <img src="images/passBefore.svg" alt="passing score messsage before update" height="69px" width="678px">
+                        <p><b>Approach</b></p>
+                        <p class="smolP">Preliminary Research</p>
+                    </div>
+                    <div>
+                        <p>I began with a heuristic evaluation to quickly identify design issues that could harm user experience. I found the following discrepancies from Jakob Nielsen’s 10 Usability Heuristics:</p>
+                        <p class="smolP">Visibility of System Status</p>
+                        <p>The success messages and score outcomes where out of the way and confusing. Users didn’t know whether they passed or failed immediately.</p>
+                        <p class="smolP">Recognition Rather Than Recall</p>
+                        <p>There was no provided guidance increasing the need for users to phone in for support on what to do next. Actions were not visible at the right time.</p>
+                        <p class="smolP">Aesthetic and Minimalist Design</p>
+                        <p>Support information was added to the success message causing clutter, preventing the main outcome stand out.</p>
+                        <p class="smolP">Help Users Recognize, Diagnose, and Recover from Errors</p>
+                        <p>For failing users, there was no immediate recovery path, leading to confusion or dead ends.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="spaceBtwn newMargin">
+                <!-- user personas here -->
+            </div>
+            <div class="spaceBtwn newMargin">
+                <div class="data">
+                    <div>
+                        <p><b>Updated Separate Messaging Flows</b></p>
+                        <p class="smolP">for fail/pass outcomes</p>
+                    </div>
+                    <div>
+                        <p>Both updated fail and pass screens use visual hierarchy to guide user attention.</p>
+                        <p>Success messages and score outcomes draw the eye, while bolded guidance text and strategically placed links provide clear next steps.</p>
+                        <p>Support information is separated to reduce cognitive load and clutter, with passing users directed to ANSI registration and failing users guided to retake the practice test.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="spaceBtwn">
+                <div class="data">
+                    <div>
+                        <img src="images/failAfter.svg" alt="failing score messsage after update" height="88px" width="678px">
                     </div>
                     <div>
                         <img src="images/passAfter.svg" alt="passing score messsage after update" height="97px" width="678px">
@@ -121,22 +158,18 @@
                 </div>
             </div>
             <div class="spaceBtwn newMargin">
-                <p>How I changed the <b>visual hierarchy</b> to guide user attention to provide clear next steps.<b>
-                    <nav>
-                        <ul>
-                            <li>success messages and score outcomes draw the eye</li>
-                            <li>bolded guidance text and strategically placed links</li>
-                        </ul>
-                    </nav>
-                <p>Passing users directed to ANSI registration and failing users guided to retake the practice test, with support information <b>separated to reduce cognitive load and clutter</b></p>
+                <div class="data">
+                    <div>
+                        <p><b>Error Prevention & Next Steps</b></p>
+                        <p class="smolP">Instructional Page</p>
+                    </div>
+                    <div>
+                        <p>I then added pre-ANSI instructional screen for passing users to prevent common login issues. Taking note of Albertson's/Safeway compliance requirements while maintaining visual consistency with the TAP system.</p>
+                        <p>This screen reinforces user confidence by combining clear status visibility, strong visual hierarchy, and actionable next steps, pairing success confirmation with bolded key details, color cues, and direct pathways to reduce errors and guide users seamlessly forward.</p>
+                    </div>
+                </div>
             </div>
             <div class="spaceBtwn">
-                <p class="newMargin">I then added pre-ANSI <b>instructional screen</b> for passing users <b>to prevent common login issues</b>. Taking note of Albertson's/Safeway compliance requirements while maintaining visual consistency with the TAP system.</p>
-                <ul class="newMargin">
-                    <li><b>Success message</b> confirming training has been completed</li>
-                    <li><b>Emphasized vital information</b> with bolded or colored text</li>
-                    <li><b>Obvious next-step</b> options</li>
-                </ul>
                 <div>
                     <img src="images/instructionPage.svg" alt="Added instructional page to guide users to next steps" height="450px" width="825px">
                 </div>      
@@ -145,57 +178,116 @@
                 <p>I redesigned key training flow screens to reduce confusion and improve user confidence during registration and exam transitions. The new messaging clarified login and credentialing steps, decreasing support requests and ensuring smoother certification progress. I also delivered a custom version tailored to Retail Grocery Stores’ training standards and compliance requirements.</p>
             </div> -->
             <div class="spaceBtwn newMargin">
-                <p><b>Solution:</b> I redesigned training flow screens to <b>reduce confusion</b> during exam transitions. The updated messaging <b>clarified login steps</b>, <b>decreased support requests</b>, and ensured <b>smoother certification progress</b>.</p>
-            </div>
-            <div class="spaceBtwn newMargin">
-                <h3>2. Designing Secure Admin Workflows</h3>
-                <p><b>Problem:</b> After enrollment, admins found student/employee names were occasionally <b>misspelled or didn't match legal documentation</b>. However, <b>unrestricted name editing posed risks</b>, admins could falsify training completion and bypass certification requirements for newer employees.</p>
-            </div>
-            <div class="spaceBtwn newMargin">
-                <p>The goal here was to design a <b>secure yet flexible system</b> that allows for <b>genuine name corrections while preventing misuse</b> that could compromise the integrity of training records and certifications.</p>
-                <p>I designed a <b>guided pop-up</b> that replaced direct name editing after enrollment. When admins attempted edits, clear instructions appeared for making <b>changes through proper channels</b>, preventing fraud while allowing legitimate corrections.</p>
-            </div>
-            <div class="spaceBtwn">
                 <div class="data">
                     <div>
-                        <p>Edit Name Before</p>
-                        <img src="images/editBefore.svg" alt="guided edit workflow before update" height="381px" width="678px">
+                        <p><b>Solution</b></p>
                     </div>
                     <div>
-                        <p>Updated</p>
-                        <img src="images/editAfter.svg" alt="guided edit workflow after update" height="381px" width="678px">
+                        <p>I redesigned training flow screens to reduce confusion during exam transitions. The updated messaging clarified login steps, decreased support requests, and ensured smoother certification progress. I also created a custom version meeting Retail Grocery Stores' compliance requirements.</p>
                     </div>
                 </div>
             </div>
-            <div class="spaceBtwn">
-                <p>Admin Editing Guide</p>
+            <img src="images/footerLine.svg" alt="graphic line for section separation" height="1px" width="1392px">
+            <div class="spaceBtwn newMargin">
                 <div class="data">
                     <div>
-                        <img src="images/editAdminGuide.svg" alt="Admin Editing Guide Pop-Up" height="500px" width="467px">
+                        <h3>2. Designing Secure Admin Workflows</h3>
+                        <p class="smolP">User Journey</p>
+                        <p class="smolP">Interaction Design</p>
                     </div>
-                    <div class="text540">
-                        <ul>
-                            <li>Pop-up message <b>detailing steps to fix student/employee names</b></li>
-                            <li><b>Icons</b> depicting <b>changeable fields</b></li>
-                        </ul>
+                    <div>
+                        <p><b>Context</b></p>
+                        <p>After enrollment, admins found student/employee names were often misspelled or didn't match legal documentation. However, unrestricted name editing posed risks, users could falsify training completion and bypass certification requirements.</p>
+                        <p>The goal here was to design a secure yet flexible system that allows for genuine name corrections while preventing misuse that could compromise the integrity of training records and certifications.</p>
                     </div>
                 </div>
             </div>
             <div class="spaceBtwn newMargin">
-                <p><b>Solution:</b> A <b>secure correction system that guided admins</b> through proper name change procedures while protecting certification records. Balancing administrative needs with security requirements, <b>ensuring accurate student data</b> without enabling fraudulent modifications.</p>
+                <div class="data">
+                    <div>
+                        <p>Approach</p>
+                        <p class="smolP">A Heuristic Evaluation</p>
+                    </div>
+                    <div>
+                        <p>I began with a heuristic evaluation</p>
+                        <p class="smolP">Help Users Recognize, Diagnose, and Recover from Errors</p>
+                        <p>Previously, admins had no ability to edit names, but the system also lacked clear guidance to help them understand what could and couldn’t be changed.</p>
+                        <p class="smolP">Visibility of System Status</p>
+                        <p>No feedback when an edit attempt happens, so admins don’t know why the action is restricted or what they should do next.</p>
+                    </div>
+                </div>
             </div>
-            <div class="spaceBtwn newMargin">
-                <h3>3. AI-Assisted Email Campaigns & Learning Content</h3>
-                <br>
-                <p><b>Problem:</b> The marketing team needed to <b>scale email campaigns and generate learning materials more efficiently</b>. Current design-focused to HTML processes were <b>slow and inconsistent</b>, creating bottlenecks in outreach and content development across multiple courses.</p>
-            </div>
-            <div class="spaceBtwn newMargin">
-                <p>The goal was to <b>leverage design systems and AI tools to automate content creation</b> for email campaigns and learning materials, enabling the team to scale outreach and documentation without sacrificing quality or brand consistency.</p>
-                <br>
-                <p>By incorporating our <b>brand standards and design guidelines</b>, I refined these outputs for clarity and visual consistency. This created an <b>easily accessible system</b> for the marketing team <b>to streamline</b> their weekly email campaigns.</p>
+            <!-- user journey here -->
+            <div class="spaceBtwn">
+                <div class="data">
+                    <div>
+                        <p><b>Admin Editing Guide</b></p>
+                    </div>
+                    <div>
+                        <p>A pop-up that identifies unrestricted name editing after enrollment and highlighted the appropriate fields with icons. When admins attempted to make changes, the system surfaced, instuctions to a dedicated page with step-by-step guidance, making the process intuitive, secure, and easy to follow.</p>
+                    </div>
+                </div>
             </div>
             <div class="spaceBtwn">
-                <p class="newMargin">I used <b>ChatGPT's project capabilities</b> to generate structured <b>HTML email templates and course study guides</b> using my HTML coding instructions as a framework.</p>
+                <div>
+                    <img src="images/editAdminGuide.svg" alt="Admin Editing Guide Pop-Up" height="500px" width="467px">
+                </div>
+            </div>
+            <div class="spaceBtwn newMargin">
+                <div class="data">
+                    <div>
+                        <p><b>Solution</b></p>
+                    </div>
+                    <div>
+                        <p>A secure correction system that guided admins through proper name change procedures while protecting certification records. Balancing administrative needs with security requirements, ensuring accurate student data without enabling fraudulent modifications.</p>
+                    </div>
+                </div>
+            </div>
+            <img src="images/footerLine.svg" alt="graphic line for section separation" height="1px" width="1392px">
+            <div class="spaceBtwn newMargin">
+                <div class="data">
+                    <div>
+                        <h3>3. AI-Assisted Email Campaigns & Learning Content</h3>
+                        <p class="smolP">Consistency & Brand Cohesion</p>
+                        <p class="smolP">AI-Assisted Design</p>
+                        <p class="smolP">Design Systems Documentation</p>
+                    </div>
+                    <div>
+                        <p><b>Context</b></p>
+                        <p>The marketing team needed to scale email campaigns and generate learning materials more efficiently. Current design-focused to HTML processes were slow and inconsistent, creating bottlenecks in outreach and content development across multiple courses.</p>
+                        <p>The goal was to leverage design systems and AI tools to automate content creation for email campaigns and learning materials, enabling the team to scale outreach and documentation without sacrificing quality or brand consistency.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="spaceBtwn newMargin">
+                <div class="data">
+                    <div>
+                        <p><b>Approach</b></p>
+                        <p class="smolP">Comparative Analysis</p>
+                    </div>
+                    <div>
+                        <p>I began with an analysis of existing approaches, looking at both internal workflows and external tools.</p>
+                        <p class="smolP">Prior Internal Solutions</p>
+                        <p>The marketing team was using BeeFree to design each email individually for every course campaign. While this allowed for creative flexibility, it was also extremely time-intensive and slowed campaign production.</p>
+                        <p class="smolP">Competitors and Analogous Products</p>
+                        <p>I reviewed other tools that convert designs into HTML emails, including template builders and emerging AI-powered products, to benchmark alternative approaches and identify opportunities for efficiency.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="spaceBtwn newMargin">
+                <div class="data">
+                    <div>
+                        <p><b>AI Powered Design</b></p>
+                        <p class="smolP">ChatGPT Projects</p>
+                        <p class="smolP">HTML & CSS</p>
+                    </div>
+                    <div>
+                        <p>I developed instructions, with HTML and CSS elements, for the AI to use as the email framework. By incorporating our brand standards and design guidelines, I refined these outputs for clarity and visual consistency. I then leveraged ChatGPT's project capabilities to generate structured HTML email templates and course study guides. This created an easily accessible system for the marketing team to streamline their weekly email campaigns.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- email contents here -->
+            <div class="spaceBtwn">
                 <figure>
                     <div class="dataimg">
                         <img src="images/htmlContent.svg" alt="drafted contents by curated html, in the example Environmental Social Governance course Email, Study Guide, and Syllabus" height="560px" width="683px">
@@ -213,10 +305,25 @@
                 </figure>
             </div>
             <div class="spaceBtwn newMargin">
-                <p><b>Solution:</b> An <b>AI-supported workflow</b> that dramatically <b>reduced content generation time</b> while <b>maintaining consistent quality</b> across campaigns. Leveraged <b>ChatGPT</b> to draft HTML email content and educational documents, integrating <b>brand-aligned layouts</b> to ensure cohesive experiences. The <b>repeatable system enabled</b> the marketing team to send <b>over 50,000 emails per week</b> using scalable templates.</p>
+                <div class="data">
+                    <div>
+                        <p><b>Solution</b></p>
+                    </div>
+                    <div>
+                        <p>This AI-supported workflow dramatically reduced content generation time while maintaining consistent quality across campaigns. Leveraged ChatGPT to draft HTML email content and educational documents, integrating brand-aligned layouts to ensure cohesive experiences. The repeatable system enabled the marketing team to send over 50,000 emails per week using scalable templates.</p>
+                    </div>
+                </div>
             </div>
+            <img src="images/footerLine.svg" alt="graphic line for section separation" height="1px" width="1392px">
             <div class="spaceBtwn newMargin">
-                <p><b>Conclusion:</b> Each of these projects <b>contributed to optimizing usability and design</b> by streamlining workflows, enhancing user guidance, and ensuring system integrity. The key achievements included <b>improved user experience</b>, <b>faster issue resolution</b>, <b>automation of administrative tasks</b>, and <b>clear communication of changes or guidance from developers to end-users</b>.</p>
+                <div class="data">
+                    <div>
+                        <p><b>Conclusion</b></p>
+                    </div>
+                    <div>
+                        <p>Each of these projects contributed to optimizing usability and design by streamlining workflows, enhancing user guidance, and ensuring system integrity. The key achievements included improved user experience, faster issue resolution, automation of administrative tasks, and clear communication of changes or guidance from developers to end-users.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

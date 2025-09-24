@@ -30,7 +30,7 @@ H3{
     letter-spacing: 0.03em;
     line-height: 140%;
 }
-p{
+p, nav ul li{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -43,7 +43,7 @@ p{
 .centerText{
     text-align: center;
 }
-.painPT .number, #smolP, footer p, #circle1, #circle2, #circle3, #circle4{
+.painPT .number, .smolP, footer p, #circle1, #circle2, #circle3, #circle4{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
