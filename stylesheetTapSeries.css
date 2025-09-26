@@ -157,12 +157,10 @@
         gap: 24px;
     }
     .dataimg{
-        display: flex;
-        justify-content: space-evenly; 
-        gap: 16px;
-    }
-    .dataimg div{
-        flex: 1;
+        display: flex; 
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
     }
     .datatext{
         flex: 4;
