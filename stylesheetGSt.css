@@ -164,17 +164,16 @@
         animation: center;
         gap: 30px;
     }
-    .data540{
-        display: flex;
+    .datatext{
+        flex: 4;
     }
-    .data540 div{
-        flex: content;
-    }
-    .text540{
-        width: 540px;
-    }
-    #noMargin{
+    .data h2, h3{
         margin-top: 0px;
+    }
+    .data420{
+        flex: 3;
+        /* width: 420px;
+        padding-right: 88px; */
     }
     #question{
         position: relative;

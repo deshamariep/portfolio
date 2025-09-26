@@ -162,13 +162,13 @@
         gap: 16px;
     }
     .datatext{
-        flex: 2;
+        flex: 4;
     }
     .data h2, h3{
         margin-top: 0px;
     }
     .data420{
-        flex: 1;
+        flex: 3;
         /* width: 420px;
         padding-right: 88px; */
     }

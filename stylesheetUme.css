@@ -149,6 +149,17 @@
     .data div{
         flex: 1;
     }
+    .datatext{
+        flex: 4;
+    }
+    .data h2, h3{
+        margin-top: 0px;
+    }
+    .data420{
+        flex: 3;
+        /* width: 420px;
+        padding-right: 88px; */
+    }
     .painPT{
         width: 160px;
         height: 160px;
