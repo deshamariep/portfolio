@@ -30,7 +30,7 @@ H3{
     letter-spacing: 0.03em;
     line-height: 140%;
 }
-p, nav ul li{
+p, nav ul li, ul li{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
