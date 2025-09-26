@@ -153,16 +153,15 @@
     .data{
         display: flex;
         justify-content: space-between; 
-        gap: 30px;
+        gap: 24px;
     }
-    .data div{
-        flex: 1;
-    }
-    .imgData{
+    .dataimg{
         display: flex;
-        justify-content: center; 
-        animation: center;
-        gap: 30px;
+        justify-content: space-evenly; 
+        gap: 16px;
+    }
+    .dataimg div{
+        flex: 1;
     }
     .datatext{
         flex: 4;

@@ -146,7 +146,12 @@
         justify-content: space-between; 
         gap: 20px;
     }
-    .data div{
+    .dataimg{
+        display: flex;
+        justify-content: space-evenly; 
+        gap: 16px;
+    }
+    .dataimg div{
         flex: 1;
     }
     .datatext{

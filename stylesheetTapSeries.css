@@ -161,6 +161,9 @@
         justify-content: space-evenly; 
         gap: 16px;
     }
+    .dataimg div{
+        flex: 1;
+    }
     .datatext{
         flex: 4;
     }
