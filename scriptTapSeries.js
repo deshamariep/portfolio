@@ -26,10 +26,10 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add("active");
-            obs.unobserve(entry.target); // fade-in happens once
+            obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.4 }); 
+      }, { threshold: 0.2 }); 
     
       faders.forEach(el => observer.observe(el));
     });
