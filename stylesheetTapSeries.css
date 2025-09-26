@@ -154,7 +154,7 @@
     .data{
         display: flex;
         justify-content: space-between; 
-        gap: 24px;
+        gap: 32px;
     }
     .dataimg{
         display: flex; 
@@ -176,6 +176,16 @@
     .newMargin{
         margin-left: 170px; 
         margin-right: 170px;
+    }
+    #failLeft{
+        display: block;
+        justify-content: left;
+        align-items: center;
+    }
+    #passRight{
+        display: block;
+        justify-content: right;
+        align-items: center;
     }
 }   
 /* @media screen and (min-width: 1650px){
