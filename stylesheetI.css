@@ -43,6 +43,9 @@
     .hero-content h1{
         margin: 24px 0px;
     }
+    .hero-content h3{
+        color: #dfdfdf;
+    }
     body{
         margin: 0;
         padding: 0;
