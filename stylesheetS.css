@@ -48,7 +48,7 @@
         margin: 200px 24px 0px 24px;
         box-sizing: border-box;
         letter-spacing: 0.03em;
-        line-height: 1.6
+        line-height: 160%;
     }
     #gallery{
         margin: 0 auto;

@@ -44,7 +44,7 @@
         box-sizing: border-box;
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
-        line-height: 1.6
+        line-height: 160%;
     }
     #query {
         width: 100%;
@@ -88,7 +88,7 @@
         font-size: 20px;
         color: rgb(48, 48, 66);
         letter-spacing: 0.03em;
-        line-height: 140%;
+        line-height: 160%;
     }
     .obsessions{
         display: flex;
