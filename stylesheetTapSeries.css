@@ -178,14 +178,11 @@
         margin-right: 170px;
     }
     #failLeft{
-        display: block;
-        justify-content: left;
-        align-items: center;
-    }
+        text-align: left;  /* image hugs the left */
+        margin-bottom: 1rem;
+    } 
     #passRight{
-        display: block;
-        justify-content: right;
-        align-items: center;
+        text-align: right; /* image hugs the right */
     }
 }   
 /* @media screen and (min-width: 1650px){
