@@ -85,6 +85,9 @@
     }
     #infoBox h2{
         margin: 8px 0px;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 30px;
     }
     main{
         margin: 0px 24px;
