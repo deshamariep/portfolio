@@ -72,14 +72,14 @@
         align-content: center;
         margin-right: 16px;
     }
-    #logotx h1, p{
+    #logotx h1, #logotx p{
         margin: 0px;
         width: 700px;
     }
     #infoBox{
         display: flex;
         flex-direction: row;
-        gap: 48px;
+        gap: auto;
     }
     #infoBox div{
         flex: content;
