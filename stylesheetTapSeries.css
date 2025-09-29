@@ -43,7 +43,7 @@
         background-position: 0px top; 
         background-repeat: no-repeat; */
     }
-    .hero h1, h3, #logotx p, #infoBox .smolP, #infoBox p, .hero-top #one a{
+    .hero h1, #logotx p, #infoBox h3, #infoBox .smolP, #infoBox p, .hero-top #one a{
         color: #fff;
         text-decoration: none;
         letter-spacing: 0.03em;
@@ -88,12 +88,6 @@
     }
     #infoBox div{
         flex: content;
-    }
-    #infoBox h2{
-        margin: 8px 0px;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 30px;
     }
     main{
         margin: 0px 24px;
