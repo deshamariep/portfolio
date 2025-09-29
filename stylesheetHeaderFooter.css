@@ -1,4 +1,4 @@
-.hero {
+.hero{
     position: relative;
     width: 100vw;
     min-height: 811px;
@@ -7,7 +7,7 @@
     text-align: left;
 }
   
-.hero-img {
+.hero-img{
     position: absolute;
     inset: 0;
     width: 100%;
@@ -18,7 +18,7 @@
 }
 
 /* top bar: logo + nav */
-.hero-top {
+.hero-top{
     position: absolute;
     top: 0;
     left: 0;
@@ -67,7 +67,7 @@
     text-decoration: none;
 }
 /* hero text (like old #intro, left aligned) */
-.hero-content {
+.hero-content{
     position: absolute;
     top: 40%;                    /* vertical center */
     left: 24px;                  /* align to page gutter */
@@ -80,7 +80,7 @@
     margin: 24px 0px;
 }
 
-/* animated gradient look (yours) */
+/* animated gradient
 .hero-heading-anim {
     background-image: radial-gradient(
         circle,
@@ -94,7 +94,7 @@
     -webkit-background-clip: text;
     color: transparent;
     animation: gradientSwipe 10s ease-in-out forwards 500ms;
-}
+} */
 
 footer{
     width: 100%;
