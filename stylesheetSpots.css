@@ -42,11 +42,6 @@
         background-position: 0px top;
         background-repeat: no-repeat; */
     }
-    .hero{
-        background-color: (255, 255, 255, 0.5);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px); 
-    }
     .hero-top {
         background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(10px); 
@@ -61,10 +56,10 @@
     }
     .logoIntro{
         display: flex;
-        margin: 24px 0px 72px;
+        margin: 24px 0px 56px;
     }
     #introLine{
-        margin-bottom: 64px;
+        margin-bottom: 40px;
     }
     #logoimg{
         justify-items: center;

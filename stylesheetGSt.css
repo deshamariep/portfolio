@@ -43,11 +43,6 @@
         background-position: 0px top;  
         background-repeat: no-repeat; */
     }
-    .hero{
-        background-color: (255, 255, 255, 0.5);
-        backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px); 
-    }
     .hero-top {
         background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(10px); 
@@ -62,10 +57,10 @@
     }
     .logoIntro{
         display: flex;
-        margin: 24px 0px 72px;
+        margin: 24px 0px 56px;
     }
     #introLine{
-        margin-bottom: 64px;
+        margin-bottom: 40px;
     }
     #logoimg{
         justify-items: center;
@@ -84,11 +79,11 @@
     #infoBox div{
         flex: content;
     }
-    #infoBox h2{
-        margin: 8px 0px;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 30px;
+    #infoBox h3{
+        margin: 0px;
+    }
+    #infoBox p{
+        margin: 0px;
     }
     main{
         margin: 0px 24px;
