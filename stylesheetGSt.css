@@ -74,6 +74,7 @@
     }
     #logotx h1, p{
         margin: 0px;
+        width: 700px;
     }
     #infoBox{
         display: flex;
