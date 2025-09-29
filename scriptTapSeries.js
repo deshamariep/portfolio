@@ -29,7 +29,7 @@
             obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.2 }); 
+      }, { threshold: 0.4 }); 
     
       faders.forEach(el => observer.observe(el));
     });
