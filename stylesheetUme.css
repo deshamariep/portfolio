@@ -90,6 +90,26 @@
         letter-spacing: 0.03em;
         line-height: 160%;
     }
+    main h2, main h3{
+        color: rgb(48, 48, 66);
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
+    main p{
+        color: rgb(48, 48, 66);
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        line-height: 160%;
+        margin-top: 0px;
+    }
+    main .smolP{
+        color: rgb(48, 48, 66);
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        line-height: 160%;
+        margin: 0px;
+    }
     #query{
         width: 100%;
         margin: 0 auto; 

@@ -1,4 +1,4 @@
-H1{
+h1{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -10,7 +10,7 @@ H1{
     /* padding-bottom: 32px;
     margin-bottom: 10px; */
 }
-H2{
+h2{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -20,7 +20,7 @@ H2{
     letter-spacing: 0.03em;
     line-height: 160%;
 }
-H3{
+h3{
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;

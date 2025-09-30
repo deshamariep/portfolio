@@ -50,6 +50,9 @@
         letter-spacing: 0.03em;
         line-height: 160%;
     }
+    /* h1{
+
+    } */
     .hero-top #one a:hover{
         text-decoration: underline;
     }
@@ -97,11 +100,18 @@
         margin: 0px 24px;
         box-sizing: border-box;
     }
-    main h2, main h3, main p{
+    main h2, main h3{
         color: rgb(48, 48, 66);
         text-decoration: none;
         letter-spacing: 0.03em;
         line-height: 160%;
+    }
+    main p{
+        color: rgb(48, 48, 66);
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        line-height: 160%;
+        margin-top: 0px;
     }
     main .smolP{
         color: rgb(48, 48, 66);
