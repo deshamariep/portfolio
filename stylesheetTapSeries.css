@@ -60,7 +60,7 @@
         -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
     .hero-content {
-        top: 60%;
+        top: 55%;
         left: 0px;/* align to page gutter */
         max-width: 1440px;
         z-index: 4;
@@ -68,10 +68,11 @@
     }
     .logoIntro{
         display: flex;
-        margin: 24px 0px 56px;
+        margin: 24px 0px 72px;
     }
     #introLine{
-        margin-bottom: 40px;
+        margin-top: 72px;
+        margin-bottom: 60px;
     }
     #logoimg{
         justify-items: center;
@@ -89,6 +90,9 @@
     }
     #infoBox div{
         flex: content;
+    }
+    #infoBox h3, #infoBox p{
+        margin: 0px;
     }
     main{
         margin: 0px 24px;
