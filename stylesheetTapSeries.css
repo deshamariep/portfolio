@@ -81,7 +81,7 @@
     #infoBox{
         display: flex;
         flex-direction: row;
-        gap: auto;
+        gap: 184px;
     }
     #infoBox div{
         flex: content;

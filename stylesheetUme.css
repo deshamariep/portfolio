@@ -75,7 +75,7 @@
     #infoBox{
         display: flex;
         flex-direction: row;
-        gap: auto;
+        gap: 69px;
     }
     #infoBox div{
         flex: content;
