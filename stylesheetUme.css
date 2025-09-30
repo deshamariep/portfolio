@@ -58,11 +58,11 @@
     }
     .logoIntro{
         display: flex;
-        margin: 24px 0px 72px;
+        margin: 24px 0px 125px;
     }
     #introLine{
-        margin-top: 72px;
-        margin-bottom: 60px;
+        margin-top: 125px;
+        margin-bottom: 65px;
     }
     #logoimg{
         justify-items: center;
