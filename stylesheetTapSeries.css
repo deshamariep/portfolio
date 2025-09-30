@@ -97,13 +97,13 @@
         margin: 0px 24px;
         box-sizing: border-box;
     }
-    main h2, main h3, main .smolP{
+    main h2, main h3, main p{
         color: rgb(48, 48, 66);
         text-decoration: none;
         letter-spacing: 0.03em;
         line-height: 160%;
     }
-    main p{
+    main .smolP{
         color: rgb(48, 48, 66);
         text-decoration: none;
         letter-spacing: 0.03em;
