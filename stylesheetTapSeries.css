@@ -49,6 +49,9 @@
         letter-spacing: 0.03em;
         line-height: 160%;
     }
+    .hero-top #one a:hover{
+        text-decoration: underline;
+    }
     .hero-top{
         background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(10px); /* blur what's behind */
