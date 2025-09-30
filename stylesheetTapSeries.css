@@ -196,11 +196,10 @@
         margin-right: 170px;
     }
     #failLeft{
-        text-align: left;  /* image hugs the left */
-        margin-bottom: 1rem;
+        margin-left: 0px;
     } 
     #passRight{
-        text-align: right; /* image hugs the right */
+        margin-right: 0px;
     }
 }   
 /* @media screen and (min-width: 1650px){
