@@ -67,7 +67,7 @@
     }
     .logoIntro{
         display: flex;
-        margin: 72px 0px 120px;
+        margin: -10px 0px 120px;
     }
     #introLine{
         margin-top: 120px;
