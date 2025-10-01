@@ -34,6 +34,21 @@
       faders.forEach(el => observer.observe(el));
     });
 
+    document.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".spaceBtwnLine");
+    
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            obs.unobserve(entry.target); // fade-in happens once
+          }
+        });
+      }, { threshold: 0.3 });
+    
+      faders.forEach(el => observer.observe(el));
+    });
+
     document.addEventListener("DOMContentLoaded", function() {
         const waitElement = document.getElementById('wait');
         const segments = waitElement.querySelectorAll("div");

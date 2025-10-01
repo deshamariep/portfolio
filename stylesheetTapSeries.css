@@ -100,7 +100,14 @@
         margin: 0px 24px;
         box-sizing: border-box;
     }
-    main h2, main h3{
+    main h2{
+        color: rgb(48, 48, 66);
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
+    main h3{
+        font-weight: 300;
         color: rgb(48, 48, 66);
         text-decoration: none;
         letter-spacing: 0.03em;
@@ -132,6 +139,16 @@
         padding: 0.5rem;
     }
     .spaceBtwn.active{
+        opacity: 1;
+    }
+    .spaceBtwnLine{
+        margin-top: 72px;
+        margin-bottom: 72px;
+        opacity: 0;
+        transition: opacity 1s ease;
+        padding: 0.5rem;
+    }
+    .spaceBtwnLine.active{
         opacity: 1;
     }
     /* #arrowContainer {
@@ -195,11 +212,16 @@
         margin-left: 170px; 
         margin-right: 170px;
     }
-    #failLeft{
+    #failLeft img, #failLeft p{
         margin-left: 0px;
+        margin-bottom: 0px;
     } 
-    #passRight{
+    #passRight img{
         margin-right: 0px;
+    }
+    #passRight p{
+        margin-bottom: 0px;
+        margin-left: 333px;
     }
 }   
 /* @media screen and (min-width: 1650px){

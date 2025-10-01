@@ -113,6 +113,16 @@
     .spaceBtwn.active{
         opacity: 1;
     }
+    .spaceBtwnLine{
+        margin-top: 72px;
+        margin-bottom: 72px;
+        opacity: 0;
+        transition: opacity 1s ease;
+        padding: 0.5rem;
+    }
+    .spaceBtwnLine.active{
+        opacity: 1;
+    }
     /* #arrowContainer {
         display: flex;
         justify-content: center;
