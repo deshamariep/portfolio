@@ -33,10 +33,10 @@
     }
     .hero-content {
         position: absolute;
-        top: 45%;         
+        top: 35%;         
         text-align: center;        
-        transform: translateY(-50%) translateX(95%);
-        max-width: 875px;
+        transform: translateX(125%);
+        max-width: 400px;
         z-index: 4;
         margin: 0;
     }
