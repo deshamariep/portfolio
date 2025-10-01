@@ -71,7 +71,7 @@
 
   // GSt
   document.getElementById('gSt').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>G Street UX</h1><p>User Research | UX Designer | 2024</p><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p><br><a href="gStreet.html">Read</a></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>G Street</h1><p>User Research | UX Designer | 2024</p><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p><br><a href="gStreet.html">Read</a></div>';
   });
   // <div id="csImage"><img src="images/gStreetImages.svg" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div>
 
