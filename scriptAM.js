@@ -22,19 +22,20 @@
     updateGreeting();
 
     document.addEventListener("DOMContentLoaded", () => {
-      const obsessions = document.querySelector(".obsessions");
+      const obsessions = document.querySelectorAll(".obsessions");
     
-      if (obsessions) {
+      if (obsessions.length > 0) {
         const observer = new IntersectionObserver((entries, obs) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              obsessions.classList.add("show");
-              obs.unobserve(entry.target); // animate only once
+              entry.target.classList.add("show"); // apply to the one that scrolled in
+              obs.unobserve(entry.target);        // animate only once
             }
           });
         }, { threshold: 0.3 });
     
-        observer.observe(obsessions);
+        // attach observer to each .obsessions element
+        obsessions.forEach(section => observer.observe(section));
       }
     });
 
