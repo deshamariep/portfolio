@@ -360,6 +360,12 @@
         margin-left: 170px; 
         margin-right: 170px;
     }
+    #hmw{
+        background: rgb(246, 246, 247);
+        border: 1px solid rgb(196, 196, 196);
+        padding: 16px 24px;
+        /* text-align: center; */
+    }
 }
 @media screen and (min-width: 1650px){
     body{
