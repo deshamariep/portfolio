@@ -44,7 +44,7 @@
             obs.unobserve(entry.target); // fade-in happens once
           }
         });
-      }, { threshold: 1.0 });
+      }, { threshold: 0.8 });
     
       faders.forEach(el => observer.observe(el));
     });
