@@ -21,6 +21,23 @@
     // Call the function on page load
     updateGreeting();
 
+    document.addEventListener("DOMContentLoaded", () => {
+      const obsessions = document.querySelector(".obsessions");
+    
+      if (obsessions) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              obsessions.classList.add("show");
+              obs.unobserve(entry.target); // animate only once
+            }
+          });
+        }, { threshold: 0.3 });
+    
+        observer.observe(obsessions);
+      }
+    });
+
     // exp fade in
     document.addEventListener("DOMContentLoaded", () => {
       const faders = document.querySelectorAll(".fade-in");
