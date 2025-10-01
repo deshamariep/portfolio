@@ -18,7 +18,7 @@
       });
     }
 
-    // 🔥 Activate Tap Series automatically after snapping
+    // Activate Tap Series 
     const csInfo = document.getElementById('caseStudy');
     csInfo.innerHTML = `
       <div id="csText">
@@ -38,7 +38,7 @@
 
   // Reset background when user scrolls up past 805px
   window.addEventListener("scroll", () => {
-    if (window.scrollY < 805) {
+    if (window.scrollY < 750) {
       mainSec.style.background = "none"; 
       
       csInfo.innerHTML = `
