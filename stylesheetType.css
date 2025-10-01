@@ -1,5 +1,5 @@
 h1{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -11,7 +11,7 @@ h1{
     margin-bottom: 10px; */
 }
 h2{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -21,7 +21,7 @@ h2{
     line-height: 160%;
 }
 h3{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -31,7 +31,7 @@ h3{
     line-height: 160%;
 }
 p, nav ul li, ul li{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -44,7 +44,7 @@ p, nav ul li, ul li{
     text-align: center;
 }
 .painPT .number, .smolP, footer p, #circle1, #circle2, #circle3, #circle4{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -54,7 +54,7 @@ p, nav ul li, ul li{
     line-height: 160%;
 }
 a{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     text-decoration: none;
@@ -65,7 +65,7 @@ a{
     line-height: 160%;
 }
 footer a{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     text-decoration: none;
@@ -76,7 +76,7 @@ footer a{
     line-height: 160%;
 }
 footer a:hover{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     text-decoration: underline;
@@ -110,7 +110,7 @@ footer #footLink a{
     line-height: 160%;
 }
 footer #btmfoot{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
