@@ -326,6 +326,7 @@
         width: 500px;
     }
     #leftcsLink h1{
+        margin-top: 0px;
         margin-bottom: 0px;
     }
     #leftcsLink:hover{
@@ -338,6 +339,7 @@
         width: 500px;
     }
     #rightcsLink h1{
+        margin-top: 0px;
         margin-bottom: 0px;
     }
     #rightcsLink:hover{
