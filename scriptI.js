@@ -36,7 +36,7 @@
 
   const mainSec = document.querySelector("main");
 
-  // Reset background when user scrolls up past 805px
+  // Reset background when user scrolls up past 750px
   window.addEventListener("scroll", () => {
     if (window.scrollY < 750) {
       mainSec.style.background = "none"; 
