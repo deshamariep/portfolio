@@ -225,6 +225,10 @@
     }
     #leftcsLink{
         padding: 24px 32px;
+        width: 650px;
+    }
+    #leftcsLink h1{
+        margin-bottom: 8px;
     }
     #leftcsLink:hover{
         background-color: rgb(253,253,253);
@@ -233,6 +237,10 @@
     }
     #rightcsLink{
         padding: 24px 32px;
+        width: 650px;
+    }
+    #rightcsLink h1{
+        margin-bottom: 8px;
     }
     #rightcsLink:hover{
         background-color: rgb(253,253,253);
