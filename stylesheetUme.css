@@ -322,11 +322,11 @@
         /* text-align: center; */
     }
     #leftcsLink{
-        padding: 24px 32px;
-        width: 650px;
+        padding: 16px 24px;
+        width: 500px;
     }
     #leftcsLink h1{
-        margin-bottom: 8px;
+        margin-bottom: 0px;
     }
     #leftcsLink:hover{
         background-color: rgb(253,253,253);
@@ -334,11 +334,11 @@
         border-radius: 20px;
     }
     #rightcsLink{
-        padding: 24px 32px;
-        width: 650px;
+        padding: 16px 24px;
+        width: 500px;
     }
     #rightcsLink h1{
-        margin-bottom: 8px;
+        margin-bottom: 0px;
     }
     #rightcsLink:hover{
         background-color: rgb(253,253,253);
