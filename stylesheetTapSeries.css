@@ -61,7 +61,7 @@
         backdrop-filter: blur(10px); /* blur what's behind */
         -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
-    .hero-top.sticky {
+    .hero-top.sticky #one a{
         color: rgb(48, 48, 66);
     } 
     .hero-content{
