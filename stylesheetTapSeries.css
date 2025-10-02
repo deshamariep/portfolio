@@ -61,6 +61,9 @@
         backdrop-filter: blur(10px); /* blur what's behind */
         -webkit-backdrop-filter: blur(10px); /* Safari support */
     }
+    .hero-top.sticky {
+        color: rgb(48, 48, 66);
+    } 
     .hero-content{
         top: 55%;
         left: 0px;/* align to page gutter */
