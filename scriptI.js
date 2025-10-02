@@ -198,7 +198,7 @@
       observer.observe(footer);
   });
 
-  
+
   const heroTop = document.querySelector('.hero-top');
   if (!heroTop) return;
 
@@ -206,7 +206,7 @@
   let ticking = false;
   let stickyActive = false;
   const enterAfter = 120;      // px scrolled down before we enter sticky mode
-  const revealDelta = 20;      // px upward scroll needed to reveal
+  const revealDelta = 5;      // px upward scroll needed to reveal
   const hideDelta = 10;        // px downward scroll to hide
 
   // compute header height once (fallback)
