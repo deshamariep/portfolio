@@ -33,6 +33,23 @@
     box-sizing: border-box;
     background-color: rgb(255, 255, 255, 0.3);
 }
+/* When we switch to fixed sticky mode */
+.hero-top.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-110%); /* hidden initially in sticky mode */
+    transition: transform 320ms cubic-bezier(.2,.9,.2,1), background-color 320ms ease, box-shadow 320ms ease;
+    background: rgba(255,255,255,0.8); /* subtle background so text is readable */
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    z-index: 9999; /* above everything while sticky */
+} 
+/* Reveal the sticky header */
+.hero-top.sticky.visible {
+    transform: translateY(0);
+}
 
 /* keep your existing logo + nav styling, but remove old layout rules that assume header is a short bar */
 #hLogo img{
