@@ -13,10 +13,19 @@
     if (!snapped && window.scrollY > 8) {
       snapped = true;
       window.scrollTo({
-      top: 805,
+      top: 875,
       behavior: "smooth"
       });
     }
+
+    document.getElementById("slideDown").addEventListener("click", function (e) {
+      e.preventDefault(); // stops default anchor behavior
+      snapped = true;     // mark it as snapped so scroll doesn’t re-trigger
+      window.scrollTo({
+        top: 875,
+        behavior: "smooth"
+      });
+    });
 
     // Activate Tap Series 
     const csInfo = document.getElementById('caseStudy');
