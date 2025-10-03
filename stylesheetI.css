@@ -40,6 +40,11 @@
         z-index: 4;
         margin: 0;
     }
+    .data{
+        display: flex;
+        justify-content: space-between; 
+        gap: 32px;
+    }
     #slideDown{
         background-color: rgb(217, 217, 217, 0.2);
         border-top: 1px solid white;
