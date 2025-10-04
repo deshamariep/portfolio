@@ -33,19 +33,17 @@
     }
     .hero-content {
         position: absolute;
-        top: 35%;         
+        top: 20%;         
         text-align: center;        
         transform: translateX(125%);
-        max-width: 400px;
         z-index: 4;
         margin: 0;
-        display: flex;
     }
-    /* .data{
-        
+    .data{
+        display: flex;
         justify-content: space-between; 
         gap: 32px;
-    } */
+    }
     #dataTitle{
         flex: 1;
         width: 600px;
@@ -54,6 +52,7 @@
         flex: 1;
     }
     #slideDown{
+        width: 100%;
         padding: 0px 16px;
         background-color: rgb(217, 217, 217, 0.2);
         border-top: 1px solid white;
