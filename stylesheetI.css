@@ -45,7 +45,8 @@
         gap: 32px;
     }
     #dataTitle{
-        flex-shrink: 0; 
+        flex-shrink: 0;
+        margin-top: 32px;
         max-width: 400px; 
     }
     #dataTitle h3{
@@ -58,8 +59,9 @@
         flex-shrink: 0;
     }
     #slideDown{
+        display: block;
         width: 100%;
-        padding: 0px 16px;
+        padding: 16px 0px;
         background-color: rgb(217, 217, 217, 0.2);
         border-top: 1px solid white;
         border-bottom: 1px solid white;
@@ -67,8 +69,8 @@
     #slideDown:hover {
         background-color: rgb(217, 217, 217, 0.5);
       
-        border-top: 3px solid transparent;
-        border-bottom: 3px solid transparent;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
         border-image: radial-gradient(
           circle,
           rgba(255, 255, 255, 0.7) 20%, 
