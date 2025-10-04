@@ -71,7 +71,7 @@
         margin-bottom: 96px;
     }
     #fillTime{
-        flex: 1;
+        flex: 1.2;
     }
     #headShot{
         flex: 1;
@@ -83,7 +83,7 @@
         flex: 1;
     }
     #hmw{
-        margin: 16px 24px;
+        padding: 8px 16px;
         background: rgb(246, 246, 247);
         border: 1px solid transparent;
         border-image: radial-gradient(
