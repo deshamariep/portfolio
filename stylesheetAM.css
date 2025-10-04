@@ -59,6 +59,9 @@
     .pinkish{
         color: #E59CFC;
     }
+    .dataFillTime{
+        display: flex;
+    }
     .data{
         display: flex;
         margin-bottom: 102px;
@@ -79,6 +82,17 @@
     }
     #mco{
         flex: 1;
+    }
+    #hmw{
+        background: rgb(246, 246, 247);
+        border: 1px solid transparent;
+        border-image: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.7) 20%, 
+          rgba(45, 140, 190, 0.6) 41%, 
+          rgba(87, 132, 199, 1) 66%, 
+          rgba(169, 108, 208, 0.7) 88%
+        ) 1;
     }
     .fauxp{
         font-family: "Newsreader", serif;

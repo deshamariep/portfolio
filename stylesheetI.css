@@ -48,7 +48,7 @@
     }
     #dataTitle{
         flex-shrink: 0;
-        margin-top: 32px;
+        margin-top: 48px;
         max-width: 400px; 
     }
     #dataTitle h3{
@@ -56,6 +56,7 @@
     }
     #dataTitle h1, #dataTitle h3, #dataTitle p{
         white-space: nowrap;   /* each line stays intact */
+        margin: 8px 0px;
     }
     #dataAvatar{
         flex-shrink: 0;
