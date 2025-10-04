@@ -45,7 +45,11 @@
         justify-content: space-between; 
         gap: 32px;
     }
+    .data div{
+        flex: 1;
+    }
     #slideDown{
+        padding: 0px 16px;
         background-color: rgb(217, 217, 217, 0.2);
         border-top: 1px solid white;
         border-bottom: 1px solid white;
