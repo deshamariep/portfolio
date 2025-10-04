@@ -84,6 +84,7 @@
         flex: 1;
     }
     #hmw{
+        margin: 16px 24px;
         background: rgb(246, 246, 247);
         border: 1px solid transparent;
         border-image: radial-gradient(
