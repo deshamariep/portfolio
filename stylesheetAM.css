@@ -76,9 +76,8 @@
     #headShot{
         flex: 1;
         display: flex;              
-        justify-content: center; 
-        align-items: center; 
-        padding-top: 16px;
+        justify-content: center;
+        padding-top: 24px;
     }
     #mco{
         flex: 1;
