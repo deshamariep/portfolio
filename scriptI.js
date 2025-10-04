@@ -68,31 +68,31 @@
   const csInfo = document.getElementById('caseStudy');
   // Amplfy
   document.getElementById('bridgegood').addEventListener('mouseover', function() {
-      csInfo.innerHTML = '<div id="csText"><h1>Amplfy</h1><p>Product Design | Product Manager | 2025</p><p>A living network that turns opportunities into results</p><br><a href="#" id="amplfyLink" class="noHover">Coming Soon</a></div>';
+      csInfo.innerHTML = '<div id="csText"><h1>Amplfy</h1><h3>Product Design | Product Manager | 2025</h3><p>A living network that turns opportunities into results</p><br><a href="#" id="amplfyLink" class="noHover">Coming Soon</a></div>';
   });
   // <div id="csImage"><img src="images/amplfyImages.svg" alt="Frame from Amplfy application" height="398px" width="828px"></div>
 
   // TAP Series
   document.getElementById('tapSeries').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>TAP Series</h1><p>User Interface | UI/UX Designer | 2025</p><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p><br><a href="tapSeries.html">Read</a></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>TAP Series</h1><h3>User Interface | UI/UX Designer | 2025</h3><p>Designing better interfaces and streamlining 50K+ weekly marketing lead workflow</p><br><a href="tapSeries.html">Read</a></div>';
   });
   // <div id="csImage"><img src="images/tapSeriesImages.svg" alt="Frames from TAP Series website projects" height="475px" width="867px"></div>
 
   // GSt
   document.getElementById('gSt').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>G Street</h1><p>User Research | UX Designer | 2024</p><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p><br><a href="gStreet.html">Read</a></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>G Street</h1><h3>User Research | UX Designer | 2024</h3><p>Creating inclusive community spaces from downtown revitalization to vibrant public experiences</p><br><a href="gStreet.html">Read</a></div>';
   });
   // <div id="csImage"><img src="images/gStreetImages.svg" alt="Images from Davis California G Street, historical arch, team image, current G Street" height="475px" width="927px"></div>
 
    // Spots
    document.getElementById('spotsCS').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>Spots</h1><p>Product Design | Associate Designer | 2024</p><p>Case Study: A centralized hub connecting students with housing, roommates, and community.</p><br><a href="spots.html">Read</a></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>Spots</h1><h3>Product Design | Associate Designer | 2024</h3><p>Case Study: A centralized hub connecting students with housing, roommates, and community.</p><br><a href="spots.html">Read</a></div>';
   });
   // <div id="csImage"><img src="images/spotsImages.svg" alt="Frames from Spots website application" height="475px" width="811px"></div>
 
   // Ume
   document.getElementById('umeCS').addEventListener('mouseover', function() {
-    csInfo.innerHTML = '<div id="csText"><h1>UME Tea</h1><p>Marketing Strategy | Market Analyst | 2023</p><p>Case Study: Transforming marketing strategy through comprehensive analysis and targeted campaign development</p><br><a href="ume.html">Read</a></div>';
+    csInfo.innerHTML = '<div id="csText"><h1>UME Tea</h1><h3>Marketing Strategy | Market Analyst | 2023</h3><p>Case Study: Transforming marketing strategy through comprehensive analysis and targeted campaign development</p><br><a href="ume.html">Read</a></div>';
   });
   // <div id="csImage"><img src="images/umeTeaImages.svg" alt="Images from UME Tea Marketing Case Study, pie chart segmentation, graph chart customer values, user persona" height="475px" width="712px"></div>
   // pre-load images
@@ -174,7 +174,7 @@
     csInfo.innerHTML = `
       <div id="csText">
         <h1>Amplfy</h1>
-        <p>Product Design | Product Lead | 2025</p>
+        <h3>Product Design | Product Lead | 2025</h3>
         <p>A living network that turns opportunities into results</p>
         <br>
         <a href="#" id="amplfyLink" class="noHover">Coming Soon</a>
