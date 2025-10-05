@@ -134,6 +134,11 @@
     .link{
         padding-top: 24px;
     }
+    .link:nth-child(2):hover, .link:nth-child(3):hover{
+        
+        transform: scale(1.1); /* makes text 10% larger */
+        transition: transform 0.2s ease-in-out;
+    }
     .spaceBtwn{
         margin-top: 150px;
         margin-bottom: 150px;
