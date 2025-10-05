@@ -134,14 +134,19 @@
         margin: auto;
         margin-right: 24px;
     }
-    .link{
+    #pseudolink{
         color: rgb(255, 255, 255, 0.7);
         padding-top: 24px;
     }
-    a .link:nth-child(2):hover, a .link:nth-child(3):hover{
-        color: rgb(255, 255, 255);
-        transform: scale(1.1); /* makes text 10% larger */
+    #query .link {
+        display: inline-block; /* needed for transform to work cleanly */
         transition: transform 0.2s ease-in-out;
+        color: rgb(255, 255, 255, 0.7);
+        padding-top: 24px;
+    }
+    #query .link:hover {
+        transform: scale(1.1);
+        color: rgb(255, 255, 255);
     }
     .spaceBtwn{
         margin-top: 150px;
