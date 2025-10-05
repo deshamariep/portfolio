@@ -122,157 +122,30 @@
         width: 100%;
         margin: 0 24px;
     }
-    /* #work{
-        margin: 8px auto 96px;
-    } */
-    .exp-heading{
+    .data{
         display: flex;
-        align-items: baseline;
-        gap: 8px;
+        gap: 24px;
     }
-    #logoSpace{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        height: 150px;
-        gap: 16px;
-        margin-bottom: 24px;
+    .dataCS{
+        flex: 5.5;
+        height: 500px;
+        padding: 32px 48px 24px 24px;
     }
-    .logo{
-        position: relative;
-        width: 108px;
-        height: 108px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: inherit;
-        overflow: visible;
-        transition: width 0.3s ease, height 0.3s ease;
+    .dataCaseImg{
+        flex: 6.5;
     }
-    .logo.active{
-        width: 150px;
-        height: 150px;
-    }
-    .logo-wrapper{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        overflow: visible;
-    }
-    .logo-wrapper img{
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease;
-        transform-origin: top center;
-        z-index: 2;
-    }
-    .logo.active .logo-wrapper img{
-        transform: scale(1.1);
-        filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 0.9));
-    }
-    .logo p{
-        position: absolute;
-        top: 50%;
-        left: calc(100% + 16px);
-        transform: translateX(-50px) translateY(30px);
-        white-space: nowrap;
-        opacity: 0;
-        transition: all 0.4s ease;
-        z-index: 1;
-    }
-    .logo.slide-left p{
-        left: auto;
-        right: calc(100% + 16px);
-        transform: translateX(50px) translateY(30px);
-    }
-    .logo.active p {
-        opacity: 1;
-        transform: translateX(0) translateY(30px);
-    }
-    #caseStudy{
-        height: 475px;
-        display: flex;
-    }
-    #csText h1{
-        margin-bottom: 0px;
-    }
-    #csText p{
-        margin: 0.5em;
-    }
-    #csText{
-        flex: 0 0 525px; 
+    .link{
         padding-top: 24px;
-        width: 525px;
     }
-    #csText a{
-        display: none;
-        width: 200px;             
-        padding: 8px 0;           
-        box-sizing: content-box;    
-        
-        display: flex;          
-        align-items: center;       
-        justify-content: center;    
-      
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        border-radius: 30px;
-        font-family: "Newsreader", serif;
-        font-weight: 400;
-        font-size: 16px;
-        color: rgb(255, 255, 255);
-        letter-spacing: 0.03em;
-        line-height: 160%;
-        text-decoration: none;
-    }
-    .logo:hover #csText a{
-        display: inline-block;
-    }
-    #csText a:hover:not(.noHover){
-        background-color: rgb(255, 255, 255, 1);
-        color: rgb(48, 48, 66);
-    }
-    #csImage{
-        flex: 0 0 1;   /* don’t grow, don’t shrink, size to image */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    /* Hidden by default */
-    .popup{
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(2px);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
+    .spaceBtwn{
+        margin-top: 150px;
+        margin-bottom: 150px;
         opacity: 0;
-        transition: opacity 0.5s ease;
+        transition: opacity 1s ease;
+        padding: 0.5rem;
     }
-    .popup.show{
-        display: flex;
+    .spaceBtwn.active{
         opacity: 1;
-    }
-    .popup.hide{
-        opacity: 0;
-    }
-    /* Popup box */
-    .popup-content{
-        background: rgb(255, 255, 255);
-        border-radius: 4px;
-        padding: 16px 24px;
-        text-align: center;
-        box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
-    }
-    .popup-content p{
-        color: rgb(48, 48, 66);
     }
 }
 @media screen and (min-width: 1650px){
