@@ -102,4 +102,19 @@
     }
   });
 
+
+  const caseImgs = document.querySelectorAll('.dataCaseImg, .dataCS');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // run once per element
+      }
+    });
+  }, { threshold: 0.2 });
+
+  caseImgs.forEach(el => {
+    observer.observe(el);
+  });
+
 }());

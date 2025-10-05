@@ -75,6 +75,7 @@
         margin: 72px 24px;
         justify-content: space-between; 
         gap: 24px;
+        height: 800px;
     }
     .dataHero{
         display: flex;
@@ -150,6 +151,14 @@
         background-color: rgb(217, 217, 217, 0.3);
         border: 1px solid rgb(217, 217, 217);
         border-radius: 10px;
+
+        opacity: 0;
+        transform: translateY(30px); /* start slightly lower */
+        transition: all 0.8s ease-out;
+    }
+    .dataCS.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
     .dataCS h1{
         margin-top: 8px;
@@ -158,6 +167,14 @@
         flex: 1;
         margin: auto;
         margin-right: 24px;
+
+        opacity: 0;
+        transform: translateX(80px); /* start shifted right */
+        transition: all 0.8s ease-out;
+    }
+    .dataCaseImg.visible {
+        opacity: 1;
+        transform: translateX(0);
     }
     #pseudolink{
         color: rgb(255, 255, 255, 0.7);
