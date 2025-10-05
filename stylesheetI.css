@@ -126,16 +126,20 @@
         border: 1px solid rgb(217, 217, 217);
         border-radius: 10px;
     }
+    .dataCS h1{
+        margin-top: 8px;
+    }
     .dataCaseImg{
         flex: 1;
         margin: auto;
         margin-right: 24px;
     }
     .link{
+        color: rgb(255, 255, 255, 0.7);
         padding-top: 24px;
     }
-    .link:nth-child(2):hover, .link:nth-child(3):hover{
-        
+    a .link:nth-child(2):hover, a .link:nth-child(3):hover{
+        color: rgb(255, 255, 255);
         transform: scale(1.1); /* makes text 10% larger */
         transition: transform 0.2s ease-in-out;
     }
