@@ -168,10 +168,15 @@
         transform: translateY(0);
     }
     .dataCS h1{
-        margin-top: 8px;
+        margin: 8px 0px;
     }
     .dataCS h3{
-        margin-top: 0px;
+        margin: 8px 0px;
+    }
+    #csSubtitle{
+        display: flex;
+        align-items: baseline; /* keeps text aligned neatly */
+        gap: 10px; /* space between h3 and p */
     }
     .dataCaseImg{
         flex: 1;
