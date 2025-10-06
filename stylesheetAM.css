@@ -61,6 +61,7 @@
     }
     .dataFillTime{
         display: flex;
+        gap: 24px;
     }
     .data{
         display: flex;

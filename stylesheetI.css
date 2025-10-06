@@ -118,6 +118,7 @@
         transform: translateY(100px);
     }
     #dataDesktopBar.loaded {
+        margin-top: 72px;
         animation: barSlideUp 1s ease-out forwards;
         animation-delay: 1.2s; /* starts after hero finishes */
     }
