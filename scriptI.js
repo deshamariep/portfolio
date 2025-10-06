@@ -102,7 +102,11 @@
     }
   });
 
-
+  
+  window.addEventListener("load", () => {
+    document.querySelector(".dataHero").classList.add("loaded");
+    document.querySelector("#dataDesktopBar").classList.add("loaded");
+  });
   const caseImgs = document.querySelectorAll('.dataCaseImg, .dataCS');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
