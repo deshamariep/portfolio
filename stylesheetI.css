@@ -137,6 +137,7 @@
         margin: 8px 0px;
     }
     #dataTitle p{
+        margin: 8px 0px;
         font-size: 22px;
         color: rgb(195,196,195)
     }
@@ -167,10 +168,14 @@
     .dataCS h1{
         margin-top: 8px;
     }
+    .dataCS h3{
+        margin-top: 0px;
+    }
     .dataCaseImg{
         flex: 1;
         margin: auto;
         margin-right: 24px;
+        margin-top: 24px;
 
         opacity: 0;
         transform: translateX(80px); /* start shifted right */
