@@ -104,12 +104,14 @@
     }
     #dataDesktopBar{
         display: flex;
-        gap: 24px;
-        padding: 16px 24px;
+        gap: 16px;
+        padding: 8px 8px;
         justify-content: center;
         background-color: rgb(217, 217, 217, 0.3);
         border: 1px solid rgb(217, 217, 217);
-        border-radius: 30px;
+        border-radius: 20px;
+        width: 1272px;
+        margin: auto;
 
         opacity: 0;
         transform: translateY(100px);
