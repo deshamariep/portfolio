@@ -1,51 +1,7 @@
 (function(){
   'use strict';
 
-  let snapped = false;
-  function smoothScrollTo(targetY, duration = 2500) {
-    const rawStart = window.scrollY;
-    const startY = Math.max(rawStart, 20); // force start at 17px or current position if already past 17
-    const distance = targetY - startY;
-    const startTime = performance.now();
-  
-    function easeInOutQuad(t) {
-      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-    }
-  
-    function animateScroll(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = easeInOutQuad(progress);
-      window.scrollTo(0, Math.round(startY + distance * eased));
-      if (progress < 1) requestAnimationFrame(animateScroll);
-    }
-  
-    // If browser is currently below 17px, jump to 17 exactly before animating.
-    // This avoids a tiny visual jump/glitch when the animation starts from a fractional value.
-    if (rawStart < 17) {
-      window.scrollTo(0, 20);
-      // allow the browser a single frame to apply the change, then start the animation
-      requestAnimationFrame(() => requestAnimationFrame(animateScroll));
-    } else {
-      requestAnimationFrame(animateScroll);
-    }
-  }
-  
-  document.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-  
-    // Reset when back to top
-    if (scrollY === 0) snapped = false;
-  
-    // Trigger smooth scroll only once when scrolled past 16px
-    if (!snapped && scrollY > 16) {
-      snapped = true;
-      const targetSection = document.querySelector("#query");
-      if (targetSection) {
-        smoothScrollTo(targetSection.offsetTop, 3000); // duration in ms (3s)
-      }
-    }
-  });
+  let snapped = false; document.addEventListener("scroll", function () { if (window.scrollY === 0) { snapped = false; } if (!snapped && window.scrollY > 16) { snapped = true; const targetSection = document.querySelector("#query"); if (targetSection) { window.scrollTo({ top: targetSection.offsetTop, behavior: "smooth" }); } } });
 
 
   document.addEventListener("DOMContentLoaded", () => {
