@@ -87,22 +87,26 @@
         max-width: 780px; 
         text-align: left;
     }
-    /* outer container that centers the bar */
+    .italic{
+        font-style: italic;
+    }
+    #dataAvatar{
+        flex-shrink: 0;
+        margin-left: -56px;
+    }
     #desktop{
-        display: flex;                /* MAKE it a flex container */
+        display: block;
+        display: flex;               
         justify-content: center;
         align-items: center;
-        max-width: 1272px;
-        width: 90%;                   /* scales on large and small screens */
-        margin: 72px auto 0 auto;     /* centers horizontally and gives top spacing */
+        width: 1290px;                
+        margin: 72px 75px 0px 99px;    
         background-color: rgba(217,217,217,0.3);
         border: 1px solid rgb(217, 217, 217);
         border-radius: 20px;
         box-sizing: border-box;
-        padding: 8px;                 /* optional: keep some inner padding */
+        padding: 8px;             
     }
-
-    /* the actual bar that slides up */
     #dataDesktopBar{
         display: flex;
         gap: 16px;
@@ -111,12 +115,9 @@
         transform: translateY(100px);
         transition: opacity 0.8s ease, transform 0.6s ease;
     }
-
-    /* when loaded, only change top margin (do NOT reset horizontal centering) */
-    #dataDesktopBar.loaded {
-        margin-top: 72px;             /* keep centering intact */
+    #dataDesktopBar.loaded {            
         animation: barSlideUp 1s ease-out forwards;
-        animation-delay: 1.2s; /* starts after hero finishes */
+        animation-delay: 1.2s; 
     }
     @keyframes barSlideUp {
         to {
@@ -143,13 +144,6 @@
         margin: 8px 0px;
         font-size: 22px;
         color: rgb(195,196,195)
-    }
-    .italic{
-        font-style: italic;
-    }
-    #dataAvatar{
-        flex-shrink: 0;
-        margin-left: -56px;
     }
     main{
         margin: 0;
