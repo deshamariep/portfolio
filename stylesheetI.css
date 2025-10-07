@@ -52,7 +52,7 @@
         position: absolute;
         top: 55%;         
         text-align: center;
-        width: 1440px;
+        /* width: 1440px; */
         z-index: 4;
         margin: auto;
     }
