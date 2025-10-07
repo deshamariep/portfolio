@@ -84,27 +84,26 @@
     #dataTitle{
         flex-shrink: 0;
         margin-top: 16px;
-        margin-left: 24px;
         max-width: 780px; 
         text-align: left;
     }
     #dataDesktopBar{
         display: flex;
         gap: 16px;
-        margin-top: 32px;
+        max-width: 1272px;
+        width: 90%; /* scales on large and small screens */
+        margin: 72px auto 0 auto; /* centers horizontally */
         padding: 8px 8px;
         justify-content: center;
         background-color: rgb(217, 217, 217, 0.3);
         border: 1px solid rgb(217, 217, 217);
         border-radius: 20px;
-        width: 1272px;
-        margin: auto;
 
         opacity: 0;
         transform: translateY(100px);
     }
     #dataDesktopBar.loaded {
-        margin-top: 72px;
+        margin: 72px;
         animation: barSlideUp 1s ease-out forwards;
         animation-delay: 1.2s; /* starts after hero finishes */
     }
