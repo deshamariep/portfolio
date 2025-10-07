@@ -56,16 +56,9 @@
         z-index: 4;
         margin: auto;
     }
-    .data{
-        display: flex;
-        margin: 72px 24px;
-        justify-content: space-between; 
-        gap: 24px;
-        height: 800px;
-    }
     .dataHero{
         display: flex;
-        margin: auto;
+        margin: 0px auto 88px;
         justify-content: space-between;
     
         opacity: 0;
@@ -100,7 +93,7 @@
         justify-content: center;
         align-items: center;
         width: 1290px;                
-        margin: 72px 75px 0px 99px;    
+        margin: auto;  
         background-color: rgba(217,217,217,0.3);
         border: 1px solid rgb(217, 217, 217);
         border-radius: 20px;
@@ -154,6 +147,13 @@
     #query{
         width: 100%;
         margin: 64px 24px 0px;
+    }
+    .data{
+        display: flex;
+        margin: 72px 24px;
+        justify-content: space-between; 
+        gap: 24px;
+        height: 800px;
     }
     .dataCS{
         flex: 1.5;

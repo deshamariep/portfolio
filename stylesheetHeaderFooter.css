@@ -1,11 +1,8 @@
 .hero{
     position: relative;
-    width: 100vw;
     width: 100%;
     height: 100vh;    /* fallback */
     height: 100dvh;   /* dynamic viewport height for Safari/modern browsers */
-    min-height: 600px;
-    max-height: 900px; /* optional */
     margin: 0;
     overflow: hidden;
     text-align: left;
@@ -36,6 +33,7 @@
     z-index: 3;
     box-sizing: border-box;
     background-color: rgb(255, 255, 255, 0.3);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 /* When we switch to fixed sticky mode */
 .hero-top.sticky {
@@ -93,7 +91,7 @@
     top: 40%;                    /* vertical center */
     left: 24px;                  /* align to page gutter */
     transform: translateY(-50%); /* only shift vertically */
-    max-width: 875px;
+    width: 100%;
     z-index: 4;
     margin: 0;
 }
