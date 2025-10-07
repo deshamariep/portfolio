@@ -2,20 +2,40 @@
   'use strict';
 
   let snapped = false;
-  document.addEventListener("scroll", function () {
+  function smoothScrollTo(targetY, duration = 2500) {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const startTime = performance.now();
+    // Easing function (smooth in/out)
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+    
+    function animateScroll(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutQuad(progress);
+      window.scrollTo(0, startY + distance * eased);
+  
+      if (progress < 1) requestAnimationFrame(animateScroll);
+    }
+  
+    requestAnimationFrame(animateScroll);
+  }
+  
+  document.addEventListener("scroll", () => {
+    // Reset when scrolled to top
     if (window.scrollY === 0) {
       snapped = false;
     }
   
-    if (!snapped && window.scrollY > 8) {
+    // Trigger only once when scrolled > 16px
+    if (!snapped && window.scrollY > 16) {
       snapped = true;
-      const targetSection = document.querySelector("#query");
   
+      const targetSection = document.querySelector("#query");
       if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop,
-          behavior: "smooth"
-        });
+        smoothScrollTo(targetSection.offsetTop, 3000); // 3s slow scroll
       }
     }
   });
