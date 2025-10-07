@@ -1,21 +1,22 @@
 (function(){
   'use strict';
-  console.log("reading js");
-  
+
   let snapped = false;
   document.addEventListener("scroll", function () {
-    // if user is at the very top, reset snapped
     if (window.scrollY === 0) {
       snapped = false;
     }
-
-    // only snap if user starts at top and scrolls past 8px
+  
     if (!snapped && window.scrollY > 8) {
       snapped = true;
-      window.scrollTo({
-      top: 875,
-      behavior: "smooth"
-      });
+      const targetSection = document.querySelector("#query");
+  
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: "smooth"
+        });
+      }
     }
   });
 
@@ -45,7 +46,7 @@
   let lastY = window.scrollY;
   let ticking = false;
   let stickyActive = false;
-  const enterAfter = 120;      // px scrolled down before we enter sticky mode
+  const enterAfter = 75;      // px scrolled down before we enter sticky mode
   const revealDelta = 5;      // px upward scroll needed to reveal
   const hideDelta = 10;        // px downward scroll to hide
 
