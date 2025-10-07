@@ -336,7 +336,7 @@
         padding: 16px 24px;
         width: 500px;
     }
-    #leftcsLink h1{
+    #leftcsLink h2{
         margin-top: 0px;
         margin-bottom: 0px;
     }
@@ -349,14 +349,17 @@
         padding: 16px 24px;
         width: 500px;
     }
-    #rightcsLink h1{
+    #rightcsLink h2{
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    #rightcsLink:hover{
+    /* #rightcsLink:hover{
         background-color: rgb(253,253,253);
         border: 1px solid rgb(237,237,240);
         border-radius: 20px;
+    } */
+    #theP{
+        color: rgb(195,196,195)
     }
 }
 @media screen and (min-width: 1650px){
