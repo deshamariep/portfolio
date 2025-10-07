@@ -2,33 +2,33 @@
     'use strict';
     console.log("reading js");
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const footer = document.querySelector("footer");
-        const footTitle = document.getElementById("footTitle");
-    
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                footTitle.style.animationPlayState = "running";
-              }
-            });
-          },
-          { threshold: 0.2 } // you can adjust this
-        );
-    
-        observer.observe(footer);
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+    const footer = document.querySelector("footer");
+      const footTitle = document.getElementById("footTitle");
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              footTitle.style.animationPlayState = "running";
+            }
+          });
+        },
+        { threshold: 0.2 } // you can adjust this
+      );
+  
+    observer.observe(footer);
+  });
 
-    const heroTop = document.querySelector('.hero-top');
+  const heroTop = document.querySelector('.hero-top');
   if (!heroTop) return;
 
   let lastY = window.scrollY;
   let ticking = false;
   let stickyActive = false;
-  const enterAfter = 120;      // px scrolled down before we enter sticky mode
-  const revealDelta = 5;      // px upward scroll needed to reveal
-  const hideDelta = 10;        // px downward scroll to hide
+  const enterAfter = 75;     
+  const revealDelta = 5;   
+  const hideDelta = 10;     
 
   // compute header height once (fallback)
   const headerH = heroTop.offsetHeight || 70;

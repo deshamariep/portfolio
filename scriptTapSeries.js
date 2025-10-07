@@ -73,7 +73,7 @@
   let lastY = window.scrollY;
   let ticking = false;
   let stickyActive = false;
-  const enterAfter = 120;      // px scrolled down before we enter sticky mode
+  const enterAfter = 75;      // px scrolled down before we enter sticky mode
   const revealDelta = 5;      // px upward scroll needed to reveal
   const hideDelta = 10;        // px downward scroll to hide
 
