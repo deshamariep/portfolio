@@ -4,7 +4,7 @@
   let snapped = false;
   function smoothScrollTo(targetY, duration = 2500) {
     const rawStart = window.scrollY;
-    const startY = Math.max(rawStart, 17); // force start at 17px or current position if already past 17
+    const startY = Math.max(rawStart, 20); // force start at 17px or current position if already past 17
     const distance = targetY - startY;
     const startTime = performance.now();
   
@@ -23,7 +23,7 @@
     // If browser is currently below 17px, jump to 17 exactly before animating.
     // This avoids a tiny visual jump/glitch when the animation starts from a fractional value.
     if (rawStart < 17) {
-      window.scrollTo(0, 17);
+      window.scrollTo(0, 20);
       // allow the browser a single frame to apply the change, then start the animation
       requestAnimationFrame(() => requestAnimationFrame(animateScroll));
     } else {
