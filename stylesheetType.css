@@ -48,8 +48,8 @@ p, nav ul li, ul li{
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: 14px;
-    color: rgb(48, 48, 66);
+    font-size: 15px;
+    color: rgb(48, 48, 66, 0.9);
     letter-spacing: 0.03em;
     line-height: 160%;
 }

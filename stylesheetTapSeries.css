@@ -120,7 +120,7 @@
         margin-top: 0px;
     }
     main .smolP{
-        color: rgb(48, 48, 66);
+        color: rgb(48, 48, 66, 0.9);
         text-decoration: none;
         letter-spacing: 0.03em;
         line-height: 160%;
@@ -230,7 +230,7 @@
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    #theP{
+    .theP{
         color: rgb(195,196,195)
     }
     /* #leftcsLink:hover{
