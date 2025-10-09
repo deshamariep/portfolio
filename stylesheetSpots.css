@@ -320,25 +320,19 @@
         display: block;
         border: 1px solid green;
         border-radius: 16px;
-        padding: auto;
-        justify-items: center;
-        align-content: center;
+        padding: 16px;
     }
     .weaknesses{
         display: block;
         border: 1px solid orangered;
         border-radius: 16px;
-        padding: auto;
-        justify-items: center;
-        align-content: center;
+        padding: 16px;
     }
     .improvement{
         display: block;
         border: 1px solid rgb(255, 196, 0);
         border-radius: 16px;
-        padding: auto;
-        justify-items: center;
-        align-content: center;
+        padding: 16px 48px 16px 16px;
     }
     #hmw{
         background: rgb(246, 246, 247);
