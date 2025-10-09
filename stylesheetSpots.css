@@ -316,6 +316,30 @@
         margin-left: 170px; 
         margin-right: 170px;
     }
+    .strengths{
+        display: block;
+        border: 1px solid green;
+        border-radius: 16px;
+        padding: auto;
+        justify-items: center;
+        align-content: center;
+    }
+    .weaknesses{
+        display: block;
+        border: 1px solid orangered;
+        border-radius: 16px;
+        padding: auto;
+        justify-items: center;
+        align-content: center;
+    }
+    .improvement{
+        display: block;
+        border: 1px solid rgb(255, 196, 0);
+        border-radius: 16px;
+        padding: auto;
+        justify-items: center;
+        align-content: center;
+    }
     #hmw{
         background: rgb(246, 246, 247);
         border: 1px solid rgb(196, 196, 196);
