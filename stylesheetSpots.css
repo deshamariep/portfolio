@@ -324,7 +324,7 @@
     }
     .weaknesses{
         display: block;
-        border: 1px solid orangered;
+        border: 1px solid red;
         border-radius: 16px;
         padding: 16px;
     }
