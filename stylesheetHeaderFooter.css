@@ -144,7 +144,7 @@ footer{
 } */
 #fOne{
     flex: 1;
-    margin-right: 150px;
+    margin-right: 20px;
     flex-direction: column;
     align-items: left;
     text-align: left;
