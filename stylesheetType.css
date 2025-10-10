@@ -70,7 +70,7 @@ footer a{
     font-weight: 300;
     text-decoration: none;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: rgb(48, 48, 66);
     letter-spacing: 0.03em;
     line-height: 160%;
@@ -81,7 +81,7 @@ footer a:hover{
     font-weight: 300;
     text-decoration: underline;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: rgb(0, 0, 255);
     letter-spacing: 0.03em;
     line-height: 160%;
