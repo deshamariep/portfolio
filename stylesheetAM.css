@@ -79,13 +79,21 @@
         justify-content: center;
         padding-top: 24px;
     }
-    #quote{
+    #quote {
+        display: flex;              
+        justify-content: center;  
+        align-items: center;     
+        text-align: center;      
         height: 250px;
         border-top: 1px solid #A7CFCF;
         border-bottom: 1px solid #A7CFCF;
-        justify-content: center;
-        align-items: center;
-        margin: 64px 0px;
+        margin: 64px 0;
+        padding: 0 16px;    
+    }
+    #quote h3 {
+        max-width: 800px;    
+        font-style: italic;    
+        line-height: 1.4;
     }
     #mco{
         flex: 1;
