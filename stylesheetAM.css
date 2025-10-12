@@ -82,7 +82,8 @@
     }
     #quote{
         height: 250px;
-        background-color: #A7CFCF;
+        border-top: 1px solid #A7CFCF;
+        border-bottom: 1px solid #A7CFCF;
         justify-content: center;
         align-items: center;
     }
