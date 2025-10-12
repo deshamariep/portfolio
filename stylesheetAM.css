@@ -91,7 +91,7 @@
         padding: 0 16px;    
     }
     #quote h3 {
-        max-width: 800px;  
+        max-width: 850px;  
         font-weight: 300;  
         font-style: italic;    
         line-height: 1.4;
@@ -100,7 +100,8 @@
         flex: 1;
     }
     #hmw{
-        padding: 8px 16px;
+        margin: 32px 0px;
+        padding: 8px 8px;
         background: rgb(246, 246, 247);
         border: 1px solid transparent;
         border-image: radial-gradient(
