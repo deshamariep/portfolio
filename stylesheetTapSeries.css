@@ -196,6 +196,15 @@
         align-items: center;
         justify-content: center;
     }
+    .dataimgcontent{
+        display: flex; 
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+    .dataimgcontent div{
+        flex: content;
+    }
     .datatext{
         flex: 4;
     }
