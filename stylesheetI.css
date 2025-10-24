@@ -157,7 +157,7 @@
         height: 800px;
     }
     .dataCS{
-        flex: 1.5;
+        flex: 1;
         height: 500px;
         padding: 24px;
         text-align: left;
@@ -173,44 +173,7 @@
         opacity: 1;
         transform: translateY(0);
     }
-    .dataCS h1{
-        margin: 0px 0px 8px;
-    }
-    .dataCS h3{
-        margin: 0px 0px;
-    }
-    #csSubtitle{
-        display: flex;
-        align-items: baseline; /* keeps text aligned neatly */
-        gap: 16px; /* space between h3 and p */
-    }
-    .dataCaseImg{
-        flex: 1;
-        margin: auto;
-
-        opacity: 0;
-        transform: translateX(80px); /* start shifted right */
-        transition: all 0.8s ease-out;
-    }
-    .dataCaseImg.visible {
-        margin-top: 32px;
-        opacity: 1;
-        transform: translateX(0);
-    }
-    #pseudolink{
-        color: rgb(255, 255, 255, 0.7);
-        padding-top: 24px;
-    }
-    #query .link {
-        display: inline-block; /* needed for transform to work cleanly */
-        transition: transform 0.2s ease-in-out;
-        color: rgb(255, 255, 255, 0.7);
-        padding-top: 24px;
-    }
-    #query .link:hover {
-        transform: scale(1.1);
-        color: rgb(255, 255, 255);
-    }
+    
     .spaceBtwn{
         margin-top: 150px;
         margin-bottom: 150px;
