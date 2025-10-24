@@ -158,12 +158,8 @@
     }
     .dataCS{
         flex: 1;
-        height: 500px;
-        padding: 24px;
+        height: 510px;
         text-align: left;
-        background-color: rgb(217, 217, 217, 0.3);
-        border: 1px solid rgb(217, 217, 217);
-        border-radius: 10px;
 
         opacity: 0;
         transform: translateY(30px); /* start slightly lower */
@@ -172,6 +168,32 @@
     .dataCS.visible {
         opacity: 1;
         transform: translateY(0);
+    }
+    .csText{
+        padding: 24px 8px 8px;
+    }
+    .csHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+    }
+    .csInfo {
+        display: flex;
+        align-items: center;
+        gap: 16px; 
+    }
+    /* .csHeader h3, .csHeader .csSubText, .csHeader .csTag {
+        margin: 0;
+    } */
+    .csSubText{
+        color: rgb(217, 217, 217);
+    }
+    .csTag {
+        padding: auto;
+        background-color: rgb(217, 217, 217, 0.3);
+        border: 1px solid rgb(217, 217, 217);
+        border-radius: 10px;
     }
     
     .spaceBtwn{
