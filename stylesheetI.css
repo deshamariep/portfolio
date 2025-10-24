@@ -209,6 +209,31 @@
         border-radius: 20px;
         color: rgb(217, 217, 217);
     }
+    #comingSoon {
+        position: relative;
+        overflow: hidden;
+    }
+    #comingSoon::after {
+        content: "Coming Soon";
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    #comingSoon:hover::after {
+        opacity: 1;
+    }
+  
     .spaceBtwn{
         margin-top: 150px;
         margin-bottom: 150px;
