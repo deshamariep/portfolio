@@ -160,14 +160,28 @@
         flex: 1;
         height: 510px;
         text-align: left;
-
         opacity: 0;
-        transform: translateY(30px); /* start slightly lower */
-        transition: all 0.8s ease-out;
+        
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        overflow: hidden; 
     }
     .dataCS.visible {
         opacity: 1;
         transform: translateY(0);
+    }
+    .dataCS:hover .csImg {
+        transform: scale(1.05);
+    }
+    .dataCS:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    .csImg {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease; /* smooth growth */
+        transform-origin: center center; /* scale from the middle */
     }
     .csText{
         padding: 24px 8px 8px;
@@ -183,19 +197,19 @@
         align-items: center;
         gap: 16px; 
     }
-    /* .csHeader h3, .csHeader .csSubText, .csHeader .csTag {
+    .csHeader h3, .csHeader .csSubText, .csHeader .csTag {
         margin: 0;
-    } */
+    }
     .csSubText{
         color: rgb(217, 217, 217);
     }
     .csTag {
-        padding: auto;
+        padding: 1px 12px;
         background-color: rgb(217, 217, 217, 0.3);
         border: 1px solid rgb(217, 217, 217);
         border-radius: 10px;
+        color: rgb(217, 217, 217);
     }
-    
     .spaceBtwn{
         margin-top: 150px;
         margin-bottom: 150px;
