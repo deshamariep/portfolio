@@ -154,14 +154,16 @@
         margin-bottom: 72px;
         justify-content: space-between; 
         gap: 24px;
-        height: 800px;
+        height: 700px;
     }
     .dataCS{
+        display: block;
+        border-radius: 20px;
         flex: 1;
-        height: 510px;
+        height: 600px;
         text-align: left;
         opacity: 0;
-        
+
         transform: translateY(30px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         overflow: hidden; 
@@ -173,15 +175,12 @@
     .dataCS:hover .csImg {
         transform: scale(1.05);
     }
-    .dataCS:hover {
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    }
     .csImg {
         display: block;
         width: 100%;
         height: auto;
-        transition: transform 0.5s ease; /* smooth growth */
-        transform-origin: center center; /* scale from the middle */
+        transition: transform 0.5s ease; 
+        transform-origin: center center; 
     }
     .csText{
         padding: 24px 8px 8px;
@@ -197,7 +196,7 @@
         align-items: center;
         gap: 16px; 
     }
-    .csHeader h3, .csHeader .csSubText, .csHeader .csTag {
+    .csText .csHeader h3, .csText .csHeader .csSubText, .csText .csHeader .csTag {
         margin: 0;
     }
     .csSubText{
@@ -207,7 +206,7 @@
         padding: 1px 12px;
         background-color: rgb(217, 217, 217, 0.3);
         border: 1px solid rgb(217, 217, 217);
-        border-radius: 10px;
+        border-radius: 20px;
         color: rgb(217, 217, 217);
     }
     .spaceBtwn{
