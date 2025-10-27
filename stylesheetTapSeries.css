@@ -257,7 +257,7 @@
         border: 1px solid rgb(237,237,240);
         border-radius: 20px;
     }
-    .theHr{
+    hr{
         color: rgb(195,196,195);
         border: none; 
         height: 1px;
