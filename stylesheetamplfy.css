@@ -110,6 +110,13 @@
     }
     .dataCallout{
         flex: 1;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: nowrap;
+    }
+    .dataCallout2{
+        flex: 1;
     }
     .dataimg{
         display: flex; 
@@ -142,11 +149,6 @@
         border: 2px solid rgb(211,231,231);
         border-radius: 20px;
         padding: 24px;
-    }
-    #calloutCenter{
-        align-items: end;
-        justify-content: center;
-        text-align: center;
     }
     .callout h1{
         margin: 0px;
