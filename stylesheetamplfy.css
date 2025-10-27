@@ -38,6 +38,7 @@
         min-height: 100vh;
         overflow-x: hidden;
         position: relative;
+        background-color: #f4f5f8;
         /* background-image: url(images/newInfoBox.png);
         background-size: 500px 800px;
         background-position: 0px top; 
