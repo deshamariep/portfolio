@@ -146,12 +146,10 @@
     }
     #query{
         width: 1392px;
-        margin-top: 64px;
+        margin: 72px 0px;
     }
     .data{
         display: flex;
-        margin-top: 72px;
-        margin-bottom: 72px;
         justify-content: space-between; 
         gap: 24px;
         height: 700px;
