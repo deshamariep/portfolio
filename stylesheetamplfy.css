@@ -1,0 +1,113 @@
+@media screen and (max-width: 767px){
+    .mobileIncomplete {
+        display: block;
+        background-color: #f8d7da; /* Light red background */
+        color: #721c24; /* Dark red text color */
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 20px; /* Adds some space between the message and the content */
+        border: 1px solid #f5c6cb; /* Border for emphasis */
+    }
+    
+    .mobileIncomplete p {
+        margin: 0; /* Remove default margin for paragraphs */
+    }
+    main{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+}
+/* @media screen and (min-width: 768px) and (max-width: 1023px){
+    tablet
+    .mobile-incomplete {
+        display: none;
+    }
+} */
+
+@media screen and (min-width: 1024px){
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        /* background-image: url(images/newInfoBox.png);
+        background-size: 500px 800px;
+        background-position: 0px top; 
+        background-repeat: no-repeat; */
+    }
+    main{
+        margin: 0px 24px;
+        box-sizing: border-box;
+    }
+    #query{
+        width: 100%;
+        margin: 0 auto; 
+    }
+    .spaceBtwn{
+        margin-top: 150px;
+        margin-bottom: 150px;
+        opacity: 0;
+        transition: opacity 1s ease;
+        padding: 0.5rem;
+    }
+    .spaceBtwn.active{
+        opacity: 1;
+    }
+    .data{
+        display: flex;
+        justify-content: space-between; 
+        gap: 32px;
+    }
+    .dataimg{
+        display: flex; 
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+    .datatext{
+        flex: 4;
+    }
+    .data h2, h3{
+        margin-top: 0px;
+    }
+    .data420{
+        flex: 2.5;
+        /* width: 420px;
+        padding-right: 88px; */
+    }
+    .newMargin{
+        margin-left: 170px; 
+        margin-right: 170px;
+    }
+    #leftcsLink{
+        padding: 16px 24px;
+        width: 500px;
+    }
+    #leftcsLink h2{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    #leftcsLink:hover{
+        background-color: rgb(253,253,253);
+        border: 1px solid rgb(237,237,240);
+        border-radius: 20px;
+    }
+    #rightcsLink{
+        padding: 16px 24px;
+        width: 500px;
+    }
+    #rightcsLink h2{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    #rightcsLink:hover{
+        background-color: rgb(253,253,253);
+        border: 1px solid rgb(237,237,240);
+        border-radius: 20px;
+    }
+}
