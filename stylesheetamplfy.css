@@ -28,6 +28,9 @@
 } */
 
 @media screen and (min-width: 1024px){
+    .mobileIncomplete {
+        display: none; /* Hide the message on larger screens */
+    }
     body{
         margin: 0;
         padding: 0;
