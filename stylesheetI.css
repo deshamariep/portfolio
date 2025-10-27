@@ -152,7 +152,7 @@
         display: flex;
         justify-content: space-between; 
         gap: 24px;
-        height: 700px;
+        height: 675px;
     }
     .dataCS{
         display: block;

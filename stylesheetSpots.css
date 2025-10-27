@@ -42,11 +42,6 @@
         background-position: 0px top;
         background-repeat: no-repeat; */
     }
-    .hero-top {
-        background-color: (255, 255, 255, 0.1);
-        backdrop-filter: blur(10px); 
-        -webkit-backdrop-filter: blur(10px); 
-    }
     .hero-content {
         top: 55%;
         left: 0px;/* align to page gutter */
