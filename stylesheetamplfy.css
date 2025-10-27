@@ -83,11 +83,10 @@
         box-sizing: border-box;
     }
     main .smolP{
-        color: rgb(48, 48, 66, 0.9);
-        text-decoration: none;
-        letter-spacing: 0.03em;
-        line-height: 160%;
         margin: 0px;
+    }
+    main p{
+        margin-top: 0px;
     }
     #query{
         width: 100%;
@@ -110,10 +109,9 @@
     }
     .dataCallout{
         flex: 1;
-        align-items: center;
-        justify-content: center;
+        margin: auto auto 8px;
         text-align: center;
-        flex-wrap: nowrap;
+        white-space: nowrap
     }
     .dataCallout2{
         flex: 1;
@@ -123,6 +121,7 @@
         gap: 24px;
         align-items: center;
         justify-content: center;
+        margin: auto;
     }
     .datatext{
         flex: 4;
@@ -165,6 +164,13 @@
     }
     .aquaText{
         color: rgb(82,163,163);
+    }
+    hr{
+        border: none;
+        width: 1000px;
+        height: 2px; 
+        background-color: rgb(236, 241, 244);
+        margin: 16px auto 32px;
     }
     hr.vertical-line {
         border: none;
