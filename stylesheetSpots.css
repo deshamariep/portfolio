@@ -88,6 +88,10 @@
         margin-top: 0px;
     }
     main .smolP{
+        color: rgb(48, 48, 66, 0.9);
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        line-height: 160%;
         margin: 0px;
     }
     #query{

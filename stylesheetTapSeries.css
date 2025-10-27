@@ -258,10 +258,10 @@
         border-radius: 20px;
     }
     hr{
-        color: rgb(195,196,195);
+        background-color: rgb(195, 196, 195);
         border: none; 
         height: 1px;
-        margin: 16px 0;
+        margin: 24px 0;
     }
 }   
 /* @media screen and (min-width: 1650px){

@@ -82,6 +82,13 @@
         margin: 0px 24px;
         box-sizing: border-box;
     }
+    main .smolP{
+        color: rgb(48, 48, 66, 0.9);
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        line-height: 160%;
+        margin: 0px;
+    }
     #query{
         width: 100%;
         margin: 0 auto; 
@@ -131,12 +138,18 @@
         background-color: rgb(249, 251, 252);
         border: 2px solid rgb(211,231,231);
         border-radius: 20px;
+        padding: 24px;
+    }
+    .lightAquaText{
+        color: rgb(211,231,231);
     }
     .aquaText{
         color: rgb(82,163,163);
     }
     hr.vertical-line {
-        border: 1px solid rgb(236, 241, 244); 
+        background-color: rgb(236, 241, 244);
+        border: none; 
+        height: 1px; 
         height: 100px;
         transform: rotate(90deg);
         transform-origin: center; 
