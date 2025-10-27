@@ -145,6 +145,11 @@
         justify-content: center;
         text-align: center;
     }
+    .list{
+        display: flex;
+        align-items: center;
+        gap: 16px; 
+    }
     .lightAquaText{
         color: rgb(211,231,231);
     }
