@@ -108,6 +108,9 @@
         justify-content: space-between; 
         gap: 32px;
     }
+    .dataCallout{
+        flex: 1;
+    }
     .dataimg{
         display: flex; 
         gap: 24px;
@@ -140,7 +143,7 @@
         border-radius: 20px;
         padding: 24px;
     }
-    .callout .data #center{
+    #calloutCenter{
         align-items: end;
         justify-content: center;
         text-align: center;
