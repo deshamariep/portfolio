@@ -141,9 +141,13 @@
         padding: 24px;
     }
     .callout .data{
-        align-items: center;
+        align-items: end;
         justify-content: center;
         text-align: center;
+    }
+    .callout h1{
+        margin: 0px;
+        margin-bottom: -5px;
     }
     .list{
         display: flex;
@@ -152,6 +156,7 @@
     }
     .lightAquaText{
         color: rgb(211,231,231);
+        margin: 0px 16px;
     }
     .aquaText{
         color: rgb(82,163,163);
@@ -159,7 +164,7 @@
     hr.vertical-line {
         border: none;
         width: 2px;
-        height: 200px; 
+        height: 150px; 
         background-color: rgb(236, 241, 244);
         margin: 0; 
     }
