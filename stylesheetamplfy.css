@@ -174,7 +174,7 @@
         margin: 0; 
     }
     #backgroundColor{
-        background-color: rgb(82,163,163);
+        background-color: rgb(82,163,163, 0.7);
     }
     #leftcsLink{
         padding: 16px 24px;
