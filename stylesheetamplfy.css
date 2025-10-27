@@ -153,10 +153,10 @@
     }
     hr.vertical-line {
         border: none;
-        width: 1px;
-        height: 100px; 
+        width: 2px;
+        height: 200px; 
         background-color: rgb(236, 241, 244);
-        margin: 0 16px; 
+        margin: 0; 
     }
     #leftcsLink{
         padding: 16px 24px;
