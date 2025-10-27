@@ -122,6 +122,25 @@
         margin-left: 170px; 
         margin-right: 170px;
     }
+    #hmw{
+        background: rgb(246, 246, 247);
+        border: 1px solid rgb(196, 196, 196);
+        padding: 16px 24px;
+    }
+    .callout{
+        background-color: rgb(249, 251, 252);
+        border: 2px solid rgb(211,231,231);
+        border-radius: 20px;
+    }
+    .aquaText{
+        color: rgb(82,163,163);
+    }
+    hr.vertical-line {
+        border: 1px solid rgb(236, 241, 244); 
+        height: 100px;
+        transform: rotate(90deg);
+        transform-origin: center; 
+    }
     #leftcsLink{
         padding: 16px 24px;
         width: 500px;
