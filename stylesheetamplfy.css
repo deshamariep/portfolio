@@ -140,7 +140,7 @@
         border-radius: 20px;
         padding: 24px;
     }
-    .callout .data{
+    .callout .data #center{
         align-items: end;
         justify-content: center;
         text-align: center;
