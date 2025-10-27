@@ -140,6 +140,11 @@
         border-radius: 20px;
         padding: 24px;
     }
+    .callout .data{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
     .lightAquaText{
         color: rgb(211,231,231);
     }
@@ -147,12 +152,11 @@
         color: rgb(82,163,163);
     }
     hr.vertical-line {
+        border: none;
+        width: 1px;
+        height: 100px; 
         background-color: rgb(236, 241, 244);
-        border: none; 
-        height: 1px; 
-        height: 100px;
-        transform: rotate(90deg);
-        transform-origin: center; 
+        margin: 0 16px; 
     }
     #leftcsLink{
         padding: 16px 24px;
