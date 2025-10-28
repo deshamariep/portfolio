@@ -110,20 +110,20 @@
     .data2{
         display: flex;
         justify-content: space-between; 
-        gap: 16px;
+        gap: 8px;
     }
     .dataCallout{
         flex: 1;
         margin: auto auto 8px;
         text-align: center;
-        white-space: nowrap
+        white-space: nowrap;
     }
     .dataCallout2{
         flex: 1;
     }
     .dataCalloutText{
         flex: 1;
-        margin: 0px 16px;
+        width: 290px;
     }
     .dataimg{
         display: flex; 
@@ -197,7 +197,7 @@
         margin: 0; 
     }
     #backgroundColor{
-        background-color: rgb(82,163,163, 0.7);
+        background-color: rgb(82,163,163, 0.4);
     }
     #leftcsLink{
         padding: 16px 24px;
