@@ -115,6 +115,8 @@
     .dataCallout{
         flex: 1;
         margin: auto auto 8px;
+    }
+    .calloutCenter{
         text-align: center;
         white-space: nowrap;
     }
@@ -128,6 +130,13 @@
         width: 300px;
     }
     .dataimg{
+        display: flex; 
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+    .dataimgCallout{
         display: flex; 
         gap: 24px;
         align-items: center;
