@@ -158,6 +158,14 @@
         align-items: center;
         gap: 16px; 
     }
+    .lofiInsight{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .lofiInsight h2, .lofiInsight p{
+        margin: 0px;
+    }
     .lightAquaText{
         color: rgb(211,231,231);
         margin: 0px 16px;
