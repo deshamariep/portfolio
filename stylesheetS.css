@@ -61,7 +61,7 @@
         width: 100%;
     }
     #gallery div{
-        flex: content;
+        flex: 1;
     }
     #gallery article{
         /* padding: 8px;
