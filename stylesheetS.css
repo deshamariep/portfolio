@@ -67,38 +67,30 @@
         margin-bottom: 96px;
         display: flex;
         width: 100%;
+        justify-content: center;
+        gap: 0; 
     }
     #gallery div{
         flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     #gallery article{
         /* padding: 8px;
         margin: 8px;
         border-radius: 40px; */
 
-        border: 1px solid rgb(196, 196, 196);
-    
-        /* glassmorphism core
-        background: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(8px);          
-        -webkit-backdrop-filter: blur(8px);  */
-    
-        /* gradient border */
-        /* border: 1.5px double transparent;
-        background-image: 
-            linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
-            linear-gradient(
-                to right,
-                rgba(82, 209, 252, 0.9) 20%, 
-                rgba(207, 240, 255, 1) 41%, 
-                rgba(229, 156, 252, 0.9) 66%
-            );
-        background-origin: border-box;
-        background-clip: padding-box, border-box;
-    
+        border-right: 1px solid rgb(196, 196, 196);
+        border-bottom: 1px solid rgb(196, 196, 196);
         box-sizing: border-box;
-        background-size: 200% auto;
-        animation: animateBackground 5s infinite linear; */
+    }
+    #gallery > div:last-child article {
+        border-right: none;
+    }
+    #gallery article:last-child {
+        border-bottom: none;
     }
     #gallery article img {
         display: block;
@@ -119,32 +111,6 @@
         text-align: left;
         font-size: 16px;
         color: #fff;
-    }
-    #topLeft{
-        border-right: 1px solid rgb(196, 196, 196);
-        border-bottom: 1px solid rgb(196, 196, 196);
-    }
-    #topRight{
-        border-left: 1px solid rgb(196, 196, 196);
-        border-bottom: 1px solid rgb(196, 196, 196);
-    }
-    #bottomLeft{
-        border-right: 1px solid rgb(196, 196, 196);
-        border-top: 1px solid rgb(196, 196, 196);
-    }
-    #bottomRight{
-        border-left: 1px solid rgb(196, 196, 196);
-        border-top: 1px solid rgb(196, 196, 196);
-    }
-    .left{
-        border-top: 1px solid rgb(196, 196, 196);
-        border-right: 1px solid rgb(196, 196, 196);
-        border-bottom: 1px solid rgb(196, 196, 196);
-    }
-    .right{
-        border-top: 1px solid rgb(196, 196, 196);
-        border-left: 1px solid rgb(196, 196, 196);
-        border-bottom: 1px solid rgb(196, 196, 196);
     }
     footer{
         background-color: rgba(255, 255, 255, 0.2);
