@@ -54,7 +54,7 @@
         text-decoration: underline;
     }
     main{
-        margin: 200px 24px 0px 24px;
+        margin: 100px 24px 0px 24px;
         box-sizing: border-box;
         letter-spacing: 0.03em;
         line-height: 160%;
@@ -74,7 +74,7 @@
         margin: 8px;
         border-radius: 40px; */
 
-        border: 0.5px solid white;
+        border: 0.5px solid rgb(196, 196, 196);
     
         /* glassmorphism core
         background: rgba(255, 255, 255, 0.25);
