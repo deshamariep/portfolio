@@ -120,6 +120,32 @@
         font-size: 16px;
         color: #fff;
     }
+    #topLeft{
+        border-right: 1px solid rgb(196, 196, 196);
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+    #topRight{
+        border-left: 1px solid rgb(196, 196, 196);
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+    #bottomLeft{
+        border-right: 1px solid rgb(196, 196, 196);
+        border-top: 1px solid rgb(196, 196, 196);
+    }
+    #bottomRight{
+        border-left: 1px solid rgb(196, 196, 196);
+        border-top: 1px solid rgb(196, 196, 196);
+    }
+    .left{
+        border-top: 1px solid rgb(196, 196, 196);
+        border-right: 1px solid rgb(196, 196, 196);
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+    .right{
+        border-top: 1px solid rgb(196, 196, 196);
+        border-left: 1px solid rgb(196, 196, 196);
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
     footer{
         background-color: rgba(255, 255, 255, 0.2);
     }
