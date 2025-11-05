@@ -25,16 +25,14 @@
     }
     #dataTitle h1{
         font-weight: 400;
-        margin: 0px;
+        margin: 16px 0px;
     }
     #dataTitle h2{
-        font-size: 30px;
         font-weight: 300;
         margin: 8px 0px;
     }
     #dataTitle p{
         margin: 8px 0px;
-        font-size: 22px;
         color: rgb(195,196,195)
     }
     main{

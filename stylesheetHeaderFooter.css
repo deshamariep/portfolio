@@ -44,7 +44,7 @@
     #hLogo img{
         display: block;
         height: auto;
-        max-width: 100%;
+        max-width: 80%;
     }
     #one{
         margin: auto 0px; 
@@ -53,16 +53,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        margin: 0;
-        padding: 0;
+        gap: 16px;
+        margin: 8px auto;
+        padding: 0px;
         list-style: none;
     }
     .hero-top nav ul li a{
         align-items: center;
         justify-content: center;
         width: 60px;
-        height: 50px;
+        height: 20px;
         background: none;
         border: none;
         outline: none;
