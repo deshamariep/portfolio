@@ -10,8 +10,6 @@
         text-align: left;
         box-sizing: border-box;
     }
-    
-    /* top bar: logo + nav */
     .hero-top{
         position: absolute;
         top: 0;
@@ -28,25 +26,21 @@
         background-color: rgb(255, 255, 255, 0.3);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
     }
-    /* When we switch to fixed sticky mode */
     .hero-top.sticky {
         position: fixed;
         left: 0;
         right: 0;
         top: 0;
-        transform: translateY(-110%); /* hidden initially in sticky mode */
+        transform: translateY(-110%);
         transition: transform 320ms cubic-bezier(.2,.9,.2,1), background-color 320ms ease, box-shadow 320ms ease;
-        background: rgba(255,255,255,0.3); /* subtle background so text is readable */
+        background: rgba(255,255,255,0.3); 
         backdrop-filter: blur(6px);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-        z-index: 9999; /* above everything while sticky */
+        z-index: 9999; 
     } 
-    /* Reveal the sticky header */
     .hero-top.sticky.visible {
         transform: translateY(0);
     }
-    
-    /* keep your existing logo + nav styling, but remove old layout rules that assume header is a short bar */
     #hLogo img{
         display: block;
         height: auto;
@@ -64,7 +58,7 @@
         list-style: none;
     }
     .hero-top nav ul li a{
-        align-items: center; /* vertically center text inside link */
+        align-items: center;
         justify-content: center;
         width: 60px;
         height: 50px;
@@ -78,22 +72,38 @@
         color: rgb(48, 48, 66);
         text-decoration: none;
     }
-    /* hero text (like old #intro, left aligned) */
     .hero-content{
         position: absolute;
-        top: 40%;                    /* vertical center */
-        left: 24px;                  /* align to page gutter */
-        transform: translateY(-50%); /* only shift vertically */
+        top: 50%;                    
+        left: 24px;                  
+        transform: translateY(-50%); 
         width: 100%;
         z-index: 4;
         margin: 0;
     }
-
     #dataTitle{
         flex-shrink: 0;
         margin-top: 16px;
         max-width: 380px; 
         text-align: left;
+    }
+    footer{
+        width: 100%;
+        margin: 0px;
+        height: 208px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: rgb(48, 48, 66);
+        box-sizing: border-box;
+    }
+    #footerData{
+        display: flex;
+        align-items: left;
+        justify-content: left;
+        gap: 8px;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -101,7 +111,6 @@
         display: none;
     } */
 }
-
 @media screen and (min-width: 1024px) {
     .hero{
         position: relative;
