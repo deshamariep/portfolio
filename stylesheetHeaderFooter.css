@@ -75,7 +75,7 @@
     }
     .hero-content{
         position: absolute;
-        top: 50%;                    
+        top: 40%;                    
         left: 24px;                  
         transform: translateY(-50%); 
         width: 100%;
