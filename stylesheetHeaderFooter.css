@@ -52,6 +52,7 @@
     .hero-top nav ul{
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         margin: 0;
         padding: 0;
@@ -66,7 +67,7 @@
         border: none;
         outline: none;
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 300;
         display: inline-block;
         color: rgb(48, 48, 66);
@@ -102,14 +103,15 @@
     }
     #footerData{
         display: flex;
-        align-items: left;
-        justify-content: left;
+        align-items: center;
+        justify-content: center;
         gap: 8px;
     }
     #fOne{
         flex-direction: column;
         align-items: center;
-        text-align: left;
+        text-align: center;
+        margin-bottom: 24px;
     }
     #footTitle{
         margin: 8px 0px 8px;
@@ -133,11 +135,11 @@
         margin: 8px 0px 16px;
     }
     .fTwoP{
-        margin: 16px 0px 8px;
+        margin: 24px 0px 8px;
         font-size: 16px; 
     }
     .footA{
-        margin: 0px;
+        margin: 4px 0px;
         padding: 0px
     }
 }
