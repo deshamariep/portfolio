@@ -86,7 +86,6 @@
     }
   });
 
-  
   window.addEventListener("load", () => {
     document.querySelector(".dataHero").classList.add("loaded");
     document.querySelector("#dataDesktopBar").classList.add("loaded");

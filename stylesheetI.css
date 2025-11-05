@@ -20,17 +20,10 @@
     #dataAvatar{
         display: none;
     }
-    #desktop{
-        display: flex;               
-        justify-content: center;
-        align-items: center;
-        width: 400px;                
-        margin: auto;  
-        box-sizing: border-box;
-        padding: 8px;             
-    }
     #dataDesktopBar{
         display: flex;
+        width: 300px;
+        overflow-x: hidden;
         gap: 16px;
         padding: 8px;
         opacity: 0;
@@ -41,21 +34,27 @@
         transform: translateY(100px);
         transition: opacity 0.8s ease, transform 0.6s ease;
     }
-    #dataDesktopBar.loaded {            
-        animation: barSlideUp 1s ease-out forwards;
-        animation-delay: 1.2s; 
+    #dataDesktopBar.loaded {
+        animation: slideLogosLeft 15s linear infinite;
     }
-    @keyframes barSlideUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
+    @keyframes slideLogosLeft {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
         }
     }
-    #dataDesktopBar img{
+    #dataDesktopBar::after {
+        content: "";
+        display: flex;
+    }
+    #dataDesktopBar img {
         display: block;
         width: 45px;
         height: 45px;
         object-fit: contain;
+        flex-shrink: 0;
     }
     #dataTitle h1{
         font-weight: 400;
