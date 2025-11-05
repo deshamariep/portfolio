@@ -1,25 +1,6 @@
 
 @media screen and (max-width: 767px){
-    .mobileIncomplete {
-        display: block;
-        background-color: #f8d7da; /* Light red background */
-        color: #721c24; /* Dark red text color */
-        padding: 10px;
-        text-align: center;
-        font-size: 16px;
-        margin-bottom: 20px; /* Adds some space between the message and the content */
-        border: 1px solid #f5c6cb; /* Border for emphasis */
-    }
     
-    .mobileIncomplete p {
-        margin: 0; /* Remove default margin for paragraphs */
-    }
-    main{
-        display: none;
-    }
-    footer{
-        display: none;
-    }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
     /* .mobile-incomplete {
@@ -28,9 +9,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .mobileIncomplete {
-        display: none; /* Hide the message on larger screens */
-    }
     body{
         margin: 0;
         padding: 0;
