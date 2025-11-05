@@ -90,20 +90,50 @@
     footer{
         width: 100%;
         margin: 0px;
-        height: 208px;
         text-align: center;
         justify-content: center;
         align-items: center;
         display: block;
-        background-color: rgba(255, 255, 255, 0.1);
         color: rgb(48, 48, 66);
         box-sizing: border-box;
+    }
+    footer #footLink{
+        margin: 8px;
     }
     #footerData{
         display: flex;
         align-items: left;
         justify-content: left;
         gap: 8px;
+    }
+    #footTitle{
+        margin: 8px 0px 8px;
+    
+        background-image: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.7) 20%, 
+            rgba(45, 140, 190, 0.6) 41%, 
+            rgba(87, 132, 199, 1) 66%, 
+            rgba(169, 108, 208, 0.7) 88%
+        );
+        background-size: 300% 300%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    
+        animation: footerGradientSwipe 10s ease-in-out forwards;
+        animation-play-state: paused; /* Paused until we tell it to play */
+    }
+    #footerDataP{
+        margin: 8px 0px;
+    }
+    .fTwoP{
+        margin: 8px 0px;
+        font-size: 16px; 
+    }
+    .footA{
+        margin: 0px;
+        padding: 0px
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
