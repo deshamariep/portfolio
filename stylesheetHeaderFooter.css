@@ -1,3 +1,22 @@
+@media screen and (max-width: 767px){
+    .hero{
+        position: relative;
+        width: 100vw;
+        min-height: 611px;
+        height: 100vh;    /* fallback */
+        height: 100dvh;   /* dynamic viewport height for Safari/modern browsers */
+        margin: 0;
+        overflow: hidden;
+        text-align: left;
+        box-sizing: border-box;
+    }
+    #dataTitle{
+        flex-shrink: 0;
+        margin-top: 16px;
+        max-width: 380px; 
+        text-align: left;
+    }
+}
 .hero{
     position: relative;
     width: 100vw;

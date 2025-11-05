@@ -1,3 +1,126 @@
+@media screen and (max-width: 767px){
+    h1{
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 24px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.03em;
+        line-height: 160%;
+        /* padding-bottom: 32px;
+        margin-bottom: 10px; */
+    }
+    h2{
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
+    h3{
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 22px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
+    p, nav ul li, ul li{
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 18px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
+    .centerText{
+        text-align: center;
+    }
+    .painPT .number, .smolP, footer p, #circle1, #circle2, #circle3, #circle4{
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 14px;
+        color: rgb(48, 48, 66, 0.9);
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
+    a{
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        text-decoration: none;
+        font-style: normal;
+        font-size: 18px;
+        color: rgb(0, 0, 255);
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
+    footer a{
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        text-decoration: none;
+        font-style: normal;
+        font-size: 14px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
+    footer a:hover{
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        text-decoration: underline;
+        font-style: normal;
+        font-size: 14px;
+        color: rgb(0, 0, 255);
+        letter-spacing: 0.03em;
+        line-height: 160%;
+    }
+    header #one a, #one a{
+        text-decoration: none;
+    }
+    #home:hover,
+    #aboutMe:hover,
+    #studio:hover {
+        text-decoration: underline;
+    }
+    #footerDataP{
+        font-weight: 300;
+    }
+    /* #footTitle{
+        font-family: "Nunito Sans", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+    } */
+    footer #footLink a{
+        text-decoration: none;
+    }
+    .footA{
+        line-height: 160%;
+    }
+    footer #btmfoot{
+        font-family: "Newsreader", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 10px;
+        letter-spacing: 0.03em;
+        line-height: 100%;
+        color: rgb(48, 48, 66);
+    }
+}
 h1{
     font-family: "Newsreader", serif;
     font-optical-sizing: auto;
