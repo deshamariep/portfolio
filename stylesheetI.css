@@ -71,20 +71,20 @@
         color: rgb(195,196,195)
     }
     main{
-        margin: 0px 24px;
+        margin: 0px 16px;
         color: rgb(255, 255, 255);
         letter-spacing: 0.03em;
         line-height: 160%;
     }
     #query{
-        width: 600px;
+        width: 100%;
         margin: 32px 0px;
     }
     .dataCS{
         display: block;
-        border-radius: 20px;
+        border-radius: 12px;
         flex: 1;
-        height: 600px;
+        height: 500px;
         text-align: left;
         opacity: 0;
 
@@ -96,12 +96,9 @@
         opacity: 1;
         transform: translateY(0);
     }
-    .dataCS:hover .csImg {
-        transform: scale(1.05);
-    }
     .csImg {
         display: block;
-        width: 400px;
+        width: 100%;
         height: auto;
         transition: transform 0.5s ease; 
         transform-origin: center center; 
@@ -116,8 +113,6 @@
         flex-wrap: wrap;
     }
     .csInfo {
-        display: flex;
-        align-items: center;
         gap: 16px; 
     }
     .csText .csHeader h3, .csText .csHeader .csSubText, .csText .csHeader .csTag {
@@ -125,9 +120,12 @@
     }
     .csSubText{
         color: rgb(217, 217, 217);
+        font-size: 12px;
     }
     .csTag {
+        margin: -8px;
         padding: 1px 12px;
+        text-align: center;
         background-color: rgb(217, 217, 217, 0.3);
         border: 1px solid rgb(217, 217, 217);
         border-radius: 20px;
