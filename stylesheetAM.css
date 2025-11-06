@@ -1,5 +1,5 @@
 @media screen and (max-width: 767px){
-    body{
+    html, body{
         margin: 0;
         padding: 0;
         width: 100%;
@@ -9,7 +9,7 @@
         background-color: white;
     }
     main{
-        margin: 96px 16px;
+        margin: 120px 16px 96px;
         box-sizing: border-box;
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
@@ -31,7 +31,7 @@
           rgba(169, 108, 208, 0.7) 88%
         ) 1;
     }
-    #headShot{            
+    #headShot img{            
         justify-content: center;
         padding-top: 24px;
         width: 90%;
