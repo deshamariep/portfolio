@@ -7,7 +7,7 @@
         min-height: 100vh;
         overflow-x: hidden;
         
-        background: url("images/gradientBg.png") no-repeat center center fixed;
+        background: url("images/gradientBgMobile.png") no-repeat center center fixed;
         background-size: cover;
     }
     h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
@@ -62,7 +62,7 @@
     }
     #query{
         width: 100;
-        margin: 48px 0px 0px;
+        margin: 48px 0px;
     }
     .dataCS{
         display: block;
@@ -81,7 +81,7 @@
         transform: translateY(0);
     }
     #mobileCsSpace{
-        margin-top: 32px;
+        padding-top: 32px;
     }
     #csDisplayNone{
         display: none;
