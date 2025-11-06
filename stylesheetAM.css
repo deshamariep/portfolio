@@ -9,11 +9,14 @@
         background-color: white;
     }
     main{
-        margin: 40px 16px;
+        margin: 96px 16px;
         box-sizing: border-box;
         color: rgb(94, 95, 94);
         letter-spacing: 0.03em;
         line-height: 160%;
+    }
+    #helloMe{
+        margin-top: 32px;
     }
     #hmw{
         margin: 32px 0px;
@@ -27,6 +30,12 @@
           rgba(87, 132, 199, 1) 66%, 
           rgba(169, 108, 208, 0.7) 88%
         ) 1;
+    }
+    #headShot{            
+        justify-content: center;
+        padding-top: 24px;
+        width: 90%;
+        height: auto;
     }
     #quote {
         display: flex;              
