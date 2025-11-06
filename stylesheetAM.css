@@ -34,8 +34,6 @@
     #headShot img{            
         justify-content: center;
         padding-top: 24px;
-        width: 90%;
-        height: auto;
     }
     #quote {
         display: flex;              
