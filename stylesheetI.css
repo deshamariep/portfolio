@@ -1,13 +1,13 @@
 
 @media screen and (max-width: 767px){
-    body{
+    html, body{
         margin: 0;
         padding: 0;
         width: 100%;
         min-height: 100vh;
         overflow-x: hidden;
         
-        background: url("images/gradientBgMobile.png") no-repeat center center fixed;
+        background: url("images/gradientBgMobile.png") no-repeat center center;
         background-size: cover;
     }
     h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
