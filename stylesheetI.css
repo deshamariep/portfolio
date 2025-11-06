@@ -27,7 +27,7 @@
         display: none;
     }
     #desktop{
-        margin-top: 32px;
+        margin-top: 64px;
         display: flex;
         width: 96%;
         justify-content: center;
