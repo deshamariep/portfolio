@@ -14,6 +14,12 @@
         color: #fff;
         text-decoration: none;
     }
+    .hero-content {         
+        text-align: center;
+        width: 90%;
+        z-index: 4;
+        margin: auto;
+    }
     .italic{
         font-style: italic;
     }
@@ -26,8 +32,7 @@
         width: 96%;
         justify-content: center;
         align-items: center;          
-        box-sizing: border-box;
-        padding: 8px;             
+        box-sizing: border-box;            
     }
     #dataDesktopBar{
         gap: 16px;
@@ -57,7 +62,7 @@
     }
     #query{
         width: 100;
-        margin: 32px 0px 0px;
+        margin: 48px 0px 0px;
     }
     .dataCS{
         display: block;
