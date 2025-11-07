@@ -11,7 +11,7 @@
     }
     
     .mobileIncomplete p {
-        margin: 0; /* Remove default margin for paragraphs */
+        margin: 0; 
     }
     main{
         display: none;
