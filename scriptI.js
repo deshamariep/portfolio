@@ -104,4 +104,22 @@
     observer.observe(el);
   });
 
+
+  const dockItems = document.querySelectorAll('.dock-item img');
+  const maxScale = 2.0;       // how big the closest icon gets
+  const spread = 120;         // how far the magnification spreads across neighbors
+
+  document.addEventListener('mousemove', (e) => {
+    dockItems.forEach((icon) => {
+      const rect = icon.getBoundingClientRect();
+      const iconCenter = rect.left + rect.width / 2;
+      const distance = Math.abs(e.clientX - iconCenter);
+
+      // scale based on distance
+      const scale = Math.max(1, maxScale - (distance / spread));
+
+      icon.style.transform = `scale(${scale})`;
+    });
+  });
+
 }());
