@@ -242,14 +242,15 @@
     }
     /* The fix: ONLY enlarge when the IMAGE is hovered */
     .dock-item img:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     /* Label */
     .dock-label {
         position: absolute;
-        bottom: -28px;
-        background: rgba(0,0,0,0.8);
+        top: 28px;
+        background: rgba(217,217,217,0.3);
         color: white;
+        white-space: nowrap;
         padding: 4px 8px;
         border-radius: 6px;
         font-size: 12px;
