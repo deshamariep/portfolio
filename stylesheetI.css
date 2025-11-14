@@ -200,17 +200,11 @@
         padding: 8px;
         opacity: 0;
         background-color: rgba(217,217,217,0.3);
-        border: 1px solid rgb(217, 217, 217);
+        border: 1px solid rgb(217, 217, 217, 0.35);
         border-radius: 16px;
 
         transform: translateY(100px);
         transition: opacity 0.8s ease, transform 0.6s ease;
-    }
-    .dock-item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
     #dataDesktopBar.loaded {            
         animation: barSlideUp 1s ease-out forwards;
@@ -222,18 +216,18 @@
             transform: translateY(0);
         }
     }
-    #dataDesktopBar img{
-        /* display: block;
-        width: 45px;
-        height: 45px;
-        object-fit: contain; */
-
+    .dock-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* #dataDesktopBar img{
         width: 45px;
         height: 45px;
         transform-origin: bottom center;
         transition: transform 0.1s ease-out;
-    }
-    /* Label */
+    } */
     .dock-item {
         position: relative;
         display: flex;
@@ -243,11 +237,31 @@
     .dock-item img {
         width: 45px;
         height: 45px;
+        transform-origin: bottom center;
         transition: transform 0.2s ease;
     }
     /* The fix: ONLY enlarge when the IMAGE is hovered */
     .dock-item img:hover {
-        transform: scale(1.6);
+        transform: scale(1.2);
+    }
+    /* Label */
+    .dock-label {
+        position: absolute;
+        bottom: -28px;
+        background: rgba(0,0,0,0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        opacity: 0;
+        transform: translateY(5px);
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    /* Label appears ONLY when image is hovered */
+    .dock-item img:hover + .dock-label {
+        opacity: 1;
+        transform: translateY(0);
     }
     #dataTitle h1{
         font-weight: 400;
