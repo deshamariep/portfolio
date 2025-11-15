@@ -191,6 +191,18 @@
         justify-content: space-between; 
         gap: 32px;
     }
+    .diagramData{
+        display: flex; 
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+    .diagramData p{
+        margin: 0px;
+    }
+    .diagramData div{
+        flex: 1;
+    }
     .dataimg{
         display: flex; 
         gap: 24px;
