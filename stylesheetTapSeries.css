@@ -221,17 +221,6 @@
         margin-left: 170px; 
         margin-right: 170px;
     }
-    #failLeft img, #failLeft p{
-        margin-left: 0px;
-        margin-bottom: 0px;
-    } 
-    #passRight img{
-        margin-right: 0px;
-    }
-    #passRight p{
-        margin-bottom: 0px;
-        margin-left: 365px;
-    }
     #leftcsLink{
         padding: 16px 24px;
         width: 500px;

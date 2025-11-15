@@ -68,21 +68,21 @@
     });
 
     const heroTop = document.querySelector('.hero-top');
-  if (!heroTop) return;
+    if (!heroTop) return;
 
-  let lastY = window.scrollY;
-  let ticking = false;
-  let stickyActive = false;
-  const enterAfter = 75;      // px scrolled down before we enter sticky mode
-  const revealDelta = 5;      // px upward scroll needed to reveal
-  const hideDelta = 10;        // px downward scroll to hide
+    let lastY = window.scrollY;
+    let ticking = false;
+    let stickyActive = false;
+    const enterAfter = 75;      // px scrolled down before we enter sticky mode
+    const revealDelta = 5;      // px upward scroll needed to reveal
+    const hideDelta = 10;        // px downward scroll to hide
 
-  // compute header height once (fallback)
-  const headerH = heroTop.offsetHeight || 70;
+    // compute header height once (fallback)
+    const headerH = heroTop.offsetHeight || 70;
 
-  function onScroll() {
-    const y = window.scrollY;
-    const delta = y - lastY;
+    function onScroll() {
+      const y = window.scrollY;
+      const delta = y - lastY;
 
     // Enter sticky mode when user has scrolled beyond enterAfter
     if (!stickyActive && y > enterAfter) {
@@ -128,6 +128,14 @@
     if (stickyActive && e.clientY < 60) {
       heroTop.classList.add('visible');
     }
+  });
+
+  const image = document.getElementById("dataImage");
+  const hoverItems = document.querySelectorAll(".data p");
+  hoverItems.forEach(item => {
+    item.addEventListener("mouseover", () => {
+      image.src = `images/${item.id}.svg`;
+    });
   });
   
 }());
