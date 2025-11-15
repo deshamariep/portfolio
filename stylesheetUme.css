@@ -322,8 +322,7 @@
         padding: 16px 24px;
     }
     #leftcsLink{
-        padding: 16px 24px;
-        width: 500px;
+        padding: 16px;
         background-color: rgb(253,253,253);
         border: 1px solid rgb(237,237,240);
         border-radius: 20px;
@@ -335,11 +334,12 @@
     #leftcsLink:hover{
         background-color: rgb(50, 50, 50);
         border: 1px solid rgb(50, 50, 50);
+    }
+    #leftcsLink p:hover, #leftcsLink h1:hover{
         color: white;
     }
     #rightcsLink{
-        padding: 16px 24px;
-        width: 500px;
+        padding: 16px;
         background-color: rgb(253,253,253);
         border: 1px solid rgb(237,237,240);
         border-radius: 20px;
@@ -351,6 +351,8 @@
     #rightcsLink:hover{
         background-color: rgb(50, 50, 50);
         border: 1px solid rgb(50, 50, 50);
+    }
+    #rightcsLink p:hover, #rightcsLink h1:hover{
         color: white;
     }
 }   
