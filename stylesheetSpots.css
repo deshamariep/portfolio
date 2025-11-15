@@ -316,23 +316,9 @@
         margin-left: 170px; 
         margin-right: 170px;
     }
-    .strengths{
-        display: block;
-        border: 1px solid green;
-        border-radius: 16px;
-        padding: 16px;
-    }
-    .weaknesses{
-        display: block;
-        border: 1px solid red;
-        border-radius: 16px;
-        padding: 16px;
-    }
-    .improvement{
-        display: block;
-        border: 1px solid rgb(255, 196, 0);
-        border-radius: 16px;
-        padding: 16px 48px 16px 16px;
+    .calloutSpots{
+        border: 1px solid rgb(231,221,211);
+        background-color: rgb(252,251,249);
     }
     #hmw{
         background: rgb(246, 246, 247);
