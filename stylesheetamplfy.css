@@ -83,6 +83,9 @@
         margin: 0px 24px;
         box-sizing: border-box;
     }
+    main h3{
+        font-weight: 300;
+    }
     main .smolP{
         margin: 0px;
     }

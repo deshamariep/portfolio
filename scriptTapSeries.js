@@ -138,7 +138,7 @@
       pass: "passAfterH1.svg"
     },
     pfh2: {
-      fail: "failAfterH2.svg",
+      fail: "failAfter.svg",
       pass: "passAfterH2.svg"
     },
     pfh3: {
