@@ -130,11 +130,34 @@
     }
   });
 
-  const image = document.getElementById("dataImage");
-  const hoverItems = document.querySelectorAll(".data p");
-  hoverItems.forEach(item => {
-    item.addEventListener("mouseover", () => {
-      image.src = `images/${item.id}.svg`;
+  const failImage = document.getElementById("failImage");
+  const passImage = document.getElementById("passImage");
+  const hoverRules = {
+    pfh1: {
+      fail: "failAfterH1.svg",
+      pass: "passAfterH1.svg"
+    },
+    pfh2: {
+      fail: "failAfterH2.svg",
+      pass: "passAfterH2.svg"
+    },
+    pfh3: {
+      fail: "failAfterH3.svg",
+      pass: "passAfterH3.svg"
+    },
+    pfh4: {
+      fail: "failAfterH4.svg",
+      pass: "passAfterH4.svg"
+    }
+  };
+  const items = document.querySelectorAll(".data p[id]");
+  items.forEach(p => {
+    p.addEventListener("mouseover", () => {
+      const rule = hoverRules[p.id];
+      if (!rule) return;
+  
+      failImage.src = `images/${rule.fail}`;
+      passImage.src = `images/${rule.pass}`;
     });
   });
   
