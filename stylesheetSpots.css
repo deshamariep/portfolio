@@ -317,8 +317,10 @@
         margin-right: 170px;
     }
     .calloutSpots{
-        border: 1px solid rgb(231,221,211);
+        border: 2px solid rgb(231,221,211);
         background-color: rgb(252,251,249);
+        border-radius: 20px;
+        padding: 24px;
     }
     #hmw{
         background: rgb(246, 246, 247);

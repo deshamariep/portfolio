@@ -197,7 +197,7 @@
         align-items: center;
         justify-content: center;
     }
-    .diagramData p{
+    #diagramDataImg p{
         margin: 0px;
     }
     .diagramData div{

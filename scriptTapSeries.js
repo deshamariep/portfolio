@@ -150,7 +150,7 @@
       pass: "passAfterH4.svg"
     }
   };
-  const items = document.querySelectorAll(".data p[id]");
+  const items = document.querySelectorAll(".diagramData p[id]");
   items.forEach(p => {
     p.addEventListener("mouseover", () => {
       const rule = hoverRules[p.id];
@@ -159,6 +159,10 @@
       failImage.src = `images/${rule.fail}`;
       passImage.src = `images/${rule.pass}`;
     });
+  });
+  p.addEventListener("mouseout", () => {
+    failImage.src = "images/failAfter.svg";
+    passImage.src = "images/passAfter.svg";
   });
   
 }());
