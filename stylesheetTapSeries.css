@@ -234,30 +234,32 @@
         margin-right: 170px;
     }
     #leftcsLink{
-        padding: 16px 24px;
-        width: 500px;
+        padding: 16px;
+        background-color: rgb(253,253,253);
+        border: 1px solid rgb(237,237,240);
+        border-radius: 20px;
     }
-    #leftcsLink h2{
+    #leftcsLink h1{
         margin-top: 0px;
         margin-bottom: 0px;
     }
     #leftcsLink:hover{
+        background-color: rgb(50, 50, 50, 0.1);
+        border: 1px solid rgb(50, 50, 50);
+    }
+    #rightcsLink{
+        padding: 16px;
         background-color: rgb(253,253,253);
         border: 1px solid rgb(237,237,240);
         border-radius: 20px;
     }
-    #rightcsLink{
-        padding: 16px 24px;
-        width: 500px;
-    }
-    #rightcsLink h2{
+    #rightcsLink h1{
         margin-top: 0px;
         margin-bottom: 0px;
     }
     #rightcsLink:hover{
-        background-color: rgb(253,253,253);
-        border: 1px solid rgb(237,237,240);
-        border-radius: 20px;
+        background-color: rgb(50, 50, 50, 0.1);
+        border: 1px solid rgb(50, 50, 50);
     }
     hr{
         background-color: rgb(195, 196, 195);
