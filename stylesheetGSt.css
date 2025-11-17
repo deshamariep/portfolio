@@ -57,7 +57,13 @@
     }
     .logoIntro{
         display: flex;
-        margin: 24px 0px 100px;
+        position: absolute;
+        top: 50%;           
+        left: 50%;         
+        transform: translate(-100%, -100%);
+        width: max-content;
+        z-index: 4;
+        margin: 0;
     }
     #introLine{
         margin-top: 72px;
@@ -75,8 +81,14 @@
     #infoBox{
         display: flex;
         flex-direction: row;
-        gap: 74px;
-        margin-top: 96px;
+        gap: 270px;
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, 280%);
+        width: max-content;
+        z-index: 4;
+        margin: 0;
     }
     #infoBox div{
         flex: content;
