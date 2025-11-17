@@ -75,11 +75,11 @@
     #infoBox{
         display: flex;
         flex-direction: row;
-        gap: 270px;
+        gap: 95px;
         position: absolute;
         top: 50%; 
         left: 50%; 
-        transform: translate(-50%, 280%);
+        transform: translate(-50%, 180%);
         width: max-content;
         z-index: 4;
         margin: 0;
