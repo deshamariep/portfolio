@@ -67,7 +67,7 @@
         position: absolute;
         top: 50%;           /* halfway down the hero section */
         left: 50%;          /* center horizontally */
-        transform: translate(-50%, -50%);
+        transform: translate(-100%, -100%);
         width: max-content;
         z-index: 4;
         margin: 0;
@@ -84,11 +84,11 @@
     #infoBox{
         display: flex;
         flex-direction: row;
-        gap: 60px;
+        gap: 100px;
         position: absolute;
         top: 50%;           /* halfway down the hero section */
         left: 50%;          /* center horizontally */
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 170%);
         width: max-content;
         z-index: 4;
         margin: 0;
