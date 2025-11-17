@@ -65,8 +65,8 @@
     .logoIntro{
         display: flex;
         position: absolute;
-        top: 50%;           /* halfway down the hero section */
-        left: 50%;          /* center horizontally */
+        top: 50%;         
+        left: 50%;         
         transform: translate(-100%, -100%);
         width: max-content;
         z-index: 4;
@@ -86,8 +86,8 @@
         flex-direction: row;
         gap: 100px;
         position: absolute;
-        top: 50%;           /* halfway down the hero section */
-        left: 50%;          /* center horizontally */
+        top: 50%; 
+        left: 50%; 
         transform: translate(-50%, 170%);
         width: max-content;
         z-index: 4;
