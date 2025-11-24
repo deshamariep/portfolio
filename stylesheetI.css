@@ -1,4 +1,4 @@
-
+/* 
 @media screen and (max-width: 767px){
     html, body{
         margin: 0;
@@ -121,11 +121,27 @@
         border-radius: 20px;
         color: rgb(217, 217, 217);
     }
-}
+} */
 @media screen and (min-width: 768px) and (max-width: 1024px){
-    /* .mobile-incomplete {
+    .mobileIncomplete {
+        display: block;
+        background-color: #f8d7da;
+        color: #721c24; 
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border: 1px solid #f5c6cb;
+    }
+    .mobileIncomplete p {
+        margin: 0; 
+    }
+    main{
         display: none;
-    } */
+    }
+    footer{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {
