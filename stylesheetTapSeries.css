@@ -245,15 +245,23 @@
         margin-left: 170px; 
         margin-right: 170px;
     }
+    .dataLinks{
+        display: flex;
+        justify-content: space-between; 
+        gap: 16px;
+    }
+    .dataLinks a{
+        flex: 1;
+    }
     #leftcsLink{
         padding: 16px;
         background-color: rgb(253,253,253);
         border: 1px solid rgb(237,237,240);
         border-radius: 20px;
     }
-    #leftcsLink h1{
+    #leftcsLink h2{
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 8px;
     }
     #leftcsLink:hover{
         background-color: rgb(50, 50, 50, 0.1);
@@ -265,9 +273,9 @@
         border: 1px solid rgb(237,237,240);
         border-radius: 20px;
     }
-    #rightcsLink h1{
+    #rightcsLink h2{
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 8px;
     }
     #rightcsLink:hover{
         background-color: rgb(50, 50, 50, 0.1);
