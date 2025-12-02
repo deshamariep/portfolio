@@ -154,9 +154,6 @@
         width: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        
-        background: url("images/gradientBg.png") no-repeat center center fixed;
-        background-size: cover;
     }
     /* h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
         color: #fff;
@@ -178,9 +175,9 @@
     .hero-top{
         background-color: rgb(255, 255, 255, 0.0);
     }
-    .hero-content {
+    .hero-content {      
         position: absolute;
-        top: 56%;         
+        top: 65%; 
         text-align: center;
         width: 1392px;
         z-index: 4;
@@ -204,6 +201,8 @@
         }
     }
     #dataTitle{
+        position: absolute;   
+        left: 20%;
         margin-top: 16px;
         max-width: 780px; 
         text-align: center;
@@ -221,6 +220,7 @@
         padding: 8px;             
     }
     #dataDesktopBar{
+        margin-top: 400px;
         display: flex;
         gap: 16px;
         padding: 8px;
