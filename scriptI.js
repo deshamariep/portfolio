@@ -135,7 +135,6 @@
     
       if (!p) return;
     
-      // Reset
       p.textContent = "";
       p.style.opacity = 1;
     
@@ -144,16 +143,14 @@
         if (i < text.length) {
           p.textContent += text.charAt(i);
           i++;
-          setTimeout(type, 25); // adjust speed here
+          setTimeout(type, 25); 
         }
       }
       type();
     }
     
-    // Start typing 3s after load
     setTimeout(typeWriterParagraph, 6000);
     
-    // Repeat every 30 sec (matching your H2 cycle)
     setInterval(typeWriterParagraph, 30000);
   });
   
