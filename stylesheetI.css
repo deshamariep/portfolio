@@ -155,6 +155,9 @@
         min-height: 100vh;
         overflow-x: hidden;
     }
+    h1{
+        font-size: 64px;
+    }
     /* h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
         color: #fff;
         text-decoration: none;
@@ -176,15 +179,13 @@
         background-color: rgb(255, 255, 255, 0.0);
     }
     .hero-content {      
-        position: absolute;
-        top: 65%; 
         text-align: center;
         width: 1392px;
         z-index: 4;
-        margin: auto;
+        margin: 200px auto;
     }
     .dataHero{
-        margin: 0px auto 64px;
+        margin: auto;
         justify-content: space-between;
     
         opacity: 0;
@@ -201,8 +202,7 @@
         }
     }
     #dataTitle{
-        position: absolute;   
-        left: 20%;
+        margin: auto;
         margin-top: 16px;
         max-width: 780px; 
         text-align: center;
@@ -220,7 +220,7 @@
         padding: 8px;             
     }
     #dataDesktopBar{
-        margin-top: 400px;
+        margin-top: 300px;
         display: flex;
         gap: 16px;
         padding: 8px;
