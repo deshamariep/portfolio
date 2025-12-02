@@ -151,7 +151,7 @@
     }
     
     // Start typing 3s after load
-    setTimeout(typeWriterParagraph, 3000);
+    setTimeout(typeWriterParagraph, 6000);
     
     // Repeat every 30 sec (matching your H2 cycle)
     setInterval(typeWriterParagraph, 30000);

@@ -187,6 +187,7 @@
     }
     .dataHero{
         margin: auto;
+        height: 290px;
         justify-content: space-between;
     
         opacity: 0;
