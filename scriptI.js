@@ -139,19 +139,21 @@
       p.style.opacity = 1;
     
       let i = 0;
+    
       function type() {
         if (i < text.length) {
           p.textContent += text.charAt(i);
           i++;
-          setTimeout(type, 25); 
+          setTimeout(type, 25);
         }
       }
-      type();
+    
+      setTimeout(type, 1000); 
     }
     
     setTimeout(typeWriterParagraph, 6000);
     
-    setInterval(typeWriterParagraph, 30000);
+    setInterval(typeWriterParagraph, 32000);
   });
   
 
