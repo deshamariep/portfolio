@@ -98,7 +98,7 @@
         observer.unobserve(entry.target); // run once per element
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05 });
 
   caseImgs.forEach(el => {
     observer.observe(el);
