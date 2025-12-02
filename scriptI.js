@@ -140,20 +140,21 @@
     
       let i = 0;
     
-      function type() {
-        if (i < text.length) {
-          p.textContent += text.charAt(i);
-          i++;
-          setTimeout(type, 25);
+      setTimeout(() => {
+        function type() {
+          if (i < text.length) {
+            p.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, 25);
+          }
         }
-      }
-    
-      setTimeout(type, 1000); 
+        type();
+      }, 6000);
     }
     
-    setTimeout(typeWriterParagraph, 6000);
+    typeWriterParagraph();
     
-    setInterval(typeWriterParagraph, 32000);
+    setInterval(typeWriterParagraph, 30000);
   });
   
 
