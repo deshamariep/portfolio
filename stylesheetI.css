@@ -291,10 +291,31 @@
         pointer-events: none;
         transition: opacity 0.2s ease, transform 0.2s ease;
     }
-    /* Label appears ONLY when image is hovered */
     .dock-item img:hover + .dock-label {
         opacity: 1;
         transform: translateY(0);
+    }
+    #textAnimation {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    .scroll-wrap {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scrollAnim 25s linear infinite;
+    }
+    #textAnimation img {
+        height: 101px;
+        width: auto;
+    }
+    @keyframes scrollAnim {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-3485px); 
+        }
     }
     #dataTitle h1{
         font-weight: 400;
