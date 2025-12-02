@@ -98,10 +98,36 @@
         observer.unobserve(entry.target); // run once per element
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.1 });
 
   caseImgs.forEach(el => {
     observer.observe(el);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const h2 = document.querySelector("#dataTitle h2");
+  
+    function runSequence() {
+      h2.textContent = "DAY-sha";
+      h2.style.opacity = 0;
+  
+      setTimeout(() => {
+        h2.style.opacity = 1;
+      }, 3000);
+  
+      setTimeout(() => {
+        h2.style.opacity = 0;
+      }, 5000);
+  
+      setTimeout(() => {
+        h2.textContent = "translating between design and development";
+        h2.style.opacity = 1;
+      }, 5600);
+    }
+  
+    runSequence();
+  
+    setInterval(runSequence, 30000);
   });
 
 }());

@@ -157,6 +157,7 @@
     }
     h1{
         font-size: 64px;
+        letter-spacing: 0.03em;
     }
     /* h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
         color: #fff;
@@ -206,6 +207,10 @@
         margin-top: 16px;
         max-width: 780px; 
         text-align: center;
+    }
+    #dataTitle h2 {
+        opacity: 0;
+        transition: opacity 0.6s ease;
     }
     .italic{
         font-style: italic;
