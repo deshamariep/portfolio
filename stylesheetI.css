@@ -158,10 +158,10 @@
         background: url("images/gradientBg.png") no-repeat center center fixed;
         background-size: cover;
     }
-    h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
+    /* h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
         color: #fff;
         text-decoration: none;
-    }
+    } */
     .hero-video {
         position: absolute;
         top: 0;
