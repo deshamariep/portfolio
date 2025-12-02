@@ -182,7 +182,7 @@
         text-align: center;
         width: 1392px;
         z-index: 4;
-        margin: 200px auto;
+        margin: 175px auto;
     }
     .dataHero{
         margin: auto;
@@ -311,8 +311,8 @@
         line-height: 160%;
     }
     #query{
-        width: 1392px;
-        margin: 72px 0px;
+        width: 1100px;
+        margin: 96px auto;
     }
     .data{
         display: flex;
@@ -350,8 +350,8 @@
     .csText{
         padding: 24px 8px 8px;
     }
-    .csText .csHeader h3, .csText .csHeader .csSubText, .csText .csHeader .csTag {
-        margin: 0;
+    .csText h2, .csText p {
+        margin: 8;
     }
     .csSubText{
         color: rgb(48, 48, 66, 0.8);
