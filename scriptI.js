@@ -120,7 +120,7 @@
       }, 5000);
   
       setTimeout(() => {
-        h2.textContent = "translating between design and development";
+        h2.textContent = "TRANSLATING BETWEEN DESIGN AND DEVELOPMENT";
         h2.style.opacity = 1;
       }, 5600);
     }
@@ -128,6 +128,34 @@
     runSequence();
   
     setInterval(runSequence, 30000);
+
+    function typeWriterParagraph() {
+      const p = document.querySelector("#dataTitle p");
+      const text = "Previously UX Design @ BRIDGEGOOD | Executive Assistant (Production) @ TAP Series";
+    
+      if (!p) return;
+    
+      // Reset
+      p.textContent = "";
+      p.style.opacity = 1;
+    
+      let i = 0;
+      function type() {
+        if (i < text.length) {
+          p.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, 25); // adjust speed here
+        }
+      }
+      type();
+    }
+    
+    // Start typing 3s after load
+    setTimeout(typeWriterParagraph, 3000);
+    
+    // Repeat every 30 sec (matching your H2 cycle)
+    setInterval(typeWriterParagraph, 30000);
   });
+  
 
 }());
