@@ -408,23 +408,26 @@
         display: block;
         border-top: 1px solid rgb(0, 0, 0, 0.8);
         border-bottom: 1px solid rgb(0, 0, 0, 0.8);
-        padding: 24px 70px 24px 0px;
+        padding: 24px 0px 24px 70px;
     }
     .experiment{
         margin: 8px 0px;
     }
     #spots, #ume{
+        margin: 4px 0px;
         color: rgb(48, 48, 66, 0.6);
     }
     #spots:hover, #ume:hover{
         color: rgb(48, 48, 66);
     }
     .exp-video {
-        width: 60%;       /* or any value you want */
-        height: auto;      /* keeps proper aspect ratio */
-        max-width: 650px;  /* optional limit */
-        border-radius: 12px; /* optional styling */
-        object-fit: cover; /* if you want it to fill the box cleanly */
+        width: 60%;      
+        height: auto;     
+        max-width: 650px;  
+        border-radius: 12px; 
+        object-fit: cover; 
+        align-items: center;
+        justify-content: center;
     }
     #comingSoon {
         position: relative;
