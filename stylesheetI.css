@@ -398,6 +398,18 @@
         border-radius: 20px;
         color: rgb(48, 48, 66);
     }
+    #spots h2, #spots p{
+        color: rgb(48, 48, 66, 0.6);
+    }
+    #spots h2:hover, #spots p:hover{
+        color: rgb(48, 48, 66);
+    }
+    #ume h2, #ume p{
+        color: rgb(48, 48, 66, 0.6);
+    }
+    #ume h2:hover, #ume p:hover{
+        color: rgb(48, 48, 66);
+    }
     #comingSoon {
         position: relative;
         overflow: hidden;

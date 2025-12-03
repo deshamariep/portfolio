@@ -157,5 +157,26 @@
     setInterval(typeWriterParagraph, 30000);
   });
   
+  const video = document.getElementById("expVideo");
+  const source = document.getElementById("expVideoSource");
+  const previews = {
+    spots: "images/spotsAnimation.mp4",
+    ume: "images/umeAnimation.mp4"
+  };
+  function playPreview(videoFile) {
+    source.src = videoFile;
+    video.load();
+    video.play();
+  }
+  document.getElementById("spots").addEventListener("mouseenter", () => {
+    playPreview(previews.spots);
+  });
+  document.getElementById("ume").addEventListener("mouseenter", () => {
+    playPreview(previews.ume);
+  });
+  document.getElementById("experiments").addEventListener("mouseleave", () => {
+    source.src = "";
+    video.load();
+  });
 
 }());
