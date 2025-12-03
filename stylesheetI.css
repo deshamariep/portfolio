@@ -299,7 +299,7 @@
         width: 100%;
         overflow: hidden;
         position: relative;
-        margin: 16px;
+        margin: 0px;
     }
     .scroll-wrap {
         display: inline-block;
@@ -339,7 +339,7 @@
         line-height: 160%;
     }
     #query{
-        margin: 48px auto 96px;
+        margin: 48px -24px 96px;
     }
     #caseStudies{
         width: 1100px;
