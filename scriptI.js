@@ -12,7 +12,7 @@
             if (!snapped && window.scrollY > 16) {
                 snapped = true;
                 window.scrollTo({
-                top: 811,
+                top: 824,
                 behavior: "smooth"
                 });
             }
