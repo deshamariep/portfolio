@@ -339,10 +339,11 @@
         line-height: 160%;
     }
     #query{
-        margin: 96px auto;
+        margin: 48px auto 96px;
     }
     #caseStudies{
         width: 1100px;
+        margin: auto;
     }
     .data{
         display: flex;
