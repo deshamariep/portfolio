@@ -418,6 +418,13 @@
     #spots:hover, #ume:hover{
         color: rgb(48, 48, 66);
     }
+    .exp-video {
+        width: 70%;       /* or any value you want */
+        height: auto;      /* keeps proper aspect ratio */
+        max-width: 650px;  /* optional limit */
+        border-radius: 12px; /* optional styling */
+        object-fit: cover; /* if you want it to fill the box cleanly */
+    }
     #comingSoon {
         position: relative;
         overflow: hidden;
