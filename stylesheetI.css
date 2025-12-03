@@ -406,18 +406,25 @@
     }
     #exp{
         display: block;
-        border-top: 1px solid rgb(0, 0, 0, 0.8);
-        border-bottom: 1px solid rgb(0, 0, 0, 0.8);
+        border-top: 1px solid rgb(0, 0, 0, 0.4);
+        border-bottom: 1px solid rgb(0, 0, 0, 0.4);
         padding: 24px 0px 24px 170px;
     }
     .experiment{
         margin: 8px 0px;
     }
-    #spots, #ume{
-        margin: 4px 0px;
-        color: rgb(48, 48, 66, 0.6);
+    .exp-item {
+        color: rgba(48, 48, 66, 0.6);
     }
-    #spots:hover, #ume:hover{
+    .exp-item a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .exp-item:hover {
+        color: rgb(48, 48, 66);
+    }
+    .exp-item:hover h2,
+    .exp-item:hover p {
         color: rgb(48, 48, 66);
     }
     .exp-video {
@@ -426,7 +433,8 @@
         max-width: 650px;  
         border-radius: 12px; 
         object-fit: cover; 
-        margin: auto;
+        display: block;
+        margin: 0px auto;
     }
     #comingSoon {
         position: relative;
