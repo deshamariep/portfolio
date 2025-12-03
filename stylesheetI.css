@@ -408,7 +408,7 @@
         display: block;
         border-top: 1px solid rgb(0, 0, 0, 0.8);
         border-bottom: 1px solid rgb(0, 0, 0, 0.8);
-        padding: 24px 0px 24px 70px;
+        padding: 24px 0px 24px 170px;
     }
     .experiment{
         margin: 8px 0px;
@@ -426,8 +426,7 @@
         max-width: 650px;  
         border-radius: 12px; 
         object-fit: cover; 
-        align-items: center;
-        justify-content: center;
+        margin: auto;
     }
     #comingSoon {
         position: relative;
