@@ -299,7 +299,7 @@
         width: 100%;
         overflow: hidden;
         position: relative;
-        margin: 0px;
+        margin: 0px 0px 24px;
     }
     .scroll-wrap {
         display: inline-block;
@@ -339,7 +339,7 @@
         line-height: 160%;
     }
     #query{
-        margin: 80px -24px 96px;
+        margin: 16px -24px 96px;
     }
     #caseStudies{
         width: 1100px;
@@ -398,16 +398,24 @@
         border-radius: 20px;
         color: rgb(48, 48, 66);
     }
-    #spots h2, #spots p{
+    #experiments{
+        display: flex;
+    }
+    #experiments div{
+        flex: 1;
+    }
+    #exp{
+        display: block;
+        border-top: 1px solid rgb(0, 0, 0, 0.8);
+        border-bottom: 1px solid rgb(0, 0, 0, 0.8);
+    }
+    .experiment{
+        margin-bottom: 8px;
+    }
+    #spots, #ume{
         color: rgb(48, 48, 66, 0.6);
     }
-    #spots h2:hover, #spots p:hover{
-        color: rgb(48, 48, 66);
-    }
-    #ume h2, #ume p{
-        color: rgb(48, 48, 66, 0.6);
-    }
-    #ume h2:hover, #ume p:hover{
+    #spots:hover, #ume:hover{
         color: rgb(48, 48, 66);
     }
     #comingSoon {

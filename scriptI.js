@@ -1,7 +1,22 @@
 (function(){
   'use strict';
 
-  let snapped = false; document.addEventListener("scroll", function () { if (window.scrollY === 0) { snapped = false; } if (!snapped && window.scrollY > 16) { snapped = true; const targetSection = document.querySelector("#query"); if (targetSection) { window.scrollTo({ top: targetSection.offsetTop, behavior: "smooth" }); } } });
+  let snapped = false;
+        document.addEventListener("scroll", function () {
+            // if user is at the very top, reset snapped
+            if (window.scrollY === 0) {
+                snapped = false;
+            }
+  
+            // only snap if user starts at top and scrolls past 8px
+            if (!snapped && window.scrollY > 16) {
+                snapped = true;
+                window.scrollTo({
+                top: 811,
+                behavior: "smooth"
+                });
+            }
+        });
 
 
   document.addEventListener("DOMContentLoaded", () => {
