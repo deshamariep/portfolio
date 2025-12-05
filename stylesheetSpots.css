@@ -108,7 +108,7 @@
         margin: 0px;
     }
     #query{
-        width: 100%;
+        width: 1392px;
         margin: 0 auto; 
     }
     .spaceBtwn{
@@ -325,8 +325,8 @@
         margin: 0 auto;
     }
     .newMargin{
-        margin-left: 170px; 
-        margin-right: 170px;
+        width: 1100px;
+        margin: auto;
     }
     .calloutSpots{
         border: 2px solid rgb(227, 183, 139);

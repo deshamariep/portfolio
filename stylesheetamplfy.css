@@ -113,7 +113,7 @@
         margin-top: 0px;
     }
     #query{
-        width: 100%;
+        width: 1392px;
         margin: 0 auto; 
     }
     .spaceBtwn{
@@ -180,8 +180,8 @@
         padding-right: 88px; */
     }
     .newMargin{
-        margin-left: 170px; 
-        margin-right: 170px;
+        width: 1100px;
+        margin: auto;
     }
     #hmw{
         background: rgb(246, 246, 247);
