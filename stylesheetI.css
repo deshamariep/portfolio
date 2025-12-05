@@ -372,8 +372,10 @@
     }
     .csImg {
         display: block;
-        width: 100%;
+        width: 1100px;        
+        max-width: 100%;     
         height: auto;
+        margin: 0 auto;
         transition: transform 0.5s ease; 
         transform-origin: center center; 
     }
