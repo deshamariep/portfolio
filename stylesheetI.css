@@ -183,6 +183,7 @@
         text-align: center;
         z-index: 4;
         margin: 175px auto;
+        margin-left: -24px;
     }
     .dataHero{
         margin: auto;
@@ -251,7 +252,7 @@
         display: none;
         width: 100%;
         text-align: center;
-        margin-top: 210px;
+        margin-top: 220px;
     }
     #desktopArrow img {
         width: 60px;
