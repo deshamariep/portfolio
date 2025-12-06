@@ -61,7 +61,6 @@
         color: rgb(48, 48, 66);
     } 
     .hero-content{
-        top: 45%;
         max-width: 1392px;
         z-index: 4;
         margin: 24px;
@@ -76,7 +75,7 @@
         width: 500px;
     }
     #infoBox{
-        margin-top: 32px;
+        margin-top: 24px;
     }
     #infoBox div{
         margin-top: 16px;
