@@ -63,6 +63,7 @@
     .logoIntro{
         display: flex; 
         width: max-content;
+        z-index: 4;
         height: 221px;
         margin-top: 150px;
     }
