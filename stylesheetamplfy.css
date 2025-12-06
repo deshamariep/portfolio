@@ -67,7 +67,7 @@
     }
     #logotx h1, #logotx p{
         margin: 0px;
-        width: 500px;
+        width: 325px;
     }
     #infoBox{
         margin-top: 24px;
@@ -252,5 +252,11 @@
     #rightcsLink:hover{
         background-color: rgb(50, 50, 50, 0.1);
         border: 1px solid rgb(50, 50, 50);
+    }
+}
+@media screen and (min-width: 1650px){
+    #logotx h1, #logotx p{
+        margin: 0px;
+        width: 500px;
     }
 }

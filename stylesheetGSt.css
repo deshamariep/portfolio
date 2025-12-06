@@ -60,7 +60,7 @@
     }
     #logotx h1, #logotx p{
         margin: 0px;
-        width: 500px;
+        width: 325px;
     }
     #infoBox h3, #infoBox p{
         margin: 0px;
@@ -384,26 +384,8 @@
     }
 }
 @media screen and (min-width: 1650px){
-    body{
-        background-image: url(images/gstInfoBG.png);
-        background-size: 100% 850px;
-        background-position: center top; 
-        background-repeat: no-repeat;
-    }
-    #topBG{
-        margin-top: 10px;
-        margin-bottom: 110px;
-    }
-}
-@media screen and (min-width: 1850px){
-    body{
-        background-image: url(images/gstInfoBG.png);
-        background-size: 100% 950px;
-        background-position: center top; 
-        background-repeat: no-repeat;
-    }
-    #topBG{
-        margin-top: 50px;
-        margin-bottom: 125px;
+    #logotx h1, #logotx p{
+        margin: 0px;
+        width: 500px;
     }
 }

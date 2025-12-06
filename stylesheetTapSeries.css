@@ -72,7 +72,7 @@
     }
     #logotx h1, #logotx p{
         margin: 0px;
-        width: 500px;
+        width: 325px;
     }
     #infoBox{
         margin-top: 24px;
@@ -262,28 +262,10 @@
         height: 1px;
         margin: 24px 0;
     }
-}   
-/* @media screen and (min-width: 1650px){
-    body{
-        background-image: url(images/umeInfoBG.png);
-        background-size: 100% 850px;
-        background-position: center top; 
-        background-repeat: no-repeat;
+}
+@media screen and (min-width: 1650px){
+    #logotx h1, #logotx p{
+        margin: 0px;
+        width: 500px;
     }
-    #topBG{
-        margin-top: 10px;
-        margin-bottom: 110px;
-    }
-} */
-/* @media screen and (min-width: 1850px){
-    body{
-        background-image: url(images/umeInfoBG.png);
-        background-size: 100% 950px;
-        background-position: center top; 
-        background-repeat: no-repeat;
-    }
-    #topBG{
-        margin-top: 50px;
-        margin-bottom: 150px;
-    }
-} */
+}
