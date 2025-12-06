@@ -42,50 +42,20 @@
         background-position: 0px top;
         background-repeat: no-repeat; */
     }
-    .hero-content {
-        top: 55%;
-        left: 0px;/* align to page gutter */
+    .hero-content{
+        top: 45%;
         max-width: 1392px;
         z-index: 4;
         margin: 24px;
     }
     .logoIntro{
-        display: flex;
-        position: absolute;
-        top: 50%;           
-        left: 50%;         
-        transform: translate(-100%, -100%);
+        display: flex; 
         width: max-content;
         z-index: 4;
-        margin: 0;
-    }
-    #introLine{
-        margin-top: 145px;
-        margin-bottom: 65px;
-    }
-    #logoimg{
-        justify-items: center;
-        align-content: center;
-        margin-right: 16px;
     }
     #logotx h1, #logotx p{
         margin: 0px;
         width: 700px;
-    }
-    #infoBox{
-        display: flex;
-        flex-direction: row;
-        gap: 95px;
-        position: absolute;
-        top: 50%; 
-        left: 50%; 
-        transform: translate(-50%, 180%);
-        width: max-content;
-        z-index: 4;
-        margin: 0;
-    }
-    #infoBox div{
-        flex: content;
     }
     #infoBox h3, #infoBox p{
         margin: 0px;
