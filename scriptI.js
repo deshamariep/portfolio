@@ -135,7 +135,7 @@
       }, 5000);
   
       setTimeout(() => {
-        h2.textContent = "TRANSLATING BETWEEN DESIGN AND DEVELOPMENT";
+        h2.textContent = "a UI/UX Designer passionate about simplifying workflows, bridging communication, and creating engaging, user-first designs.";
         h2.style.opacity = 1;
       }, 5600);
     }
@@ -193,5 +193,19 @@
     source.src = "";
     video.load();
   });
+
+  setTimeout(() => {
+    const logos = document.querySelectorAll('#dataDesktopBar .dock-item img');
+
+    logos.forEach(img => {
+        img.style.transition = "opacity 0.5s ease"; 
+        img.style.opacity = 0;
+
+        setTimeout(() => {
+            img.src = "images/workDownArrow.svg";  
+            img.style.opacity = 1;
+        }, 500); 
+    });
+  }, 7000); 
 
 }());
