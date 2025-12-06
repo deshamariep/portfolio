@@ -195,17 +195,22 @@
   });
 
   setTimeout(() => {
-    const logos = document.querySelectorAll('#dataDesktopBar .dock-item img');
+    const desktop = document.getElementById("desktop");
+    const arrow = document.getElementById("desktopArrow");
+    const arrowImg = arrow.querySelector("img");
 
-    logos.forEach(img => {
-        img.style.transition = "opacity 0.5s ease"; 
-        img.style.opacity = 0;
+    desktop.style.transition = "opacity 0.5s ease";
+    desktop.style.opacity = 0;
+
+    setTimeout(() => {
+        desktop.style.display = "none";
+        arrow.style.display = "block";
 
         setTimeout(() => {
-            img.src = "images/workDownArrow.svg";  
-            img.style.opacity = 1;
-        }, 500); 
-    });
-  }, 7000); 
+            arrowImg.style.opacity = 1;
+        }, 50);
+
+    }, 500); 
+  }, 7000);
 
 }());
