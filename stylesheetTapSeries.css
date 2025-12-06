@@ -45,6 +45,7 @@
     }
     .hero-content h4{
         font-style: normal;
+        color: white;
     }
     .hero h1, #logotx p, #infoBox h3, #infoBox .smolP, #infoBox p, .hero-top #one a{
         color: #fff;
