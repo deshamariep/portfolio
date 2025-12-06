@@ -43,6 +43,9 @@
         background-position: 0px top; 
         background-repeat: no-repeat; */
     }
+    .hero-content h4{
+        font-style: normal;
+    }
     .hero h1, #logotx p, #infoBox h3, #infoBox .smolP, #infoBox p, .hero-top #one a{
         color: #fff;
         text-decoration: none;
@@ -70,7 +73,7 @@
         width: max-content;
         z-index: 4;
         height: 221px;
-        
+        padding-top: 150px;
     }
     #logotx h1, #logotx p{
         margin: 0px;

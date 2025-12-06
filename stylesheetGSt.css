@@ -43,6 +43,9 @@
         background-position: 0px top;  
         background-repeat: no-repeat; */
     }
+    .hero-content h4{
+        font-style: normal;
+    }
     .hero-top {
         background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(10px); 
@@ -58,7 +61,7 @@
         width: max-content;
         z-index: 4;
         height: 221px;
-        margin-top: 150px;
+        padding-top: 150px;
     }
     #logotx h1, #logotx p{
         margin: 0px;

@@ -42,6 +42,9 @@
         background-position: 0px top;
         background-repeat: no-repeat; */
     }
+    .hero-content h4{
+        font-style: normal;
+    }
     .hero-content{
         max-width: 1392px;
         z-index: 4;
@@ -52,7 +55,7 @@
         width: max-content;
         z-index: 4;
         height: 221px;
-        margin-top: 150px;
+        padding-top: 150px;
     }
     #logotx h1, #logotx p{
         margin: 0px;
