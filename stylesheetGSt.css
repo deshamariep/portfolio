@@ -61,10 +61,16 @@
     }
     #logotx h1, #logotx p{
         margin: 0px;
-        width: 700px;
+        width: 500px;
     }
     #infoBox h3, #infoBox p{
         margin: 0px;
+    }
+    #infoBox{
+        margin-top: 32px;
+    }
+    #infoBox div{
+        margin-top: 16px;
     }
     main{
         margin: 0px 24px;
