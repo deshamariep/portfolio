@@ -434,7 +434,7 @@
     }
     #exp{
         display: block;
-        padding: 24px 0px 24px 170px;
+        padding: auto 0px auto 24px;
     }
     .experiment{
         margin: 8px 0px;
@@ -464,9 +464,12 @@
         object-fit: cover; 
         display: block;
         margin: auto;
+        justify-content: center;
+        align-items: center;
     }
     #fillTime{
         flex: 1.2;
+        margin-left: 24px;
     }
     #headShot{
         flex: 1;
