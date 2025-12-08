@@ -213,4 +213,22 @@
     }, 500); 
   }, 8000);
 
+  function updateGreeting() {
+    const now = new Date();
+    const hours = now.getHours();
+    const greetingElement = document.getElementById('greeting');
+
+    let greetingText = "Good morning, I'm Desha Poindexter!";
+
+    if (hours >= 12 && hours < 18) {
+        greetingText = "Good afternoon, I'm Desha Poindexter!";
+    } else if (hours >= 18) {
+        greetingText = "Good evening, I'm Desha Poindexter!";
+    }
+
+    greetingElement.textContent = greetingText;
+  }
+  // Call the function on page load
+  updateGreeting();
+
 }());
