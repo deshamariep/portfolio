@@ -252,7 +252,7 @@
         display: none;
         width: 100%;
         text-align: center;
-        margin-top: 220px;
+        margin-top: 215px;
     }
     #desktopArrow img {
         width: 60px;
@@ -426,7 +426,7 @@
     #experiments{
         display: flex;
         background-color: rgb(0, 0, 0, 0.9);
-        height: 300px;
+        height: 500px;
     }
     #experiments div{
         flex: 1;
@@ -462,7 +462,7 @@
         border-radius: 12px; 
         object-fit: cover; 
         display: block;
-        margin: 0px auto;
+        margin: auto;
     }
     #comingSoon {
         position: relative;
