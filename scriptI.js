@@ -146,7 +146,7 @@
 
     function typeWriterParagraph() {
       const p = document.querySelector("#dataTitle p");
-      const text = "Previously UX Design @ BRIDGEGOOD | Executive Assistant (Production) @ TAP Series";
+      const text = "Previously UX Design @ BRIDGEGOOD | UX Production Assistant @ TAP Series";
     
       if (!p) return;
     
@@ -211,19 +211,19 @@
         }, 50);
 
     }, 500); 
-  }, 8000);
+  }, 9000);
 
   function updateGreeting() {
     const now = new Date();
     const hours = now.getHours();
     const greetingElement = document.getElementById('greeting');
 
-    let greetingText = "Good morning, I'm Desha Poindexter!";
+    let greetingText = "Good morning, heres more on me";
 
     if (hours >= 12 && hours < 18) {
-        greetingText = "Good afternoon, I'm Desha Poindexter!";
+        greetingText = "Good afternoon, heres more on me";
     } else if (hours >= 18) {
-        greetingText = "Good evening, I'm Desha Poindexter!";
+        greetingText = "Good evening, heres more on me";
     }
 
     greetingElement.textContent = greetingText;
