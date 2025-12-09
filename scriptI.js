@@ -218,12 +218,12 @@
     const hours = now.getHours();
     const greetingElement = document.getElementById('greeting');
 
-    let greetingText = "Good morning, heres more on me";
+    let greetingText = "Good morning, heres more on me...";
 
     if (hours >= 12 && hours < 18) {
-        greetingText = "Good afternoon, heres more on me";
+        greetingText = "Good afternoon, heres more on me...";
     } else if (hours >= 18) {
-        greetingText = "Good evening, heres more on me";
+        greetingText = "Good evening, heres more on me...";
     }
 
     greetingElement.textContent = greetingText;
