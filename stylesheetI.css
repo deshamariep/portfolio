@@ -440,6 +440,9 @@
         display: block;
         margin: 32px auto auto 24px;
     }
+    #exp #spots{
+        margin: 40px 0px 32px;
+    }
     #exp h2{
         color: rgb(255, 255, 255);
     }
@@ -448,9 +451,6 @@
     }
     .exp-item{
         margin: 16px 0px;
-    }
-    .exp-item #spots{
-        margin-bottom: 32px;
     }
     .exp-item h3, .exp-item p{
         color: rgb(255, 255, 255, 0.7);
@@ -470,7 +470,7 @@
         margin: auto;
     }
     .exp-video {
-        width: 90%;      
+        width: 100%;      
         height: auto;     
         max-width: 650px;  
         border-radius: 12px; 
