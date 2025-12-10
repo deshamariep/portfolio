@@ -102,7 +102,7 @@
     }
     #home:hover,
     #aboutMe:hover,
-    #studio:hover {
+    #resume:hover {
         text-decoration: underline;
     }
     #footerDataP{
@@ -242,7 +242,7 @@
     }
     #home:hover,
     #aboutMe:hover,
-    #studio:hover {
+    #resume:hover {
         text-decoration: underline;
     }
     #footerDataP{
