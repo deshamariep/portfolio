@@ -148,6 +148,9 @@
     .mobileIncomplete {
         display: none; /* Hide the message on larger screens */
     }
+    html {
+        scroll-behavior: smooth;
+    }
     body{
         margin: 0;
         padding: 0;
@@ -325,7 +328,7 @@
         margin: 0px 0px 24px;
     }
     .scroll-wrap {
-        display: inline-block;
+        display: inline-flex; 
         white-space: nowrap;
         animation: scrollAnim 25s linear infinite;
     }
@@ -338,7 +341,7 @@
           transform: translateX(0);
         }
         100% {
-          transform: translateX(-3485px); 
+          transform: translateX(-50%); 
         }
     }
     #dataTitle h1{
@@ -426,7 +429,7 @@
     #experiments{
         display: flex;
         background-color: rgb(0, 0, 0, 0.9);
-        height: 500px;
+        height: 700px;
         margin: 64px 0px;
     }
     #experiments div{
@@ -442,6 +445,9 @@
     }
     .exp-item{
         margin: 16px 0px;
+    }
+    .exp-item #spots{
+        margin-bottom: 32px;
     }
     .exp-item h2, .exp-item p{
         color: rgb(255, 255, 255, 0.7);
@@ -464,7 +470,7 @@
         border-radius: 12px; 
         object-fit: cover; 
         display: block;
-        margin: 167px auto;
+        margin: auto;
     }
     #fillTime{
         flex: 1.2;

@@ -55,31 +55,25 @@
     const y = window.scrollY;
     const delta = y - lastY;
 
-    // Enter sticky mode when user has scrolled beyond enterAfter
     if (!stickyActive && y > enterAfter) {
       heroTop.classList.add('sticky');
-      // reserve top space to avoid content jump
       document.body.style.paddingTop = `${headerH}px`;
       stickyActive = true;
-      heroTop.classList.remove('visible'); // keep hidden until reveal
+      heroTop.classList.remove('visible'); 
     }
 
     if (stickyActive) {
       if (delta < -revealDelta) {
-        // significant upward scroll -> reveal header
         heroTop.classList.add('visible');
       } else if (delta > hideDelta) {
-        // downward scroll -> hide header
         heroTop.classList.remove('visible');
       }
-      // if scrolled back to very top, remove sticky mode and restore layout
       if (y <= 0) {
         heroTop.classList.remove('sticky', 'visible');
         document.body.style.paddingTop = '';
         stickyActive = false;
       }
     } else {
-      // keep hero-top as-is while not in sticky mode
       heroTop.classList.remove('visible');
     }
 
@@ -105,12 +99,13 @@
     document.querySelector(".dataHero").classList.add("loaded");
     document.querySelector("#dataDesktopBar").classList.add("loaded");
   });
+  
   const caseImgs = document.querySelectorAll('.dataCaseImg, .dataCS');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // run once per element
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.05 });
@@ -121,6 +116,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const h2 = document.querySelector("#dataTitle h2");
+    let animationCount = 0;
   
     function runSequence() {
       h2.textContent = "DAY-sha";
@@ -138,11 +134,39 @@
         h2.textContent = "a UI/UX Designer passionate about simplifying workflows, bridging communication, and creating engaging, user-first designs.";
         h2.style.opacity = 1;
       }, 5600);
+
+      animationCount++;
+      
+      if (animationCount >= 2) {
+        setTimeout(() => {
+          resetHero();
+        }, 30000); 
+      }
+    }
+
+    function resetHero() {
+      h2.textContent = "DAY-sha";
+      h2.style.opacity = 0;
+      
+      const p = document.querySelector("#dataTitle p");
+      if (p) {
+        p.textContent = "";
+        p.style.opacity = 0;
+      }
+
+      animationCount = 0;
+
+      setTimeout(() => {
+        runSequence();
+        typeWriterParagraph();
+      }, 1000);
     }
   
     runSequence();
   
-    setInterval(runSequence, 30000);
+    setTimeout(() => {
+      runSequence();
+    }, 30000);
 
     function typeWriterParagraph() {
       const p = document.querySelector("#dataTitle p");
@@ -169,9 +193,29 @@
     
     typeWriterParagraph();
     
-    setInterval(typeWriterParagraph, 30000);
+    setTimeout(() => {
+      typeWriterParagraph();
+    }, 30000);
   });
-  
+
+  setTimeout(() => {
+    const desktop = document.getElementById("desktop");
+    const arrow = document.getElementById("desktopArrow");
+    const arrowImg = arrow.querySelector("img");
+
+    desktop.style.transition = "opacity 0.5s ease";
+    desktop.style.opacity = 0;
+
+    setTimeout(() => {
+        desktop.style.display = "none";
+        arrow.style.display = "block";
+
+        setTimeout(() => {
+            arrowImg.style.opacity = 1;
+        }, 50);
+    }, 500); 
+  }, 9000);
+
   const video = document.getElementById("expVideo");
   const source = document.getElementById("expVideoSource");
   const previews = {
@@ -193,25 +237,6 @@
     source.src = "";
     video.load();
   });
-
-  setTimeout(() => {
-    const desktop = document.getElementById("desktop");
-    const arrow = document.getElementById("desktopArrow");
-    const arrowImg = arrow.querySelector("img");
-
-    desktop.style.transition = "opacity 0.5s ease";
-    desktop.style.opacity = 0;
-
-    setTimeout(() => {
-        desktop.style.display = "none";
-        arrow.style.display = "block";
-
-        setTimeout(() => {
-            arrowImg.style.opacity = 1;
-        }, 50);
-
-    }, 500); 
-  }, 9000);
 
   function updateGreeting() {
     const now = new Date();
