@@ -5,16 +5,15 @@
     e.preventDefault();
     
     const target = document.getElementById("aboutMeSec");
-    if (!target) return;
-    
-    // Get the position of the target element
-    const targetPosition = target.offsetTop;
-    
-    // Scroll to the position with offset for header
-    window.scrollTo({
-        top: targetPosition - 64, // Adjust this number based on your header height
-        behavior: "smooth"
-    });
+    if (target) {
+        const yOffset = -64; // header offset
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        
+        window.scrollTo({
+            top: y,
+            behavior: "smooth"
+        });
+    }
   });
 
   const aboutLink = document.getElementById("aboutMe");
@@ -280,12 +279,12 @@
     const hours = now.getHours();
     const greetingElement = document.getElementById('greeting');
 
-    let greetingText = "Good morning, heres more on me...";
+    let greetingText = "Good morning, here's more on me...";
 
     if (hours >= 12 && hours < 18) {
-        greetingText = "Good afternoon, heres more on me...";
+        greetingText = "Good afternoon, here's more on me...";
     } else if (hours >= 18) {
-        greetingText = "Good evening, heres more on me...";
+        greetingText = "Good evening, here's more on me...";
     }
 
     greetingElement.textContent = greetingText;
