@@ -489,7 +489,7 @@
         flex: 1;
         display: flex;              
         justify-content: center;
-        padding-top: 24px;
+        padding-top: 32px;
     }
     #comingSoon {
         position: relative;
