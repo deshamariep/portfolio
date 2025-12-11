@@ -1,6 +1,42 @@
 (function(){
   'use strict';
 
+  document.getElementById("aboutMe").addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    const target = document.getElementById("aboutMeSec");
+    if (!target) return;
+    
+    // Get the position of the target element
+    const targetPosition = target.offsetTop;
+    
+    // Scroll to the position with offset for header
+    window.scrollTo({
+        top: targetPosition - 64, // Adjust this number based on your header height
+        behavior: "smooth"
+    });
+  });
+
+  const aboutLink = document.getElementById("aboutMe");
+  if (aboutLink) {
+    aboutLink.addEventListener("click", (e) => {
+        const isHomePage = window.location.pathname === "/" || 
+                          window.location.pathname === "/index.html" ||
+                          window.location.pathname.endsWith("deshapoindexter.com/");
+        if (isHomePage) {
+            e.preventDefault();
+            const target = document.getElementById("aboutMeSec");
+            if (target) {
+                const targetPosition = target.offsetTop;
+                window.scrollTo({
+                    top: targetPosition - 80,
+                    behavior: "smooth"
+                });
+            }
+        }
+    });
+  }
+
   let snapped = false;
         document.addEventListener("scroll", function () {
             // if user is at the very top, reset snapped
@@ -95,18 +131,6 @@
     }
   });
 
-  document.getElementById("aboutMe").addEventListener("click", (e) => {
-    e.preventDefault();
-    const target = document.getElementById("aboutMeSec");
-    const headerOffset = 64; 
-    const elementPosition = target.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-    window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-    });
-});
 
   window.addEventListener("load", () => {
     document.querySelector(".dataHero").classList.add("loaded");
