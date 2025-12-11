@@ -478,8 +478,9 @@
         display: block;
         margin: auto;
     }
-    #aboutMeSec{
+    #aboutMeSec {
         margin-bottom: 64px;
+        scroll-margin-top: 64px;
     }
     #fillTime{
         flex: 1.2;
