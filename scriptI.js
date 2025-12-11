@@ -152,10 +152,9 @@
     const h2 = document.querySelector("#dataTitle h2");
     const p = document.querySelector("#dataTitle p");
   
-    const CYCLE_DURATION = 30000; // 30s – matches your hero video length
+    const CYCLE_DURATION = 30000; 
     let timers = [];
   
-    // Clear all active timeouts
     function clearTimers() {
       timers.forEach(t => clearTimeout(t));
       timers = [];
@@ -167,7 +166,6 @@
       timers.push(t);
     }
   
-    // --- TYPEWRITER FOR PARAGRAPH ---
     function runTypewriter() {
       const text = "Previously UX Design @ BRIDGEGOOD | Production Assistant @ TAP Series";
       p.textContent = "";
@@ -178,54 +176,65 @@
         if (i < text.length) {
           p.textContent += text.charAt(i);
           i++;
-          addTimer(type, 25); // ~1s total for 40 chars = adjust if needed
+          addTimer(type, 25); 
         }
       }
       type();
     }
   
-    // --- FULL HERO SEQUENCE (must equal 30s total) ---
     function startHeroCycle() {
       clearTimers();
   
-      // Reset hero text immediately
       h2.textContent = "DAY-sha";
       h2.style.opacity = 0;
       p.textContent = "";
       p.style.opacity = 0;
   
-      // TIMELINE (aligned with video)
-      // 0s – Start “DAY-sha”
       addTimer(() => {
         h2.style.opacity = 1;
-      }, 3000); // fade in at 3s
+      }, 3000); 
   
-      // 5s – Fade out DAY-sha
       addTimer(() => {
         h2.style.opacity = 0;
       }, 5000);
   
-      // 5.6s – Show the long sentence
       addTimer(() => {
         h2.textContent =
           "a UI/UX Designer passionate about simplifying workflows, bridging communication, and creating engaging, user-first designs.";
         h2.style.opacity = 1;
       }, 5600);
   
-      // 5.6s – Start typewriter slightly after the title begins
       addTimer(() => {
         runTypewriter();
       }, 6000);
   
-      // 30s — FULL RESET and start again
       addTimer(() => {
         startHeroCycle();
       }, CYCLE_DURATION);
     }
   
-    // Start infinite 30-second loop
     startHeroCycle();
   });
+  
+  setTimeout(() => {
+    const desktop = document.getElementById("desktop");
+    const arrow = document.getElementById("desktopArrow");
+    const arrowImg = arrow.querySelector("img");
+  
+    desktop.style.transition = "opacity 0.5s ease";
+    desktop.style.opacity = 0;
+  
+    setTimeout(() => {
+      desktop.style.display = "none";
+      arrow.style.display = "block";
+  
+      setTimeout(() => {
+        arrowImg.style.opacity = 1;
+      }, 50);
+  
+    }, 500);
+  
+  }, 10000);
 
   const video = document.getElementById("expVideo");
   const source = document.getElementById("expVideoSource");
