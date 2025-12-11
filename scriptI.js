@@ -6,7 +6,7 @@
     
     const target = document.getElementById("aboutMeSec");
     if (target) {
-        const yOffset = -64; // header offset
+        const yOffset = -64; 
         const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
         
         window.scrollTo({
@@ -83,7 +83,6 @@
   const revealDelta = 5;      // px upward scroll needed to reveal
   const hideDelta = 10;        // px downward scroll to hide
 
-  // compute header height once (fallback)
   const headerH = heroTop.offsetHeight || 70;
 
   function onScroll() {
@@ -123,7 +122,6 @@
     }
   }, { passive: true });
 
-  // optional: reveal when pointer enters top area (desktop UX)
   window.addEventListener('pointermove', function (e) {
     if (stickyActive && e.clientY < 60) {
       heroTop.classList.add('visible');
@@ -152,84 +150,82 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const h2 = document.querySelector("#dataTitle h2");
-    let animationCount = 0;
+    const p = document.querySelector("#dataTitle p");
   
-    function runSequence() {
+    const CYCLE_DURATION = 30000; // 30s – matches your hero video length
+    let timers = [];
+  
+    // Clear all active timeouts
+    function clearTimers() {
+      timers.forEach(t => clearTimeout(t));
+      timers = [];
+    }
+  
+    // Helper to store timers
+    function addTimer(fn, ms) {
+      const t = setTimeout(fn, ms);
+      timers.push(t);
+    }
+  
+    // --- TYPEWRITER FOR PARAGRAPH ---
+    function runTypewriter() {
+      const text = "Previously UX Design @ BRIDGEGOOD | Production Assistant @ TAP Series";
+      p.textContent = "";
+      p.style.opacity = 1;
+  
+      let i = 0;
+      function type() {
+        if (i < text.length) {
+          p.textContent += text.charAt(i);
+          i++;
+          addTimer(type, 25); // ~1s total for 40 chars = adjust if needed
+        }
+      }
+      type();
+    }
+  
+    // --- FULL HERO SEQUENCE (must equal 30s total) ---
+    function startHeroCycle() {
+      clearTimers();
+  
+      // Reset hero text immediately
       h2.textContent = "DAY-sha";
       h2.style.opacity = 0;
+      p.textContent = "";
+      p.style.opacity = 0;
   
-      setTimeout(() => {
+      // TIMELINE (aligned with video)
+      // 0s – Start “DAY-sha”
+      addTimer(() => {
         h2.style.opacity = 1;
-      }, 3000);
+      }, 3000); // fade in at 3s
   
-      setTimeout(() => {
+      // 5s – Fade out DAY-sha
+      addTimer(() => {
         h2.style.opacity = 0;
       }, 5000);
   
-      setTimeout(() => {
-        h2.textContent = "a UI/UX Designer passionate about simplifying workflows, bridging communication, and creating engaging, user-first designs.";
+      // 5.6s – Show the long sentence
+      addTimer(() => {
+        h2.textContent =
+          "a UI/UX Designer passionate about simplifying workflows, bridging communication, and creating engaging, user-first designs.";
         h2.style.opacity = 1;
       }, 5600);
-
-      animationCount++;
-      
-      // After second animation, schedule reset after it completes
-      if (animationCount === 2) {
-        setTimeout(() => {
-          resetHero();
-        }, 30000); 
-      } else if (animationCount === 1) {
-        // Schedule second run
-        setTimeout(() => {
-          runSequence();
-          typeWriterParagraph();
-        }, 30000);
-      }
-    }
-
-    function resetHero() {
-      // Reset everything
-      h2.textContent = "DAY-sha";
-      h2.style.opacity = 0;
-      
-      const p = document.querySelector("#dataTitle p");
-      if (p) {
-        p.textContent = "";
-        p.style.opacity = 0;
-      }
-
-      // Reset counter
-      animationCount = 0;
-
-      // Restart after brief pause
-      setTimeout(() => {
-        runSequence();
-        typeWriterParagraph();
-      }, 1000);
+  
+      // 5.6s – Start typewriter slightly after the title begins
+      addTimer(() => {
+        runTypewriter();
+      }, 6000);
+  
+      // 30s — FULL RESET and start again
+      addTimer(() => {
+        startHeroCycle();
+      }, CYCLE_DURATION);
     }
   
-    // Start initial sequence
-    runSequence();
-    typeWriterParagraph();
+    // Start infinite 30-second loop
+    startHeroCycle();
   });
-
-  setTimeout(() => {
-    const desktop = document.getElementById("desktop");
-    const arrow = document.getElementById("desktopArrow");
-    const arrowImg = arrow.querySelector("img");
-
-    desktop.style.transition = "opacity 0.5s ease";
-    desktop.style.opacity = 0;
-
-    setTimeout(() => {
-        desktop.style.display = "none";
-        arrow.style.display = "block";
-
-        setTimeout(() => {
-            arrowImg.style.opacity = 1;
-        }, 50);
-    }, 500); 
-  }, 10000);
 
   const video = document.getElementById("expVideo");
   const source = document.getElementById("expVideoSource");
@@ -272,7 +268,6 @@
 
     greetingElement.textContent = greetingText;
   }
-  // Call the function on page load
   updateGreeting();
 
 }());
