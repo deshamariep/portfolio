@@ -189,6 +189,9 @@
         background-color: rgb(255, 255, 255, 0.3);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
     }
+    :target {
+        scroll-margin-top: 64px;
+    }
     .hero-top.sticky {
         position: fixed;
         left: 0;
