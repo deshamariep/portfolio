@@ -43,6 +43,10 @@
         background-position: 0px top;  
         background-repeat: no-repeat; */
     }
+    .hero-img{
+        width: 100%;
+        min-height: 100vh;
+    }
     .hero-content h4{
         font-style: normal;
     }
@@ -365,7 +369,7 @@
         border: 1px solid rgb(237,237,240);
         border-radius: 20px;
     }
-    #leftcsLink h1{
+    #leftcsLink h2{
         margin-top: 0px;
         margin-bottom: 0px;
     }
@@ -379,7 +383,7 @@
         border: 1px solid rgb(237,237,240);
         border-radius: 20px;
     }
-    #rightcsLink h1{
+    #rightcsLink h2{
         margin-top: 0px;
         margin-bottom: 0px;
     }
