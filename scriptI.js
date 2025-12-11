@@ -98,7 +98,7 @@
   document.getElementById("aboutMe").addEventListener("click", (e) => {
     e.preventDefault();
     const target = document.getElementById("aboutMeSec");
-    const headerOffset = 64; // Adjust this value based on your header height
+    const headerOffset = 64; 
     const elementPosition = target.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 

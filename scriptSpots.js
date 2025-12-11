@@ -2,6 +2,22 @@
     'use strict';
     console.log('running js');
 
+    document.getElementById("aboutMe").addEventListener("click", (e) => {
+      // Check if we're on the homepage
+      if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+          e.preventDefault();
+          const target = document.getElementById("aboutMeSec");
+          const headerOffset = 100;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+          window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+          });
+      }
+    });
+
     let snapped = false;
     document.addEventListener("scroll", function () {
       // if user is at the very top, reset snapped
