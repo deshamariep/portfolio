@@ -449,6 +449,11 @@
     .experiment{
         margin: 8px 0px;
     }
+    .dataExp{
+        display: flex;
+        justify-content: space-between; 
+        gap: 16px;
+    }
     .exp-item{
         margin: 16px 0px;
     }
@@ -473,7 +478,7 @@
         margin: auto;
         transition: opacity 0.4s ease;
     }
-    .expRead p :hover{
+    .exp-item:hover .expRead p{
         opacity: 1;
     }
     #experiments :nth-child(2){
