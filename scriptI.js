@@ -95,6 +95,19 @@
     }
   });
 
+  document.getElementById("aboutMe").addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = document.getElementById("aboutMeSec");
+    const headerOffset = 64; // Adjust this value based on your header height
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
+});
+
   window.addEventListener("load", () => {
     document.querySelector(".dataHero").classList.add("loaded");
     document.querySelector("#dataDesktopBar").classList.add("loaded");
@@ -214,7 +227,7 @@
             arrowImg.style.opacity = 1;
         }, 50);
     }, 500); 
-  }, 9000);
+  }, 10000);
 
   const video = document.getElementById("expVideo");
   const source = document.getElementById("expVideoSource");
