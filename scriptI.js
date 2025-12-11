@@ -173,14 +173,22 @@
 
       animationCount++;
       
-      if (animationCount >= 2) {
+      // After second animation, schedule reset after it completes
+      if (animationCount === 2) {
         setTimeout(() => {
           resetHero();
         }, 30000); 
+      } else if (animationCount === 1) {
+        // Schedule second run
+        setTimeout(() => {
+          runSequence();
+          typeWriterParagraph();
+        }, 30000);
       }
     }
 
     function resetHero() {
+      // Reset everything
       h2.textContent = "DAY-sha";
       h2.style.opacity = 0;
       
@@ -190,48 +198,19 @@
         p.style.opacity = 0;
       }
 
+      // Reset counter
       animationCount = 0;
 
+      // Restart after brief pause
       setTimeout(() => {
         runSequence();
         typeWriterParagraph();
       }, 1000);
     }
   
+    // Start initial sequence
     runSequence();
-  
-    setTimeout(() => {
-      runSequence();
-    }, 30000);
-
-    function typeWriterParagraph() {
-      const p = document.querySelector("#dataTitle p");
-      const text = "Previously UX Design @ BRIDGEGOOD | UX Production Assistant @ TAP Series";
-    
-      if (!p) return;
-    
-      p.textContent = "";
-      p.style.opacity = 1;
-    
-      let i = 0;
-    
-      setTimeout(() => {
-        function type() {
-          if (i < text.length) {
-            p.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, 25);
-          }
-        }
-        type();
-      }, 6000);
-    }
-    
     typeWriterParagraph();
-    
-    setTimeout(() => {
-      typeWriterParagraph();
-    }, 30000);
   });
 
   setTimeout(() => {
@@ -266,10 +245,14 @@
   document.getElementById("spots").addEventListener("mouseenter", () => {
     playPreview(previews.spots);
   });
+  document.getElementById("spots").addEventListener("mouseleave", () => {
+    source.src = "";
+    video.load();
+  });
   document.getElementById("ume").addEventListener("mouseenter", () => {
     playPreview(previews.ume);
   });
-  document.getElementById("experiments").addEventListener("mouseleave", () => {
+  document.getElementById("ume").addEventListener("mouseleave", () => {
     source.src = "";
     video.load();
   });
