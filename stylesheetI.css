@@ -465,6 +465,17 @@
     .exp-item:hover h3, .exp-item:hover p {
         color: rgb(255, 255, 255);
     }
+    .expRead{
+        display: block;
+    }
+    .expRead p{
+        opacity: 0;
+        margin: auto;
+        transition: opacity 0.4s ease;
+    }
+    .expRead p :hover{
+        opacity: 1;
+    }
     #experiments :nth-child(2){
         display: block;
         margin: auto;
