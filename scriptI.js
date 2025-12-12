@@ -1,42 +1,39 @@
 (function(){
   'use strict';
 
-  const aboutLink = document.getElementById("aboutMe");
-  if (aboutLink) {
-    aboutLink.addEventListener("click", (e) => {
-        const isHomePage = window.location.pathname === "/" || 
-                          window.location.pathname === "/index.html" ||
-                          window.location.pathname.endsWith("deshapoindexter.com/");
-        if (isHomePage) {
-            e.preventDefault();
+  window.addEventListener("load", () => {
+    if (window.location.hash === "#aboutMeSec") {
+        setTimeout(() => {
             const target = document.getElementById("aboutMeSec");
             if (target) {
-                const targetPosition = target.offsetTop;
+                const yOffset = -64;
+                const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                
                 window.scrollTo({
-                    top: targetPosition - 64,
+                    top: y,
                     behavior: "smooth"
                 });
             }
-        }
-    });
-  }
+        }, 500);
+    }
+  });
 
-  let snapped = false;
-        document.addEventListener("scroll", function () {
-            // if user is at the very top, reset snapped
-            if (window.scrollY === 0) {
-                snapped = false;
-            }
+  // let snapped = false;
+  //       document.addEventListener("scroll", function () {
+  //           // if user is at the very top, reset snapped
+  //           if (window.scrollY === 0) {
+  //               snapped = false;
+  //           }
   
-            // only snap if user starts at top and scrolls past 8px
-            if (!snapped && window.scrollY > 16) {
-                snapped = true;
-                window.scrollTo({
-                top: 876,
-                behavior: "smooth"
-                });
-            }
-        });
+  //           // only snap if user starts at top and scrolls past 8px
+  //           if (!snapped && window.scrollY > 16) {
+  //               snapped = true;
+  //               window.scrollTo({
+  //               top: 876,
+  //               behavior: "smooth"
+  //               });
+  //           }
+  //       });
 
 
   document.addEventListener("DOMContentLoaded", () => {
