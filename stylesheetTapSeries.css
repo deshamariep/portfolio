@@ -217,6 +217,9 @@
         width: 1100px;
         margin: auto;
     }
+    .teams{
+        margin: 0px;
+    }
     .dataLinks{
         display: flex;
         justify-content: space-between; 
