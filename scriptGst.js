@@ -5,19 +5,21 @@
     window.addEventListener("load", () => {
       const hash = window.location.hash;
       if (hash) {
-        const target = document.querySelector(hash);
-        if (target) {
-          const headerOffset = 64; 
-          const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = window.scrollY + elementPosition - headerOffset;
-    
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-        }
+        setTimeout(() => {
+          const target = document.querySelector(hash);
+          if (target) {
+            const headerOffset = 64;   
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = window.scrollY + elementPosition - headerOffset;
+      
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }
+        }, 300); 
       }
-    });
+  });
 
     let snapped = false;
     document.addEventListener("scroll", function () {

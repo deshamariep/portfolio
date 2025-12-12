@@ -1,21 +1,6 @@
 (function(){
   'use strict';
 
-  document.getElementById("aboutMe").addEventListener("click", (e) => {
-    e.preventDefault();
-    
-    const target = document.getElementById("aboutMeSec");
-    if (target) {
-        const yOffset = -64; 
-        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        
-        window.scrollTo({
-            top: y,
-            behavior: "smooth"
-        });
-    }
-  });
-
   const aboutLink = document.getElementById("aboutMe");
   if (aboutLink) {
     aboutLink.addEventListener("click", (e) => {
@@ -28,7 +13,7 @@
             if (target) {
                 const targetPosition = target.offsetTop;
                 window.scrollTo({
-                    top: targetPosition - 80,
+                    top: targetPosition - 64,
                     behavior: "smooth"
                 });
             }
