@@ -8,7 +8,7 @@
           setTimeout(() => {
             const target = document.querySelector(hash);
             if (target) {
-              const headerOffset = 64;   
+              const headerOffset = 48;   
               const elementPosition = target.getBoundingClientRect().top;
               const offsetPosition = window.scrollY + elementPosition - headerOffset;
         
