@@ -6,7 +6,7 @@
         setTimeout(() => {
             const target = document.getElementById("aboutMeSec");
             if (target) {
-                const yOffset = 0;
+                const yOffset = -64;
                 const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 
                 window.scrollTo({
@@ -239,7 +239,7 @@
     video.load();
   });
   document.getElementById("amp").addEventListener("mouseenter", () => {
-    playPreview(previews.amp, 250); 
+    playPreview(previews.amp, 350); 
   });
   document.getElementById("amp").addEventListener("mouseleave", () => {
     source.src = "";
