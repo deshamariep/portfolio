@@ -510,7 +510,6 @@
         margin: auto;
     }
     #aboutMeSec {
-        scroll-margin-top: 64px;
         height: calc(100vh + 100px);
         transition: color 0.3s ease;
     }
