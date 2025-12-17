@@ -431,7 +431,7 @@
         display: flex;
         background-color: rgb(0, 0, 0, 0.9);
         height: 100vh;
-        margin: 64px 0px;
+        margin: 80px 0px;
     }
     #experiments div{
         flex: 1;
