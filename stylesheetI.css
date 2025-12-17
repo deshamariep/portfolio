@@ -452,6 +452,7 @@
     }
     #exp h2{
         color: rgb(255, 255, 255);
+        margin-top: 24px;
     }
     .experiment{
         margin: 8px 0px;
