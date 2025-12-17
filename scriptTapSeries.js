@@ -2,46 +2,46 @@
     'use strict';
     console.log("reading js");
 
-    // Handle hash navigation on load with multiple attempts
-    window.addEventListener("load", () => {
+    // // Handle hash navigation on load with multiple attempts
+    // window.addEventListener("load", () => {
+    //   const hash = window.location.hash;
+    //   if (hash) {
+    //     // Try multiple times with increasing delays
+    //     [100, 300, 500, 1000].forEach(delay => {
+    //       setTimeout(() => {
+    //         const target = document.querySelector(hash);
+    //         if (target) {
+    //           const headerOffset = 88;   
+    //           const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        
+    //           window.scrollTo({
+    //             top: y,
+    //             behavior: "smooth"
+    //           });
+    //         }
+    //       }, delay);
+    //     });
+    //   }
+    // });
+
+  // ALSO handle it immediately on DOMContentLoaded
+  document.addEventListener("DOMContentLoaded", () => {
       const hash = window.location.hash;
       if (hash) {
-        // Try multiple times with increasing delays
-        [100, 300, 500, 1000].forEach(delay => {
-          setTimeout(() => {
-            const target = document.querySelector(hash);
-            if (target) {
-              const headerOffset = 88;   
-              const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        
-              window.scrollTo({
-                top: y,
-                behavior: "smooth"
-              });
-            }
-          }, delay);
-        });
-      }
-    });
-
-  // // ALSO handle it immediately on DOMContentLoaded
-  // document.addEventListener("DOMContentLoaded", () => {
-  //     const hash = window.location.hash;
-  //     if (hash) {
-  //       setTimeout(() => {
-  //         const target = document.querySelector(hash);
-  //         if (target) {
-  //           const headerOffset = 88;
-  //           const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        setTimeout(() => {
+          const target = document.querySelector(hash);
+          if (target) {
+            const headerOffset = 88;
+            const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
       
-  //           window.scrollTo({
-  //             top: y,
-  //             behavior: "smooth"
-  //           });
-  //         }
-  //       }, 500);
-  //     }
-  // });
+            window.scrollTo({
+              top: y,
+              behavior: "smooth"
+            });
+          }
+        }, 500);
+      }
+  });
 
     document.addEventListener("DOMContentLoaded", () => {
       const faders = document.querySelectorAll(".spaceBtwn");
