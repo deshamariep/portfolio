@@ -238,7 +238,7 @@
     video.load();
   });
   document.getElementById("amp").addEventListener("mouseenter", () => {
-    playPreview(previews.spots);
+    playPreview(previews.amp);
   });
   document.getElementById("amp").addEventListener("mouseleave", () => {
     source.src = "";
