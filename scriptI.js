@@ -269,4 +269,69 @@
   }
   updateGreeting();
 
+  // BACKGROUND COLOR
+  function handleBackgroundTransition() {
+    const experiments = document.querySelector('#experiments');
+    
+    if (!experiments) return;
+    
+    const rect = experiments.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const transitionZone = 300; // pixels for transition
+    
+    let bgColor = 'rgb(255, 255, 255)'; // default white
+    
+    // ENTERING from top (scrolling down)
+    if (rect.top > 0 && rect.top < transitionZone) {
+      const progress = 1 - (rect.top / transitionZone);
+      const colorValue = Math.round(255 * (1 - progress));
+      bgColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+    }
+    // INSIDE the section
+    else if (rect.top <= 0 && rect.bottom > windowHeight) {
+      bgColor = 'rgb(0, 0, 0)';
+    }
+    // EXITING from bottom (scrolling down past it)
+    else if (rect.bottom > windowHeight - transitionZone && rect.bottom < windowHeight) {
+      const progress = (windowHeight - rect.bottom) / transitionZone;
+      const colorValue = Math.round(255 * progress);
+      bgColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+    }
+    // ABOVE the section (scrolled past)
+    else if (rect.bottom <= 0) {
+      bgColor = 'rgb(255, 255, 255)';
+    }
+
+    document.body.style.backgroundColor = bgColor;
+    
+    // Update text colors for readability - FIXED VERSION
+    const match = bgColor.match(/\d+/);
+    const colorValue = match ? parseInt(match[0]) : 255;
+    const isBlack = colorValue < 127;
+    const textColor = isBlack ? 'rgb(255, 255, 255)' : 'rgb(48, 48, 66)';
+    
+    // Update sections outside experiments
+    const caseStudies = document.querySelector('#caseStudies');
+    if (caseStudies) {
+      caseStudies.style.color = textColor;
+    }
+    
+    const aboutSection = document.querySelector('#aboutMeSec');
+    if (aboutSection) {
+      aboutSection.style.color = textColor;
+    }
+  }
+  // Run on scroll with RAF for smooth performance
+  let bgTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!bgTicking) {
+      window.requestAnimationFrame(() => {
+        handleBackgroundTransition();
+        bgTicking = false;
+      });
+      bgTicking = true;
+    }
+  });
+  window.addEventListener('load', handleBackgroundTransition);
+
 }());

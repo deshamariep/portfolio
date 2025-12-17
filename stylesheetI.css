@@ -158,6 +158,8 @@
         width: 100%;
         min-height: 100vh;
         overflow-x: hidden;
+        background-color: rgb(255, 255, 255);
+        transition: background-color 0.2s ease-out;
     }
     h1{
         font-size: 64px;
@@ -371,6 +373,8 @@
     #caseStudies{
         width: 1100px;
         margin: auto;
+        transition: color 0.3s ease;
+    }
     }
     .data{
         display: flex;
@@ -429,7 +433,7 @@
     }
     #experiments{
         display: flex;
-        background-color: rgb(0, 0, 0);
+        background-color: transparent;
         height: calc(100vh + 100px);
         margin: 80px 0px;
     }
@@ -498,6 +502,7 @@
     #aboutMeSec {
         scroll-margin-top: 64px;
         height: calc(100vh + 100px);
+        transition: color 0.3s ease;
     }
     #fillTime{
         flex: 1.2;
@@ -548,7 +553,6 @@
         text-decoration: underline;
         color: rgb(0, 0, 255);
     }
-}
 @media screen and (min-width: 1650px){
 
 }
