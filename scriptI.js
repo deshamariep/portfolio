@@ -222,6 +222,7 @@
   const source = document.getElementById("expVideoSource");
   const previews = {
     spots: "images/spotsAnimation.mp4",
+    amp: "images/ampPark.mp4",
     ume: "images/umeAnimation.mp4"
   };
   function playPreview(videoFile) {
@@ -233,6 +234,13 @@
     playPreview(previews.spots);
   });
   document.getElementById("spots").addEventListener("mouseleave", () => {
+    source.src = "";
+    video.load();
+  });
+  document.getElementById("amp").addEventListener("mouseenter", () => {
+    playPreview(previews.spots);
+  });
+  document.getElementById("amp").addEventListener("mouseleave", () => {
     source.src = "";
     video.load();
   });
