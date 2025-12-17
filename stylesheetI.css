@@ -493,7 +493,14 @@
         width: 100%;     
         max-width: 650px;       
         height: auto;
-        min-height: 450px; 
+        border-radius: 12px; 
+        object-fit: cover; 
+        display: block;
+        margin: auto;
+    }
+    #amp:hover ~ div .exp-video {
+        width: 250px; 
+        height: auto;
         border-radius: 12px; 
         object-fit: cover; 
         display: block;
