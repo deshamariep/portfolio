@@ -2,29 +2,25 @@
     'use strict';
     console.log("reading js");
 
-    // // Handle hash navigation on load with multiple attempts
-    // window.addEventListener("load", () => {
-    //   const hash = window.location.hash;
-    //   if (hash) {
-    //     // Try multiple times with increasing delays
-    //     [100, 300, 500, 1000].forEach(delay => {
-    //       setTimeout(() => {
-    //         const target = document.querySelector(hash);
-    //         if (target) {
-    //           const headerOffset = 88;   
-    //           const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+    window.addEventListener("load", () => {
+      const hash = window.location.hash;
+      if (hash) {
+        [100, 300, 500, 1000].forEach(delay => {
+          setTimeout(() => {
+            const target = document.querySelector(hash);
+            if (target) {
+              const headerOffset = 88;   
+              const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
         
-    //           window.scrollTo({
-    //             top: y,
-    //             behavior: "smooth"
-    //           });
-    //         }
-    //       }, delay);
-    //     });
-    //   }
-    // });
-
-  // ALSO handle it immediately on DOMContentLoaded
+              window.scrollTo({
+                top: y,
+                behavior: "smooth"
+              });
+            }
+          }, delay);
+        });
+      }
+    });
   document.addEventListener("DOMContentLoaded", () => {
       const hash = window.location.hash;
       if (hash) {

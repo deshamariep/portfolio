@@ -2,22 +2,40 @@
     'use strict';
     console.log("reading js");
 
-    window.addEventListener("load", () => {
+     window.addEventListener("load", () => {
+        const hash = window.location.hash;
+        if (hash) {
+          [100, 300, 500, 1000].forEach(delay => {
+            setTimeout(() => {
+              const target = document.querySelector(hash);
+              if (target) {
+                const headerOffset = 88;   
+                const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+          
+                window.scrollTo({
+                  top: y,
+                  behavior: "smooth"
+                });
+              }
+            }, delay);
+          });
+        }
+      });
+    document.addEventListener("DOMContentLoaded", () => {
         const hash = window.location.hash;
         if (hash) {
           setTimeout(() => {
             const target = document.querySelector(hash);
             if (target) {
-              const headerOffset = 88;   
-              const elementPosition = target.getBoundingClientRect().top;
-              const offsetPosition = window.scrollY + elementPosition - headerOffset;
+              const headerOffset = 88;
+              const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
         
               window.scrollTo({
-                top: offsetPosition,
+                top: y,
                 behavior: "smooth"
               });
             }
-          }, 300); 
+          }, 500);
         }
     });
 
