@@ -309,6 +309,12 @@
     const colorValue = match ? parseInt(match[0]) : 255;
     const isBlack = colorValue < 127;
     const textColor = isBlack ? 'rgb(255, 255, 255)' : 'rgb(48, 48, 66)';
+
+    // Update nav links
+    const navLinks = document.querySelectorAll('#one nav ul li a');
+    navLinks.forEach(link => {
+      link.style.color = textColor;
+    });
     
     // Update sections outside experiments
     const caseStudies = document.querySelector('#caseStudies');

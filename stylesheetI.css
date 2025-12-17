@@ -185,6 +185,9 @@
     .hero-top{
         background-color: rgb(255, 255, 255, 0.0);
     }
+    #one nav ul li a {
+        transition: color 0.3s ease;
+    }
     .hero-content {      
         text-align: center;
         z-index: 4;

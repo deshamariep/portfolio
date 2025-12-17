@@ -72,7 +72,6 @@
         display: inline-block;
         color: rgb(48, 48, 66);
         text-decoration: none;
-        mix-blend-mode: difference;
     }
     .hero-content{
         position: absolute;
