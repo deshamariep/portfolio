@@ -326,7 +326,7 @@
         width: 100%;
         overflow: hidden;
         position: relative;
-        margin: 40px 0px 40px;
+        margin: 64px 0px 40px;
     }
     .scroll-wrap {
         display: inline-flex; 
@@ -486,9 +486,10 @@
         margin: auto;
     }
     .exp-video {
-        width: 100%;      
-        height: auto;     
-        max-width: 650px;  
+        width: 100%;     
+        max-width: 650px;       
+        height: auto;
+        min-height: 450px; 
         border-radius: 12px; 
         object-fit: cover; 
         display: block;
