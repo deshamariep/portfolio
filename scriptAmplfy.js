@@ -9,7 +9,7 @@
             setTimeout(() => {
               const target = document.querySelector(hash);
               if (target) {
-                const headerOffset = 88;   
+                const headerOffset = -64;   
                 const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
           
                 window.scrollTo({
@@ -27,7 +27,7 @@
           setTimeout(() => {
             const target = document.querySelector(hash);
             if (target) {
-              const headerOffset = 88;
+              const headerOffset = -64;
               const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
         
               window.scrollTo({
