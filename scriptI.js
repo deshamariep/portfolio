@@ -6,7 +6,7 @@
         setTimeout(() => {
             const target = document.getElementById("aboutMeSec");
             if (target) {
-                const yOffset = -64;
+                const yOffset = 0;
                 const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 
                 window.scrollTo({
