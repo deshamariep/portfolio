@@ -24,41 +24,24 @@
       }
     });
 
-  // ALSO handle it immediately on DOMContentLoaded
-  document.addEventListener("DOMContentLoaded", () => {
-      const hash = window.location.hash;
-      if (hash) {
-        setTimeout(() => {
-          const target = document.querySelector(hash);
-          if (target) {
-            const headerOffset = 88;
-            const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+  // // ALSO handle it immediately on DOMContentLoaded
+  // document.addEventListener("DOMContentLoaded", () => {
+  //     const hash = window.location.hash;
+  //     if (hash) {
+  //       setTimeout(() => {
+  //         const target = document.querySelector(hash);
+  //         if (target) {
+  //           const headerOffset = 88;
+  //           const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
       
-            window.scrollTo({
-              top: y,
-              behavior: "smooth"
-            });
-          }
-        }, 500);
-      }
-  });
-
-    let snapped = false;
-    document.addEventListener("scroll", function () {
-      // if user is at the very top, reset snapped
-      if (window.scrollY === 0) {
-        snapped = false;
-      }
-  
-      // only snap if user starts at top and scrolls past 8px
-      if (!snapped && window.scrollY > 8) {
-        snapped = true;
-        window.scrollTo({
-        top: 800,
-        behavior: "smooth"
-        });
-      }
-    });
+  //           window.scrollTo({
+  //             top: y,
+  //             behavior: "smooth"
+  //           });
+  //         }
+  //       }, 500);
+  //     }
+  // });
 
     document.addEventListener("DOMContentLoaded", () => {
       const faders = document.querySelectorAll(".spaceBtwn");
