@@ -225,8 +225,9 @@
     amp: "images/ampPark.mp4",
     ume: "images/umeAnimation.mp4"
   };
-  function playPreview(videoFile) {
+  function playPreview(videoFile, maxWidth = 650) {
     source.src = videoFile;
+    video.style.maxWidth = `${maxWidth}px`;
     video.load();
     video.play();
   }
@@ -238,10 +239,11 @@
     video.load();
   });
   document.getElementById("amp").addEventListener("mouseenter", () => {
-    playPreview(previews.amp);
+    playPreview(previews.amp, 250); 
   });
   document.getElementById("amp").addEventListener("mouseleave", () => {
     source.src = "";
+    video.style.maxWidth = '650px'; 
     video.load();
   });
   document.getElementById("ume").addEventListener("mouseenter", () => {
