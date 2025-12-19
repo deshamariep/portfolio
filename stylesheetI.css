@@ -517,10 +517,7 @@
         margin: 64px 0px;
     }
     .experiment{
-        margin: 8px 0px;
-    }
-    .experiment p{
-        margin-bottom: 12px;
+        padding: 8px 0px;
     }
     .dataExp{
         display: flex;
