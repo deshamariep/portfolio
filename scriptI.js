@@ -110,7 +110,7 @@
     }
   });
 
-
+  // HERO
   window.addEventListener("load", () => {
     document.querySelector(".dataHero").classList.add("loaded");
     document.querySelector("#dataDesktopBar").classList.add("loaded");
@@ -142,7 +142,6 @@
       timers = [];
     }
   
-    // Helper to store timers
     function addTimer(fn, ms) {
       const t = setTimeout(fn, ms);
       timers.push(t);
@@ -174,21 +173,21 @@
   
       addTimer(() => {
         h2.style.opacity = 1;
-      }, 3000); 
+      }, 0);
   
       addTimer(() => {
         h2.style.opacity = 0;
-      }, 5000);
+      }, 2000);
   
       addTimer(() => {
         h2.textContent =
           "a UI/UX Designer passionate about simplifying workflows, bridging communication, and creating engaging, user-first designs.";
         h2.style.opacity = 1;
-      }, 5600);
+      }, 2600);
   
       addTimer(() => {
         runTypewriter();
-      }, 6000);
+      }, 3000);
   
       addTimer(() => {
         startHeroCycle();
@@ -198,6 +197,7 @@
     startHeroCycle();
   });
   
+  // arrow
   setTimeout(() => {
     const desktop = document.getElementById("desktop");
     const arrow = document.getElementById("desktopArrow");
@@ -218,6 +218,7 @@
   
   }, 10000);
 
+  // exp
   const video = document.getElementById("expVideo");
   const source = document.getElementById("expVideoSource");
   const previews = {
@@ -254,6 +255,7 @@
     video.load();
   });
 
+  // greeting
   function updateGreeting() {
     const now = new Date();
     const hours = now.getHours();
@@ -279,46 +281,37 @@
     
     const rect = experiments.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    const transitionZone = 300; // pixels for transition
+    const transitionZone = 300; 
     
-    let bgColor = 'rgb(255, 255, 255)'; // default white
-    
-    // ENTERING from top (scrolling down)
+    let bgColor = 'rgb(255, 255, 255)'; 
     if (rect.top > 0 && rect.top < transitionZone) {
       const progress = 1 - (rect.top / transitionZone);
       const colorValue = Math.round(255 * (1 - progress));
       bgColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
     }
-    // INSIDE the section
     else if (rect.top <= 0 && rect.bottom > windowHeight) {
       bgColor = 'rgb(0, 0, 0)';
     }
-    // EXITING from bottom (scrolling down past it)
     else if (rect.bottom > windowHeight - transitionZone && rect.bottom < windowHeight) {
       const progress = (windowHeight - rect.bottom) / transitionZone;
       const colorValue = Math.round(255 * progress);
       bgColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
     }
-    // ABOVE the section (scrolled past)
     else if (rect.bottom <= 0) {
       bgColor = 'rgb(255, 255, 255)';
     }
 
     document.body.style.backgroundColor = bgColor;
     
-    // Update text colors for readability - FIXED VERSION
     const match = bgColor.match(/\d+/);
     const colorValue = match ? parseInt(match[0]) : 255;
     const isBlack = colorValue < 127;
     const textColor = isBlack ? 'rgb(255, 255, 255)' : 'rgb(48, 48, 66)';
-
-    // Update nav links
     const navLinks = document.querySelectorAll('#one nav ul li a');
     navLinks.forEach(link => {
       link.style.color = textColor;
     });
-    
-    // Update sections outside experiments
+
     const caseStudies = document.querySelector('#caseStudies');
     if (caseStudies) {
       caseStudies.style.color = textColor;
@@ -329,7 +322,6 @@
       aboutSection.style.color = textColor;
     }
   }
-  // Run on scroll with RAF for smooth performance
   let bgTicking = false;
   window.addEventListener('scroll', () => {
     if (!bgTicking) {
