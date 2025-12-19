@@ -406,7 +406,7 @@
         color: rgb(255, 255, 255);
     }
     .dataCS:nth-child(1) p, .dataCS:nth-child(2) p{
-        color: rgb(170, 170, 170);
+        color: rgb(217,217,217);
     }
     .dataCS:nth-child(2) {
         background: linear-gradient(to bottom, rgb(1, 48, 136), white);
@@ -434,7 +434,7 @@
         transform-origin: center center; 
     }
     .csText{
-        padding: 8px 8px 24px;
+        padding: 24px 16px 16px;
     }
     .csText h2, .csText p {
         margin: 4px;
@@ -445,6 +445,7 @@
     .csBottom{
         display: flex;
         margin-top: 24px;
+        margin-left: 16px;
     }
     .csTags{
         display: flex;
@@ -458,6 +459,7 @@
         color: rgb(48, 48, 66);
     }
     .csBottom .readIcon{
+        flex: end;
         margin: auto 24px auto auto;
     }
     #experiments{
