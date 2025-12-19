@@ -6,7 +6,7 @@
         setTimeout(() => {
             const target = document.getElementById("aboutMeSec");
             if (target) {
-                const yOffset = 64;
+                const yOffset = -96;
                 const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 
                 window.scrollTo({
@@ -115,7 +115,7 @@
     document.querySelector(".dataHero").classList.add("loaded");
     document.querySelector("#dataDesktopBar").classList.add("loaded");
   });
-  
+
   const caseImgs = document.querySelectorAll('.dataCaseImg, .dataCS');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -133,25 +133,26 @@
   document.addEventListener("DOMContentLoaded", () => {
     const h2 = document.querySelector("#dataTitle h2");
     const p = document.querySelector("#dataTitle p");
-  
+
     const CYCLE_DURATION = 30000; 
     let timers = [];
-  
+
     function clearTimers() {
       timers.forEach(t => clearTimeout(t));
       timers = [];
     }
-  
+
+    // Helper to store timers
     function addTimer(fn, ms) {
       const t = setTimeout(fn, ms);
       timers.push(t);
     }
-  
+
     function runTypewriter() {
       const text = "Previously UX Design @ BRIDGEGOOD | Production Assistant @ TAP Series";
       p.textContent = "";
       p.style.opacity = 1;
-  
+
       let i = 0;
       function type() {
         if (i < text.length) {
@@ -162,38 +163,38 @@
       }
       type();
     }
-  
+
     function startHeroCycle() {
       clearTimers();
-  
+
       h2.textContent = "DAY-sha";
       h2.style.opacity = 0;
       p.textContent = "";
       p.style.opacity = 0;
-  
+
       addTimer(() => {
         h2.style.opacity = 1;
-      }, 0);
-  
+      }, 3000); 
+
       addTimer(() => {
         h2.style.opacity = 0;
-      }, 2000);
-  
+      }, 5000);
+
       addTimer(() => {
         h2.textContent =
           "a UI/UX Designer passionate about simplifying workflows, bridging communication, and creating engaging, user-first designs.";
         h2.style.opacity = 1;
-      }, 2600);
-  
+      }, 5600);
+
       addTimer(() => {
         runTypewriter();
-      }, 3000);
-  
+      }, 6000);
+
       addTimer(() => {
         startHeroCycle();
       }, CYCLE_DURATION);
     }
-  
+
     startHeroCycle();
   });
   
