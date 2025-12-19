@@ -519,6 +519,9 @@
     .experiment{
         margin: 8px 0px;
     }
+    .experiment p{
+        margin-bottom: 12px;
+    }
     .dataExp{
         display: flex;
         justify-content: space-between; 
