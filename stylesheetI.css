@@ -536,6 +536,8 @@
     }
     .exp-item:hover {
         color: rgb(255, 255, 255);
+        border-top: solid white 1px;
+        border-bottom: solid white 1px;
     }
     .exp-item:hover h3, .exp-item:hover p {
         color: rgb(255, 255, 255);
