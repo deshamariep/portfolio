@@ -280,12 +280,6 @@
             transform: translateY(0);
         }
     }
-    .dock-item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     /* #dataDesktopBar img{
         width: 45px;
         height: 45px;
@@ -442,7 +436,17 @@
     .csSubText{
         color: rgb(48, 48, 66, 0.8);
     }
-    .csBottom{
+    .dataCS:nth-child(1) .csBottom{
+        display: flex;
+        margin-top: 0px;
+        margin-left: 16px;
+    }
+    .dataCS:nth-child(2) .csBottom{
+        display: flex;
+        margin-top: 40px;
+        margin-left: 16px;
+    }
+    .dataCS:nth-child(3) .csBottom{
         display: flex;
         margin-top: 24px;
         margin-left: 16px;
@@ -461,6 +465,36 @@
     .csBottom .readIcon{
         flex: end;
         margin: auto 24px auto auto;
+    }
+    .readIcon {
+        position: relative;
+        display: inline-block;
+    }
+    .readIcon img {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .readIcon img:hover {
+        transform: scale(1.1);
+    }
+    .read-label {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: rgb(0, 0, 0, 0.1);
+        color: rgb(48, 48, 66);
+        white-space: nowrap;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 14px;
+        opacity: 0;
+        transform: translateY(5px);
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .readIcon:hover .read-label {
+        opacity: 1;
+        transform: translateY(0);
     }
     #experiments{
         display: flex;
