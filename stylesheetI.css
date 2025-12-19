@@ -402,6 +402,9 @@
     .dataCS:nth-child(1) p, .dataCS:nth-child(2) p{
         color: rgb(217,217,217);
     }
+    .dataCS:nth-child(1) .csTag p, .dataCS:nth-child(2) .csTag p{
+        color: rgb(113,112,112);
+    }
     .dataCS:nth-child(2) {
         background: linear-gradient(to bottom, rgb(1, 48, 136), white);
     }
