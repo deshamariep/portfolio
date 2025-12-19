@@ -525,7 +525,7 @@
         gap: 16px;
     }
     .exp-item{
-        margin: 32px 0px;
+        padding: 32px 0px;
     }
     .exp-item h3, .exp-item p{
         color: rgb(255, 255, 255, 0.6);
@@ -565,6 +565,40 @@
         object-fit: cover; 
         display: block;
         margin: auto;
+    }
+    .expRead .readIcon {
+        position: relative;
+        display: inline-block;
+        opacity: 0;
+    }
+    .expRead .readIcon img {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .exp-item:hover .expRead .readIcon img{
+        opacity: 1;
+    }
+    .expRead .readIcon img:hover {
+        transform: scale(1.1);
+    }
+    .expRead .read-label {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: rgb(0, 0, 0, 0.1);
+        color: rgb(255, 255, 255);
+        white-space: nowrap;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 14px;
+        opacity: 0;
+        transform: translateY(5px);
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .expRead .readIcon:hover .read-label {
+        opacity: 1;
+        transform: translateY(0);
     }
     #aboutMeSec {
         height: calc(100vh + 100px);
