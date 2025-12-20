@@ -519,13 +519,16 @@
     .experiment{
         padding: 8px 0px;
     }
+    .experiment h3, .experiment p{
+        margin: 8px 0px;
+    }
     .dataExp{
         display: flex;
         justify-content: space-between; 
         gap: 16px;
     }
     .exp-item{
-        padding: 32px 0px;
+        padding: 16px 0px;
     }
     .exp-item h3, .exp-item p{
         color: rgb(255, 255, 255, 0.6);

@@ -218,6 +218,9 @@
         margin: auto;
     }
     .teams{
+        margin: 16px;
+    }
+    .teams p{
         margin: 0px;
     }
     .dataLinks{
