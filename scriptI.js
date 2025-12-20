@@ -6,7 +6,11 @@
         setTimeout(() => {
             const target = document.getElementById("aboutMeSec");
             if (target) {
-                const yOffset = -96;
+                const isIndexPage = window.location.pathname === "/" || 
+                                   window.location.pathname === "/index.html" ||
+                                   window.location.pathname.endsWith("deshapoindexter.com/");
+                
+                const yOffset = isIndexPage ? -350 : -96;
                 const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 
                 window.scrollTo({
@@ -14,7 +18,7 @@
                     behavior: "smooth"
                 });
             }
-        }, 500);
+        }, 1000);
     }
   });
 
