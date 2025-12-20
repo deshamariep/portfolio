@@ -6,11 +6,7 @@
         setTimeout(() => {
             const target = document.getElementById("aboutMeSec");
             if (target) {
-                const isIndexPage = window.location.pathname === "/" || 
-                                   window.location.pathname === "/index.html" ||
-                                   window.location.pathname.endsWith("deshapoindexter.com/");
-                
-                const yOffset = isIndexPage ? -350 : -96;
+                const yOffset = 200; 
                 const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
                 
                 window.scrollTo({
