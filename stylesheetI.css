@@ -568,6 +568,21 @@
         object-fit: cover; 
         display: block;
         margin: auto;
+        border: dashed 1px white;
+    }
+    .preview-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 18px;
+        pointer-events: none;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    .preview-text.hidden {
+        opacity: 0;
     }
     .expRead .readIcon {
         position: relative;
