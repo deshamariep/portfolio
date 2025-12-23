@@ -500,10 +500,12 @@
         transform: translateY(0);
     }
     #experiments{
-        display: flex;
         background-color: transparent;
         height: calc(100vh + 100px);
-        margin: 80px 0px;
+    }
+    #sideQuests{
+        display: flex;
+        margin: 64px 0px;
     }
     #experiments div{
         flex: 1;
