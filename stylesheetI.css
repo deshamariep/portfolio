@@ -325,7 +325,7 @@
         width: 100%;
         overflow: hidden;
         position: relative;
-        margin: 64px 0px 40px;
+        margin: 96px 0px 40px;
     }
     .scroll-wrap {
         display: inline-flex; 
@@ -507,7 +507,7 @@
         display: flex;
         margin: 64px 0px;
     }
-    #experiments div{
+    #sideQuests div{
         flex: 1;
     }
     #exp{
@@ -516,7 +516,7 @@
     }
     #exp h2{
         color: rgb(255, 255, 255);
-        margin: 64px 0px;
+        margin: 32px 0px;
     }
     .experiment{
         padding: 8px 0px;
