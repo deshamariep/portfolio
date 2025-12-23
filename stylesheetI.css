@@ -509,7 +509,7 @@
     }
     #exp{
         display: block;
-        margin: 8px auto auto 24px;
+        margin: 8px 0px auto 24px;
     }
     #exp h2{
         color: rgb(255, 255, 255);
