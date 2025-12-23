@@ -507,8 +507,12 @@
         display: flex;
         margin: 64px 0px;
     }
-    #sideQuests div{
+    #sideQuests #exp div{
         flex: 1;
+    }
+    #sideQuests #expPreview div{
+        flex: 1;
+        position: relative;
     }
     #exp{
         display: block;
