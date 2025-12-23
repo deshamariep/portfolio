@@ -325,7 +325,7 @@
         width: 100%;
         overflow: hidden;
         position: relative;
-        margin: 64px 0px 40px;
+        margin: 24px 0px 0px;
     }
     .scroll-wrap {
         display: inline-flex; 
@@ -501,24 +501,22 @@
     }
     #sideQuest{
         background-color: transparent;
-        height: calc(100vh + 100px);
+        height: calc(100vh + 200px);
         margin: 80px 0px;
     }
     #experiments{
         display: flex;
     }
-    #experiments div{
-        flex: 1;
-    }
     #exp{
         display: block;
-        margin: 32px auto auto 24px;
+        margin: 8px auto auto 24px;
     }
     #exp h2{
         color: rgb(255, 255, 255);
-        margin: 64px 0px;
+        margin: 24px 0px;
     }
     .experiment{
+        flex: 2;
         padding: 8px 0px;
     }
     .experiment h3, .experiment p{
@@ -548,6 +546,7 @@
         color: rgb(255, 255, 255);
     }
     .expRead{
+        flex: 1;
         display: block;
     }
     .expRead p{
