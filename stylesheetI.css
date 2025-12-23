@@ -507,16 +507,16 @@
         display: flex;
         margin: 64px 0px;
     }
-    #sideQuests #exp div{
+    #exp {
         flex: 1;
-    }
-    #sideQuests #expPreview div{
-        flex: 1;
-        position: relative;
-    }
-    #exp{
         display: block;
         margin: 32px auto auto 24px;
+    }
+    #expPreview{
+        flex: 1;
+        position: relative;
+        display: block;
+        margin: auto;
     }
     #exp h2{
         color: rgb(255, 255, 255);
