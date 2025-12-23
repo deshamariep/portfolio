@@ -222,6 +222,7 @@
   // exp
   const video = document.getElementById("expVideo");
   const source = document.getElementById("expVideoSource");
+  const previewText = document.getElementById("previewText");
   const previews = {
     spots: "images/spotsAnimation.mp4",
     amp: "images/ampPark.mp4",
@@ -235,25 +236,31 @@
   }
   document.getElementById("spots").addEventListener("mouseenter", () => {
     playPreview(previews.spots);
+    previewText.classList.add("hidden");
   });
   document.getElementById("spots").addEventListener("mouseleave", () => {
     source.src = "";
     video.load();
+    previewText.classList.remove("hidden");
   });
   document.getElementById("amp").addEventListener("mouseenter", () => {
     playPreview(previews.amp, 350); 
+    previewText.classList.add("hidden");
   });
   document.getElementById("amp").addEventListener("mouseleave", () => {
     source.src = "";
     video.style.maxWidth = '650px'; 
     video.load();
+    previewText.classList.remove("hidden");
   });
   document.getElementById("ume").addEventListener("mouseenter", () => {
     playPreview(previews.ume);
+    previewText.classList.add("hidden");
   });
   document.getElementById("ume").addEventListener("mouseleave", () => {
     source.src = "";
     video.load();
+    previewText.classList.remove("hidden");
   });
 
   // greeting
