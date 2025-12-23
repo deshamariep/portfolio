@@ -325,7 +325,7 @@
         width: 100%;
         overflow: hidden;
         position: relative;
-        margin: 96px 0px 40px;
+        margin: 64px 0px 40px;
     }
     .scroll-wrap {
         display: inline-flex; 
@@ -499,28 +499,24 @@
         opacity: 1;
         transform: translateY(0);
     }
-    #experiments{
+    #sideQuest{
         background-color: transparent;
         height: calc(100vh + 100px);
+        margin: 80px 0px;
     }
-    #sideQuests{
+    #experiments{
         display: flex;
-        margin: 64px 0px;
     }
-    #exp {
+    #experiments div{
         flex: 1;
+    }
+    #exp{
         display: block;
         margin: 32px auto auto 24px;
     }
-    #expPreview{
-        flex: 1;
-        position: relative;
-        display: block;
-        margin: auto;
-    }
     #exp h2{
         color: rgb(255, 255, 255);
-        margin: 32px 0px;
+        margin: 64px 0px;
     }
     .experiment{
         padding: 8px 0px;

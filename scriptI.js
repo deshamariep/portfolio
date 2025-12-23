@@ -276,11 +276,11 @@
 
   // BACKGROUND COLOR
   function handleBackgroundTransition() {
-    const experiments = document.querySelector('#experiments');
+    const sideQuest = document.querySelector('#sideQuest');
     
-    if (!experiments) return;
+    if (!sideQuest) return;
     
-    const rect = experiments.getBoundingClientRect();
+    const rect = sideQuest.getBoundingClientRect();
     const windowHeight = window.innerHeight;
     const transitionZone = 300; 
     
