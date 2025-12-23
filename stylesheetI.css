@@ -507,8 +507,10 @@
     #experiments{
         display: flex;
     }
-    #exp{
+    #experiments div{
         flex: 1;
+    }
+    #exp{
         display: block;
         margin: 8px auto auto 24px;
     }
@@ -517,19 +519,14 @@
         margin: 24px 0px;
     }
     .experiment{
-        flex: 2;
+        flex: 3;
         padding: 8px 0px;
     }
     .experiment h3, .experiment p{
         margin: 4px 0px;
     }
-    .experiment .smolP{
-        margin-bottom: 0px;
-    }
     .dataExp{
         display: flex;
-        justify-content: space-between; 
-        gap: 16px;
     }
     .exp-item{
         padding: 16px 0px;
@@ -562,7 +559,6 @@
         opacity: 1;
     }
     #experiments :nth-child(2){
-        flex: 1;
         display: block;
         margin: auto;
     }
