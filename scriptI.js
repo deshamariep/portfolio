@@ -244,7 +244,7 @@
     previewText.classList.remove("hidden");
   });
   document.getElementById("amp").addEventListener("mouseenter", () => {
-    playPreview(previews.amp, 350); 
+    playPreview(previews.amp, 300); 
     previewText.classList.add("hidden");
   });
   document.getElementById("amp").addEventListener("mouseleave", () => {
