@@ -524,14 +524,13 @@
     .experiment h3, .experiment p{
         margin: 4px 0px;
     }
-    .dataExp{
-        display: flex;
-    }
-    .dataExp div{
-        flex: 1;
-    }
     .exp-item{
+        display: flex;
+        gap: 24px;
         padding: 16px 0px;
+    }
+    .exp-item .experiment{
+        flex: 1;
     }
     .exp-item h3, .exp-item p{
         color: rgb(255, 255, 255, 0.6);
@@ -548,8 +547,10 @@
     .exp-item:hover h3, .exp-item:hover p {
         color: rgb(255, 255, 255);
     }
-    .expRead{
+    .exp-item .expRead{
+        flex: 2;
         display: block;
+        margin: auto;
     }
     .expRead p{
         opacity: 0;
