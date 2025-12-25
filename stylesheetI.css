@@ -375,9 +375,9 @@
         width: 700px;
         height: 700px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%,  
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 25%,  
         rgba(87, 132, 199, 1) 45%, 
-        rgba(169, 108, 208, 0.7) 60%);
+        rgba(169, 108, 208, 0.7) 75%);
         top: 100px;
         left: -200px;
         z-index: -1;
@@ -390,9 +390,9 @@
         width: 800px;
         height: 800px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%,
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 25%,
         rgba(87, 132, 199, 1) 45%, 
-        rgba(169, 108, 208, 0.7) 60%);
+        rgba(169, 108, 208, 0.7) 75%);
         top: 1400px;
         right: -250px;
         z-index: -1;
@@ -604,10 +604,10 @@
         gap: 24px;
         padding: 16px 0px;
     }
-    .exp-item:nth-child(1){
-        flex: 2;
+    .exp-item a:nth-child(1){
+        flex: 3;
     }
-    .exp-item:nth-child(2){
+    .exp-item a:nth-child(2){
         flex: 1;
     }
     .exp-item h3, .exp-item p{
