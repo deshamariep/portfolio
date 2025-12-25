@@ -600,8 +600,11 @@
         gap: 24px;
         padding: 16px 0px;
     }
-    .exp-item .experiment{
+    .exp-item:nth-child(1){
         flex: 1;
+    }
+    .exp-item:nth-child(1){
+        flex: 2;
     }
     .exp-item h3, .exp-item p{
         color: rgb(255, 255, 255, 0.6);
@@ -618,8 +621,7 @@
     .exp-item:hover h3, .exp-item:hover p {
         color: rgb(255, 255, 255);
     }
-    .exp-item .expRead{
-        flex: 2;
+    .expRead{
         display: block;
         margin: auto;
     }
