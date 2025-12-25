@@ -375,10 +375,9 @@
         width: 700px;
         height: 700px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, 
-        rgba(45, 140, 190, 0.6) 41%, 
-        rgba(87, 132, 199, 1) 66%, 
-        rgba(169, 108, 208, 0.7) 88%, transparent 70%);
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%,  
+        rgba(87, 132, 199, 1) 45%, 
+        rgba(169, 108, 208, 0.7) 60%);
         top: 100px;
         left: -200px;
         z-index: -1;
@@ -391,10 +390,9 @@
         width: 800px;
         height: 800px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, 
-        rgba(45, 140, 190, 0.6) 41%, 
-        rgba(87, 132, 199, 1) 66%, 
-        rgba(169, 108, 208, 0.7) 88%, transparent 70%);
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%,
+        rgba(87, 132, 199, 1) 45%, 
+        rgba(169, 108, 208, 0.7) 60%);
         top: 1400px;
         right: -250px;
         z-index: -1;
@@ -407,11 +405,11 @@
     }
     
     #query::before {
-        animation: float 8s ease-in-out infinite;
+        animation: float 7s ease-in-out infinite;
     }
     
     #query::after {
-        animation: float 10s ease-in-out infinite reverse;
+        animation: float 7s ease-in-out infinite reverse;
     }
 
     #caseStudies{
@@ -433,12 +431,12 @@
         right: -200px;
         bottom: -100px;
         background: linear-gradient(to bottom,
-            rgba(111, 0, 0, 0.05) 0%,
-            rgba(111, 0, 0, 0.03) 25%,
-            rgba(1, 48, 136, 0.05) 40%,
-            rgba(1, 48, 136, 0.03) 60%,
-            rgba(188, 214, 216, 0.05) 75%,
-            rgba(188, 214, 216, 0.03) 100%
+            rgba(111, 0, 0, 0.09) 0%,
+            rgba(111, 0, 0, 0.06) 25%,
+            rgba(1, 48, 136, 0.09) 40%,
+            rgba(1, 48, 136, 0.06) 60%,
+            rgba(188, 214, 216, 0.09) 75%,
+            rgba(188, 214, 216, 0.06) 100%
         );
         z-index: -2;
         pointer-events: none;
@@ -601,16 +599,16 @@
     .experiment h3, .experiment p{
         margin: 4px 0px;
     }
-    .exp-item{
+    .exp-item a{
         display: flex;
         gap: 24px;
         padding: 16px 0px;
     }
     .exp-item:nth-child(1){
-        flex: 1;
-    }
-    .exp-item:nth-child(1){
         flex: 2;
+    }
+    .exp-item:nth-child(2){
+        flex: 1;
     }
     .exp-item h3, .exp-item p{
         color: rgb(255, 255, 255, 0.6);
