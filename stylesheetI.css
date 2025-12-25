@@ -600,12 +600,12 @@
     .experiment h3, .experiment p{
         margin: 4px 0px;
     }
-    .exp-item {
+    .exp-item{
         display: flex;
         gap: 24px;
         padding: 16px 0px;
     }
-    .exp-item a {
+    .exp-item a{
         display: flex;
         width: 100%;
         gap: 24px;
