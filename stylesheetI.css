@@ -375,7 +375,7 @@
         width: 700px;
         height: 700px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(0, 41, 111, 0.15) 0%, rgba(0, 41, 111, 0.05) 50%, transparent 70%);
+        background: radial-gradient(circle, rgba(0, 41, 111, 0.25) 0%, rgba(0, 41, 111, 0.1) 50%, transparent 70%);
         top: 100px;
         left: -200px;
         z-index: -1;
@@ -388,12 +388,24 @@
         width: 800px;
         height: 800px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(188, 214, 216, 0.2) 0%, rgba(188, 214, 216, 0.08) 50%, transparent 70%);
+        background: radial-gradient(circle, rgba(188, 214, 216, 0.3) 0%, rgba(188, 214, 216, 0.12) 50%, transparent 70%);
         top: 1400px;
         right: -250px;
         z-index: -1;
         filter: blur(100px);
         pointer-events: none;
+    }
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    #query::before {
+        animation: float 8s ease-in-out infinite;
+    }
+    
+    #query::after {
+        animation: float 10s ease-in-out infinite reverse;
     }
 
     #caseStudies{
@@ -415,8 +427,8 @@
         right: -200px;
         bottom: -100px;
         background: linear-gradient(to bottom,
-            rgba(0, 41, 111, 0.05) 0%,
-            rgba(0, 41, 111, 0.03) 25%,
+            rgba(111, 0, 0, 0.05) 0%,
+            rgba(111, 0, 0, 0.03) 25%,
             rgba(1, 48, 136, 0.05) 40%,
             rgba(1, 48, 136, 0.03) 60%,
             rgba(188, 214, 216, 0.05) 75%,
