@@ -582,12 +582,13 @@
     #experiments{
         display: flex;
     }
-    #experiments div{
-        flex: 1;
-    }
     #exp{
+        flex: 1;
         display: block;
         margin: 0px auto auto 24px;
+    }
+    #ExpVidCol{
+        flex: 1;
     }
     #exp h2{
         color: rgb(255, 255, 255);
