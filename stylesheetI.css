@@ -371,6 +371,8 @@
         width: 1100px;
         margin: 96px auto auto;
         transition: color 0.3s ease;
+        perspective: 2000px;
+        transform-style: preserve-3d;
     }
     }
     .data{
@@ -392,6 +394,12 @@
         transform: translateY(30px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         overflow: hidden; 
+
+        transform-style: preserve-3d;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                opacity 0.6s ease-out, 
+                filter 0.6s ease-out;
+        will-change: transform, opacity;
     }
     .dataCS:nth-child(1){
         background: linear-gradient(to bottom, rgb(0, 41, 111), white);

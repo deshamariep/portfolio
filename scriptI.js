@@ -116,18 +116,60 @@
     document.querySelector("#dataDesktopBar").classList.add("loaded");
   });
 
-  const caseImgs = document.querySelectorAll('.dataCaseImg, .dataCS');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.05 });
+  // const caseImgs = document.querySelectorAll('.dataCaseImg, .dataCS');
+  // const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach(entry => {
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add('visible');
+  //       observer.unobserve(entry.target);
+  //     }
+  //   });
+  // }, { threshold: 0.05 });
 
-  caseImgs.forEach(el => {
-    observer.observe(el);
+  // caseImgs.forEach(el => {
+  //   observer.observe(el);
+  // });
+
+  // WITH THIS NEW 3D PARALLAX FUNCTION:
+  function handleStaggered3DCards() {
+    const cards = document.querySelectorAll('.dataCS');
+    const windowHeight = window.innerHeight;
+  
+    cards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const cardTop = rect.top;
+      const cardBottom = rect.bottom;
+
+      const progress = Math.max(0, Math.min(1, 
+        (windowHeight - cardTop) / (windowHeight * 0.6)
+     ));
+    
+      const direction = index % 2 === 0 ? 1 : -1;
+    
+      const translateX = (1 - progress) * 400 * direction;
+      const translateY = (1 - progress) * 150;
+      const translateZ = (1 - progress) * -500;
+      const rotateY = (1 - progress) * 25 * direction;
+      const rotateX = (1 - progress) * 10;
+    
+      const opacity = 0.2 + (progress * 0.8);
+      const blur = (1 - progress) * 8;
+    
+      card.style.transform = `
+        perspective(2000px)
+        translateX(${translateX}px)
+        translateY(${translateY}px)
+        translateZ(${translateZ}px)
+        rotateY(${rotateY}deg)
+        rotateX(${rotateX}deg)
+      `;
+      card.style.opacity = opacity;
+      card.style.filter = `blur(${blur}px)`;
+    });
+  }
+  window.addEventListener('load', () => {
+    handleStaggered3DCards();
+    handleBackgroundTransition();
   });
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -335,6 +377,7 @@
     if (!bgTicking) {
       window.requestAnimationFrame(() => {
         handleBackgroundTransition();
+        handleStaggered3DCards();
         bgTicking = false;
       });
       bgTicking = true;
