@@ -373,8 +373,45 @@
         transition: color 0.3s ease;
         perspective: 2000px;
         transform-style: preserve-3d;
+
+        position: relative;
+        background: linear-gradient(to bottom,
+            rgba(0, 41, 111, 0.015) 0%,
+            rgba(0, 41, 111, 0.03) 25%,
+            rgba(1, 48, 136, 0.015) 40%,
+            rgba(1, 48, 136, 0.03) 60%,
+            rgba(188, 214, 216, 0.02) 75%,
+            rgba(188, 214, 216, 0.04) 100%
+        );
+        padding: 80px 0;
+        overflow: visible;
     }
+    /* Floating orbs */
+    #caseStudies::before {
+        content: '';
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(0, 41, 111, 0.08) 0%, transparent 70%);
+        top: 10%;
+        left: -15%;
+        z-index: -1;
+        filter: blur(60px);
     }
+    #caseStudies::after {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(188, 214, 216, 0.1) 0%, transparent 70%);
+        bottom: 5%;
+        right: -20%;
+        z-index: -1;
+        filter: blur(80px);
+    }
+    
     .data{
         display: flex;
         justify-content: space-between; 
@@ -684,12 +721,13 @@
         text-decoration: underline;
         color: rgb(0, 0, 255);
     }
-@media screen and (min-width: 1650px){
+}
+/* @media screen and (min-width: 1650px){
 
 }
 @media screen and (min-width: 1850px){
     
-}
+} */
 @keyframes footerGradientSwipe {
     0% {
         background-position: 100% 50%;
