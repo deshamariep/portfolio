@@ -594,21 +594,23 @@
         margin: 24px 0px;
     }
     .experiment{
+        flex: 3;
         padding: 8px 0px;
     }
     .experiment h3, .experiment p{
         margin: 4px 0px;
     }
-    .exp-item a{
+    .exp-item {
         display: flex;
         gap: 24px;
         padding: 16px 0px;
     }
-    .experiment{
-        flex: 3;
-    }
-    .expRead{
-        flex: 1;
+    .exp-item a {
+        display: flex;
+        width: 100%;
+        gap: 24px;
+        color: inherit;
+        text-decoration: none;
     }
     .exp-item h3, .exp-item p{
         color: rgb(255, 255, 255, 0.6);
@@ -626,6 +628,7 @@
         color: rgb(255, 255, 255);
     }
     .expRead{
+        flex: 1;
         display: block;
         margin: auto;
     }
