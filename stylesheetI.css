@@ -604,10 +604,10 @@
         gap: 24px;
         padding: 16px 0px;
     }
-    .exp-item a div:nth-child(1){
+    .experiment{
         flex: 3;
     }
-    .exp-item a div:nth-child(2){
+    .expRead{
         flex: 1;
     }
     .exp-item h3, .exp-item p{
