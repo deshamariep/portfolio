@@ -163,6 +163,7 @@
     }
     h1{
         font-size: 64px;
+        margin: 8px 0px 32px;
         letter-spacing: 0.03em;
     }
     /* h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
@@ -191,7 +192,7 @@
     .hero-content {
         text-align: left; 
         z-index: 4;
-        margin: 175px auto;
+        margin: 56px auto;
         margin-left: -24px;
     }
     .dataHero{
@@ -216,11 +217,15 @@
         margin: auto;
         margin-top: 16px;
         max-width: 780px; 
-        text-align: center;
+        text-align: left;
     }
     #dataTitle h2 {
         font-size: 28px;
         font-weight: 300;
+        margin: 8px 0px 40px;
+    }
+    #dataTitle h3{
+        margin: 8px 0px;
     }
     #heroAvatar{
         flex: 1;
@@ -232,7 +237,8 @@
     .heroExp{
         margin-top: 40px;
         display: block;
-        padding: 24px;
+        width: 390px;
+        padding: 16px;
         background-color: rgba(255, 255, 255);
         border: 1px solid radial-gradient(
             circle,
@@ -241,7 +247,7 @@
         );
         border-radius: 10px;
     }
-    #receExpTitle{
+    #receExpTitle p{
         font-size: 12px;
         color: radial-gradient(
             circle,
@@ -250,7 +256,8 @@
         );
     }
     #desktop{
-        display: flex;               
+        display: flex;
+        flex-wrap: wrap;             
         justify-content: center;
         align-items: center;
         width: 390px;                
@@ -261,8 +268,9 @@
     #dataDesktopBar{
         margin-top: 24px;
         display: flex;
+        flex-wrap: wrap; 
         gap: 16px;
-        padding: 24px;
+        padding: 16px;
         background-color: rgba(255, 255, 255);
         border: 1px solid radial-gradient(
             circle,
