@@ -64,7 +64,6 @@
         display: flex; 
         width: max-content;
         z-index: 4;
-        height: 221px;
         padding-top: 150px;
     }
     #logotx h1, #logotx p{
