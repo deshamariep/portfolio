@@ -58,8 +58,8 @@
     }
     .hero-top{
         background-color: (255, 255, 255, 0.1);
-        backdrop-filter: blur(10px); /* blur what's behind */
-        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        backdrop-filter: blur(6px); 
+        -webkit-backdrop-filter: blur(6px);
     }
     .hero-top.sticky #one a{
         color: rgb(48, 48, 66);
@@ -83,7 +83,7 @@
         margin: 0px;
     }
     #infoBox{
-        margin-top: 24px;
+        margin-top: 32px;
     }
     #infoBox div{
         margin-top: 16px;

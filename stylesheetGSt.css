@@ -52,8 +52,8 @@
     }
     .hero-top {
         background-color: (255, 255, 255, 0.1);
-        backdrop-filter: blur(10px); 
-        -webkit-backdrop-filter: blur(10px); 
+        backdrop-filter: blur(6px); 
+        -webkit-backdrop-filter: blur(6px); 
     }
     .hero-content{
         max-width: 800px;
@@ -74,7 +74,7 @@
         margin: 0px;
     }
     #infoBox{
-        margin-top: 24px;
+        margin-top: 32px;
     }
     #infoBox div{
         margin-top: 16px;
