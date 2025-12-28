@@ -187,7 +187,7 @@
     .hero-content {
         text-align: left; 
         z-index: 4;
-        margin: 176px auto 0px;
+        margin: 144px auto 0px;
         margin-left: -24px;
     }
     .dataHero{
@@ -245,7 +245,7 @@
         font-style: italic;
     }
     .heroExp{
-        margin-top: 32px;
+        margin-top: 56px;
         display: block;
         max-width: 390px;
         padding: 8px 16px;
