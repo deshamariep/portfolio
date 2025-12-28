@@ -116,19 +116,32 @@
     document.querySelector("#dataDesktopBar").classList.add("loaded");
   });
 
-  // const caseImgs = document.querySelectorAll('.dataCaseImg, .dataCS');
-  // const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach(entry => {
-  //     if (entry.isIntersecting) {
-  //       entry.target.classList.add('visible');
-  //       observer.unobserve(entry.target);
-  //     }
-  //   });
-  // }, { threshold: 0.05 });
+  // Mouse Parallax for Avatar Container
+  document.addEventListener('mousemove', (e) => {
+    const avatar = document.querySelector('.avatar-container');
+    if (!avatar) return;
+    
+    const rect = avatar.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const x = e.clientX - centerX;
+    const y = e.clientY - centerY;
+    
+    // Apply 3D tilt based on mouse position
+    avatar.style.transform = `perspective(1000px) rotateY(${x / 20}deg) rotateX(${-y / 20}deg)`;
+  });
 
-  // caseImgs.forEach(el => {
-  //   observer.observe(el);
-  // });
+  // Reset transform when mouse leaves hero
+  const heroContent = document.querySelector('.hero-content');
+  if (heroContent) {
+    heroContent.addEventListener('mouseleave', () => {
+        const avatar = document.querySelector('.avatar-container');
+        if (avatar) {
+            avatar.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+        }
+    });
+  }
 
   // WITH THIS NEW 3D PARALLAX FUNCTION:
   function handleStaggered3DCards() {
