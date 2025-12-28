@@ -217,13 +217,14 @@
         font-weight: 500;
         margin: 0px;
         font-size: 64px;
-        margin: 8px 0px 24px;
+        margin: 0px 0px 8px;
         letter-spacing: 0.03em;
     }
     #dataTitle h2{
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 300;
         margin: -8px 0px 8px;
+        width: 680px;
     }
     #dataTitle h3{
         margin: 8px 0px 0px;
