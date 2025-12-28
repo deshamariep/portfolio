@@ -187,7 +187,7 @@
     .hero-content {
         text-align: left; 
         z-index: 4;
-        margin: 112px auto 0px;
+        margin: 136px auto 0px;
         margin-left: -24px;
     }
     .dataHero{
@@ -258,7 +258,7 @@
     }
     #receExpTitle {
         font-size: 12px !important;
-        background: linear-gradient(135deg, rgba(0,94,255,1), rgba(194,0,255,1));
+        background: linear-gradient(90deg, rgba(0,94,255,1), rgba(194,0,255,1));
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
