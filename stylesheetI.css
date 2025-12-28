@@ -462,8 +462,8 @@
         height: 700px;
         border-radius: 50%;
         background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 25%,  
-        rgba(0,94,255,0.5) 45%, 
-        rgba(194,0,255,0.3) 75%);
+        rgba(0,94,255,0.3) 45%, 
+        rgba(194,0,255,0.15) 75%);
         top: 100px;
         left: -200px;
         z-index: -1;
@@ -477,8 +477,8 @@
         height: 800px;
         border-radius: 50%;
         background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 25%,
-        rgba(0,94,255,0.5) 45%, 
-        rgba(194,0,255,0.3) 75%);
+        rgba(0,94,255,0.3) 45%, 
+        rgba(194,0,255,0.15) 75%);
         top: 1400px;
         right: -250px;
         z-index: -1;
@@ -517,12 +517,12 @@
         right: -200px;
         bottom: -100px;
         background: linear-gradient(to bottom,
-            rgba(111, 0, 0, 0.07) 0%,
-            rgba(111, 0, 0, 0.05) 25%,
-            rgba(1, 48, 136, 0.09) 40%,
-            rgba(1, 48, 136, 0.06) 60%,
-            rgba(188, 214, 216, 0.09) 75%,
-            rgba(188, 214, 216, 0.06) 100%
+            rgba(111, 0, 0, 0.05) 0%,
+            rgba(111, 0, 0, 0.03) 25%,
+            rgba(1, 48, 136, 0.07) 40%,
+            rgba(1, 48, 136, 0.05) 60%,
+            rgba(188, 214, 216, 0.07) 75%,
+            rgba(188, 214, 216, 0.05) 100%
         );
         z-index: -2;
         pointer-events: none;
@@ -623,12 +623,10 @@
         padding: 4px 12px;
         background-color: rgb(0, 0, 0, 0.05);
         border: 1px solid rgb(0, 0, 0, 0.1);
-        border-radius: 20px;
+        border-radius: 30px;
         color: rgb(48, 48, 66);
-    }
-    .csTag .smolP{
-        margin: 0px;
-        padding: 0px;
+        align-content: center;
+        justify-items: center;
     }
     .csBottom .readIcon{
         flex: end;
