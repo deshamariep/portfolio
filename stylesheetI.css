@@ -239,7 +239,7 @@
     .heroExp{
         margin-top: 40px;
         display: block;
-        width: 390px;
+        max-width: 390px;
         padding: 16px;
         border-radius: 10px;
         border: 2px solid transparent;
