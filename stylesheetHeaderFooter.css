@@ -115,11 +115,11 @@
     #footTitle{
         margin: 8px 0px 8px;
     
-        background-image: radial-gradient(
+        background-image: linear-gradient(
             circle,
             rgba(0,94,255) 0%,
-            rgba(255,255,255) 50%, 
-            rgba(194, 0, 255) 100%
+            rgba(255,255,255) 10%, 
+            rgba(194, 0, 255) 20%
         );
         background-size: 300% 300%;
         background-clip: text;
@@ -252,11 +252,11 @@
     
     /* animated gradient */
     .hero-heading-anim {
-        background-image: radial-gradient(
+        background-image: linear-gradient(
             circle,
             rgba(0,94,255) 0%,
-            rgba(255,255,255) 50%, 
-            rgba(194, 0, 255) 100%
+            rgba(255,255,255) 10%, 
+            rgba(194, 0, 255) 20%
         );
         background-size: 300% 300%;
         background-clip: text;
@@ -313,7 +313,7 @@
     #footTitle{
         margin: 22px 0px 16px;
     
-        background-image: radial-gradient(
+        background-image: linear-gradient(
             circle,
             rgba(0,94,255) 0%, 
             rgba(194, 0, 255) 100%

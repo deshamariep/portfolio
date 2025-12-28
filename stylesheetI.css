@@ -220,7 +220,6 @@
         text-align: left;
     }
     #dataTitle h2 {
-        font-size: 28px;
         font-weight: 300;
         margin: 8px 0px 32px;
     }
@@ -245,14 +244,14 @@
         border: 2px solid transparent;
         background:
             rgba(255,255,255,0.9) padding-box,
-            radial-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box;
+            linear-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box;
         background-clip: padding-box, border-box;
         position: relative;
         isolation: isolate;
     }
     #receExpTitle {
         font-size: 12px !important;
-        background: radial-gradient(circle, rgba(0,94,255), rgba(194,0,255));
+        background: linear-gradient(circle, rgba(0,94,255), rgba(194,0,255));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
@@ -275,7 +274,7 @@
         border: 2px solid transparent;
         background:
             rgba(255,255,255,0.9) padding-box,
-            radial-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box;
+            linear-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box;
         background-clip: padding-box, border-box;
         position: relative;
         isolation: isolate;
