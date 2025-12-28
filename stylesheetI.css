@@ -237,7 +237,7 @@
         font-style: italic;
     }
     .heroExp{
-        margin-top: 40px;
+        margin-top: 32px;
         display: block;
         max-width: 390px;
         padding: 16px;
@@ -255,6 +255,9 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
+    }
+    .smolP{
+        font-size: 16px !important;
     }
     #desktop{
         margin-top: 24px;
@@ -363,7 +366,7 @@
     #dataTitle h2{
         font-size: 28px;
         font-weight: 300;
-        margin: 8px 0px;
+        margin: -16px 0px 8px;
     }
     #dataTitle p{
         margin: 8px 0px;
