@@ -228,9 +228,10 @@
     }
     #heroAvatar{
         flex: 1;
-        margin: auto;
+        display: flex;
         justify-content: center;
         align-items: center;
+        margin: auto;
     }
     .italic{
         font-style: italic;
