@@ -285,10 +285,9 @@
         linear-gradient(135deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
     }
     #desktopArrow {
-        display: none;
-        width: 100%;
+        width: 161px;
         text-align: center;
-        margin-top: 0px;
+        margin-top: 96px;
     }
     #desktopArrow img {
         width: 100%;
