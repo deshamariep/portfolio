@@ -266,6 +266,7 @@
     .smolP{
         font-size: 16px !important;
         margin: 0px;
+        color: rgb(48, 48, 66) !important;
     }
     #desktop{
         margin-top: 16px;
@@ -316,8 +317,8 @@
         align-items: center;
     }
     .dock-item img {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         transform-origin: bottom center;
         transition: transform 0.2s ease;
     }
