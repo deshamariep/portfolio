@@ -188,8 +188,8 @@
     #one nav ul li a {
         transition: color 0.3s ease;
     }
-    .hero-content {      
-        text-align: center;
+    .hero-content {
+        text-align: left; 
         z-index: 4;
         margin: 175px auto;
         margin-left: -24px;
@@ -220,6 +220,7 @@
     }
     #dataTitle h2 {
         font-size: 28px;
+        font-weight: 300;
     }
     #heroAvatar{
         flex: 1;
@@ -228,37 +229,47 @@
     .italic{
         font-style: italic;
     }
+    .heroExp{
+        margin-top: 40px;
+        display: block;
+        padding: 24px;
+        background-color: rgba(255, 255, 255);
+        border: 1px solid radial-gradient(
+            circle,
+            rgba(0,94,255) 0%, 
+            rgba(194, 0, 255) 100%
+        );
+        border-radius: 10px;
+    }
+    #receExpTitle{
+        font-size: 12px;
+        color: radial-gradient(
+            circle,
+            rgba(0,94,255) 0%, 
+            rgba(194, 0, 255) 100%
+        );
+    }
     #desktop{
         display: flex;               
         justify-content: center;
         align-items: center;
-        width: 1290px;                
+        width: 390px;                
         margin: auto;  
         box-sizing: border-box;
         padding: 8px;             
     }
     #dataDesktopBar{
-        margin-top: 200px;
+        margin-top: 24px;
         display: flex;
         gap: 16px;
-        padding: 8px;
-        opacity: 0;
-        background-color: rgb(0, 0, 0, 0.15);
-        border: 1px solid rgb(0, 0, 0, 0.1);
-        border-radius: 16px;
-
-        transform: translateY(100px);
-        transition: opacity 0.8s ease, transform 0.6s ease;
-    }
-    #dataDesktopBar.loaded {            
-        animation: barSlideUp 1s ease-out forwards;
-        animation-delay: 1.2s; 
-    }
-    @keyframes barSlideUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        padding: 24px;
+        background-color: rgba(255, 255, 255);
+        border: 1px solid radial-gradient(
+            circle,
+            rgba(0,94,255) 0%, 
+            rgba(194, 0, 255) 100%
+        );
+        border-radius: 10px;
     }
     #desktopArrow {
         display: none;
@@ -267,9 +278,7 @@
         margin-top: 215px;
     }
     #desktopArrow img {
-        width: 60px;
-        opacity: 0;
-        transition: opacity 0.5s ease;
+        width: 100%;
         animation: floatArrow 2s ease-in-out infinite;
     }
     @keyframes floatArrow {
@@ -348,7 +357,7 @@
         }
     }
     #dataTitle h1{
-        font-weight: 400;
+        font-weight: 500;
         margin: 0px;
     }
     #dataTitle h2{

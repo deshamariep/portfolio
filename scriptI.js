@@ -171,27 +171,6 @@
     handleStaggered3DCards();
     handleBackgroundTransition();
   });
-  
-  // arrow
-  setTimeout(() => {
-    const desktop = document.getElementById("desktop");
-    const arrow = document.getElementById("desktopArrow");
-    const arrowImg = arrow.querySelector("img");
-  
-    desktop.style.transition = "opacity 0.5s ease";
-    desktop.style.opacity = 0;
-  
-    setTimeout(() => {
-      desktop.style.display = "none";
-      arrow.style.display = "block";
-  
-      setTimeout(() => {
-        arrowImg.style.opacity = 1;
-      }, 50);
-  
-    }, 500);
-  
-  }, 10000);
 
   // exp
   const video = document.getElementById("expVideo");
