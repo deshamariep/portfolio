@@ -232,7 +232,7 @@
     #dataTitle p{
         margin: 8px 0px;
         font-size: 22px;
-        color: rgb(200, 200, 200);
+        color: rgb(48, 48, 66);
     }
     #heroAvatar{
         flex: 1;
@@ -267,7 +267,6 @@
     .smolP{
         font-size: 16px !important;
         margin: 0px;
-        color: rgb(48, 48, 66) !important;
     }
     #desktop{
         margin-top: 16px;
@@ -632,8 +631,8 @@
     }
     .exp-item:hover {
         color: rgb(255, 255, 255);
-        border-top: solid white 1px;
-        border-bottom: solid white 1px;
+        border-top: solid rgb(255, 255, 255, 0.6) 1px;
+        border-bottom: solid rgb(255, 255, 255, 0.6) 1px;
     }
     .exp-item:hover h3, .exp-item:hover p {
         color: rgb(255, 255, 255);
