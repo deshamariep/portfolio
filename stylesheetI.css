@@ -192,7 +192,7 @@
     .hero-content {
         text-align: left; 
         z-index: 4;
-        margin: 56px auto;
+        margin: 128px auto;
         margin-left: -24px;
     }
     .dataHero{
@@ -230,6 +230,8 @@
     #heroAvatar{
         flex: 1;
         margin: auto;
+        justify-content: center;
+        align-items: center;
     }
     .italic{
         font-style: italic;
@@ -242,8 +244,8 @@
         border-radius: 10px;
         border: 2px solid transparent;
         background:
-            radial-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box,
-            rgba(255,255,255,1) padding-box;
+            rgba(255,255,255,1) padding-box,
+            radial-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box;
         background-clip: padding-box, border-box;
     }
     #receExpTitle {
@@ -270,8 +272,8 @@
         border-radius: 10px;
         border: 2px solid transparent;
         background:
-            radial-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box,
-            rgba(255,255,255,1) padding-box;
+            rgba(255,255,255,1) padding-box,
+            radial-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box;
         background-clip: padding-box, border-box;
     }
     #desktopArrow {

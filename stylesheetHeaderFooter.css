@@ -368,11 +368,10 @@
         100% {
             background-position: 50% 50%;
             background-image: none;
-            color: radial-gradient(
-                circle,
-                rgba(0,94,255) 0%, 
-                rgba(194, 0, 255) 100%
-            ); /* Final solid color */
+            background: radial-gradient(circle, rgba(0,94,255), rgba(194,0,255));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
         }
     }
     @keyframes footerGradientSwipe {
