@@ -263,7 +263,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
-        animation: gradientSwipe 3s ease-in-out forwards 500ms;
+        animation: gradientSwipe 5s ease-in-out forwards 500ms;
     }
     
     footer{
@@ -375,8 +375,6 @@
             background-position: 100% 50%;
         }
         100% {
-            background: none;
-            -webkit-text-fill-color: rgb(48, 48, 66);
             color: rgb(48, 48, 66);
         }
     }
