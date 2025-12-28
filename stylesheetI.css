@@ -242,29 +242,18 @@
         max-width: 390px;
         padding: 16px;
         border-radius: 10px;
-        border: 2px solid transparent;
-        background:
-            rgba(255,255,255,0.9) padding-box,
-            linear-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box;
-        background-clip: padding-box, border-box;
-        position: relative;
-        isolation: isolate;
+        border: 3px solid transparent;
+        background: 
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
     }
     #receExpTitle {
         font-size: 12px !important;
         background: linear-gradient(circle, rgba(0,94,255), rgba(194,0,255));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-     }
+    }
     #desktop{
         margin-top: 24px;
-        display: flex;
-        flex-wrap: wrap;             
-        justify-content: center;
-        align-items: center;
-        width: 390px;
-        box-sizing: border-box;            
+        width: 390px;           
     }
     #dataDesktopBar{
         display: flex;
@@ -272,13 +261,10 @@
         gap: 16px;
         padding: 16px;
         border-radius: 12px;
-        border: 2px solid transparent;
-        background:
-            rgba(255,255,255,0.9) padding-box,
-            linear-gradient(circle, rgba(0,94,255), rgba(194,0,255)) border-box;
-        background-clip: padding-box, border-box;
-        position: relative;
-        isolation: isolate;
+        border: 3px solid transparent;
+        background: 
+        linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
     }
     #desktopArrow {
         display: none;
