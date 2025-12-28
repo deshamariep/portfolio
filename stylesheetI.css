@@ -161,11 +161,6 @@
         background-color: rgb(255, 255, 255);
         transition: background-color 0.2s ease-out;
     }
-    h1{
-        font-size: 64px;
-        margin: 8px 0px 32px;
-        letter-spacing: 0.03em;
-    }
     /* h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
         color: #fff;
         text-decoration: none;
@@ -219,12 +214,25 @@
         max-width: 780px; 
         text-align: left;
     }
-    #dataTitle h2 {
-        font-weight: 300;
+    #dataTitle h1{
+        font-weight: 500;
+        margin: 0px;
+        font-size: 64px;
         margin: 8px 0px 32px;
+        letter-spacing: 0.03em;
+    }
+    #dataTitle h2{
+        font-size: 28px;
+        font-weight: 300;
+        margin: -8px 0px 8px;
     }
     #dataTitle h3{
         margin: 8px 0px 0px;
+    }
+    #dataTitle p{
+        margin: 8px 0px;
+        font-size: 22px;
+        color: rgb(170, 170, 170);
     }
     #heroAvatar{
         flex: 1;
@@ -240,7 +248,7 @@
         margin-top: 32px;
         display: block;
         max-width: 390px;
-        padding: 16px;
+        padding: 8px 16px;
         border-radius: 10px;
         border: 1px solid transparent;
         background: 
@@ -258,9 +266,10 @@
     }
     .smolP{
         font-size: 16px !important;
+        margin: 2px 0px;
     }
     #desktop{
-        margin-top: 24px;
+        margin-top: 16px;
         width: 390px;           
     }
     #dataDesktopBar{
@@ -321,7 +330,7 @@
     .dock-label {
         position: absolute;
         top: -40px;
-        background: rgb(0, 0, 0, 0.1);
+        background: rgb(135, 135, 135);
         color: rgb(48, 48, 66);
         white-space: nowrap;
         padding: 4px 8px;
@@ -358,20 +367,6 @@
         100% {
           transform: translateX(-50%); 
         }
-    }
-    #dataTitle h1{
-        font-weight: 500;
-        margin: 0px;
-    }
-    #dataTitle h2{
-        font-size: 28px;
-        font-weight: 300;
-        margin: -16px 0px 8px;
-    }
-    #dataTitle p{
-        margin: 8px 0px;
-        font-size: 22px;
-        color: rgb(170, 170, 170);
     }
     main{
         margin: 0px 24px;
