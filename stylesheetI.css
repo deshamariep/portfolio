@@ -385,8 +385,8 @@
         height: 700px;
         border-radius: 50%;
         background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 25%,  
-        rgba(87, 132, 199, 0.7) 45%, 
-        rgba(169, 108, 208, 0.5) 75%);
+        rgba(0,94,255,0.5) 45%, 
+        rgba(194,0,255,0.3) 75%);
         top: 100px;
         left: -200px;
         z-index: -1;
@@ -396,12 +396,12 @@
     #query::after {
         content: '';
         position: absolute;
-        width: 700px;
-        height: 700px;
+        width: 800px;
+        height: 800px;
         border-radius: 50%;
         background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 25%,
-        rgba(87, 132, 199, 0.7) 45%, 
-        rgba(169, 108, 208, 0.5) 75%);
+        rgba(0,94,255,0.5) 45%, 
+        rgba(194,0,255,0.3) 75%);
         top: 1400px;
         right: -250px;
         z-index: -1;
@@ -410,15 +410,15 @@
     }
     @keyframes float {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-200px); }
+        50% { transform: translateY(-150px); }
     }
     
     #query::before {
-        animation: float 8s ease-in-out infinite;
+        animation: float 7s ease-in-out infinite;
     }
     
     #query::after {
-        animation: float 8s ease-in-out infinite reverse;
+        animation: float 7s ease-in-out infinite reverse;
     }
 
     #caseStudies{
@@ -548,6 +548,9 @@
         border: 1px solid rgb(0, 0, 0, 0.1);
         border-radius: 20px;
         color: rgb(48, 48, 66);
+    }
+    .csTag .smolP{
+        margin: 0px;
     }
     .csBottom .readIcon{
         flex: end;
