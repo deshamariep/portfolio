@@ -187,7 +187,7 @@
     .hero-content {
         text-align: left; 
         z-index: 4;
-        margin: 136px auto 0px;
+        margin: 176px auto 0px;
         margin-left: -24px;
     }
     .dataHero{
@@ -216,7 +216,7 @@
     #dataTitle h1{
         font-weight: 500;
         margin: 0px;
-        font-size: 64px;
+        font-size: 48px;
         margin: 0px 0px 8px;
         letter-spacing: 0.03em;
     }
