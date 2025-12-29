@@ -861,10 +861,14 @@
         color: rgb(0, 0, 255);
     }
 }
-/* @media screen and (min-width: 1650px){
-
+@media screen and (min-width: 1650px){
+    #desktopArrow {
+        width: 161px;
+        align-items: center;
+        margin: 10% auto 0px;
+    }
 }
-@media screen and (min-width: 1850px){
+/* @media screen and (min-width: 1850px){
     
 } */
 @keyframes footerGradientSwipe {
