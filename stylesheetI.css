@@ -218,12 +218,13 @@
     #firstTitle{
         padding: 16px;
         display: block;
-        background: rgba(255, 255, 255, 0.1); 
+        position: relative;      
+        background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
         border-radius: 10px;
-        border: 1px solid rgba(255,255,255,0.15); 
-        box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+        border: 1px solid rgba(255,255,255,0.15);
+        z-index: 1;
     }
     #dataTitle h1{
         font-weight: 500;
