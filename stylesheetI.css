@@ -220,7 +220,6 @@
         z-index: 3;
         box-sizing: border-box;
         background-color: rgb(255, 255, 255, 0.1);
-        box-shadow: 0 6px 18px rgba(0,0,0,0.10);
         border: 1px solid rgba(255,255,255,0.15);
         border-radius: 10px; 
         backdrop-filter: blur(6px); 
