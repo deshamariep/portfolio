@@ -22,7 +22,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 24px 24px;
-        z-index: 3;
+        z-index: 10;
         box-sizing: border-box;
         background-color: rgb(255, 255, 255, 0.1);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
@@ -192,7 +192,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 24px 24px;
-        z-index: 3;
+        z-index: 10;
         box-sizing: border-box;
         background-color: rgb(255, 255, 255, 0.1);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
@@ -258,7 +258,7 @@
         left: 24px;            
         transform: translateY(-50%); 
         width: 100%;
-        z-index: 4;
+        z-index: 5;
         margin: 0;
     }
     .hero-content h1{
