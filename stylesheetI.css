@@ -213,7 +213,14 @@
         flex: 1;
         margin: auto;
         max-width: 780px; 
-        text-align: left;
+        text-align: left; 
+    }
+    #firstTitle{
+        padding: 16px;
+        display: block;
+        background-color: (255, 255, 255, 0.1);
+        backdrop-filter: blur(6px); 
+        -webkit-backdrop-filter: blur(6px);
     }
     #dataTitle h1{
         font-weight: 500;

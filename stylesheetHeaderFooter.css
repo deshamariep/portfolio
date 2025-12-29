@@ -12,11 +12,11 @@
     }
     .hero-top{
         position: absolute;
-        top: 16px;          
-        left: 16px;         
-        right: 16px;       
-        width: calc(100% - 32px); 
-        max-width: calc(100% - 32px);
+        top: 4px;          
+        left: 8px;         
+        right: 8px;       
+        width: calc(100% - 16px); 
+        max-width: calc(100% - 16px);
         height: 70px;
         display: flex;
         align-items: center;
@@ -31,10 +31,10 @@
     }
     .hero-top.sticky {
         position: fixed;
-        top: 16px;          
-        left: 16px;          
-        right: 16px;        
-        width: calc(100% - 32px);
+        top: 4px;          
+        left: 8px;          
+        right: 8px;        
+        width: calc(100% - 16px);
         transform: translateY(-150%); 
         transition: transform 320ms cubic-bezier(.2,.9,.2,1), background-color 320ms ease, box-shadow 320ms ease;
         background: rgba(255,255,255,0.3); 
@@ -180,7 +180,7 @@
     }
     .hero-top {
         position: absolute;
-        top: 24px;          
+        top: 16px;          
         left: 24px;         
         right: 24px;       
         width: calc(100% - 48px); 
@@ -194,7 +194,7 @@
         box-sizing: border-box;
         background-color: rgb(255, 255, 255, 0.3);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-        border-radius: 30px; 
+        border-radius: 50px; 
         backdrop-filter: blur(6px); 
     }
     :target {
@@ -202,7 +202,7 @@
     }
     .hero-top.sticky {
         position: fixed;
-        top: 24px;          
+        top: 16px;          
         left: 24px;          
         right: 24px;        
         width: calc(100% - 48px);
@@ -211,7 +211,7 @@
         background: rgba(255,255,255,0.3); 
         backdrop-filter: blur(6px);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-        border-radius: 30px;  
+        border-radius: 50px;  
         z-index: 9999; 
     }
     .hero-top.sticky.visible {
