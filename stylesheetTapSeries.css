@@ -222,53 +222,46 @@
     .teams p{
         margin: 0px;
     }
-
     .heuristic-chart-container {
         width: 100%;
         max-width: 1100px;
-        height: 400px;
+        height: 475px;
         margin: 40px auto;
         background: #F8FAFB;
         position: relative;
         background-image: radial-gradient(circle, rgba(74, 144, 226, 0.1) 1px, transparent 1px);
         background-size: 30px 30px;
     }
-    
     .chart-title {
         position: absolute;
         top: 40px;
         left: 80px;
-        font-size: 26px;
-        font-weight: 700;
+        font-size: 24px;
+        font-weight: 600;
         color: #2C3E50;
         letter-spacing: -0.5px;
         font-family: 'Newsreader', serif;
     }
-    
     .y-axis {
         position: absolute;
         left: 80px;
         top: 110px;
     }
-    
     .y-label {
         margin-bottom: 50px;
     }
-    
     .y-label h3 {
-        font-size: 11px;
-        font-weight: 600;
+        font-size: 15px;
+        font-weight: 500;
         color: #2C3E50;
         margin-bottom: 4px;
         font-family: 'Newsreader', serif;
     }
-    
     .y-label p {
-        font-size: 9px;
+        font-size: 12px;
         color: #7F8C8D;
         font-weight: 400;
     }
-    
     .chart-area {
         position: absolute;
         left: 420px;
@@ -276,7 +269,6 @@
         width: 600px;
         height: 305px;
     }
-    
     .grid-line {
         position: absolute;
         left: 0;
@@ -284,13 +276,11 @@
         height: 1px;
         background: #E8EDF2;
     }
-    
     .grid-line:nth-child(1) { top: 0; }
     .grid-line:nth-child(2) { top: 65px; }
     .grid-line:nth-child(3) { top: 130px; }
     .grid-line:nth-child(4) { top: 195px; }
     .grid-line:nth-child(5) { top: 260px; }
-    
     .v-grid-line {
         position: absolute;
         top: 0;
@@ -300,12 +290,10 @@
         opacity: 0.5;
         border-left: 1px dashed #E8EDF2;
     }
-    
     .v-grid-line:nth-child(6) { left: 150px; }
     .v-grid-line:nth-child(7) { left: 300px; }
     .v-grid-line:nth-child(8) { left: 450px; }
     .v-grid-line:nth-child(9) { left: 600px; border-left: 1px solid #E8EDF2; }
-    
     .x-axis-label {
         position: absolute;
         top: 280px;
@@ -314,13 +302,11 @@
         color: #7F8C8D;
         transform: translateX(-50%);
     }
-    
     .x-axis-label:nth-of-type(1) { left: 0; }
     .x-axis-label:nth-of-type(2) { left: 150px; }
     .x-axis-label:nth-of-type(3) { left: 300px; }
     .x-axis-label:nth-of-type(4) { left: 450px; }
     .x-axis-label:nth-of-type(5) { left: 600px; }
-    
     .x-axis-title {
         position: absolute;
         top: 300px;
@@ -330,7 +316,6 @@
         font-weight: 600;
         color: #7F8C8D;
     }
-    
     .bar-container {
         position: absolute;
         left: 0;
@@ -341,76 +326,40 @@
         align-items: center;
         transition: transform 0.3s ease;
     }
-    
     .bar-container:hover {
         transform: translateX(5px);
     }
-    
     .bar-container.critical {
         background: linear-gradient(135deg, #E74C3C, #C0392B);
         opacity: 0.85;
     }
-    
     .bar-container.high {
         background: linear-gradient(135deg, #FF8C42, #FF6B1A);
         opacity: 0.85;
     }
-    
     .bar-container.medium {
         background: linear-gradient(135deg, #FF8C42, #FF6B1A);
         opacity: 0.6;
     }
-    
     .bar-1 { top: 18px; width: 300px; }
     .bar-2 { top: 83px; width: 150px; }
     .bar-3 { top: 148px; width: 150px; }
     .bar-4 { top: 213px; width: 450px; }
-    
-    .issue-circle {
-        width: 16px;
-        height: 16px;
-        background: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 10px;
-        font-weight: 700;
-        color: #C0392B;
-        opacity: 0.9;
-        position: absolute;
-    }
-    
-    .bar-1 .issue-circle:nth-child(1) { left: 75px; }
-    .bar-1 .issue-circle:nth-child(2) { left: 225px; }
-    .bar-2 .issue-circle:nth-child(1) { left: 75px; }
-    .bar-3 .issue-circle:nth-child(1) { left: 75px; }
-    .bar-4 .issue-circle:nth-child(1) { left: 75px; }
-    .bar-4 .issue-circle:nth-child(2) { left: 225px; }
-    .bar-4 .issue-circle:nth-child(3) { left: 375px; }
-    
-    .high .issue-circle, .medium .issue-circle {
-        color: #FF6B1A;
-    }
-    
     .bar-count {
         position: absolute;
         font-size: 18px;
         font-weight: 700;
         color: #E74C3C;
     }
-    
-    .bar-1 + .bar-count { left: 310px; top: 40px; }
-    .bar-2 + .bar-count { left: 160px; top: 105px; color: #FF8C42; }
-    .bar-3 + .bar-count { left: 160px; top: 170px; color: #FF8C42; }
-    .bar-4 + .bar-count { left: 460px; top: 235px; }
-    
+    .bar-1 + .bar-count { left: 310px; top: 25px; }
+    .bar-2 + .bar-count { left: 160px; top: 90px; color: #FF8C42; }
+    .bar-3 + .bar-count { left: 160px; top: 155px; color: #FF8C42; }
+    .bar-4 + .bar-count { left: 460px; top: 220px; }
     @media (max-width: 1200px) {
         .heuristic-chart-container {
           overflow-x: auto;
         }
     }
-
     .dataLinks{
         display: flex;
         justify-content: space-between; 
