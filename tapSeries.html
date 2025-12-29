@@ -104,7 +104,7 @@
                 <div class="data">
                     <div class="data420">
                         <h4>Context</h4>
-                        <hr>
+                        <br>
                         <div class="teams">
                             <p><b>Duration:</b></p>
                             <p>2 Weeks</p>
@@ -233,7 +233,94 @@
                             <p class="smolP">User Flow</p>
                         </div>
                         <div class="datatext">
-                            <p>While assisting admins over the phone, I often guided them through adding students in the system. During these calls, I began to notice <b>a pattern, whenever a student’s name was entered incorrectly</b>, their <b>tasks were frequently interrupted</b> because <b>only I or another team member could manually update names</b>. First we had to double-check that the student’s information was accurate and <b>confirm they had not already started or completed training</b>. These <b>repeated moments provided me with firsthand insight</b> into how <b>confusing and disruptive the process felt for administrators</b>, sparking the idea for a more intuitive and secure name correction flow.</p>
+                            <div class="frustration-visual-container">
+                                <h3 class="frustration-title">The Admin Experience: A Cycle of Interruption</h3>
+                                
+                                <div class="workflow-timeline">
+                                    <div class="timeline-line"></div>
+                              
+                                    <div class="workflow-step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <div class="step-label">Initial Task</div>
+                                            <div class="step-title">Admin adds student to system</div>
+                                        <div class="step-description">
+                                        Administrator begins the process of enrolling a new student for training</div>
+                                    </div>
+                                </div>
+                              
+                                  <!-- Step 2: Name entered incorrectly -->
+                                <div class="workflow-step problem">
+                                    <div class="step-number">⚠️</div>
+                                    <div class="step-content">
+                                      <div class="step-label">Problem Identified</div>
+                                      <div class="step-title">Student's name entered incorrectly</div>
+                                      <div class="step-description">
+                                        Typo or misspelling occurs during data entry—a common human error
+                                      </div>
+                                      <div class="frustration-badge">🚫 Workflow Blocked</div>
+                                    </div>
+                                </div>
+                              
+                                  <!-- Step 3: Admin realizes they can't fix it -->
+                                  <div class="workflow-step problem">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                      <div class="step-label">Roadblock</div>
+                                      <div class="step-title">Admin discovers they cannot edit the name</div>
+                                      <div class="step-description">
+                                        System restrictions prevent admins from making corrections themselves
+                                      </div>
+                                      <div class="frustration-badge">😤 Task Interrupted</div>
+                                    </div>
+                                  </div>
+                              
+                                  <!-- Step 4: Admin calls support -->
+                                  <div class="workflow-step problem">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                      <div class="step-label">Support Request</div>
+                                      <div class="step-title">Admin must contact TAP support team</div>
+                                      <div class="step-description">
+                                        Phone call required to request manual name correction, pulling them away from other tasks
+                                      </div>
+                                      <div class="time-badge">⏱️ Time Lost: 5-15 min</div>
+                                    </div>
+                                  </div>
+                              
+                                  <!-- Step 5: Support team verifies -->
+                                  <div class="workflow-step problem">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                      <div class="step-label">Manual Verification</div>
+                                      <div class="step-title">Support team manually verifies student info</div>
+                                      <div class="step-description">
+                                        Team member must confirm accuracy and check training status before making changes
+                                      </div>
+                                      <div class="time-badge">⏱️ Additional Time: 3-10 min</div>
+                                    </div>
+                                  </div>
+                              
+                                  <!-- Step 6: Finally resolved -->
+                                  <div class="workflow-step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                      <div class="step-label">Resolution</div>
+                                      <div class="step-title">Name correction completed by support</div>
+                                      <div class="step-description">
+                                        Issue finally resolved, but significant time lost for both admin and support team
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              
+                                <div class="insight-box">
+                                    <div class="insight-title">Key Insight</div>
+                                    <div class="insight-text">
+                                        These repeated interruptions revealed a systemic issue: admins were dependent on support for simple corrections, creating bottlenecks that disrupted workflows on both ends. This pattern sparked the need for a more intuitive and secure name correction flow that could empower admins while maintaining system integrity.
+                                    </div>
+                                </div>
+                            </div>
                             <br>
                             <p class="smolP">Understanding the User Flows</p>
                             <p>Before designing I had to <b>get an understanding of the current user flow</b> to <b>define the steps</b> users would do within <b>in order to complete that task</b>.</p>
@@ -243,10 +330,9 @@
                 </div>
             </div>
             <div class="spaceBtwn">
-                <h4>Solution A: Clearer Post-Exam Messaging</h4>
                 <div class="data newMargin">
                     <div class="data420">
-                        <h4>Clearer Messaging Flows</h4>
+                        <h4><b>Solution A: Clearer Post-Exam Messaging</b></h4>
                     </div>
                     <div class="datatext">
                         <p>Updated text to guide user attention for Fail/Pass Outcomes</p>
@@ -288,10 +374,9 @@
                 </div>
             </div>
             <div class="spaceBtwn">
-                <h4><b>Solution B: Secure Admin Popup Guidance</b></h4>
                 <div class="data newMargin">
                     <div class="data420">
-                        <h4>Admin Editing Guide</h4>
+                        <h4><b>Solution B: Secure Admin Popup Guidance</b></h4>
                     </div>
                     <div class="datatext">
                         <p>A <b>pop-up</b> that <b>identifies restricted name changes</b> after enrollment and <b>highlighted the editable fields with icons</b>. When admins attempted to make changes, the system surfaces, <b>instuctions to a dedicated pages on their dashboard pannel with step-by-step guidance</b>, making the process <b>intuitive, secure, and easy to follow</b>.</p>
@@ -355,7 +440,7 @@
                 <div class="data">
                     <div class="data420">
                         <h4>Context</h4>
-                        <hr>
+                        <br>
                         <div class="teams">
                             <p><b>Duration:</b></p>
                             <p>2 Weeks</p>

@@ -361,6 +361,240 @@
           overflow-x: auto;
         }
     }
+
+    .frustration-visual-container {
+        width: 650px;
+        height: 400px;
+        margin: 40px auto;
+        background: #FAFBFC;
+        padding: 30px;
+        border-radius: 12px;
+        overflow-y: auto;
+    }
+    
+    .frustration-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #2C3E50;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'Newsreader', serif;
+    }
+    
+    .workflow-timeline {
+        position: relative;
+        padding: 20px 0;
+    }
+    
+    /* Central timeline line */
+    .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, #E8EDF2 0%, #4A90E2 50%, #E74C3C 100%);
+        transform: translateX(-50%);
+    }
+    
+    .workflow-step {
+        position: relative;
+        margin-bottom: 35px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .workflow-step:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Alternate left and right */
+    .workflow-step:nth-child(odd) {
+        flex-direction: row;
+    }
+    
+    .workflow-step:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    
+    .step-content {
+        flex: 1;
+        background: white;
+        padding: 12px 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        position: relative;
+        max-width: 250px;
+    }
+    
+    .workflow-step:nth-child(odd) .step-content {
+        text-align: right;
+        margin-left: auto;
+    }
+    
+    .workflow-step:nth-child(even) .step-content {
+        text-align: left;
+        margin-right: auto;
+    }
+    
+    .step-number {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 32px;
+        background: white;
+        border: 3px solid #4A90E2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 700;
+        color: #4A90E2;
+        z-index: 2;
+    }
+    
+    /* Problem steps have red border */
+    .workflow-step.problem .step-number {
+        border-color: #E74C3C;
+        color: #E74C3C;
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% {
+          box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+        }
+    }
+    
+    .workflow-step.problem .step-content {
+        border-left: 4px solid #E74C3C;
+        background: #FEF5F5;
+    }
+    
+    .step-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #7F8C8D;
+        margin-bottom: 8px;
+    }
+    
+    .workflow-step.problem .step-label {
+        color: #E74C3C;
+    }
+    
+    .step-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #2C3E50;
+        margin-bottom: 6px;
+        font-family: 'Newsreader', serif;
+    }
+    
+    .step-description {
+        font-size: 11px;
+        color: #5A6C7D;
+        line-height: 1.5;
+    }
+    
+    .step-icon {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+    }
+    
+    /* Frustration indicators */
+    .frustration-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #FFE5E5;
+        color: #E74C3C;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 600;
+        margin-top: 8px;
+    }
+    
+    .time-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #FFF4E6;
+        color: #FF8C42;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 600;
+        margin-top: 8px;
+    }
+    
+    /* Insight callout */
+    .insight-box {
+        background: linear-gradient(135deg, #4A90E2 0%, #2E5C8A 100%);
+        color: white;
+        padding: 16px 20px;
+        border-radius: 12px;
+        margin-top: 25px;
+        text-align: center;
+        box-shadow: 0 8px 24px rgba(74, 144, 226, 0.3);
+    }
+    
+    .insight-box::before {
+        content: "💡";
+        display: block;
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    
+    .insight-title {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        font-family: 'Newsreader', serif;
+    }
+    
+    .insight-text {
+        font-size: 12px;
+        line-height: 1.5;
+        opacity: 0.95;
+    }
+    
+    @media (max-width: 768px) {
+        .workflow-step {
+          flex-direction: column !important;
+          text-align: center !important;
+        }
+    
+        .step-content {
+          max-width: 100%;
+          margin: 0 !important;
+          text-align: center !important;
+        }
+    
+        .timeline-line {
+          left: 20px;
+        }
+    
+        .step-number {
+          left: 20px;
+        }
+    }
+
     .dataLinks{
         display: flex;
         justify-content: space-between; 
@@ -372,7 +606,7 @@
     .hoverBtn{
         color: rgb(169, 169, 169);
     }
-    .hoverBtn :hover{
+    .hoverBtn p :hover{
         color: rgb(48, 48, 66);
         text-decoration: underline;
     }
