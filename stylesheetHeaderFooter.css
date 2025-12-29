@@ -24,7 +24,7 @@
         padding: 24px 24px;
         z-index: 3;
         box-sizing: border-box;
-        background-color: rgb(255, 255, 255, 0.3);
+        background-color: rgb(255, 255, 255, 0.1);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
         border: 1px solid rgba(255,255,255,0.15);
         border-radius: 30px; 
@@ -38,7 +38,7 @@
         width: calc(100% - 16px);
         transform: translateY(-150%); 
         transition: transform 320ms cubic-bezier(.2,.9,.2,1), background-color 320ms ease, box-shadow 320ms ease;
-        background: rgba(255,255,255,0.3); 
+        background: rgba(255,255,255,0.1); 
         backdrop-filter: blur(6px);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
         border: 1px solid rgba(255,255,255,0.15);
@@ -194,7 +194,7 @@
         padding: 24px 24px;
         z-index: 3;
         box-sizing: border-box;
-        background-color: rgb(255, 255, 255, 0.3);
+        background-color: rgb(255, 255, 255, 0.1);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
         border: 1px solid rgba(255,255,255,0.15);
         border-radius: 50px; 
@@ -211,7 +211,7 @@
         width: calc(100% - 48px);
         transform: translateY(-150%); 
         transition: transform 320ms cubic-bezier(.2,.9,.2,1), background-color 320ms ease, box-shadow 320ms ease;
-        background: rgba(255,255,255,0.3); 
+        background: rgba(255,255,255,0.1); 
         backdrop-filter: blur(6px);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
         border: 1px solid rgba(255,255,255,0.15);
