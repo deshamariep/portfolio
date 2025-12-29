@@ -96,7 +96,7 @@
             </div>
             <img src="images/introLineB.svg" alt="graphic line for section separation" height="1px" width="1392px" class="spaceBtwnLine">
             <div class="spaceBtwn newMargin">
-                <h3>1. Improving Post-Training Clarity & Reducing Customer Support Calls By 34%</h3>
+                <h3>1. Reducing User Confusion: Clearer Messaging & Secure Admin Workflows</h3>
                 <br>
                 <br>
                 <br>
@@ -106,12 +106,12 @@
                         <h4>Context</h4>
                     </div>
                     <div class="datatext">
-                        <p>Users completing the Food Safety Manager training faced <b>unclear next steps</b> after practice exams and <b>frequent login issues</b> when accessing the ANSI proctoring site. This confusion <b>led to certification delays</b> and <b>increased support calls</b>.</p>
-                        <p>The goal was to <b>improve post-exam clarity</b>, <b>guide users based on pass/fail outcomes</b>, and <b>proactively reduce common technical issues</b> during the exam handoff process. Additionally, to create a client-specific version for retail employeres that aligned with their training standards.</p>
+                        <p>Users completing the Food Safety Manager training faced <b>unclear next steps</b> after practice exams and <b>frequent login issues</b> when accessing the ANSI proctoring site. At the same time, admins found student/employee names were often misspelled or didn't match legal documentation. However, <b>unrestricted name editing posed risks</b>—users could <b>falsify training completion and bypass certification</b> requirements. Both issues <b>led to certification delays</b> and <b>increased support calls</b>.</p>
+                        <p>The goal was to <b>improve post-exam clarity</b>, <b>guide users based on pass/fail outcomes</b>, and <b>proactively reduce common technical issues</b> during the exam handoff process. Additionally, to <b>design a secure yet flexible system</b> that allows for <b>genuine name corrections</b> while <b>preventing misuse</b> that could compromise the integrity of training records and certifications.</p>
                         <hr>
                         <div class="teams">
                             <p class="smolP">Duration:</p>
-                            <p>1 Week</p>
+                            <p>2 Weeks</p>
                         </div>
                         <div class="teams">
                             <p class="smolP">Project Supervisor:</p>
@@ -135,12 +135,15 @@
                         <p>I began with this approach to quickly identify design issues that could harm user experience. I found the following discrepancies from Jakob Nielsen’s 10 <b>Usability Heuristics</b>:</p>
                         <p class="smolP">Visibility of System Status</p>
                         <p>❌ <b>Success messages and score outcomes</b> were <b>out of the way</b> and <b>confusing</b></p>
+                        <p>❌ <b>No feedback when an edit attempt happens</b></p>
                         <p class="smolP">Recognition Rather Than Recall</p>
                         <p>❌ <b>No provided guidance</b> increasing the need for users to phone in for support on what to do next<b></p>
                         <p class="smolP">Aesthetic and Minimalist Design</p>
                         <p>❌ Support information was combined to the success message causing <b>clutter</b></p>
                         <p class="smolP">Help Users Recognize, Diagnose, and Recover from Errors</p>
                         <p>❌ <b>No immediate recovery path</b>, leading to confusion or dead ends</p>
+                        <p>❌ <b>Admins have no ability to edit names</b></p>
+                        <p>❌ The system also <b>lacked clear guidance</b></p>
                     </div>
                 </div>
             </div>
@@ -163,7 +166,26 @@
                 </div>
             </div>
             <div class="spaceBtwn">
+                <div class="newMargin">
+                    <div class="data">
+                        <div class="data420">
+                            <h4>Understanding the Workflow</h4>
+                            <p class="smolP">Usability Observation</p>
+                            <p class="smolP">User Flow</p>
+                        </div>
+                        <div class="datatext">
+                            <p>While assisting admins over the phone, I often guided them through adding students in the system. During these calls, I began to notice <b>a pattern, whenever a student’s name was entered incorrectly</b>, their <b>tasks were frequently interrupted</b> because <b>only I or another team member could manually update names</b>. First we had to double-check that the student’s information was accurate and <b>confirm they had not already started or completed training</b>. These <b>repeated moments provided me with firsthand insight</b> into how <b>confusing and disruptive the process felt for administrators</b>, sparking the idea for a more intuitive and secure name correction flow.</p>
+                            <br>
+                            <p class="smolP">Understanding the User Flows</p>
+                            <p>Before designing I had to <b>get an understanding of the current user flow</b> to <b>define the steps</b> users would do within <b>in order to complete that task</b>.</p>
+                            <img src="images/tapSeriesFlow.svg" alt="TAP Series Edit Student Flow" width="550px" height="189px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spaceBtwn">
                 <div class="data newMargin">
+                    <h4>Solution A: Clearer Post-Exam Messaging</h4>
                     <div class="data420">
                         <h4>Clearer Messaging Flows</h4>
                     </div>
@@ -182,10 +204,10 @@
                     <div>
                         <br>
                         <p><u>Hover over text below:</u></p>
-                        <p id="pfh1">Underlined fail or Punctuated success messages.</p>
-                        <p id="pfh3">Strategically placed links provide clear next steps: failing users guided to retake the practice test and passing users directed to ANSI registration.</p>
-                        <p id="pfh2">Bold guidance text.</p>
-                        <p id="pfh4">Support information is separated to reduce cognitive load and clutter.</p>
+                        <p class="hoverBtn" id="pfh1">Underlined fail or Punctuated success messages.</p>
+                        <p class="hoverBtn" id="pfh3">Strategically placed links provide clear next steps: failing users guided to retake the practice test and passing users directed to ANSI registration.</p>
+                        <p class="hoverBtn" id="pfh2">Bold guidance text.</p>
+                        <p class="hoverBtn" id="pfh4">Support information is separated to reduce cognitive load and clutter.</p>
                     </div>
                 </div>
             </div>
@@ -206,81 +228,9 @@
                     </div> 
                 </div>
             </div>
-            <!-- <div class="spaceBtwn">
-                <p>I redesigned key training flow screens to reduce confusion and improve user confidence during registration and exam transitions. The new messaging clarified login and credentialing steps, decreasing support requests and ensuring smoother certification progress. I also delivered a custom version tailored to Retail Grocery Stores’ training standards and compliance requirements.</p>
-            </div> --> 
-            <div class="spaceBtwn">
-                <div class="newMargin">
-                    <div class="data">
-                        <div class="data420">
-                            <h4>Streamlining Exam Transitions for a Smoother Training Experience</h4>
-                        </div>
-                        <div class="datatext">
-                            <p>I redesigned training flow screens to <b>reduce confusion</b> during exam transitions. The updated messaging clarified login steps, <b>decreased support requests for this issue by 34%</b>, and ensured smoother certification progress.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img src="images/introLineB.svg" alt="graphic line for section separation" height="1px" width="1392px" class="spaceBtwnLine">
-            <div class="spaceBtwn newMargin">
-                <h3>2. Making Secure Admin Tasks Clear with Popup Guidance</h3>
-                <br>
-                <br>
-                <br>
-                <br>
-                <div class="data">
-                    <div class="data420">
-                        <h4>Context</h4>
-                    </div>
-                    <div class="datatext">
-                        <p><b>After enrollment, admins found student/employee names were often misspelled or didn't match legal documentation</b>. However, <b>unrestricted name editing posed risks</b>, users could <b>falsify training completion and bypass certification</b> requirements.</p>
-                        <p>The goal here was to <b> design a secure yet flexible system</b> that allows for <b>genuine name corrections</b> while <b>preventing misuse</b> that could compromise the integrity of training records and certifications.</p>
-                        <hr>
-                        <div class="teams">
-                            <p class="smolP">Duration:</p>
-                            <p>1 Week</p>
-                        </div>
-                        <div class="teams">
-                            <p class="smolP">Project Supervisor:</p>
-                            <p>Sandra Kovach</p>
-                        </div>
-                        <div class="teams">
-                            <p class="smolP">Developers:</p>
-                            <p>Daniel B.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="spaceBtwn">
-                <div class="newMargin">
-                    <div class="data">
-                        <div class="data420">
-                            <h4>Understanding the Workflow</h4>
-                            <p class="smolP">Usability Observation</p>
-                            <p class="smolP">Heuristic Evaluation</p>
-                            <p class="smolP">User Flow</p>
-                        </div>
-                        <div class="datatext">
-                            <p>While assisting admins over the phone, I often guided them through adding students in the system. During these calls, I began to notice <b>a pattern, whenever a student’s name was entered incorrectly</b>, their <b>tasks were frequently interrupted</b> because <b>only I or another team member could manually update names</b>. First we had to double-check that the student’s information was accurate and <b>confirm they had not already started or completed training</b>. These <b>repeated moments provided me with firsthand insight</b> into how <b>confusing and disruptive the process felt for administrators</b>, sparking the idea for a more intuitive and secure name correction flow.</p>
-                            <br>
-                            <p>After an evaluation I discovered these holes in the Usability Heuristics:</p>
-                            <p class="smolP">Help Users Recognize, Diagnose, and Recover from Errors</p>
-                            <p>❌ <b>Admins have no ability to edit names</b></p>
-                            <p>❌ The system also <b>lacked clear guidance</b></p>
-                            <p class="smolP">Visibility of System Status</p>
-                            <p>❌ <b>No feedback when an edit attempt happens</b></p>
-                            <br>
-                            <br>
-                            <p class="smolP">Understanding the User Flows</p>
-                            <p>Before designing I had to <b>get an understanding of the current user flow</b> to <b>define the steps</b> users would do within <b>in order to complete that task</b>.</p>
-                            <img src="images/tapSeriesFlow.svg" alt="TAP Series Edit Student Flow" width="550px" height="189px">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- user journey here -->
             <div class="spaceBtwn">
                 <div class="data newMargin">
+                    <h4>Solution B: Secure Admin Popup Guidance</h4>
                     <div class="data420">
                         <h4>Admin Editing Guide</h4>
                     </div>
@@ -301,13 +251,38 @@
                     </video>
                 </div>
             </div>
+            <div class="spaceBtwn">
+                <div class="newMargin">
+                    <div class="data">
+                        <div class="data420">
+                            <h4>Streamlining Exam Transitions for a Smoother Training Experience</h4>
+                        </div>
+                        <div class="datatext">
+                            <p>I redesigned training flow screens to <b>reduce confusion</b> during exam transitions. The updated messaging clarified login steps, <b>decreased support requests for this issue by 34%</b>, and ensured smoother certification progress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spaceBtwn">
+                <div class="newMargin">
+                    <div class="data">
+                        <div class="data420">
+                            <h4>Impact: Reducing Support Tickets by 34%</h4>
+                        </div>
+                        <div class="datatext">
+                            <p>By addressing confusion on both the user-facing and admin sides, we <b>reduced support tickets by 34%</b>. The updated messaging clarified login steps and exam transitions, while the secure popup system eliminated the need for manual intervention on name corrections. <b>Solving confusion at multiple touchpoints created compound benefits</b>—users moved through certification more smoothly, and admins could resolve issues independently.</p>
+                        </div>
+                    </div>
+                    <!-- [INSERT DATA VISUALIZATION CHART HERE] -->
+                </div>
+            </div>
             <div class="spaceBtwn newMargin">
                 <div class="data">
                     <div class="data420">
                         <h4>Streamlining Admin Changes While Protecting Certification Integrity</h4>
                     </div>
                     <div class="datatext">
-                        <p>A <b>secure correction system</b> that <b>guided admins through proper name change procedures</b> while protecting certification records. Balancing administrative needs with security requirements, <b>ensuring accurate student data without enabling fraudulent modifications</b>.</p>
+                        <p>I redesigned key touchpoints to <b>reduce confusion</b> during exam transitions and administrative tasks. By combining <b>clearer post-exam messaging with secure admin popup guidance</b>, we significantly reduced support burden. Balancing user needs with security requirements, <b>ensuring accurate student data without enabling fraudulent modifications</b>, and <b>designing for both consumer-facing experiences and internal administrative tools</b>.</p>
                     </div>
                 </div>
             </div>

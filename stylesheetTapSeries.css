@@ -230,6 +230,14 @@
     .dataLinks a{
         flex: 1;
     }
+    .hoverBtn{
+        padding: 8px 12px;
+        background-color: rgb(195, 196, 195);
+    }
+    .hoverBtn :hover{
+        background-color: rgb(214,214,214);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
     #leftcsLink{
         padding: 16px;
         background-color: rgb(253,253,253);
