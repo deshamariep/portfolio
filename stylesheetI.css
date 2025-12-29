@@ -218,9 +218,12 @@
     #firstTitle{
         padding: 16px;
         display: block;
-        background-color: (255, 255, 255, 0.1);
-        backdrop-filter: blur(6px); 
+        background: rgba(255, 255, 255, 0.1); 
+        backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.15); 
+        box-shadow: 0 4px 25px rgba(0,0,0,0.15);
     }
     #dataTitle h1{
         font-weight: 500;
@@ -341,6 +344,7 @@
         linear-gradient(white, white) padding-box,
         linear-gradient(181deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
         box-sizing: border-box;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.15);
     }
     #receExpTitle {
         font-size: 12px !important;
@@ -368,6 +372,7 @@
         background: 
         linear-gradient(white, white) padding-box,
         linear-gradient(135deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
+        box-shadow: 0 4px 25px rgba(0,0,0,0.15);
     }
     #desktopArrow {
         width: 161px;
@@ -415,7 +420,7 @@
     .dock-label {
         position: absolute;
         top: -40px;
-        background: rgb(135, 135, 135);
+        background: rgb(214, 214, 214);
         color: rgb(48, 48, 66);
         white-space: nowrap;
         padding: 4px 8px;

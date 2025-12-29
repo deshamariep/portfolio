@@ -26,6 +26,7 @@
         box-sizing: border-box;
         background-color: rgb(255, 255, 255, 0.3);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+        border: 1px solid rgba(255,255,255,0.15);
         border-radius: 30px; 
         backdrop-filter: blur(6px); 
     }
@@ -40,6 +41,7 @@
         background: rgba(255,255,255,0.3); 
         backdrop-filter: blur(6px);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+        border: 1px solid rgba(255,255,255,0.15);
         border-radius: 30px;  
         z-index: 9999;  
     } 
@@ -194,6 +196,7 @@
         box-sizing: border-box;
         background-color: rgb(255, 255, 255, 0.3);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+        border: 1px solid rgba(255,255,255,0.15);
         border-radius: 50px; 
         backdrop-filter: blur(6px); 
     }
@@ -211,6 +214,7 @@
         background: rgba(255,255,255,0.3); 
         backdrop-filter: blur(6px);
         box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+        border: 1px solid rgba(255,255,255,0.15);
         border-radius: 50px;  
         z-index: 9999; 
     }
