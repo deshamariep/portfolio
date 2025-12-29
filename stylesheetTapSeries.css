@@ -217,10 +217,11 @@
         margin: auto;
     }
     .teams{
-        margin: 16px;
+        margin: 16px 0px 8px;
     }
     .teams p{
         margin: 0px;
+        font-size: 12px;
     }
     .heuristic-chart-container {
         width: 100%;
@@ -248,7 +249,7 @@
         top: 110px;
     }
     .y-label {
-        margin-bottom: 50px;
+        margin-bottom: 16px;
     }
     .y-label h3 {
         font-size: 15px;
@@ -369,9 +370,9 @@
         flex: 1;
     }
     .hoverBtn{
-        color: rgb(214, 214, 214);
+        color: rgb(169, 169, 169);
     }
-    .hoverBtn :hover .hoverBtn p{
+    .hoverBtn :hover{
         color: rgb(48, 48, 66);
         text-decoration: underline;
     }
