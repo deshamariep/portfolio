@@ -905,6 +905,7 @@
         font-size: 24px;
         color: #4A90E2;
         z-index: 1;
+        margin: 0px 8px;
     }
     
     @media (max-width: 968px) {
