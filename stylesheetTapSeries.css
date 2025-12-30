@@ -688,7 +688,7 @@
     
     .features-title {
         font-size: 15px;
-        font-weight: 700;
+        font-weight: 600;
         color: #2C3E50;
         margin-bottom: 8px;
         font-family: 'Newsreader', serif;
@@ -696,7 +696,7 @@
     
     .features-instruction {
         font-size: 12px;
-        color: #7F8C8D;
+        color: rgb(176, 176, 176);
         margin-bottom: 20px;
         font-style: italic;
     }
