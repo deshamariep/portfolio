@@ -198,7 +198,9 @@
     .solutionData{
         flex: 1;
         padding: 16px 24px;
-        background: linear-gradient( 90deg rgb(156, 213, 170), rgb(182, 235, 220));
+        background: linear-gradient(90deg, rgb(124, 207, 144), rgb(135, 230, 203));
+        border: 1px solid #55b987;
+        border-radius: 12px;
     }
     .dataimg{
         display: flex; 
@@ -233,13 +235,13 @@
         height: 225px;
         margin: 20px auto;
         background: linear-gradient(135deg, #F8FAFB 0%, #e2e2e2 100%);
+        border: 1px solid #E8EDF2;
         border-radius: 12px;
         padding: 16px 24px;
         display: flex;
         gap: 16px;
         align-items: stretch;
         box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
-        border: 1px solid #E8EDF2;
     }
     
     .goal-card {
@@ -878,7 +880,6 @@
     .metric-label {
         font-size: 14px;
         color: rgb(48, 48, 66);
-        text-transform: uppercase;
         font-weight: 500;
     }
     
