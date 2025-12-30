@@ -454,7 +454,7 @@
         overflow-y: auto;
     }
     .frustration-visual-container:hover{
-        box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .frustration-title {
@@ -678,7 +678,94 @@
           left: 20px;
         }
     }
-
+    .highlight-features-sidebar {
+        width: 380px;
+        background: white;
+        padding: 28px;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+    
+    .features-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #2C3E50;
+        margin-bottom: 8px;
+        font-family: 'Newsreader', serif;
+    }
+    
+    .features-instruction {
+        font-size: 12px;
+        color: #7F8C8D;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+    
+    .feature-item {
+        padding: 14px 16px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        background: #F8FAFB;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        position: relative;
+    }
+    
+    .feature-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .feature-item:hover {
+        background: #E8F4F8;
+        border-color: #4A90E2;
+        transform: translateX(4px);
+    }
+    
+    .feature-item.active {
+        background: linear-gradient(135deg, #E8F4F8, #D4E9F7);
+        border-color: #4A90E2;
+        box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+    }
+    
+    .feature-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 0;
+        background: #4A90E2;
+        border-radius: 0 4px 4px 0;
+        transition: height 0.3s ease;
+    }
+    
+    .feature-item:hover::before,
+    .feature-item.active::before {
+        height: 70%;
+    }
+    
+    .feature-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background: #4A90E2;
+        color: white;
+        border-radius: 50%;
+        font-size: 11px;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+    
+    .feature-text {
+        font-size: 12px;
+        color: #2C3E50;
+        line-height: 1.5;
+        display: inline;
+    }
     .dataLinks{
         display: flex;
         justify-content: space-between; 
@@ -686,13 +773,6 @@
     }
     .dataLinks a{
         flex: 1;
-    }
-    .hoverBtn{
-        color: rgb(169, 169, 169);
-    }
-    .hoverBtn p :hover{
-        color: rgb(48, 48, 66);
-        text-decoration: underline;
     }
     #leftcsLink{
         padding: 16px;
