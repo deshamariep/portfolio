@@ -86,7 +86,7 @@
         margin-top: 32px;
     }
     #infoBox div{
-        margin-top: 16px;
+        margin-top: 24px;
     }
     main{
         margin: 0px 24px;
@@ -445,7 +445,7 @@
     }
 
     .frustration-visual-container {
-        width: 650px;
+        width: 590px;
         height: 400px;
         margin: 0px auto 40px;
         background: #FAFBFC;
@@ -453,7 +453,10 @@
         border-radius: 12px;
         overflow-y: auto;
     }
-    
+    .frustration-visual-container:hover{
+        box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
     .frustration-title {
         font-size: 16px;
         font-weight: 600;
