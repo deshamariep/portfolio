@@ -206,6 +206,7 @@
         margin: auto;
         text-align: center;
         color: #4aa477;
+        font-weight: 900;
     }
     .dataimg{
         display: flex; 
