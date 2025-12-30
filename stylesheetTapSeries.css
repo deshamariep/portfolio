@@ -195,6 +195,11 @@
     .diagramData div{
         flex: 1;
     }
+    .solutionData{
+        flex: 1;
+        padding: 16px 24px;
+        background: linear-gradient( 90deg rgb(156, 213, 170), rgb(182, 235, 220));
+    }
     .dataimg{
         display: flex; 
         gap: 24px;
@@ -225,7 +230,7 @@
     }
     .goals-visual-container {
         width: 600px;
-        height: 200px;
+        height: 225px;
         margin: 20px auto;
         background: linear-gradient(135deg, #F8FAFB 0%, #e2e2e2 100%);
         border-radius: 12px;
@@ -274,7 +279,7 @@
     }
     
     .goal-title {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
         color: rgb(48, 48, 66);
         font-family: 'Newsreader', serif;
@@ -294,7 +299,7 @@
         color: #4A90E2;
         padding: 3px 8px;
         border-radius: 12px;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.3px;
@@ -323,7 +328,7 @@
         top: 40px;
         left: 80px;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 400;
         color: rgb(48, 48, 66);
         letter-spacing: -0.5px;
         font-family: 'Newsreader', serif;
@@ -687,16 +692,16 @@
     }
     
     .features-title {
-        font-size: 15px;
-        font-weight: 600;
+        font-size: 16px;
+        font-weight: 400;
         color: rgb(48, 48, 66);
         margin-bottom: 8px;
         font-family: 'Newsreader', serif;
     }
     
     .features-instruction {
-        font-size: 12px;
-        color: rgb(176, 176, 176);
+        font-size: 14px;
+        color: rgb(48, 48, 66, 0.7);
         margin-bottom: 20px;
         font-style: italic;
     }
@@ -761,7 +766,7 @@
     }
     
     .feature-text {
-        font-size: 12px;
+        font-size: 14px;
         color: rgb(48, 48, 66);
         line-height: 1.5;
         display: inline;
@@ -770,8 +775,7 @@
         width: 650px;
         height: 500px;
         margin: 40px auto;
-        background: #FAFBFC;
-        padding: 30px;
+        padding: 16px;
         border-radius: 16px;
         display: flex;
         flex-direction: column;
@@ -835,8 +839,8 @@
     }
     
     .card-title {
-        font-size: 18px;
-        font-weight: 700;
+        font-size: 16px;
+        font-weight: 600;
         color: rgb(48, 48, 66);
         margin-bottom: 8px;
         font-family: 'Newsreader', serif;
@@ -875,13 +879,12 @@
         font-size: 14px;
         color: rgb(48, 48, 66);
         text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 0.5px;
+        font-weight: 500;
     }
     
     .metric-value {
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 400;
         color: rgb(48, 48, 66);
     }
     
@@ -891,68 +894,6 @@
     
     .metric-value.positive {
         color: rgb(48, 66, 48);
-    }
-    
-    .solution-highlight {
-        background: linear-gradient(135deg, #27AE60 0%, #229954 100%);
-        color: white;
-        padding: 16px 24px;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .solution-badge {
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        padding: 3px 10px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 6px;
-    }
-    
-    .solution-title {
-        font-size: 16px;
-        font-weight: 600;
-        margin-bottom: 10px;
-        font-family: 'Newsreader', serif;
-    }
-    
-    .solution-description {
-        font-size: 11px;
-        line-height: 1.5;
-        opacity: 0.95;
-        margin-bottom: 14px;
-    }
-    
-    .solution-metrics {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-    }
-    
-    .solution-metric {
-        text-align: center;
-    }
-    
-    .solution-metric-value {
-        font-size: 26px;
-        font-weight: 700;
-        margin-bottom: 2px;
-        display: block;
-    }
-    
-    .solution-metric-label {
-        font-size: 10px;
-        opacity: 0.9;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
     }
     
     .comparison-arrow {
@@ -968,11 +909,6 @@
     @media (max-width: 968px) {
         .comparison-grid {
           grid-template-columns: 1fr;
-        }
-        
-        .solution-metrics {
-          flex-direction: column;
-          gap: 20px;
         }
     }
     .dataLinks{
