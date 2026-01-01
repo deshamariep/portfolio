@@ -124,7 +124,7 @@
     
         background-image: linear-gradient(
             90deg,
-            rgba(0,94,255) 0%,
+            rgb(70, 138, 255) 0%,
             rgba(194, 0, 255) 50%,
             rgba(48, 48, 66) 100%
         );
@@ -269,7 +269,7 @@
     .hero-heading-anim {
         background: linear-gradient(
             90deg,
-            rgba(0,94,255,1) 0%,
+            rgb(70, 138, 255) 0%,
             rgba(194, 0, 255,1) 100%
         );
         background-size: 200% 200%;
@@ -329,7 +329,7 @@
         margin: 22px 0px 16px;
         background: linear-gradient(
             90deg,
-            rgba(0,94,255,1) 0%,
+            rgb(70, 138, 255) 0%,
             rgba(194, 0, 255,1) 100%
         );
         background-size: 200% 200%;
@@ -358,20 +358,7 @@
     }
     footer #btmfoot {
         margin: 16px auto 0px auto;
-      
         display: inline-block;
-        /* background-image: radial-gradient(
-            circle,
-            rgba(74, 74, 104, 0.7) 10%,
-            rgba(82, 209, 252, 0.7) 30%,
-            rgba(207, 240, 255, 1) 31%,
-            rgba(229, 156, 252, 1) 32%
-        );
-        background-size: 300% 300%;
-        background-position: center;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent; */
     }
     @keyframes gradientSwipe {
         0% {
