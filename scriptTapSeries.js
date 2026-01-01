@@ -136,6 +136,33 @@
     ticking = false;
   }
 
+  let personaSlideIndex = 1;
+  function changePersonaSlide(n) {
+    showPersonaSlide(personaSlideIndex += n);
+  }
+  function currentPersonaSlide(n) {
+    showPersonaSlide(personaSlideIndex = n);
+  }
+  function showPersonaSlide(n) {
+    let slides = document.getElementsByClassName("persona-slide");
+    let dots = document.getElementsByClassName("persona-dot");
+  
+    if (n > slides.length) { personaSlideIndex = 1 }
+    if (n < 1) { personaSlideIndex = slides.length }
+  
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+    }
+  
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+  
+    slides[personaSlideIndex - 1].classList.add("active");
+    dots[personaSlideIndex - 1].classList.add("active");
+  }
+
+
   window.addEventListener('scroll', function () {
     if (!ticking) {
       window.requestAnimationFrame(onScroll);

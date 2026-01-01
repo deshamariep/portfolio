@@ -242,11 +242,28 @@
                     </div>
                 </div>
                 <div class="dataimg">
-                    <div>
-                        <img src="images/personaServer.svg" alt="User Persona Server" width="688px" height="499px">
-                    </div>
-                    <div>
-                        <img src="images/personaTeacher.svg" alt="User Persona Teacher" width="688px" height="499px">
+                    <div class="persona-slideshow-container">
+                        <!-- Slide 1 -->
+                        <div class="persona-slide active">
+                          <div class="persona-label">Server Persona</div>
+                          <img src="images/personaServer.svg" alt="User Persona Server">
+                        </div>
+                      
+                        <!-- Slide 2 -->
+                        <div class="persona-slide">
+                          <div class="persona-label">Teacher Persona</div>
+                          <img src="images/personaTeacher.svg" alt="User Persona Teacher">
+                        </div>
+                      
+                        <!-- Navigation arrows -->
+                        <button class="persona-prev" onclick="changePersonaSlide(-1)">‹</button>
+                        <button class="persona-next" onclick="changePersonaSlide(1)">›</button>
+                      
+                        <!-- Dots indicator -->
+                        <div class="persona-dots">
+                          <span class="persona-dot active" onclick="currentPersonaSlide(1)"></span>
+                          <span class="persona-dot" onclick="currentPersonaSlide(2)"></span>
+                        </div>
                     </div>
                 </div>
             </div>
