@@ -61,9 +61,9 @@
   let lastY = window.scrollY;
   let ticking = false;
   let stickyActive = false;
-  const enterAfter = 75;      // px scrolled down before we enter sticky mode
-  const revealDelta = 5;      // px upward scroll needed to reveal
-  const hideDelta = 10;        // px downward scroll to hide
+  const enterAfter = 75;
+  const revealDelta = 5; 
+  const hideDelta = 10; 
 
   const headerH = heroTop.offsetHeight || 70;
 
@@ -116,38 +116,40 @@
     document.querySelector("#dataDesktopBar").classList.add("loaded");
   });
 
-  // Mouse Parallax for Avatar Container
+  // Mouse Parallax for Avatar Rings (not the image)
   document.addEventListener('mousemove', (e) => {
     const avatar = document.querySelector('.avatar-container');
     if (!avatar) return;
-    
+  
     const rect = avatar.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-    
+  
     const x = e.clientX - centerX;
     const y = e.clientY - centerY;
-    
-    // Apply 3D tilt based on mouse position
-    avatar.style.transform = `perspective(1000px) rotateY(${x / 20}deg) rotateX(${-y / 20}deg)`;
+  
+    const rings = avatar.querySelectorAll('.ring');
+    rings.forEach(ring => {
+    ring.style.transform = `perspective(1000px) rotateY(${x / 20}deg) rotateX(${-y / 20}deg)`;
+    });
   });
-
-  // Reset transform when mouse leaves hero
   const heroContent = document.querySelector('.hero-content');
   if (heroContent) {
     heroContent.addEventListener('mouseleave', () => {
-        const avatar = document.querySelector('.avatar-container');
-        if (avatar) {
-            avatar.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
-        }
+      const avatar = document.querySelector('.avatar-container');
+      if (avatar) {
+        const rings = avatar.querySelectorAll('.ring');
+        rings.forEach(ring => {
+          ring.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+        });
+     }
     });
   }
-
   // WITH THIS NEW 3D PARALLAX FUNCTION:
   function handleStaggered3DCards() {
     const cards = document.querySelectorAll('.dataCS');
     const windowHeight = window.innerHeight;
-  
+
     cards.forEach((card, index) => {
       const rect = card.getBoundingClientRect();
       const cardTop = rect.top;
@@ -155,19 +157,19 @@
 
       const progress = Math.max(0, Math.min(1, 
         (windowHeight - cardTop) / (windowHeight * 0.6)
-     ));
-    
+      ));
+  
       const direction = index % 2 === 0 ? 1 : -1;
-    
+  
       const translateX = (1 - progress) * 400 * direction;
       const translateY = (1 - progress) * 150;
       const translateZ = (1 - progress) * -500;
       const rotateY = (1 - progress) * 25 * direction;
       const rotateX = (1 - progress) * 10;
-    
+  
       const opacity = 0.2 + (progress * 0.8);
       const blur = (1 - progress) * 8;
-    
+  
       card.style.transform = `
         perspective(2000px)
         translateX(${translateX}px)
