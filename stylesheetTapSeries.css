@@ -189,10 +189,10 @@
         align-items: center;
         justify-content: center;
     }
-    #diagramDataImg p{
-        margin: 0px;
+    #diagramDataImg{
+        flex: 2;
     }
-    .diagramData div{
+    #diagramDataBtn{
         flex: 1;
     }
     .solutionData{
