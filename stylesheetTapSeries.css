@@ -580,7 +580,7 @@
     }
     .frustration-visual-container {
         width: 590px;
-        height: 1075px;
+        height: auto;
         margin: 0px auto 40px;
         background: #FAFBFC;
         padding: 30px;
