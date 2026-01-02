@@ -321,6 +321,7 @@
         background: linear-gradient(135deg, #F8FAFB 0%, #e2e2e2 100%);
         position: relative;
         border-radius: 12px;
+        background-image: radial-gradient(circle, rgba(74, 144, 226, 0.1) 1px, transparent 1px);
         background-size: 30px 30px;
     }
     .chart-title {
