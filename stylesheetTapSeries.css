@@ -539,11 +539,11 @@
         height: 8px;
         width: 8px;
         margin: 0 6px;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(200, 200, 200, 0.5);
         border-radius: 50%;
         display: inline-block;
         transition: all 0.3s ease;
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        border: 2px solid rgba(200, 200, 200, 0.8);
     }
     
     .persona-dot.active,
@@ -570,7 +570,7 @@
     
     .frustration-visual-container {
         width: 590px;
-        height: 550px;
+        height: 1075px;
         margin: 0px auto 40px;
         background: #FAFBFC;
         padding: 30px;

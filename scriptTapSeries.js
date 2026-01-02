@@ -93,42 +93,34 @@
     let lastY = window.scrollY;
     let ticking = false;
     let stickyActive = false;
-    const enterAfter = 75;      // px scrolled down before we enter sticky mode
-    const revealDelta = 5;      // px upward scroll needed to reveal
-    const hideDelta = 10;        // px downward scroll to hide
+    const enterAfter = 75;      
+    const revealDelta = 5;  
+    const hideDelta = 10;    
 
-    // compute header height once (fallback)
     const headerH = heroTop.offsetHeight || 70;
 
     function onScroll() {
       const y = window.scrollY;
       const delta = y - lastY;
-
-    // Enter sticky mode when user has scrolled beyond enterAfter
     if (!stickyActive && y > enterAfter) {
       heroTop.classList.add('sticky');
-      // reserve top space to avoid content jump
       document.body.style.paddingTop = `${headerH}px`;
       stickyActive = true;
-      heroTop.classList.remove('visible'); // keep hidden until reveal
+      heroTop.classList.remove('visible'); 
     }
 
     if (stickyActive) {
       if (delta < -revealDelta) {
-        // significant upward scroll -> reveal header
         heroTop.classList.add('visible');
       } else if (delta > hideDelta) {
-        // downward scroll -> hide header
         heroTop.classList.remove('visible');
       }
-      // if scrolled back to very top, remove sticky mode and restore layout
       if (y <= 0) {
         heroTop.classList.remove('sticky', 'visible');
         document.body.style.paddingTop = '';
         stickyActive = false;
       }
     } else {
-      // keep hero-top as-is while not in sticky mode
       heroTop.classList.remove('visible');
     }
 
@@ -136,6 +128,7 @@
     ticking = false;
   }
 
+  // persona slide
   let personaSlideIndex = 1;
   function changePersonaSlide(n) {
     showPersonaSlide(personaSlideIndex += n);
@@ -146,21 +139,41 @@
   function showPersonaSlide(n) {
     let slides = document.getElementsByClassName("persona-slide");
     let dots = document.getElementsByClassName("persona-dot");
-  
+
     if (n > slides.length) { personaSlideIndex = 1 }
     if (n < 1) { personaSlideIndex = slides.length }
-  
+
     for (let i = 0; i < slides.length; i++) {
       slides[i].classList.remove("active");
     }
-  
+
     for (let i = 0; i < dots.length; i++) {
       dots[i].classList.remove("active");
     }
-  
+
     slides[personaSlideIndex - 1].classList.add("active");
     dots[personaSlideIndex - 1].classList.add("active");
   }
+
+  // Attach event listeners after DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Arrow buttons
+    const prevBtn = document.querySelector('.persona-prev');
+    const nextBtn = document.querySelector('.persona-next');
+  
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => changePersonaSlide(-1));
+    }
+  
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => changePersonaSlide(1));
+    }
+  
+    const dots = document.querySelectorAll('.persona-dot');
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => currentPersonaSlide(index + 1));
+    });
+  });
 
 
   window.addEventListener('scroll', function () {
@@ -170,7 +183,6 @@
     }
   }, { passive: true });
 
-  // optional: reveal when pointer enters top area (desktop UX)
   window.addEventListener('pointermove', function (e) {
     if (stickyActive && e.clientY < 60) {
       heroTop.classList.add('visible');
@@ -192,17 +204,20 @@
       passfail: "passfail4.svg"
     }
   };
-  const items = document.querySelectorAll(".diagramData p[id]");
-  items.forEach(p => {
-    p.addEventListener("mouseover", () => {
-      const rule = hoverRules[p.id];
+
+  const items = document.querySelectorAll(".feature-item[id]");
+
+  items.forEach(item => {
+    item.addEventListener("mouseover", () => {
+      const rule = hoverRules[item.id];
       if (!rule) return;
-  
+
       passfailImage.src = `images/${rule.passfail}`;
     });
-  });
-  p.addEventListener("mouseout", () => {
-    passfailImage.src = "images/passfail.svg";
+
+    item.addEventListener("mouseout", () => {
+      passfailImage.src = "images/passfail.svg";
+    });
   });
   
 }());
