@@ -190,7 +190,10 @@
         justify-content: center;
     }
     #diagramDataImg{
-        flex: 2;
+        flex: 1.5;
+    }
+    #diagramDataImg img{
+        transform: scale(1.2);
     }
     #diagramDataBtn{
         flex: 1;
@@ -568,6 +571,12 @@
         z-index: 10;
     }
     
+    #frustrationData{
+        display: flex;
+    }
+    .frustrationDiv{
+        flex: 1;
+    }
     .frustration-visual-container {
         width: 590px;
         height: 1075px;
@@ -576,6 +585,9 @@
         padding: 30px;
         border-radius: 12px;
         overflow-y: auto;
+    }
+    #frustrationData div :nth-child(1) .frustration-visual-container{
+        height: 975px;
     }
     .frustration-visual-container:hover{
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -702,12 +714,6 @@
         align-items: center;
         justify-content: center;
         font-size: 28px;
-    }
-    #frustrationData{
-        display: flex;
-    }
-    .frustrationDiv{
-        flex: 1;
     }
     /* Frustration indicators */
     .frustration-badge {
