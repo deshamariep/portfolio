@@ -318,7 +318,7 @@
         max-width: 1100px;
         height: 475px;
         margin: 40px auto;
-        background: linear-gradient(135deg, #F8FAFB 0%, #e2e2e2 100%);
+        background: #F8FAFB;
         position: relative;
         border-radius: 12px;
         background-image: radial-gradient(circle, rgba(74, 144, 226, 0.1) 1px, transparent 1px);
@@ -570,7 +570,7 @@
     
     .frustration-visual-container {
         width: 590px;
-        height: 400px;
+        height: 550px;
         margin: 0px auto 40px;
         background: #FAFBFC;
         padding: 30px;

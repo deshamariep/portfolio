@@ -177,24 +177,19 @@
     }
   });
 
-  const failImage = document.getElementById("failImage");
-  const passImage = document.getElementById("passImage");
+  const passfailImage = document.getElementById("passfailImage");
   const hoverRules = {
     pfh1: {
-      fail: "failAfterH1.svg",
-      pass: "passAfterH1.svg"
+      passfail: "passfail1.svg"
     },
     pfh2: {
-      fail: "failAfter.svg",
-      pass: "passAfterH2.svg"
+      passfail: "passfail2.svg"
     },
     pfh3: {
-      fail: "failAfterH3.svg",
-      pass: "passAfterH3.svg"
+      passfail: "passfail3.svg"
     },
     pfh4: {
-      fail: "failAfterH4.svg",
-      pass: "passAfterH4.svg"
+      passfail: "passfail4.svg"
     }
   };
   const items = document.querySelectorAll(".diagramData p[id]");
@@ -203,13 +198,11 @@
       const rule = hoverRules[p.id];
       if (!rule) return;
   
-      failImage.src = `images/${rule.fail}`;
-      passImage.src = `images/${rule.pass}`;
+      passfailImage.src = `images/${rule.passfail}`;
     });
   });
   p.addEventListener("mouseout", () => {
-    failImage.src = "images/failAfter.svg";
-    passImage.src = "images/passAfter.svg";
+    passfailImage.src = "images/passfail.svg";
   });
   
 }());
