@@ -193,10 +193,11 @@
         flex: 1.5;
     }
     #diagramDataImg img{
-        transform: scale(1.2);
+        transform: scale(1.03);
     }
     #diagramDataBtn{
         flex: 1;
+        margin: 16px auto auto;
     }
     .solutionData{
         flex: 1;
@@ -986,8 +987,8 @@
 
     .tap-chart-container {
         width: 1100px;
-        height: 500px;
-        background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 50%, #e8e8e8 100%);
+        height: 325px;
+        background: linear-gradient(135deg, #aba9a9 0%, #af9292 50%, #4c5c73 100%);
         border-radius: 20px;
         padding: 40px 50px;
         position: relative;
@@ -1064,8 +1065,8 @@
     }
     .tap-bar-label-text {
         font-size: 11px;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
         width: 55px;
         text-align: right;
         text-transform: uppercase;
@@ -1132,7 +1133,7 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 20px;
-        padding-top: 18px;
+        padding-top: 32px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     .tap-legend {
