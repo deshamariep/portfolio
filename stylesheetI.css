@@ -221,7 +221,6 @@
         font-size: 48px;
         margin: 0px 0px 8px;
         letter-spacing: 0.03em;
-        -webkit-text-stroke: 1px rgb(195, 195, 195);
     }
     #dataTitle h2{
         font-size: 26px;
@@ -229,6 +228,7 @@
         margin: -8px 0px 8px;
         width: 680px;
         -webkit-text-stroke: 1px rgb(195, 195, 195);
+        -webkit-text-fill-color: rgb(48, 48, 66);
     }
     #dataTitle h3{
         margin: 8px 0px 0px;
