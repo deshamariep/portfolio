@@ -224,10 +224,10 @@
     }
     #dataTitle h2{
         font-size: 26px;
-        font-weight: 300;
+        font-weight: 400;
         margin: -8px 0px 8px;
         width: 680px;
-        -webkit-text-stroke: 1px rgb(195, 195, 195);
+        -webkit-text-stroke: 0.3px rgb(195, 195, 195);
         -webkit-text-fill-color: rgb(48, 48, 66);
     }
     #dataTitle h3{
@@ -254,9 +254,10 @@
         align-items: center;
         justify-content: center;
         transition: transform 0.1s ease-out;
+        transform-style: preserve-3d;
     }
     .avatar-img {
-        position: relative;
+        position: absolute;
         z-index: 10;
         width: 300px;
         height: 300px;
@@ -269,6 +270,8 @@
         border-radius: 50%;
         animation: rotate 20s linear infinite;
         transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        transition: transform 0.1s ease-out; 
+        transform-style: preserve-3d;
     }
     .ring-1 {
         width: 500px;
@@ -301,7 +304,6 @@
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
     }
-    /* Hover: Expand Rings */
     .avatar-container:hover .ring-1 {
         width: 550px;
         height: 550px;
