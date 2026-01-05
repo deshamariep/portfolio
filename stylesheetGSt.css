@@ -181,6 +181,12 @@
     .datagraph div{
         flex: 1;
     }
+    #datauserpersona{
+        display: flex;
+    }
+    #datauserpersona div{
+        flex: 1;
+    }
     .datatext{
         flex: 4;
     }
