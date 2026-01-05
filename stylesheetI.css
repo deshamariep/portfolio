@@ -238,6 +238,16 @@
         font-size: 22px;
         color: rgb(48, 48, 66);
     }
+    .hero-blur{
+        display: inline-block;
+        padding: 24px 32px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px); 
+        box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+    }
     #heroAvatar {
         flex: 1;
         display: flex;
