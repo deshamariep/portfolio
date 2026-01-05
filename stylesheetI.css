@@ -205,21 +205,27 @@
         }
     } */
     #dataTitle{
-        display: flex;
+        position:relative;
         margin: auto;
     }
     #titleLeft{
-        flex: 1;
+        position: absolute;
+        bottom: 50px;
+        left: 35%;
+        width: 250px;
     }
     #titleRight{
-        flex: 2;
+        position: absolute;
+        bottom: 65px;
+        right: 35%;
+        width: 350px;
     }
     #dataTitle h1{
         font-weight: 500;
         margin: 0px;
         font-size: 48px;
         margin: 0px 0px 8px;
-        letter-spacing: 0.03em;
+        line-height: 130%;
         text-align: left;
     }
     #dataTitle h3{
@@ -229,9 +235,13 @@
     #dataTitle p{
         margin: 8px 0px;
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 200;
         color: rgb(48, 48, 66);
         text-align: right;
+        line-height: 165%;
+    }
+    hr{
+        width: 500px;
     }
     .heroExp{
         margin-top: 56px;
