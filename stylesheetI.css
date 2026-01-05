@@ -242,7 +242,7 @@
         position: relative;
         z-index: 2;
         display: inline-block;
-        padding: 24px 32px;
+        padding: 24px 16px;
         border-radius: 20px;
         background: linear-gradient( 135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.08));
         backdrop-filter: blur(12px);
@@ -620,7 +620,7 @@
     }
     .dataCS:nth-child(1) .csBottom{
         display: flex;
-        margin-top: 0px;
+        margin-top: 12px;
         margin-left: 16px;
     }
     .dataCS:nth-child(2) .csBottom{
