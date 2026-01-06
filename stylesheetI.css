@@ -187,10 +187,11 @@
         transition: color 0.3s ease;
     }
     .hero-content {
+        position: absolute;
+        top: 62%;
         text-align: left; 
         z-index: 5;
-        margin: 144px auto 0px;
-        margin-left: -24px;
+        margin: auto;
         /* opacity: 0;
         transform: translateY(20px); */
     }
@@ -211,13 +212,13 @@
     #titleLeft{
         position: absolute;
         bottom: 50px;
-        left: 35%;
+        left: 33%;
         width: 250px;
     }
     #titleRight{
         position: absolute;
-        bottom: 65px;
-        right: 35%;
+        bottom: 60px;
+        right: 33%;
         width: 350px;
     }
     #dataTitle h1{
@@ -238,9 +239,13 @@
         font-weight: 200;
         color: rgb(48, 48, 66);
         text-align: right;
-        line-height: 165%;
+        line-height: 175%;
     }
     hr{
+        /* position: absolute;
+        left: 33%;
+        top: -110%; */
+        margin: auto;
         width: 500px;
     }
     .heroExp{
