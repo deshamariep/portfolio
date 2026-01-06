@@ -158,7 +158,6 @@
     .hero{
         position: relative;
         width: 100vw;
-        min-height: 811px;
         height: 100vh;   
         height: 100dvh; 
         margin: 0;

@@ -188,10 +188,11 @@
     }
     .hero-content {
         position: absolute;
-        top: 62%;
+        top: 50%;
         text-align: left; 
         z-index: 5;
         margin: auto;
+        margin-left: -24px;
         /* opacity: 0;
         transform: translateY(20px); */
     }
@@ -206,19 +207,19 @@
         }
     } */
     #dataTitle{
-        position:relative;
+        position: relative;
         margin: auto;
     }
     #titleLeft{
         position: absolute;
         bottom: 50px;
-        left: 33%;
+        left: 31%;
         width: 250px;
     }
     #titleRight{
         position: absolute;
         bottom: 60px;
-        right: 33%;
+        right: 34%;
         width: 350px;
     }
     #dataTitle h1{
@@ -242,9 +243,9 @@
         line-height: 175%;
     }
     hr{
-        /* position: absolute;
-        left: 33%;
-        top: -110%; */
+        position: absolute;
+        left: 31%;
+        top: -25%;
         margin: auto;
         width: 500px;
     }
