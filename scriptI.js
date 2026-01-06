@@ -1,7 +1,6 @@
 (function(){
   'use strict';
 
-
   window.addEventListener("load", () => {
     if (window.location.hash === "#aboutMeSec") {
         setTimeout(() => {
