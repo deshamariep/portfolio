@@ -152,6 +152,22 @@
         scroll-behavior: smooth;
         scroll-padding-top: 64px;
     }
+    #hero {
+        position: relative;
+        overflow: hidden; /* prevents canvas spill */
+    }
+    #hero-cursor {
+        position: absolute;
+        inset: 0;
+        pointer-events: none; /* cursor passes through */
+        z-index: 0;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+    #hero > *:not(canvas) {
+        position: relative;
+        z-index: 2;
+      }
     body{
         margin: 0;
         padding: 0;
