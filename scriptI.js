@@ -190,7 +190,7 @@
   // exp
   const video = document.getElementById("expVideo");
   const source = document.getElementById("expVideoSource");
-  const previewText = document.getElementById("previewText");
+  const previewText = document.getElementsByClassName("preview-text");
   const previews = {
     spots: "images/spotsAnimation.mp4",
     amp: "images/ampPark.mp4",
