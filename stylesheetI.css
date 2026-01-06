@@ -674,7 +674,20 @@
         object-fit: cover; 
         display: block;
         margin: auto;
+    }
+    #ExpVidCol {
         border: dashed 1px white;
+        border-radius: 12px;
+        transition: border 0.3s ease, background 0.3s ease;
+    }
+    /* when preview video is active */
+    #ExpVidCol.video-active {
+        border-color: transparent;
+        background: transparent;
+    }
+    #ExpVidCol.video-active video {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
     }
     .preview-text {
         position: absolute;

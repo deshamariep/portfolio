@@ -190,7 +190,8 @@
   // exp
   const video = document.getElementById("expVideo");
   const source = document.getElementById("expVideoSource");
-  const previewText = document.getElementsByClassName("preview-text");
+  const previewText = document.getElementById("previewText");
+  const expVidCol = document.getElementById("ExpVidCol");
   const previews = {
     spots: "images/spotsAnimation.mp4",
     amp: "images/ampPark.mp4",
@@ -202,45 +203,35 @@
     video.style.maxWidth = `${maxWidth}px`;
     video.load();
     video.play();
+
+    previewText.classList.add("hidden");
+    expVidCol.classList.add("video-active");
+  }
+  function resetPreview() {
+    source.src = "";
+    video.load();
+    previewText.classList.remove("hidden");
+    expVidCol.classList.remove("video-active");
   }
   document.getElementById("spots").addEventListener("mouseenter", () => {
     playPreview(previews.spots);
-    previewText.classList.add("hidden");
   });
-  document.getElementById("spots").addEventListener("mouseleave", () => {
-    source.src = "";
-    video.load();
-    previewText.classList.remove("hidden");
-  });
+  document.getElementById("spots").addEventListener("mouseleave", resetPreview);
+  
   document.getElementById("amp").addEventListener("mouseenter", () => {
-    playPreview(previews.amp, 300); 
-    previewText.classList.add("hidden");
+    playPreview(previews.amp, 300);
   });
-  document.getElementById("amp").addEventListener("mouseleave", () => {
-    source.src = "";
-    video.style.maxWidth = '650px'; 
-    video.load();
-    previewText.classList.remove("hidden");
-  });
+  document.getElementById("amp").addEventListener("mouseleave", resetPreview);
+  
   document.getElementById("aeVids").addEventListener("mouseenter", () => {
-    playPreview(previews.aeVids, 300); 
-    previewText.classList.add("hidden");
+    playPreview(previews.aeVids, 300);
   });
-  document.getElementById("aeVids").addEventListener("mouseleave", () => {
-    source.src = "";
-    video.style.maxWidth = '650px'; 
-    video.load();
-    previewText.classList.remove("hidden");
-  });
+  document.getElementById("aeVids").addEventListener("mouseleave", resetPreview);
+  
   document.getElementById("ume").addEventListener("mouseenter", () => {
     playPreview(previews.ume);
-    previewText.classList.add("hidden");
   });
-  document.getElementById("ume").addEventListener("mouseleave", () => {
-    source.src = "";
-    video.load();
-    previewText.classList.remove("hidden");
-  });
+  document.getElementById("ume").addEventListener("mouseleave", resetPreview);
 
   // greeting
   function updateGreeting() {
