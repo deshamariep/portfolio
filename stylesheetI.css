@@ -212,13 +212,13 @@
     }
     #titleLeft{
         position: absolute;
-        bottom: 50px;
+        bottom: 120px;
         left: 31%;
         width: 250px;
     }
     #titleRight{
         position: absolute;
-        bottom: 60px;
+        bottom: 130px;
         right: 34%;
         width: 350px;
     }
@@ -245,7 +245,7 @@
     hr{
         position: absolute;
         left: 31%;
-        top: -25%;
+        bottom: 110px;
         margin: auto;
         width: 500px;
     }
@@ -291,11 +291,14 @@
         box-shadow: 0 4px 25px rgba(0,0,0,0.15);
     }
     #desktopArrow {
+        position: relative;
         width: 161px;
         align-items: center;
-        margin: 48px auto 0px;
+        margin: auto;
     }
     #desktopArrow img {
+        position: absolute;
+        top: 300px;
         width: 100%;
         animation: floatArrow 2s ease-in-out infinite;
     }
