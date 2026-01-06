@@ -1,39 +1,6 @@
 (function(){
   'use strict';
 
-  const hero = document.getElementById("hero");
-  const canvas = document.getElementById("hero-cursor");
-
-  const app = TubesCursor(canvas, {
-    tubes: {
-      colors: ["#f967fb", "#53bc28", "#6958d5"],
-      lights: {
-        intensity: 200,
-        colors: ["#83f36e", "#fe8a2e", "#ff008a", "#60aed5"]
-      }
-    }
-  });
-  hero.addEventListener("mouseenter", () => {
-    app.start?.(); // if library supports start()
-  });
-  hero.addEventListener("mouseleave", () => {
-    app.stop?.(); // or pause / destroy
-  });
-  hero.addEventListener("mouseenter", () => {
-    canvas.style.opacity = "1";
-  });
-  
-  hero.addEventListener("mouseleave", () => {
-    canvas.style.opacity = "0";
-  });
-  hero.addEventListener("click", () => {
-    const colors = randomColors(3);
-    const lightsColors = randomColors(4);
-  
-    app.tubes.setColors(colors);
-    app.tubes.setLightColors(lightsColors);
-  });
-
 
   window.addEventListener("load", () => {
     if (window.location.hash === "#aboutMeSec") {

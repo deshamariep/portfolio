@@ -154,20 +154,20 @@
     }
     #hero {
         position: relative;
-        overflow: hidden; /* prevents canvas spill */
-    }
+        overflow: hidden;
+    } 
     #hero-cursor {
         position: absolute;
         inset: 0;
-        pointer-events: none; /* cursor passes through */
-        z-index: 0;
-        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: 1; /* behind content, above background */
         opacity: 0;
+        transition: opacity 0.4s ease;
     }
     #hero > *:not(canvas) {
         position: relative;
         z-index: 2;
-      }
+    }
     body{
         margin: 0;
         padding: 0;
