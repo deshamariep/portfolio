@@ -194,6 +194,7 @@
   const previews = {
     spots: "images/spotsAnimation.mp4",
     amp: "images/ampPark.mp4",
+    aeVids: "images/aeVids.mp4",
     ume: "images/umeAnimation.mp4"
   };
   function playPreview(videoFile, maxWidth = 650) {
@@ -216,6 +217,16 @@
     previewText.classList.add("hidden");
   });
   document.getElementById("amp").addEventListener("mouseleave", () => {
+    source.src = "";
+    video.style.maxWidth = '650px'; 
+    video.load();
+    previewText.classList.remove("hidden");
+  });
+  document.getElementById("aeVids").addEventListener("mouseenter", () => {
+    playPreview(previews.aeVids, 300); 
+    previewText.classList.add("hidden");
+  });
+  document.getElementById("aeVids").addEventListener("mouseleave", () => {
     source.src = "";
     video.style.maxWidth = '650px'; 
     video.load();

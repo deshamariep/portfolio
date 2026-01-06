@@ -397,7 +397,7 @@
         background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 25%,  
         rgba(0,94,255,0.2) 45%, 
         rgba(194,0,255,0.1) 75%);
-        top: 100px;
+        top: 300px;
         left: -200px;
         z-index: -1;
         filter: blur(80px);
@@ -433,7 +433,7 @@
 
     #caseStudies{
         width: 1100px;
-        margin: 64px auto auto;
+        margin: 24px auto auto;
         transition: color 0.3s ease;
         perspective: 2000px;
         transform-style: preserve-3d;
@@ -449,14 +449,14 @@
         left: -200px;
         right: -200px;
         bottom: -100px;
-        background: linear-gradient(to bottom,
+        /* background: linear-gradient(to bottom,
             rgba(120, 146, 249, 0.1) 0%,
             rgba(120, 146, 249, 0.08) 25%,
             rgba(62, 93, 150, 0.1) 40%,
             rgba(62, 93, 150, 0.08) 60%,
             rgba(54, 191, 201, 0.1) 75%,
             rgba(188, 214, 216, 0.08) 100%
-        );
+        ); */
         z-index: -2;
         pointer-events: none;
     }
