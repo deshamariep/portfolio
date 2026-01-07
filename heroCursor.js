@@ -1,49 +1,47 @@
-import TubesCursor from "https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js";
-
 const hero = document.getElementById("hero");
-const canvas = document.getElementById("hero-cursor");
+const canvas = document.getElementById("hero-canvas");
+const ctx = canvas.getContext("2d");
 
-if (!hero || !canvas) {
-  console.error("Hero or canvas not found");
+let width, height;
+let mouse = { x: 0, y: 0 };
+let points = [];
+
+function resize() {
+  width = canvas.width = hero.offsetWidth;
+  height = canvas.height = hero.offsetHeight;
 }
+resize();
+window.addEventListener("resize", resize);
 
-// Set canvas size to hero
-function resizeCanvas() {
-  canvas.width = hero.offsetWidth;
-  canvas.height = hero.offsetHeight;
-}
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+hero.addEventListener("mousemove", (e) => {
+  const rect = hero.getBoundingClientRect();
+  mouse.x = e.clientX - rect.left;
+  mouse.y = e.clientY - rect.top;
 
-// Utility to generate random colors
-function randomColors(count) {
-  return Array.from({ length: count }, () =>
-    `hsl(${Math.floor(Math.random() * 360)}, 80%, 65%)`
-  );
-}
+  points.push({
+    x: mouse.x,
+    y: mouse.y,
+    life: 1
+  });
+});
 
-// Initialize TubesCursor
-const app = TubesCursor(canvas, {
-  tubes: {
-    colors: ["#6B5BFF", "#2FA4FF", "#9B6CFF"], // darker for white bg
-    lights: {
-      intensity: 90,
-      colors: ["#C7D2FF", "#BEE7FF", "#E2CCFF", "#D9F3FF"]
-    }
+function draw() {
+  ctx.clearRect(0, 0, width, height);
+
+  for (let i = 0; i < points.length; i++) {
+    const p = points[i];
+    p.life -= 0.02;
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 18, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(120, 140, 255, ${p.life})`;
+    ctx.shadowColor = "rgba(120,140,255,0.6)";
+    ctx.shadowBlur = 25;
+    ctx.fill();
   }
-});
 
-// Optional: show cursor only on hover
-hero.addEventListener("mouseenter", () => {
-  canvas.style.opacity = "1";
-});
-hero.addEventListener("mouseleave", () => {
-  canvas.style.opacity = "0";
-});
+  points = points.filter(p => p.life > 0);
+  requestAnimationFrame(draw);
+}
 
-// Optional: change colors on click
-hero.addEventListener("click", () => {
-  if (!app?.tubes) return;
-  app.tubes.setColors(randomColors(3));
-  app.tubes.setLightColors(randomColors(4));
-});
+draw();
