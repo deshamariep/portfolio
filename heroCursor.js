@@ -13,10 +13,10 @@ if (hero && canvas && window.innerWidth >= 1024) {
   
     const app = TubesCursor(canvas, {
       tubes: {
-        colors: ["#f967fb", "#53bc28", "#6958d5"],
+        colors: ["#6B5BFF", "#2FA4FF", "#9B6CFF"],
         lights: {
-          intensity: 200,
-          colors: ["#83f36e", "#fe8a2e", "#ff008a", "#60aed5"]
+            intensity: 90,
+            colors: ["#C7D2FF", "#BEE7FF", "#E2CCFF", "#D9F3FF"]
         }
       }
     });

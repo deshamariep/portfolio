@@ -154,15 +154,16 @@
     }
     #hero {
         position: relative;
+        background: #fff;
         overflow: hidden;
-    } 
+    }
     #hero-cursor {
         position: absolute;
         inset: 0;
         pointer-events: none;
-        z-index: 1; /* behind content, above background */
+        z-index: 0;
         opacity: 0;
-        transition: opacity 0.4s ease;
+        transition: opacity 0.3s ease;
     }
     #hero > *:not(canvas) {
         position: relative;
