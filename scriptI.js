@@ -1,10 +1,16 @@
 (function(){
   'use strict';
 
+  // cursor 
   const canvas = document.getElementById("cursor-canvas");
   const ctx = canvas.getContext("2d");
+  const hero = document.getElementById("hero");
+  let active = false;
   let points = [];
   let mouse = { x: 0, y: 0 };
+  let last = { x: 0, y: 0 };
+  const palette = [260, 235, 290];
+  let hueIndex = 0;
   function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -14,23 +20,65 @@
   window.addEventListener("mousemove", (e) => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
-    points.push({ x: mouse.x, y: mouse.y });
-    if (points.length > 40) points.shift();
   });
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.globalCompositeOperation = "lighter";
-    ctx.beginPath();
-
-    points.forEach((p, i) => {
-      const t = i / points.length;
-      ctx.strokeStyle = `hsla(${260 + t * 80}, 90%, 65%, ${t})`;
-      ctx.lineWidth = 6 * t;
-      if (i === 0) ctx.moveTo(p.x, p.y);
-      else ctx.lineTo(p.x, p.y);
+  hero.addEventListener("mouseenter", () => {
+    active = true;
+    canvas.style.opacity = "1";
+  });
+  hero.addEventListener("mouseleave", () => {
+    active = false;
+    canvas.style.opacity = "0";
+    points = [];
+  });
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("mouseenter", () => {
+      ctx.shadowBlur = 24;
     });
-    
-    ctx.stroke();
+    link.addEventListener("mouseleave", () => {
+      ctx.shadowBlur = 14;
+    });
+  });
+  function lerp(a, b, t) {
+    return a + (b - a) * t;
+  }
+  function smoothPoint() {
+    last.x = lerp(last.x, mouse.x, 0.28);
+    last.y = lerp(last.y, mouse.y, 0.28);
+    points.push({ x: last.x, y: last.y });
+    if (points.length > 42) points.shift();
+  }
+  function draw() {
+    if (!active) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      requestAnimationFrame(draw);
+      return;
+    }
+    ctx.fillStyle = "rgba(255,255,255,0.14)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    smoothPoint();
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.globalCompositeOperation = "screen";
+    for (let i = 1; i < points.length; i++) {
+      const p1 = points[i - 1];
+      const p2 = points[i];
+      const t = i / points.length;
+      const dx = p2.x - p1.x;
+      const dy = p2.y - p1.y;
+      const speed = Math.sqrt(dx * dx + dy * dy);
+      const width = Math.min(10, speed * 0.55) * t;
+      const hue = palette[hueIndex % palette.length];
+      const color = `hsla(${hue}, 85%, 65%, ${t})`;
+      ctx.strokeStyle = color;
+      ctx.lineWidth = width;
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = color;
+      ctx.beginPath();
+      ctx.moveTo(p1.x, p1.y);
+      ctx.lineTo(p2.x, p2.y);
+      ctx.stroke();
+    }
+    hueIndex += 0.02;
     requestAnimationFrame(draw);
   }
   draw();
