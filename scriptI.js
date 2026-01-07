@@ -20,75 +20,68 @@
   // trail points
   const points = [];
   
-  // helpers
   const lerp = (a, b, n) => a + (b - a) * n;
   
-  // mouse tracking (hero only)
+  // track mouse in hero only
   hero.addEventListener("mousemove", (e) => {
     const rect = hero.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
   });
   
-  // reset when leaving hero
   hero.addEventListener("mouseleave", () => {
     points.length = 0;
   });
   
-  // ribbon renderer
-  function drawRibbon(offsetPhase = 0, invert = false) {
+  function drawRibbon(inner = false) {
     if (points.length < 2) return;
   
     ctx.beginPath();
+    points.forEach((p, i) => {
+      i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+    });
   
-    for (let i = 0; i < points.length; i++) {
-      const p = points[i];
+    if (inner) {
+      ctx.strokeStyle = "rgba(255,255,255,0.85)";
+      ctx.lineWidth = 6;
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = "rgba(255,255,255,0.9)";
+    } else {
+      const gradient = ctx.createLinearGradient(
+        points[0].x,
+        points[0].y,
+        points[points.length - 1].x,
+        points[points.length - 1].y
+      );
   
-      const wobble =
-        Math.sin(i * 0.35 + performance.now() * 0.006 + offsetPhase) *
-        7 *
-        (invert ? -1 : 1);
+      gradient.addColorStop(0, "rgb(70, 138, 255)");
+      gradient.addColorStop(1, "rgb(194, 0, 255)");
   
-      if (i === 0) {
-        ctx.moveTo(p.x, p.y + wobble);
-      } else {
-        ctx.lineTo(p.x, p.y + wobble);
-      }
+      ctx.strokeStyle = gradient;
+      ctx.lineWidth = 14;
+      ctx.shadowBlur = 36;
+      ctx.shadowColor = "rgba(194, 0, 255, 0.9)";
     }
   
-    const gradient = ctx.createLinearGradient(
-      points[0].x,
-      points[0].y,
-      points[points.length - 1].x,
-      points[points.length - 1].y
-    );
-  
-    gradient.addColorStop(0, "rgb(70, 138, 255)");
-    gradient.addColorStop(1, "rgb(194, 0, 255)");
-  
-    ctx.strokeStyle = gradient;
-    ctx.lineWidth = 14;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-    ctx.shadowBlur = 36;
-    ctx.shadowColor = "rgba(194, 0, 255, 0.9)";
     ctx.stroke();
   }
   
-  // animation loop
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-    // faster follow (no dots)
-    last.x = lerp(last.x, mouse.x, 0.42);
-    last.y = lerp(last.y, mouse.y, 0.42);
+    // fast smooth follow
+    last.x = lerp(last.x, mouse.x, 0.45);
+    last.y = lerp(last.y, mouse.y, 0.45);
   
     points.push({ x: last.x, y: last.y });
-    if (points.length > 90) points.shift();
+    if (points.length > 80) points.shift();
   
-    // double helix
-    drawRibbon(0, false);
-    drawRibbon(Math.PI, true);
+    // outer glow ribbon
+    drawRibbon(false);
+    // inner white glow
+    drawRibbon(true);
   
     requestAnimationFrame(animate);
   }
