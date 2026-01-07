@@ -15,8 +15,7 @@ function randomColors(count) {
     `hsl(${Math.floor(Math.random() * 360)}, 80%, 65%)`
   );
 }
-
-const app = TubesCursor(canvas, {
+const app = new TubesCursor(canvas, {
   tubes: {
     colors: ["#6B5BFF", "#2FA4FF", "#9B6CFF"],
     lights: {
@@ -25,24 +24,17 @@ const app = TubesCursor(canvas, {
     }
   }
 });
-
-// show cursor on hover
 hero.addEventListener("mouseenter", () => {
   canvas.style.opacity = "1";
 });
-
 hero.addEventListener("mouseleave", () => {
   canvas.style.opacity = "0";
 });
-
 hero.addEventListener("click", () => {
   if (!app?.tubes) return;
-
   app.tubes.setColors(randomColors(3));
   app.tubes.setLightColors(randomColors(4));
 });
-
-// resize fix
 window.addEventListener("resize", () => {
   canvas.width = hero.offsetWidth;
   canvas.height = hero.offsetHeight;
