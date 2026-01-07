@@ -1,6 +1,40 @@
 (function(){
   'use strict';
 
+  const canvas = document.getElementById("cursor-canvas");
+  const ctx = canvas.getContext("2d");
+  let points = [];
+  let mouse = { x: 0, y: 0 };
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+  window.addEventListener("mousemove", (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+    points.push({ x: mouse.x, y: mouse.y });
+    if (points.length > 40) points.shift();
+  });
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.globalCompositeOperation = "lighter";
+    ctx.beginPath();
+
+    points.forEach((p, i) => {
+      const t = i / points.length;
+      ctx.strokeStyle = `hsla(${260 + t * 80}, 90%, 65%, ${t})`;
+      ctx.lineWidth = 6 * t;
+      if (i === 0) ctx.moveTo(p.x, p.y);
+      else ctx.lineTo(p.x, p.y);
+    });
+    
+    ctx.stroke();
+    requestAnimationFrame(draw);
+  }
+  draw();
+
   window.addEventListener("load", () => {
     if (window.location.hash === "#aboutMeSec") {
         setTimeout(() => {
