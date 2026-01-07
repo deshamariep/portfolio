@@ -17,12 +17,14 @@
   const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
   const last = { x: mouse.x, y: mouse.y };
   
-  // trail points
+  // trail
   const points = [];
+  const maxPoints = 90;
   
+  // helpers
   const lerp = (a, b, n) => a + (b - a) * n;
   
-  // track mouse in hero only
+  // mouse tracking (hero only)
   hero.addEventListener("mousemove", (e) => {
     const rect = hero.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
@@ -33,7 +35,10 @@
     points.length = 0;
   });
   
-  function drawRibbon(inner = false) {
+  // animation time
+  let t = 0;
+  
+  function drawRibbon(inner = false, speed = 0) {
     if (points.length < 2) return;
   
     ctx.beginPath();
@@ -41,11 +46,14 @@
       i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
     });
   
+    // slow color breathing
+    const pulse = (Math.sin(t * 0.02) + 1) / 2;
+  
     if (inner) {
-      ctx.strokeStyle = "rgba(255,255,255,0.85)";
-      ctx.lineWidth = 6;
-      ctx.shadowBlur = 12;
-      ctx.shadowColor = "rgba(255,255,255,0.9)";
+      ctx.strokeStyle = `rgba(255,255,255,${0.6 + pulse * 0.2})`;
+      ctx.lineWidth = 3; // thinner inner glow
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = "rgba(255,255,255,0.8)";
     } else {
       const gradient = ctx.createLinearGradient(
         points[0].x,
@@ -58,9 +66,9 @@
       gradient.addColorStop(1, "rgb(194, 0, 255)");
   
       ctx.strokeStyle = gradient;
-      ctx.lineWidth = 14;
+      ctx.lineWidth = 10 + speed * 0.35; // thickness reacts to speed
       ctx.shadowBlur = 36;
-      ctx.shadowColor = "rgba(194, 0, 255, 0.9)";
+      ctx.shadowColor = `rgba(194, 0, 255, ${0.7 + pulse * 0.3})`;
     }
   
     ctx.lineCap = "round";
@@ -70,18 +78,27 @@
   
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    t++;
   
-    // fast smooth follow
+    // smooth fast follow
+    const prevX = last.x;
+    const prevY = last.y;
+  
     last.x = lerp(last.x, mouse.x, 0.45);
     last.y = lerp(last.y, mouse.y, 0.45);
   
-    points.push({ x: last.x, y: last.y });
-    if (points.length > 80) points.shift();
+    // speed calculation
+    const dx = last.x - prevX;
+    const dy = last.y - prevY;
+    const speed = Math.sqrt(dx * dx + dy * dy);
   
-    // outer glow ribbon
-    drawRibbon(false);
-    // inner white glow
-    drawRibbon(true);
+    points.push({ x: last.x, y: last.y });
+    if (points.length > maxPoints) points.shift();
+  
+    // outer ribbon
+    drawRibbon(false, speed);
+    // inner glow
+    drawRibbon(true, speed);
   
     requestAnimationFrame(animate);
   }
