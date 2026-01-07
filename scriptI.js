@@ -5,80 +5,110 @@
   const canvas = document.getElementById("cursor-canvas");
   const ctx = canvas.getContext("2d");
   const hero = document.getElementById("hero");
+
   let active = false;
   let points = [];
   let mouse = { x: 0, y: 0 };
   let last = { x: 0, y: 0 };
-  const palette = [260, 235, 290];
-  let hueIndex = 0;
+
   function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
   resize();
   window.addEventListener("resize", resize);
-  window.addEventListener("mousemove", (e) => {
+
+  window.addEventListener("mousemove", e => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
   });
+
   hero.addEventListener("mouseenter", () => {
     active = true;
     canvas.style.opacity = "1";
   });
+
   hero.addEventListener("mouseleave", () => {
     active = false;
     canvas.style.opacity = "0";
     points = [];
   });
-  document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("mouseenter", () => {
-      ctx.shadowBlur = 24;
-    });
-    link.addEventListener("mouseleave", () => {
-      ctx.shadowBlur = 14;
-    });
-  });
+
   function lerp(a, b, t) {
     return a + (b - a) * t;
   }
-  function smoothPoint() {
-    last.x = lerp(last.x, mouse.x, 0.28);
-    last.y = lerp(last.y, mouse.y, 0.28);
+
+  function updatePoints() {
+    // smooth follow
+    last.x = lerp(last.x, mouse.x, 0.22);
+    last.y = lerp(last.y, mouse.y, 0.22);
+
+    // ✨ subtle motion wobble
+    last.x += Math.sin(Date.now() * 0.002) * 0.4;
+    last.y += Math.cos(Date.now() * 0.002) * 0.4;
+
     points.push({ x: last.x, y: last.y });
-    if (points.length > 42) points.shift();
+    if (points.length > 60) points.shift();
   }
+
+  function drawRibbon(offsetPhase = 0, invert = false) {
+    for (let i = 1; i < points.length; i++) {
+      const p1 = points[i - 1];
+      const p2 = points[i];
+      const t = i / points.length;
+
+      const dx = p2.x - p1.x;
+      const dy = p2.y - p1.y;
+      const angle = Math.atan2(dy, dx);
+
+      // 🧬 helix offset
+      const offset =
+        Math.sin(i * 0.45 + Date.now() * 0.004 + offsetPhase) * 8 * (invert ? -1 : 1);
+
+      const ox = Math.cos(angle + Math.PI / 2) * offset;
+      const oy = Math.sin(angle + Math.PI / 2) * offset;
+
+      const width = Math.min(16, (dx * dx + dy * dy) * 0.02) * t + 2;
+
+      const gradient = ctx.createLinearGradient(
+        p1.x + ox,
+        p1.y + oy,
+        p2.x + ox,
+        p2.y + oy
+      );
+      gradient.addColorStop(0, "rgba(70, 138, 255, 1)");
+      gradient.addColorStop(1, "rgba(194, 0, 255, 1)");
+
+      ctx.strokeStyle = gradient;
+      ctx.lineWidth = width;
+      ctx.shadowBlur = 36;
+      ctx.shadowColor = "rgba(194, 0, 255, 0.9)";
+
+      ctx.beginPath();
+      ctx.moveTo(p1.x + ox, p1.y + oy);
+      ctx.lineTo(p2.x + ox, p2.y + oy);
+      ctx.stroke();
+    }
+  }
+
   function draw() {
     if (!active) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       requestAnimationFrame(draw);
       return;
     }
-    ctx.fillStyle = "rgba(255,255,255,0.14)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    smoothPoint();
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.globalCompositeOperation = "lighter";
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-    ctx.globalCompositeOperation = "screen";
-    for (let i = 1; i < points.length; i++) {
-      const p1 = points[i - 1];
-      const p2 = points[i];
-      const t = i / points.length;
-      const dx = p2.x - p1.x;
-      const dy = p2.y - p1.y;
-      const speed = Math.sqrt(dx * dx + dy * dy);
-      const width = Math.min(10, speed * 0.55) * t;
-      const hue = palette[hueIndex % palette.length];
-      const color = `hsla(${hue}, 85%, 65%, ${t})`;
-      ctx.strokeStyle = color;
-      ctx.lineWidth = width;
-      ctx.shadowBlur = 14;
-      ctx.shadowColor = color;
-      ctx.beginPath();
-      ctx.moveTo(p1.x, p1.y);
-      ctx.lineTo(p2.x, p2.y);
-      ctx.stroke();
-    }
-    hueIndex += 0.02;
+
+    updatePoints();
+    
+    // 🧬 double helix
+    drawRibbon(0, false);
+    drawRibbon(Math.PI, true);
+
     requestAnimationFrame(draw);
   }
   draw();
