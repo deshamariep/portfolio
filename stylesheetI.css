@@ -259,6 +259,7 @@
         bottom: 110px;
         margin: auto;
         width: 500px;
+        color: rgb(34, 34, 34);
     }
     .heroExp{
         margin-top: 56px;
@@ -288,6 +289,12 @@
     #desktop{
         margin-top: 16px;
         width: 390px;           
+    }
+    #aboutmedata{
+        display: flex;
+    }
+    #aboutmedata div{
+        flex: 1;
     }
     #dataDesktopBar{
         display: flex;
