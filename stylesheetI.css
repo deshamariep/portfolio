@@ -152,23 +152,6 @@
         scroll-behavior: smooth;
         scroll-padding-top: 64px;
     }
-    #hero {
-        position: relative;
-        height: 100vh;
-        background: #ffffff;
-        overflow: hidden;
-    }
-    #hero-canvas {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        pointer-events: none;
-    }
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-    }
     body{
         margin: 0;
         padding: 0;
