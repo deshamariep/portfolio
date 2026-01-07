@@ -13,22 +13,17 @@
   resize();
   window.addEventListener("resize", resize);
   
-  // mouse state
   const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
   const last = { x: mouse.x, y: mouse.y };
   
-  // trail
   const points = [];
-  const maxPoints = 100;
+  const maxPoints = 110;
   
-  // helpers
   const lerp = (a, b, n) => a + (b - a) * n;
   
-  // idle fade
   let idleOpacity = 0;
   let lastMoveTime = Date.now();
   
-  // mouse tracking (hero only)
   hero.addEventListener("mousemove", (e) => {
     const rect = hero.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
@@ -41,17 +36,19 @@
     idleOpacity = 0;
   });
   
-  // animation time
   let t = 0;
   
-  function drawHelix(offset, inner = false, speed = 0) {
+  function drawHelix(offset, isInner, speed) {
     if (points.length < 2) return;
   
     ctx.beginPath();
+  
     points.forEach((p, i) => {
       const phase = i * 0.35 + offset;
-      const ox = Math.cos(phase) * 6;
-      const oy = Math.sin(phase) * 6;
+  
+      const radius = 9;
+      const ox = Math.cos(phase) * radius;
+      const oy = Math.sin(phase) * radius;
   
       const x = p.x + ox;
       const y = p.y + oy;
@@ -59,13 +56,12 @@
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     });
   
-    // slow color breathing
     const pulse = (Math.sin(t * 0.02) + 1) / 2;
   
-    if (inner) {
-      ctx.strokeStyle = `rgba(255,255,255,${(0.45 + pulse * 0.2) * idleOpacity})`;
-      ctx.lineWidth = 2.5;
-      ctx.shadowBlur = 10;
+    if (isInner) {
+      ctx.strokeStyle = `rgba(255,255,255,${(0.5 + pulse * 0.2) * idleOpacity})`;
+      ctx.lineWidth = 1.8; 
+      ctx.shadowBlur = 14;
       ctx.shadowColor = "rgba(255,255,255,0.9)";
     } else {
       const gradient = ctx.createLinearGradient(
@@ -79,9 +75,9 @@
       gradient.addColorStop(1, "rgb(194, 0, 255)");
   
       ctx.strokeStyle = gradient;
-      ctx.lineWidth = (8 + speed * 0.35);
-      ctx.shadowBlur = 36;
-      ctx.shadowColor = `rgba(194, 0, 255, ${0.6 + pulse * 0.3})`;
+      ctx.lineWidth = 4 + speed * 0.25; 
+      ctx.shadowBlur = 30;
+      ctx.shadowColor = `rgba(194, 0, 255, ${0.55 + pulse * 0.25})`;
       ctx.globalAlpha = idleOpacity;
     }
   
@@ -95,14 +91,12 @@
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     t++;
   
-    // smooth follow
     const prevX = last.x;
     const prevY = last.y;
   
     last.x = lerp(last.x, mouse.x, 0.45);
     last.y = lerp(last.y, mouse.y, 0.45);
   
-    // speed
     const dx = last.x - prevX;
     const dy = last.y - prevY;
     const speed = Math.sqrt(dx * dx + dy * dy);
@@ -110,18 +104,23 @@
     points.push({ x: last.x, y: last.y });
     if (points.length > maxPoints) points.shift();
   
-    // idle fade logic
     const idleTime = Date.now() - lastMoveTime;
     const targetOpacity = idleTime > 600 ? 0 : 1;
     idleOpacity = lerp(idleOpacity, targetOpacity, 0.06);
   
-    // triple helix (120° phase offsets)
-    drawHelix(0, false, speed);
-    drawHelix(Math.PI * 2 / 3, false, speed);
-    drawHelix(Math.PI * 4 / 3, false, speed);
+    const offsets = [
+      0,
+      (Math.PI * 2) / 3,
+      (Math.PI * 4) / 3
+    ];
   
-    // inner glow (single core for cleanliness)
-    drawHelix(0, true, speed);
+    offsets.forEach(offset => {
+      drawHelix(offset, false, speed);
+    });
+  
+    offsets.forEach(offset => {
+      drawHelix(offset, true, speed);
+    });
   
     requestAnimationFrame(animate);
   }
