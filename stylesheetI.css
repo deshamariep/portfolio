@@ -262,10 +262,11 @@
         color: rgb(34, 34, 34);
     }
     .heroExp{
-        margin-top: 56px;
+        margin-top: 16px;
         display: block;
-        max-width: 390px;
-        padding: 8px 16px;
+        max-width: 330px;
+        height: 140px;
+        padding: 16px 16px;
         border-radius: 10px;
         border: 1px solid transparent;
         background: 
@@ -292,6 +293,7 @@
     }
     #aboutmedata{
         display: flex;
+        gap: 8px;
     }
     #aboutmedata div{
         flex: 1;

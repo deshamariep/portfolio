@@ -19,41 +19,54 @@
   
   // trail
   const points = [];
-  const maxPoints = 90;
+  const maxPoints = 100;
   
   // helpers
   const lerp = (a, b, n) => a + (b - a) * n;
+  
+  // idle fade
+  let idleOpacity = 0;
+  let lastMoveTime = Date.now();
   
   // mouse tracking (hero only)
   hero.addEventListener("mousemove", (e) => {
     const rect = hero.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
+    lastMoveTime = Date.now();
   });
   
   hero.addEventListener("mouseleave", () => {
     points.length = 0;
+    idleOpacity = 0;
   });
   
   // animation time
   let t = 0;
   
-  function drawRibbon(inner = false, speed = 0) {
+  function drawHelix(offset, inner = false, speed = 0) {
     if (points.length < 2) return;
   
     ctx.beginPath();
     points.forEach((p, i) => {
-      i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+      const phase = i * 0.35 + offset;
+      const ox = Math.cos(phase) * 6;
+      const oy = Math.sin(phase) * 6;
+  
+      const x = p.x + ox;
+      const y = p.y + oy;
+  
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     });
   
     // slow color breathing
     const pulse = (Math.sin(t * 0.02) + 1) / 2;
   
     if (inner) {
-      ctx.strokeStyle = `rgba(255,255,255,${0.6 + pulse * 0.2})`;
-      ctx.lineWidth = 3; // thinner inner glow
+      ctx.strokeStyle = `rgba(255,255,255,${(0.45 + pulse * 0.2) * idleOpacity})`;
+      ctx.lineWidth = 2.5;
       ctx.shadowBlur = 10;
-      ctx.shadowColor = "rgba(255,255,255,0.8)";
+      ctx.shadowColor = "rgba(255,255,255,0.9)";
     } else {
       const gradient = ctx.createLinearGradient(
         points[0].x,
@@ -66,28 +79,30 @@
       gradient.addColorStop(1, "rgb(194, 0, 255)");
   
       ctx.strokeStyle = gradient;
-      ctx.lineWidth = 10 + speed * 0.35; // thickness reacts to speed
+      ctx.lineWidth = (8 + speed * 0.35);
       ctx.shadowBlur = 36;
-      ctx.shadowColor = `rgba(194, 0, 255, ${0.7 + pulse * 0.3})`;
+      ctx.shadowColor = `rgba(194, 0, 255, ${0.6 + pulse * 0.3})`;
+      ctx.globalAlpha = idleOpacity;
     }
   
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
     ctx.stroke();
+    ctx.globalAlpha = 1;
   }
   
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     t++;
   
-    // smooth fast follow
+    // smooth follow
     const prevX = last.x;
     const prevY = last.y;
   
     last.x = lerp(last.x, mouse.x, 0.45);
     last.y = lerp(last.y, mouse.y, 0.45);
   
-    // speed calculation
+    // speed
     const dx = last.x - prevX;
     const dy = last.y - prevY;
     const speed = Math.sqrt(dx * dx + dy * dy);
@@ -95,10 +110,18 @@
     points.push({ x: last.x, y: last.y });
     if (points.length > maxPoints) points.shift();
   
-    // outer ribbon
-    drawRibbon(false, speed);
-    // inner glow
-    drawRibbon(true, speed);
+    // idle fade logic
+    const idleTime = Date.now() - lastMoveTime;
+    const targetOpacity = idleTime > 600 ? 0 : 1;
+    idleOpacity = lerp(idleOpacity, targetOpacity, 0.06);
+  
+    // triple helix (120° phase offsets)
+    drawHelix(0, false, speed);
+    drawHelix(Math.PI * 2 / 3, false, speed);
+    drawHelix(Math.PI * 4 / 3, false, speed);
+  
+    // inner glow (single core for cleanliness)
+    drawHelix(0, true, speed);
   
     requestAnimationFrame(animate);
   }
