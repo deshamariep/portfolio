@@ -46,7 +46,7 @@
     points.forEach((p, i) => {
       const prog = i / points.length;
   
-      const angle = t * 0.12 + phaseOffset + prog * 1.6;
+      const angle = t * 0.18 + phaseOffset + prog * 1.8;
   
       const radius = 26 * (1 - prog);
   
