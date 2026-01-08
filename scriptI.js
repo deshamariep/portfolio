@@ -48,7 +48,7 @@
   
       const angle = t * 0.12 + phaseOffset + prog * 1.6;
   
-      const radius = 18 * (1 - prog);
+      const radius = 26 * (1 - prog);
   
       const ox = Math.cos(angle) * radius;
       const oy = Math.sin(angle) * radius;
@@ -78,7 +78,7 @@
       gradient.addColorStop(1, "rgb(194, 0, 255)");
   
       ctx.strokeStyle = gradient;
-      ctx.lineWidth = 3.5 + speed * 0.25;
+      ctx.lineWidth = 4.2 + speed * 0.28;
       ctx.shadowBlur = 34;
       ctx.shadowColor = `rgba(194, 0, 255, ${0.5 + pulse * 0.3})`;
       ctx.globalAlpha = idleOpacity;
