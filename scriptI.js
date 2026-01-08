@@ -24,7 +24,7 @@
     mouse.y = e.clientY - rect.top;
   });
   
-  const TRAIL_LENGTH = 28;
+  const TRAIL_LENGTH = 34;
   const trail = [];
   
   for (let i = 0; i < TRAIL_LENGTH; i++) {
@@ -32,15 +32,16 @@
   }
   
   const RIBBONS = 5;
-  const BASE_RADIUS = 24;
-  const SPIN_SPEED = 0.025;
+  const BASE_RADIUS = 16;
+  const SPIN_SPEED = 0.03;
+  const TAIL_SPIN = 0.045;
   
   const COLORS = [
     "70,138,255",
     "194,0,255",
-    "120,80,255",
+    "120,90,255",
     "90,180,255",
-    "160,100,255"
+    "170,100,255"
   ];
   
   function drawRibbon(phase, color, time) {
@@ -50,11 +51,17 @@
       const p = trail[i];
       const t = i / trail.length;
   
-      const orbit = BASE_RADIUS + t * 18;
-      const angle = time * SPIN_SPEED + phase + t * 2.2;
+      const orbit = BASE_RADIUS + t * 22;
+      const angle =
+        time * SPIN_SPEED +
+        phase +
+        t * 3.2 +
+        time * TAIL_SPIN * t;
   
-      const cx = p.x + Math.cos(time * SPIN_SPEED + phase) * BASE_RADIUS;
-      const cy = p.y + Math.sin(time * SPIN_SPEED + phase) * BASE_RADIUS;
+      const cx =
+        p.x + Math.cos(time * SPIN_SPEED + phase) * BASE_RADIUS;
+      const cy =
+        p.y + Math.sin(time * SPIN_SPEED + phase) * BASE_RADIUS;
   
       const x = cx + Math.cos(angle) * orbit;
       const y = cy + Math.sin(angle) * orbit;
@@ -62,18 +69,27 @@
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     }
   
-    const thickness = 4.2 + speed * 0.15;
+    const head = 3.2 + speed * 0.12;
+    const tail = 0.4;
+  
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
   
     ctx.strokeStyle = "rgba(255,255,255,0.95)";
-    ctx.lineWidth = thickness;
-    ctx.shadowBlur = 10;
+    ctx.lineWidth = head;
+    ctx.shadowBlur = 12;
     ctx.shadowColor = "rgba(255,255,255,0.9)";
     ctx.stroke();
   
-    ctx.strokeStyle = `rgba(${color},0.85)`;
-    ctx.lineWidth = thickness * 2.6;
-    ctx.shadowBlur = 42;
+    ctx.strokeStyle = `rgba(${color},0.9)`;
+    ctx.lineWidth = head * 2.1;
+    ctx.shadowBlur = 44;
     ctx.shadowColor = `rgba(${color},1)`;
+    ctx.stroke();
+  
+    ctx.strokeStyle = `rgba(${color},0.65)`;
+    ctx.lineWidth = tail;
+    ctx.shadowBlur = 12;
     ctx.stroke();
   }
   
@@ -84,7 +100,7 @@
   
     const dx = mouse.x - last.x;
     const dy = mouse.y - last.y;
-    speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.4, 30);
+    speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.35, 24);
   
     last.x = mouse.x;
     last.y = mouse.y;
@@ -93,7 +109,11 @@
     trail.pop();
   
     for (let i = 0; i < RIBBONS; i++) {
-      drawRibbon((Math.PI * 2 / RIBBONS) * i, COLORS[i % COLORS.length], time);
+      drawRibbon(
+        (Math.PI * 2 / RIBBONS) * i,
+        COLORS[i % COLORS.length],
+        time
+      );
     }
   
     time++;
