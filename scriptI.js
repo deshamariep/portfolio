@@ -6,124 +6,107 @@
   const ctx = canvas.getContext("2d");
   const hero = document.getElementById("hero");
   
+  let w, h;
   function resize() {
-    canvas.width = hero.offsetWidth;
-    canvas.height = hero.offsetHeight;
+    w = canvas.width = hero.offsetWidth;
+    h = canvas.height = hero.offsetHeight;
   }
   resize();
   window.addEventListener("resize", resize);
   
-  const mouse = { x: canvas.width / 2, y: canvas.height / 2 };
-  const last = { x: mouse.x, y: mouse.y };
+  let mouse = { x: w / 2, y: h / 2 };
+  let last = { x: mouse.x, y: mouse.y };
+  let speed = 0;
+  let idle = 1;
   
-  const points = [];
-  const maxPoints = 100;
+  const RIBBONS = 5;
+  const TRAIL_LENGTH = 28;
+  const BASE_RADIUS = 22;
+  const WEAVE_AMPLITUDE = 12;
+  const WEAVE_FREQUENCY = 1.8;
+  const FADE_SPEED = 0.015;
   
-  const lerp = (a, b, n) => a + (b - a) * n;
+  const colors = [
+    "70,138,255",
+    "194,0,255",
+    "120,180,255",
+    "210,120,255",
+    "150,90,255"
+  ];
   
-  let idleOpacity = 0;
-  let lastMoveTime = Date.now();
+  const trail = Array.from({ length: TRAIL_LENGTH }, () => ({ ...mouse }));
   
-  hero.addEventListener("mousemove", (e) => {
+  hero.addEventListener("mousemove", e => {
     const rect = hero.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
-    lastMoveTime = Date.now();
+    idle = 1;
   });
   
-  hero.addEventListener("mouseleave", () => {
-    points.length = 0;
-    idleOpacity = 0;
-  });
-  
-  let t = 0;
-  
-  function drawHelix(phaseOffset, isInner, speed) {
-    if (points.length < 2) return;
-  
+  function drawRibbon(phase, color, t) {
     ctx.beginPath();
   
-    points.forEach((p, i) => {
-      const prog = i / points.length;
+    for (let i = 0; i < trail.length; i++) {
+      const p = trail[i];
+      const prog = i / trail.length;
   
-      const angle = t * 0.18 + phaseOffset + prog * 1.8;
+      const weave =
+        Math.sin(t * WEAVE_FREQUENCY + prog * 6 + phase) *
+        WEAVE_AMPLITUDE *
+        (1 - prog);
   
-      const radius = 26 * (1 - prog);
+      const offsetX = Math.cos(phase) * BASE_RADIUS * (1 - prog);
+      const offsetY = Math.sin(phase) * BASE_RADIUS * (1 - prog);
   
-      const ox = Math.cos(angle) * radius;
-      const oy = Math.sin(angle) * radius;
-  
-      const x = p.x + ox;
-      const y = p.y + oy;
+      const x = p.x + offsetX + weave;
+      const y = p.y + offsetY - weave;
   
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-    });
-  
-    const pulse = (Math.sin(t * 0.015) + 1) / 2;
-  
-    if (isInner) {
-      ctx.strokeStyle = `rgba(255,255,255,${(0.45 + pulse * 0.15) * idleOpacity})`;
-      ctx.lineWidth = 1.4;
-      ctx.shadowBlur = 16;
-      ctx.shadowColor = "rgba(255,255,255,0.9)";
-    } else {
-      const gradient = ctx.createLinearGradient(
-        points[0].x,
-        points[0].y,
-        points[points.length - 1].x,
-        points[points.length - 1].y
-      );
-  
-      gradient.addColorStop(0, "rgb(70, 138, 255)");
-      gradient.addColorStop(1, "rgb(194, 0, 255)");
-  
-      ctx.strokeStyle = gradient;
-      ctx.lineWidth = 4.2 + speed * 0.28;
-      ctx.shadowBlur = 34;
-      ctx.shadowColor = `rgba(194, 0, 255, ${0.5 + pulse * 0.3})`;
-      ctx.globalAlpha = idleOpacity;
     }
   
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
+    ctx.strokeStyle = `rgba(${color},0.9)`;
+    ctx.lineWidth = 1.4 + speed * 0.12;
+    ctx.shadowBlur = 18;
+    ctx.shadowColor = `rgba(${color},0.8)`;
     ctx.stroke();
-    ctx.globalAlpha = 1;
+  
+    ctx.strokeStyle = `rgba(${color},0.35)`;
+    ctx.lineWidth = 4.5 + speed * 0.25;
+    ctx.shadowBlur = 40;
+    ctx.stroke();
   }
   
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    t++;
+  function animate(t) {
+    t *= 0.001;
   
-    const px = last.x;
-    const py = last.y;
+    ctx.clearRect(0, 0, w, h);
   
-    last.x = lerp(last.x, mouse.x, 0.5);
-    last.y = lerp(last.y, mouse.y, 0.5);
+    const dx = mouse.x - last.x;
+    const dy = mouse.y - last.y;
+    speed = Math.min(Math.hypot(dx, dy), 40);
+    last.x = mouse.x;
+    last.y = mouse.y;
   
-    const dx = last.x - px;
-    const dy = last.y - py;
-    const speed = Math.sqrt(dx * dx + dy * dy);
+    idle -= FADE_SPEED;
+    idle = Math.max(idle, 0);
   
-    points.push({ x: last.x, y: last.y });
-    if (points.length > maxPoints) points.shift();
+    trail.unshift({ ...mouse });
+    trail.pop();
   
-    const idleTime = Date.now() - lastMoveTime;
-    const targetOpacity = idleTime > 600 ? 0 : 1;
-    idleOpacity = lerp(idleOpacity, targetOpacity, 0.06);
+    ctx.globalAlpha = idle;
   
-    const offsets = [
-      0,
-      (Math.PI * 2) / 3,
-      (Math.PI * 4) / 3
-    ];
-  
-    offsets.forEach(o => drawHelix(o, false, speed));
-    offsets.forEach(o => drawHelix(o, true, speed));
+    for (let i = 0; i < RIBBONS; i++) {
+      drawRibbon(
+        (Math.PI * 2 * i) / RIBBONS,
+        colors[i % colors.length],
+        t
+      );
+    }
   
     requestAnimationFrame(animate);
   }
   
-  animate();
+  animate(0);
 
   window.addEventListener("load", () => {
     if (window.location.hash === "#aboutMeSec") {
