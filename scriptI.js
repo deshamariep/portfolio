@@ -17,6 +17,7 @@
   let mouse = { x: w / 2, y: h / 2 };
   let last = { x: mouse.x, y: mouse.y };
   let speed = 0;
+  let motionStrength = 0;
   
   hero.addEventListener("mousemove", e => {
     const rect = hero.getBoundingClientRect();
@@ -32,9 +33,11 @@
   }
   
   const RIBBONS = 5;
-  const BASE_RADIUS = 16;
-  const SPIN_SPEED = 0.03;
-  const TAIL_SPIN = 0.045;
+  const BASE_RADIUS = 24;
+  
+  const MAX_SPIN = 0.04;
+  const MAX_TAIL_SPIN = 0.06;
+  const MAX_SPIRAL = 22;
   
   const COLORS = [
     "70,138,255",
@@ -51,45 +54,42 @@
       const p = trail[i];
       const t = i / trail.length;
   
-      const orbit = BASE_RADIUS + t * 22;
+      const spiral = MAX_SPIRAL * motionStrength * t;
+      const spin = MAX_SPIN * motionStrength;
+      const tailSpin = MAX_TAIL_SPIN * motionStrength * t;
+  
       const angle =
-        time * SPIN_SPEED +
+        time * spin +
         phase +
         t * 3.2 +
-        time * TAIL_SPIN * t;
+        time * tailSpin;
   
       const cx =
-        p.x + Math.cos(time * SPIN_SPEED + phase) * BASE_RADIUS;
+        p.x + Math.cos(time * spin + phase) * BASE_RADIUS;
       const cy =
-        p.y + Math.sin(time * SPIN_SPEED + phase) * BASE_RADIUS;
+        p.y + Math.sin(time * spin + phase) * BASE_RADIUS;
   
-      const x = cx + Math.cos(angle) * orbit;
-      const y = cy + Math.sin(angle) * orbit;
+      const x = cx + Math.cos(angle) * (BASE_RADIUS + spiral);
+      const y = cy + Math.sin(angle) * (BASE_RADIUS + spiral);
   
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     }
   
-    const head = 3.2 + speed * 0.12;
-    const tail = 0.4;
+    const thickness = 2.6 + speed * 0.1;
   
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
   
     ctx.strokeStyle = "rgba(255,255,255,0.95)";
-    ctx.lineWidth = head;
+    ctx.lineWidth = thickness;
     ctx.shadowBlur = 12;
     ctx.shadowColor = "rgba(255,255,255,0.9)";
     ctx.stroke();
   
     ctx.strokeStyle = `rgba(${color},0.9)`;
-    ctx.lineWidth = head * 2.1;
+    ctx.lineWidth = thickness * 2.1;
     ctx.shadowBlur = 44;
     ctx.shadowColor = `rgba(${color},1)`;
-    ctx.stroke();
-  
-    ctx.strokeStyle = `rgba(${color},0.65)`;
-    ctx.lineWidth = tail;
-    ctx.shadowBlur = 12;
     ctx.stroke();
   }
   
@@ -100,7 +100,9 @@
   
     const dx = mouse.x - last.x;
     const dy = mouse.y - last.y;
-    speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.35, 24);
+    speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.4, 24);
+  
+    motionStrength += ((speed > 0.5 ? 1 : 0) - motionStrength) * 0.08;
   
     last.x = mouse.x;
     last.y = mouse.y;
