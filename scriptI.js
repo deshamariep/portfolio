@@ -20,88 +20,101 @@
   let idle = 1;
   
   const RIBBONS = 5;
-  const TRAIL_LENGTH = 28;
-  const BASE_RADIUS = 22;
-  const WEAVE_AMPLITUDE = 12;
-  const WEAVE_FREQUENCY = 1.8;
+  const TRAIL = 30;
+  const BASE_RADIUS = 26;
+  const WEAVE_AMPLITUDE = 18;
+  const WEAVE_FREQ = 2.2;
   const FADE_SPEED = 0.015;
   
   const colors = [
     "70,138,255",
     "194,0,255",
-    "120,180,255",
+    "110,180,255",
     "210,120,255",
     "150,90,255"
   ];
   
-  const trail = Array.from({ length: TRAIL_LENGTH }, () => ({ ...mouse }));
+  const trail = Array.from({ length: TRAIL }, () => ({ ...mouse }));
   
   hero.addEventListener("mousemove", e => {
-    const rect = hero.getBoundingClientRect();
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
+    const r = hero.getBoundingClientRect();
+    mouse.x = e.clientX - r.left;
+    mouse.y = e.clientY - r.top;
     idle = 1;
   });
   
-  function drawRibbon(phase, color, t) {
+  function drawRibbon(phase, color, t, depth) {
     ctx.beginPath();
   
     for (let i = 0; i < trail.length; i++) {
       const p = trail[i];
       const prog = i / trail.length;
   
-      const weave =
-        Math.sin(t * WEAVE_FREQUENCY + prog * 6 + phase) *
+      const wave =
+        Math.sin(t * WEAVE_FREQ + prog * 7 + phase) *
         WEAVE_AMPLITUDE *
         (1 - prog);
   
-      const offsetX = Math.cos(phase) * BASE_RADIUS * (1 - prog);
-      const offsetY = Math.sin(phase) * BASE_RADIUS * (1 - prog);
+      const cross =
+        Math.cos(t * WEAVE_FREQ + prog * 7 + phase) *
+        WEAVE_AMPLITUDE *
+        0.6 *
+        (1 - prog);
   
-      const x = p.x + offsetX + weave;
-      const y = p.y + offsetY - weave;
+      const ox = Math.cos(phase) * BASE_RADIUS * (1 - prog);
+      const oy = Math.sin(phase) * BASE_RADIUS * (1 - prog);
+  
+      const x = p.x + ox + wave;
+      const y = p.y + oy + cross;
   
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     }
   
-    ctx.strokeStyle = `rgba(${color},0.9)`;
-    ctx.lineWidth = 1.4 + speed * 0.12;
+    const thickness = 3.2 + speed * 0.15;
+  
+    ctx.strokeStyle = `rgba(${color},0.95)`;
+    ctx.lineWidth = thickness;
     ctx.shadowBlur = 18;
-    ctx.shadowColor = `rgba(${color},0.8)`;
+    ctx.shadowColor = `rgba(${color},0.85)`;
     ctx.stroke();
   
     ctx.strokeStyle = `rgba(${color},0.35)`;
-    ctx.lineWidth = 4.5 + speed * 0.25;
+    ctx.lineWidth = thickness * 2.2;
     ctx.shadowBlur = 40;
     ctx.stroke();
   }
   
   function animate(t) {
     t *= 0.001;
-  
     ctx.clearRect(0, 0, w, h);
   
     const dx = mouse.x - last.x;
     const dy = mouse.y - last.y;
-    speed = Math.min(Math.hypot(dx, dy), 40);
+    speed = Math.min(Math.hypot(dx, dy), 45);
     last.x = mouse.x;
     last.y = mouse.y;
   
-    idle -= FADE_SPEED;
-    idle = Math.max(idle, 0);
+    idle = Math.max(idle - FADE_SPEED, 0);
   
     trail.unshift({ ...mouse });
     trail.pop();
   
     ctx.globalAlpha = idle;
   
-    for (let i = 0; i < RIBBONS; i++) {
+    const order = [...Array(RIBBONS).keys()].sort(
+      (a, b) =>
+        Math.sin(t * WEAVE_FREQ + a) -
+        Math.sin(t * WEAVE_FREQ + b)
+    );
+  
+    order.forEach(i => {
       drawRibbon(
         (Math.PI * 2 * i) / RIBBONS,
-        colors[i % colors.length],
-        t
+        colors[i],
+        t,
+        i
       );
-    }
+    });
   
     requestAnimationFrame(animate);
   }
