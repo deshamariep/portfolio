@@ -35,9 +35,9 @@
   const RIBBONS = 5;
   const BASE_RADIUS = 24;
   
-  const MAX_SPIN = 0.04;
-  const MAX_TAIL_SPIN = 0.06;
-  const MAX_SPIRAL = 22;
+  const MAX_SPIN = 0.018;       // overall orbit speed
+  const MAX_TAIL_SPIN = 0.025; // tail twist speed
+  const MAX_SPIRAL = 14;       // how far ribbons expand
   
   const COLORS = [
     "70,138,255",
@@ -102,7 +102,7 @@
     const dy = mouse.y - last.y;
     speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.4, 24);
   
-    motionStrength += ((speed > 0.5 ? 1 : 0) - motionStrength) * 0.08;
+    motionStrength += ((speed > 0.5 ? 1 : 0) - motionStrength) * 0.05;
   
     last.x = mouse.x;
     last.y = mouse.y;
