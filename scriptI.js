@@ -4,6 +4,7 @@
   // cursor 
   const canvas = document.getElementById("cursor-canvas");
   const ctx = canvas.getContext("2d");
+  
   const hero = document.getElementById("hero");
   
   let w, h;
@@ -19,107 +20,96 @@
   let speed = 0;
   let idle = 1;
   
-  const RIBBONS = 5;
-  const TRAIL = 30;
-  const BASE_RADIUS = 26;
-  const WEAVE_AMPLITUDE = 18;
-  const WEAVE_FREQ = 2.2;
-  const FADE_SPEED = 0.015;
-  
-  const colors = [
-    "70,138,255",
-    "194,0,255",
-    "110,180,255",
-    "210,120,255",
-    "150,90,255"
-  ];
-  
-  const trail = Array.from({ length: TRAIL }, () => ({ ...mouse }));
-  
   hero.addEventListener("mousemove", e => {
-    const r = hero.getBoundingClientRect();
-    mouse.x = e.clientX - r.left;
-    mouse.y = e.clientY - r.top;
-    idle = 1;
+    const rect = hero.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+    idle = 0;
   });
   
-  function drawRibbon(phase, color, t, depth) {
+  const TRAIL_LENGTH = 24;
+  const trail = [];
+  
+  for (let i = 0; i < TRAIL_LENGTH; i++) {
+    trail.push({ x: mouse.x, y: mouse.y });
+  }
+  
+  const RIBBONS = 5;
+  const BASE_RADIUS = 24;    
+  const SPIN_SPEED = 0.018;
+  const FADE_SPEED = 0.02;
+  
+  const COLORS = [
+    "70,138,255",
+    "194,0,255",
+    "130,90,255",
+    "90,180,255",
+    "160,110,255"
+  ];
+  
+  function drawRibbon(phase, color, time) {
     ctx.beginPath();
   
     for (let i = 0; i < trail.length; i++) {
       const p = trail[i];
-      const prog = i / trail.length;
+      const t = i / trail.length;
   
-      const wave =
-        Math.sin(t * WEAVE_FREQ + prog * 7 + phase) *
-        WEAVE_AMPLITUDE *
-        (1 - prog);
+      const orbit = BASE_RADIUS + t * 16;
+      const angle = time * SPIN_SPEED + phase + t * 2;
   
-      const cross =
-        Math.cos(t * WEAVE_FREQ + prog * 7 + phase) *
-        WEAVE_AMPLITUDE *
-        0.6 *
-        (1 - prog);
+      const cx = p.x + Math.cos(time * SPIN_SPEED + phase) * BASE_RADIUS;
+      const cy = p.y + Math.sin(time * SPIN_SPEED + phase) * BASE_RADIUS;
   
-      const ox = Math.cos(phase) * BASE_RADIUS * (1 - prog);
-      const oy = Math.sin(phase) * BASE_RADIUS * (1 - prog);
-  
-      const x = p.x + ox + wave;
-      const y = p.y + oy + cross;
+      const x = cx + Math.cos(angle) * orbit;
+      const y = cy + Math.sin(angle) * orbit;
   
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     }
   
-    const thickness = 3.2 + speed * 0.15;
+    const thickness = 2.8 + speed * 0.12;
   
     ctx.strokeStyle = `rgba(${color},0.95)`;
     ctx.lineWidth = thickness;
     ctx.shadowBlur = 18;
-    ctx.shadowColor = `rgba(${color},0.85)`;
+    ctx.shadowColor = `rgba(${color},0.9)`;
     ctx.stroke();
   
     ctx.strokeStyle = `rgba(${color},0.35)`;
-    ctx.lineWidth = thickness * 2.2;
-    ctx.shadowBlur = 40;
+    ctx.lineWidth = thickness * 2.4;
+    ctx.shadowBlur = 36;
     ctx.stroke();
   }
   
-  function animate(t) {
-    t *= 0.001;
+  let time = 0;
+  
+  function animate() {
     ctx.clearRect(0, 0, w, h);
   
     const dx = mouse.x - last.x;
     const dy = mouse.y - last.y;
-    speed = Math.min(Math.hypot(dx, dy), 45);
+    speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.35, 25);
+  
     last.x = mouse.x;
     last.y = mouse.y;
   
-    idle = Math.max(idle - FADE_SPEED, 0);
+    idle += FADE_SPEED;
+    idle = Math.min(idle, 1);
   
-    trail.unshift({ ...mouse });
+    ctx.globalAlpha = 1 - idle;
+  
+    trail.unshift({ x: mouse.x, y: mouse.y });
     trail.pop();
   
-    ctx.globalAlpha = idle;
+    for (let i = 0; i < RIBBONS; i++) {
+      drawRibbon((Math.PI * 2 / RIBBONS) * i, COLORS[i % COLORS.length], time);
+    }
   
-    const order = [...Array(RIBBONS).keys()].sort(
-      (a, b) =>
-        Math.sin(t * WEAVE_FREQ + a) -
-        Math.sin(t * WEAVE_FREQ + b)
-    );
-  
-    order.forEach(i => {
-      drawRibbon(
-        (Math.PI * 2 * i) / RIBBONS,
-        colors[i],
-        t,
-        i
-      );
-    });
-  
+    ctx.globalAlpha = 1;
+    time++;
     requestAnimationFrame(animate);
   }
   
-  animate(0);
+  animate();
 
   window.addEventListener("load", () => {
     if (window.location.hash === "#aboutMeSec") {
