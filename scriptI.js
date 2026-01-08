@@ -17,7 +17,7 @@
   const last = { x: mouse.x, y: mouse.y };
   
   const points = [];
-  const maxPoints = 110;
+  const maxPoints = 100;
   
   const lerp = (a, b, n) => a + (b - a) * n;
   
@@ -38,17 +38,20 @@
   
   let t = 0;
   
-  function drawHelix(offset, isInner, speed) {
+  function drawHelix(phaseOffset, isInner, speed) {
     if (points.length < 2) return;
   
     ctx.beginPath();
   
     points.forEach((p, i) => {
-      const phase = i * 0.35 + offset;
+      const prog = i / points.length;
   
-      const radius = 9;
-      const ox = Math.cos(phase) * radius;
-      const oy = Math.sin(phase) * radius;
+      const angle = t * 0.12 + phaseOffset + prog * 1.6;
+  
+      const radius = 18 * (1 - prog);
+  
+      const ox = Math.cos(angle) * radius;
+      const oy = Math.sin(angle) * radius;
   
       const x = p.x + ox;
       const y = p.y + oy;
@@ -56,12 +59,12 @@
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     });
   
-    const pulse = (Math.sin(t * 0.02) + 1) / 2;
+    const pulse = (Math.sin(t * 0.015) + 1) / 2;
   
     if (isInner) {
-      ctx.strokeStyle = `rgba(255,255,255,${(0.5 + pulse * 0.2) * idleOpacity})`;
-      ctx.lineWidth = 1.8; 
-      ctx.shadowBlur = 14;
+      ctx.strokeStyle = `rgba(255,255,255,${(0.45 + pulse * 0.15) * idleOpacity})`;
+      ctx.lineWidth = 1.4;
+      ctx.shadowBlur = 16;
       ctx.shadowColor = "rgba(255,255,255,0.9)";
     } else {
       const gradient = ctx.createLinearGradient(
@@ -75,9 +78,9 @@
       gradient.addColorStop(1, "rgb(194, 0, 255)");
   
       ctx.strokeStyle = gradient;
-      ctx.lineWidth = 4 + speed * 0.25; 
-      ctx.shadowBlur = 30;
-      ctx.shadowColor = `rgba(194, 0, 255, ${0.55 + pulse * 0.25})`;
+      ctx.lineWidth = 3.5 + speed * 0.25;
+      ctx.shadowBlur = 34;
+      ctx.shadowColor = `rgba(194, 0, 255, ${0.5 + pulse * 0.3})`;
       ctx.globalAlpha = idleOpacity;
     }
   
@@ -91,14 +94,14 @@
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     t++;
   
-    const prevX = last.x;
-    const prevY = last.y;
+    const px = last.x;
+    const py = last.y;
   
-    last.x = lerp(last.x, mouse.x, 0.45);
-    last.y = lerp(last.y, mouse.y, 0.45);
+    last.x = lerp(last.x, mouse.x, 0.5);
+    last.y = lerp(last.y, mouse.y, 0.5);
   
-    const dx = last.x - prevX;
-    const dy = last.y - prevY;
+    const dx = last.x - px;
+    const dy = last.y - py;
     const speed = Math.sqrt(dx * dx + dy * dy);
   
     points.push({ x: last.x, y: last.y });
@@ -114,13 +117,8 @@
       (Math.PI * 4) / 3
     ];
   
-    offsets.forEach(offset => {
-      drawHelix(offset, false, speed);
-    });
-  
-    offsets.forEach(offset => {
-      drawHelix(offset, true, speed);
-    });
+    offsets.forEach(o => drawHelix(o, false, speed));
+    offsets.forEach(o => drawHelix(o, true, speed));
   
     requestAnimationFrame(animate);
   }
