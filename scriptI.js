@@ -320,7 +320,6 @@
 
   const canvas = document.getElementById("cursor-canvas");
   if (!canvas) return;
-
   const ctx = canvas.getContext("2d");
 
   function resize() {
@@ -331,24 +330,25 @@
   window.addEventListener("resize", resize);
 
   const RIBBON_COUNT = 5;
-  const POINTS = 42;
+  const SEGMENTS = 48;
 
   const BASE_RADIUS = 24;
-  const RADIUS_GROWTH = 30;
+  const TAIL_LENGTH = 48;
 
-  const SPIN_SPEED = 0.0015;
-  const TAIL_SPIN = 0.0012;
+  const SPIN_SPEED = 0.0022;
+  const TAIL_TWIST = 0.035;
 
-  const OUTER_GLOW = 64;
-  const INNER_GLOW = 14;
+  const OUTER_GLOW = 70;
+  const INNER_GLOW = 18;
 
-  const BASE_THICKNESS = 7;
+  const OUTER_WIDTH = 8;
+  const INNER_WIDTH = 2.4;
 
   let cursorX = canvas.width / 2;
   let cursorY = canvas.height / 2;
 
-  let prevCursorX = cursorX;
-  let prevCursorY = cursorY;
+  let prevX = cursorX;
+  let prevY = cursorY;
 
   let time = 0;
   let motion = 0;
@@ -358,50 +358,48 @@
     cursorY = e.clientY;
   });
 
-  function ribbonColor(index, t) {
-    const hue = 215 + (index * 14) + Math.sin(t * 0.01) * 8;
-    return `hsla(${hue}, 95%, 62%,`;
+  function beamColor(index, t, alpha) {
+    const hue = 210 + index * 12 + Math.sin(t * 0.01) * 10;
+    return `hsla(${hue}, 95%, 62%, ${alpha})`;
   }
 
   function drawRibbon(index, t) {
     const phase = (Math.PI * 2 / RIBBON_COUNT) * index;
 
-    for (let pass = 0; pass < 2; pass++) {
+    for (let i = 0; i < SEGMENTS - 1; i++) {
+      const p1 = i / SEGMENTS;
+      const p2 = (i + 1) / SEGMENTS;
+
+      const a1 = phase + t * SPIN_SPEED + p1 * TAIL_TWIST;
+      const a2 = phase + t * SPIN_SPEED + p2 * TAIL_TWIST;
+
+      const r1 = BASE_RADIUS + p1 * TAIL_LENGTH;
+      const r2 = BASE_RADIUS + p2 * TAIL_LENGTH;
+
+      const x1 = cursorX + Math.cos(a1) * r1;
+      const y1 = cursorY + Math.sin(a1) * r1;
+      const x2 = cursorX + Math.cos(a2) * r2;
+      const y2 = cursorY + Math.sin(a2) * r2;
+
+      const alpha = 1 - p1;
+
       ctx.beginPath();
-
-      for (let i = 0; i < POINTS; i++) {
-        const p = i / (POINTS - 1);
-
-        const angle =
-          phase +
-          t * SPIN_SPEED +
-          p * TAIL_SPIN;
-
-        const radius =
-          BASE_RADIUS +
-          p * RADIUS_GROWTH;
-
-        const x = cursorX + Math.cos(angle) * radius;
-        const y = cursorY + Math.sin(angle) * radius;
-
-        if (i === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
-      }
-
-      if (pass === 0) {
-        ctx.strokeStyle = "rgba(255,255,255,0.9)";
-        ctx.lineWidth = 2.2;
-        ctx.shadowBlur = INNER_GLOW;
-        ctx.shadowColor = "rgba(255,255,255,1)";
-      }
-      else {
-        ctx.strokeStyle = `${ribbonColor(index, t)} 0.75)`;
-        ctx.lineWidth = BASE_THICKNESS;
-        ctx.shadowBlur = OUTER_GLOW;
-        ctx.shadowColor = `${ribbonColor(index, t)} 1)`;
-      }
-
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = beamColor(index, t, alpha * 0.75);
+      ctx.lineWidth = OUTER_WIDTH;
       ctx.lineCap = "round";
+      ctx.shadowBlur = OUTER_GLOW;
+      ctx.shadowColor = beamColor(index, t, 1);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+      ctx.lineWidth = INNER_WIDTH;
+      ctx.shadowBlur = INNER_GLOW;
+      ctx.shadowColor = "rgba(255,255,255,1)";
       ctx.stroke();
     }
   }
@@ -409,23 +407,24 @@
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    const dx = cursorX - prevCursorX;
-    const dy = cursorY - prevCursorY;
+    const dx = cursorX - prevX;
+    const dy = cursorY - prevY;
     const speed = Math.hypot(dx, dy);
 
-    if (speed > 0.2) {
-      motion = Math.min(motion + 0.02, 1);
-      time += 1;
+    if (speed > 0.15) {
+      motion = Math.min(motion + 0.03, 1);
     } else {
-      motion *= 0.95;
+      motion *= 0.96;
     }
+
+    time += 1 * motion;
 
     for (let i = 0; i < RIBBON_COUNT; i++) {
-      drawRibbon(i, time * motion);
+      drawRibbon(i, time);
     }
 
-    prevCursorX = cursorX;
-    prevCursorY = cursorY;
+    prevX = cursorX;
+    prevY = cursorY;
 
     requestAnimationFrame(animate);
   }
