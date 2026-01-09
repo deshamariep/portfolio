@@ -1,6 +1,133 @@
 (function(){
   'use strict';
 
+  const canvas = document.getElementById("cursor-canvas");
+  const ctx = canvas.getContext("2d");
+  const hero = document.getElementById("hero");
+  
+  let w, h;
+  function resize() {
+    w = canvas.width = hero.offsetWidth;
+    h = canvas.height = hero.offsetHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+  
+  let mouse = { x: w / 2, y: h / 2 };
+  let last = { x: mouse.x, y: mouse.y };
+  let speed = 0;
+  let motionStrength = 0;
+  
+  hero.addEventListener("mousemove", (e) => {
+    const rect = hero.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+  
+  const TRAIL_LENGTH = 36;
+  const trail = [];
+  
+  for (let i = 0; i < TRAIL_LENGTH; i++) {
+    trail.push({ x: mouse.x, y: mouse.y });
+  }
+  
+  const RIBBONS = 5;
+  const BASE_RADIUS = 24;
+  
+  const MAX_SPIN = 0.035;
+  const MAX_TAIL_SPIN = 0.055;
+  const MAX_SPIRAL = 26;
+  
+  const COLORS = [
+    "70,138,255",
+    "194,0,255",
+    "120,90,255",
+    "90,180,255",
+    "170,100,255"
+  ];
+  
+  function drawRibbon(phase, color, time) {
+    ctx.beginPath();
+  
+    for (let i = 0; i < trail.length; i++) {
+      const p = trail[i];
+      const t = i / trail.length;
+  
+      const spiral = MAX_SPIRAL * motionStrength * t;
+      const spin = MAX_SPIN * motionStrength;
+      const tailSpin = MAX_TAIL_SPIN * motionStrength * t;
+  
+      const angle =
+        time * spin +
+        phase +
+        t * 3.4 +
+        time * tailSpin;
+  
+      const cx =
+        p.x + Math.cos(time * spin + phase) * BASE_RADIUS;
+      const cy =
+        p.y + Math.sin(time * spin + phase) * BASE_RADIUS;
+  
+      const x = cx + Math.cos(angle) * (BASE_RADIUS + spiral);
+      const y = cy + Math.sin(angle) * (BASE_RADIUS + spiral);
+  
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+  
+    const thickness = 2.4 + speed * 0.09;
+  
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+  
+    ctx.globalCompositeOperation = "lighter";
+  
+    ctx.strokeStyle = "rgba(255,255,255,0.95)";
+    ctx.lineWidth = thickness;
+    ctx.shadowBlur = 14;
+    ctx.shadowColor = "rgba(255,255,255,1)";
+    ctx.stroke();
+  
+    ctx.strokeStyle = `rgba(${color},0.9)`;
+    ctx.lineWidth = thickness * 2.4;
+    ctx.shadowBlur = 56;
+    ctx.shadowColor = `rgba(${color},1)`;
+    ctx.stroke();
+  
+    ctx.globalCompositeOperation = "source-over";
+  }
+  
+  let time = 0;
+  
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
+  
+    const dx = mouse.x - last.x;
+    const dy = mouse.y - last.y;
+    speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.45, 26);
+  
+    motionStrength += ((speed > 0.6 ? 1 : 0) - motionStrength) * 0.07;
+  
+    last.x = mouse.x;
+    last.y = mouse.y;
+  
+    trail.unshift({ x: mouse.x, y: mouse.y });
+    trail.pop();
+  
+    for (let i = 0; i < RIBBONS; i++) {
+      drawRibbon(
+        (Math.PI * 2 / RIBBONS) * i,
+        COLORS[i % COLORS.length],
+        time
+      );
+    }
+  
+    time++;
+    requestAnimationFrame(animate);
+  }
+  
+  animate();
+
+
   window.addEventListener("load", () => {
     if (window.location.hash === "#aboutMeSec") {
         setTimeout(() => {
@@ -315,120 +442,3 @@
 
 }());
 
-(function () {
-  'use strict';
-
-  const canvas = document.getElementById("cursor-canvas");
-  if (!canvas) return;
-  const ctx = canvas.getContext("2d");
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener("resize", resize);
-
-  const RIBBON_COUNT = 5;
-  const SEGMENTS = 48;
-
-  const BASE_RADIUS = 24;
-  const TAIL_LENGTH = 48;
-
-  const SPIN_SPEED = 0.0022;
-  const TAIL_TWIST = 0.035;
-
-  const OUTER_GLOW = 70;
-  const INNER_GLOW = 18;
-
-  const OUTER_WIDTH = 8;
-  const INNER_WIDTH = 2.4;
-
-  let cursorX = canvas.width / 2;
-  let cursorY = canvas.height / 2;
-
-  let prevX = cursorX;
-  let prevY = cursorY;
-
-  let time = 0;
-  let motion = 0;
-
-  window.addEventListener("mousemove", (e) => {
-    cursorX = e.clientX;
-    cursorY = e.clientY;
-  });
-
-  function beamColor(index, t, alpha) {
-    const hue = 210 + index * 12 + Math.sin(t * 0.01) * 10;
-    return `hsla(${hue}, 95%, 62%, ${alpha})`;
-  }
-
-  function drawRibbon(index, t) {
-    const phase = (Math.PI * 2 / RIBBON_COUNT) * index;
-
-    for (let i = 0; i < SEGMENTS - 1; i++) {
-      const p1 = i / SEGMENTS;
-      const p2 = (i + 1) / SEGMENTS;
-
-      const a1 = phase + t * SPIN_SPEED + p1 * TAIL_TWIST;
-      const a2 = phase + t * SPIN_SPEED + p2 * TAIL_TWIST;
-
-      const r1 = BASE_RADIUS + p1 * TAIL_LENGTH;
-      const r2 = BASE_RADIUS + p2 * TAIL_LENGTH;
-
-      const x1 = cursorX + Math.cos(a1) * r1;
-      const y1 = cursorY + Math.sin(a1) * r1;
-      const x2 = cursorX + Math.cos(a2) * r2;
-      const y2 = cursorY + Math.sin(a2) * r2;
-
-      const alpha = 1 - p1;
-
-      ctx.beginPath();
-      ctx.moveTo(x1, y1);
-      ctx.lineTo(x2, y2);
-      ctx.strokeStyle = beamColor(index, t, alpha * 0.75);
-      ctx.lineWidth = OUTER_WIDTH;
-      ctx.lineCap = "round";
-      ctx.shadowBlur = OUTER_GLOW;
-      ctx.shadowColor = beamColor(index, t, 1);
-      ctx.stroke();
-
-      ctx.beginPath();
-      ctx.moveTo(x1, y1);
-      ctx.lineTo(x2, y2);
-      ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
-      ctx.lineWidth = INNER_WIDTH;
-      ctx.shadowBlur = INNER_GLOW;
-      ctx.shadowColor = "rgba(255,255,255,1)";
-      ctx.stroke();
-    }
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    const dx = cursorX - prevX;
-    const dy = cursorY - prevY;
-    const speed = Math.hypot(dx, dy);
-
-    if (speed > 0.15) {
-      motion = Math.min(motion + 0.03, 1);
-    } else {
-      motion *= 0.96;
-    }
-
-    time += 1 * motion;
-
-    for (let i = 0; i < RIBBON_COUNT; i++) {
-      drawRibbon(i, time);
-    }
-
-    prevX = cursorX;
-    prevY = cursorY;
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-
-})();
