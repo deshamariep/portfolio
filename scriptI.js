@@ -4,9 +4,7 @@
   const canvas = document.getElementById("cursor-canvas");
   const ctx = canvas.getContext("2d");
   const hero = document.getElementById("hero");
-
-  if (!canvas || !ctx || !hero) return;
-
+  
   let w, h;
   function resize() {
     w = canvas.width = hero.offsetWidth;
@@ -14,30 +12,31 @@
   }
   resize();
   window.addEventListener("resize", resize);
-
-  let cursorX = w / 2;
-  let cursorY = h / 2;
-  let prevX = cursorX;
-  let prevY = cursorY;
-
+  
+  let mouse = { x: w / 2, y: h / 2 };
+  let last = { x: mouse.x, y: mouse.y };
+  let speed = 0;
+  let motionStrength = 0;
+  
   hero.addEventListener("mousemove", (e) => {
     const rect = hero.getBoundingClientRect();
-    cursorX = e.clientX - rect.left;
-    cursorY = e.clientY - rect.top;
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
   });
-
-  const TRAIL_LENGTH = 34;
+  
+  const TRAIL_LENGTH = 36;
   const trail = [];
+  
   for (let i = 0; i < TRAIL_LENGTH; i++) {
-    trail.push({ x: cursorX, y: cursorY });
+    trail.push({ x: mouse.x, y: mouse.y });
   }
-
+  
   const RIBBONS = 5;
   const BASE_RADIUS = 24;
-  const MAX_SPIN = 0.028;
-  const MAX_SPIRAL = 22;
-  const TAIL_TURNS = 3;
-
+  
+  const MAX_SPIN = 0.035;
+  const MAX_SPIRAL = 26;
+  
   const COLORS = [
     "70,138,255",
     "194,0,255",
@@ -45,83 +44,85 @@
     "90,180,255",
     "170,100,255"
   ];
-
-  let speed = 0;
-  let motionStrength = 0;
-  let time = 0;
-
-  function drawRibbon(phase, color) {
+  
+  function drawRibbon(phase, color, time) {
     ctx.beginPath();
-
+  
     for (let i = 0; i < trail.length; i++) {
       const p = trail[i];
       const t = i / trail.length;
-
+  
       const spiral = MAX_SPIRAL * motionStrength * t;
       const spin = MAX_SPIN * motionStrength;
-
+  
       const angle =
         time * spin +
         phase +
-        t * Math.PI * 2 * TAIL_TURNS +
-        spiral * 0.015;
-
+        t * 2.8;
+  
       const cx =
         p.x + Math.cos(time * spin + phase) * BASE_RADIUS;
       const cy =
         p.y + Math.sin(time * spin + phase) * BASE_RADIUS;
-
+  
       const x = cx + Math.cos(angle) * (BASE_RADIUS + spiral);
       const y = cy + Math.sin(angle) * (BASE_RADIUS + spiral);
-
+  
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     }
-
-    const thickness = 2.6 + speed * 0.08;
-
+  
+    const thickness = 2.4 + speed * 0.09;
+  
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-
+    ctx.globalCompositeOperation = "lighter";
+  
     ctx.strokeStyle = "rgba(255,255,255,0.95)";
     ctx.lineWidth = thickness;
     ctx.shadowBlur = 14;
-    ctx.shadowColor = "rgba(255,255,255,0.9)";
+    ctx.shadowColor = "rgba(255,255,255,1)";
     ctx.stroke();
-
-    ctx.strokeStyle = `rgba(${color},0.85)`;
-    ctx.lineWidth = thickness * 2.2;
-    ctx.shadowBlur = 48;
+  
+    ctx.strokeStyle = `rgba(${color},0.9)`;
+    ctx.lineWidth = thickness * 2.4;
+    ctx.shadowBlur = 56;
     ctx.shadowColor = `rgba(${color},1)`;
     ctx.stroke();
+  
+    ctx.globalCompositeOperation = "source-over";
   }
-
+  
+  let time = 0;
+  
   function animate() {
     ctx.clearRect(0, 0, w, h);
-
-    const dx = cursorX - prevX;
-    const dy = cursorY - prevY;
-    speed = Math.min(Math.hypot(dx, dy) * 0.4, 24);
-
-    motionStrength += ((speed > 0.5 ? 1 : 0) - motionStrength) * 0.08;
-
-    prevX = cursorX;
-    prevY = cursorY;
-
-    trail.unshift({ x: cursorX, y: cursorY });
+  
+    const dx = mouse.x - last.x;
+    const dy = mouse.y - last.y;
+    speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.45, 26);
+  
+    motionStrength += ((speed > 0.6 ? 1 : 0) - motionStrength) * 0.07;
+  
+    last.x = mouse.x;
+    last.y = mouse.y;
+  
+    trail.unshift({ x: mouse.x, y: mouse.y });
     trail.pop();
-
+  
     for (let i = 0; i < RIBBONS; i++) {
       drawRibbon(
         (Math.PI * 2 / RIBBONS) * i,
-        COLORS[i % COLORS.length]
+        COLORS[i % COLORS.length],
+        time
       );
     }
-
+  
     time++;
     requestAnimationFrame(animate);
   }
-
+  
   animate();
+  
 
 
   window.addEventListener("load", () => {
