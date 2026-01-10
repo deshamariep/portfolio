@@ -34,7 +34,8 @@
   const RIBBONS = 5;
   const BASE_RADIUS = 24;
   
-  const MAX_SPIN = 0.035;
+  const IDLE_SPIN = 0.004;   
+  const MAX_SPIN = 0.02;       
   const MAX_SPIRAL = 26;
   
   const COLORS = [
@@ -53,12 +54,13 @@
       const t = i / trail.length;
   
       const spiral = MAX_SPIRAL * motionStrength * t;
-      const spin = MAX_SPIN * motionStrength;
+  
+      const spin = IDLE_SPIN + MAX_SPIN * motionStrength;
   
       const angle =
         time * spin +
         phase +
-        t * 2.8;
+        t * 2.6;
   
       const cx =
         p.x + Math.cos(time * spin + phase) * BASE_RADIUS;
