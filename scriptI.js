@@ -4,7 +4,9 @@
   const canvas = document.getElementById("cursor-canvas");
   const ctx = canvas.getContext("2d");
   const hero = document.getElementById("hero");
-  
+
+  if (!canvas || !ctx || !hero) return;
+
   let w, h;
   function resize() {
     w = canvas.width = hero.offsetWidth;
@@ -12,32 +14,30 @@
   }
   resize();
   window.addEventListener("resize", resize);
-  
-  let mouse = { x: w / 2, y: h / 2 };
-  let last = { x: mouse.x, y: mouse.y };
-  let speed = 0;
-  let motionStrength = 0;
-  
+
+  let cursorX = w / 2;
+  let cursorY = h / 2;
+  let prevX = cursorX;
+  let prevY = cursorY;
+
   hero.addEventListener("mousemove", (e) => {
     const rect = hero.getBoundingClientRect();
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
+    cursorX = e.clientX - rect.left;
+    cursorY = e.clientY - rect.top;
   });
-  
-  const TRAIL_LENGTH = 36;
+
+  const TRAIL_LENGTH = 34;
   const trail = [];
-  
   for (let i = 0; i < TRAIL_LENGTH; i++) {
-    trail.push({ x: mouse.x, y: mouse.y });
+    trail.push({ x: cursorX, y: cursorY });
   }
-  
+
   const RIBBONS = 5;
   const BASE_RADIUS = 24;
-  
-  const MAX_SPIN = 0.035;
-  const MAX_TAIL_SPIN = 0.055;
-  const MAX_SPIRAL = 26;
-  
+  const MAX_SPIN = 0.028;
+  const MAX_SPIRAL = 22;
+  const TAIL_TURNS = 3;
+
   const COLORS = [
     "70,138,255",
     "194,0,255",
@@ -45,86 +45,82 @@
     "90,180,255",
     "170,100,255"
   ];
-  
-  function drawRibbon(phase, color, time) {
+
+  let speed = 0;
+  let motionStrength = 0;
+  let time = 0;
+
+  function drawRibbon(phase, color) {
     ctx.beginPath();
-  
+
     for (let i = 0; i < trail.length; i++) {
       const p = trail[i];
       const t = i / trail.length;
-  
+
       const spiral = MAX_SPIRAL * motionStrength * t;
       const spin = MAX_SPIN * motionStrength;
-      const tailSpin = MAX_TAIL_SPIN * motionStrength * t;
-  
+
       const angle =
         time * spin +
         phase +
-        t * 3.4 +
-        time * tailSpin;
-  
+        t * Math.PI * 2 * TAIL_TURNS +
+        spiral * 0.015;
+
       const cx =
         p.x + Math.cos(time * spin + phase) * BASE_RADIUS;
       const cy =
         p.y + Math.sin(time * spin + phase) * BASE_RADIUS;
-  
+
       const x = cx + Math.cos(angle) * (BASE_RADIUS + spiral);
       const y = cy + Math.sin(angle) * (BASE_RADIUS + spiral);
-  
+
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     }
-  
-    const thickness = 2.4 + speed * 0.09;
-  
+
+    const thickness = 2.6 + speed * 0.08;
+
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-  
-    ctx.globalCompositeOperation = "lighter";
-  
+
     ctx.strokeStyle = "rgba(255,255,255,0.95)";
     ctx.lineWidth = thickness;
     ctx.shadowBlur = 14;
-    ctx.shadowColor = "rgba(255,255,255,1)";
+    ctx.shadowColor = "rgba(255,255,255,0.9)";
     ctx.stroke();
-  
-    ctx.strokeStyle = `rgba(${color},0.9)`;
-    ctx.lineWidth = thickness * 2.4;
-    ctx.shadowBlur = 56;
+
+    ctx.strokeStyle = `rgba(${color},0.85)`;
+    ctx.lineWidth = thickness * 2.2;
+    ctx.shadowBlur = 48;
     ctx.shadowColor = `rgba(${color},1)`;
     ctx.stroke();
-  
-    ctx.globalCompositeOperation = "source-over";
   }
-  
-  let time = 0;
-  
+
   function animate() {
     ctx.clearRect(0, 0, w, h);
-  
-    const dx = mouse.x - last.x;
-    const dy = mouse.y - last.y;
-    speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.45, 26);
-  
-    motionStrength += ((speed > 0.6 ? 1 : 0) - motionStrength) * 0.07;
-  
-    last.x = mouse.x;
-    last.y = mouse.y;
-  
-    trail.unshift({ x: mouse.x, y: mouse.y });
+
+    const dx = cursorX - prevX;
+    const dy = cursorY - prevY;
+    speed = Math.min(Math.hypot(dx, dy) * 0.4, 24);
+
+    motionStrength += ((speed > 0.5 ? 1 : 0) - motionStrength) * 0.08;
+
+    prevX = cursorX;
+    prevY = cursorY;
+
+    trail.unshift({ x: cursorX, y: cursorY });
     trail.pop();
-  
+
     for (let i = 0; i < RIBBONS; i++) {
       drawRibbon(
         (Math.PI * 2 / RIBBONS) * i,
-        COLORS[i % COLORS.length],
-        time
+        COLORS[i % COLORS.length]
       );
     }
-  
+
     time++;
     requestAnimationFrame(animate);
   }
-  
+
   animate();
 
 
