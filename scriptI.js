@@ -13,30 +13,35 @@
   resize();
   window.addEventListener("resize", resize);
   
-  let mouse = { x: w / 2, y: h / 2 };
-  let last = { x: mouse.x, y: mouse.y };
+  let target = { x: w / 2, y: h / 2 };
+  let cursor = { x: w / 2, y: h / 2 };
+  let last = { x: cursor.x, y: cursor.y };
+  
   let speed = 0;
   let motionStrength = 0;
   
   hero.addEventListener("mousemove", (e) => {
     const rect = hero.getBoundingClientRect();
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
+    target.x = e.clientX - rect.left;
+    target.y = e.clientY - rect.top;
   });
   
-  const TRAIL_LENGTH = 36;
+  const TRAIL_LENGTH = 38;
   const trail = [];
   
   for (let i = 0; i < TRAIL_LENGTH; i++) {
-    trail.push({ x: mouse.x, y: mouse.y });
+    trail.push({ x: cursor.x, y: cursor.y });
   }
   
   const RIBBONS = 5;
   const BASE_RADIUS = 24;
   
-  const IDLE_SPIN = 0.004;   
-  const MAX_SPIN = 0.02;       
-  const MAX_SPIRAL = 26;
+  const IDLE_SPIN = 0.0012; 
+  const MOVE_SPIN = 0.004;  
+  const MAX_SPIRAL = 22;
+  
+  const EASE_CURSOR = 0.12; 
+  const EASE_TRAIL = 0.22; 
   
   const COLORS = [
     "70,138,255",
@@ -54,13 +59,12 @@
       const t = i / trail.length;
   
       const spiral = MAX_SPIRAL * motionStrength * t;
-  
-      const spin = IDLE_SPIN + MAX_SPIN * motionStrength;
+      const spin = IDLE_SPIN + MOVE_SPIN * motionStrength;
   
       const angle =
         time * spin +
         phase +
-        t * 2.6;
+        t * Math.PI * 1.2;
   
       const cx =
         p.x + Math.cos(time * spin + phase) * BASE_RADIUS;
@@ -73,7 +77,7 @@
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     }
   
-    const thickness = 2.4 + speed * 0.09;
+    const thickness = 2.2 + speed * 0.05;
   
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
@@ -86,8 +90,8 @@
     ctx.stroke();
   
     ctx.strokeStyle = `rgba(${color},0.9)`;
-    ctx.lineWidth = thickness * 2.4;
-    ctx.shadowBlur = 56;
+    ctx.lineWidth = thickness * 2.3;
+    ctx.shadowBlur = 54;
     ctx.shadowColor = `rgba(${color},1)`;
     ctx.stroke();
   
@@ -99,17 +103,25 @@
   function animate() {
     ctx.clearRect(0, 0, w, h);
   
-    const dx = mouse.x - last.x;
-    const dy = mouse.y - last.y;
-    speed = Math.min(Math.sqrt(dx * dx + dy * dy) * 0.45, 26);
+    cursor.x += (target.x - cursor.x) * EASE_CURSOR;
+    cursor.y += (target.y - cursor.y) * EASE_CURSOR;
   
-    motionStrength += ((speed > 0.6 ? 1 : 0) - motionStrength) * 0.07;
+    const dx = cursor.x - last.x;
+    const dy = cursor.y - last.y;
+    speed = Math.min(Math.hypot(dx, dy) * 0.35, 20);
   
-    last.x = mouse.x;
-    last.y = mouse.y;
+    motionStrength += ((speed > 0.4 ? 1 : 0) - motionStrength) * 0.05;
   
-    trail.unshift({ x: mouse.x, y: mouse.y });
-    trail.pop();
+    last.x = cursor.x;
+    last.y = cursor.y;
+  
+    trail[0].x += (cursor.x - trail[0].x) * EASE_TRAIL;
+    trail[0].y += (cursor.y - trail[0].y) * EASE_TRAIL;
+  
+    for (let i = 1; i < trail.length; i++) {
+      trail[i].x += (trail[i - 1].x - trail[i].x) * EASE_TRAIL;
+      trail[i].y += (trail[i - 1].y - trail[i].y) * EASE_TRAIL;
+    }
   
     for (let i = 0; i < RIBBONS; i++) {
       drawRibbon(
@@ -123,9 +135,8 @@
     requestAnimationFrame(animate);
   }
   
-  animate();
+  animate();  
   
-
 
   window.addEventListener("load", () => {
     if (window.location.hash === "#aboutMeSec") {
