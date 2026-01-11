@@ -36,12 +36,12 @@
   const RIBBONS = 5;
   const BASE_RADIUS = 24;
   
-  const IDLE_SPIN = 0.0012; 
-  const MOVE_SPIN = 0.004;  
+  const IDLE_SPIN = 0.0021;
+  const MOVE_SPIN = 0.0048; 
   const MAX_SPIRAL = 22;
   
-  const EASE_CURSOR = 0.12; 
-  const EASE_TRAIL = 0.22; 
+  const EASE_CURSOR = 0.12;
+  const EASE_TRAIL = 0.22;
   
   const COLORS = [
     "70,138,255",
@@ -64,7 +64,7 @@
       const angle =
         time * spin +
         phase +
-        t * Math.PI * 1.2;
+        t * 1.9; 
   
       const cx =
         p.x + Math.cos(time * spin + phase) * BASE_RADIUS;
@@ -135,7 +135,8 @@
     requestAnimationFrame(animate);
   }
   
-  animate();  
+  animate();
+  
   
 
   window.addEventListener("load", () => {
