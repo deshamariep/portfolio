@@ -49,15 +49,15 @@
         top: 0;
         left: 0;
       
-        width: 64px;
-        height: 64px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
         pointer-events: none;
         z-index: 9999;
       
         /* Hollow ring */
         background: transparent;
-        border: 2px solid rgba(255, 255, 255, 0.95);
+        border: 5px solid rgba(255, 255, 255, 0.95);
       
         /* Glow layers */
         box-shadow:
