@@ -218,12 +218,15 @@
   // Subtle emphasis on interactive elements
   document.querySelectorAll("a, button").forEach(el => {
     el.addEventListener("mouseenter", () => {
-      cursor.style.width = "78px";
-      cursor.style.height = "78px";
+      cursor.style.width = "80px";
+      cursor.style.height = "80px";
+      cursor.style.opacity = "1";
     });
+  
     el.addEventListener("mouseleave", () => {
       cursor.style.width = "64px";
       cursor.style.height = "64px";
+      cursor.style.opacity = "0.95";
     });
   });
 
