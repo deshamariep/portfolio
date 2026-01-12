@@ -1,11 +1,21 @@
 (function(){
   'use strict';
 
-  // cursor
+  // hero cursor
+  const mouseViewport = {
+    x: window.innerWidth / 2,
+    y: window.innerHeight / 2
+  };
+  
+  window.addEventListener("mousemove", (e) => {
+    mouseViewport.x = e.clientX;
+    mouseViewport.y = e.clientY;
+  });
+  
   const cursorCanvas = document.getElementById("cursor-canvas");
   const cursorCtx = cursorCanvas.getContext("2d");
   const heroEl = document.getElementById("hero");
-
+  
   let cw, ch;
   function resizeCursor() {
     cw = cursorCanvas.width = heroEl.offsetWidth;
@@ -13,32 +23,27 @@
   }
   resizeCursor();
   window.addEventListener("resize", resizeCursor);
-
+  
   let cursorPos = { x: cw / 2, y: ch / 2 };
   let prevPos = { x: cursorPos.x, y: cursorPos.y };
+  
   let cursorSpeed = 0;
   let motionStrength = 0;
-
-  heroEl.addEventListener("mousemove", (e) => {
-    const rect = heroEl.getBoundingClientRect();
-    cursorPos.x = e.clientX - rect.left;
-    cursorPos.y = e.clientY - rect.top;
-  });
-
+  
   const TRAIL_LEN = 36;
   const trailPoints = [];
-
+  
   for (let i = 0; i < TRAIL_LEN; i++) {
     trailPoints.push({ x: cursorPos.x, y: cursorPos.y });
   }
-
+  
   const RIBBON_COUNT = 5;
   const BASE_RADIUS = 24;
   const SPIRAL_RADIUS = 26;
-
-  const IDLE_SPIN = 0.0024;  
+  
+  const IDLE_SPIN = 0.0024;
   const MOVE_SPIN = 0.0056;
-
+  
   const COLORS = [
     "70,138,255",
     "194,0,255",
@@ -46,76 +51,87 @@
     "90,180,255",
     "170,100,255"
   ];
-
+  
+  function updateHeroCursor() {
+    const rect = heroEl.getBoundingClientRect();
+  
+    cursorPos.x = mouseViewport.x - rect.left;
+    cursorPos.y = mouseViewport.y - rect.top;
+  }
+  
   function drawRibbon(phase, color, time) {
     cursorCtx.beginPath();
-
+  
     for (let i = 0; i < trailPoints.length; i++) {
       const p = trailPoints[i];
       const t = i / trailPoints.length;
-
-      const radius = BASE_RADIUS + SPIRAL_RADIUS * t * motionStrength;
+  
+      const radius =
+        BASE_RADIUS + SPIRAL_RADIUS * t * motionStrength;
+  
       const spin =
         IDLE_SPIN + (MOVE_SPIN - IDLE_SPIN) * motionStrength;
-
+  
       const angle =
         time * spin +
         phase +
         t * Math.PI * 1.6;
-
+  
       const x = p.x + Math.cos(angle) * radius;
       const y = p.y + Math.sin(angle) * radius;
-
+  
       i === 0 ? cursorCtx.moveTo(x, y) : cursorCtx.lineTo(x, y);
     }
-
+  
     const thickness = 2.4 + cursorSpeed * 0.08;
-
+  
     cursorCtx.lineCap = "round";
     cursorCtx.lineJoin = "round";
     cursorCtx.globalCompositeOperation = "lighter";
-
+  
     cursorCtx.strokeStyle = "rgba(255,255,255,0.95)";
     cursorCtx.lineWidth = thickness;
     cursorCtx.shadowBlur = 14;
     cursorCtx.shadowColor = "rgba(255,255,255,1)";
     cursorCtx.stroke();
-
+  
     cursorCtx.strokeStyle = `rgba(${color},0.9)`;
     cursorCtx.lineWidth = thickness * 2.4;
     cursorCtx.shadowBlur = 56;
     cursorCtx.shadowColor = `rgba(${color},1)`;
     cursorCtx.stroke();
-
+  
     cursorCtx.globalCompositeOperation = "source-over";
   }
-
+  
   let tick = 0;
-
+  
   function animateCursor() {
     cursorCtx.clearRect(0, 0, cw, ch);
-
+  
+    updateHeroCursor();
+  
     const dx = cursorPos.x - prevPos.x;
     const dy = cursorPos.y - prevPos.y;
     cursorSpeed = Math.min(Math.hypot(dx, dy) * 0.45, 24);
-
+  
     const targetMotion = cursorSpeed > 0.4 ? 1 : 0;
-
+  
     motionStrength +=
       (targetMotion - motionStrength) *
       (targetMotion ? 0.06 : 0.12);
-
+  
     motionStrength = Math.min(motionStrength, 1);
-
+  
     prevPos.x = cursorPos.x;
     prevPos.y = cursorPos.y;
-
+  
     trailPoints.unshift({
       x: trailPoints[0].x + (cursorPos.x - trailPoints[0].x) * 0.35,
       y: trailPoints[0].y + (cursorPos.y - trailPoints[0].y) * 0.35
     });
     trailPoints.pop();
-
+  
     for (let i = 0; i < RIBBON_COUNT; i++) {
       drawRibbon(
         (Math.PI * 2 / RIBBON_COUNT) * i,
@@ -123,29 +139,21 @@
         tick
       );
     }
-
+  
     tick++;
     requestAnimationFrame(animateCursor);
   }
-
+  
   animateCursor();
-
-  // cursor body
+  
+  // body cursor
   const ambientCursor = document.getElementById("ambient-cursor");
-  const heroSection = document.getElementById("hero");
   
-  let haloPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-  let haloTarget = { x: haloPos.x, y: haloPos.y };
-  let haloVisible = true;
-  
-  window.addEventListener("mousemove", (e) => {
-    haloTarget.x = e.clientX;
-    haloTarget.y = e.clientY;
-  });
+  let haloPos = { x: mouseViewport.x, y: mouseViewport.y };
   
   function animateHalo() {
-    haloPos.x += (haloTarget.x - haloPos.x) * 0.18;
-    haloPos.y += (haloTarget.y - haloPos.y) * 0.18;
+    haloPos.x += (mouseViewport.x - haloPos.x) * 0.18;
+    haloPos.y += (mouseViewport.y - haloPos.y) * 0.18;
   
     ambientCursor.style.transform =
       `translate(${haloPos.x}px, ${haloPos.y}px) translate(-50%, -50%)`;
@@ -154,28 +162,11 @@
   }
   animateHalo();
   
-  if (heroSection) {
-    heroSection.addEventListener("mouseenter", () => {
-      ambientCursor.style.opacity = "0";
-    });
-  
-    heroSection.addEventListener("mouseleave", () => {
-      ambientCursor.style.opacity = "1";
-    });
-  }
-  
-  document.querySelectorAll("a, button").forEach(el => {
-    el.addEventListener("mouseenter", () => {
-      cursor.style.width = "56px";
-      cursor.style.height = "56px";
-      cursor.style.opacity = "1";
-    });
-  
-    el.addEventListener("mouseleave", () => {
-      cursor.style.width = "40px";
-      cursor.style.height = "40px";
-      cursor.style.opacity = "0.95";
-    });
+  heroEl.addEventListener("mouseenter", () => {
+    ambientCursor.style.opacity = "0";
+  });
+  heroEl.addEventListener("mouseleave", () => {
+    ambientCursor.style.opacity = "1";
   });
 
 
