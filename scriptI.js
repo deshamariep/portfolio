@@ -166,12 +166,15 @@
   
   document.querySelectorAll("a, button").forEach(el => {
     el.addEventListener("mouseenter", () => {
-      ambientCursor.style.width = "78px";
-      ambientCursor.style.height = "78px";
+      cursor.style.width = "56px";
+      cursor.style.height = "56px";
+      cursor.style.opacity = "1";
     });
+  
     el.addEventListener("mouseleave", () => {
-      ambientCursor.style.width = "64px";
-      ambientCursor.style.height = "64px";
+      cursor.style.width = "40px";
+      cursor.style.height = "40px";
+      cursor.style.opacity = "0.95";
     });
   });
 
