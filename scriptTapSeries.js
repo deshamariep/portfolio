@@ -221,3 +221,41 @@
   });
   
 }());
+(function () {
+  'use strict';
+
+  const cursor = document.getElementById("ambient-cursor");
+  if (!cursor) return;
+
+  let pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+  let target = { x: pos.x, y: pos.y };
+
+  window.addEventListener("mousemove", (e) => {
+    target.x = e.clientX;
+    target.y = e.clientY;
+  });
+
+  function animate() {
+    pos.x += (target.x - pos.x) * 0.16;
+    pos.y += (target.y - pos.y) * 0.16;
+
+    cursor.style.transform =
+      `translate(${pos.x}px, ${pos.y}px) translate(-50%, -50%)`;
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // Subtle emphasis on interactive elements
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      cursor.style.width = "78px";
+      cursor.style.height = "78px";
+    });
+    el.addEventListener("mouseleave", () => {
+      cursor.style.width = "64px";
+      cursor.style.height = "64px";
+    });
+  });
+
+})();

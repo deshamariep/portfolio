@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-
+  // cursor
   const cursorCanvas = document.getElementById("cursor-canvas");
   const cursorCtx = cursorCanvas.getContext("2d");
   const heroEl = document.getElementById("hero");
@@ -129,8 +129,54 @@
   }
 
   animateCursor();
-  
 
+  // cursor body
+  const ambientCursor = document.getElementById("ambient-cursor");
+  const heroSection = document.getElementById("hero");
+  
+  let haloPos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+  let haloTarget = { x: haloPos.x, y: haloPos.y };
+  let haloVisible = true;
+  
+  window.addEventListener("mousemove", (e) => {
+    haloTarget.x = e.clientX;
+    haloTarget.y = e.clientY;
+  });
+  
+  function animateHalo() {
+    haloPos.x += (haloTarget.x - haloPos.x) * 0.18;
+    haloPos.y += (haloTarget.y - haloPos.y) * 0.18;
+  
+    ambientCursor.style.transform =
+      `translate(${haloPos.x}px, ${haloPos.y}px) translate(-50%, -50%)`;
+  
+    requestAnimationFrame(animateHalo);
+  }
+  animateHalo();
+  
+  if (heroSection) {
+    heroSection.addEventListener("mouseenter", () => {
+      ambientCursor.style.opacity = "0";
+    });
+  
+    heroSection.addEventListener("mouseleave", () => {
+      ambientCursor.style.opacity = "1";
+    });
+  }
+  
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      ambientCursor.style.width = "78px";
+      ambientCursor.style.height = "78px";
+    });
+    el.addEventListener("mouseleave", () => {
+      ambientCursor.style.width = "64px";
+      ambientCursor.style.height = "64px";
+    });
+  });
+
+
+  // nav
   window.addEventListener("load", () => {
     if (window.location.hash === "#aboutMeSec") {
         setTimeout(() => {
