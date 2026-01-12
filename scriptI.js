@@ -169,6 +169,20 @@
     ambientCursor.style.opacity = "1";
   });
 
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      cursor.style.width = "56px";
+      cursor.style.height = "56px";
+      cursor.style.opacity = "1";
+    });
+  
+    el.addEventListener("mouseleave", () => {
+      cursor.style.width = "40px";
+      cursor.style.height = "40px";
+      cursor.style.opacity = "0.95";
+    });
+  });
+
 
   // nav
   window.addEventListener("load", () => {
