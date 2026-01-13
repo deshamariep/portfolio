@@ -538,10 +538,10 @@
     .dataCS:nth-child(1){
         background: linear-gradient(to bottom, rgb(0, 41, 111), white);
     }
-    .dataCS:nth-child(1) h2, .dataCS:nth-child(2) h2{
+    .dataCS:nth-child(1) h2, .dataCS:nth-child(3) h2{
         color: rgb(255, 255, 255);
     }
-    .dataCS:nth-child(1) p, .dataCS:nth-child(2) p{
+    .dataCS:nth-child(1) p, .dataCS:nth-child(3) p{
         color: rgb(217,217,217);
     }
     .dataCS .csTags .csTag{
@@ -553,10 +553,10 @@
     .dataCS:nth-child(3){
         background: linear-gradient(to bottom, rgb(1, 48, 136), white);
     }
-    .dataCS:nth-child(3) h2{
+    .dataCS:nth-child(2) h2{
         color: rgb(48, 48, 66);
     }
-    .dataCS:nth-child(3) p{
+    .dataCS:nth-child(2) p{
         color: rgb(113,112,112);
     }
     .dataCS.visible{
