@@ -548,10 +548,10 @@
         color: rgb(113,112,112);
     }
     .dataCS:nth-child(2){
-        background: linear-gradient(to bottom, rgb(1, 48, 136), white);
+        background: linear-gradient(to bottom, rgb(188, 214, 216), white);
     }
     .dataCS:nth-child(3){
-        background: linear-gradient(to bottom, rgb(188, 214, 216), white);
+        background: linear-gradient(to bottom, rgb(1, 48, 136), white);
     }
     .dataCS:nth-child(3) h2{
         color: rgb(48, 48, 66);
