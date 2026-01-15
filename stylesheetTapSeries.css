@@ -159,7 +159,7 @@
     }
     .secTitle{
         font-style: italic;
-        font-weight: 500;
+        font-weight: 400;
     }
     #query{
         width: 1392px;
@@ -281,15 +281,14 @@
         font-size: 14px;
     }
     .goals-visual-container {
-        width: 600px;
+        width: 550px;
         height: 225px;
         margin: 20px auto;
         background: linear-gradient(135deg, #F8FAFB 0%, #e2e2e2 100%);
         border: 1px solid #E8EDF2;
         border-radius: 12px;
-        padding: 16px 24px;
         display: flex;
-        gap: 16px;
+        gap: 8px;
         align-items: stretch;
         box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
     }
