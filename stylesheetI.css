@@ -258,7 +258,7 @@
         left: 31%;
         bottom: 110px;
         margin: auto;
-        width: 500px;
+        width: 35%;
         color: rgb(34, 34, 34);
     }
     html, body {
@@ -845,6 +845,14 @@
         width: 161px;
         align-items: center;
         margin: 10% auto 0px;
+    }
+    hr{
+        position: absolute;
+        left: 31%;
+        top: -60%;
+        margin: auto;
+        width: 35%;
+        color: rgb(34, 34, 34);
     }
 }
 /* @media screen and (min-width: 1850px){
