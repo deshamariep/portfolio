@@ -261,15 +261,13 @@
         justify-content: center;
     }
     .datatext{
-        flex: content;
-        width: 540px;
+        flex: 5;
     }
     .data h2, h3{
         margin-top: 0px;
     }
     .data420{
-        flex: content;
-        width: 235px;
+        flex: 3;
     }
     .newMargin{
         width: 800px;
