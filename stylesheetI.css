@@ -224,13 +224,13 @@
     #titleLeft{
         position: absolute;
         bottom: 120px;
-        left: 31%;
+        left: 32%;
         width: 250px;
     }
     #titleRight{
         position: absolute;
         bottom: 130px;
-        right: 34%;
+        right: 33%;
         width: 350px;
     }
     #dataTitle h1{
@@ -255,7 +255,7 @@
     }
     hr{
         position: absolute;
-        left: 31%;
+        left: 32%;
         bottom: 110px;
         margin: auto;
         width: 35%;
@@ -849,7 +849,7 @@
     }
     hr{
         position: absolute;
-        left: 31%;
+        left: 32%;
         bottom: 155%;
         margin: auto;
         width: 35%;
