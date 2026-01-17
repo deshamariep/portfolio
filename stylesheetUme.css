@@ -129,6 +129,10 @@
     main .smolP{
         margin: 0px;
     }
+    .secTitle{
+        font-style: italic;
+        font-weight: 400;
+    }
     #query{
         width: 1392px;
         margin: 96px auto; 
@@ -208,15 +212,13 @@
         flex: 1;
     }
     .datatext{
-        flex: 4;
+        flex: 6;
     }
     .data h2, h3{
         margin-top: 0px;
     }
     .data420{
-        flex: 2.5;
-        /* width: 420px;
-        padding-right: 88px; */
+        flex: 2;
     }
     .painPT{
         width: 160px;
@@ -342,7 +344,7 @@
         margin: 0 auto;
     }
     .newMargin{
-        width: 1100px;
+        width: 800px;
         margin: auto;
     }
     #hmw{
