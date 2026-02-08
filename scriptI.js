@@ -399,7 +399,7 @@
     expVidCol.classList.remove("video-active");
   }
   document.getElementById("attuneVid").addEventListener("mouseenter", () => {
-    playPreview(previews.attuneVid);
+    playPreview(previews.attuneVid, 600);
   });
   document.getElementById("attuneVid").addEventListener("mouseleave", resetPreview);
 
