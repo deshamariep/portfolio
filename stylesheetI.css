@@ -621,7 +621,8 @@
         opacity: 1;
         transform: translateY(0);
     }
-    .sectionTitle{
+    .sectionTitle img{
+        display: block;
         margin: auto;
     }
     #sideQuest{
