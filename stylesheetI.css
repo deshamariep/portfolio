@@ -214,13 +214,13 @@
     }
     #titleLeft{
         position: absolute;
-        bottom: 120px;
+        bottom: 70px;
         left: 25%;
         width: 300px;
     }
     #titleRight{
         position: absolute;
-        bottom: 120px;
+        bottom: 70px;
         right: 30%;
         width: 200px;
     }
@@ -232,7 +232,7 @@
         margin: 0px 0px 8px;
         line-height: 130%;
         text-align: left;
-        bottom: 148px;
+        bottom: 100px;
         right: 33%;
         width: 575px;
     }
@@ -251,7 +251,7 @@
     hr{
         position: absolute;
         left: 27%;
-        bottom: 110px;
+        bottom: 60px;
         margin: auto;
         width: 43%;
         color: rgb(34, 34, 34);
@@ -475,7 +475,7 @@
         transform: none;
         transition: transform 0.5s ease;
 
-        position: absolute;
+        position: relative;
     }
     .dataCS h2, .dataCS p{
         color: rgb(255, 255, 255);
@@ -502,15 +502,15 @@
         display: block;   
         margin: 24px auto;
         transition: transform 0.5s ease; 
-        transform-origin: center center; 
+        transform-origin: center center;
     }
     .csText{
-        padding: 24px;
-        position: relative;
+        padding: 24px 24px 0px;
+        position: absolute;
         bottom: 24px;
     }
     .csText h2, .csText p{
-        margin: 4px;
+        margin: 2px;
     }
     .csSubText{
         font-weight: 500;
