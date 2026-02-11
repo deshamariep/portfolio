@@ -245,6 +245,7 @@
     hr{
         position: absolute;
         left: 27.3%;
+        transform: translateX(-50%);
         bottom: 60px;
         width: 0%;
         height: 1px;
@@ -383,11 +384,13 @@
     #query{
         margin: -225px -24px 96px;
         position: relative;
+        opacity: 0;
         transform: translateY(0);
         transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     }
     #query.slide-up{
         transform: translateY(-50px);
+        opacity: 1;
     }
     /* Move the orbs to different pseudo-elements using parent */
     #query::before {
