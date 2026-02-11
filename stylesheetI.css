@@ -105,21 +105,12 @@
     .csInfo {
         gap: 16px; 
     }
-    .csText .csHeader h3, .csText .csHeader .csSubText, .csText .csHeader .csTag {
+    .csText .csHeader h3, .csText .csHeader .csSubText, .csText .csHeader{
         margin: 0;
     }
     .csSubText{
         color: rgb(217, 217, 217);
         font-size: 12px;
-    }
-    .csTag {
-        margin: -8px;
-        padding: 1px 12px;
-        text-align: center;
-        background-color: rgb(217, 217, 217, 0.3);
-        border: 1px solid rgb(217, 217, 217);
-        border-radius: 20px;
-        color: rgb(217, 217, 217);
     }
 } */
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -339,29 +330,6 @@
         box-shadow: 0 4px 25px rgba(0,0,0,0.15);
         max-width: 395px;
     }
-    #desktopArrow {
-        position: relative;
-        width: 161px;
-        align-items: center;
-        margin: auto;
-    }
-    #desktopArrow img {
-        position: absolute;
-        top: 300px;
-        width: 100%;
-        animation: floatArrow 2s ease-in-out infinite;
-    }
-    @keyframes floatArrow {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
     /* #dataDesktopBar img{
         width: 45px;
         height: 45px;
@@ -513,79 +481,42 @@
                 filter 0.6s ease-out;
         will-change: transform, opacity;
     }
-    .dataCS:nth-child(1){
-        background: linear-gradient(to bottom, rgb(0, 41, 111), white);
-    }
-    .dataCS:nth-child(1) h2, .dataCS:nth-child(3) h2{
+    .dataCS h2, .dataCS p{
         color: rgb(255, 255, 255);
     }
-    .dataCS:nth-child(1) p, .dataCS:nth-child(3) p{
-        color: rgb(217,217,217);
-    }
-    .dataCS .csTags .csTag{
-        color: rgb(113,112,112);
+    .dataCS:nth-child(1){
+        background: linear-gradient(to right, rgb(145, 184, 184), rgb(62, 137, 141));
     }
     .dataCS:nth-child(2){
-        background: linear-gradient(to bottom, rgb(188, 214, 216), white);
+        background: linear-gradient(to right, rgb(81, 102, 165), rgb(39, 80, 121));
     }
     .dataCS:nth-child(3){
-        background: linear-gradient(to bottom, rgb(1, 48, 136), white);
+        background: linear-gradient(to right, rgb(217, 194, 64), rgb(207, 170, 40));
     }
-    .dataCS:nth-child(2) h2{
-        color: rgb(48, 48, 66);
+    .dataCS:nth-child(4){
+        background: linear-gradient(to right, rgb(150, 102, 213), rgb(115, 85, 174));
     }
-    .dataCS:nth-child(2) p{
-        color: rgb(113,112,112);
+    .dataCS:nth-child(5){
+        background: linear-gradient(to right, rgb(221, 128, 21), rgb(220, 148, 40));
     }
     .dataCS.visible{
         opacity: 1;
         transform: translateY(0);
     }
     .csImg{
-        display: block;
-        width: 1052px;        
-        max-width: 100%;     
-        height: auto;
-        margin: 0 auto;
+        display: block;   
+        margin: auto;
         transition: transform 0.5s ease; 
         transform-origin: center center; 
     }
     .csText{
-        padding: 32px 24px 16px;
+        padding: 24px;
     }
     .csText h2, .csText p{
-        margin: 4px;
+        margin: 8px;
     }
     .csSubText{
-        color: rgb(48, 48, 66, 0.8);
-    }
-    .dataCS:nth-child(1) .csBottom{
-        display: flex;
-        margin-top: 12px;
-        margin-left: 16px;
-    }
-    .dataCS:nth-child(2) .csBottom{
-        display: flex;
-        margin-top: 40px;
-        margin-left: 16px;
-    }
-    .dataCS:nth-child(3) .csBottom{
-        display: flex;
-        margin-top: 24px;
-        margin-left: 16px;
-    }
-    .csTags{
-        display: flex;
-        gap: 4px;
-    }
-    .csTag{
-        padding: 4px 12px;
-        background-color: rgb(0, 0, 0, 0.05);
-        border: 1px solid rgb(0, 0, 0, 0.1);
-        border-radius: 30px;
-        color: rgb(48, 48, 66);
-        align-content: center;
-        justify-items: center;
+        font-weight: 500;
     }
     .csBottom .readIcon{
         flex: end;
@@ -823,11 +754,6 @@
     }
 }
 @media screen and (min-width: 1650px){
-    #desktopArrow {
-        width: 161px;
-        align-items: center;
-        margin: 10% auto 0px;
-    }
     hr{
         position: absolute;
         left: 32%;

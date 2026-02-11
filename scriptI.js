@@ -377,9 +377,7 @@
   const previewText = document.getElementById("previewText");
   const expVidCol = document.getElementById("ExpVidCol");
   const previews = {
-    attuneVid: "images/attuneVid.mp4",
     aeVids: "images/aeVids.mp4",
-    spots: "images/spotsAnimation.mp4",
     amp: "images/ampPark.mp4",
     ume: "images/umeAnimation.mp4"
   };
@@ -398,20 +396,11 @@
     previewText.classList.remove("hidden");
     expVidCol.classList.remove("video-active");
   }
-  document.getElementById("attuneVid").addEventListener("mouseenter", () => {
-    playPreview(previews.attuneVid, 600);
-  });
-  document.getElementById("attuneVid").addEventListener("mouseleave", resetPreview);
 
   document.getElementById("aeVids").addEventListener("mouseenter", () => {
     playPreview(previews.aeVids, 300);
   });
   document.getElementById("aeVids").addEventListener("mouseleave", resetPreview);
-
-  document.getElementById("spots").addEventListener("mouseenter", () => {
-    playPreview(previews.spots);
-  });
-  document.getElementById("spots").addEventListener("mouseleave", resetPreview);
   
   document.getElementById("amp").addEventListener("mouseenter", () => {
     playPreview(previews.amp, 300);
