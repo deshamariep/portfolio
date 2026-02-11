@@ -461,7 +461,6 @@
         display: flex;
         justify-content: space-between; 
         gap: 16px;
-        height: 650px;
     }
     .dataCS{
         display: block;
@@ -510,7 +509,7 @@
         bottom: 24px;
     }
     .csText h2, .csText p{
-        margin: 2px;
+        margin: 0px;
     }
     .csSubText{
         font-weight: 500;
