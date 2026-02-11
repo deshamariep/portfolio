@@ -244,8 +244,7 @@
     }
     hr{
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 27.3%;
         bottom: 60px;
         width: 0%;
         height: 1px;
@@ -382,13 +381,13 @@
         line-height: 160%;
     }
     #query{
-        margin: -275px -24px 96px;
+        margin: -225px -24px 96px;
         position: relative;
         transform: translateY(0);
         transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     }
     #query.slide-up{
-        transform: translateY(-25px);
+        transform: translateY(-50px);
     }
     /* Move the orbs to different pseudo-elements using parent */
     #query::before {
