@@ -148,12 +148,6 @@
         background: #fff;
         overflow: hidden;
     }
-    #cursor-canvas {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        z-index: 1;
-    }
     body{
         margin: 0;
         padding: 0;
