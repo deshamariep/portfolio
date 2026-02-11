@@ -433,8 +433,6 @@
         width: 1100px;
         margin: 24px auto auto;
         transition: color 0.3s ease;
-        perspective: 2000px;
-        transform-style: preserve-3d;
 
         position: relative;
         padding: 80px 0;
@@ -462,7 +460,7 @@
     .data{
         display: flex;
         justify-content: space-between; 
-        gap: 24px;
+        gap: 16px;
         height: 650px;
     }
     .dataCS{
@@ -471,19 +469,13 @@
         flex: 1;
         width: 540px;
         height: 540px;
-        margin-bottom: 64px;
+        margin-bottom: 16px;
         text-align: left;
-        opacity: 0;
+        opacity: 1;
+        transform: none;
+        transition: transform 0.5s ease;
 
-        transform: translateY(30px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        overflow: hidden; 
-
-        transform-style: preserve-3d;
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
-                opacity 0.6s ease-out, 
-                filter 0.6s ease-out;
-        will-change: transform, opacity;
+        position: absolute;
     }
     .dataCS h2, .dataCS p{
         color: rgb(255, 255, 255);
@@ -503,9 +495,8 @@
     #spots{
         background: linear-gradient(to right, rgb(221, 128, 21), rgb(220, 148, 40));
     }
-    .dataCS.visible{
-        opacity: 1;
-        transform: translateY(0);
+    #none{
+        opacity: 0;
     }
     .csImg{
         display: block;   
@@ -515,9 +506,11 @@
     }
     .csText{
         padding: 24px;
+        position: relative;
+        bottom: 24px;
     }
     .csText h2, .csText p{
-        margin: 8px;
+        margin: 4px;
     }
     .csSubText{
         font-weight: 500;
