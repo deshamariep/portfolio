@@ -244,11 +244,17 @@
     }
     hr{
         position: absolute;
-        left: 27%;
+        left: 50%;
+        transform: translateX(-50%);
         bottom: 60px;
-        margin: auto;
-        width: 43%;
-        color: rgb(34, 34, 34);
+        width: 0%;
+        height: 1px;
+        border: none;
+        background-color: rgb(34, 34, 34);
+        transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    hr.expand{
+        width: 42.7%;
     }
     html, body {
         cursor: none;
@@ -376,8 +382,13 @@
         line-height: 160%;
     }
     #query{
-        margin: 0px -24px 96px;
+        margin: -275px -24px 96px;
         position: relative;
+        transform: translateY(0);
+        transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    #query.slide-up{
+        transform: translateY(-25px);
     }
     /* Move the orbs to different pseudo-elements using parent */
     #query::before {

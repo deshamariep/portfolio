@@ -43,6 +43,22 @@
 (function(){
   'use strict';
 
+  window.addEventListener("load", () => {
+    const query = document.getElementById("query");
+    
+    setTimeout(() => {
+      query.classList.add("slide-up");
+    }, 100); 
+  });
+
+  window.addEventListener("load", () => {
+    const line = document.querySelector("hr");
+    
+    setTimeout(() => {
+      line.classList.add("expand");
+    }, 300); // slight delay so transition runs
+  });
+
   // Mouse Parallax for Avatar Rings (not the image)
   document.addEventListener('mousemove', (e) => {
     const avatar = document.querySelector('.avatar-container');
