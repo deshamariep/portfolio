@@ -208,15 +208,15 @@
     }
     #titleLeft{
         position: absolute;
-        bottom: 70px;
-        left: 25%;
-        width: 300px;
+        bottom: 25px;
+        left: 12%;
+        width: 550px;
     }
     #titleRight{
         position: absolute;
-        bottom: 70px;
-        right: 30%;
-        width: 200px;
+        bottom: 25px;
+        right: 10.5%;
+        width: 275px;
     }
     #dataTitle h1{
         position: absolute;
@@ -226,9 +226,9 @@
         margin: 0px 0px 8px;
         line-height: 130%;
         text-align: left;
-        bottom: 100px;
-        right: 33%;
-        width: 575px;
+        bottom: 105px;
+        right: 27.3%;
+        width: 875px;
     }
     #dataTitle h3{
         margin: 8px 0px 0px;
@@ -244,9 +244,9 @@
     }
     hr{
         position: absolute;
-        left: 27.3%;
+        left: 50%;
         transform: translateX(-50%);
-        bottom: 60px;
+        bottom: 15px;
         width: 0%;
         height: 1px;
         border: none;
@@ -254,7 +254,7 @@
         transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     }
     hr.expand{
-        width: 42.7%;
+        width: 76.4%;
     }
     html, body {
         cursor: none;
@@ -566,11 +566,13 @@
     }
     #experiments{
         display: flex;
+        gap: 24px;
+        width: 1100px;
+        margin: auto;
     }
     #exp{
         flex: 1;
         display: block;
-        margin: 0px auto auto 24px;
     }
     #ExpVidCol{
         flex: 1;
@@ -632,7 +634,7 @@
     }
     .exp-video {
         width: 100%;     
-        max-width: 650px;       
+        max-width: 530px;       
         height: auto;
         border-radius: 12px; 
         object-fit: cover; 
@@ -757,13 +759,47 @@
     }
 }
 @media screen and (min-width: 1650px){
+    #dataTitle h1{
+        position: absolute;
+        font-weight: 500;
+        margin: 0px;
+        font-size: 64px;
+        margin: 0px 0px 8px;
+        line-height: 130%;
+        text-align: left;
+        bottom: 105px;
+        right: 33%;
+        width: 875px;
+    }
+    #titleLeft{
+        position: absolute;
+        bottom: 25px;
+        left: 21.6%;
+        width: 550px;
+    }
+    #titleRight{
+        position: absolute;
+        bottom: 25px;
+        right: 20.7%;
+        width: 275px;
+    }
+    #dataTitle h3{
+        margin: 8px 0px 0px;
+        text-align: left;
+    }
     hr{
         position: absolute;
-        left: 32%;
-        bottom: 155%;
-        margin: auto;
-        width: 35%;
-        color: rgb(34, 34, 34);
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px;
+        width: 0%;
+        height: 1px;
+        border: none;
+        background-color: rgb(34, 34, 34);
+        transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    hr.expand{
+        width: 1100px;
     }
 }
 /* @media screen and (min-width: 1850px){

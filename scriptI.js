@@ -215,7 +215,7 @@
     amp: "images/ampPark.mp4",
     ume: "images/umeAnimation.mp4"
   };
-  function playPreview(videoFile, maxWidth = 650) {
+  function playPreview(videoFile, maxWidth = 530) {
     source.src = videoFile;
     video.style.maxWidth = `${maxWidth}px`;
     video.load();
