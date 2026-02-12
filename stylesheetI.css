@@ -713,11 +713,15 @@
         flex: 1.2;
         margin-left: 24px;
     }
+    #fillTime h2{
+        margin: 0px;
+    }
     #headShot{
         flex: 1;
         display: flex;              
         justify-content: center;
         padding-top: 32px;
+        margin-top: 32px;
     }
     #comingSoon {
         position: relative;
