@@ -251,7 +251,7 @@
         height: 1px;
         border: none;
         background-color: rgb(34, 34, 34);
-        transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);
     }
     hr.expand{
         width: 76.4%;
@@ -287,9 +287,9 @@
     .heroExp{
         margin-top: 16px;
         display: block;
-        max-width: 330px;
-        height: 140px;
-        padding: 16px 16px;
+        max-width: 255px;
+        height: 108px;
+        padding: 12px 16px;
         border-radius: 10px;
         border: 1px solid transparent;
         background: 
@@ -299,7 +299,7 @@
         box-shadow: 0 4px 25px rgba(0,0,0,0.15);
     }
     #receExpTitle {
-        font-size: 12px !important;
+        font-size: 10px !important;
         background: linear-gradient(90deg, rgba(0,94,255,1), rgba(194,0,255,1));
         -webkit-background-clip: text;
         background-clip: text;
@@ -307,7 +307,7 @@
         color: transparent;
     }
     .smolP{
-        font-size: 16px !important;
+        font-size: 12px !important;
         margin: 0px;
     }
     #desktop{
@@ -324,7 +324,7 @@
     #dataDesktopBar{
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 4px;
         padding: 16px;
         border-radius: 12px;
         border: 1px solid transparent;
@@ -347,8 +347,8 @@
         align-items: center;
     }
     .dock-item img {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
         transform-origin: bottom center;
         transition: transform 0.2s ease;
     }
@@ -386,7 +386,7 @@
         position: relative;
         opacity: 0;
         transform: translateY(0);
-        transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1);
     }
     #query.slide-up{
         transform: translateY(-50px);
@@ -707,6 +707,7 @@
     #aboutMeSec {
         height: calc(100vh + 100px);
         transition: color 0.3s ease;
+        margin: 0px 170px;
     }
     #fillTime{
         flex: 1.2;
