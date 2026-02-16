@@ -129,7 +129,7 @@
     }
     #infoBox div{
         margin-top: 24px;
-        flex: auto;
+        flex: content;
     }
     main{
         margin: 0px 24px;
