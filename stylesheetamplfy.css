@@ -124,12 +124,12 @@
         margin: 0px;
     }
     #infoBox{
-        margin-top: 32px;
         display: flex;
+        gap: 16px;
+        margin-top: 24px;
     }
     #infoBox div{
-        margin-top: 24px;
-        flex: 1;
+        flex: content;
     }
     img{
         display: block;

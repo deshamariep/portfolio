@@ -39,22 +39,22 @@
         }
     });
 
-        let snapped = false;
-        document.addEventListener("scroll", function () {
-            // if user is at the very top, reset snapped
-            if (window.scrollY === 0) {
-                snapped = false;
-            }
+        // let snapped = false;
+        // document.addEventListener("scroll", function () {
+        //     // if user is at the very top, reset snapped
+        //     if (window.scrollY === 0) {
+        //         snapped = false;
+        //     }
   
-            // only snap if user starts at top and scrolls past 8px
-            if (!snapped && window.scrollY > 8) {
-                snapped = true;
-                window.scrollTo({
-                top: 800,
-                behavior: "smooth"
-                });
-            }
-        });
+        //     // only snap if user starts at top and scrolls past 8px
+        //     if (!snapped && window.scrollY > 8) {
+        //         snapped = true;
+        //         window.scrollTo({
+        //         top: 800,
+        //         behavior: "smooth"
+        //         });
+        //     }
+        // });
 
         document.addEventListener("DOMContentLoaded", () => {
             const footer = document.querySelector("footer");

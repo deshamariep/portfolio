@@ -175,7 +175,7 @@
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        font-size: 20px;
+        font-size: 22px;
         color: rgb(48, 48, 66);
         letter-spacing: 0.05em;
         line-height: 160%;
@@ -184,9 +184,9 @@
     p, nav ul li, ul li{
         font-family: "Newsreader", serif;
         font-optical-sizing: auto;
-        font-weight: 300;
+        font-weight: 400;
         font-style: normal;
-        font-size: 18px;
+        font-size: 20px;
         color: rgb(48, 48, 66);
         letter-spacing: 0.04em;
         line-height: 160%;

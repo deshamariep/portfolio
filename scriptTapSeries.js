@@ -125,26 +125,6 @@
     dots[personaSlideIndex - 1].classList.add("active");
   }
 
-  // Attach event listeners after DOM is loaded
-  document.addEventListener('DOMContentLoaded', function() {
-    // Arrow buttons
-    const prevBtn = document.querySelector('.persona-prev');
-    const nextBtn = document.querySelector('.persona-next');
-  
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => changePersonaSlide(-1));
-    }
-  
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => changePersonaSlide(1));
-    }
-  
-    const dots = document.querySelectorAll('.persona-dot');
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => currentPersonaSlide(index + 1));
-    });
-  });
-
 
   window.addEventListener('scroll', function () {
     if (!ticking) {
@@ -157,37 +137,6 @@
     if (stickyActive && e.clientY < 60) {
       heroTop.classList.add('visible');
     }
-  });
-
-  const passfailImage = document.getElementById("passfailImage");
-  const hoverRules = {
-    pfh1: {
-      passfail: "passfail1.svg"
-    },
-    pfh2: {
-      passfail: "passfail2.svg"
-    },
-    pfh3: {
-      passfail: "passfail3.svg"
-    },
-    pfh4: {
-      passfail: "passfail4.svg"
-    }
-  };
-
-  const items = document.querySelectorAll(".feature-item[id]");
-
-  items.forEach(item => {
-    item.addEventListener("mouseover", () => {
-      const rule = hoverRules[item.id];
-      if (!rule) return;
-
-      passfailImage.src = `images/${rule.passfail}`;
-    });
-
-    item.addEventListener("mouseout", () => {
-      passfailImage.src = "images/passfail.svg";
-    });
   });
   
 }());
