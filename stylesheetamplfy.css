@@ -43,6 +43,13 @@
     .mobileIncomplete {
         display: none; /* Hide the message on larger screens */
     }
+    h2{
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+    #color{
+        color: #52A3A3;
+    }
     body{
         margin: 0;
         padding: 0;
@@ -122,6 +129,17 @@
     }
     #infoBox div{
         margin-top: 24px;
+    }
+    img{
+        justify-content: center;
+        align-items: center;
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .imgSpace{
+        margin: 64px 0px;
     }
     main{
         margin: 0px 24px;
