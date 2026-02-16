@@ -93,6 +93,9 @@
       
         opacity: 0.95;
     }
+    .hero{    
+        height: 70px;   
+    }
     .hero-content h4{
         font-style: normal;
     }
@@ -144,12 +147,8 @@
     .spaceBtwn{
         margin-top: 150px;
         margin-bottom: 150px;
-        opacity: 0;
-        transition: opacity 1s ease;
-        padding: 0.5rem;
-    }
-    .spaceBtwn.active{
         opacity: 1;
+        padding: 0.5rem;
     }
     .data{
         display: flex;

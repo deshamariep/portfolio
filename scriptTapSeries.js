@@ -21,7 +21,7 @@
         });
       }
     });
-  document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
       const hash = window.location.hash;
       if (hash) {
         setTimeout(() => {
@@ -37,36 +37,6 @@
           }
         }, 500);
       }
-  });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const faders = document.querySelectorAll(".spaceBtwn");
-    
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.4 }); 
-    
-      faders.forEach(el => observer.observe(el));
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const faders = document.querySelectorAll(".spaceBtwnLine");
-    
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.8 }); 
-    
-      faders.forEach(el => observer.observe(el));
     });
 
     document.addEventListener("DOMContentLoaded", () => {

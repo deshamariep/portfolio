@@ -81,6 +81,9 @@
       
         opacity: 0.95;
     }
+    .hero{    
+        height: 70px;   
+    }
     .hero-content h4{
         font-style: normal;
         color: white;
@@ -162,22 +165,8 @@
     .spaceBtwn{
         margin-top: 150px;
         margin-bottom: 150px;
-        opacity: 0;
-        transition: opacity 1s ease;
-        padding: 0.5rem;
-    }
-    .spaceBtwn.active{
         opacity: 1;
-    }
-    .spaceBtwnLine{
-        margin-top: 72px;
-        margin-bottom: 72px;
-        opacity: 0;
-        transition: opacity 1s ease;
         padding: 0.5rem;
-    }
-    .spaceBtwnLine.active{
-        opacity: 1;
     }
     /* #arrowContainer {
         display: flex;
