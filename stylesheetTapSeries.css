@@ -32,8 +32,7 @@
         display: none; /* Hide the message on larger screens */
     }
     h2{
-        margin-top: 16px;
-        margin-bottom: 8px;
+        margin: 8px 0px;
     }
     #color{
         color: #3688D4;
@@ -126,9 +125,11 @@
     }
     #infoBox{
         margin-top: 32px;
+        display: flex;
     }
     #infoBox div{
         margin-top: 24px;
+        flex: auto;
     }
     main{
         margin: 0px 24px;
@@ -169,12 +170,6 @@
         width: 1392px;
         margin: 96px auto; 
     }
-    .spaceBtwn{
-        margin-top: 150px;
-        margin-bottom: 150px;
-        opacity: 1;
-        padding: 0.5rem;
-    }
     /* #arrowContainer {
         display: flex;
         justify-content: center;
@@ -211,7 +206,7 @@
         max-height: 100%;
     }
     .imgSpace{
-        margin: 64px 0px;
+        margin: 64px auto;
     }
     .data{
         display: flex;
@@ -264,7 +259,7 @@
     }
     .newMargin{
         width: 800px;
-        margin: auto;
+        margin: 88px auto;
     }
     .teams{
         margin: 16px 0px 8px;

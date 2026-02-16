@@ -44,8 +44,7 @@
         display: none; /* Hide the message on larger screens */
     }
     h2{
-        margin-top: 16px;
-        margin-bottom: 8px;
+        margin: 8px 0px;
     }
     #color{
         color: #52A3A3;
@@ -126,20 +125,22 @@
     }
     #infoBox{
         margin-top: 32px;
+        display: flex;
     }
     #infoBox div{
         margin-top: 24px;
+        flex: auto;
     }
     img{
-        justify-content: center;
-        align-items: center;
         display: block;
         margin: auto;
+        justify-content: center;
+        align-items: center;
         max-width: 100%;
         max-height: 100%;
     }
     .imgSpace{
-        margin: 64px 0px;
+        margin: 64px auto;
     }
     main{
         margin: 0px 24px;
@@ -161,12 +162,6 @@
     #query{
         width: 1392px;
         margin: 96px auto; 
-    }
-    .spaceBtwn{
-        margin-top: 150px;
-        margin-bottom: 150px;
-        opacity: 1;
-        padding: 0.5rem;
     }
     .data{
         display: flex;
@@ -225,7 +220,7 @@
     }
     .newMargin{
         width: 800px;
-        margin: auto;
+        margin: 88px auto;
     }
     #hmw{
         background: rgb(246, 246, 247);
