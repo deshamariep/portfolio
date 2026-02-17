@@ -382,61 +382,8 @@
         line-height: 160%;
     }
     #query{
-        margin: -225px -24px 96px;
-        position: relative;
-        opacity: 0;
-        transform: translateY(0);
-        transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 1.2s ease;;
+        margin: -225px -24px 32px;
     }
-    #query.slide-up{
-        transform: translateY(-50px);
-        opacity: 1;
-    }
-    /* Move the orbs to different pseudo-elements using parent */
-    #query::before {
-        content: '';
-        position: absolute;
-        width: 700px;
-        height: 700px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 25%,  
-        rgba(0,94,255,0.2) 45%, 
-        rgba(194,0,255,0.1) 75%);
-        top: 300px;
-        left: -200px;
-        z-index: -1;
-        filter: blur(80px);
-        pointer-events: none;
-    }
-    #query::after {
-        content: '';
-        position: absolute;
-        width: 800px;
-        height: 800px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 25%,
-        rgba(0,94,255,0.2) 45%, 
-        rgba(194,0,255,0.1) 75%);
-        top: 1400px;
-        right: -250px;
-        z-index: -1;
-        filter: blur(100px);
-        pointer-events: none;
-    }
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-200px); }
-    }
-    
-    #query::before {
-        animation: float 7s ease-in-out infinite;
-    }
-    
-    #query::after {
-        animation: float 7s ease-in-out infinite reverse;
-    }
-
     #caseStudies{
         width: 1100px;
         margin: 24px auto auto;
@@ -640,7 +587,7 @@
         border-radius: 12px; 
         object-fit: cover; 
         display: block;
-        margin: auto;
+        margin: auto auto;
     }
     #ExpVidCol {
         border: dashed 1px white;
