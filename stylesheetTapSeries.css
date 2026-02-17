@@ -126,7 +126,7 @@
     #infoBox{
         display: flex;
         gap: 16px;
-        margin-top: 24px;
+        margin-top: 32px;
     }
     #infoBox div{
         flex: content;

@@ -213,7 +213,8 @@
   const previews = {
     aeVids: "images/aeVids.mp4",
     amp: "images/ampPark.mp4",
-    ume: "images/umeAnimation.mp4"
+    motion: "images/motionDesign.mp4",
+    artWork: "images/artWork.svg"
   };
   function playPreview(videoFile, maxWidth = 530) {
     source.src = videoFile;
@@ -241,10 +242,15 @@
   });
   document.getElementById("amp").addEventListener("mouseleave", resetPreview);
   
-  document.getElementById("ume").addEventListener("mouseenter", () => {
-    playPreview(previews.ume);
+  document.getElementById("motion").addEventListener("mouseenter", () => {
+    playPreview(previews.motion, 300);
   });
-  document.getElementById("ume").addEventListener("mouseleave", resetPreview);
+  document.getElementById("motion").addEventListener("mouseleave", resetPreview);
+
+  document.getElementById("artWork").addEventListener("mouseenter", () => {
+    playPreview(previews.artWork);
+  });
+  document.getElementById("artWork").addEventListener("mouseleave", resetPreview);
 
   // greeting
   function updateGreeting() {
