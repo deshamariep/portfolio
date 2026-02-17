@@ -161,7 +161,7 @@
     }
     #query{
         width: 1392px;
-        margin: 64px auto; 
+        margin: -32px auto; 
     }
     .data{
         display: flex;
