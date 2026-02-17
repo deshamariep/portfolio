@@ -214,7 +214,7 @@
     aeVids: "images/aeVids.mp4",
     amp: "images/ampPark.mp4",
     motion: "images/motionDesign.mp4",
-    artWork: "images/artWork.svg"
+    artWork: "images/artWork.mp4"
   };
   function playPreview(videoFile, maxWidth = 530) {
     source.src = videoFile;
@@ -243,7 +243,7 @@
   document.getElementById("amp").addEventListener("mouseleave", resetPreview);
   
   document.getElementById("motion").addEventListener("mouseenter", () => {
-    playPreview(previews.motion, 300);
+    playPreview(previews.motion);
   });
   document.getElementById("motion").addEventListener("mouseleave", resetPreview);
 
