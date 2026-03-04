@@ -148,6 +148,19 @@
         background: #fff;
         overflow: hidden;
     }
+
+    /* Spline background container */
+    .spline-bg {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+    }
+    /* Make spline fill container */
+    .spline-bg spline-viewer {
+        width: 100%;
+        height: 100%;
+    }
+
     body{
         margin: 0;
         padding: 0;
