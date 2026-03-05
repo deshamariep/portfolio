@@ -149,18 +149,6 @@
         overflow: hidden;
     }
 
-    /* Spline background container
-    .spline-bg {
-        position: absolute;
-        inset: 0;
-        z-index: -2;
-    }
-    Make spline fill container
-    .spline-bg spline-viewer {
-        width: 100%;
-        height: 100%;
-    } */
-
     body{
         margin: 0;
         padding: 0;
@@ -187,6 +175,21 @@
         transform: none !important;
         pointer-events: none; 
     } */
+    .hero-interactive{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    
+        z-index: 0;   /* behind everything */
+        pointer-events: none;
+    }
+    .hero-interactive iframe, .hero-interactive canvas{
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
     .hero-top{
         background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(6px); 
