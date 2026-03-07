@@ -252,6 +252,10 @@
         transform: translateY(30px);
         animation: slideFadeUp 0.8s ease forwards;
     }
+    #dataTitle h2 .grey{
+        font-size: 24px; 
+        font-weight: 400;
+    }
     #dataTitle h3{
         margin: 8px 0px 0px;
         text-align: left;
