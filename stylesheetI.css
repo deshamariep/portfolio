@@ -350,19 +350,9 @@
         margin: 0px;
     }
     #desktop{
-        margin-top: 16px;
-        width: 390px;           
-    }
-    #aboutmedata{
-        display: flex;
-        gap: 8px;
-    }
-    #aboutmedata div{
-        flex: 1;
+        margin-top: 16px;         
     }
     #dataDesktopBar{
-        display: flex;
-        flex-wrap: wrap;
         gap: 4px;
         padding: 16px;
         border-radius: 12px;
