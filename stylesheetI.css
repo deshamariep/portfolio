@@ -756,23 +756,20 @@
     }
 }
 @media screen and (min-width: 1650px){
-    #dataTitle h1{
+    #dataTitle h2{
         position: absolute;
-        font-weight: 500;
-        margin: 0px;
-        font-size: 64px;
         margin: 0px 0px 8px;
         line-height: 130%;
         text-align: left;
-        bottom: 105px;
+        bottom: 155px;
         right: 33%;
         width: 875px;
     }
     #titleLeft{
         position: absolute;
-        bottom: 25px;
+        bottom: 0px;
         left: 21.6%;
-        width: 550px;
+        width: 650px;
     }
     #titleRight{
         position: absolute;
@@ -788,7 +785,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 15px;
+        bottom: -32px;
         width: 0%;
         height: 1px;
         border: none;
