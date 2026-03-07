@@ -13,10 +13,8 @@
     .hero-top{
         position: absolute;
         top: 4px;          
-        left: 8px;         
-        right: 8px;       
-        width: calc(100% - 16px); 
-        max-width: calc(100% - 16px);
+        margin: auto;      
+        width: 1100px; 
         height: 70px;
         display: flex;
         align-items: center;
