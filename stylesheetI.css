@@ -224,7 +224,7 @@
     }
     #titleLeft{
         position: absolute;
-        bottom: 25px;
+        bottom: -72px;
         left: 12%;
         width: 550px;
         opacity: 0;
@@ -245,7 +245,7 @@
         margin: 0px 0px 8px;
         line-height: 130%;
         text-align: left;
-        bottom: 105px;
+        bottom: 125px;
         right: 27.3%;
         width: 875px;
         opacity: 0;
@@ -259,10 +259,14 @@
     #dataTitle p{
         margin: 8px 0px;
         font-size: 16px;
-        font-weight: 200;
+        font-weight: 400;
         color: rgb(48, 48, 66);
-        text-align: right;
+        text-align: left;
         line-height: 175%;
+    }
+    #dataTitle a{
+        font-size: 16px;
+        font-weight: 400;
     }
     .grey{
         color: rgb(48, 48, 66, 0.7);
@@ -271,7 +275,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 15px;
+        bottom: -105px;
         width: 0%;
         height: 1px;
         border: none;
@@ -460,31 +464,11 @@
         height: 540px;
         margin-bottom: 16px;
         text-align: left;
-        opacity: 1;
-        transform: none;
-        transition: transform 0.5s ease;
-
-        position: relative;
+        transition: transform 0.3s ease;
+        overflow: hidden;
     }
-    .csText h2,
-    .csText .csSubText {
-        position: relative;
-        display: inline-block;
-    }
-    .csText h2::after,
-    .csText .csSubText::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        width: 0;
-        height: 2px;
-        background: currentColor;
-        transition: width 0.3s ease;
-    }
-    .dataCS:hover .csText h2::after,
-    .dataCS:hover .csText .csSubText::after {
-        width: 100%;
+    .dataCS:hover{
+        transform: translateY(-6px);
     }
     .dataCS h2, .dataCS p{
         color: rgb(255, 255, 255);
@@ -512,6 +496,9 @@
         margin: 24px auto;
         transition: transform 0.5s ease; 
         transform-origin: center center;
+    }
+    .dataCS:hover .csImg{
+        transform: scale(1.05);
     }
     .csText{
         padding: 24px 24px 0px;
