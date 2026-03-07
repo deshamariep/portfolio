@@ -227,6 +227,10 @@
         bottom: 25px;
         left: 12%;
         width: 550px;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slideFadeUp 0.8s ease forwards;
+        animation-delay: 0.2s;
     }
     #titleRight{
         position: absolute;
@@ -234,17 +238,19 @@
         right: 10.5%;
         width: 275px;
     }
-    #dataTitle h1{
+    #dataTitle h2{
         position: absolute;
         font-weight: 500;
         margin: 0px;
-        font-size: 64px;
         margin: 0px 0px 8px;
         line-height: 130%;
         text-align: left;
         bottom: 105px;
         right: 27.3%;
         width: 875px;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slideFadeUp 0.8s ease forwards;
     }
     #dataTitle h3{
         margin: 8px 0px 0px;
@@ -257,6 +263,9 @@
         color: rgb(48, 48, 66);
         text-align: right;
         line-height: 175%;
+    }
+    .grey{
+        color: rgb(48, 48, 66, 0.7);
     }
     hr{
         position: absolute;
@@ -271,6 +280,16 @@
     }
     hr.expand{
         width: 76.4%;
+    }
+    @keyframes slideFadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     html, body {
         cursor: none;
@@ -446,6 +465,26 @@
         transition: transform 0.5s ease;
 
         position: relative;
+    }
+    .csText h2,
+    .csText .csSubText {
+        position: relative;
+        display: inline-block;
+    }
+    .csText h2::after,
+    .csText .csSubText::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background: currentColor;
+        transition: width 0.3s ease;
+    }
+    .dataCS:hover .csText h2::after,
+    .dataCS:hover .csText .csSubText::after {
+        width: 100%;
     }
     .dataCS h2, .dataCS p{
         color: rgb(255, 255, 255);
