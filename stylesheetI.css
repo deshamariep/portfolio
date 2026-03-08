@@ -797,8 +797,7 @@
         width: 1100px;
     }
     #desktop{
-        margin-top: 16px;
-        width: 578px;           
+        margin-top: 16px;          
     }
     #dataDesktopBar{
         display: flex;
