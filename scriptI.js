@@ -128,19 +128,30 @@
   document.addEventListener("DOMContentLoaded", () => {
     const footer = document.querySelector("footer");
     const footTitle = document.getElementById("footTitle");
-
+  
+    if (!footer || !footTitle) return;
+  
+    const startAnimation = () => {
+      footTitle.style.animationPlayState = "running";
+    };
+  
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            footTitle.style.animationPlayState = "running";
+            startAnimation();
           }
         });
       },
-      { threshold: 0.2 } // you can adjust this
+      { threshold: 0.2 }
     );
-
+  
     observer.observe(footer);
+  
+    // 🔧 Handles pages where footer starts visible (like index)
+    if (footer.getBoundingClientRect().top < window.innerHeight) {
+      startAnimation();
+    }
   });
 
 
