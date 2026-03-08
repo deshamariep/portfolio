@@ -355,6 +355,7 @@
     }
     .exphighlight{
         background: linear-gradient(135deg, #005eff, #c200ff);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
