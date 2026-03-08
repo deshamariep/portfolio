@@ -705,6 +705,7 @@
     #fillTime{
         flex: 1.2;
         margin-left: 24px;
+        width: 578px;
     }
     #fillTime h2{
         margin: 0px;
