@@ -341,7 +341,7 @@
         box-sizing: border-box;
         box-shadow: 0 4px 25px rgba(0,0,0,0.15);
     }
-    #receExpTitle {
+    .receExpTitle {
         font-size: 10px !important;
         background: linear-gradient(90deg, rgba(0,94,255,1), rgba(194,0,255,1));
         -webkit-background-clip: text;
