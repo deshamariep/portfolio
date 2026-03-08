@@ -224,7 +224,7 @@
     }
     #titleLeft{
         position: absolute;
-        bottom: -40px;
+        bottom: -16px;
         left: 12%;
         width: 650px;
         opacity: 0;
@@ -279,7 +279,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -80px;
+        bottom: -56px;
         width: 0%;
         height: 1px;
         border: none;
@@ -354,20 +354,19 @@
         margin: 0px;
     }
     #desktop{
+        padding: 8px 16px 16px;
         margin-top: 16px;
-        width: 578px;         
-    }
-    #dataDesktopBar{
-        display: flex;
-        gap: 8px;
-        padding: 16px;
         border-radius: 12px;
         border: 1px solid transparent;
         background: 
         linear-gradient(white, white) padding-box,
         linear-gradient(135deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
         box-shadow: 0 4px 25px rgba(0,0,0,0.15);
-        max-width: 578px;
+        max-width: 578px;       
+    }
+    #dataDesktopBar{
+        display: flex;
+        gap: 8px;
     }
     #dataDesktopBar img{
         flex: auto;
