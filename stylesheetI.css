@@ -455,7 +455,6 @@
 
     .data{
         display: flex;
-        justify-content: space-between; 
         gap: 16px;
     }
     .dataCS{
@@ -703,7 +702,6 @@
         width: 1100px;
     }
     #fillTime{
-        flex: 1.2;
         margin-left: 24px;
         width: 578px;
     }
@@ -715,6 +713,7 @@
     }
     #headShot img{
         position: absolute;
+        left: 50px;
         width: 400px;
         height: 500px;
         margin: auto;
