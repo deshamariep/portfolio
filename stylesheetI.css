@@ -330,8 +330,8 @@
     .heroExp{
         margin-top: 16px;
         display: block;
-        max-width: 255px;
-        height: 108px;
+        width: 578px;
+        /* height: 108px; */
         padding: 12px 16px;
         border-radius: 10px;
         border: 1px solid transparent;
@@ -352,6 +352,11 @@
     .smolP{
         font-size: 12px !important;
         margin: 0px;
+    }
+    .exphighlight{
+        background: linear-gradient(135deg, #005eff, #c200ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     #desktop{
         padding: 8px 16px 16px;
