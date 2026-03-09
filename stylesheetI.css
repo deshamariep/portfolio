@@ -283,7 +283,7 @@
         width: 0%;
         height: 1px;
         border: none;
-        background-color: rgb(34, 34, 34, 0.5);
+        background-color: rgb(145, 145, 145);
         transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);
     }
     hr.expand{
@@ -547,9 +547,18 @@
         opacity: 1;
         transform: translateY(0);
     }
-    .sectionTitle img{
-        display: block;
-        margin: auto;
+    #scrambleText{
+        color: #fff;
+        font-size: 64px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        opacity:0;
+        transform:translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    #scrambleText.active{
+        opacity:1;
+        transform:translateY(0);
     }
     #sideQuest{
         background-color: transparent;

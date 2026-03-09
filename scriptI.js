@@ -281,6 +281,56 @@
   }
   updateGreeting();
 
+  // practice and play
+  const text = "Practice & Play";
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
+  const el = document.getElementById("scrambleText");
+  const section = document.getElementById("practiceSection");
+  let frame = 0;
+  let interval = null;
+  function startScramble(){
+
+    el.classList.add("active");
+  
+    clearInterval(interval);
+  
+    interval = setInterval(() => {
+  
+      el.textContent = text
+      .split("")
+      .map((letter, index) => {
+  
+        if(index < frame){
+          return text[index];
+        }
+  
+        return chars[Math.floor(Math.random() * chars.length)];
+  
+      })
+      .join("");
+  
+      if(frame >= text.length){
+        clearInterval(interval);
+      }
+  
+      frame += 1/3;
+  
+    }, 40);
+  }
+  const observer = new IntersectionObserver((entries) => {
+  
+      entries.forEach(entry => {
+  
+          if(entry.isIntersecting){
+              startScramble();
+              observer.disconnect(); // run once
+          }
+  
+      });
+  
+  }, {threshold:0.6});
+  observer.observe(section);
+
   // BACKGROUND COLOR
   function handleBackgroundTransition() {
     const sideQuest = document.querySelector('#sideQuest');
