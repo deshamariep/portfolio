@@ -255,13 +255,21 @@
   
   document.getElementById("motion").addEventListener("mouseenter", () => {
     playPreview(previews.motion);
+    expVidCol.classList.add("blend-mode");
   });
-  document.getElementById("motion").addEventListener("mouseleave", resetPreview);
+  document.getElementById("motion").addEventListener("mouseleave", () => {
+    resetPreview();
+    expVidCol.classList.remove("blend-mode");
+  });
 
   document.getElementById("artWork").addEventListener("mouseenter", () => {
     playPreview(previews.artWork);
+    expVidCol.classList.add("blend-mode");
   });
-  document.getElementById("artWork").addEventListener("mouseleave", resetPreview);
+  document.getElementById("artWork").addEventListener("mouseleave", () => {
+    resetPreview();
+    expVidCol.classList.remove("blend-mode");
+  });
 
   // practice and play
   const text = "Practice & Play";
