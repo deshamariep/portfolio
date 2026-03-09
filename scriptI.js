@@ -263,24 +263,6 @@
   });
   document.getElementById("artWork").addEventListener("mouseleave", resetPreview);
 
-  // greeting
-  function updateGreeting() {
-    const now = new Date();
-    const hours = now.getHours();
-    const greetingElement = document.getElementById('greeting');
-
-    let greetingText = "Good morning, here's more on me...";
-
-    if (hours >= 12 && hours < 18) {
-        greetingText = "Good afternoon, here's more on me...";
-    } else if (hours >= 18) {
-        greetingText = "Good evening, here's more on me...";
-    }
-
-    greetingElement.textContent = greetingText;
-  }
-  updateGreeting();
-
   // practice and play
   const text = "Practice & Play";
   const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
@@ -387,6 +369,24 @@
     }
   });
   window.addEventListener('load', handleBackgroundTransition);
+
+  // greeting
+  function updateGreeting() {
+    const now = new Date();
+    const hours = now.getHours();
+    const greetingElement = document.getElementById('greeting');
+
+    let greetingText = "Good morning, here's more on me...";
+
+    if (hours >= 12 && hours < 18) {
+        greetingText = "Good afternoon, here's more on me...";
+    } else if (hours >= 18) {
+        greetingText = "Good evening, here's more on me...";
+    }
+
+    greetingElement.textContent = greetingText;
+  }
+  updateGreeting();
 
 }());
 
