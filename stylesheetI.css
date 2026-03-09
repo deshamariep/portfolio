@@ -641,6 +641,7 @@
         object-fit: cover; 
         display: block;
         margin: auto auto;
+        mix-blend-mode: normal;
     }
     #ExpVidCol {
         border-radius: 12px;

@@ -233,13 +233,11 @@
     video.load();
     video.play();
 
-    previewText.classList.add("hidden");
     expVidCol.classList.add("video-active");
   }
   function resetPreview() {
     source.src = "";
     video.load();
-    previewText.classList.remove("hidden");
     expVidCol.classList.remove("video-active");
   }
 
