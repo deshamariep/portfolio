@@ -548,9 +548,9 @@
         transform: translateY(0);
     }
     #scrambleText{
-        text-align: center;
+        text-align: left;
         color: #fff;
-        font-size: 24px;
+        font-size: 32px;
         font-weight: 500;
         letter-spacing: 0.05em;
     }
@@ -587,6 +587,8 @@
         display: flex;
         gap: 24px;
         padding: 16px 0px;
+        border-top: solid rgb(255, 255, 255, 0.4) 1px;
+        border-bottom: solid rgb(255, 255, 255, 0.4) 1px;
     }
     .exp-item a{
         display: flex;
@@ -597,8 +599,6 @@
     }
     .exp-item h3, .exp-item p{
         color: rgb(255, 255, 255, 0.6);
-        /* border-top: solid rgb(255, 255, 255, 0.4) 1px;
-        border-bottom: solid rgb(255, 255, 255, 0.4) 1px; */
     }
     .exp-item a {
         color: inherit;
