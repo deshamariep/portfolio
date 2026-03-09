@@ -643,7 +643,6 @@
         object-fit: cover; 
         display: block;
         margin: auto auto;
-        mix-blend-mode: difference;
     }
     #ExpVidCol {
         border-radius: 12px;
@@ -654,9 +653,9 @@
         border-color: transparent;
         background: transparent;
     }
-    /* #ExpVidCol.video-active video {
-        transition: transform 0.3s ease;
-    } */
+    #ExpVidCol.video-active video {
+        mix-blend-mode: difference;
+    }
     .expRead .readIcon {
         position: relative;
         display: inline-block;
