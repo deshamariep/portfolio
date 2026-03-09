@@ -283,53 +283,39 @@
 
   // practice and play
   const text = "Practice & Play";
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+  
   const el = document.getElementById("scrambleText");
-  const section = document.getElementById("practiceSection");
-  let frame = 0;
-  let interval = null;
-  function startScramble(){
-
-    el.classList.add("active");
+  const section = document.getElementById("sideQuest");
   
-    clearInterval(interval);
+  window.addEventListener("scroll", () => {
   
-    interval = setInterval(() => {
+      const rect = section.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
   
-      el.textContent = text
-      .split("")
-      .map((letter, index) => {
+      // progress from 0 → 1 while scrolling through the section
+      let progress = (windowHeight - rect.top) / (rect.height + windowHeight);
+      progress = Math.max(0, Math.min(1, progress));
   
-        if(index < frame){
-          return text[index];
-        }
+      const revealCount = Math.floor(progress * text.length);
   
-        return chars[Math.floor(Math.random() * chars.length)];
+      let output = "";
   
-      })
-      .join("");
+      for (let i = 0; i < text.length; i++) {
   
-      if(frame >= text.length){
-        clearInterval(interval);
-      }
-  
-      frame += 1/3;
-  
-    }, 40);
-  }
-  const observer = new IntersectionObserver((entries) => {
-  
-      entries.forEach(entry => {
-  
-          if(entry.isIntersecting){
-              startScramble();
-              observer.disconnect(); // run once
+          if (i < revealCount) {
+              output += text[i];
+          } else if (text[i] === " ") {
+              output += " ";
+          } else {
+              output += chars[Math.floor(Math.random() * chars.length)];
           }
   
-      });
+      }
   
-  }, {threshold:0.6});
-  observer.observe(section);
+      el.textContent = output;
+  
+  });
 
   // BACKGROUND COLOR
   function handleBackgroundTransition() {

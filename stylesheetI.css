@@ -548,13 +548,14 @@
         transform: translateY(0);
     }
     #scrambleText{
+        text-align: center;
         color: #fff;
         font-size: 64px;
         font-weight: 500;
         letter-spacing: 0.05em;
         opacity:0;
         transform:translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+        transition: transform 0.2s ease;
     }
     #scrambleText.active{
         opacity:1;
