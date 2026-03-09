@@ -228,18 +228,32 @@
     motion: "images/motionDesign.mp4",
     artWork: "images/artWork.svg"
   };
-  function playPreview(videoFile, maxWidth = 530) {
-    source.src = videoFile;
-    video.style.maxWidth = `${maxWidth}px`;
-    video.load();
-    video.play();
+  function playPreview(file, maxWidth = 530) {
 
+    const isVideo = file.endsWith(".mp4") || file.endsWith(".webm");
+  
+    if (isVideo) {
+  
+      expImage.style.display = "none";
+      video.style.display = "block";
+  
+      source.src = file;
+      video.style.maxWidth = `${maxWidth}px`;
+      video.load();
+      video.play();
+  
+    } else {
+  
+      video.pause();
+      video.style.display = "none";
+  
+      expImage.style.display = "block";
+      expImage.src = file;
+      expImage.style.maxWidth = `${maxWidth}px`;
+  
+    }
+  
     expVidCol.classList.add("video-active");
-  }
-  function resetPreview() {
-    source.src = "";
-    video.load();
-    expVidCol.classList.remove("video-active");
   }
   function resetPreview() {
 
