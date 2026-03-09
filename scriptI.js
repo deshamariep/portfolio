@@ -288,17 +288,22 @@
   const el = document.getElementById("scrambleText");
   const section = document.getElementById("sideQuest");
   
+  const transitionZone = 300;
+  
   window.addEventListener("scroll", () => {
   
       const rect = section.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
   
-      let progress = (windowHeight - rect.top) / (rect.height + windowHeight);
-      progress = Math.max(0, Math.min(1, progress));
+      let progress = 0;
   
-      if (progress > 0.05) {
-          el.classList.add("active");
+      if (rect.top <= transitionZone && rect.top >= 0) {
+          progress = 1 - (rect.top / transitionZone);
       }
+      else if (rect.top < 0) {
+          progress = 1;
+      }
+  
+      progress = Math.max(0, Math.min(1, progress));
   
       const revealCount = Math.floor(progress * text.length);
   
@@ -308,9 +313,11 @@
   
           if (i < revealCount) {
               output += text[i];
-          } else if (text[i] === " ") {
+          } 
+          else if (text[i] === " ") {
               output += " ";
-          } else {
+          } 
+          else {
               output += chars[Math.floor(Math.random() * chars.length)];
           }
   
