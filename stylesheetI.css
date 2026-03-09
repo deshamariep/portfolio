@@ -653,9 +653,9 @@
         border-color: transparent;
         background: transparent;
     }
-    .blend-mode {
+    /* .blend-mode {
         mix-blend-mode: overlay;
-    }
+    } */
     .expRead .readIcon {
         position: relative;
         display: inline-block;

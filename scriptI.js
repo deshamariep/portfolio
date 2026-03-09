@@ -225,7 +225,7 @@
     aeVids: "images/aeVids.mp4",
     amp: "images/ampPark.mp4",
     motion: "images/motionDesign.mp4",
-    artWork: "images/artWork.mp4"
+    artWork: "images/artWork.svg"
   };
   function playPreview(videoFile, maxWidth = 530) {
     source.src = videoFile;
@@ -253,20 +253,20 @@
   
   document.getElementById("motion").addEventListener("mouseenter", () => {
     playPreview(previews.motion);
-    expVidCol.classList.add("blend-mode");
+    // expVidCol.classList.add("blend-mode");
   });
   document.getElementById("motion").addEventListener("mouseleave", () => {
     resetPreview();
-    expVidCol.classList.remove("blend-mode");
+    // expVidCol.classList.remove("blend-mode");
   });
 
   document.getElementById("artWork").addEventListener("mouseenter", () => {
     playPreview(previews.artWork);
-    expVidCol.classList.add("blend-mode");
+    // expVidCol.classList.add("blend-mode");
   });
   document.getElementById("artWork").addEventListener("mouseleave", () => {
     resetPreview();
-    expVidCol.classList.remove("blend-mode");
+    // expVidCol.classList.remove("blend-mode");
   });
 
   // practice and play
