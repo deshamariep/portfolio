@@ -643,7 +643,6 @@
         margin: auto auto;
     }
     #ExpVidCol {
-        border: dashed 1px white;
         border-radius: 12px;
         transition: border 0.3s ease, background 0.3s ease;
     }
