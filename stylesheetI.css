@@ -634,6 +634,7 @@
         margin: auto;
     }
     .exp-video {
+        mix-blend-mode: normal;
         width: 100%;     
         max-width: 530px;       
         height: auto;
@@ -654,6 +655,12 @@
     #ExpVidCol.video-active video {
         transform: scale(1.02);
         transition: transform 0.3s ease;
+    }
+    #motion:hover ~ #ExpVidCol .exp-video{
+        mix-blend-mode: screen;
+    }
+    #artWork:hover ~ #ExpVidCol .exp-video{
+        mix-blend-mode: screen;
     }
     .expRead .readIcon {
         position: relative;
