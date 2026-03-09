@@ -654,7 +654,7 @@
         background: transparent;
     }
     .blend-mode {
-        mix-blend-mode: difference;
+        mix-blend-mode: overlay;
     }
     .expRead .readIcon {
         position: relative;
