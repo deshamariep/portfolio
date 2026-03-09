@@ -653,7 +653,7 @@
         border-color: transparent;
         background: transparent;
     }
-    #ExpVidCol.video-active video {
+    .blend-mode {
         mix-blend-mode: difference;
     }
     .expRead .readIcon {
