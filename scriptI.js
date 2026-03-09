@@ -221,6 +221,7 @@
   const source = document.getElementById("expVideoSource");
   const previewText = document.getElementById("previewText");
   const expVidCol = document.getElementById("ExpVidCol");
+  const expImage = document.getElementById("expImage");
   const previews = {
     aeVids: "images/aeVids.mp4",
     amp: "images/ampPark.mp4",
@@ -238,6 +239,19 @@
   function resetPreview() {
     source.src = "";
     video.load();
+    expVidCol.classList.remove("video-active");
+  }
+  function resetPreview() {
+
+    video.pause();
+    source.src = "";
+    video.load();
+  
+    expImage.src = "";
+    expImage.style.display = "none";
+  
+    video.style.display = "block";
+  
     expVidCol.classList.remove("video-active");
   }
 

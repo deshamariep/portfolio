@@ -656,6 +656,13 @@
     /* .blend-mode {
         mix-blend-mode: overlay;
     } */
+    .exp-image{
+        display:none;
+        width:100%;
+        max-width:530px;
+        height:auto;
+        border-radius:12px;
+    }
     .expRead .readIcon {
         position: relative;
         display: inline-block;
