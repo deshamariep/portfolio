@@ -293,9 +293,12 @@
       const rect = section.getBoundingClientRect();
       const windowHeight = window.innerHeight;
   
-      // progress from 0 → 1 while scrolling through the section
       let progress = (windowHeight - rect.top) / (rect.height + windowHeight);
       progress = Math.max(0, Math.min(1, progress));
+  
+      if (progress > 0.05) {
+          el.classList.add("active");
+      }
   
       const revealCount = Math.floor(progress * text.length);
   
