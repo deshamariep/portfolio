@@ -553,14 +553,6 @@
         font-size: 64px;
         font-weight: 500;
         letter-spacing: 0.05em;
-    
-        opacity:0;
-        transform:translateY(20px);
-        transition: opacity 0.4s ease, transform 0.4s ease;
-    }
-    #scrambleText.active{
-        opacity:1;
-        transform:translateY(0);
     }
     #sideQuest{
         background-color: transparent;
@@ -605,6 +597,8 @@
     }
     .exp-item h3, .exp-item p{
         color: rgb(255, 255, 255, 0.6);
+        border-top: solid rgb(255, 255, 255, 0.4) 1px;
+        border-bottom: solid rgb(255, 255, 255, 0.4) 1px;
     }
     .exp-item a {
         color: inherit;
@@ -612,8 +606,8 @@
     }
     .exp-item:hover {
         color: rgb(255, 255, 255);
-        border-top: solid rgb(255, 255, 255, 0.6) 1px;
-        border-bottom: solid rgb(255, 255, 255, 0.6) 1px;
+        border-top: solid rgb(255, 255, 255, 0.8) 1px;
+        border-bottom: solid rgb(255, 255, 255, 0.8) 1px;
     }
     .exp-item:hover h3, .exp-item:hover p {
         color: rgb(255, 255, 255);
