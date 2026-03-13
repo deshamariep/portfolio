@@ -143,10 +143,20 @@
         scroll-behavior: smooth;
         scroll-padding-top: 64px;
     }
-    #hero {
+    /* #hero {
         position: relative;
         background: #fff;
         overflow: hidden;
+    } */
+    .hero {
+        position: relative;
+        width: 100vw;
+        height: 100vh;   
+        height: 100dvh; 
+        margin: 0;
+        overflow: hidden;
+        text-align: left;
+        box-sizing: border-box;
     }
 
     body{
@@ -175,17 +185,16 @@
         transform: none !important;
         pointer-events: none; 
     } */
-    .hero-interactive{
+    .hero-interactive {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-    
-        z-index: 0;   /* behind everything */
-        pointer-events: none;
+        height: 521px;  /* ← Fixed height */
+        z-index: 1;
+        pointer-events: auto;  /* ← Make it interactive */
     }
-    .hero-interactive iframe, .hero-interactive canvas{
+    .hero-interactive spline-viewer, .hero-interactive iframe, .hero-interactive canvas {
         width: 100%;
         height: 100%;
         border: none;
@@ -194,6 +203,9 @@
         background-color: (255, 255, 255, 0.1);
         backdrop-filter: blur(6px); 
         -webkit-backdrop-filter: blur(6px); 
+
+        z-index: 10; 
+        pointer-events: auto;
     }
     #one nav ul li a {
         transition: color 0.3s ease;
@@ -201,26 +213,16 @@
     .hero-content {
         position: absolute;
         top: 50%;
-        text-align: left; 
-        z-index: 5;
-        margin: auto;
-        margin-left: -24px;
-        /* opacity: 0;
-        transform: translateY(20px); */
+        left: 24px;            
+        transform: translateY(-50%); 
+        width: 100%;
+        z-index: 10;  /* ← Above Spline */
+        pointer-events: auto;  /* ← Clickable */
     }
-    /* .hero-content.loaded {
-        animation: heroFadeUp 1.2s ease-out forwards;
-        animation-delay: 0.3s;
-    }
-    @keyframes heroFadeUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    } */
     #dataTitle{
         position: relative;
         margin: auto;
+        pointer-events: auto;
     }
     #titleLeft{
         position: absolute;
@@ -277,6 +279,7 @@
     }
     hr{
         position: absolute;
+        z-index: 10;
         left: 50%;
         transform: translateX(-50%);
         bottom: -56px;
