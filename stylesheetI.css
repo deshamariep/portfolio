@@ -222,7 +222,7 @@
     #dataTitle{
         position: relative;
         margin: auto;
-        pointer-events: auto;
+        /* pointer-events: auto; */
     }
     #titleLeft{
         position: absolute;
