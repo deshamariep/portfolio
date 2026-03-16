@@ -204,7 +204,7 @@
         backdrop-filter: blur(6px); 
         -webkit-backdrop-filter: blur(6px); 
 
-        z-index: 10; 
+        z-index: 15; 
         pointer-events: auto;
     }
     #one nav ul li a {
@@ -217,18 +217,19 @@
         transform: translateY(-50%); 
         width: 100%;
         z-index: 10;  /* ← Above Spline */
-        pointer-events: auto;  /* ← Clickable */
+        pointer-events: none;  /* ← Clickable */
     }
     #dataTitle{
         position: relative;
         margin: auto;
-        /* pointer-events: auto; */
+        pointer-events: auto;
     }
     #titleLeft{
         position: absolute;
         bottom: -16px;
         left: 12%;
         width: 650px;
+        pointer-events: none;
         opacity: 0;
         transform: translateY(30px);
         animation: slideFadeUp 0.8s ease forwards;
@@ -250,6 +251,7 @@
         bottom: 125px;
         right: 27.3%;
         width: 875px;
+        pointer-events: none;
         opacity: 0;
         transform: translateY(30px);
         animation: slideFadeUp 0.8s ease forwards;
@@ -257,10 +259,12 @@
     #dataTitle h2 .grey{
         font-size: 24px; 
         font-weight: 400;
+        pointer-events: none;
     }
     #dataTitle h3{
         margin: 8px 0px 0px;
         text-align: left;
+        pointer-events: none;
     }
     #dataTitle p{
         margin: 8px 0px;
@@ -269,10 +273,12 @@
         color: rgb(48, 48, 66);
         text-align: left;
         line-height: 175%;
+        pointer-events: none;
     }
     #dataTitle a{
         font-size: 16px;
         font-weight: 400;
+        pointer-events: auto;
     }
     .grey{
         color: rgb(48, 48, 66, 0.4);
@@ -284,6 +290,7 @@
         transform: translateX(-50%);
         bottom: -56px;
         width: 0%;
+        pointer-events: none;
         height: 1px;
         border: none;
         background-color: rgb(145, 145, 145);
