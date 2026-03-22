@@ -66,29 +66,49 @@
     const splineViewer = document.querySelector('spline-viewer');
     const hero = document.querySelector('.hero');
     
+    console.log('DOMContentLoaded - hero:', hero, 'splineViewer:', splineViewer);
+    
     let hasLoaded = false;
     
     function startAnimations() {
       if (hasLoaded) return;
       hasLoaded = true;
       
-      if (hero) hero.classList.add('loaded');
+      console.log('Starting animations - adding .loaded class');
+      if (hero) {
+        hero.classList.add('loaded');
+        console.log('Hero classes:', hero.className);
+      }
     }
     
     if (splineViewer && hero) {
-      splineViewer.addEventListener('load', startAnimations);
-      splineViewer.addEventListener('ready', startAnimations);
+      console.log('Waiting for Spline to load...');
+      
+      splineViewer.addEventListener('load', () => {
+        console.log('Spline LOAD event fired');
+        startAnimations();
+      });
+      
+      splineViewer.addEventListener('ready', () => {
+        console.log('Spline READY event fired');
+        startAnimations();
+      });
       
       if (splineViewer.shadowRoot) {
+        console.log('Spline has shadowRoot - starting now');
         startAnimations();
       }
       
       setTimeout(() => {
+        console.log('1 second fallback triggered');
         startAnimations();
-      }, 2000);
+      }, 1000);
       
     } else if (hero) {
+      console.log('No spline viewer - starting immediately');
       startAnimations();
+    } else {
+      console.error('Hero element not found!');
     }
   });
   
