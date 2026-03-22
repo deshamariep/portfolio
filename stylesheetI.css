@@ -838,7 +838,7 @@
     }
 }
 @media screen and (min-width: 1650px){
-    .hero-interactive spline-viewer, 
+    /* .hero-interactive spline-viewer, 
     .hero-interactive iframe, 
     .hero-interactive canvas {
         width: 100%;
@@ -846,11 +846,11 @@
         min-width: 100vw;
         min-height: 100%;
         transform-origin: center center;
-        transform: scale(1.5); /* ← Force zoom - adjust as needed */
+        transform: scale(1.5);  
         object-fit: cover;
         object-position: center;
         border: none;
-    }
+    } */
     #dataTitle h2{
         position: absolute;
         margin: 0px 0px 8px;
