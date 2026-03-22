@@ -190,7 +190,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: clamp(300px, 40vh, 600px); 
+        height: clamp(300px, 36.18vw, 800px); /* ← 521px at 1440px (521/1440 = 36.18%) */
         z-index: 1;
         pointer-events: auto;
         overflow: hidden;
