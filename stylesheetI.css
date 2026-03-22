@@ -129,12 +129,13 @@
         line-height: 130%;
         text-align: left;
         bottom: 190px;
-        right: 27.3%;
+        left: 12%;  
         width: 875px;
         pointer-events: none;
         opacity: 0;
         transform: translateY(30px);
         animation: none;
+        color: rgb(48, 48, 66); 
     }
       
     .hero.loaded #dataTitle h2 {
