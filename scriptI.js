@@ -65,50 +65,58 @@
   document.addEventListener('DOMContentLoaded', () => {
     const splineViewer = document.querySelector('spline-viewer');
     const hero = document.querySelector('.hero');
+    const hr = document.querySelector('hr');
     
-    console.log('DOMContentLoaded - hero:', hero, 'splineViewer:', splineViewer);
-    
-    let hasLoaded = false;
-    
-    function startAnimations() {
-      if (hasLoaded) return;
-      hasLoaded = true;
-      
-      console.log('Starting animations - adding .loaded class');
-      if (hero) {
+    if (splineViewer && hero && hr) {
+      splineViewer.addEventListener('load', () => {
         hero.classList.add('loaded');
-        console.log('Hero classes:', hero.className);
-      }
+        setTimeout(() => hr.classList.add('expand'), 1600);
+      });
+      
+      // Fallback: if Spline takes too long (>3s), start anyway
+      setTimeout(() => {
+        if (!hero.classList.contains('loaded')) {
+          hero.classList.add('loaded');
+          hr.classList.add('expand');
+        }
+      }, 3000);
+    } else if (hero && hr) {
+      // No Spline viewer, start immediately
+      hero.classList.add('loaded');
+      setTimeout(() => hr.classList.add('expand'), 1600);
+    }
+  });
+
+  // ========== WINDOW LOAD EVENTS ==========
+  window.addEventListener("load", () => {
+    // Query slide up
+    const query = document.getElementById("query");
+    if (query) {
+      setTimeout(() => query.classList.add("slide-up"), 100);
     }
     
-    if (splineViewer && hero) {
-      console.log('Waiting for Spline to load...');
-      
-      splineViewer.addEventListener('load', () => {
-        console.log('Spline LOAD event fired');
-        startAnimations();
-      });
-      
-      splineViewer.addEventListener('ready', () => {
-        console.log('Spline READY event fired');
-        startAnimations();
-      });
-      
-      if (splineViewer.shadowRoot) {
-        console.log('Spline has shadowRoot - starting now');
-        startAnimations();
-      }
-      
+    // DataHero loaded
+    const dataHero = document.querySelector(".dataHero");
+    const dataDesktopBar = document.querySelector("#dataDesktopBar");
+    if (dataHero) dataHero.classList.add("loaded");
+    if (dataDesktopBar) dataDesktopBar.classList.add("loaded");
+    
+    // Handle background transition
+    handleBackgroundTransition();
+    
+    // Update greeting
+    updateGreeting();
+    
+    // Hash navigation
+    if (window.location.hash === "#aboutMeSec") {
       setTimeout(() => {
-        console.log('1 second fallback triggered');
-        startAnimations();
+        const target = document.getElementById("aboutMeSec");
+        if (target) {
+          const yOffset = -32;
+          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
       }, 1000);
-      
-    } else if (hero) {
-      console.log('No spline viewer - starting immediately');
-      startAnimations();
-    } else {
-      console.error('Hero element not found!');
     }
   });
   
@@ -137,48 +145,6 @@
       }, 1000);
     }
   });
-
-  // ========== AVATAR PARALLAX (Throttled) ==========
-  let parallaxTicking = false;
-  
-  document.addEventListener('mousemove', (e) => {
-    if (!parallaxTicking) {
-      requestAnimationFrame(() => {
-        const avatar = document.querySelector('.avatar-container');
-        if (!avatar) {
-          parallaxTicking = false;
-          return;
-        }
-
-        const rect = avatar.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const x = e.clientX - centerX;
-        const y = e.clientY - centerY;
-
-        const rings = avatar.querySelectorAll('.ring');
-        rings.forEach(ring => {
-          ring.style.transform = `perspective(1000px) rotateY(${x / 20}deg) rotateX(${-y / 20}deg)`;
-        });
-        
-        parallaxTicking = false;
-      });
-      parallaxTicking = true;
-    }
-  }, { passive: true });
-
-  const heroContent = document.querySelector('.hero-content');
-  if (heroContent) {
-    heroContent.addEventListener('mouseleave', () => {
-      const avatar = document.querySelector('.avatar-container');
-      if (avatar) {
-        const rings = avatar.querySelectorAll('.ring');
-        rings.forEach(ring => {
-          ring.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
-        });
-      }
-    });
-  }
 
   // ========== FOOTER ANIMATION ==========
   const footer = document.querySelector("footer");
