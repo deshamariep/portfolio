@@ -257,6 +257,9 @@
     .data420{
         flex: 2;
     }
+    .newMarginTitle{
+        margin: 64px auto 32px;
+    }
     .newMargin{
         width: 800px;
         margin: 88px auto;
