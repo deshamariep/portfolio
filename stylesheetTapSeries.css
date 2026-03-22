@@ -258,6 +258,7 @@
         flex: 2;
     }
     .newMarginTitle{
+        width: 800px;
         margin: 64px auto 32px;
     }
     .newMargin{
