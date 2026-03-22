@@ -139,7 +139,7 @@
       
     .hero.loaded #dataTitle h2 {
         animation: slideFadeUp 0.8s ease forwards;
-        animation-delay: 0s; /* ← Animate first */
+        animation-delay: 0s; 
     }
       
     #dataTitle h2 .grey {
