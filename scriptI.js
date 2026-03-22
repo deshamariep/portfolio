@@ -1,36 +1,52 @@
 (function () {
   'use strict';
 
-  // ========== CURSOR ==========
+  // ========== CURSOR (Optimized) ==========
   const cursor = document.getElementById("ambient-cursor");
   if (cursor) {
     let pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
     let target = { x: pos.x, y: pos.y };
+    let animating = false;
 
     window.addEventListener("mousemove", (e) => {
       target.x = e.clientX;
       target.y = e.clientY;
-    });
+      
+      if (!animating) {
+        animating = true;
+        animate();
+      }
+    }, { passive: true });
 
     function animate() {
-      pos.x += (target.x - pos.x) * 0.16;
-      pos.y += (target.y - pos.y) * 0.16;
+      const dx = target.x - pos.x;
+      const dy = target.y - pos.y;
+      
+      // Stop animating if cursor hasn't moved significantly
+      if (Math.abs(dx) < 0.1 && Math.abs(dy) < 0.1) {
+        animating = false;
+        return;
+      }
+      
+      pos.x += dx * 0.16;
+      pos.y += dy * 0.16;
       cursor.style.transform = `translate(${pos.x}px, ${pos.y}px) translate(-50%, -50%)`;
+      
       requestAnimationFrame(animate);
     }
-    animate();
 
     document.querySelectorAll("a, button").forEach(el => {
       el.addEventListener("mouseenter", () => {
         cursor.style.width = "64px";
         cursor.style.height = "64px";
         cursor.style.opacity = "1";
-      });
+      }, { passive: true });
+      
       el.addEventListener("mouseleave", () => {
         cursor.style.width = "32px";
         cursor.style.height = "32px";
         cursor.style.opacity = "0.95";
-      });
+      }, { passive: true });
     });
   }
 
@@ -40,11 +56,8 @@
     
     const notification = document.querySelector('.copy-notification');
     if (notification) {
-        notification.classList.add('show');
-        
-        setTimeout(() => {
-            notification.classList.remove('show');
-        }, 2000);
+      notification.classList.add('show');
+      setTimeout(() => notification.classList.remove('show'), 2000);
     }
   };
 
@@ -60,7 +73,6 @@
         setTimeout(() => hr.classList.add('expand'), 1600);
       });
       
-      // Fallback: if Spline takes too long (>3s), start anyway
       setTimeout(() => {
         if (!hero.classList.contains('loaded')) {
           hero.classList.add('loaded');
@@ -68,7 +80,6 @@
         }
       }, 3000);
     } else if (hero && hr) {
-      // No Spline viewer, start immediately
       hero.classList.add('loaded');
       setTimeout(() => hr.classList.add('expand'), 1600);
     }
@@ -76,25 +87,17 @@
 
   // ========== WINDOW LOAD EVENTS ==========
   window.addEventListener("load", () => {
-    // Query slide up
     const query = document.getElementById("query");
-    if (query) {
-      setTimeout(() => query.classList.add("slide-up"), 100);
-    }
+    if (query) setTimeout(() => query.classList.add("slide-up"), 100);
     
-    // DataHero loaded
     const dataHero = document.querySelector(".dataHero");
     const dataDesktopBar = document.querySelector("#dataDesktopBar");
     if (dataHero) dataHero.classList.add("loaded");
     if (dataDesktopBar) dataDesktopBar.classList.add("loaded");
     
-    // Handle background transition
     handleBackgroundTransition();
-    
-    // Update greeting
     updateGreeting();
     
-    // Hash navigation
     if (window.location.hash === "#aboutMeSec") {
       setTimeout(() => {
         const target = document.getElementById("aboutMeSec");
@@ -107,22 +110,34 @@
     }
   });
 
-  // ========== AVATAR PARALLAX ==========
+  // ========== AVATAR PARALLAX (Throttled) ==========
+  let parallaxTicking = false;
+  
   document.addEventListener('mousemove', (e) => {
-    const avatar = document.querySelector('.avatar-container');
-    if (!avatar) return;
+    if (!parallaxTicking) {
+      requestAnimationFrame(() => {
+        const avatar = document.querySelector('.avatar-container');
+        if (!avatar) {
+          parallaxTicking = false;
+          return;
+        }
 
-    const rect = avatar.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const x = e.clientX - centerX;
-    const y = e.clientY - centerY;
+        const rect = avatar.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const x = e.clientX - centerX;
+        const y = e.clientY - centerY;
 
-    const rings = avatar.querySelectorAll('.ring');
-    rings.forEach(ring => {
-      ring.style.transform = `perspective(1000px) rotateY(${x / 20}deg) rotateX(${-y / 20}deg)`;
-    });
-  });
+        const rings = avatar.querySelectorAll('.ring');
+        rings.forEach(ring => {
+          ring.style.transform = `perspective(1000px) rotateY(${x / 20}deg) rotateX(${-y / 20}deg)`;
+        });
+        
+        parallaxTicking = false;
+      });
+      parallaxTicking = true;
+    }
+  }, { passive: true });
 
   const heroContent = document.querySelector('.hero-content');
   if (heroContent) {
@@ -214,7 +229,7 @@
       if (stickyActive && e.clientY < 60) {
         heroTop.classList.add('visible');
       }
-    });
+    }, { passive: true });
   }
 
   // ========== EXPERIMENT VIDEOS ==========
@@ -267,29 +282,29 @@
 
   const aeVids = document.getElementById("aeVids");
   if (aeVids) {
-    aeVids.addEventListener("mouseenter", () => playPreview(previews.aeVids, 300));
-    aeVids.addEventListener("mouseleave", resetPreview);
+    aeVids.addEventListener("mouseenter", () => playPreview(previews.aeVids, 300), { passive: true });
+    aeVids.addEventListener("mouseleave", resetPreview, { passive: true });
   }
 
   const amp = document.getElementById("amp");
   if (amp) {
-    amp.addEventListener("mouseenter", () => playPreview(previews.amp, 300));
-    amp.addEventListener("mouseleave", resetPreview);
+    amp.addEventListener("mouseenter", () => playPreview(previews.amp, 300), { passive: true });
+    amp.addEventListener("mouseleave", resetPreview, { passive: true });
   }
 
   const motion = document.getElementById("motion");
   if (motion) {
-    motion.addEventListener("mouseenter", () => playPreview(previews.motion));
-    motion.addEventListener("mouseleave", resetPreview);
+    motion.addEventListener("mouseenter", () => playPreview(previews.motion), { passive: true });
+    motion.addEventListener("mouseleave", resetPreview, { passive: true });
   }
 
   const artWork = document.getElementById("artWork");
   if (artWork) {
-    artWork.addEventListener("mouseenter", () => playPreview(previews.artWork));
-    artWork.addEventListener("mouseleave", resetPreview);
+    artWork.addEventListener("mouseenter", () => playPreview(previews.artWork), { passive: true });
+    artWork.addEventListener("mouseleave", resetPreview, { passive: true });
   }
 
-  // ========== SCRAMBLE TEXT ==========
+  // ========== SCRAMBLE TEXT (Optimized) ==========
   const scrambleText = document.getElementById("scrambleText");
   const sideQuest = document.getElementById("sideQuest");
   
@@ -297,36 +312,50 @@
     const text = "Practice & Play";
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
     const transitionZone = 300;
+    let lastProgress = -1;
+    let scrambleTicking = false;
 
     window.addEventListener("scroll", () => {
-      const rect = sideQuest.getBoundingClientRect();
-      let progress = 0;
+      if (!scrambleTicking) {
+        requestAnimationFrame(() => {
+          const rect = sideQuest.getBoundingClientRect();
+          let progress = 0;
 
-      if (rect.top <= transitionZone && rect.top >= 0) {
-        progress = 1 - (rect.top / transitionZone);
-      } else if (rect.top < 0) {
-        progress = 1;
+          if (rect.top <= transitionZone && rect.top >= 0) {
+            progress = 1 - (rect.top / transitionZone);
+          } else if (rect.top < 0) {
+            progress = 1;
+          }
+
+          progress = Math.max(0, Math.min(1, progress));
+          
+          // Only update if progress changed significantly
+          if (Math.abs(progress - lastProgress) > 0.02) {
+            const revealCount = Math.floor(progress * text.length);
+            let output = "";
+
+            for (let i = 0; i < text.length; i++) {
+              if (i < revealCount) {
+                output += text[i];
+              } else if (text[i] === " ") {
+                output += " ";
+              } else {
+                output += chars[Math.floor(Math.random() * chars.length)];
+              }
+            }
+
+            scrambleText.textContent = output;
+            lastProgress = progress;
+          }
+          
+          scrambleTicking = false;
+        });
+        scrambleTicking = true;
       }
-
-      progress = Math.max(0, Math.min(1, progress));
-      const revealCount = Math.floor(progress * text.length);
-      let output = "";
-
-      for (let i = 0; i < text.length; i++) {
-        if (i < revealCount) {
-          output += text[i];
-        } else if (text[i] === " ") {
-          output += " ";
-        } else {
-          output += chars[Math.floor(Math.random() * chars.length)];
-        }
-      }
-
-      scrambleText.textContent = output;
-    });
+    }, { passive: true });
   }
 
-  // ========== BACKGROUND COLOR TRANSITION ==========
+  // ========== BACKGROUND COLOR TRANSITION (Optimized) ==========
   function handleBackgroundTransition() {
     const sideQuest = document.querySelector('#sideQuest');
     if (!sideQuest) return;
@@ -350,21 +379,15 @@
       bgColor = 'rgb(255, 255, 255)';
     }
 
-    document.body.style.backgroundColor = bgColor;
+    // Use CSS variables for better performance
+    document.documentElement.style.setProperty('--bg-color', bgColor);
 
     const match = bgColor.match(/\d+/);
     const colorValue = match ? parseInt(match[0]) : 255;
     const isBlack = colorValue < 127;
     const textColor = isBlack ? 'rgb(255, 255, 255)' : 'rgb(48, 48, 66)';
-
-    const navLinks = document.querySelectorAll('#one nav ul li a');
-    navLinks.forEach(link => link.style.color = textColor);
-
-    const caseStudies = document.querySelector('#caseStudies');
-    if (caseStudies) caseStudies.style.color = textColor;
-
-    const aboutSection = document.querySelector('#aboutMeSec');
-    if (aboutSection) aboutSection.style.color = textColor;
+    
+    document.documentElement.style.setProperty('--text-color', textColor);
   }
 
   let bgTicking = false;
@@ -376,7 +399,7 @@
       });
       bgTicking = true;
     }
-  });
+  }, { passive: true });
 
   // ========== GREETING ==========
   function updateGreeting() {

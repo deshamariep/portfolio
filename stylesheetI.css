@@ -1,904 +1,855 @@
-/* 
-@media screen and (max-width: 767px){
-    html, body{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        min-height: 100vh;
-        overflow-x: hidden;
-        
-        background: url("images/gradientBgMobile.png") no-repeat center center;
-        background-size: cover;
-    }
-    h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
-        color: #fff;
-        text-decoration: none;
-    }
-    .hero-content {         
-        text-align: center;
-        width: 90%;
-        z-index: 4;
-        margin: auto;
-    }
-    .italic{
-        font-style: italic;
-    }
-    #dataAvatar{
-        display: none;
-    }
-    #desktop{
-        margin-top: 64px;
-        display: flex;
-        width: 96%;
-        justify-content: center;
-        align-items: center;          
-        box-sizing: border-box;            
-    }
-    #dataDesktopBar{
-        gap: 16px;
-        padding: 8px;
-        opacity: 1;
-        background-color: rgba(217,217,217,0.3);
-        border: 1px solid rgb(217, 217, 217);
-        border-radius: 16px;
-    }
-    #dataTitle h1{
-        font-weight: 400;
-        margin: 16px 0px;
-    }
-    #dataTitle h2{
-        font-weight: 300;
-        margin: 16px 0px;
-    }
-    #dataTitle p{
-        margin: 16px 0px;
-        color: rgb(195,196,195)
-    }
-    main{
-        margin: 0px 16px;
-        color: rgb(255, 255, 255);
-        letter-spacing: 0.03em;
-        line-height: 160%;
-    }
-    #query{
-        width: 100;
-        margin: 48px 0px;
-    }
-    .dataCS{
-        display: block;
-        border-radius: 12px;
-        flex: 1;
-        height: 400px;
-        text-align: left;
-        opacity: 0;
-
-        transform: translateY(30px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        overflow: hidden; 
-    }
-    .dataCS.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    #mobileCsSpace{
-        padding-top: 32px;
-    }
-    #csDisplayNone{
-        display: none;
-    }
-    .csImg {
-        display: block;
-        width: 100%;
-        height: auto;
-        transition: transform 0.5s ease; 
-        transform-origin: center center; 
-    }
-    .csText{
-        padding: 24px 8px 8px;
-    }
-    .csHeader {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; 
-        flex-wrap: wrap;
-    }
-    .csInfo {
-        gap: 16px; 
-    }
-    .csText .csHeader h3, .csText .csHeader .csSubText, .csText .csHeader{
-        margin: 0;
-    }
-    .csSubText{
-        color: rgb(217, 217, 217);
-        font-size: 12px;
-    }
-} */
-@media screen and (min-width: 768px) and (max-width: 1024px){
-    .mobileIncomplete {
-        display: block;
-        background-color: #f8d7da;
-        color: #721c24; 
-        padding: 10px;
-        text-align: center;
-        font-size: 16px;
-        margin-bottom: 20px;
-        border: 1px solid #f5c6cb;
-    }
-    .mobileIncomplete p {
-        margin: 0; 
-    }
-    main{
-        display: none;
-    }
-    footer{
-        display: none;
-    }
+/* Add at the very top */
+:root {
+    --bg-color: rgb(255, 255, 255);
+    --text-color: rgb(48, 48, 66);
 }
-
-@media screen and (min-width: 1024px) {
-    .mobileIncomplete {
-        display: none; /* Hide the message on larger screens */
-    }
-    html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 64px;
-    }
-    /* #hero {
-        position: relative;
-        background: #fff;
-        overflow: hidden;
-    } */
-    .hero {
-        position: relative;
-        width: 100vw;
-        height: 100vh;   
-        height: 100dvh; 
-        margin: 0;
-        overflow: hidden;
-        text-align: left;
-        box-sizing: border-box;
-    }
-
-    body{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        min-height: 100vh;
-        overflow-x: hidden;
-        background-color: rgb(255, 255, 255);
-        transition: background-color 0.2s ease-out;
-    }
-    /* h1, h2, h3, p, .smolP, a, #one nav ul li a, footer h3, footer p, footer a, footer #btmfoot{
-        color: #fff;
-        text-decoration: none;
-    } */
-    /* .hero-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        z-index: 1;
-        filter: none !important;
-        transform: none !important;
-        pointer-events: none; 
-    } */
-    .hero-interactive {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: clamp(300px, 36.18vw, 800px);
-        z-index: 1;
-        pointer-events: auto;
-        overflow: hidden;
-    }
-    .hero-interactive spline-viewer, 
-    .hero-interactive iframe, 
-    .hero-interactive canvas {
-        width: 100%;
-        height: 100%;
-        min-width: 100vw;
-        min-height: 100%;
-        transform-origin: center center;
-        transform: scale(1.0); /* ← Force zoom - adjust as needed */
-        object-fit: cover;
-        object-position: center;
-        border: none;
-    }
-    .hero-top{
-        background-color: (255, 255, 255, 0.1);
-        backdrop-filter: blur(6px); 
-        -webkit-backdrop-filter: blur(6px); 
-
-        z-index: 15; 
-        pointer-events: auto;
-    }
-    #one nav ul li a {
-        transition: color 0.3s ease;
-    }
-    .hero-content {
-        position: absolute;
-        top: 50%;
-        left: 24px;            
-        transform: translateY(-50%); 
-        width: 100%;
-        z-index: 10; 
-        pointer-events: none; 
-    }
-    #dataTitle{
-        position: relative;
-        margin: auto;
-        pointer-events: auto;
-    }
-    #titleLeft{
-        position: absolute;
-        bottom: 35px;
-        left: 12%;
-        width: 650px;
-        pointer-events: none;
-        opacity: 0;
-        transform: translateY(30px);
-        animation: none;
-    }
-    .hero.loaded #titleLeft {
-        animation: slideFadeUp 0.8s ease forwards;
-        animation-delay: 0.2s;
-    }
-    #titleRight{
-        position: absolute;
-        bottom: 35px;
-        right: 10.5%;
-        width: 275px;
-    }
-    #dataTitle h2{
-        position: absolute;
-        font-weight: 500;
-        margin: 0px 0px 8px;
-        line-height: 130%;
-        text-align: left;
-        bottom: 190px;
-        right: 27.3%;
-        width: 875px;
-        pointer-events: none;
-        opacity: 0;
-        transform: translateY(30px);
-        animation: none;
-    }
-    .hero.loaded #dataTitle h2 {
-        animation: slideFadeUp 0.8s ease forwards;
-    }
-    #dataTitle h2 .grey{
-        font-size: 24px; 
-        font-weight: 400;
-        pointer-events: none;
-    }
-    #dataTitle h3{
-        margin: 8px 0px 0px;
-        text-align: left;
-        pointer-events: none;
-    }
-    #dataTitle p{
-        margin: 8px 0px;
-        font-size: 16px;
-        font-weight: 400;
-        color: rgb(48, 48, 66);
-        text-align: left;
-        line-height: 175%;
-        pointer-events: none;
-    }
-    #dataTitle a{
-        font-size: 16px;
-        font-weight: 400;
-        pointer-events: auto;
-    }
-    .grey{
-        color: rgb(48, 48, 66, 0.5);
-    }
-    .email-wrapper {
-        position: relative;
-        display: inline-block;
-    }
-    .copy-notification {
-        position: absolute;
-        bottom: calc(100% + 8px); /* 8px above the email */
-        left: 50%;
-        transform: translateX(-50%) translateY(5px);
-        background: rgb(214, 214, 214);
-        color: rgb(48, 48, 66);
-        white-space: nowrap;
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 14px;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
-        z-index: 100;
-    }
-    .copy-notification.show {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-    .copy-email {
-        pointer-events: auto;
-        cursor: pointer;
-        user-select: text;
-        transition: opacity 0.2s;
-    }
-    .copy-email:hover {
-        opacity: 0.7;
-    }
-    hr{
-        position: absolute;
-        z-index: 10;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -56px;
-        width: 0%;
-        pointer-events: none;
-        height: 1px;
-        border: none;
-        background-color: rgb(145, 145, 145);
-        transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);
-
-        opacity: 0;
-    }
-    hr.expand{
-        width: 76.4%;
-    }
-    @keyframes slideFadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(40px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    html, body {
-        cursor: none;
-    }
-    #ambient-cursor {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        background: transparent;
-        border: 5px solid rgba(255, 255, 255, 0.95);
-        box-shadow:
-          inset 0 0 10px rgba(255,255,255,0.8),
-          0 0 14px rgba(255,255,255,0.6),
-          0 0 26px rgba(194,0,255,0.45),
-          0 0 42px rgba(70,138,255,0.35);
-        transform: translate(-50%, -50%);
-        transition:
-          width 0.25s ease,
-          height 0.25s ease,
-          box-shadow 0.25s ease,
-          opacity 0.25s ease;
-      
-        opacity: 0.95;
-    }
-    .heroExp{
-        margin-top: 16px;
-        display: block;
-        width: 578px;
-        /* height: 108px; */
-        padding: 12px 16px;
-        border-radius: 10px;
-        border: 1px solid transparent;
-        background: 
-        linear-gradient(white, white) padding-box,
-        linear-gradient(181deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
-        box-sizing: border-box;
-        box-shadow: 0 4px 25px rgba(0,0,0,0.15);
-    }
-    .receExpTitle {
-        font-size: 10px !important;
-        background: linear-gradient(90deg, rgba(0,94,255,1), rgba(194,0,255,1));
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-    }
-    .smolP{
-        font-size: 12px !important;
-        margin: 0px;
-    }
-    .exphighlight{
-        background: linear-gradient(135deg, #005eff, #c200ff);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    #desktop{
-        padding: 8px 16px 16px;
-        margin-top: 16px;
-        border-radius: 12px;
-        border: 1px solid transparent;
-        background: 
-        linear-gradient(white, white) padding-box,
-        linear-gradient(135deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
-        box-shadow: 0 4px 25px rgba(0,0,0,0.15);
-        max-width: 578px;       
-    }
-    #dataDesktopBar{
-        display: flex;
-        gap: 8px;
-    }
-    #dataDesktopBar img{
-        flex: auto;
-        width: 38px;
-        height: 38px;
-        transform-origin: bottom center;
-        transition: transform 0.1s ease-out;
-    }
-    .dock-item {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .dock-item img {
-        width: 35px;
-        height: 35px;
-        transform-origin: bottom center;
-        transition: transform 0.2s ease;
-    }
-    /* The fix: ONLY enlarge when the IMAGE is hovered */
-    .dock-item img:hover {
-        transform: scale(1.15);
-    }
-    /* Label */
-    .dock-label {
-        position: absolute;
-        top: -40px;
-        background: rgb(214, 214, 214);
-        color: rgb(48, 48, 66);
-        white-space: nowrap;
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 14px;
-        opacity: 0;
-        transform: translateY(5px);
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-    .dock-item img:hover + .dock-label {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    main{
-        margin: 0px 24px;
-        color: rgb(214, 214, 214);
-        letter-spacing: 0.03em;
-        line-height: 160%;
-    }
-    #query{
-        margin: -225px -24px 32px;
-    }
-    #caseStudies{
-        width: 1100px;
-        margin: 24px auto auto;
-        transition: color 0.3s ease;
-
-        position: relative;
-        padding: 80px 0;
-    }
-    /* Create a background layer behind the cards */
-    #caseStudies::before {
-        content: '';
-        position: absolute;
-        top: -100px;
-        left: -200px;
-        right: -200px;
-        bottom: -100px;
-        /* background: linear-gradient(to bottom,
-            rgba(120, 146, 249, 0.1) 0%,
-            rgba(120, 146, 249, 0.08) 25%,
-            rgba(62, 93, 150, 0.1) 40%,
-            rgba(62, 93, 150, 0.08) 60%,
-            rgba(54, 191, 201, 0.1) 75%,
-            rgba(188, 214, 216, 0.08) 100%
-        ); */
-        z-index: -2;
-        pointer-events: none;
-    }
-
-    .data{
-        display: flex;
-        gap: 16px;
-    }
-    .dataCS{
-        display: block;
-        border-radius: 10px;
-        flex: 1;
-        width: 540px;
-        height: 540px;
-        margin-bottom: 16px;
-        text-align: left;
-        transition: transform 0.3s ease;
-        overflow: hidden;
-        position: relative; 
-    }
-    .dataCS:hover{
-        transform: translateY(-6px);
-    }
-    .dataCS h2, .dataCS p{
-        color: rgb(255, 255, 255);
-    }
-    #bg{
-        background: linear-gradient(to right, rgb(145, 184, 184), rgb(62, 137, 141));
-    }
-    #tap{
-        background: linear-gradient(to right, rgb(81, 102, 165), rgb(39, 80, 121));
-    }
-    #gst{
-        background: linear-gradient(to right, rgb(217, 194, 64), rgb(207, 170, 40));
-    }
-    #attune{
-        background: linear-gradient(to right, rgb(150, 102, 213), rgb(115, 85, 174));
-    }
-    #spots{
-        background: linear-gradient(to right, rgb(221, 128, 21), rgb(220, 148, 40));
-    }
-    #none{
-        opacity: 0;
-    }
-    .csImg{
-        display: block;   
-        margin: 24px auto;
-        transition: transform 0.5s ease; 
-        transform-origin: center center;
-    }
-    .dataCS:hover .csImg{
-        transform: scale(1.05);
-    }
-    .csText{
-        padding: 24px 24px 0px;
-        position: absolute;
-        bottom: 24px;
-    }
-    .csText h2, .csText p{
-        margin: 0px;
-    }
-    .csSubText{
-        font-weight: 500;
-    }
-    .csBottom .readIcon{
-        flex: end;
-        margin: auto 24px auto auto;
-    }
-    .readIcon {
-        position: relative;
-        display: inline-block;
-    }
-    .readIcon img {
-        cursor: pointer;
-        transition: transform 0.2s ease;
-    }
-    .readIcon img:hover {
-        transform: scale(1.1);
-    }
-    .read-label {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        background: rgb(0, 0, 0, 0.1);
-        color: rgb(48, 48, 66);
-        white-space: nowrap;
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 14px;
-        opacity: 0;
-        transform: translateY(5px);
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-    .readIcon:hover .read-label {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    #scrambleText{
-        width: 1100px;
-        margin: auto;
-        text-align: left;
-        color: #fff;
-        font-size: 32px;
-        font-weight: 500;
-        letter-spacing: 0.05em;
-    }
-    #sideQuest{
-        background-color: transparent;
-        height: calc(100vh + 200px);
-        margin: 80px 0px;
-    }
-    #experiments{
-        position: relative;
-        isolation: isolate;
-        width: 1100px;
-        margin: auto;
-    }
-    #exp{
-        display: block;
-    }
-    #ExpVidCol{
-        width: 540px;
-        z-index: 20;
-        position: absolute;
-        top: -525px;
-        right: -300px;
-    }
-    #exp h2{
-        color: rgb(255, 255, 255);
-        margin: 24px 0px;
-    }
-    .experiment{
-        flex: 6;
-        padding: 8px 0px;
-    }
-    .experiment h3, .experiment p{
-        margin: 4px 0px;
-    }
-    .exp-item{
-        display: flex;
-        gap: 24px;
-        padding: 16px 0px;
-        border-top: solid rgb(255, 255, 255, 0.4) 1px;
-        border-bottom: solid rgb(255, 255, 255, 0.4) 1px;
-        z-index: 1;
-    }
-    .exp-item a{
-        display: flex;
-        width: 100%;
-        gap: 24px;
-        color: inherit;
-        text-decoration: none;
-    }
-    .exp-item h3, .exp-item p{
-        color: rgb(255, 255, 255, 0.6);
-    }
-    .exp-item a {
-        color: inherit;
-        text-decoration: none;
-    }
-    .exp-item:hover {
-        color: rgb(255, 255, 255);
-        border-top: solid rgb(255, 255, 255, 0.8) 1px;
-        border-bottom: solid rgb(255, 255, 255, 0.8) 1px;
-    }
-    .exp-item:hover h3, .exp-item:hover p {
-        color: rgb(255, 255, 255);
-    }
-    .expRead{
-        flex: 1;
-        display: block;
-        margin: auto;
-    }
-    .expRead p{
-        opacity: 0;
-        margin: auto;
-        transition: opacity 0.4s ease;
-    }
-    .exp-item:hover .expRead p{
-        opacity: 1;
-    }
-    #experiments :nth-child(2){
-        display: block;
-        margin: auto;
-    }
-    .exp-video {
-        width: 100%;     
-        max-width: 530px;       
-        height: auto;
-        border-radius: 12px; 
-        object-fit: cover; 
-        display: block;
-        margin: auto auto;
-    }
-    #ExpVidCol {
-        border-radius: 12px;
-        transition: border 0.3s ease, background 0.3s ease;
-    }
-    /* when preview video is active */
-    #ExpVidCol.video-active {
-        border-color: transparent;
-        background: transparent;
-    }
-    /* .blend-mode {
-        mix-blend-mode: overlay;
-    } */
-    .exp-image{
-        display:none;
-        width:100%;
-        max-width:530px;
-        height:auto;
-        border-radius:12px;
-    }
-    .expRead .readIcon {
-        position: relative;
-        display: inline-block;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-    .expRead .readIcon img {
-        cursor: pointer;
-        transition: transform 0.2s ease;
-    }
-    .exp-item:hover .expRead .readIcon {
-        opacity: 1;
-    }
-    .expRead .readIcon img:hover {
-        transform: scale(1.1);
-    }
-    .expRead .read-label {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        background: rgb(0, 0, 0, 0.1);
-        color: rgb(255, 255, 255);
-        white-space: nowrap;
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 14px;
-        opacity: 0;
-        transform: translateY(5px);
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-    .expRead .readIcon:hover .read-label {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    #aboutMeSec {
-        transition: color 0.3s ease;
-        margin: auto;
-        width: 1100px;
-    }
-    #fillTime{
-        margin-left: 24px;
-        width: 578px;
-    }
-    #fillTime h2{
-        margin: 0px;
-    }
-    #headShot{
-        position: relative;
-    }
-    #headShot img{
-        position: absolute;
-        left: 50px;
-        width: 400px;
-        height: 500px;
-        margin: auto;
-        object-fit: cover;
-    
-        opacity: 0;
-        animation: photoLoop 24s infinite;
-        transition: opacity 1s ease;
-    }
-    #headShot img:nth-child(1){ animation-delay:0s; }
-    #headShot img:nth-child(2){ animation-delay:4s; }
-    #headShot img:nth-child(3){ animation-delay:8s; }
-    #headShot img:nth-child(4){ animation-delay:12s; }
-    #headShot img:nth-child(5){ animation-delay:16s; }
-    #headShot img:nth-child(6){ animation-delay:20s; }
-    @keyframes photoLoop{
-        0%{opacity:0;}
-        4%{opacity:1;}
-        16%{opacity:1;}
-        20%{opacity:0;}
-        100%{opacity:0;}
-    }
-    #comingSoon {
-        position: relative;
-        overflow: hidden;
-    }
-    #comingSoon::after {
-        content: "Coming Soon";
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.75rem;
-        font-weight: 400;
-        color: white;
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(3px);
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-    #comingSoon:hover::after {
-        opacity: 1;
-    }
   
-    .spaceBtwn{
-        margin-top: 150px;
-        margin-bottom: 150px;
-        opacity: 0;
-        transition: opacity 1s ease;
-        padding: 0.5rem;
-    }
-    .spaceBtwn.active{
-        opacity: 1;
-    }
-    footer a:hover{
-        text-decoration: underline;
-        color: rgb(0, 0, 255);
-    }
-}
-@media screen and (min-width: 1650px){
-    .hero-interactive spline-viewer, 
-    .hero-interactive iframe, 
-    .hero-interactive canvas {
-        width: 100%;
-        height: 100%;
-        min-width: 100vw;
-        min-height: 100%;
-        transform-origin: top left;
-        transform: scale(1.5);  
-        object-fit: cover;
-        object-position: center;
-        border: none;
-    }
-    #dataTitle h2{
-        position: absolute;
-        margin: 0px 0px 8px;
-        line-height: 130%;
-        text-align: left;
-        bottom: 205px;
-        right: 33%;
-        width: 875px;
-    }
-    #titleLeft{
-        position: absolute;
-        bottom: 55px;
-        left: 21.6%;
-        width: 650px;
-    }
-    #titleRight{
-        position: absolute;
-        bottom: 25px;
-        right: 20.7%;
-        width: 275px;
-    }
-    #dataTitle h3{
-        margin: 8px 0px 0px;
-        text-align: left;
-    }
-    hr{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -32px;
-        width: 0%;
-        height: 1px;
-        border: none;
-        background-color: rgb(34, 34, 34, 0.5);
-        transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    hr.expand{
-        width: 1100px;
-    }
-    #desktop{
-        margin-top: 16px;          
-    }
-    #dataDesktopBar{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-}
-/* @media screen and (min-width: 1850px){
+/* Your existing media queries... */
+  
+  @media screen and (min-width: 1024px) {
+      .mobileIncomplete {
+          display: none;
+      }
+      
+      html {
+          scroll-behavior: smooth;
+          scroll-padding-top: 64px;
+      }
+      
+      .hero {
+          position: relative;
+          width: 100vw;
+          height: 100vh;   
+          height: 100dvh; 
+          margin: 0;
+          overflow: hidden;
+          text-align: left;
+          box-sizing: border-box;
+      }
+  
+      body {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          min-height: 100vh;
+          overflow-x: hidden;
+          background-color: var(--bg-color); 
+          transition: background-color 0.2s ease-out;
+      }
+      
+      .hero-interactive {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: clamp(300px, 36.18vw, 800px);
+          z-index: 1;
+          pointer-events: auto;
+          overflow: hidden;
+      }
+      
+      .hero-interactive spline-viewer, 
+      .hero-interactive iframe, 
+      .hero-interactive canvas {
+          width: 100%;
+          height: 100%;
+          min-width: 100vw;
+          min-height: 100%;
+          transform-origin: center center;
+          transform: scale(1.0);
+          object-fit: cover;
+          object-position: center;
+          border: none;
+      }
+      
+      .hero-top {
+          background-color: rgb(255, 255, 255, 0.1);
+          backdrop-filter: blur(6px); 
+          -webkit-backdrop-filter: blur(6px); 
+          z-index: 15; 
+          pointer-events: auto;
+      }
+      
+      #one nav ul li a {
+          color: var(--text-color); 
+          transition: color 0.3s ease;
+      }
+      
+      .hero-content {
+          position: absolute;
+          top: 50%;
+          left: 24px;            
+          transform: translateY(-50%); 
+          width: 100%;
+          z-index: 10; 
+          pointer-events: none;
+          contain: layout style paint; 
+      }
+      
+      #dataTitle {
+          position: relative;
+          margin: auto;
+          pointer-events: auto;
+      }
+      
+      #titleLeft {
+          position: absolute;
+          bottom: 35px;
+          left: 12%;
+          width: 650px;
+          pointer-events: none;
+          opacity: 0;
+          transform: translateY(30px);
+          animation: none;
+      }
+      
+      .hero.loaded #titleLeft {
+          animation: slideFadeUp 0.8s ease forwards;
+          animation-delay: 0.2s;
+      }
+      
+      #titleRight {
+          position: absolute;
+          bottom: 35px;
+          right: 10.5%;
+          width: 275px;
+      }
+      
+      #dataTitle h2 {
+          position: absolute;
+          font-weight: 500;
+          margin: 0px 0px 8px;
+          line-height: 130%;
+          text-align: left;
+          bottom: 190px;
+          right: 27.3%;
+          width: 875px;
+          pointer-events: none;
+          opacity: 0;
+          transform: translateY(30px);
+          animation: none;
+      }
+      
+      .hero.loaded #dataTitle h2 {
+          animation: slideFadeUp 0.8s ease forwards;
+      }
+      
+      #dataTitle h2 .grey {
+          font-size: 24px; 
+          font-weight: 400;
+          pointer-events: none;
+      }
+      
+      #dataTitle h3 {
+          margin: 8px 0px 0px;
+          text-align: left;
+          pointer-events: none;
+      }
+      
+      #dataTitle p {
+          margin: 8px 0px;
+          font-size: 16px;
+          font-weight: 400;
+          color: rgb(48, 48, 66);
+          text-align: left;
+          line-height: 175%;
+          pointer-events: none;
+      }
+      
+      #dataTitle a {
+          font-size: 16px;
+          font-weight: 400;
+          pointer-events: auto;
+      }
+      
+      .grey {
+          color: rgb(48, 48, 66, 0.5);
+      }
+      
+      .email-wrapper {
+          position: relative;
+          display: inline-block;
+      }
+      
+      .copy-notification {
+          position: absolute;
+          bottom: calc(100% + 8px);
+          left: 50%;
+          transform: translateX(-50%) translateY(5px);
+          background: rgb(214, 214, 214);
+          color: rgb(48, 48, 66);
+          white-space: nowrap;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 14px;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+          z-index: 100;
+      }
+      
+      .copy-notification.show {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+      }
+      
+      .copy-email {
+          pointer-events: auto;
+          cursor: pointer;
+          user-select: text;
+          transition: opacity 0.2s;
+      }
+      
+      .copy-email:hover {
+          opacity: 0.7;
+      }
+      
+      hr {
+          position: absolute;
+          z-index: 10;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -56px;
+          width: 0%;
+          pointer-events: none;
+          height: 1px;
+          border: none;
+          background-color: rgb(145, 145, 145);
+          transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);
+          opacity: 1; /* ← Changed from 0 */
+      }
+      
+      hr.expand {
+          width: 76.4%;
+      }
+      
+      @keyframes slideFadeUp {
+          from {
+              opacity: 0;
+              transform: translateY(40px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+      
+      html, body {
+          cursor: none;
+      }
+      
+      #ambient-cursor {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 9999;
+          background: transparent;
+          border: 5px solid rgba(255, 255, 255, 0.95);
+          box-shadow:
+            inset 0 0 10px rgba(255,255,255,0.8),
+            0 0 14px rgba(255,255,255,0.6),
+            0 0 26px rgba(194,0,255,0.45),
+            0 0 42px rgba(70,138,255,0.35);
+          transform: translate(-50%, -50%);
+          transition:
+            width 0.25s ease,
+            height 0.25s ease,
+            box-shadow 0.25s ease,
+            opacity 0.25s ease;
+          opacity: 0.95;
+          will-change: transform; 
+      }
+      
+      .heroExp {
+          margin-top: 16px;
+          display: block;
+          width: 578px;
+          padding: 12px 16px;
+          border-radius: 10px;
+          border: 1px solid transparent;
+          background: 
+            linear-gradient(white, white) padding-box,
+            linear-gradient(181deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
+          box-sizing: border-box;
+          box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+      }
+      
+      .receExpTitle {
+          font-size: 10px !important;
+          background: linear-gradient(90deg, rgba(0,94,255,1), rgba(194,0,255,1));
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: transparent;
+      }
+      
+      .smolP {
+          font-size: 12px !important;
+          margin: 0px;
+      }
+      
+      .exphighlight {
+          background: linear-gradient(135deg, #005eff, #c200ff);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+      
+      #desktop {
+          padding: 8px 16px 16px;
+          margin-top: 16px;
+          border-radius: 12px;
+          border: 1px solid transparent;
+          background: 
+            linear-gradient(white, white) padding-box,
+            linear-gradient(135deg, rgba(0,94,255,1), rgba(194,0,255,1)) border-box;
+          box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+          max-width: 578px;       
+      }
+      
+      #dataDesktopBar {
+          display: flex;
+          gap: 8px;
+      }
+      
+      #dataDesktopBar img {
+          flex: auto;
+          width: 38px;
+          height: 38px;
+          transform-origin: bottom center;
+          transition: transform 0.1s ease-out;
+      }
+      
+      .dock-item {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .dock-item img {
+          width: 35px;
+          height: 35px;
+          transform-origin: bottom center;
+          transition: transform 0.2s ease;
+          will-change: transform; 
+      }
+      
+      .dock-item img:hover {
+          transform: scale(1.15);
+      }
+      
+      .dock-label {
+          position: absolute;
+          top: -40px;
+          background: rgb(214, 214, 214);
+          color: rgb(48, 48, 66);
+          white-space: nowrap;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 14px;
+          opacity: 0;
+          transform: translateY(5px);
+          pointer-events: none;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      
+      .dock-item img:hover + .dock-label {
+          opacity: 1;
+          transform: translateY(0);
+      }
+      
+      main {
+          margin: 0px 24px;
+          color: rgb(214, 214, 214);
+          letter-spacing: 0.03em;
+          line-height: 160%;
+      }
+      
+      #query {
+          margin: -225px -24px 32px;
+      }
+      
+      #caseStudies {
+          width: 1100px;
+          margin: 24px auto auto;
+          color: var(--text-color); 
+          transition: color 0.3s ease;
+          position: relative;
+          padding: 80px 0;
+      }
+      
+      #caseStudies::before {
+          content: '';
+          position: absolute;
+          top: -100px;
+          left: -200px;
+          right: -200px;
+          bottom: -100px;
+          z-index: -2;
+          pointer-events: none;
+      }
+  
+      .data {
+          display: flex;
+          gap: 16px;
+      }
+      
+      .dataCS {
+          display: block;
+          border-radius: 10px;
+          flex: 1;
+          width: 540px;
+          height: 540px;
+          margin-bottom: 16px;
+          text-align: left;
+          transition: transform 0.3s ease;
+          overflow: hidden;
+          position: relative;
+          will-change: transform; 
+      }
+      
+      .dataCS:hover {
+          transform: translateY(-6px);
+      }
+      
+      .dataCS h2, .dataCS p {
+          color: rgb(255, 255, 255);
+      }
+      
+      #bg {
+          background: linear-gradient(to right, rgb(145, 184, 184), rgb(62, 137, 141));
+      }
+      
+      #tap {
+          background: linear-gradient(to right, rgb(81, 102, 165), rgb(39, 80, 121));
+      }
+      
+      #gst {
+          background: linear-gradient(to right, rgb(217, 194, 64), rgb(207, 170, 40));
+      }
+      
+      #attune {
+          background: linear-gradient(to right, rgb(150, 102, 213), rgb(115, 85, 174));
+      }
+      
+      #spots {
+          background: linear-gradient(to right, rgb(221, 128, 21), rgb(220, 148, 40));
+      }
+      
+      #none {
+          opacity: 0;
+      }
+      
+      .csImg {
+          display: block;   
+          margin: 24px auto;
+          transition: transform 0.5s ease; 
+          transform-origin: center center;
+      }
+      
+      .dataCS:hover .csImg {
+          transform: scale(1.05);
+      }
+      
+      .csText {
+          padding: 24px 24px 0px;
+          position: absolute;
+          bottom: 24px;
+      }
+      
+      .csText h2, .csText p {
+          margin: 0px;
+      }
+      
+      .csSubText {
+          font-weight: 500;
+      }
+      
+      .csBottom .readIcon {
+          flex: end;
+          margin: auto 24px auto auto;
+      }
+      
+      .readIcon {
+          position: relative;
+          display: inline-block;
+      }
+      
+      .readIcon img {
+          cursor: pointer;
+          transition: transform 0.2s ease;
+      }
+      
+      .readIcon img:hover {
+          transform: scale(1.1);
+      }
+      
+      .read-label {
+          position: absolute;
+          top: -40px;
+          right: 0;
+          background: rgb(0, 0, 0, 0.1);
+          color: rgb(48, 48, 66);
+          white-space: nowrap;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 14px;
+          opacity: 0;
+          transform: translateY(5px);
+          pointer-events: none;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      
+      .readIcon:hover .read-label {
+          opacity: 1;
+          transform: translateY(0);
+      }
+      
+      #scrambleText {
+          width: 1100px;
+          margin: auto;
+          text-align: left;
+          color: #fff;
+          font-size: 32px;
+          font-weight: 500;
+          letter-spacing: 0.05em;
+      }
+      
+      #sideQuest {
+          background-color: transparent;
+          height: calc(100vh + 200px);
+          margin: 80px 0px;
+      }
+      
+      #experiments {
+          position: relative;
+          isolation: isolate;
+          width: 1100px;
+          margin: auto;
+      }
+      
+      #exp {
+          display: block;
+      }
+      
+      #ExpVidCol {
+          width: 540px;
+          z-index: 20;
+          position: absolute;
+          top: -525px;
+          right: -300px;
+      }
+      
+      #exp h2 {
+          color: rgb(255, 255, 255);
+          margin: 24px 0px;
+      }
+      
+      .experiment {
+          flex: 6;
+          padding: 8px 0px;
+      }
+      
+      .experiment h3, .experiment p {
+          margin: 4px 0px;
+      }
+      
+      .exp-item {
+          display: flex;
+          gap: 24px;
+          padding: 16px 0px;
+          border-top: solid rgb(255, 255, 255, 0.4) 1px;
+          border-bottom: solid rgb(255, 255, 255, 0.4) 1px;
+          z-index: 1;
+          transition: border-color 0.3s ease; 
+      }
+      
+      .exp-item a {
+          display: flex;
+          width: 100%;
+          gap: 24px;
+          color: inherit;
+          text-decoration: none;
+      }
+      
+      .exp-item h3, .exp-item p {
+          color: rgb(255, 255, 255, 0.6);
+          transition: color 0.3s ease; 
+      }
+      
+      .exp-item:hover {
+          color: rgb(255, 255, 255);
+          border-top: solid rgb(255, 255, 255, 0.8) 1px;
+          border-bottom: solid rgb(255, 255, 255, 0.8) 1px;
+      }
+      
+      .exp-item:hover h3, .exp-item:hover p {
+          color: rgb(255, 255, 255);
+      }
+      
+      .expRead {
+          flex: 1;
+          display: block;
+          margin: auto;
+      }
+      
+      .expRead p {
+          opacity: 0;
+          margin: auto;
+          transition: opacity 0.4s ease;
+      }
+      
+      .exp-item:hover .expRead p {
+          opacity: 1;
+      }
+      
+      #experiments :nth-child(2) {
+          display: block;
+          margin: auto;
+      }
+      
+      .exp-video {
+          width: 100%;     
+          max-width: 530px;       
+          height: auto;
+          border-radius: 12px; 
+          object-fit: cover; 
+          display: block;
+          margin: auto auto;
+      }
+      
+      #ExpVidCol {
+          border-radius: 12px;
+          transition: border 0.3s ease, background 0.3s ease;
+      }
+      
+      #ExpVidCol.video-active {
+          border-color: transparent;
+          background: transparent;
+      }
+      
+      .exp-image {
+          display:none;
+          width:100%;
+          max-width:530px;
+          height:auto;
+          border-radius:12px;
+      }
+      
+      .expRead .readIcon {
+          position: relative;
+          display: inline-block;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+      }
+      
+      .expRead .readIcon img {
+          cursor: pointer;
+          transition: transform 0.2s ease;
+      }
+      
+      .exp-item:hover .expRead .readIcon {
+          opacity: 1;
+      }
+      
+      .expRead .readIcon img:hover {
+          transform: scale(1.1);
+      }
+      
+      .expRead .read-label {
+          position: absolute;
+          top: -40px;
+          right: 0;
+          background: rgb(0, 0, 0, 0.1);
+          color: rgb(255, 255, 255);
+          white-space: nowrap;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 14px;
+          opacity: 0;
+          transform: translateY(5px);
+          pointer-events: none;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      
+      .expRead .readIcon:hover .read-label {
+          opacity: 1;
+          transform: translateY(0);
+      }
+      
+      #aboutMeSec {
+          color: var(--text-color); 
+          transition: color 0.3s ease;
+          margin: auto;
+          width: 1100px;
+      }
+      
+      #fillTime {
+          margin-left: 24px;
+          width: 578px;
+      }
+      
+      #fillTime h2 {
+          margin: 0px;
+      }
+      
+      #headShot {
+          position: relative;
+      }
+      
+      #headShot img {
+          position: absolute;
+          left: 50px;
+          width: 400px;
+          height: 500px;
+          margin: auto;
+          object-fit: cover;
+          opacity: 0;
+          animation: photoLoop 24s infinite;
+          transition: opacity 1s ease;
+      }
+      
+      #headShot img:nth-child(1) { animation-delay:0s; }
+      #headShot img:nth-child(2) { animation-delay:4s; }
+      #headShot img:nth-child(3) { animation-delay:8s; }
+      #headShot img:nth-child(4) { animation-delay:12s; }
+      #headShot img:nth-child(5) { animation-delay:16s; }
+      #headShot img:nth-child(6) { animation-delay:20s; }
+      
+      @keyframes photoLoop {
+          0% { opacity:0; }
+          4% { opacity:1; }
+          16% { opacity:1; }
+          20% { opacity:0; }
+          100% { opacity:0; }
+      }
+      
+      #comingSoon {
+          position: relative;
+          overflow: hidden;
+      }
+      
+      #comingSoon::after {
+          content: "Coming Soon";
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.75rem;
+          font-weight: 400;
+          color: white;
+          background: rgba(0, 0, 0, 0.6);
+          backdrop-filter: blur(3px);
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+      }
+      
+      #comingSoon:hover::after {
+          opacity: 1;
+      }
     
-} */
+      .spaceBtwn {
+          margin-top: 150px;
+          margin-bottom: 150px;
+          opacity: 0;
+          transition: opacity 1s ease;
+          padding: 0.5rem;
+      }
+      
+      .spaceBtwn.active {
+          opacity: 1;
+      }
+      
+      footer a:hover {
+          text-decoration: underline;
+          color: rgb(0, 0, 255);
+      }
+      
+      /* ← Performance boost for reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+          * {
+              animation-duration: 0.01ms !important;
+              animation-iteration-count: 1 !important;
+              transition-duration: 0.01ms !important;
+          }
+      }
+  }
+  
+  @media screen and (min-width: 1650px) {
+      .hero-interactive spline-viewer, 
+      .hero-interactive iframe, 
+      .hero-interactive canvas {
+          width: 100%;
+          height: 100%;
+          min-width: 100vw;
+          min-height: 100%;
+          transform-origin: top left;
+          transform: scale(1.5);  
+          object-fit: cover;
+          object-position: center;
+          border: none;
+      }
+      
+      #dataTitle h2 {
+          position: absolute;
+          margin: 0px 0px 8px;
+          line-height: 130%;
+          text-align: left;
+          bottom: 205px;
+          right: 33%;
+          width: 875px;
+      }
+      
+      #titleLeft {
+          position: absolute;
+          bottom: 55px;
+          left: 21.6%;
+          width: 650px;
+      }
+      
+      #titleRight {
+          position: absolute;
+          bottom: 25px;
+          right: 20.7%;
+          width: 275px;
+      }
+      
+      #dataTitle h3 {
+          margin: 8px 0px 0px;
+          text-align: left;
+      }
+      
+      hr {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -32px;
+          width: 0%;
+          height: 1px;
+          border: none;
+          background-color: rgb(34, 34, 34, 0.5);
+          transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      
+      hr.expand {
+          width: 1100px;
+      }
+      
+      #desktop {
+          margin-top: 16px;          
+      }
+      
+      #dataDesktopBar {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+      }
+  }
