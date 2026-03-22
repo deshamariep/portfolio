@@ -48,7 +48,7 @@
           pointer-events: auto;
           overflow: hidden;
       }
-      
+
       .hero-interactive spline-viewer, 
       .hero-interactive iframe, 
       .hero-interactive canvas {

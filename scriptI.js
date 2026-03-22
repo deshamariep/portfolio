@@ -67,21 +67,30 @@
     const hero = document.querySelector('.hero');
     const hr = document.querySelector('hr');
     
+    let hasLoaded = false;
+    
+    function startAnimations() {
+      if (hasLoaded) return;
+      hasLoaded = true;
+      
+      if (hero) hero.classList.add('loaded');
+      if (hr) setTimeout(() => hr.classList.add('expand'), 1600);
+    }
+    
     if (splineViewer && hero && hr) {
-      splineViewer.addEventListener('load', () => {
-        hero.classList.add('loaded');
-        setTimeout(() => hr.classList.add('expand'), 1600);
-      });
+      splineViewer.addEventListener('load', startAnimations);
+      splineViewer.addEventListener('ready', startAnimations);
+      
+      if (splineViewer.shadowRoot) {
+        startAnimations();
+      }
       
       setTimeout(() => {
-        if (!hero.classList.contains('loaded')) {
-          hero.classList.add('loaded');
-          hr.classList.add('expand');
-        }
-      }, 3000);
+        startAnimations();
+      }, 2000);
+      
     } else if (hero && hr) {
-      hero.classList.add('loaded');
-      setTimeout(() => hr.classList.add('expand'), 1600);
+      startAnimations();
     }
   });
 
