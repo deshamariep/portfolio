@@ -216,8 +216,8 @@
         left: 24px;            
         transform: translateY(-50%); 
         width: 100%;
-        z-index: 10;  /* ← Above Spline */
-        pointer-events: none;  /* ← Clickable */
+        z-index: 10; 
+        pointer-events: none; 
     }
     #dataTitle{
         position: relative;
@@ -232,6 +232,9 @@
         pointer-events: none;
         opacity: 0;
         transform: translateY(30px);
+        animation: none;
+    }
+    .hero.loaded #titleLeft {
         animation: slideFadeUp 0.8s ease forwards;
         animation-delay: 0.2s;
     }
@@ -244,7 +247,6 @@
     #dataTitle h2{
         position: absolute;
         font-weight: 500;
-        margin: 0px;
         margin: 0px 0px 8px;
         line-height: 130%;
         text-align: left;
@@ -254,6 +256,9 @@
         pointer-events: none;
         opacity: 0;
         transform: translateY(30px);
+        animation: none;
+    }
+    .hero.loaded #dataTitle h2 {
         animation: slideFadeUp 0.8s ease forwards;
     }
     #dataTitle h2 .grey{
