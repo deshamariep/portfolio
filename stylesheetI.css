@@ -43,6 +43,7 @@
           left: 0;
           width: 100%;
           height: clamp(300px, 36.18vw, 800px);
+          transform: scale(1.0); 
           z-index: 1;
           pointer-events: auto;
           overflow: hidden;
