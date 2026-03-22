@@ -37,7 +37,15 @@
   // ========== COPY EMAIL ==========
   window.copyEmail = function() {
     navigator.clipboard.writeText('deshapoindexter@gmail.com');
-    alert('Email copied to clipboard!');
+    
+    const notification = document.querySelector('.copy-notification');
+    if (notification) {
+        notification.classList.add('show');
+        
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 2000);
+    }
   };
 
   // ========== SPLINE LOAD & ANIMATIONS ==========

@@ -226,7 +226,7 @@
     }
     #titleLeft{
         position: absolute;
-        bottom: -16px;
+        bottom: 8px;
         left: 12%;
         width: 650px;
         pointer-events: none;
@@ -250,7 +250,7 @@
         margin: 0px 0px 8px;
         line-height: 130%;
         text-align: left;
-        bottom: 125px;
+        bottom: 190px;
         right: 27.3%;
         width: 875px;
         pointer-events: none;
@@ -286,7 +286,7 @@
         pointer-events: auto;
     }
     .grey{
-        color: rgb(48, 48, 66, 0.4);
+        color: rgb(48, 48, 66, 0.5);
     }
     .email-wrapper {
         position: relative;
