@@ -288,6 +288,41 @@
     .grey{
         color: rgb(48, 48, 66, 0.4);
     }
+    .email-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .copy-notification {
+        position: absolute;
+        bottom: calc(100% + 8px); /* 8px above the email */
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: rgba(70, 138, 255, 0.95);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    .copy-notification.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    .copy-notification::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid transparent;
+        border-top-color: rgba(70, 138, 255, 0.95);
+    }
     .copy-email {
         pointer-events: auto;
         cursor: pointer;
