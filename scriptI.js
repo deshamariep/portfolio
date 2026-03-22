@@ -40,6 +40,11 @@
 
 })();
 
+function copyEmail() {
+  navigator.clipboard.writeText('deshapoindexter@gmail.com');
+  alert('Email copied to clipboard!');
+}
+
 (function(){
   'use strict';
 

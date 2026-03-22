@@ -283,6 +283,15 @@
     .grey{
         color: rgb(48, 48, 66, 0.4);
     }
+    .copy-email {
+        pointer-events: auto;
+        cursor: pointer;
+        user-select: text;
+        transition: opacity 0.2s;
+    }
+    .copy-email:hover {
+        opacity: 0.7;
+    }
     hr{
         position: absolute;
         z-index: 10;
