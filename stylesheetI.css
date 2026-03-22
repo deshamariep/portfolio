@@ -190,7 +190,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 521px;  /* ← Fixed height */
+        height: 100%;  /* ← Fixed height */
         z-index: 1;
         pointer-events: auto;  /* ← Make it interactive */
     }
