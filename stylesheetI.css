@@ -226,7 +226,7 @@
     }
     #titleLeft{
         position: absolute;
-        bottom: 8px;
+        bottom: 35px;
         left: 12%;
         width: 650px;
         pointer-events: none;
