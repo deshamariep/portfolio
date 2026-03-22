@@ -240,7 +240,7 @@
     }
     #titleRight{
         position: absolute;
-        bottom: 25px;
+        bottom: 35px;
         right: 10.5%;
         width: 275px;
     }
@@ -344,6 +344,8 @@
         border: none;
         background-color: rgb(145, 145, 145);
         transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);
+
+        opacity: 0;
     }
     hr.expand{
         width: 76.4%;
