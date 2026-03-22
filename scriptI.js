@@ -65,7 +65,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     const splineViewer = document.querySelector('spline-viewer');
     const hero = document.querySelector('.hero');
-    const hr = document.querySelector('hr');
     
     let hasLoaded = false;
     
@@ -74,10 +73,9 @@
       hasLoaded = true;
       
       if (hero) hero.classList.add('loaded');
-      if (hr) setTimeout(() => hr.classList.add('expand'), 1600);
     }
     
-    if (splineViewer && hero && hr) {
+    if (splineViewer && hero) {
       splineViewer.addEventListener('load', startAnimations);
       splineViewer.addEventListener('ready', startAnimations);
       
@@ -89,10 +87,11 @@
         startAnimations();
       }, 2000);
       
-    } else if (hero && hr) {
+    } else if (hero) {
       startAnimations();
     }
   });
+  
 
   // ========== WINDOW LOAD EVENTS ==========
   window.addEventListener("load", () => {
