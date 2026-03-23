@@ -65,25 +65,34 @@
   document.addEventListener('DOMContentLoaded', () => {
     const splineViewer = document.querySelector('spline-viewer');
     const hero = document.querySelector('.hero');
-    const hr = document.querySelector('hr');
     
-    if (splineViewer && hero && hr) {
-      splineViewer.addEventListener('load', () => {
-        hero.classList.add('loaded');
-        setTimeout(() => hr.classList.add('expand'), 1600);
-      });
+    console.log('Spline:', splineViewer, 'Hero:', hero);
+    
+    let hasLoaded = false;
+    
+    function startAnimations() {
+      if (hasLoaded) return;
+      hasLoaded = true;
       
-      // Fallback: if Spline takes too long (>3s), start anyway
-      setTimeout(() => {
-        if (!hero.classList.contains('loaded')) {
-          hero.classList.add('loaded');
-          hr.classList.add('expand');
-        }
-      }, 3000);
-    } else if (hero && hr) {
-      // No Spline viewer, start immediately
-      hero.classList.add('loaded');
-      setTimeout(() => hr.classList.add('expand'), 1600);
+      console.log('✅ Adding .loaded class');
+      if (hero) hero.classList.add('loaded');
+    }
+    
+    if (splineViewer && hero) {
+      splineViewer.addEventListener('load', startAnimations);
+      splineViewer.addEventListener('ready', startAnimations);
+      
+      // Check if already loaded
+      if (splineViewer.shadowRoot) {
+        startAnimations();
+      }
+      
+      // Fallback after 2 seconds
+      setTimeout(startAnimations, 2000);
+      
+    } else if (hero) {
+      // No Spline, start immediately
+      startAnimations();
     }
   });
 
