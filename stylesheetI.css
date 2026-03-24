@@ -35,6 +35,15 @@
         text-align: left;
         box-sizing: border-box;
     }
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 24px;            
+        transform: translateY(-50%); 
+        width: 100%;
+        z-index: 10; 
+        pointer-events: none;
+    }
     
     .hero-interactive {
         position: absolute;
@@ -70,17 +79,6 @@
     #one nav ul li a {
         color: var(--text-color); 
         transition: color 0.3s ease;
-    }
-    
-    .hero-content {
-        position: absolute;
-        top: 50%;
-        left: 24px;            
-        transform: translateY(-50%); 
-        width: 100%;
-        z-index: 10; 
-        pointer-events: none;
-        contain: layout style paint; 
     }
     
     #dataTitle {
