@@ -15,6 +15,15 @@
         scroll-behavior: smooth;
         scroll-padding-top: 64px;
     }
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        background-color: var(--bg-color); 
+        transition: background-color 0.2s ease-out;
+    }
     
     .hero {
         position: relative;
@@ -25,16 +34,6 @@
         overflow: hidden;
         text-align: left;
         box-sizing: border-box;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        min-height: 100vh;
-        overflow-x: hidden;
-        background-color: var(--bg-color); 
-        transition: background-color 0.2s ease-out;
     }
     
     .hero-interactive {
