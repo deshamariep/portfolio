@@ -83,6 +83,26 @@
     }
   });
 
+  // ========== CASE STUDY SCROLL ANIMATIONS ==========
+  window.addEventListener('load', () => {
+    const caseStudies = document.querySelectorAll('.dataCS');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    // Observe all case studies except first two
+    caseStudies.forEach((cs, index) => {
+        if (index > 1) {  // Skip first two
+            observer.observe(cs);
+        }
+    });
+  });
+
   // ========== WINDOW LOAD EVENTS ==========
   window.addEventListener("load", () => {
     // Query slide up

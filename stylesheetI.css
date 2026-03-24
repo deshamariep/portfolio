@@ -389,6 +389,8 @@
         overflow: hidden;
         position: relative;
         will-change: transform; 
+        opacity: 0;
+        transform: translateY(30px);
     }
     
     .dataCS:hover {
@@ -448,9 +450,20 @@
         font-weight: 500;
     }
     
-    .csBottom .readIcon {
-        flex: end;
-        margin: auto 24px auto auto;
+    /* Only animate the first two case studies (top row) */
+    .hero.loaded ~ main #caseStudies .data:nth-child(1) .dataCS:nth-child(1) {
+        animation: slideFadeUp 0.8s ease forwards;
+        animation-delay: 0.6s;
+    }
+
+    .hero.loaded ~ main #caseStudies .data:nth-child(1) .dataCS:nth-child(2) {
+        animation: slideFadeUp 0.8s ease forwards;
+        animation-delay: 0.8s;
+    }
+
+    /* Rest of the case studies fade in on scroll - keep your existing scroll animation if you have one, or add this: */
+    .dataCS.visible {
+        animation: slideFadeUp 0.8s ease forwards;
     }
     
     .readIcon {
