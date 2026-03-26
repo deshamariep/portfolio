@@ -168,8 +168,9 @@
         position: relative;
         display: inline-block;
     }
-      
-    .copy-notification {
+    
+    /* Hover label - shows on hover */
+    .copy-hover-label {
         position: absolute;
         bottom: calc(100% + 8px);
         left: 50%;
@@ -185,23 +186,47 @@
         transition: opacity 0.2s ease, transform 0.2s ease;
         z-index: 100;
     }
-      
-    .email-wrapper:hover .copy-notification {
+    
+    /* Show hover label on hover */
+    .email-wrapper:hover .copy-hover-label {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
-        transition-delay: 0.1s;
     }
-
+    
+    /* Hide hover label when clicked notification shows */
+    .copy-notification.show ~ .copy-hover-label {
+        opacity: 0;
+    }
+    
+    /* Click notification - shows after click */
+    .copy-notification {
+        position: absolute;
+        bottom: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%) translateY(5px);
+        background: rgb(214, 214, 214);
+        color: rgb(48, 48, 66);
+        white-space: nowrap;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 14px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 101;
+    }
+    
     .copy-notification.show {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
     }
-      
+    
     .copy-email {
+        pointer-events: auto;
         cursor: pointer;
         transition: opacity 0.2s;
     }
-      
+    
     .copy-email:hover {
         opacity: 0.7;
     }

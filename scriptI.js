@@ -51,22 +51,15 @@
   }
 
   // ========== COPY EMAIL ==========
-  document.querySelectorAll('.email-wrapper').forEach(wrapper => {
-    const email = wrapper.querySelector('.copy-email');
-    const notification = wrapper.querySelector('.copy-notification');
-  
-    email.addEventListener('click', () => {
-      navigator.clipboard.writeText(email.textContent.trim());
-  
-      notification.textContent = "Copied!";
-      notification.classList.add('show');
-  
-      setTimeout(() => {
-        notification.classList.remove('show');
-        notification.textContent = "Click to copy";
-      }, 2000);
-    });
-  });
+  window.copyEmail = function() {
+    navigator.clipboard.writeText('deshapoindexter@gmail.com');
+    
+    const notification = document.querySelector('.copy-notification');
+    if (notification) {
+        notification.classList.add('show');
+        setTimeout(() => notification.classList.remove('show'), 2000);
+    }
+};
 
   // ========== SPLINE LOAD & ANIMATIONS ==========
   document.addEventListener('DOMContentLoaded', () => {
