@@ -169,7 +169,6 @@
         display: inline-block;
     }
     
-    /* Hover label - shows on hover */
     .copy-hover-label {
         position: absolute;
         bottom: calc(100% + 8px);
@@ -187,18 +186,16 @@
         z-index: 100;
     }
     
-    /* Show hover label on hover */
     .email-wrapper:hover .copy-hover-label {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
     }
     
-    /* Hide hover label when clicked notification shows */
-    .copy-notification.show ~ .copy-hover-label {
-        opacity: 0;
+    .copy-notification.show ~ .copy-hover-label,
+    .email-wrapper.clicked .copy-hover-label {
+        opacity: 0 !important;
     }
     
-    /* Click notification - shows after click */
     .copy-notification {
         position: absolute;
         bottom: calc(100% + 8px);

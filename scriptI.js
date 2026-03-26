@@ -54,12 +54,24 @@
   window.copyEmail = function() {
     navigator.clipboard.writeText('deshapoindexter@gmail.com');
     
+    const wrapper = document.querySelector('.email-wrapper');
     const notification = document.querySelector('.copy-notification');
-    if (notification) {
+    
+    if (notification && wrapper) {
+        // Add clicked class to hide hover label
+        wrapper.classList.add('clicked');
+        
         notification.classList.add('show');
-        setTimeout(() => notification.classList.remove('show'), 2000);
+        
+        setTimeout(() => {
+            notification.classList.remove('show');
+            // Remove clicked class after notification fades
+            setTimeout(() => {
+                wrapper.classList.remove('clicked');
+            }, 200);
+        }, 2000);
     }
-};
+  };
 
   // ========== SPLINE LOAD & ANIMATIONS ==========
   document.addEventListener('DOMContentLoaded', () => {
