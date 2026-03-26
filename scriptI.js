@@ -51,18 +51,19 @@
   }
 
   // ========== COPY EMAIL ==========
-  window.copyEmail = function() {
+  window.copyEmail = function(el) {
     navigator.clipboard.writeText('deshapoindexter@gmail.com');
-    
-    const notification = document.querySelector('.copy-notification');
-    
+  
+    const wrapper = el.closest('.email-wrapper');
+    const notification = wrapper.querySelector('.copy-notification');
+  
     if (notification) {
       notification.textContent = "Copied!";
       notification.classList.add('show');
   
       setTimeout(() => {
         notification.classList.remove('show');
-        notification.textContent = "Click to open"; // reset
+        notification.textContent = "Click to copy";
       }, 2000);
     }
   };

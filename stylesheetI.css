@@ -189,6 +189,11 @@
         transform: translateX(-50%) translateY(0);
         transition-delay: 0.1s;
     }
+    .email-wrapper:hover .copy-notification:not(.show) {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        transition-delay: 0.1s;
+    }
     .copy-notification.show {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
