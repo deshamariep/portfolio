@@ -780,6 +780,11 @@
 }
   
 @media screen and (min-width: 1650px) {
+    .hero-interactive {
+        position: absolute;
+        height: 800px; 
+    }
+    
     .hero-interactive spline-viewer, 
     .hero-interactive iframe, 
     .hero-interactive canvas {
@@ -788,7 +793,7 @@
         min-width: 100vw;
         min-height: 100%;
         transform-origin: top left;
-        transform: scale(1.5);  
+        transform: scale(2.0);  
         object-fit: cover;
         object-position: center;
         border: none;
@@ -800,7 +805,7 @@
         line-height: 130%;
         text-align: left;
         bottom: 205px;
-        right: 33%;
+        left: 21.6%;
         width: 875px;
     }
       
