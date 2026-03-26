@@ -55,9 +55,15 @@
     navigator.clipboard.writeText('deshapoindexter@gmail.com');
     
     const notification = document.querySelector('.copy-notification');
+    
     if (notification) {
+      notification.textContent = "Copied!";
       notification.classList.add('show');
-      setTimeout(() => notification.classList.remove('show'), 2000);
+  
+      setTimeout(() => {
+        notification.classList.remove('show');
+        notification.textContent = "Click to open"; // reset
+      }, 2000);
     }
   };
 
