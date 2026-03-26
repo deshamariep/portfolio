@@ -184,11 +184,6 @@
         transition: opacity 0.2s ease, transform 0.2s ease;
         z-index: 100;
     }
-    .email-wrapper:hover .copy-notification {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-        transition-delay: 0.1s;
-    }
     .email-wrapper:hover .copy-notification:not(.show) {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
