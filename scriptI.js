@@ -167,7 +167,7 @@
       setTimeout(() => {
         const target = document.getElementById("aboutMeSec");
         if (target) {
-          const yOffset = -96; // Account for sticky nav height
+          const yOffset = -72; // Account for sticky nav height
           const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }
@@ -184,7 +184,7 @@
         e.preventDefault();
         const target = document.getElementById('query');
         if (target) {
-          const yOffset = -96; // Sticky nav height
+          const yOffset = -72; // Sticky nav height
           const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
           
@@ -201,7 +201,7 @@
         e.preventDefault();
         const target = document.getElementById('aboutMeSec');
         if (target) {
-          const yOffset = -96; // Sticky nav height
+          const yOffset = -72; // Sticky nav height
           const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         

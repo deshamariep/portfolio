@@ -420,7 +420,7 @@
         transform: translateY(30px);
     }
     
-    a .dataCS:hover {
+    a div .dataCS:hover {
         transform: translateY(-6px);
     }
     
