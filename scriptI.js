@@ -162,15 +162,53 @@
     handleBackgroundTransition();
     updateGreeting();
     
+    // Hash navigation for initial page load
     if (window.location.hash === "#aboutMeSec") {
       setTimeout(() => {
         const target = document.getElementById("aboutMeSec");
         if (target) {
-          const yOffset = -32;
+          const yOffset = -96; // Account for sticky nav height
           const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }
       }, 1000);
+    }
+  });
+
+  // ========== NAV CLICK HANDLERS ==========
+  document.addEventListener('DOMContentLoaded', () => {
+    // WORK link
+    const workLink = document.getElementById('home');
+    if (workLink) {
+      workLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.getElementById('query');
+        if (target) {
+          const yOffset = -96; // Sticky nav height
+          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+          
+          // Update URL hash
+          history.pushState(null, null, '#workSec');
+        }
+      });
+    }
+  
+    // ABOUT link
+    const aboutLink = document.getElementById('aboutMe');
+    if (aboutLink) {
+      aboutLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.getElementById('aboutMeSec');
+        if (target) {
+          const yOffset = -96; // Sticky nav height
+          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        
+          // Update URL hash
+          history.pushState(null, null, '#aboutMeSec');
+        }
+      });
     }
   });
 
