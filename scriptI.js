@@ -151,15 +151,20 @@
 
   // ========== WINDOW LOAD EVENTS ==========
   window.addEventListener("load", () => {
+    // Query slide up
     const query = document.getElementById("query");
     if (query) setTimeout(() => query.classList.add("slide-up"), 100);
     
+    // DataHero loaded
     const dataHero = document.querySelector(".dataHero");
     const dataDesktopBar = document.querySelector("#dataDesktopBar");
     if (dataHero) dataHero.classList.add("loaded");
     if (dataDesktopBar) dataDesktopBar.classList.add("loaded");
     
+    // Handle background transition
     handleBackgroundTransition();
+    
+    // Update greeting
     updateGreeting();
     
     // Hash navigation for initial page load
@@ -167,7 +172,7 @@
       setTimeout(() => {
         const target = document.getElementById("aboutMeSec");
         if (target) {
-          const yOffset = -72; // Account for sticky nav height
+          const yOffset = -72;
           const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }
@@ -187,9 +192,6 @@
           const yOffset = -72; // Sticky nav height
           const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
-          
-          // Update URL hash
-          history.pushState(null, null, '#workSec');
         }
       });
     }
@@ -204,9 +206,6 @@
           const yOffset = -72; // Sticky nav height
           const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
-        
-          // Update URL hash
-          history.pushState(null, null, '#aboutMeSec');
         }
       });
     }
