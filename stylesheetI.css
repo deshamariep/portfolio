@@ -469,6 +469,7 @@
     
     .csText h4, .csText p {
         margin: 0px;
+        color: white;
     }
     
     .csSubText {
