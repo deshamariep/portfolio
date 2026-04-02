@@ -409,7 +409,7 @@
         transform: translateY(-6px);
     }
     
-    .dataCS h3, .dataCS p, #practiceSection h2 {
+    .dataCS h3, .dataCS p, #practiceSection h2, #practiceSection p {
         color: rgb(255, 255, 255);
     }
     
