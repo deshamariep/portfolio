@@ -28,8 +28,8 @@
         return;
       }
       
-      pos.x += dx * 0.16;
-      pos.y += dy * 0.16;
+      pos.x += dx * 0.22;
+      pos.y += dy * 0.22;
       cursor.style.transform = `translate(${pos.x}px, ${pos.y}px) translate(-50%, -50%)`;
       
       requestAnimationFrame(animate);
@@ -37,15 +37,15 @@
 
     document.querySelectorAll("a, button").forEach(el => {
       el.addEventListener("mouseenter", () => {
-        cursor.style.width = "64px";
-        cursor.style.height = "64px";
-        cursor.style.opacity = "1";
+        cursor.style.width = "44px";
+        cursor.style.height = "44px";
+        cursor.style.opacity = "0.9";
       }, { passive: true });
-      
+    
       el.addEventListener("mouseleave", () => {
-        cursor.style.width = "32px";
-        cursor.style.height = "32px";
-        cursor.style.opacity = "0.95";
+        cursor.style.width = "28px";
+        cursor.style.height = "28px";
+        cursor.style.opacity = "0.65";
       }, { passive: true });
     });
   }
