@@ -37,7 +37,7 @@
     }
     .hero-content {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 24px;            
         transform: translateY(-50%); 
         width: 100%;
@@ -86,7 +86,7 @@
         margin: auto;
         pointer-events: auto;
         display: flex;
-        gap: 32px;
+        gap: 16px;
     }
     
     #titleLeft {
@@ -107,7 +107,7 @@
     }
       
     #dataTitle h1 {
-        margin: 0px 0px 8px;
+        margin: 8px 0px;
         line-height: 130%;
         text-align: left;
         pointer-events: none;
