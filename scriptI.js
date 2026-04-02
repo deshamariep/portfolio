@@ -363,57 +363,6 @@
     artWork.addEventListener("mouseleave", resetPreview, { passive: true });
   }
 
-  // ========== SCRAMBLE TEXT (Optimized) ==========
-  const scrambleText = document.getElementById("scrambleText");
-  const sideQuest = document.getElementById("sideQuest");
-  
-  if (scrambleText && sideQuest) {
-    const text = "Practice & Play";
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
-    const transitionZone = 300;
-    let lastProgress = -1;
-    let scrambleTicking = false;
-
-    window.addEventListener("scroll", () => {
-      if (!scrambleTicking) {
-        requestAnimationFrame(() => {
-          const rect = sideQuest.getBoundingClientRect();
-          let progress = 0;
-
-          if (rect.top <= transitionZone && rect.top >= 0) {
-            progress = 1 - (rect.top / transitionZone);
-          } else if (rect.top < 0) {
-            progress = 1;
-          }
-
-          progress = Math.max(0, Math.min(1, progress));
-          
-          // Only update if progress changed significantly
-          if (Math.abs(progress - lastProgress) > 0.02) {
-            const revealCount = Math.floor(progress * text.length);
-            let output = "";
-
-            for (let i = 0; i < text.length; i++) {
-              if (i < revealCount) {
-                output += text[i];
-              } else if (text[i] === " ") {
-                output += " ";
-              } else {
-                output += chars[Math.floor(Math.random() * chars.length)];
-              }
-            }
-
-            scrambleText.textContent = output;
-            lastProgress = progress;
-          }
-          
-          scrambleTicking = false;
-        });
-        scrambleTicking = true;
-      }
-    }, { passive: true });
-  }
-
   // ========== BACKGROUND COLOR TRANSITION (Optimized) ==========
   function handleBackgroundTransition() {
     const sideQuest = document.querySelector('#sideQuest');
