@@ -105,8 +105,8 @@
     
     #titleRight {
         position: absolute;
-        bottom: 35px;
-        right: 10.5%;
+        bottom: -150px;
+        right: 19%;
         width: 275px;
     }
       
@@ -376,7 +376,8 @@
     }
     
     #query {
-        margin: -225px -24px 32px;
+        margin: -225px auto 32px;
+        width: 1100px;
     }
     
     #caseStudies {
