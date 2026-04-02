@@ -86,6 +86,7 @@
         margin: auto;
         pointer-events: auto;
         display: flex;
+        gap: 32px;
     }
     
     #titleLeft {
