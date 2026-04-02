@@ -105,12 +105,12 @@
     
     #titleRight {
         position: absolute;
-        bottom: -150px;
+        bottom: -125px;
         right: 19%;
         width: 275px;
     }
       
-    #dataTitle h2 {
+    #dataTitle h1 {
         position: absolute;
         margin: 0px 0px 8px;
         line-height: 130%;
@@ -125,15 +125,9 @@
         color: rgb(48, 48, 66); 
     }
       
-    .hero.loaded #dataTitle h2 {
+    .hero.loaded #dataTitle h1 {
         animation: slideFadeUp 0.8s ease forwards;
         animation-delay: 0s; 
-    }
-      
-    #dataTitle h2 .grey {
-        font-size: 24px; 
-        font-weight: 400;
-        pointer-events: none;
     }
       
     #dataTitle h3 {
@@ -467,6 +461,9 @@
         padding: 24px 24px 0px;
         position: absolute;
         bottom: 24px;
+    }
+    .csText h3{
+        font-size: 32px;
     }
     
     .csText h2, .csText p {
