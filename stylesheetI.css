@@ -37,8 +37,7 @@
     }
     .hero-content {
         position: absolute;
-        top: 40%;
-        left: 24px;            
+        top: 45%;          
         transform: translateY(-50%); 
         width: 100%;
         z-index: 10; 
@@ -808,6 +807,15 @@
         object-position: center;
         border: none;
     } */
+
+    .hero-content {
+        position: absolute;
+        top: 40%;           
+        transform: translateY(-50%); 
+        width: 100%;
+        z-index: 10; 
+        pointer-events: none;
+    }
       
     #desktop {
         margin-top: 16px;          
