@@ -464,9 +464,10 @@
     }
     .csText h3{
         font-size: 32px;
+        margin: 4px 0px;
     }
     
-    .csText h2, .csText p {
+    .csText h4, .csText p {
         margin: 0px;
     }
     
