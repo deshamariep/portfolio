@@ -189,7 +189,7 @@
         e.preventDefault();
         const target = document.getElementById('query');
         if (target) {
-          const yOffset = -72; // Sticky nav height
+          const yOffset = -20; // Sticky nav height
           const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -203,7 +203,7 @@
         e.preventDefault();
         const target = document.getElementById('aboutMeSec');
         if (target) {
-          const yOffset = -72; // Sticky nav height
+          const yOffset = -20; // Sticky nav height
           const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
