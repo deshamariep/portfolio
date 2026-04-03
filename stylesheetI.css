@@ -249,7 +249,7 @@
           height 0.2s ease,
           box-shadow 0.2s ease,
           opacity 0.2s ease;
-        opacity: 0.65;
+        opacity: 0.85;
         will-change: transform;
     }
     

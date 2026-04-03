@@ -39,13 +39,13 @@
       el.addEventListener("mouseenter", () => {
         cursor.style.width = "44px";
         cursor.style.height = "44px";
-        cursor.style.opacity = "0.9";
+        cursor.style.opacity = "0.35";  /* dims on hover */
       }, { passive: true });
     
       el.addEventListener("mouseleave", () => {
         cursor.style.width = "28px";
         cursor.style.height = "28px";
-        cursor.style.opacity = "0.65";
+        cursor.style.opacity = "0.85";  /* back to full */
       }, { passive: true });
     });
   }
