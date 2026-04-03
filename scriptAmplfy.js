@@ -2,41 +2,50 @@
     'use strict';
     console.log("reading js");
 
-     window.addEventListener("load", () => {
-        const hash = window.location.hash;
-        if (hash) {
-          [100, 300, 500, 1000].forEach(delay => {
-            setTimeout(() => {
-              const target = document.querySelector(hash);
-              if (target) {
-                const headerOffset = 0;   
-                const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+    document.addEventListener('DOMContentLoaded', () => {
+      // WORK link
+      const workLink = document.getElementById('home');
+      if (workLink) {
+        workLink.addEventListener('click', (e) => {
+          e.preventDefault();
           
-                window.scrollTo({
-                  top: y,
-                  behavior: "smooth"
-                });
-              }
-            }, delay);
-          });
-        }
-      });
-    document.addEventListener("DOMContentLoaded", () => {
-        const hash = window.location.hash;
-        if (hash) {
-          setTimeout(() => {
-            const target = document.querySelector(hash);
+          // Check if we're already on the homepage
+          if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('deshapoindexter.com/')) {
+            // On homepage - scroll to section
+            const target = document.getElementById('query');
             if (target) {
-              const headerOffset = 0;
-              const y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        
-              window.scrollTo({
-                top: y,
-                behavior: "smooth"
-              });
+              const yOffset = -20;
+              const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({ top: y, behavior: 'smooth' });
             }
-          }, 500);
-        }
+          } else {
+            // On project page - navigate to homepage WITHOUT hash
+            window.location.href = '/';
+          }
+        });
+      }
+    
+      // ABOUT link
+      const aboutLink = document.getElementById('aboutMe');
+      if (aboutLink) {
+        aboutLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          // Check if we're already on the homepage
+          if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('deshapoindexter.com/')) {
+            // On homepage - scroll to section
+            const target = document.getElementById('aboutMeSec');
+            if (target) {
+              const yOffset = -20;
+              const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          } else {
+            // On project page - navigate to homepage WITHOUT hash
+            window.location.href = '/';
+          }
+        });
+      }
     });
 
         // let snapped = false;
