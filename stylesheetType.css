@@ -139,100 +139,88 @@
 
 @media screen and (min-width: 1024px) {
     h1{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 40px;
+        font-family: 'Corinthia', cursive;
+        font-weight: 700;
+        font-size: 96px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.04em;
-        line-height: 160%;
-        /* padding-bottom: 32px;
-        margin-bottom: 10px; */
+        line-height: 1.1;
+        letter-spacing: 0.02em;
     }
     h2{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 32px;
+        font-family: 'Corinthia', cursive;
+        font-weight: 700;
+        font-size: 64px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.04em;
-        line-height: 160%;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
     }
     h3{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 24px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.04em;
-        line-height: 160%;
+        letter-spacing: 0.02em;
+        line-height: 1.6;
     }
     h4{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 22px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.05em;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
         line-height: 160%;
         margin: 0px;
     }
-    p, nav ul li, ul li{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 18px;
+    p, ul li{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.04em;
+        letter-spacing: 0.02em;
+        line-height: 1.75;
+    }
+    nav ul li{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.1em;
         line-height: 160%;
     }
     .centerText{
         text-align: center;
     }
     .painPT .number, .smolP, footer p, #circle1, #circle2, #circle3, #circle4{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 15px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
         color: rgb(48, 48, 66, 0.9);
-        letter-spacing: 0.04em;
+        letter-spacing: 0.08em;
         line-height: 160%;
     }
     a{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
         text-decoration: none;
-        font-style: normal;
-        font-size: 18px;
+        font-size: 16px;
         color: rgb(0, 0, 255);
-        letter-spacing: 0.04em;
+        letter-spacing: 0.02em;
         line-height: 160%;
     }
     footer a{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
+        font-family: 'DM Sans', sans-serif;
         font-weight: 300;
         text-decoration: none;
-        font-style: normal;
-        font-size: 14px;
+        font-size: 13px;
         color: rgb(48, 48, 66);
         letter-spacing: 0.04em;
         line-height: 160%;
     }
     footer a:hover{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
         font-weight: 300;
         text-decoration: underline;
-        font-style: normal;
-        font-size: 14px;
+        font-size: 13px;
         color: rgb(0, 0, 255);
         letter-spacing: 0.04em;
         line-height: 160%;
@@ -248,12 +236,12 @@
     #footerDataP{
         font-weight: 300;
     }
-    /* #footTitle{
-        font-family: "Nunito Sans", sans-serif;
+    #footTitle{
+        font-family: 'Corinthia', cursive;
         font-weight: 700;
-        font-style: normal;
-        font-size: 20px;
-    } */
+        font-size: 48px;
+        line-height: 1.1;
+    }
     footer #footLink a{
         text-decoration: none;
     }
@@ -261,12 +249,10 @@
         line-height: 160%;
     }
     footer #btmfoot{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
         font-size: 10px;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.06em;
         line-height: 100%;
         color: rgb(48, 48, 66);
     }
