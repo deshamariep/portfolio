@@ -44,6 +44,9 @@
         display: none; /* Hide the message on larger screens */
     }
     h2{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 32px;
         margin: 8px 0px;
     }
     #color{

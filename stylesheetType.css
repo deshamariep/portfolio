@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px){
+/* @media screen and (max-width: 767px){
     h1{
         font-family: "Newsreader", serif;
         font-optical-sizing: auto;
@@ -8,8 +8,6 @@
         color: rgb(48, 48, 66);
         letter-spacing: 0.03em;
         line-height: 160%;
-        /* padding-bottom: 32px;
-        margin-bottom: 10px; */
     }
     h2{
         font-family: "Newsreader", serif;
@@ -108,12 +106,6 @@
     #footerDataP{
         font-weight: 300;
     }
-    /* #footTitle{
-        font-family: "Nunito Sans", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 20px;
-    } */
     footer #footLink a{
         text-decoration: none;
     }
@@ -130,7 +122,7 @@
         line-height: 100%;
         color: rgb(48, 48, 66);
     }
-}
+} */
 @media screen and (min-width: 768px) and (max-width: 1024px){
     /* .mobile-incomplete {
         display: none;
@@ -238,7 +230,7 @@
     }
     #footTitle{
         font-family: 'Corinthia', cursive;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 48px;
         line-height: 1.1;
     }
