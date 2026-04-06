@@ -107,7 +107,7 @@
     }
       
     #dataTitle h1 {
-        margin: 8px 0px 4px;
+        margin: 8px 0px -8px;
         line-height: 130%;
         text-align: left;
         pointer-events: none;
@@ -392,7 +392,7 @@
     #caseStudies > a:first-child .dataCS,
     #caseStudies .data:first-child .dataCS {
         width: 1100px;
-        height: 540px;
+        height: 432px;
     }
     .dataCS {
         display: block;
@@ -494,18 +494,11 @@
         font-weight: 500;
     }
     
-    .readIcon {
-        position: relative;
-        display: inline-block;
+    .amplfyData{
+        display: flex;
     }
-    
-    .readIcon img {
-        cursor: pointer;
-        transition: transform 0.2s ease;
-    }
-    
-    .readIcon img:hover {
-        transform: scale(1.1);
+    .amplfyData div{
+        flex: 1;
     }
     
     .read-label {
