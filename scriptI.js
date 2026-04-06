@@ -73,6 +73,28 @@
     }
   };
 
+  // ========== SPLINE LOAD & ANIMATIONS ==========
+  document.addEventListener('DOMContentLoaded', () => {
+    const splineViewer = document.querySelector('spline-viewer');
+    const hero = document.querySelector('.hero');
+    
+    if (splineViewer && hero) {
+      splineViewer.addEventListener('load', () => {
+        hero.classList.add('loaded');
+      });
+      
+      // Fallback: if Spline takes too long (>3s), start anyway
+      setTimeout(() => {
+        if (!hero.classList.contains('loaded')) {
+          hero.classList.add('loaded');
+        }
+      }, 3000);
+    } else if (hero) {
+      // No Spline viewer, start immediately
+      hero.classList.add('loaded');
+    }
+  });
+
   // ========== CASE STUDY SCROLL ANIMATIONS ==========
   window.addEventListener('load', () => {
     const caseStudies = document.querySelectorAll('.dataCS');
