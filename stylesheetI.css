@@ -389,12 +389,17 @@
         display: flex;
         gap: 16px;
     }
-    
+    #caseStudies > a:first-child .dataCS,
+    #caseStudies .data:first-child .dataCS {
+        width: 1100px;
+        height: 540px;
+    }
     .dataCS {
         display: block;
         border-radius: 10px;
         flex: 1;
         gap: 20px;
+        width: 540px;
         height: 540px;
         margin-bottom: 16px;
         text-align: left;
@@ -404,6 +409,23 @@
         will-change: transform; 
         opacity: 0;
         transform: translateY(30px);
+    }
+    .hero.loaded ~ main #caseStudies > a:first-child .dataCS {
+        animation: slideFadeUp 0.8s ease forwards;
+        animation-delay: 0.6s;
+    }
+    
+    .hero.loaded ~ main #caseStudies .data:nth-child(2) .dataCS:nth-child(1) {
+        animation: slideFadeUp 0.8s ease forwards;
+        animation-delay: 0.8s;
+    }
+
+    .hero.loaded ~ main #caseStudies .data:nth-child(2) .dataCS:nth-child(2) {
+        animation: slideFadeUp 0.8s ease forwards;
+        animation-delay: 1s;
+    }
+    .dataCS.visible {
+        animation: slideFadeUp 0.8s ease forwards;
     }
     
     a .dataCS:hover {
@@ -470,22 +492,6 @@
     
     .csSubText {
         font-weight: 500;
-    }
-    
-    /* Only animate the first two case studies (top row) */
-    .hero.loaded ~ main #caseStudies .data:nth-child(1) .dataCS:nth-child(1) {
-        animation: slideFadeUp 0.8s ease forwards;
-        animation-delay: 0.6s;
-    }
-
-    .hero.loaded ~ main #caseStudies .data:nth-child(1) .dataCS:nth-child(2) {
-        animation: slideFadeUp 0.8s ease forwards;
-        animation-delay: 0.8s;
-    }
-
-    /* Rest of the case studies fade in on scroll - keep your existing scroll animation if you have one, or add this: */
-    .dataCS.visible {
-        animation: slideFadeUp 0.8s ease forwards;
     }
     
     .readIcon {
