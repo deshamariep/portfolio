@@ -107,7 +107,7 @@
     }
       
     #dataTitle h1 {
-        margin: 8px 0px;
+        margin: 8px 0px 4px;
         line-height: 130%;
         text-align: left;
         pointer-events: none;
@@ -410,7 +410,11 @@
         transform: translateY(-6px);
     }
     
-    .dataCS h3, .dataCS p, #practiceSection h2, #practiceSection p {
+    .dataCS h3, .dataCS p, #practiceSection p {
+        color: rgb(255, 255, 255);
+    }
+    #practiceSection h2{
+        margin: 8px 0px;
         color: rgb(255, 255, 255);
     }
     
