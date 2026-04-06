@@ -494,10 +494,10 @@
         font-weight: 500;
     }
     
-    .amplfyData{
+    #amplfyData{
         display: flex;
     }
-    .amplfyData div{
+    #amplfyData div{
         flex: 1;
     }
     
