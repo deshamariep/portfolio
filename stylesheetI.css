@@ -394,7 +394,7 @@
         display: block;
         border-radius: 10px;
         flex: 1;
-        width: 540px;
+        gap: 20px;
         height: 540px;
         margin-bottom: 16px;
         text-align: left;
@@ -406,7 +406,7 @@
         transform: translateY(30px);
     }
     
-    a:hover .dataCS {
+    a .dataCS:hover {
         transform: translateY(-6px);
     }
     
