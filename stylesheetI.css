@@ -159,7 +159,7 @@
         bottom: calc(100% + 8px);
         left: 50%;
         transform: translateX(-50%) translateY(5px);
-        background: rgb(214, 214, 214);
+        background: rgb(217, 217, 217, 0.8);
         color: rgb(48, 48, 66);
         white-space: nowrap;
         padding: 4px 8px;
@@ -336,7 +336,7 @@
     .dock-label {
         position: absolute;
         top: -40px;
-        background: rgb(214, 214, 214);
+        background: rgb(217, 217, 217, 0.8);
         color: rgb(48, 48, 66);
         white-space: nowrap;
         padding: 4px 8px;
@@ -466,6 +466,20 @@
     #none {
         opacity: 0;
     }
+
+    .csPill{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        color: rgb(48, 48, 66, 0.9);
+        letter-spacing: 0.08em;
+        line-height: 160%;
+
+        padding: 4px 8px;
+        background: rgb(217, 217, 217, 0.4);
+        white-space: nowrap;
+        border-radius: 16px;
+    }
     
     .csImg {
         display: block;   
@@ -509,7 +523,7 @@
         position: absolute;
         top: -40px;
         right: 0;
-        background: rgb(0, 0, 0, 0.1);
+        background: rgb(217, 217, 217, 0.8);
         color: rgb(48, 48, 66);
         white-space: nowrap;
         padding: 4px 8px;
@@ -681,7 +695,7 @@
         position: absolute;
         top: -40px;
         right: 0;
-        background: rgb(0, 0, 0, 0.1);
+        background: rgb(217, 217, 217, 0.8);
         color: rgb(255, 255, 255);
         white-space: nowrap;
         padding: 4px 8px;
@@ -725,9 +739,9 @@
         height: 500px;
         margin: auto;
         object-fit: cover;
-        opacity: 0;
+        /* opacity: 0;
         animation: photoLoop 12s infinite;
-        transition: opacity 1s ease;
+        transition: opacity 1s ease; */
     }
     
     #headShot img:nth-child(1) { animation-delay: 0s; }

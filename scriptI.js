@@ -73,28 +73,6 @@
     }
   };
 
-  // ========== SPLINE LOAD & ANIMATIONS ==========
-  document.addEventListener('DOMContentLoaded', () => {
-    const splineViewer = document.querySelector('spline-viewer');
-    const hero = document.querySelector('.hero');
-    
-    if (splineViewer && hero) {
-      splineViewer.addEventListener('load', () => {
-        hero.classList.add('loaded');
-      });
-      
-      // Fallback: if Spline takes too long (>3s), start anyway
-      setTimeout(() => {
-        if (!hero.classList.contains('loaded')) {
-          hero.classList.add('loaded');
-        }
-      }, 3000);
-    } else if (hero) {
-      // No Spline viewer, start immediately
-      hero.classList.add('loaded');
-    }
-  });
-
   // ========== CASE STUDY SCROLL ANIMATIONS ==========
   window.addEventListener('load', () => {
     const caseStudies = document.querySelectorAll('.dataCS');
@@ -187,11 +165,23 @@
     if (workLink) {
       workLink.addEventListener('click', (e) => {
         e.preventDefault();
-        const target = document.getElementById('query');
-        if (target) {
-          const yOffset = -20; // Sticky nav height
-          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
+        
+        // Check if we're already on the homepage
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('deshapoindexter.com/')) {
+          // On homepage - scroll to section
+          const target = document.getElementById('query');
+          if (target) {
+            // Check if nav is sticky
+            const heroTop = document.querySelector('.hero-top');
+            const isSticky = heroTop && heroTop.classList.contains('sticky');
+            const yOffset = isSticky ? -96 : -20; // Adjust offset based on nav state
+            
+            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        } else {
+          // On project page - navigate to homepage WITHOUT hash
+          window.location.href = '/';
         }
       });
     }
@@ -201,11 +191,23 @@
     if (aboutLink) {
       aboutLink.addEventListener('click', (e) => {
         e.preventDefault();
-        const target = document.getElementById('aboutMeSec');
-        if (target) {
-          const yOffset = -20; // Sticky nav height
-          const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
+        
+        // Check if we're already on the homepage
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('deshapoindexter.com/')) {
+          // On homepage - scroll to section
+          const target = document.getElementById('aboutMeSec');
+          if (target) {
+            // Check if nav is sticky
+            const heroTop = document.querySelector('.hero-top');
+            const isSticky = heroTop && heroTop.classList.contains('sticky');
+            const yOffset = isSticky ? -96 : -20; // Adjust offset based on nav state
+            
+            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        } else {
+          // On project page - navigate to homepage WITHOUT hash
+          window.location.href = '/';
         }
       });
     }
