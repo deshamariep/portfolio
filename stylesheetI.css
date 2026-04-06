@@ -468,6 +468,7 @@
     }
 
     .csPill{
+        margin: 8px 0px;
         font-family: 'DM Sans', sans-serif;
         font-weight: 400;
         font-size: 12px;
@@ -476,7 +477,7 @@
         line-height: 160%;
 
         padding: 4px 8px;
-        background: rgb(217, 217, 217, 0.4);
+        background: rgb(217, 217, 217, 0.2);
         white-space: nowrap;
         border-radius: 16px;
     }
