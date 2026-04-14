@@ -1,102 +1,97 @@
-/* @media screen and (max-width: 767px){
+@media screen and (max-width: 767px){
     h1{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 28px;
+        font-family: 'Corinthia', cursive;
+        font-weight: 700;
+        font-size: 72px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.03em;
-        line-height: 160%;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        margin: 4px 0;
     }
     h2{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
+        font-family: 'Corinthia', cursive;
+        font-weight: 700;
+        font-size: 48px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.03em;
-        line-height: 160%;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+        margin: 0 0 8px;
     }
     h3{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 18px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.03em;
-        line-height: 160%;
+        letter-spacing: 0.02em;
+        line-height: 1.6;
+        margin: 6px 0;
     }
     h4{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: italic;
-        font-size: 16px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        font-size: 11px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.04em;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
         line-height: 160%;
+        margin: 0;
     }
-    p, nav ul li, ul li{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
+    p, ul li{
+        font-family: 'DM Sans', sans-serif;
         font-weight: 300;
-        font-style: normal;
-        font-size: 16px;
+        font-size: 15px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.03em;
+        letter-spacing: 0.02em;
+        line-height: 1.75;
+    }
+    nav ul li{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.1em;
         line-height: 160%;
     }
     .centerText{
         text-align: center;
     }
     .painPT .number, .smolP, footer p, #circle1, #circle2, #circle3, #circle4{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 14px;
-        color: rgb(48, 48, 66, 0.9);
-        letter-spacing: 0.03em;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        color: rgba(48, 48, 66, 0.9);
+        letter-spacing: 0.08em;
         line-height: 160%;
     }
     a{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
         text-decoration: none;
-        font-style: normal;
-        font-size: 16px;
+        font-size: 15px;
         color: rgb(0, 0, 255);
-        letter-spacing: 0.03em;
+        letter-spacing: 0.02em;
         line-height: 160%;
     }
     footer a{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
+        font-family: 'DM Sans', sans-serif;
         font-weight: 300;
         text-decoration: none;
-        font-style: normal;
-        font-size: 14px;
+        font-size: 13px;
         color: rgb(48, 48, 66);
-        letter-spacing: 0.03em;
+        letter-spacing: 0.04em;
         line-height: 160%;
     }
     footer a:hover{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
         font-weight: 300;
         text-decoration: underline;
-        font-style: normal;
-        font-size: 14px;
+        font-size: 13px;
         color: rgb(0, 0, 255);
-        letter-spacing: 0.03em;
+        letter-spacing: 0.04em;
         line-height: 160%;
     }
     header #one a, #one a{
         text-decoration: none;
+        color: rgb(48, 48, 66);
     }
     #home:hover,
     #aboutMe:hover,
@@ -106,6 +101,12 @@
     #footerDataP{
         font-weight: 300;
     }
+    #footTitle{
+        font-family: 'Corinthia', cursive;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 1.1;
+    }
     footer #footLink a{
         text-decoration: none;
     }
@@ -113,20 +114,128 @@
         line-height: 160%;
     }
     footer #btmfoot{
-        font-family: "Newsreader", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
         font-size: 10px;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.06em;
         line-height: 100%;
         color: rgb(48, 48, 66);
     }
-} */
-@media screen and (min-width: 768px) and (max-width: 1024px){
-    /* .mobile-incomplete {
-        display: none;
-    } */
+}
+ 
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    h1{
+        font-family: 'Corinthia', cursive;
+        font-weight: 700;
+        font-size: 84px;
+        color: rgb(48, 48, 66);
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        margin: 4px 0;
+    }
+    h2{
+        font-family: 'Corinthia', cursive;
+        font-weight: 700;
+        font-size: 56px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+    }
+    h3{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.02em;
+        line-height: 1.6;
+    }
+    h4{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        line-height: 160%;
+        margin: 0;
+    }
+    p, ul li{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.02em;
+        line-height: 1.75;
+    }
+    nav ul li{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.1em;
+        line-height: 160%;
+    }
+    .centerText{
+        text-align: center;
+    }
+    .painPT .number, .smolP, footer p, #circle1, #circle2, #circle3, #circle4{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        color: rgba(48, 48, 66, 0.9);
+        letter-spacing: 0.08em;
+        line-height: 160%;
+    }
+    a{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        font-size: 15px;
+        color: rgb(0, 0, 255);
+        letter-spacing: 0.02em;
+        line-height: 160%;
+    }
+    footer a{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        text-decoration: none;
+        font-size: 13px;
+        color: rgb(48, 48, 66);
+        letter-spacing: 0.04em;
+        line-height: 160%;
+    }
+    footer a:hover{
+        font-weight: 300;
+        text-decoration: underline;
+        color: rgb(0, 0, 255);
+    }
+    header #one a, #one a{
+        text-decoration: none;
+        color: rgb(48, 48, 66);
+    }
+    #footerDataP{
+        font-weight: 300;
+    }
+    #footTitle{
+        font-family: 'Corinthia', cursive;
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 1.1;
+    }
+    footer #footLink a{
+        text-decoration: none;
+    }
+    .footA{
+        line-height: 160%;
+    }
+    footer #btmfoot{
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        line-height: 100%;
+        color: rgb(48, 48, 66);
+    }
 }
 
 @media screen and (min-width: 1024px) {
