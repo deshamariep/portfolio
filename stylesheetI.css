@@ -24,18 +24,17 @@
         margin: 8px 0 0;
         text-align: left;
     }
-    /* Email + LinkedIn line: wrap so they don't crowd */
     #dataTitle p {
         margin: 14px 0;
         font-size: 14px;
         font-weight: 400;
         color: rgb(48, 48, 66);
         text-align: left;
-        line-height: 2;          /* extra line-height gives breathing room */
+        line-height: 2;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 6px 12px;           /* vertical gap 6px, horizontal 12px */
+        gap: 6px 12px;
     }
     #dataTitle a {
         font-size: 14px;
@@ -51,7 +50,6 @@
     }
     .smolP { font-size: 11px !important; margin: 0; }
 
-    /* Email copy — simplified for touch */
     .email-wrapper { position: relative; display: inline-block; }
     .copy-hover-label { display: none; }
     .copy-notification {
@@ -88,7 +86,7 @@
         border-radius: 14px;
         width: 100% !important;
         height: auto !important;
-        min-height: 0;
+        min-height: 340px;         
         margin-bottom: 16px;
         text-align: left;
         overflow: hidden;
@@ -106,55 +104,63 @@
         transform: none !important;
     }
 
-    /* First wide card */
     #amplfyData {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 24px 16px 0;
+        gap: 0;
     }
-    #amplfyData div { flex: none; margin: 0; width: 100%; }
+    #amplfyData div {
+        flex: none;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
     #amplfyData .csImg {
-        width: 100% !important;
-        height: 140px !important;   /* fixed height so image doesn't dominate */
-        object-fit: cover;
+        width: auto !important;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: 200px;
+        object-fit: contain;
         display: block;
     }
 
-    /* Pair of cards: stack */
     .data { display: flex; flex-direction: column; gap: 0; }
 
-    /* All card images: constrained height */
     .csImg {
-        width: 100% !important;
-        height: 140px !important;
-        object-fit: cover;
-        object-position: top center;
+        width: auto !important;
+        height: auto !important;
+        max-width: 90% !important;  
+        max-height: 200px;
+        object-fit: contain;
         display: block;
-        margin: 0;
+        margin: 24px auto 0;   
         transition: none;
     }
     .dataCS:hover .csImg { transform: none; }
 
-    /* Card text: static position, all white */
     .csText {
         position: static !important;
-        padding: 14px 16px 18px !important;
+        padding: 16px 16px 20px !important;
         bottom: auto;
     }
     .csText h3 {
-        font-size: 20px !important;
-        margin: 4px 0 6px !important;
+        font-size: 22px !important;
+        margin: 6px 0 6px !important;  
         color: white !important;
     }
     .csText h4 {
         color: white !important;
-        margin: 0;
+        margin: 6px 0 0 !important;   
     }
     .csText p {
         color: white !important;
         margin: 4px 0 0;
         font-size: 13px;
+        line-height: 1.5;
     }
-    /* Make sure subtext & pill are white too */
     .csSubText { color: white !important; font-weight: 500; }
     .csPill {
         font-family: 'DM Sans', sans-serif;
@@ -166,10 +172,9 @@
         color: white !important;
         border-radius: 16px;
         translate: 0 !important;
-        margin-bottom: 6px;
+        margin-bottom: 10px;      
     }
 
-    /* No hover lift on touch */
     a .dataCS:hover { transform: none !important; }
 
     #bg    { background: linear-gradient(to right, rgb(145, 184, 184), rgb(62, 137, 141)); }
@@ -217,7 +222,6 @@
     #fillTime h3 { margin: 0 0 12px; }
     #helloMe h2 { margin: 0 0 8px; }
 
-    /* Toolbox: tighter gap so icons fit one row */
     #desktop {
         padding: 10px 12px 14px !important;
         margin-top: 16px;
@@ -241,7 +245,7 @@
     #dataDesktopBar {
         display: flex;
         flex-wrap: wrap;
-        gap: 6px;               /* tighter gap → all icons fit */
+        gap: 6px;
         justify-content: flex-start;
         align-items: center;
     }
@@ -249,7 +253,6 @@
     .dock-item img { width: 28px !important; height: 28px !important; transition: none; }
     .dock-label { display: none !important; }
 
-    /* About photo */
     #headShot { position: static !important; display: flex; justify-content: center; margin-bottom: 40px; }
     #headShot img {
         position: static !important;
@@ -274,7 +277,6 @@
         --text-color: rgb(48, 48, 66);
     }
     body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; background-color: var(--bg-color); }
-
     main { margin: 0 32px; color: var(--text-color); letter-spacing: 0.03em; line-height: 160%; }
 
     #dataTitle h3 { margin: 8px 0 0; text-align: left; }
@@ -329,7 +331,7 @@
         border-radius: 14px;
         width: 100% !important;
         height: auto !important;
-        min-height: 0;
+        min-height: 360px;
         margin-bottom: 16px;
         text-align: left;
         overflow: hidden;
@@ -346,28 +348,41 @@
     }
     a .dataCS:hover { transform: translateY(-4px); }
 
-    #amplfyData { display: flex; flex-direction: row; align-items: center; }
-    #amplfyData div { flex: 1; margin: 32px auto; }
-    #amplfyData .csImg { width: 100% !important; height: 160px !important; object-fit: cover; display: block; }
+    #amplfyData {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 24px 16px 0;
+        gap: 16px;
+    }
+    #amplfyData div { flex: 1; margin: 0; display: flex; justify-content: center; }
+    #amplfyData .csImg {
+        width: auto !important;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: 220px;
+        object-fit: contain;
+        display: block;
+    }
 
     .data { display: flex; flex-direction: row; gap: 16px; }
 
     .csImg {
-        width: 100% !important;
-        height: 160px !important;
-        object-fit: cover;
-        object-position: top center;
+        width: auto !important;
+        height: auto !important;
+        max-width: 90% !important;
+        max-height: 220px;
+        object-fit: contain;
         display: block;
-        margin: auto;
+        margin: 24px auto 0;
         transition: transform 0.5s ease;
     }
-    .dataCS:hover .csImg { transform: scale(1.05); }
+    .dataCS:hover .csImg { transform: scale(1.03); }
 
-    /* Card text: all white */
-    .csText { position: static !important; padding: 14px 16px 18px !important; bottom: auto; }
-    .csText h3 { font-size: 22px !important; margin: 4px 0 6px !important; color: white !important; }
-    .csText h4 { color: white !important; margin: 0; }
-    .csText p { color: white !important; margin: 4px 0 0; font-size: 13px; }
+    .csText { position: static !important; padding: 16px 16px 20px !important; bottom: auto; }
+    .csText h3 { font-size: 24px !important; margin: 6px 0 6px !important; color: white !important; }
+    .csText h4 { color: white !important; margin: 6px 0 0 !important; }
+    .csText p { color: white !important; margin: 4px 0 0; font-size: 13px; line-height: 1.5; }
     .csSubText { color: white !important; font-weight: 500; }
     .csPill {
         font-family: 'DM Sans', sans-serif;
@@ -379,7 +394,7 @@
         color: white !important;
         border-radius: 16px;
         translate: 0 !important;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
     }
 
     #bg    { background: linear-gradient(to right, rgb(145, 184, 184), rgb(62, 137, 141)); }
@@ -474,7 +489,6 @@
 }
   
 @media screen and (min-width: 1024px) {
-    /* Add at the very top */
     :root {
         --bg-color: rgb(255, 255, 255);
         --text-color: rgb(48, 48, 66);
