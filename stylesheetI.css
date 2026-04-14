@@ -108,15 +108,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 24px 16px 0;
         gap: 0;
     }
     #amplfyData div {
         flex: none;
         margin: 0;
         width: 100%;
-        display: flex;
         justify-content: center;
+        padding: 0px 16px 0px;
     }
     #amplfyData .csImg {
         width: auto !important;
@@ -171,8 +170,7 @@
         background: rgba(255, 255, 255, 0.25);
         color: white !important;
         border-radius: 16px;
-        translate: 0 !important;
-        margin-bottom: 10px;      
+        translate: 0 -8px !important;      
     }
 
     a .dataCS:hover { transform: none !important; }
