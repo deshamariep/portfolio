@@ -1,12 +1,5 @@
-/* Add at the very top */
-:root {
-    --bg-color: rgb(255, 255, 255);
-    --text-color: rgb(48, 48, 66);
-}
-  
 @media screen and (max-width: 767px) {
- 
-    /* ── Root & body ── */
+
     :root {
         --bg-color: rgb(255, 255, 255);
         --text-color: rgb(48, 48, 66);
@@ -18,55 +11,49 @@
         overflow-x: hidden;
         background-color: var(--bg-color);
     }
- 
-    /* ── Main wrapper ── */
+
     main {
         margin: 0 20px;
         color: var(--text-color);
         letter-spacing: 0.03em;
         line-height: 160%;
     }
- 
-    /* ── Hero content ── */
+
+    /* ── Hero text ── */
     #dataTitle h3 {
         margin: 8px 0 0;
         text-align: left;
     }
+    /* Email + LinkedIn line: wrap so they don't crowd */
     #dataTitle p {
-        margin: 12px 0;
+        margin: 14px 0;
         font-size: 14px;
         font-weight: 400;
         color: rgb(48, 48, 66);
         text-align: left;
-        line-height: 175%;
+        line-height: 2;          /* extra line-height gives breathing room */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 12px;           /* vertical gap 6px, horizontal 12px */
     }
     #dataTitle a {
         font-size: 14px;
         font-weight: 400;
         color: rgb(48, 48, 66);
     }
-    .grey {
-        color: rgba(48, 48, 66, 0.5);
-    }
+    .grey { color: rgba(48, 48, 66, 0.5); }
     .exphighlight {
         background: linear-gradient(135deg, #005eff, #c200ff);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    .smolP {
-        font-size: 11px !important;
-        margin: 0;
-    }
- 
-    /* Email copy tooltip — simplified for touch */
-    .email-wrapper {
-        position: relative;
-        display: inline-block;
-    }
-    .copy-hover-label {
-        display: none; /* hover labels don't apply on touch */
-    }
+    .smolP { font-size: 11px !important; margin: 0; }
+
+    /* Email copy — simplified for touch */
+    .email-wrapper { position: relative; display: inline-block; }
+    .copy-hover-label { display: none; }
     .copy-notification {
         position: absolute;
         bottom: calc(100% + 6px);
@@ -83,15 +70,9 @@
         transition: opacity 0.2s ease, transform 0.2s ease;
         z-index: 101;
     }
-    .copy-notification.show {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-    .copy-email {
-        pointer-events: auto;
-        cursor: pointer;
-    }
- 
+    .copy-notification.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .copy-email { pointer-events: auto; cursor: pointer; }
+
     /* ── MY WORK ── */
     #query {
         width: 100%;
@@ -99,22 +80,15 @@
         padding: 0;
         box-sizing: border-box;
     }
-    #query h2 {
-        margin: 0 0 16px;
-    }
-    #caseStudies {
-        width: 100%;
-        margin: 0;
-        color: var(--text-color);
-    }
- 
-    /* All cards: full width, auto height, no entrance animation */
+    #query h2 { margin: 0 0 16px; }
+    #caseStudies { width: 100%; margin: 0; color: var(--text-color); }
+
     .dataCS {
         display: block;
         border-radius: 14px;
         width: 100% !important;
         height: auto !important;
-        min-height: 260px;
+        min-height: 0;
         margin-bottom: 16px;
         text-align: left;
         overflow: hidden;
@@ -124,7 +98,6 @@
         animation: none !important;
         will-change: auto;
     }
-    /* Kill the hero.loaded entrance animations on mobile */
     .hero.loaded ~ main #caseStudies > a:first-child .dataCS,
     .hero.loaded ~ main #caseStudies .data:nth-child(2) .dataCS:nth-child(1),
     .hero.loaded ~ main #caseStudies .data:nth-child(2) .dataCS:nth-child(2) {
@@ -132,142 +105,99 @@
         opacity: 1 !important;
         transform: none !important;
     }
- 
-    /* First wide card: stack image + text */
+
+    /* First wide card */
     #amplfyData {
         display: flex;
         flex-direction: column;
     }
-    #amplfyData div {
-        flex: none;
-        margin: 0;
-        width: 100%;
-    }
+    #amplfyData div { flex: none; margin: 0; width: 100%; }
     #amplfyData .csImg {
         width: 100% !important;
-        height: auto !important;
-        max-height: 180px;
+        height: 140px !important;   /* fixed height so image doesn't dominate */
         object-fit: cover;
         display: block;
     }
- 
-    /* Side-by-side pair: stack vertically */
-    .data {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
- 
-    /* Card images */
+
+    /* Pair of cards: stack */
+    .data { display: flex; flex-direction: column; gap: 0; }
+
+    /* All card images: constrained height */
     .csImg {
         width: 100% !important;
-        height: auto !important;
-        max-height: 160px;
+        height: 140px !important;
         object-fit: cover;
+        object-position: top center;
         display: block;
         margin: 0;
+        transition: none;
     }
- 
-    /* Card text: static, not absolute */
+    .dataCS:hover .csImg { transform: none; }
+
+    /* Card text: static position, all white */
     .csText {
         position: static !important;
-        padding: 16px !important;
+        padding: 14px 16px 18px !important;
         bottom: auto;
     }
     .csText h3 {
-        font-size: 22px !important;
-        margin: 4px 0 !important;
+        font-size: 20px !important;
+        margin: 4px 0 6px !important;
+        color: white !important;
     }
-    .csText h4, .csText p {
+    .csText h4 {
+        color: white !important;
         margin: 0;
-        color: white;
     }
+    .csText p {
+        color: white !important;
+        margin: 4px 0 0;
+        font-size: 13px;
+    }
+    /* Make sure subtext & pill are white too */
+    .csSubText { color: white !important; font-weight: 500; }
     .csPill {
         font-family: 'DM Sans', sans-serif;
-        font-weight: 400;
         font-size: 11px;
         letter-spacing: 0.08em;
         display: inline-block;
         padding: 3px 8px;
-        background: rgba(217, 217, 217, 0.3);
-        white-space: nowrap;
+        background: rgba(255, 255, 255, 0.25);
+        color: white !important;
         border-radius: 16px;
         translate: 0 !important;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
     }
-    .csSubText {
-        font-weight: 500;
-    }
- 
+
     /* No hover lift on touch */
-    a .dataCS:hover {
-        transform: none !important;
-    }
-    .dataCS:hover .csImg {
-        transform: none !important;
-    }
- 
-    /* Card colors preserved */
+    a .dataCS:hover { transform: none !important; }
+
     #bg    { background: linear-gradient(to right, rgb(145, 184, 184), rgb(62, 137, 141)); }
     #tap   { background: linear-gradient(to right, rgb(81, 102, 165), rgb(39, 80, 121)); }
     #gst   { background: linear-gradient(to right, rgb(217, 194, 64), rgb(207, 170, 40)); }
     #attune{ background: linear-gradient(to right, rgb(150, 102, 213), rgb(115, 85, 174)); }
     #spots { background: linear-gradient(to right, rgb(221, 128, 21), rgb(220, 148, 40)); }
- 
+
     /* ── PRACTICE & PLAY ── */
-    #sideQuest {
-        height: auto !important;
-        margin: 48px 0 !important;
-        background-color: transparent;
-    }
-    #practiceSection {
-        padding: 0 0 16px;
-        margin-bottom: 8px;
-    }
-    #practiceSection h2 {
-        margin: 8px 0;
-        color: rgb(255, 255, 255);
-    }
-    #practiceSection p {
-        color: rgba(255, 255, 255, 0.6);
-        margin: 0;
-        font-size: 12px;
-    }
- 
-    #experiments {
-        position: static !important;
-        isolation: isolate;
-        width: 100%;
-        margin: 0 !important;
-    }
-    #exp {
-        display: block;
-    }
+    #sideQuest { height: auto !important; margin: 48px 0 !important; background-color: transparent; }
+    #practiceSection { padding: 0 0 16px; margin-bottom: 8px; }
+    #practiceSection h2 { margin: 8px 0; color: rgb(255, 255, 255); }
+    #practiceSection p { color: rgba(255, 255, 255, 0.6); margin: 0; font-size: 12px; }
+
+    #experiments { position: static !important; isolation: isolate; width: 100%; margin: 0 !important; }
+    #exp { display: block; }
     .exp-item {
         display: flex;
         gap: 16px;
         padding: 14px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.3);
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        z-index: 1;
     }
-    .experiment {
-        flex: 6;
-        padding: 4px 0;
-    }
-    .experiment h3, .experiment p {
-        margin: 2px 0;
-    }
-    .exp-item h3, .exp-item p {
-        color: rgba(255, 255, 255, 0.7);
-    }
-    .expRead {
-        flex: none;
-        display: flex;
-        align-items: center;
-    }
- 
-    /* Video/image col: flows below the list, not absolutely positioned */
+    .experiment { flex: 6; padding: 4px 0; }
+    .experiment h3, .experiment p { margin: 2px 0; }
+    .exp-item h3, .exp-item p { color: rgba(255, 255, 255, 0.7); }
+    .expRead { flex: none; display: flex; align-items: center; }
+
     #ExpVidCol {
         position: static !important;
         width: 100% !important;
@@ -277,46 +207,17 @@
         border-radius: 12px;
         overflow: hidden;
     }
-    .exp-video {
-        width: 100%;
-        max-width: 100% !important;
-        height: auto;
-        border-radius: 12px;
-        object-fit: cover;
-        display: block;
-    }
-    .exp-image {
-        display: none;
-        width: 100%;
-        max-width: 100% !important;
-        height: auto;
-        border-radius: 12px;
-    }
- 
+    .exp-video { width: 100%; max-width: 100% !important; height: auto; border-radius: 12px; display: block; }
+    .exp-image { display: none; width: 100%; max-width: 100% !important; height: auto; border-radius: 12px; }
+
     /* ── ABOUT ── */
-    #aboutMeSec {
-        color: var(--text-color);
-        margin: 0 auto !important;
-        width: 100% !important;
-        box-sizing: border-box;
-    }
-    #aboutMeSec .data {
-        flex-direction: column !important;
-        gap: 32px;
-    }
-    #fillTime {
-        margin: 0 !important;
-        width: 100% !important;
-        box-sizing: border-box;
-    }
-    #fillTime h3 {
-        margin: 0 0 12px;
-    }
-    #helloMe h2 {
-        margin: 0 0 8px;
-    }
- 
-    /* Toolbox */
+    #aboutMeSec { color: var(--text-color); margin: 0 auto !important; width: 100% !important; box-sizing: border-box; }
+    #aboutMeSec .data { flex-direction: column !important; gap: 32px; }
+    #fillTime { margin: 0 !important; width: 100% !important; box-sizing: border-box; }
+    #fillTime h3 { margin: 0 0 12px; }
+    #helloMe h2 { margin: 0 0 8px; }
+
+    /* Toolbox: tighter gap so icons fit one row */
     #desktop {
         padding: 10px 12px 14px !important;
         margin-top: 16px;
@@ -335,101 +236,61 @@
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        color: transparent;
         margin: 0 0 8px;
     }
     #dataDesktopBar {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 6px;               /* tighter gap → all icons fit */
         justify-content: flex-start;
-    }
-    .dock-item {
-        position: relative;
-        display: flex;
-        justify-content: center;
         align-items: center;
     }
-    .dock-item img {
-        width: 32px !important;
-        height: 32px !important;
-        transform-origin: bottom center;
-        transition: none;
-    }
-    /* Tooltips don't work on touch — hide them */
-    .dock-label {
-        display: none !important;
-    }
- 
+    .dock-item { position: relative; display: flex; justify-content: center; align-items: center; }
+    .dock-item img { width: 28px !important; height: 28px !important; transition: none; }
+    .dock-label { display: none !important; }
+
     /* About photo */
-    #headShot {
-        position: static !important;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 40px;
-    }
+    #headShot { position: static !important; display: flex; justify-content: center; margin-bottom: 40px; }
     #headShot img {
         position: static !important;
         width: 100% !important;
         max-width: 100%;
-        height: 380px !important;
+        height: 340px !important;
         border-radius: 16px;
         object-fit: cover;
         object-position: top center;
     }
- 
-    /* Reduced motion */
+
     @media (prefers-reduced-motion: reduce) {
-        * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-        }
+        * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
     }
 }
- 
- 
+
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
- 
-    /* ── Root & body ── */
+
     :root {
         --bg-color: rgb(255, 255, 255);
         --text-color: rgb(48, 48, 66);
     }
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        overflow-x: hidden;
-        background-color: var(--bg-color);
-    }
- 
-    /* ── Main wrapper ── */
-    main {
-        margin: 0 32px;
-        color: var(--text-color);
-        letter-spacing: 0.03em;
-        line-height: 160%;
-    }
- 
-    /* ── Hero content ── */
-    #dataTitle h3 {
-        margin: 8px 0 0;
-        text-align: left;
-    }
+    body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; background-color: var(--bg-color); }
+
+    main { margin: 0 32px; color: var(--text-color); letter-spacing: 0.03em; line-height: 160%; }
+
+    #dataTitle h3 { margin: 8px 0 0; text-align: left; }
     #dataTitle p {
-        margin: 12px 0;
+        margin: 14px 0;
         font-size: 15px;
         font-weight: 400;
         color: rgb(48, 48, 66);
         text-align: left;
-        line-height: 175%;
+        line-height: 2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 16px;
     }
-    #dataTitle a {
-        font-size: 15px;
-        font-weight: 400;
-        color: rgb(48, 48, 66);
-    }
+    #dataTitle a { font-size: 15px; font-weight: 400; color: rgb(48, 48, 66); }
     .grey { color: rgba(48, 48, 66, 0.5); }
     .exphighlight {
         background: linear-gradient(135deg, #005eff, #c200ff);
@@ -437,12 +298,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    .smolP {
-        font-size: 12px !important;
-        margin: 0;
-    }
- 
-    /* Email copy */
+    .smolP { font-size: 12px !important; margin: 0; }
     .email-wrapper { position: relative; display: inline-block; }
     .copy-hover-label { display: none; }
     .copy-notification {
@@ -461,31 +317,19 @@
         transition: opacity 0.2s ease, transform 0.2s ease;
         z-index: 101;
     }
-    .copy-notification.show {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
+    .copy-notification.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     .copy-email { pointer-events: auto; cursor: pointer; }
- 
+
     /* ── MY WORK ── */
-    #query {
-        width: 100%;
-        margin: 40px auto 24px;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    #caseStudies {
-        width: 100%;
-        margin: 0;
-        color: var(--text-color);
-    }
- 
+    #query { width: 100%; margin: 40px auto 24px; padding: 0; box-sizing: border-box; }
+    #caseStudies { width: 100%; margin: 0; color: var(--text-color); }
+
     .dataCS {
         display: block;
         border-radius: 14px;
         width: 100% !important;
         height: auto !important;
-        min-height: 280px;
+        min-height: 0;
         margin-bottom: 16px;
         text-align: left;
         overflow: hidden;
@@ -498,80 +342,59 @@
     .hero.loaded ~ main #caseStudies > a:first-child .dataCS,
     .hero.loaded ~ main #caseStudies .data:nth-child(2) .dataCS:nth-child(1),
     .hero.loaded ~ main #caseStudies .data:nth-child(2) .dataCS:nth-child(2) {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
+        animation: none !important; opacity: 1 !important; transform: none !important;
     }
     a .dataCS:hover { transform: translateY(-4px); }
- 
-    #amplfyData {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+
+    #amplfyData { display: flex; flex-direction: row; align-items: center; }
     #amplfyData div { flex: 1; margin: 32px auto; }
-    #amplfyData .csImg {
-        width: 100% !important;
-        height: auto !important;
-    }
- 
-    .data {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-    }
- 
+    #amplfyData .csImg { width: 100% !important; height: 160px !important; object-fit: cover; display: block; }
+
+    .data { display: flex; flex-direction: row; gap: 16px; }
+
     .csImg {
         width: 100% !important;
-        height: auto !important;
-        max-height: 200px;
+        height: 160px !important;
         object-fit: cover;
+        object-position: top center;
         display: block;
         margin: auto;
         transition: transform 0.5s ease;
     }
     .dataCS:hover .csImg { transform: scale(1.05); }
- 
-    .csText {
-        position: static !important;
-        padding: 16px !important;
-        bottom: auto;
-    }
-    .csText h3 { font-size: 26px !important; margin: 4px 0 !important; }
-    .csText h4, .csText p { margin: 0; color: white; }
+
+    /* Card text: all white */
+    .csText { position: static !important; padding: 14px 16px 18px !important; bottom: auto; }
+    .csText h3 { font-size: 22px !important; margin: 4px 0 6px !important; color: white !important; }
+    .csText h4 { color: white !important; margin: 0; }
+    .csText p { color: white !important; margin: 4px 0 0; font-size: 13px; }
+    .csSubText { color: white !important; font-weight: 500; }
     .csPill {
         font-family: 'DM Sans', sans-serif;
         font-size: 11px;
         letter-spacing: 0.08em;
         display: inline-block;
         padding: 3px 8px;
-        background: rgba(217, 217, 217, 0.3);
+        background: rgba(255, 255, 255, 0.25);
+        color: white !important;
         border-radius: 16px;
         translate: 0 !important;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
     }
- 
+
     #bg    { background: linear-gradient(to right, rgb(145, 184, 184), rgb(62, 137, 141)); }
     #tap   { background: linear-gradient(to right, rgb(81, 102, 165), rgb(39, 80, 121)); }
     #gst   { background: linear-gradient(to right, rgb(217, 194, 64), rgb(207, 170, 40)); }
     #attune{ background: linear-gradient(to right, rgb(150, 102, 213), rgb(115, 85, 174)); }
     #spots { background: linear-gradient(to right, rgb(221, 128, 21), rgb(220, 148, 40)); }
- 
+
     /* ── PRACTICE & PLAY ── */
-    #sideQuest {
-        height: auto !important;
-        margin: 56px 0 !important;
-        background-color: transparent;
-    }
+    #sideQuest { height: auto !important; margin: 56px 0 !important; background-color: transparent; }
     #practiceSection { padding: 0 0 16px; }
     #practiceSection h2 { margin: 8px 0; color: rgb(255, 255, 255); }
     #practiceSection p { color: rgba(255, 255, 255, 0.6); margin: 0; font-size: 13px; }
- 
-    #experiments {
-        position: static !important;
-        width: 100%;
-        margin: 0 !important;
-    }
+
+    #experiments { position: static !important; width: 100%; margin: 0 !important; }
     .exp-item {
         display: flex;
         gap: 24px;
@@ -582,54 +405,25 @@
     }
     .exp-item h3, .exp-item p { color: rgba(255, 255, 255, 0.6); transition: color 0.3s ease; }
     .exp-item:hover h3, .exp-item:hover p { color: rgb(255, 255, 255); }
-    .exp-item:hover {
-        border-top-color: rgba(255, 255, 255, 0.8);
-        border-bottom-color: rgba(255, 255, 255, 0.8);
-    }
+    .exp-item:hover { border-top-color: rgba(255,255,255,0.8); border-bottom-color: rgba(255,255,255,0.8); }
     .experiment { flex: 6; padding: 8px 0; }
     .expRead { flex: 1; display: flex; align-items: center; }
- 
+
     #ExpVidCol {
         position: static !important;
         width: 100% !important;
-        top: auto !important;
-        right: auto !important;
+        top: auto !important; right: auto !important;
         margin-top: 24px !important;
-        border-radius: 12px;
-        overflow: hidden;
+        border-radius: 12px; overflow: hidden;
     }
-    .exp-video {
-        width: 100%;
-        max-width: 100% !important;
-        height: auto;
-        border-radius: 12px;
-        display: block;
-    }
-    .exp-image {
-        display: none;
-        width: 100%;
-        max-width: 100% !important;
-        height: auto;
-        border-radius: 12px;
-    }
- 
+    .exp-video { width: 100%; max-width: 100% !important; height: auto; border-radius: 12px; display: block; }
+    .exp-image { display: none; width: 100%; max-width: 100% !important; height: auto; border-radius: 12px; }
+
     /* ── ABOUT ── */
-    #aboutMeSec {
-        color: var(--text-color);
-        margin: 0 auto !important;
-        width: 100% !important;
-        box-sizing: border-box;
-    }
-    #aboutMeSec .data {
-        flex-direction: column !important;
-        gap: 32px;
-    }
-    #fillTime {
-        margin: 0 !important;
-        width: 100% !important;
-        box-sizing: border-box;
-    }
- 
+    #aboutMeSec { color: var(--text-color); margin: 0 auto !important; width: 100% !important; box-sizing: border-box; }
+    #aboutMeSec .data { flex-direction: column !important; gap: 32px; }
+    #fillTime { margin: 0 !important; width: 100% !important; box-sizing: border-box; }
+
     #desktop {
         padding: 12px 16px 16px !important;
         margin-top: 16px;
@@ -650,56 +444,41 @@
         -webkit-text-fill-color: transparent;
         margin: 0 0 8px;
     }
-    #dataDesktopBar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+    #dataDesktopBar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .dock-item { position: relative; display: flex; justify-content: center; align-items: center; }
     .dock-item img { width: 34px !important; height: 34px !important; transition: transform 0.2s ease; }
     .dock-item img:hover { transform: scale(1.15); }
     .dock-label {
-        position: absolute;
-        top: -38px;
-        background: rgb(217, 217, 217);
-        color: rgb(48, 48, 66);
-        white-space: nowrap;
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 13px;
-        opacity: 0;
-        transform: translateY(5px);
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
+        position: absolute; top: -38px;
+        background: rgb(217, 217, 217); color: rgb(48, 48, 66);
+        white-space: nowrap; padding: 4px 8px; border-radius: 6px;
+        font-size: 13px; opacity: 0; transform: translateY(5px);
+        pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease;
     }
     .dock-item img:hover + .dock-label { opacity: 1; transform: translateY(0); }
- 
-    #headShot {
-        position: static !important;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 48px;
-    }
+
+    #headShot { position: static !important; display: flex; justify-content: center; margin-bottom: 48px; }
     #headShot img {
         position: static !important;
         width: 100% !important;
         max-width: 480px;
-        height: 420px !important;
+        height: 400px !important;
         border-radius: 16px;
         object-fit: cover;
         object-position: top center;
     }
- 
+
     @media (prefers-reduced-motion: reduce) {
-        * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-        }
+        * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
     }
 }
   
 @media screen and (min-width: 1024px) {
+    /* Add at the very top */
+    :root {
+        --bg-color: rgb(255, 255, 255);
+        --text-color: rgb(48, 48, 66);
+    }
     .mobileIncomplete {
         display: none;
     }
