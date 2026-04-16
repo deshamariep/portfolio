@@ -109,24 +109,16 @@
     #amplfyData {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding: 24px 16px 0;
-        gap: 0;
     }
     #amplfyData div {
         flex: none;
         margin: 0;
         width: 100%;
-        display: flex;
-        justify-content: center;
     }
     /* SVG image: scale down to fit, never crop */
     #amplfyData .csImg {
         width: auto !important;
-        height: auto !important;
-        max-width: 100% !important;
-        max-height: 200px;
-        object-fit: contain;
+        object-fit: cover;
         display: block;
     }
 
@@ -177,8 +169,7 @@
         background: rgba(255, 255, 255, 0.25);
         color: white !important;
         border-radius: 16px;
-        translate: 0 !important;
-        margin-bottom: 10px;        /* gap between pill and company name */
+        translate: 0px -8px;
     }
 
     a .dataCS:hover { transform: none !important; }
