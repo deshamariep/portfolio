@@ -1,55 +1,6 @@
 (function () {
   'use strict';
 
-  // ========== CURSOR (Optimized) ==========
-  const cursor = document.getElementById("ambient-cursor");
-  if (cursor) {
-    let pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    let target = { x: pos.x, y: pos.y };
-    let animating = false;
-
-    window.addEventListener("mousemove", (e) => {
-      target.x = e.clientX;
-      target.y = e.clientY;
-      
-      if (!animating) {
-        animating = true;
-        animate();
-      }
-    }, { passive: true });
-
-    function animate() {
-      const dx = target.x - pos.x;
-      const dy = target.y - pos.y;
-      
-      // Stop animating if cursor hasn't moved significantly
-      if (Math.abs(dx) < 0.1 && Math.abs(dy) < 0.1) {
-        animating = false;
-        return;
-      }
-      
-      pos.x += dx * 0.22;
-      pos.y += dy * 0.22;
-      cursor.style.transform = `translate(${pos.x}px, ${pos.y}px) translate(-50%, -50%)`;
-      
-      requestAnimationFrame(animate);
-    }
-
-    document.querySelectorAll("a, button").forEach(el => {
-      el.addEventListener("mouseenter", () => {
-        cursor.style.width = "44px";
-        cursor.style.height = "44px";
-        cursor.style.opacity = "0.35";  /* dims on hover */
-      }, { passive: true });
-    
-      el.addEventListener("mouseleave", () => {
-        cursor.style.width = "28px";
-        cursor.style.height = "28px";
-        cursor.style.opacity = "0.85";  /* back to full */
-      }, { passive: true });
-    });
-  }
-
   // ========== COPY EMAIL ==========
   window.copyEmail = function() {
     navigator.clipboard.writeText('deshapoindexter@gmail.com');
