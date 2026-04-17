@@ -349,7 +349,7 @@
     .mcMedia {
         width: 100%;
         height: auto;
-        max-height: 160px;
+        max-height: 350px;
         object-fit: contain;
         display: block;
         border-radius: 14px;
