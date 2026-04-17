@@ -52,52 +52,6 @@
         width: 100%;
     }
 
-    .hero {
-        height: auto !important;
-        min-height: 0 !important;
-        padding: 0 !important;
-    }
-    .hero-top {
-        position: fixed !important;
-        top: 12px !important;
-        left: 12px !important;
-        right: 12px !important;
-        width: calc(100% - 24px) !important;
-        height: auto !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        padding: 12px 20px !important;
-        z-index: 9995 !important;
-        box-sizing: border-box !important;
-        background-color: rgba(255, 255, 255, 0.9) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-        border: 1px solid rgba(255, 255, 255, 0.4) !important;
-        border-radius: 30px !important;
-        transform: translateY(0) !important; 
-    }
-    .hero-top.sticky,
-    .hero-top.sticky.visible {
-        transform: translateY(0) !important;
-    }
-    #hLogo img { width: 36px !important; height: 36px !important; }
-    .hero-top nav ul {
-        display: flex !important;
-        gap: 16px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        list-style: none !important;
-    }
-    .hero-top nav ul li a {
-        font-size: 12px !important;
-        font-weight: 500 !important;
-        letter-spacing: 0.08em !important;
-        color: rgb(48, 48, 66) !important;
-        text-decoration: none !important;
-    }
-
     #query {
         width: 100% !important;
         margin: 0 !important;
@@ -220,34 +174,6 @@
 
     body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
     main { margin: 0 !important; padding: 0 32px; box-sizing: border-box; width: 100%; }
-
-    .hero { height: auto !important; min-height: 0 !important; padding: 0 !important; }
-    .hero-top {
-        position: fixed !important;
-        top: 12px !important;
-        left: 24px !important;
-        right: 24px !important;
-        width: calc(100% - 48px) !important;
-        height: auto !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        padding: 14px 28px !important;
-        z-index: 9995 !important;
-        box-sizing: border-box !important;
-        background-color: rgba(255, 255, 255, 0.9) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-        border: 1px solid rgba(255, 255, 255, 0.4) !important;
-        border-radius: 40px !important;
-        transform: translateY(0) !important;
-    }
-    .hero-top.sticky,
-    .hero-top.sticky.visible { transform: translateY(0) !important; }
-    #hLogo img { width: 44px !important; height: 44px !important; }
-    .hero-top nav ul { display: flex !important; gap: 20px !important; margin: 0 !important; padding: 0 !important; list-style: none !important; }
-    .hero-top nav ul li a { font-size: 13px !important; font-weight: 500 !important; color: rgb(48, 48, 66) !important; text-decoration: none !important; }
 
     #query { width: 100% !important; margin: 0 !important; padding-top: 100px; box-sizing: border-box; }
     .spaceBtwn { margin: 40px 0 !important; opacity: 1 !important; }
