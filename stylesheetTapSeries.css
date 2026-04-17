@@ -1,5 +1,379 @@
 
+@media screen and (max-width: 767px) {
 
+    /* ── Cursor off ── */
+    html, body { cursor: auto !important; overflow-x: hidden; }
+    #ambient-cursor { display: none !important; }
+
+    /* ── Typography: swap Corinthia → DM Sans for readability ── */
+    h1 {
+        font-family: 'DM Sans', sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+        letter-spacing: -0.01em !important;
+    }
+    h2 {
+        font-family: 'DM Sans', sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 22px !important;
+        line-height: 1.35 !important;
+        letter-spacing: -0.01em !important;
+        margin: 8px 0 !important;
+    }
+    h3 {
+        font-family: 'DM Sans', sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 17px !important;
+        line-height: 1.5 !important;
+    }
+    h4 {
+        font-family: 'DM Sans', sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 11px !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        color: rgba(48, 48, 66, 0.55) !important;
+        margin: 0 0 6px !important;
+    }
+    p, li {
+        font-size: 15px !important;
+        line-height: 1.75 !important;
+    }
+
+    /* ── Body & layout ── */
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    main {
+        margin: 0 !important;
+        padding: 0 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /* ── Hero: short bar, nav always visible ── */
+    .hero {
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+    }
+    .hero-top {
+        position: fixed !important;
+        top: 12px !important;
+        left: 12px !important;
+        right: 12px !important;
+        width: calc(100% - 24px) !important;
+        height: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 12px 20px !important;
+        z-index: 9995 !important;
+        box-sizing: border-box !important;
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        border-radius: 30px !important;
+        transform: translateY(0) !important; /* always visible */
+    }
+    .hero-top.sticky,
+    .hero-top.sticky.visible {
+        transform: translateY(0) !important;
+    }
+    #hLogo img { width: 36px !important; height: 36px !important; }
+    .hero-top nav ul {
+        display: flex !important;
+        gap: 16px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+    .hero-top nav ul li a {
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.08em !important;
+        color: rgb(48, 48, 66) !important;
+        text-decoration: none !important;
+    }
+
+    /* ── Section spacing ── */
+    #query {
+        width: 100% !important;
+        margin: 0 !important;
+        padding-top: 80px; /* clears fixed nav */
+        box-sizing: border-box;
+    }
+
+    .spaceBtwn {
+        margin: 32px 0 !important;
+        padding: 0;
+        opacity: 1 !important;
+    }
+    .newMarginTitle {
+        width: 100% !important;
+        margin: 24px 0 20px !important;
+        font-size: 24px !important;
+    }
+    .newMargin {
+        width: 100% !important;
+        margin: 48px 0 !important;
+    }
+
+    /* ── All images: full width, never overflow ── */
+    img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        margin: 12px auto !important;
+    }
+    .imgSpace {
+        width: 100% !important;
+        height: auto !important;
+        margin: 16px auto !important;
+    }
+
+    /* ── Info box: stack vertically ── */
+    #infoBox {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-top: 24px !important;
+        padding: 20px !important;
+        background: rgb(246, 246, 247);
+        border-radius: 12px;
+        border: 1px solid rgb(225, 225, 228);
+    }
+    #infoBox div { flex: none !important; }
+    #infoBox h4 { margin: 0 0 2px !important; }
+    #infoBox p { margin: 0 !important; }
+
+    /* ── Ordered list ── */
+    ol {
+        padding-left: 20px;
+        margin: 12px 0;
+    }
+    ol li { margin-bottom: 10px; }
+    ol p { margin: 0 !important; }
+
+    /* ── finaldata: video + image pairs — stack vertically ── */
+    .finaldata {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        align-items: center !important;
+    }
+    .finaldata div {
+        flex: none !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* ── Videos: scale to fit, reasonable height ── */
+    video {
+        width: 100% !important;
+        max-width: 280px !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+        border-radius: 24px !important;
+    }
+    .dataimg {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* ── Highlight color preserved ── */
+    #color { color: #52A3A3; }
+
+    /* ── Footer ── */
+    footer {
+        width: 100% !important;
+        margin: 48px 0 0 !important;
+        padding: 32px 20px 24px !important;
+        box-sizing: border-box !important;
+        border-top: 1px solid rgba(0,0,0,0.06) !important;
+        text-align: left !important;
+        display: block !important;
+        height: auto !important;
+    }
+    footer #footLink {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    #footerData { display: flex; align-items: center; gap: 10px; }
+    #fOne { flex-direction: column; text-align: left; margin: 0; }
+    #footTitle {
+        font-family: 'DM Sans', sans-serif !important;
+        font-size: 24px !important;
+        margin: 4px 0 8px !important;
+        background: linear-gradient(90deg, rgb(70, 138, 255) 0%, rgba(194, 0, 255) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #footerDataP { margin: 0; font-size: 13px; opacity: 0.6; }
+    .fTwo { text-align: left; }
+    .fTwoP { margin: 0 0 8px; font-size: 11px; letter-spacing: 0.08em; }
+    .footA { margin: 4px 0; }
+    footer #btmfoot { margin: 24px 0 0; display: block; opacity: 0.5; font-size: 10px; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    html, body { cursor: auto !important; overflow-x: hidden; }
+    #ambient-cursor { display: none !important; }
+
+    /* ── Typography ── */
+    h1 {
+        font-family: 'DM Sans', sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 34px !important;
+        line-height: 1.3 !important;
+        letter-spacing: -0.01em !important;
+    }
+    h2 {
+        font-family: 'DM Sans', sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 26px !important;
+        line-height: 1.35 !important;
+        letter-spacing: -0.01em !important;
+        margin: 8px 0 !important;
+    }
+    h4 {
+        font-family: 'DM Sans', sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 11px !important;
+        letter-spacing: 0.1em !important;
+        text-transform: uppercase !important;
+        color: rgba(48, 48, 66, 0.55) !important;
+        margin: 0 0 6px !important;
+    }
+    p, li { font-size: 16px !important; line-height: 1.75 !important; }
+
+    body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
+    main { margin: 0 !important; padding: 0 32px; box-sizing: border-box; width: 100%; }
+
+    .hero { height: auto !important; min-height: 0 !important; padding: 0 !important; }
+    .hero-top {
+        position: fixed !important;
+        top: 12px !important;
+        left: 24px !important;
+        right: 24px !important;
+        width: calc(100% - 48px) !important;
+        height: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 14px 28px !important;
+        z-index: 9995 !important;
+        box-sizing: border-box !important;
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        border-radius: 40px !important;
+        transform: translateY(0) !important;
+    }
+    .hero-top.sticky,
+    .hero-top.sticky.visible { transform: translateY(0) !important; }
+    #hLogo img { width: 44px !important; height: 44px !important; }
+    .hero-top nav ul { display: flex !important; gap: 20px !important; margin: 0 !important; padding: 0 !important; list-style: none !important; }
+    .hero-top nav ul li a { font-size: 13px !important; font-weight: 500 !important; color: rgb(48, 48, 66) !important; text-decoration: none !important; }
+
+    #query { width: 100% !important; margin: 0 !important; padding-top: 100px; box-sizing: border-box; }
+    .spaceBtwn { margin: 40px 0 !important; opacity: 1 !important; }
+    .newMarginTitle { width: 100% !important; margin: 32px 0 24px !important; }
+    .newMargin { width: 100% !important; margin: 64px 0 !important; }
+
+    img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        margin: 12px auto !important;
+    }
+    .imgSpace { width: 100% !important; height: auto !important; margin: 20px auto !important; }
+
+    #infoBox {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 24px !important;
+        margin-top: 28px !important;
+        padding: 24px !important;
+        background: rgb(246, 246, 247);
+        border-radius: 12px;
+        border: 1px solid rgb(225, 225, 228);
+    }
+    #infoBox > div { flex: 1 1 40% !important; }
+    #infoBox h4 { margin: 0 0 2px !important; }
+    #infoBox p { margin: 0 !important; }
+
+    ol { padding-left: 24px; margin: 12px 0; }
+    ol li { margin-bottom: 10px; }
+    ol p { margin: 0 !important; }
+
+    .finaldata {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 20px !important;
+        align-items: flex-start !important;
+    }
+    .finaldata div { flex: 1 !important; }
+
+    video {
+        width: 100% !important;
+        max-width: 260px !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+        border-radius: 28px !important;
+    }
+    .dataimg { display: flex !important; justify-content: center !important; width: 100% !important; }
+
+    #color { color: #52A3A3; }
+
+    footer {
+        width: 100% !important;
+        margin: 64px 0 0 !important;
+        padding: 40px 32px 24px !important;
+        box-sizing: border-box !important;
+        border-top: 1px solid rgba(0,0,0,0.06) !important;
+        text-align: left !important;
+        display: block !important;
+        height: auto !important;
+    }
+    footer #footLink { display: flex !important; flex-wrap: wrap !important; gap: 32px !important; margin: 0 !important; width: 100% !important; }
+    #fOne { flex: 1 1 100%; flex-direction: column; text-align: left; margin: 0; }
+    #footTitle {
+        font-family: 'DM Sans', sans-serif !important;
+        font-size: 28px !important;
+        margin: 4px 0 8px !important;
+        background: linear-gradient(90deg, rgb(70, 138, 255) 0%, rgba(194, 0, 255) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #footerDataP { margin: 0; font-size: 14px; opacity: 0.6; }
+    .fTwo { flex: 1 1 auto; text-align: left; }
+    .fTwoP { margin: 0 0 8px; }
+    .footA { margin: 4px 0; }
+    footer #btmfoot { margin: 24px 0 0; display: block; opacity: 0.5; }
+}
 @media screen and (min-width: 1024px){
     .mobileIncomplete {
         display: none; /* Hide the message on larger screens */
