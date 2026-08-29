@@ -1093,12 +1093,13 @@
     .align-label{
         display: block;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         padding: 24px 24px 0px 0px;
+        margin: 0px;
     }
 
     .csPill{
-        flex: 1;
         font-family: 'DM Sans', sans-serif;
         font-weight: 400;
         font-size: 12px;
@@ -1142,7 +1143,6 @@
     
     .csSubText {
         font-weight: 500;
-        flex: 1;
     }
     
     #amplfyData{
