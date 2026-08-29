@@ -1099,6 +1099,11 @@
         margin: 0px;
     }
 
+    .align-label * {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
     .csPill{
         font-family: 'DM Sans', sans-serif;
         font-weight: 400;
