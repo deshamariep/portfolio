@@ -511,9 +511,10 @@
         letter-spacing: 0.08em;
         display: inline-block;
         padding: 3px 8px;
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.20);
         color: white !important;
         border-radius: 16px;
+        border: solid 1px rgba(255, 255, 255, 0.25);
         translate: 0 !important;
         margin-bottom: 10px;
     }
@@ -1089,8 +1090,13 @@
     #none {
         opacity: 0;
     }
+    .align-label{
+        display: block;
+        display: flex;
+    }
 
     .csPill{
+        flex: 1;
         font-family: 'DM Sans', sans-serif;
         font-weight: 400;
         font-size: 12px;
@@ -1099,9 +1105,10 @@
 
         display: inline-block;
         padding: 4px 8px;
-        background: rgb(217, 217, 217, 0.3);
-        white-space: nowrap;
+        background: rgba(255, 255, 255, 0.20);
+        color: white !important;
         border-radius: 16px;
+        border: solid 1px rgba(255, 255, 255, 0.25);
         translate: 0px -16px;
     }
     
@@ -1133,6 +1140,7 @@
     
     .csSubText {
         font-weight: 500;
+        flex: 1;
     }
     
     #amplfyData{
