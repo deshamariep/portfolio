@@ -1116,8 +1116,8 @@
         background: rgba(255, 255, 255, 0.20);
         color: white !important;
         border-radius: 16px;
-        border: solid 1px rgba(255, 255, 255, 0.25);
-        translate: 0px -16px;
+        border: solid 1px rgba(255, 255, 255, 0.23);
+        translate: 0px -8px;
     }
     
     .csImg {
