@@ -78,6 +78,19 @@
         padding: 0;
         box-sizing: border-box;
     }
+
+    /* initial hidden state */
+    #query h2 {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: none;
+    }
+    /* animate in when hero loads */
+    .hero.loaded ~ main #query h2 {
+        animation: slideFadeUp 0.8s ease forwards;
+        animation-delay: 0.4s; /* sits between the h1 and the first card */
+    }
+
     #query h2 { margin: 0 0 16px; }
     #caseStudies { width: 100%; margin: 0; color: var(--text-color); }
 
